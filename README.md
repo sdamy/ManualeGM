@@ -18,7 +18,7 @@ Comandi per non-collaboratori
 =======
 
 Scaricate un client git (google.it), su questo repository cliccate Fork in alto a destra: questo creerà il vostro repository.
-Adesso aprite il cmd (Esegui/cmd.exe) e scrivete:
+Adesso aprite git bash e scrivete:
 
 git clone https://github.com/VOSTRONOMEUTENTE/ManualeGM.git
 
@@ -28,7 +28,7 @@ git remote add origin https://github.com/VOSTRONOMEUTENTE/ManualeGM.git
 
 
 Sostituite VOSTRONOMEUTENTE col vostro nome utente su GitHub.
-Se al secondo comando vi dice che origin esiste già non importa.
+Se al terzo comando vi dice che origin esiste già non importa.
 
 Così il vostro repository locale è stato configurato.
 Quando volete fare delle modifiche, modificate i file normalmente (con editor di testo o editor di HTML WYSIWYG se non conoscete l'HTML), e scrivete:
