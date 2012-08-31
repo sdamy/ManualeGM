@@ -64,6 +64,7 @@ Questo comando va' scritto così com'è, e va' fatto una sola volta.
 Quando invece volete aggiornare, scrivete:
 
 git fetch upstream
+
 git merge upstream/master
 
 Comandi per collaboratori:
