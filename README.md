@@ -1,0 +1,4 @@
+GManual
+=======
+
+GameMaker manuale italiano
