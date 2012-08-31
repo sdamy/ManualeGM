@@ -10,74 +10,74 @@
 
 <h3>Creando ed entrando nelle sessioni</h3>
 
-When you connect to a network, there can be multiple games happening on the same 
-network. We call these sessions. These different sessions can correspond to 
-different games or to the same game. A game must uniquely identify itself 
-on the network. Fortunately, <i>GameMaker</i> does this for you. The only 
-thing you have to know is that when you change the game id in the options 
-form this identification changes. In this way you can avoid that people with 
-old versions of your game will play against people with new versions.
+Quando ti connetti ad una rete, ci possono essere multipli giochi che avvengono sulla stessa
+rete. Chiamiamo queste sessioni. Ci sono differenti sessioni che possono corrispondere a
+diversi giochi o allo stesso gioco. Un gioco deve unicamente identificarsi da solo
+alla rete. Fortunatamente, <i>GameMaker</i> fa' questo per te. L'unica cosa che devi sapere
+e che quando cambi l'id del gioco nel form delle opzioni questo identifica cambiamenti.
+In questo modo puoi evitare che le persone con vecchie versioni del tuo gioco giocheranno
+contro persone con nuove versioni.
 
 <p>
-If you want to start a new multiplayer game you need to create a new session. 
-For this you can use the following routine:
+Se vuoi iniziare un nuovo gioco multigiocatore chiedi di creare una nuova sessione.
+Per questo tu puoi usare le seguenti routine:
 
 <p>
 <blockquote>
   <tt><b>mplay_session_create(sesname,playnumb,playername)</b></tt> 
-    creates a new session on the current connection. sesname is a string 
-	indicating the name of  the session. playnumb is a number that indicates 
-	the maximal number of players allowed in this game (use 0 for an arbitrary 
-	number). playname is your name as player. Returns whether successful.<br>
+    crea una nuova sessione sulla connessione corrente. sesname è una stringa
+    	indicante il nome della sessione. playnumb è il numero che indica
+    	il numero di giocatori massimi accettti in questo gioco (usa 0 per un numero
+    	arbitrario). playname è il tuo nome come giocatore. Ritorna quando ha successo.<br>
 </blockquote>
 
 <p>
-One instance of the game must create the session. The other instance(s) 
-of the game should join this session. This is slightly more complicated. 
-You first need to look at what sessions are available and then choose the 
-one to join. There are three important routines for this:
+Un'istanza del gioco deve creare la sessione. L'altra istanza(e)
+del tuo gioco dovrebbero entrare in questa sessione. Questo è leggermente più complicato.
+Prima chiedi di vedere quali sessioni sono disponibili e poi scegli una da entrare.
+Ci sono tre importanti ruotines per questo:
 
 <p>
 <blockquote>
   <tt><b>mplay_session_find()</b></tt> 
-    searches for all sessions that still accept players and returns 
-	the number of sessions found.<br>
-  <tt><b>mplay_session_name(numb)</b></tt> 
-    returns the name of session number numb (0 is the first session). 
-	This routine can only be called after calling the previous routine.<br>
+    cerca per tutte le sessioni che accettano ancora giocatori e ritorna
+    	il numero di sessioni trovate.<br>
+  <tt><b>mplay_session_name(numb)</b></tt>
+    ritorna il nome della sessione numero numb (0 è la prima sessione).
+    	Questa routine può essere chiamata solo dove aver chiamato la precedente routine.<br>
   <tt><b>mplay_session_join(numb,playername)</b></tt> 
-    makes you join session number numb (0 is the first session). 
-	playername is your name as a player. Returns whether successful.<br>
+    Ti fa' entrare nella sessione numero numb (0 è la prima sessione).
+    	playername è il tuo nome come giocatore. Ritorna quando ha successo.<br>
 </blockquote>
 
 <p>
-There is one more routine that can change the session mode. 
-It should be called before creating a session:
+C'è un'altra routine che può cambiare la modalità della sessione.
+Dovrebbe esssere chiamata prima di creare una sessione:
 
 <p>
 <blockquote>
   <tt><b>mplay_session_mode(move)</b></tt>
-     sets whether or not to move the session host to another computer when 
-	 the host ends. move should either be true or false (the default).<br>
+     imposta quando o no muovere l'host della sessione ad un altro computer quando
+     	l'host termina. move dovrebbe essere sia true o false (predefinito).<br>
 </blockquote>
 
 <p>
-To check the status of the current session you can use the following function
+Per controllare lo stato della sessione attuale puoi usare le seguenti funzioni
 
 <p>
 <blockquote>
   <tt><b>mplay_session_status()</b></tt> 
-    returns the status of the current session. 0 = no session, 
-	1 = created session, 2 = joined session.<br>
+    ritorna lo stato della sessione attuale. 0 = nessuna sessione,
+    	1 = sessione creata, 2 = entrato nella sessione.<br>
 </blockquote>
 
 <p>
-A player can stop a session using the following routine:
+Un giocatore può fermare una sessione usando la seguente routine:
 
 <p>
 <blockquote>
   <tt><b>mplay_session_end()</b></tt> 
-    ends the session for this player.<br>
+    termina la sessione per questo giocatore<br>
 </blockquote>
 
 
@@ -87,6 +87,7 @@ A player can stop a session using the following routine:
 
 <!-- KEYWORDS
 sessions
+sessioni
 
 mplay_session_mode()
 mplay_session_create()
