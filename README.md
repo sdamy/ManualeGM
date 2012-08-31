@@ -18,7 +18,7 @@ Comandi per non-collaboratori
 =======
 
 Scaricate un client git (google.it), su questo repository cliccate Fork in alto a destra: questo creerà il vostro repository.
-Adesso create una cartella qualunque, entrateci e scrivete:
+Adesso aprite il cmd (Esegui/cmd.exe) e scrivete:
 
 git clone https://github.com/VOSTRONOMEUTENTE/ManualeGM.git
 
