@@ -72,3 +72,10 @@ Comandi per collaboratori:
 
 Per inizializzare il repository su una cartella, i comandi sono gli stessi, solo che invece del vostro nome dovete usare ZioCrocifisso.
 Anche per spostare e fare le varie modifiche i comandi sono gli stessi, solo che non c'è bisogno di fare Pull Request, il repository ufficiale viene aggiornato subito.
+
+Tutorial di GitHub
+=======
+
+Se questa guida vi fa schifo o non ci capite niente, ci sono i tutorial in inglese di Github, che sono molto semplici:
+https://help.github.com/
+A voi interessano i primi tre: Set Up Git, Create A Repo, e Fork A Repo.
