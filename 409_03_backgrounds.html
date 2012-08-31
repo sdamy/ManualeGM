@@ -18,17 +18,16 @@ Le seguenti funzioni possono essere usate per creare background e rimuoverli.
   	Crea un duplicato dello sfondo con il dato indice. Restituisce l'indice del nuovo sfondo.
   	Se capita un'errore viene restituito -1.<br>
   <tt><b>background_assign(ind,back)</b></tt> 
-	Assign the indicated background to background 
-	ind. So this makes a copy of the background.<br> 
+	Assegna lo sfondo indicato al dato indice.
+	Così si fa una copia dello sfondo.<br> 
   <tt><b>background_add(fname,removeback,smooth)</b></tt> 
-  	Adds the image stored in the file fname to the set of background resources. 
-	Many different types of images can be dealt with. When the image has an
-	alpha channel, this is used for transparency. <tt>removeback</tt> indicates whether
-	to make all pixels with the background color (left-bottom pixel) transparent.
-	<tt>smooth</tt> indicates whether to smooth the boundaries. The function returns the index of 
-	the new background that you can then use to draw it or to assign it to the variable 
-	background_index[0] to make it visible in the current room. When an error occurs -1 is 
-	returned.<br>
+  	Aggiunge l'immagine contenuta nel file fname nel set delle risorse degli sfondi. 
+	Possono essere usati vari tipi di immagini con questa funzione. Quando l'immagine
+	possiede il canale alfa, questa viene usata per la trasparenza. <tt>removeback</tt> indica
+	se rendere trasparenti tutti i pixel uguali al colore di sfondo (il pixel in basso a sinistra)
+	<tt>smooth</tt> indica se i margini devono essere smussati. La funzione restituisce l'indice del
+	nuovo sfondo che può essere usato per disegnarlo o assegnarlo alla variabile
+	background_index[0] per visualizzarlo nella room corrente. In caso di errore viene restituito -1.<br>
    <tt><b>background_replace(ind,fname,removeback,smooth)</b></tt>  
    	Same as above but in this case the background with index ind is replaced. The function returns 
 	whether it is successful. When the background is currently visible in the room it wil be 
