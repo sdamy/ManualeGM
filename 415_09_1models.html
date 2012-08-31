@@ -13,13 +13,13 @@
 <h3>Creare Modelli</h3>
 
 Quando hai bisogno di disegnare dei modelli grandi è abbastanza costoso chiamare tutte le differenti
-funzioni di disegno ancora e ancora ad ogni step. Per evitare questo puoi creare dei modelli.
-Un modello consiste in un numero di disegni primitivi e di forme. Una volta creato il modello
-puoi disegnarlo in posti differenti con una sola funzione. I modelli possono anche essere
+funzioni di disegno ad ogni step. Per evitare questo puoi creare dei modelli.
+Un modello consiste in un numero di disegni di primitive e di forme. Una volta creato il modello
+puoi disegnarlo in posizioni differenti con una sola funzione. I modelli possono anche essere
 caricati o salvati in un file.
 
 <p>
-Prima di fornire le differenti funzioni disponibili c'è un importante punto: la manipolazione
+Prima di descrivere le differenti funzioni disponibili c'è un importante punto: la manipolazione
 delle textures. Come descritto prima, le texture vengono prese da sprites e brackgrounds.
 Gli indici delle texture possono essere differenti in differenti momenti. Quindi i modelli
 non contengono nessuna informazione sulle texture. Solo quando disegni un modello fornisci
@@ -68,43 +68,43 @@ e non sono necessarie le informazioni sulla texture.
   <tt><b>d3d_model_vertex_texture_color(ind,x,y,z,xtex,ytex,col,alpha)</b></tt>
 	  Aggiunge il vertice (x,y,z) al modello, specificando texture e colore.<br>
   <tt><b>d3d_model_vertex_normal(ind,x,y,z,nx,ny,nz)</b></tt>
-	  Add vertex (x,y,z) to the model, with normal vector (nx,ny,nz).<br>
+	  Aggiunge il vertice (x,y,z) al modello, con un vettore normale (nx,ny,nz).<br>
   <tt><b>d3d_model_vertex_normal_color(ind,x,y,z,nx,ny,nz,col,alpha)</b></tt>
-	  Add vertex (x,y,z) to the model, with normal vector (nx,ny,nz), 
+	  Aggiunge il vertice (x,y,z) al modello, con un vettore normale (nx,ny,nz), 
 	  and with its own color and alpha value.<br>
   <tt><b>d3d_model_vertex_normal_texture(ind,x,y,z,nx,ny,nz,xtex,ytex)</b></tt>
-	  Add vertex (x,y,z) to the model, with normal vector (nx,ny,nz),
-	  with texture position.<br>
+	  Aggiunge il vertice (x,y,z) al modello, con un vettore normale (nx,ny,nz),
+	  e con la posizione della texture.<br>
   <tt><b>d3d_model_vertex_normal_texture_color(ind,x,y,z,nx,ny,nz,xtex,ytex,col,alpha)</b></tt>
-	  Add vertex (x,y,z) to the model, with normal vector (nx,ny,nz), with texture
-	  and color values.<br>
+	  Aggiunge il vertice (x,y,z) al modello, con un vettore normale (nx,ny,nz), con la texture
+	  e con i colori.<br>
   <tt><b>d3d_model_primitive_end(ind)</b></tt>
-	  End the description of the primitive in the model.<br>
+	  Termina la descrizione della primitiva nel modello.<br>
 </blockquote>
 
 <p>
-Besides primitives you can also add basic shapes to the models. Again the functions look almost
-the same but with a model index and without texture information:
+Oltre alle primitive, puoi anche aggiungere delle forme di base al modello. Le funzioni sono
+quasi uguali ma con un indice del modello e senza le informazioni della texture:
 
 <p>
 <blockquote>
   <tt><b>d3d_model_block(ind,x1,y1,z1,x2,y2,z2,hrepeat,vrepeat)</b></tt>
-	  Adds a block shape to the model. <br>
+	  Aggiunge un blocco al modello. <br>
   <tt><b>d3d_model_cylinder(ind,x1,y1,z1,x2,y2,z2,hrepeat,vrepeat,closed,steps)</b></tt>
-	  Adds a cylinder shape to the model. <br>
+	  Aggiunge un cilindro al modello. <br>
   <tt><b>d3d_model_cone(ind,x1,y1,z1,x2,y2,z2,hrepeat,vrepeat,closed,steps)</b></tt>
-	  Adds a cone shape to the model. <br>
+	  Aggiunge un cono al modello. <br>
   <tt><b>d3d_model_ellipsoid(ind,x1,y1,z1,x2,y2,z2,hrepeat,vrepeat,steps)</b></tt>
-	  Adds a ellipsoid shape to the model. <br>
+	  Aggiunge un ellissoide al modello. <br>
   <tt><b>d3d_model_wall(ind,x1,y1,z1,x2,y2,z2,hrepeat,vrepeat)</b></tt>
-	  Adds a wall shape to the model. <br>
+	  Aggiunge un muro al modello. <br>
   <tt><b>d3d_model_floor(ind,x1,y1,z1,x2,y2,z2,hrepeat,vrepeat)</b></tt>
-	  Adds a floor shape to the model. <br>
+	  Aggiunge un pavimento al modello. <br>
 </blockquote>
 
 <p>
-Using models can considerable speed up the graphics in your 3D games and you should use
-them whenever you can.
+Usare i modelli può velocizzare significativamente la grafica nel vostro gioco �3D e tu
+dovresti usarle ogni volta che puoi.
 
 <!--END-->
 
@@ -114,6 +114,8 @@ them whenever you can.
 <!-- KEYWORDS
 3d models
 models
+modelli 3d
+modelli
 
 d3d_model_create()
 d3d_model_destroy()
