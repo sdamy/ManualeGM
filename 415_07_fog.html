@@ -9,29 +9,31 @@
 
 <!--START-->
 
-<h3>Fog</h3>
+<h3>Nebbia</h3>
 
-Fog can be used in 3D games to make objects in the distance look blurred or even disappear.
-This helps in creating atmosphere and it makes it possible to not draw objects that are 
-far away. To enable or disable fog use the following function:
+La nebbia può essere usata nei giochi 3D per rendere gli oggetti sfocati o che svaniscono
+a distanza. Queste informazioni aiutano a creare una atmosfera e rendono possibile non
+tracciare degli oggetti che sono molto lontani. Per abilitare o disabilitare
+la nebbia usate la seguente funzione:
 
 <p>
 <blockquote>
   <tt><b>d3d_set_fog(enable,color,start,end)</b></tt>
-	  Enables or disables the use of fog. <tt>color</tt> indicates the fog color.
-	  <tt>start</tt> indicates the distance at which fog must start. <tt>end</tt>
-	  indicates the distance at which fog is maximal and nothing can be seen anymore.<br>
+	  Abilita o disabilita l’uso della nebbia. <tt>color</tt> indica il colore della nebbia.
+	  <tt>start</tt> indica la distanza alla quale deve partire la nebbia. <tt>end</tt>
+	  indica la distanza alla quale la nebbia è al massimo dell’intensità e non è più possibile vedere nulla.<br>
 </blockquote>
 
 <p>
-To better understand what is happening, there are actually two types of fog, table based fog
-and vertex based fog. The first type calculates fog values on a pixel basis. The second type
-calculates the fog value for each vertex and then interpolates these. The first type is better
-but not always supported. <i>GameMaker</i> tries to use table based fog when supported and
-otherwise uses vertex based fog (unless no fog is supported). Note that certain graphics
-card indicate that they can handle table based fog but offer the user the possibility to
-switch this off in the advanced display settings. In this case the result might be a black 
-screen!
+Per capire meglio cosa succede, ci sono di fatto due tipi di nebbia, la nebbia ordinaria
+e quella basata sul vertice. Il primo tipo calcola i valori della nebbia basandosi sul pixel.
+La seconda calcola il valore della nebbia per ogni vertice e poi li interpola.
+Il primo tipo è migliore ma non sempre supportato. <i>GameMaker</i> prova ad usare
+la nebbia ordinaria quando supportata o altrimenti usa quella basata sui vertici
+( a meno che non sia supportata la nebbia). Si noti che certe schede grafiche
+indicano il loro supporto alla nebbia ordinaria (table based), ma offrono all’utente
+la possibilità di disabilitarla in modalità avanzata di settaggio di visualizzazione.
+In questo caso il risultato potrà essere uno schermo nero!
 
 
 <!--END-->
@@ -40,7 +42,7 @@ screen!
 </html>
 
 <!-- KEYWORDS
-fog
+nebbia
 
 d3d_set_fog()
 -->
