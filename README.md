@@ -56,6 +56,16 @@ Quando invece avete finito, spostatelo sulla cartella Tradotte.
 Se si tratta di una cosa veloce, non c'è bisogno di spostare su In_traduzione, fate direttamente le modifiche e quando avete finito 
 spostate su Tradotte.
 
+Se vengono fatte delle modifiche al repository ufficiale, non vengono fatte anche al vostro. Se volete aggiornare, dovete prima configurare il repository ufficiale:
+
+git remote add upstream https://github.com/ZioCrocifisso/ManualeGM.git
+
+Questo comando va' scritto così com'è, e va' fatto una sola volta.
+Quando invece volete aggiornare, scrivete:
+
+git fetch upstream
+git merge upstream/master
+
 Comandi per collaboratori:
 =======
 
