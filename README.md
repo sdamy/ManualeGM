@@ -22,10 +22,13 @@ Adesso create una cartella qualunque, entrateci e scrivete:
 
 git clone https://github.com/VOSTRONOMEUTENTE/ManualeGM.git
 
+cd ManualeGM
+
 git remote add origin https://github.com/VOSTRONOMEUTENTE/ManualeGM.git
 
 
 Sostituite VOSTRONOMEUTENTE col vostro nome utente su GitHub.
+Se al secondo comando vi dice che origin esiste già non importa.
 
 Così il vostro repository locale è stato configurato.
 Quando volete fare delle modifiche, modificate i file normalmente (con editor di testo o editor di HTML WYSIWYG se non conoscete l'HTML), e scrivete:
