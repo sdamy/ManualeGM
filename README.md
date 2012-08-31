@@ -1,8 +1,4 @@
-VISTO CHE MOLTI TROVANO COMPLICATO GIT, FRA UN PO' VERRÀ RESO TUTTO PIÙ SEMPLICE.
-=======
-
-
-GManual
+Manual
 =======
 
 GameMaker manuale italiano
@@ -11,78 +7,10 @@ Come collaborare
 =======
 
 
-Se volete tradurre una pagina, prima spostatela sulla cartella In_traduzione. Quando avete finito al 100%, spostatela sulla cartella Tradotte. Questo non significa che bisogna operare solo sui file da tradurre, si può comunque revisionare e correggere errori nei file in traduzione o già tradotti. Comunque, se un file non tradotto è sulla cartella In_traduzione, è meglio lasciarstare, per evitare più traduzioni inutili.
+Se volete tradurre una pagina, prima di tutto cambiate il "commit" (ossia il commento) di una pagina per indicare che ci state lavorando ed eventualmente note per farsi aiutare da altri o consigli su come strutturare la pagina. Successivamente passate alla traduzione vera e propria.
+Per evitare problemi tra i collaboratori è essenziale che i file non tradotti abbiano come commit "DA TRADURRE" mentre quelli tradotti al 100% e quindi non necessitano di alcuna modifica dovrannoa vere il tag "TRADOTTO".
+Le pagine in lavorazione invece non serve che abbiano un tag preciso, ma preferibilmente qualcosa del tipo "IN TRADUZIONE" e note di vario genere per far saltare subito all'occhio cosa sta succedendo nella pagina per effettuare una ricerca veloce senza leggersi i commit uno per uno.
 
-GUI
-=======
-Non so come funzionano le GUI per git, visto che non le uso, quindi se non avete voglia di imparare i comandi è un problema vostro.
+Quando modificherete una pagina vi può capitare un'errore che indica che mentre voi la modifichevate qualcun'altro ha modificato un file, anche non necessariamente quello con cui state lavorando quindi è sempre consigliabile copiare tutto sulla clipboard o su una copia di backup offline. Se vi viene quel messaggio di errore semplicemente reinviate la pagina, è un problema con il quale bisogna convivere.
 
-
-Comandi per non-collaboratori
-=======
-
-Scaricate un client git (google.it), su questo repository cliccate Fork in alto a destra: questo creerà il vostro repository.
-Adesso aprite git bash e scrivete:
-
-git clone https://github.com/VOSTRONOMEUTENTE/ManualeGM.git
-
-cd ManualeGM
-
-git remote add origin https://github.com/VOSTRONOMEUTENTE/ManualeGM.git
-
-
-Sostituite VOSTRONOMEUTENTE col vostro nome utente su GitHub.
-Se al terzo comando vi dice che origin esiste già non importa.
-
-Così il vostro repository locale è stato configurato.
-Quando volete fare delle modifiche, modificate i file normalmente (con editor di testo o editor di HTML WYSIWYG se non conoscete l'HTML), e scrivete:
-
-git add FILES
-
-git commit -m 'COMMENTO: qui potete scrivere quello che volete, descrivete le modifiche che avete fatto.'
-
-git push origin master
-
-Sostituite FILES con i file che avete modificato, e COMMENTO ecc... con il commetto che volete mettere.
-
-
-Prima di fare delle modifiche però, se pensate di starci molto tempo, per evitare che qualcuno nel frattempo pensi di tradurre la 
-vostra pagina, spostate il file nella cartella In_traduzione. Per farlo, spostatevi (con cd) sulla cartella principale del progetto, e 
-scrivete:
-
-git mv Non_tradotte/FILECHEVOLETETRADURRE In_traduzione/
-
-E poi committate come quando fate delle modifiche:
-
-git commit -m 'culopipì'
-
-Quando avete fatto delle modifiche, o avete scelto di tradurre un file, mandate le vostre modifiche al repository ufficiale andando sul 
-vostro progetto di GitHub e cliccando Pull Request in alto.
-
-Quando invece avete finito, spostatelo sulla cartella Tradotte.
-Se si tratta di una cosa veloce, non c'è bisogno di spostare su In_traduzione, fate direttamente le modifiche e quando avete finito 
-spostate su Tradotte.
-
-Se vengono fatte delle modifiche al repository ufficiale, non vengono fatte anche al vostro. Se volete aggiornare, dovete prima configurare il repository ufficiale:
-
-git remote add upstream https://github.com/ZioCrocifisso/ManualeGM.git
-
-Questo comando va' scritto così com'è, e va' fatto una sola volta.
-Quando invece volete aggiornare, scrivete:
-
-git fetch upstream
-
-git merge upstream/master
-
-Comandi per collaboratori:
-=======
-
-Per inizializzare il repository su una cartella, i comandi sono gli stessi, solo che invece del vostro nome dovete usare ZioCrocifisso.
-Anche per spostare e fare le varie modifiche i comandi sono gli stessi, solo che non c'è bisogno di fare Pull Request, il repository ufficiale viene aggiornato subito.
-
-Tutorial di GitHub
-=======
-
-Se questa guida vi fa schifo o non ci capite niente, ci sono i tutorial in inglese di Github, che sono molto semplici:
-https://help.github.com/
-A voi interessano i primi tre: Set Up Git, Create A Repo, e Fork A Repo.
+Per modificare una pagina basta selezionare il file e premere il tasto edit in alto a destra del textbox.
