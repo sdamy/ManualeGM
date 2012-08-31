@@ -50,23 +50,23 @@ Per creare, caricare, salvare, e disegnare modelli, esistono le seguenti funzion
 </blockquote>
 
 <p>
-For each primitive function there is an equivalent to add it to a model. The functions
-have the same arguments as before except that each has a first argument the index of 
-the model, and no texture information is provided.
+Per ogni funzione che tratta le primitive ce n'è una equivalente per aggiungerle al modello.
+Le funzioni hanno gli stessi argomenti, ma hanno come primo argomento l'indice del modello,
+e non sono necessarie le informazioni sulla texture.
 
 <p>
 <blockquote>
   <tt><b>d3d_model_primitive_begin(ind,kind)</b></tt>
-	  Adds a 3D primitive to the model of the indicated kind: <tt>pr_pointlist, pr_linelist,
-	  pr_linestrip,pr_trianglelist,pr_trianglestrip</tt> or <tt>pr_trianglefan</tt>.<br>
+	  Aggiunge una primitiva 3D del tipo indicato: <tt>pr_pointlist, pr_linelist,
+	  pr_linestrip,pr_trianglelist,pr_trianglestrip</tt> o <tt>pr_trianglefan</tt>.<br>
   <tt><b>d3d_model_vertex(ind,x,y,z)</b></tt>
-	  Add vertex (x,y,z) to the model.<br>
+	  Aggiunge il vertice (x,y,z) al modello.<br>
   <tt><b>d3d_model_vertex_color(ind,x,y,z,col,alpha)</b></tt>
-	  Add vertex (x,y,z) to the model, with its own color and alpha value.<br>
+	  Aggiunge il vertice (x,y,z) al modello, specificando il colore e la trasparenza.<br>
   <tt><b>d3d_model_vertex_texture(ind,x,y,z,xtex,ytex)</b></tt>
-	  Add vertex (x,y,z) to the model with position (xtex,ytex) in the texture.<br>
+	  Aggiunge il vertice (x,y,z) al modello, specificando le coordinate della texture.<br>
   <tt><b>d3d_model_vertex_texture_color(ind,x,y,z,xtex,ytex,col,alpha)</b></tt>
-	  Add vertex (x,y,z) to the model with texture and color values.<br>
+	  Aggiunge il vertice (x,y,z) al modello, specificando texture e colore.<br>
   <tt><b>d3d_model_vertex_normal(ind,x,y,z,nx,ny,nz)</b></tt>
 	  Add vertex (x,y,z) to the model, with normal vector (nx,ny,nz).<br>
   <tt><b>d3d_model_vertex_normal_color(ind,x,y,z,nx,ny,nz,col,alpha)</b></tt>
