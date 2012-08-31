@@ -9,6 +9,11 @@ Come collaborare
 
 Se volete tradurre una pagina, prima spostatela sulla cartella In_traduzione. Quando avete finito al 100%, spostatela sulla cartella Tradotte. Questo non significa che bisogna operare solo sui file da tradurre, si può comunque revisionare e correggere errori nei file in traduzione o già tradotti. Comunque, se un file non tradotto è sulla cartella In_traduzione, è meglio lasciarstare, per evitare più traduzioni inutili.
 
+GUI
+=======
+Non so come funzionano le GUI per git, visto che non le uso, quindi se non avete voglia di imparare i comandi è un problema vostro.
+
+
 Comandi per non-collaboratori
 =======
 
