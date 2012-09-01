@@ -12,6 +12,10 @@ Se volete tradurre una pagina, prima di tutto cambiate il commento del commit (l
 Successivamente passate alla traduzione vera e propria.
 Quando avete finito, come commento mettete "TRADOTTO".
 
+TRADOTTO non significa che il file è completo, infatti di solito traduciamo velocemente, ma per considerare completo un file dev'essere prima revisionato: se vuoi fare ciò, rileggi tutto cercando e correggendo errori di grammatica e ortografia e controlla la coerenza con altre pagine collegate (se l'indice chiama questa pagina "cacca", il titolo dev'essere anche qui "cacca"). Una volta fatta la revisione, committa usando come commento "REVISIONATO".
+Comunque la revisione va' fatta alla fine, quando la maggior parte delle pagine sono ormai tradotte.
+Se trovate SEDATO in un file, significa che quel file è stato revisionato, e sono stati applicati degli script su di esso per correggere gli accenti (è diventa &egrave; per esempio).
+
 Quando modificherete una pagina vi può capitare un'errore che indica che mentre voi la modificavate qualcun'altro ha modificato un file, anche non necessariamente quello con cui state lavorando quindi è sempre consigliabile copiare tutto sulla clipboard o su una copia di backup offline, guardare le modifiche fatte dall'altra persona, e riuppare le vostre modifiche + le sue: se per esempio un file contiene "cat dog", tu stavi inviando "gatto dog", e il tizzio di turno stava inviando "cat cane", unisci le due traduzioni, inviando "gatto cane".
 
 Traduzione di alcuni termini
