@@ -43,32 +43,29 @@ colore o il nome di un file:
     alpha dev'essere un valore tra 0 (completamente traslucente) e 1 (non
     traslucente). Solo per Windows 2000 e successivi.<br>
   <tt><b>message_button(spr)</b></tt> 
-    Sets the sprite used for the buttons in the pop-up box. spr must be a 
-	sprite consisting of three images, the first indicates the button when 
-	it is not pressed and the mouse is far away, the second indicates the 
-	button when the mouse is above it but not pressed and the third is the 
-	button when it is pressed. Unfortunately,
-	alpha values are not taken into account. However, if the left-bottom pixel
-	has an alpha value of 0, all pixels with that color will be considered transparent.<br>
+    Imposta lo sprite da usare per i bottoni nelle finestre pop-up.
+    	spr dev'essere uno sprite composto da 3 immagini: la prima indica
+    	il bottone quando non è premuto, il secondo quando il puntatore
+    	del mouse sta sopra al bottone, il terzo quando il bottone viene
+    	premuto. Sfortunatamente, i valori alpha non sono considerati, ma
+    	anche qui il pixel in basso a sinistra indica il colore trasparente. <br>
   <tt><b>message_text_font(name,size,color,style)</b></tt> 
-    Sets the font for the text in the pop-up box. (This is a normal Windows font,
-	not one of the font resources you can out in your game!) style indicates
-	the font style (0=normal, 1=bold, 2=italic, and 3=bold-italic).<br>
+    Imposta la font per il testo nella finestra pop-up. (Questa è una normale
+    font di Windows, non una delle risorse che puoi aggiungere nel gioco!) style
+    indice lo stile della font (0=normale, 1=grassetto, 2=italico, 3=entrambi).<br>
   <tt><b>message_button_font(name,size,color,style)</b></tt> 
-    Sets the font for the buttons in the pop-up box. style indicates
-	the font style (0=normal, 1=bold, 2=italic, and 3=bold-italic).<br>
+    Imposta la font per i bottoni nelle finestre pop-up.<br>
   <tt><b>message_input_font(name,size,color,style)</b></tt> 
-    Sets the font for the input field in the pop-up box. style indicates
-	the font style (0=normal, 1=bold, 2=italic, and 3=bold-italic).<br>
+    Imposta la font per le caselle di testo nei messaggi pop-up.<br>
 	
   <tt><b>message_text_charset(type,charset)</b></tt> 
-    This function allows you to specify which character set the dialogs will use.
-	type can be one of: 
+    Questa funzione ti permette di cambiare il charset usato dalle finestre pop-up.
+	type può essere uno di questi: 
 	<blockquote><tt>
 	text_type<br />
 	button_type<br />
 	input_type<br />
-	</tt></blockquote>	charset can be one of the standard windows character set types: 
+	</tt></blockquote>	charset invece uno di questi: 
 	<blockquote><tt>
 	ANSI_CHARSET<br/>
 	DEFAULT_CHARSET<br />
@@ -92,46 +89,47 @@ colore o il nome di un file:
 	</blockquote>
 	
   <tt><b>message_mouse_color(col)</b></tt> 
-    Sets the color of the font for the buttons in the pop-up box when the mouse is above it.<br>
+    Imposta il colore della font per i bottoni nelle pop-up box quando il mouse è sopra di loro.<br>
   <tt><b>message_input_color(col)</b></tt> 
-    Sets the color for the background of the input filed in the pop-up box.<br>
+    Imposta il colore dello sfondo della casella di testo.<br>
   <tt><b>message_caption(show,str)</b></tt> 
-    Sets the caption for the pop-up box. show indicates whether a border must b
-	e shown (1) or not (0) and str indicates the caption when the border is shown.<br>
+    Imposta la didascalia per le pop-up box. show indica se il borto dev'essere mostrato (1)
+    o no (0) e str indica la didascalia quando il bordo viene mostrato.<br>
   <tt><b>message_position(x,y)</b></tt> 
-    Sets the position of the pop-up box on the screen. Use -1, -1 to center the box.<br>
+    Imposta la posizione della finestra pop-up nello schermo. Usa -1, -1 per centrare la finestra.<br>
   <tt><b>message_size(w,h)</b></tt> 
-    Fixes the size of the pop-up box on the screen. If you choose -1 for the 
-	width the width of the image is used. If you choose -1 for the height the 
-	height is calculated based on the number of lines in the message.<br>
+    Stabilisce la dimensione della finestra pop-up nello schermo. Se scegli -1 per la larghezza,
+    	verrà usata la larghezza dell'immagine. Se scegli -1 per l'altezza, l'altezza verrà
+    	calcolata in base al numero di linee del messaggio.<br>
   <tt><b>show_menu(str,def)</b></tt> 
-    Shows a popup menu. str indicates the menu text. This consists of the 
-	different menu items with a vertical bar between them. For example, 
-	str = 'menu0|menu1|menu2'. When the first item is selected a 0 is returned, etc. 
-	When the player selects no item, the default value def is returned.<br>
+    Mostra un menu pop-up. str indica il testo del menu. Questo è composto dai
+    	differenti elementi del menu con una barra verticale tra di essi. Per
+    	esempio, str = 'menu0|menu1|menu2'. Quando il primo elemento viene selezionato,
+    	la funzione restituisce 0, ecc.
+    	Quando il giocatore non seleziona niente, viene restituito def.<br>
   <tt><b>show_menu_pos(x,y,str,def)</b></tt> 
-    Shows a popup menu as in the previous function but at position x,y on the screen.<br>
+    Mostra un menu pop-up come nella funzione precedente, ma in delle coordinate specifiche.<br>
   <tt><b>get_color(defcol)</b></tt> 
-    Asks the player for a color. defcol is the default color. If the user presses 
-	Cancel the value -1 is returned.<br>
+    Chiede un colore al giocatore. defcol è il colore di default. Se il giocatore preme
+    	Cancel/Annulla viene restituito -1.<br>
   <tt><b>get_open_filename(filter,fname)</b></tt> 
-    Asks the player for a filename to open with the given filter. The filter has 
-	the form 'name1|mask1|name2|mask2|...'. A mask contains the different options 
-	with a semicolon between them. * means any string. For example: 'bitmaps|*.bmp;*.wmf'. 
-	If the user presses Cancel an empy string is returned.<br>
+    Chiede al giocatore il nome di un file da aprire specificando il filtro. Il filtro ha
+    	la forma 'nome1|mask1|nome2|mask2|...'. Una maschera contiene le differenti opzioni
+    	con un punto e virgola tra di essi. * significa qualunque stringa. Per esempio:
+    	'Immagini bitmap|*.bmp;*.wmf'. Se l'utente preme Cancel/Annulla viene restituita
+    	una stringa vuota.<br>
   <tt><b>get_save_filename(filter,fname)</b></tt> 
-    Asks for a filename to save with the given filter. If the user presses 
-	Cancel an empy string is returned.<br>
+    Chiede al giocatore il nome di un file da salvare.<br>
   <tt><b>get_directory(dname)</b></tt> 
-    Asks for a directory. dname is the default name. If the user presses 
-	Cancel an empy string is returned.<br>
+    Chiede una directory (cartella). dname è il nome di default. Se il giocatore preme
+    	Cancel/Annulla viene restituita una stringa vuota.<br>
   <tt><b>get_directory_alt(capt,root)</b></tt> 
-  An alternative way to ask for a directory. capt is the caption to be show. root is 
-  the root of the directory tree to be shown. Use the empty string to show the whole 
-  tree. If the user presses Cancel an empy string is returned.<br>
+  Un modo alternativo per chiedere una directory. capt è la didascalia da mostrare,
+  	la radice dell'albero da mostrare. Usa la stringa vuota per mostrare l'intero
+  	albero. Se l'utente preme Cancel/Annulla viene restituita una stringa vuota.<br>
   <tt><b>show_error(str,abort)</b></tt> 
-    Displays a standard error message (and/or writes it to the log file). 
-	abort indicates whether the game should abort.<br>
+    Mostra un'errore standard (e/o lo scrive nel file log).
+    	abort indica se il gioco dev'essere abortito.<br>
 </blockquote>
 
 <!--END-->
@@ -148,6 +146,18 @@ directory selector
 folder selector
 color selector
 dialogs
+messaggi
+bottoni dei messaggi
+mostrare menu
+menu
+selettore di files
+selettore di directory
+selettore di cartelle
+selettore di colori
+finestre
+pop-up
+messaggi
+
 
 show_message()
 show_message_ext()
