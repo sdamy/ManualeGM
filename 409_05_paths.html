@@ -10,59 +10,58 @@
 
 <h3>Paths</h3>
 
-It is possible to create paths and to add points to paths. However, never change a path 
-that is being used by an instance. This can lead to unexpected results. The following 
-functions exist:
+E’ possible creare dei path e aggiungere dei punti ad essi. Comunque non cambiate mai un
+path che è attualmente in uso da un'istanza. QUesto può portare ad errori inaspettati.
+Esistono le seguenti funzioni per la modifica dei path:
 
 <p>
 <blockquote>
   <tt><b>path_set_kind(ind,val)</b></tt> 
-	Sets the kind of connections of the path with the 
-	given index (0=straight, 1=smooth).<br>
+	Setta il tipo di connessioni delle curve del path con
+	il dato indice (0= spigolose, 1 = morbide).<br>
   <tt><b>path_set_closed(ind,closed)</b></tt> 
-	Sets whether the path must be closed (true) or open (false).<br>
+	Imposta se il path deve essere chiuso (true) o aperto(false).<br>
   <tt><b>path_set_precision(ind,prec)</b></tt> 
-	Sets the precision with which the smooth 
-	path is calculated (should lie between 1 and 8).<br>
+	Imposta la precisione con la quale calcolare le curve morbide
+	del path (dovrà essere tra 1 e 8)<br>
   <tt><b>path_add()</b></tt> 
-	Adds a new empty paths. The index of the path is returned.<br>
+	Crea un nuovo path vuoto e ne restituisce l'indice.<br>
   <tt><b>path_delete(ind)</b></tt> 
-	Deletes the path with the given index.<br>
+	Elimina il path con il dato indice.<br>
   <tt><b>path_duplicate(ind)</b></tt> 
-	Creates a duplicate copy of the path with the 
-	given index. Returns the index of the copy.<br>
+	Crea una copia del path indicato e ne restituisce l'indice.<br>
   <tt><b>path_assign(ind,path)</b></tt> 
-	Assigns the indicated path to path ind. So this 
-	makes a copy of the path. In this way you can easily set an existing path to a different, 
-	e.g. new path. <br>
+	Assegna il path all'indice indicato. Questo creerà una copia del path.
+	In questo modo puoi impostare facilmente un path esistente in un'altro,
+	per esempio uno nuovo.<br>
   <tt><b>path_append(ind,path)</b></tt> 
-	Appends the indicated path to path ind. <br>
+	Aggiunge il path indicato al path con indice <tt>ind</tt>. <br>
   <tt><b>path_add_point(ind,x,y,speed)</b></tt> 
-	Adds a point to the path with the given 
-	index, at position (x,y) and with the given speed factor. Remember that a factor of 100 
-	corresponds to the actual speed. Lower values mean slowing down and higher mean speeding up.<br>
+	Aggiunge un punto al path con il dato indice alla posizione (x,y) e
+	con la velocità <tt>speed</tt> indicata. Ricordate che un valore di 100
+	corrisponde alla velocità attuale. Valori più bassi faranno rallentare
+	mentre valori più alti faranno accelerare.<br>
   <tt><b>path_insert_point(ind,n,x,y,speed)</b></tt> 
-	Inserts a point in the path with 
-	the given index before point n, at position (x,y) and with the given speed factor.<br>
+	Inserisce un punto al path con il dato indice alla posizione (x,y) prima
+	del punto n con la velocità indicata.<br>
   <tt><b>path_change_point(ind,n,x,y,speed)</b></tt> 
-	Changes the point n in the path 
-	with the given index to position (x,y) and the given speed factor.<br>
+	Modifica il punto n nel path con il dato indice indicando posizione (x,y) e velocità.<br>
   <tt><b>path_delete_point(ind,n)</b></tt> 
-	Deletes the point n in the path with the given index.<br>
+	Elimina il punto n del path con il dato indice.<br>
   <tt><b>path_clear_points(ind)</b></tt> 
-	Clears all the points in the path, turning it into an empty path.<br>
+	Elimina tutti i punti del path ottenendo un path vuoto.<br>
   <tt><b>path_reverse(ind)</b></tt> 
-	Reverses the path.<br>
+	Inverte il path.<br>
   <tt><b>path_mirror(ind)</b></tt> 	
-	Mirrors the path horizontally (with respect to its center).<br>
+	Specchia il path orizzontalmente (rispetto al suo centro)<br>
   <tt><b>path_flip(ind)</b></tt> 
-	Flips the path vertically (with respect to its center).<br>
+	Specchia il path verticalmente (rispetto al suo centro)<br>
   <tt><b>path_rotate(ind,angle)</b></tt> 
-	Rotates the path counter clockwise over angle degrees (around its center).<br>
+	Ruota il path in senso antiorario con l'angolo indicato in gradi (rispetto al suo centro)<br>
   <tt><b>path_scale(ind,xscale,yscale)</b></tt> 
-	Scales the path with the given factors (from its center).<br>
+	Scala il path con i valori indicati (rispetto al suo centro)<br>
   <tt><b>path_shift(ind,xshift,yshift)</b></tt> 
-	Shifts the path over the given amount.<br>
+	Sposta il path con i valori indicati.<br>
 </blockquote>
 
 <p>
