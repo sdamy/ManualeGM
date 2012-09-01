@@ -51,71 +51,64 @@ Se clicchi col tasto destro del mouse su un'azione apparirà un menu in cui puoi
 o copiare/incollare le azioni (puoi usare &lt;Shift&gt;/&lt;Ctrl&gt; per selezionare più azioni contemporaneamente,
 invece  &lt;Ctrl&gt;&lt;A&gt; per selezionare tutte le azioni)
 
-
-------------------------
-When you
-hold your mouse at rest above an action, a longer description is given of the action.
-See the next chapter for more information on actions.
+Se tieni fisso il mouse sopra l'icona di un azione, apparirà una breve descrizione.
 
 <p>
-To delete the currently selected event together with all its actions press the button
-labeled <b>Delete</b>. (Events without any actions will automatically be deleted when
-you close the form so there is no need to delete them manually.) If you want to assign
-the actions to a different event (for example, because you decided to use a different
-key for them) press the button labeled <b>Change</b> and pick the new event you want.
-(The event should not be defined already!) Using the menu that pops up when right-clicking
-on the event list, you can also duplicate an event, that is, add a new event with the
-same actions.
+Per cancellare l'azione selezionata clicca sul bottone <b>Delete</b> posizionato in basso.
+Se non ci sono azioni nell'evento, questo verrà cancellato alla chiusura.
+Ricorda: anche se hai assegnato delle azioni, ma vuoi cambiare l'evento 
+(per esempio se vuoi usare l'evento associato ad un altro tasto), puoi farlo tramite il bottone
+<b>Change</b> situato in basso, potrai quindi scegliere un nuovo evento dalla finestra che si aprirà.
+Puoi anche duplicare un evento col tasto destro del mouse, apparirà una finestra, scegli l'evento che vuoi
+e veranno copiate le azioni dell'altro evento, nel nuovo.
 
 <p>
-As indicated above, to add an event, press the button <b>Add Event</b>. The following
-form pops up:
+Come detto sopra, per aggiungere un evento premi il bottone <b>Add Event</b>.
+Apparirà il seguente Form 
 
 <p>
 <img src="images/form_event_selector.jpg">
 
 <p>
-Here you select the event you want to add. Sometimes a menu pops up with extra
-choices. Here is a description of the various events. (Again remember that you
-normally use only a few of them.)
+Qui sceglierai l'evento che vuoi aggiungere. Per alcuni eventi, dopo aver cliccato dovrai scegliere per una sottocategoria.
+Di seguito una descrizione dei vari eventi:
 
 <p>
-<b><img src="images/event_create.bmp"> Create event</b><br>
-This event happens when an instance of the object is created. It is normally used to
-set the instance in motion and/or to set certain variables for the instance.
+<b><img src="images/event_create.bmp"> Evento Create (creazione)</b><br>
+Questo evento si attiva quando un instanza di un oggetto viene creata.
+è normalmente usata per settare alcune variabili o azioni che avvengono solo una volta.
 
 <p>
-<b><img src="images/event_destroy.bmp"> Destroy event</b><br>
-This event happens when the instance is destroyed. To be precise, it happens just
-before it is destroyed, so the instance does still exist when the event is executed!
-Most of the time this event is not used but you can for example use it to change the score or
-to create some other object.
+<b><img src="images/event_destroy.bmp"> Evento Destroy (distruzione)</b><br>
+Questo evento si attiva quando l'instanza viene distrutta. Per essere precisi, appena prima che venga distrutta, quindi
+l'instanza ancora esiste quando l'evento viene eseguito!
+Questo evento è di solito usato per cambiare il punteggio, diminuire le vite del personaggio o creare altre istanze di oggetti.
 
 <p>
-<b><img src="images/event_timer.bmp"> Alarm events</b><br>
-Each instance has 12 alarm clocks.
-You can set these alarm clocks using certain actions
-(see next chapter). The alarm clock then ticks down until it reaches 0 at which moment
-the alarm event is generated. To indicate the actions for a given alarm clock, you
-first need to select it in the menu. Alarm clocks are very useful. You can use them to
-let certain things happen from time to time. For example a monster can change its
-direction of motion every 20 steps. (In such cases one of the actions in the event
-must set the alarm clock again.)
+<b><img src="images/event_timer.bmp"> Evento Alarm (sveglie/timer)</b><br>
+Ogni instanza ha 12 alarm.
+L'alarm diminuisce di 1 ogni step finchè non raggiunge il valore 0.
+In quel momento, si attiveranno le azioni che hai scelto.
+Gli alarm sono veramente utili, perchè puoi usarli per far accadere determinate cose, dopo un tot di tempo.
+Un esempio di utilizzo, può essere far cambiare direzione ad un mostro ogni 20 step.
 
 <p>
-<b><img src="images/event_step.bmp"> Step events</b><br>
-The step event happens every step of the game. Here you can put actions that need to
-be executed continuously. For example, if one object should follow another, here you
-can adapt the direction of motion towards the object we are following. Be careful with
-this event though. Don't put many complicated actions in the step event of objects of
-which there are many instances. This might slow the game down. To be more precise,
-there are three different step events. Normally you only need the default one. But
-using the menu you can also select the begin step event and the end step event. The
-begin step event is executed at the beginning of each step, before any other events
-take place. The normal step event is executed just before the instances are put in
-their new positions. The end step event is executed at the end of the step, just
-before the drawing. This is typically used to change the sprite depending on
-the current direction. </p>
+<b><img src="images/event_step.bmp"> Evento Step</b><br>
+L'evento step si attiva ogni instante che passa nel gioco.
+Qui puoi inserire le azioni che devono essere eseguite continuamente.
+Per esempio se un oggetto deve seguire un altro, qui puoi modificare la direzione del
+movimento, puntando verso l'oggetto da seguire.
+Presta attenzione però.
+E' sconsigliato usare azioni molto complesse nell'evento Step di oggetti che hanno molte instanze.
+Il gioco potrebbe perdere velocità.
+Per essere precisi, esistono diversi eventi Step.
+Normalmente ti basterà usare quello standard.
+Ma usando il menu puoi anche scegliere tra Evento Begin Step e Evento End Step.
+L'evento Begin Step viene eseguito all'inizio di ogni step, prima di ogni altro evento.
+L'evento Step (normale) viene eseguto appena prima che le instanze vengano posizionate nelle loro nuove posizioni.
+L'evento End Step viene eseguito alla fine dello step, appena prima dell'evento Draw(disegno).
+Questo è tipicamente usato per cambiare Sprite in base alla nuova direzione.
+</p>
 
 <p>
 <b><img src="images/event_collision.bmp"> Collision events</b><br>
