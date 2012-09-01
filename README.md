@@ -25,7 +25,7 @@ Coerenza
 =======
 
 Cercate di essere coerenti, usate sempre gli stessi termini se sono stati tradotti, e se state traducendo delle pagine in una sezione, per scegliere il titolo guardate nell'indice della sezione (XXX_index.html o altre) come hanno tradotto gli altri. Non è carino cliccare su "Fantastiche impostazioni riguardo alle preferenze di Game Maker" e ritrovarsi su "Preferenze" o "Preferences".
-Per ridurre i problemi di questo tipo, traducete prima gli indici, poi le pagine normali, guardando ovviamente l'indice collegato per sapere il titolo da mettere tra <title> e <hX>.
+Per ridurre i problemi di questo tipo, traducete prima gli indici, poi le pagine normali, guardando ovviamente l'indice collegato per sapere il titolo da mettere tra i tag title e h.
 
 Keywords
 =======
