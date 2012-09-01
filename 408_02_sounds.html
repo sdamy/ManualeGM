@@ -2,43 +2,47 @@
 
 <html>
 <head>
-<title>Sounds</title>
+<title>Suoni</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Sounds</h3>
+<h3>Suoni</h3>
 
-Esistono le seguenti funzioni per darti informazioni sui suoni:
+Le seguenti funzioni vi forniranno informazioni sui suoni:
 
 <p>
 <blockquote>
   <tt><b>sound_exists(ind)</b></tt>
-	  Returns whether a sound with the given index exists.<br>
+	  Restituisce se esiste un suono con il dato indice.<br>
   <tt><b>sound_get_name(ind)</b></tt>
-	  Returns the name of the sound with the given index.<br>
+	  Restituisce il nome del suono con il dato indice.<br>
   <tt><b>sound_get_kind(ind)</b></tt>
-	  Returns the kind of the sound with the given index (0=normal, 1=background, 2=3d, 3=mmplayer).<br>
+	  Restituisce il tipo di suono con il dato indice (0=normale, 1=sottofondo, 2=3d, 3=mmplayer).<br>
   <tt><b>sound_get_preload(ind)</b></tt>
-	  Returns whether the sound with the given index has preload set.
+	  Restituisce se il suono con il dato indice ha una impostazione di precaricamento.
 </blockquote>
 
 <p>
 
-Sounds use many resources and most systems can store and play only a limited number of sounds. If you
-make a large game you would like to have more control over which sounds are loaded in audio memory at what
-times. You can use the switch off the preload option for sounds to make sure sounds are only loaded when used.
-This though has the problem that you might get a small hiccup when the sound is used first. Also, 
-sounds are not automatically unloaded when you don't need them anymore.
-For more control you can use the following functions.
+I suoni usano molte risorse e molti sistemi possono immagazzinare e
+suonarne solo un numero limitato. Se progettate un gioco con molte
+caratteristiche vorrete avere maggiore controllo su quei suoni che
+sono caricati nella memoria audio nel tempo scelto. Potete scegliere
+di switchare su spento l’opzione di precaricamento per essere certi
+che i suono vengano caricati solo quando devono essere usati.
+Ciò presenta il problema che potreste ottenere un piccolo effetto
+singhiozzo all’inizio dell’esecuzione dell’audio. L’audio altrettanto
+non viene automaticamente rilasciato quando non ne avete più bisogno.
+Per maggiore controllo potete usare le seguenti funzioni.
 
 <p>
 <blockquote>
   <tt><b>sound_discard(index)</b></tt>
-	  Frees the audio memory used for the indicated sound.<br>
+	  Libera la memoria audio usata per il suono indicato.<br>
   <tt><b>sound_restore(index)</b></tt>
-	  Restores the indicated sound in audio memory for immediate playing.<br>
+	  Ripristina il suono indicato nella memoria audio per una immediata esecuzione.<br>
 </blockquote>
 
 <p>
