@@ -11,28 +11,27 @@
 
 <h3>Scripts</h3>
 
-Scripts cannot be changed during the execution of the game. The scripts are part of the 
-game logic. Changing scripts would lead to self-rewriting code which very easily leads to 
-errors. Also there are other ways to achieve this. If you really need to execute a piece 
-of code that is not known at design time (e.g. from a file) you can use the following 
-functions:
-
+Gli script non possono essere cambiati durante l'esecuzione del gioco. Gli script sono parte
+della logica del programma. Cambiare gli script condurrebbe alla autoriscrittura del codice che
+porterebbe facilmente ad errori. Ci sono altri sistemi per far fronte a questa necessità.
+Se avete veramente bisogno di eseguire un pezzo di codice che non è stato creato durante lo sviluppo
+(ad esempio, leggere il codice da un file) potete usare le seguenti funzioni:
 
 <blockquote>
   <tt><b>execute_string(str,arg0,arg1,...)</b></tt> 
-    Execute the piece of code in the string str with the indicated arguments.<br/>
+    Esegue il pezzo di codice contenuto nella stringa <tt>str</tt> con gli argomenti indicati.<br/>
   <tt><b>execute_file(fname,arg0,arg1,...)</b></tt> 
-    Execute the piece of code in the file with the indicated arguments.<br/>
+  Esegue il pezzo di codice contenuto in un file con gli argomenti indicati.<br/>
 </blockquote>
 
 <p>
-Sometimes you want to store a script index in a variable and execute it. For this you can 
-use the following function
+A volte vorrete memorizzare l'indice di uno script in una variabile ed eseguirlo.
+Per fare ciò usate le seguenti funzioni:
 </p>
 
 <blockquote>
  <tt><b>script_execute(scr,arg0,arg1,...)</b></tt> 
- 	Execute the script with index scr with the given arguments.</blockquote>
+ 	Esegue lo script con indice <tt>scr</tt> con gli argomenti indicati.</blockquote>
 
 
 
