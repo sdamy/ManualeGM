@@ -16,103 +16,106 @@ un po' di fatica, diventerà abbastanza facile. Puoi finirlo entro un'ora.
 </p>
 
 <p>
-Even though it is really easy to make games with <i>GameMaker</i> you will
-need to understand some of the basic concepts. To this end you are strongly
-recommended to follow the tutorial that is shown when <i>GameMaker</i> is started.
-If you did remove the tutorial from view, you can always make it visible again
-by choosing <b>Tutorial</b> in the <b>Help</b> menu.
+Anche se è veramente facile creare giochi con <i>GameMaker</i> avrai bisogno
+di capire alcuni concetti di base. Per questo scopo è fortemente raccomandato
+seguire il tutorial che viene mostrato quando <i>GameMaker</i> viene avviato.
+Se hai nascosto il tutorial, puoi sempre renderlo visibile di nuovo scegliendo
+<b>Tutorial</b> nel menu <b>Help</b>.
 </p>
 
-<h3>The Global idea</h3>
+<h3>L'idea Globale</h3>
 <p>
-Before delving into the possibilities of <i>GameMaker</i> it is good to
-get a feeling for the global idea behind the program. Games created
-with <i>GameMaker</i> take place in one or more <i>rooms</i>. (Rooms are
-flat, not 3D, but they can contain 3D-looking graphics.) In these rooms
-you place <i>objects</i>, which you can define in the program. Typical
-objects are the walls, moving balls, the main character, monsters, etc.
-Some objects, like walls, just sit there and don�t do anything. Other
-objects, like the main character, will move around and react to input
-from the player (keyboard, mouse, and joystick) and to each other. For
-example, when the main character meets a monster he might die. Objects
-are the most important ingredients of games made with <i>GameMaker</i>,
-so let us talk a bit more about them. 
-</p>
-
-<p>
-First of all, most objects need some image to make them visible on the
-screen. Such images are called <i>sprites</i>. A sprite is often not a
-single image but a set of images that are shown one after the other to
-create an animation. In this way it looks like the character walks, a
-ball rotates, a spaceship explodes, etc. During the game, the sprite for a
-particular object can change. (So the character can look different when
-it walks to the left or to the right.) You can create you own sprites in
-<i>GameMaker</i> or load them from files (e.g. PNG files or animated GIF�s).
-Many sprites come bundled with <i>GameMaker</i> that you can use free
-of charge in your games.
+Prima di approfondire le possibilità di <i>GameMaker</i> sarebbe corretto
+farsi un'idea del funzionamento del programma. I giochi creati con
+<i>GameMaker</i> prendono posto in'una o più <i>rooms</i> (stanze). Le rooms sono
+piatte, non 3D, ma possono contenere una grafica con aspetto 3D.
+In queste rooms si piazzano gli <i>objects</i> (oggetti), che puoi definire nel
+programma. Oggetti tipici sono i muri, le palle che si muovono, il personaggio
+principale, i mostrio, etc. Alcuni oggetto, come i muri, stanno fermi e
+non fanno niente. Gli altri oggetti, come il personaggio principale,
+si muoveranno intorno e reagiranno all'input del giocatore (tastiera, 
+mouse, e joystick) e tra di loro. Per esempio, quando il personaggio
+principale incontra un mostro potrebbe morire. Gli oggetti sono gli
+ingredienti più importanti dei giochi creati con <i>GameMaker</i>, quindi
+parliamo un po' di più di loro. 
 </p>
 
 <p>
-Certain things will happen to objects. Such happenings are called <i>
-events</i>. Objects can take certain <i>actions</i> when events happen.
-There are a large number of different events that can take place and a
-large number of different actions that you can let your objects take. For
-example, there is a <i>creation event</i> when the object gets created.
-(To be more precise, when an instance of an object gets created; there
-can be multiple instances of the same object.) For example, when a ball
-object gets created you can give it some motion action so that it
-starts moving. When two objects meet, you get a <i>collision event</i>. In
-such a case you can make the ball stop or reverse direction. You can also
-play a sound effect. To this end <i>GameMaker</i> lets you define <i>
-sounds</i>. When the player presses a key on the keyboard there is a <i>
-keyboard event</i>, and the object can take an appropriate action, like
-moving in the direction indicated. We hope you get the idea. For each
-object you design, you can indicate actions for various events; in this
-way defining the behavior of the object.
+Prima di tutto, la maggior parte degli oggetti hanno bisogno di un'immagine
+per essere visibili nello schermo. Queste immagini sono chiamate
+<i>sprites</i>. Spesso uno sprite non è una singola immagine ma una serie
+di immagini che vengono mostrate una dopo l'altra per creare un'animazione.
+In questo modo il personaggio sembrerà camminare, una palla ruotare,
+un'astronave esplodere, etc. Durante il gioco, lo sprite per un particolare
+oggetto può cambiare. (Quindi il personaggio può avere un aspetto differente
+quando cammina a sinistra o a destra.) Puoi creare i tuoi sprites in 
+<i>GameMaker</i> o caricarli dai files (ad esempio files PNG o animazioni
+GIF). In <i>GameMaker</i> sono inclusi molti sprites che puoi usare
+liberamente nei tuoi giochi.
 </p>
 
 <p>
-Once you have defined your objects it is time to define the <i>rooms</i>
-in which they will live. Rooms can be used for levels in your game or to
-check out different places. There are actions to move from one room to
-another. Rooms, first of all, have a <i>background</i>. This can be a
-simple color or an image. Such background images can be created in <i>
-GameMaker</i> or you can load them from files. (The background can do a
-lot of things but for the time being, just consider it as something that
-makes the rooms look nice.) Next, you can place the objects in the room.
-You can place multiple instances of the same object in a room. So, for
-example, you need to define just one wall object and can use it at many
-places. Also you can have multiple instances of the same monster objects,
-as long as they have the same behavior.
+Determinate cose accadranno agli oggetti. Questi avvenimenti sono chiamati
+<i>events</i> (eventi). Gli oggetti possono richiedere che avvengano delle
+determinate <i>actions</i> (azioni) quando succede qualcosa. Ci sono
+molti tipi di eventi e di azioni che i tuoi oggetti possono prendere.
+Per esempio, c'è un <i>creation event</i> quando l'oggetto viene creato.
+(Per essere più precisi, quando un'istanza di un oggetto viene creata;
+ci possono essere più istanze di uno stesso oggetto.) Per esempio, quando
+un oggetto palla viene creato puoi dargli delle azioni di movimento in
+modo da farlo iniziare a muovere. Quando due oggetti si incontrano, accede
+un <i>collision event</i> (evento di collisione). In tal caso puoi far
+fermare la palla o fargli cambiare direzione. Puoi anche far partire un
+effetto sonoro. Per questo scopo <i>GameMaker</i> ti permette di definire
+dei <i>sounds</i> (suoni). Quando il giocatore preme un tasto nella
+tastiera c'è un <i>keyboard event</i>, e l'oggetto può richiedere un'azione
+appropriata, come muoversi nella direzione indicata. Speriamo che hai 
+afferrato l'idea. Per ogni oggetto che progetti, puoi indicare delle azioni
+per i vari eventi; in questo modo definisci il comportamento dell'oggetto.
 </p>
 
 <p>
-Now you are ready to run the game. The first room will be shown and
-objects will come to life because of the actions in their creation
-events. They will start reacting to each other due to actions in
-collision events and they can react to the player using the actions in
-keyboard or mouse events.
+Una volta definiti i tuoi oggetti è tempo di definire le <i>rooms</i>
+nelle quali essi vivranno. Le rooms possono essere usate come livelli
+per il tuo gioco. Ci sono delle azioni per muoversi da una room all'altra.
+Le rooms, prima di tutto, hanno un <i>background</i> (sfondo). Questo può
+essere un semplice colore o un'immagine. Questi sfondi possono essere
+creati da <i>GameMaker</i> o puoi caricarli dai files. (Lo sfondo può
+fare molte cose, ma per ora consideralo come qualcosa che rende le rooms
+carine.) Dopo, puoi piazzare gli oggetti nella room. Puoi piazzare più
+istanze di uno stesso oggetto in una room. Quindi, per esempio, hai
+bisogno di definire un solo oggetto muro, e piazzarlo più volte in posti
+differenti. Puoi anche avere più istanze dello stesso oggetto mostro, che
+avranno lo stesso comportamento.
 </p>
 
 <p>
-So in summary, the following things (often called resources) play a
-crucial role:
+Adesso sei pronto per far partire il gioco. La prima room verrà mostrata
+e gli oggetti prenderanno vita a causa delle azioni nei loro eventi di
+creazione. Loro cominceranno a reagire tra di loro in base alle azioni
+nei loro eventi di collisione e potranno reagire al giocatore usando
+le azioni negli eventi di tastiera o di mouse.
+</p>
+
+<p>
+In sintesi, queste cose (spesso chiamate risorse), giocano un ruolo
+fondamentale:
 </p>
 
 <ul>
-  <li><i>objects</i>: which are the true entities in the game</li>
-  <li><i>rooms</i>: the places (levels) in which the objects live</li>
-  <li><i>sprites</i>: (animated) images that are used to represent the objects</li>
-  <li><i>sounds</i>: these can be used in games, either as background music or as effects</li>
-  <li><i>backgrounds</i>: the images used as background for the rooms</li>
+  <li><i>objects</i>: che sono le reali entità del gioco</li>
+  <li><i>rooms</i>: i luoghi (livelli) in cui gli objects vivono</li>
+  <li><i>sprites</i>: le immagini (animate e non) che rappresentano gli objects</li>
+  <li><i>sounds</i>: che possono essere usati nel gioco come sottofondo musicale o effetti sonori</li>
+  <li><i>backgrounds</i>: le immagini usate come sfondo per le rooms</li>
 </ul>
 
 <p>
-There are actually a number of other types of resources: paths, scripts,
-fonts, and time lines. These are only important for more complicated
-games. You will only see them when you run <i>GameMaker</i> in advanced
-mode. They will be treated in the advanced chapters later in this
-document.
+Ci sono anche altri tipi di risorse: paths (percorsi), scripts, fonts, e
+time lines (linee del tempo). Questi sono importanti solo per giochi più
+complicati. Li vedrai solo quando farai partire <i>GameMaker</i> in 
+advanced mode (modalità avanzata). Essi verranno trattati nei capitoli
+avanzati di questo documento.
 </p>
 
 <!--END-->
@@ -122,5 +125,8 @@ document.
 <!-- KEYWORDS
 global idea
 resources
+tutorial
+idea globale
+risorse
 tutorial
 -->
