@@ -1,7 +1,7 @@
 Manuale
 =======
 
-GameMaker manuale in italiano
+Traduzione del manuale di Game Maker 8.1 in italiano.
 
 Come collaborare
 =======
