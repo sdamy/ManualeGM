@@ -30,3 +30,10 @@ Keywords
 =======
 
 Alla fine di ogni pagina trovate le keywords: anche queste vanno tradotte, ma vanno messe insieme a quelle in inglese. Quindi, se trovate "<!-- KEYWORDS cat dog -->" dovete cambiare in "<!-- KEYWORDS cat dog gatto cane -->".
+
+Revisione
+=======
+
+TRADOTTO non significa che il file è completo, infatti di solito traduciamo velocemente, ma per considerare completo un file dev'essere prima revisionato: se vuoi fare ciò, rileggi tutto cercando e correggendo errori di grammatica e ortografia e controlla la coerenza con altre pagine collegate (se l'indice chiama questa pagina "cacca", il titolo dev'essere anche qui "cacca"). Una volta fatta la revisione, committa usando come commento "REVISIONATO".
+Comunque la revisione va' fatta alla fine, quando la maggior parte delle pagine sono ormai tradotte.
+Se trovate SEDATO in un file, significa che quel file è stato revisionato, e sono stati applicati degli script su di esso per correggere gli accenti (è diventa &amp;egrave; per esempio).
