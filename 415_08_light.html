@@ -2,98 +2,102 @@
 
 <html>
 <head>
-<title>Lighting</title>
+<title>Illuminazione</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 
 <!--START-->
 
-<h3>Lighting</h3>
+<h3>Illuminazione</h3>
 
-Scenes you draw with the functions above look rather flat because there is no light. The color
-if the faces is equal, independent of their orientation. To create more realistically looking
-scenes you must enable lighting and place lights at the correct places. 
-Creating correctly lit scenes is not easy but the
-effect is very good. 
+Le scene raffigurate con le funzioni citate sopra sono piuttosto piatte dato che non c’è luce.
+Anche il colore se le facciate sono uguali, indipendentemente dal loro orientamento.
+Per creare delle scene più realistiche da guardare dovete abilitare l’illuminazione e
+sistemare le luci nei posti esatti. La creazione di scene correttamente illuminate non
+è semplice, ma l’effetto è davvero soddisfacente.  
 
 <p>
-To enable lighting you can use the following function;
+Per abilitare l’illuminazione potete usare la seguente funzione:
 
 <blockquote>
   <tt><b>d3d_set_lighting(enable)</b></tt>
-	  Enables or disables the use of lighting.<br>
+	  Abilita o disabilita l’uso dell’illuminazione.<br>
 </blockquote>
 
 <p>
-When using lighting, for each vertex of a polygon the color is determined. Next, the color
-of internal pixels is based on the color of these vertices. There are two ways this can be done:
-Either the whole polygon gets the same color, or the color is smoothly interpolated over the
-polygon. Default smooth shading is used. This can be changed using the following function:
+Quando usate l’illuminazione, viene determinato il colore per ogni vertice di un poligono.
+Poi, il colore dei pixels interni è basato sul colore di questi vertici. Ci sono due modi
+per realizzare ciò: Sia l’intero poligono prende lo stesso colore, o il colore è
+leggermente interpolato sopra il poligono. Viene usata predefinitivamente una
+sfumatura liscia. Ciò può essere modificato usando la seguente funzione:
 
 <blockquote>
   <tt><b>d3d_set_shading(smooth)</b></tt>
-	  Set whether to use smooth shading or not.<br>
+	  Imposta se usare o no la sfumatura liscia.<br>
 </blockquote>
 
 <p>
-To use lighting you obviously need to define lights. Two different lights exist: directional lights
-(like the sun), and positional lights. Lights have a color. (We only support diffuse light,
-not specular reflection.)
-    There are usually only <b>8</b> hardware lights available, so you should use the 
-    functions below to define and manage &quot;active&quot; lights, not just all lights in the 
-    scene. The following functions exist to define and use lights:<blockquote>
+Per usare l’illuminazione ovviamente avete necessità di definire le luci.
+Esistono luci diverse: luci direzionali (come il sole), e luci posizionabili.
+La luce ha un colore. (Supportiamo solo luci diffuse, nessun riflesso speculare)
+    Di solito sono disponibili solo <b>8</b> luci tramite hardware, quindi dovrete usare
+	le funzioni qui sotto per modificare le luci "attive", non solo tutte le luci della scena.
+	Esistono le seguenti funzioni per definire ed usare le luci:<blockquote>
   <tt><b>d3d_light_define_direction(ind,dx,dy,dz,col)</b></tt>
-	  Defines a directed light. <tt>ind</tt> is the index of the light (use a small
-	  positive number). (dx,dy,dz) is the direction of the light. <tt>col</tt> is the
-	  color of the light (often you want to use <tt>c_white</tt>. 
-	  This function does not turn the light on.<br>
+	  Definisce una luce direzionale. <tt>ind</tt> è l'indice della luce (usa un puccolo
+	  numero positivo). (dx,dy,dz) è la direzione della luce. <tt>col</tt> è il
+	  colore della luce (spesso si usa <tt>c_white</tt>. 
+	  Questa funzione non attiva la luce.<br>
   <tt><b>d3d_light_define_point(ind,x,y,z,range,col)</b></tt>
-	  Defines a point light. <tt>ind</tt> is the index of the light use a small
-	  positive number). (x,y,z) is the position of the light. <tt>range</tt>
-	  indicates till how far the light shines. The intensity of the light
-	  will decrease over this range. <tt>col</tt> is the color
-	  of the light. This function does not turn the light on.<br>
+	  Definisce un punto luce. <tt>ind</tt> è l'indice della luce (usa un puccolo
+	  numero positivo). (x,y,z) è la posizione della luce. <tt>range</tt>
+	  indica quanto lontano brilla la luce. L’intensità della luce
+	  decrescerà lungo questo range. <tt>col</tt> è il colore
+	  della luce. Questa funzione non attiva la luce.<br>
   <tt><b>d3d_light_enable(ind,enable)</b></tt>
-	  Enables (true) or disables (false) light number <tt>ind</tt>.<br>
+	  Attiva (true) o disattiva (false) la luce <tt>ind</tt>.<br>
 </blockquote>
 
 <p>
     <br />
-The last function, is for controlling what is called <i>ambient</i> light. Ambient light is the light that you get
-when there is no light. It's effectively the colour and brightness of the darknes of a scene. To control this light
-you use the command below:
+La prossima funzione serve per controllare una particolare luce chiamata luce <i>ambientale</i>.
+La luce ambientale è una particolare luce che illumina dove non è presente della luce.
+E' effettivamente il colore della luminosità della scena.
+Per controllare questa luce usate questa funzione:
 
 <blockquote>
-  <tt>d3d_light_define_ambient( colour )</tt> The default colour is $000000&nbsp; 
+  <tt>d3d_light_define_ambient( colour )</tt> Il colore di default è $000000&nbsp; 
     (black)</blockquote>
 </p>
 
 <p>
-The way an object reflects light depends on the angle between the light direction and the normal
-of the surface, that is, the vector pointing away from the surface. Hence, to create lighted objects
-you need not only provide the position of the vertices but also
-their normals. For this four additional functions are avaliable to define the vertices of
-primitives:
+Il modo con il quale un oggetto riflette la luce dipende dall’angolo tra la
+direzione della luce e dalla perpendicolarità della superficie, cioè, la
+rotta di puntamento lontana dalla facciata, questa rotta è chiamata "normale" (normal)
+di una superficie. Quindi, per creare oggetti illuminati
+avete bisogno non solo di fornire la posizione dei vertici ma anche le loro
+perpendicolarità. Sono disponibili per questa necessità quattro funzioni per
+definire i vertici delle primitive:
 
 <p>
 <blockquote>
   <tt><b>d3d_vertex_normal(x,y,z,nx,ny,nz)</b></tt>
-	  Add vertex (x,y,z) to the primitive, with normal vector (nx,ny,nz).<br>
+	  Aggiunge un vertice (x,y,z) alla primitiva, con un vettore perpendicolare (nx,ny,nz).<br>
   <tt><b>d3d_vertex_normal_color(x,y,z,nx,ny,nz,col,alpha)</b></tt>
-	  Add vertex (x,y,z) to the primitive, with normal vector (nx,ny,nz), 
-	  and with its own color and alpha value.<br>
+	  Aggiunge un vertice (x,y,z) alla primitiva, con un vettore perpendicolare (nx,ny,nz),
+	  e con il proprio colore e canale alpha.<br>
   <tt><b>d3d_vertex_normal_texture(x,y,z,nx,ny,nz,xtex,ytex)</b></tt>
-	  Add vertex (x,y,z) to the primitive, with normal vector (nx,ny,nz),
-	  and with position (xtex,ytex) in the
-	  texture, blending with the color and alpha value set before.<br>
+	  Aggiunge un vertice (x,y,z) alla primitiva, con il vettore perpendicolare (nx,ny,nz), e
+	  con la posizione (xtex,ytex) nella texture, mischiandolo prima con il colore e il canale alpha.<br>
   <tt><b>d3d_vertex_normal_texture_color(x,y,z,nx,ny,nz,xtex,ytex,col,alpha)</b></tt>
-	  Add vertex (x,y,z) to the primitive, with normal vector (nx,ny,nz), and with position
-		(xtex,ytex) in the texture, blending with its own color and alpha value.<br>
+	  Aggiunge un vertice (x,y,z) alla primitiva, con il vettore perpendicolare (nx,ny,nz), e con la posizione
+	  (xtex,ytex) nella texture, miscelandolo con il proprio colore e il canale alpha.<br>
 </blockquote>
 
 <p>
-Note that for the basic shapes that you can draw the normals are automatically set correctly.
+Si noti che per le forme base che potrete raffigurare il vettore di perpendicolarità è
+impostato correttamente in automatico.
 
 <!--END-->
 
@@ -101,8 +105,8 @@ Note that for the basic shapes that you can draw the normals are automatically s
 </html>
 
 <!-- KEYWORDS
-light
-material
+luce
+materiale
 
 d3d_set_lighting()
 d3d_set_shading()
