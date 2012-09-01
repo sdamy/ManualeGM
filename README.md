@@ -1,7 +1,7 @@
-Manual
+Manuale
 =======
 
-GameMaker manuale italiano
+GameMaker manuale in italiano
 
 Come collaborare
 =======
@@ -25,3 +25,8 @@ Coerenza!
 =======
 
 Cercate di essere coerenti, usate sempre gli stessi termini se sono stati tradotti, e se state traducendo delle pagine in una sezione, per scegliere il titolo guardate nell'indice della sezione (XXX_index.html o altre) come hanno tradotto gli altri. Non è carino cliccare su "Fantastiche impostazioni riguardo alle preferenze di Game Maker" e ritrovarsi su "Preferenze" o "Preferences".
+
+Keywords
+=======
+
+Alla fine di ogni pagina trovate le keywords: anche queste vanno tradotte, ma vanno messe insieme a quelle in inglese. Quindi, se trovate "<!-- KEYWORDS cat dog -->" dovete cambiare in "<!-- KEYWORDS cat dog gatto cane -->".
