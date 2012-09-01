@@ -17,6 +17,11 @@ Quando modificherete una pagina vi può capitare un'errore che indica che mentre
 Traduzione di alcuni termini
 =======
 
-Tutto ciò che si trova in GM non va' tradotto. Quindi non solo roba come sprites e background, ma anche i nomi degli eventi, delle azioni, dei menu, ecc...
+Tutto ciò che si trova in GM non va' tradotto. Quindi non solo roba come sprites e background, ma anche i nomi degli eventi, delle azioni, dei menu, cose come advanced mode, ecc...
 Perché? Perché se tu gli dici di mettere l'evento "Fine del percorso" a uno che non sa' l'inglese, visto che in GM si chiama "End of path", il tizio non saprà che evento mettere.
 Però si può (anzi, è consigliato) scrivere una traduzione assieme al termine inglese la prima volta che si incontra (per esempio "gli sprites (sprite) sono roba blabla").
+
+Coerenza!
+=======
+
+Cercate di essere coerenti, usate sempre gli stessi termini se sono stati tradotti, e se state traducendo delle pagine in una sezione, per scegliere il titolo guardate nell'indice della sezione (XXX_index.html o altre) come hanno tradotto gli altri.
