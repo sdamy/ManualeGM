@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Backgrounds</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Backgrounds</h3>
+
+Le seguenti funzioni possono essere usate per creare background e rimuoverli.
+
+<p>
+<blockquote>
+  <tt><b>background_duplicate(ind)</b></tt> 
+  	Crea un duplicato dello sfondo con il dato indice. Restituisce l'indice del nuovo sfondo.
+  	Se capita un'errore viene restituito -1.<br>
+  <tt><b>background_assign(ind,back)</b></tt> 
+	Assegna lo sfondo indicato al dato indice.
+	Così si fa una copia dello sfondo.<br> 
+  <tt><b>background_add(fname,removeback,smooth)</b></tt> 
+  	Aggiunge l'immagine contenuta nel file fname nel set delle risorse degli sfondi. 
+	Possono essere usati vari tipi di immagini con questa funzione. Quando l'immagine
+	possiede il canale alpha, questa viene usata per la trasparenza. <tt>removeback</tt> indica
+	se rendere trasparenti tutti i pixel uguali al colore di sfondo (il pixel in basso a sinistra)
+	<tt>smooth</tt> indica se i margini devono essere smussati. La funzione restituisce l'indice del
+	nuovo sfondo che può essere usato per disegnarlo o assegnarlo alla variabile
+	background_index[0] per visualizzarlo nella room corrente. In caso di errore viene restituito -1.<br>
+   <tt><b>background_replace(ind,fname,removeback,smooth)</b></tt>  
+   	Come la precedente funzione solo che in questo caso lo sfondo con il dato indice viene sovrascritto. Questa funzione restituisce
+	se ha avuto successo. Quando lo sfondo è attualmente visibile nella room viene rimpiazzato lo stesso.<br>
+  <tt><b>background_add_background(fname)</b></tt> 
+  	Aggiunge lo sfondo contenuto nel file fname nel set delle risorse degli sfondi. Questo file deve avere l'estensione
+	.gmbck che è stato salvato tramite la finestra di proprietà dello sfondo di <i>GameMaker</i>.
+	Questo file contiene tutte le impostazioni dello sfondo quindi non sono necessari argomenti.
+	La funzione restituisce l'indice del nuovo sfondo che può essere
+	usato per disegnarlo o assegnarlo alla variabile background_index[0]
+	per visualizzarlo nella room corrente. In caso di errore viene restituito -1.<br>
+   <tt><b>background_replace_background(ind,fname)</b></tt> 
+    Come la precedente funzione solo che in questo caso lo sfondo con il dato indice viene sovrascritto. Questa funzione restituisce
+	se ha avuto successo. Quando lo sfondo è attualmente visibile nella room viene rimpiazzato lo stesso.<br>
+  <tt><b>background_create_color(w,h,col)</b></tt> 
+  	Crea uno sfondo indicando la grandezza ed il colore indicati. 
+	Restituisce l'indice nel nuovo sfondo. In caso di errore viene restituito -1.<br>
+  <tt><b>background_create_gradient(w,h,col1,col2,kind)</b></tt> 
+  	Crea uno sfondo con un gradiente e grandezza indicati.
+	col1 e col2 indicano i due colori del gradiente. kind è un valore tra 0 e 5 
+	che indica il tipo di gradiente: 0=orizzontale 1=verticale, 2= rettangolo, 3=ellisse,
+	4=doppio orizzontale, 5=doppio verticale. Restituisce l'indice nel nuovo sfondo.
+	In caso di errore viene restituito -1.<br>
+  <tt><b>background_create_from_screen(x,y,w,h,removeback,smooth)</b></tt> 
+  	Crea uno sfondo copiando l'area indicata dello schermo. <tt>removeback</tt> indica
+	se rendere trasparenti tutti i pixel uguali al colore di sfondo (il pixel in basso a sinistra)
+	<tt>smooth</tt> indica se i margini devono essere smussati. Questa funzione da la possibilità
+	di creare qualunque immagine vogliate. Basta disegnare un'immagine nello schermo usando le funzioni di disegno
+	e successivamente crea uno sfondo da questo.
+	(Se non fai ciò nel draw event questo non sarà visualizzato sullo schermo senza riaggiornarlo) La funzione restiruisce 
+	l'indice dello sfondo. Occorre fare attenzione quando la si usa. Va precisato che, sebbene parliamo dello schermo,
+	di fatto ci si riferisce all’area di raffigurazione interessata. Il fatto che esiste una finestra sullo schermo
+	e che quella immagine deve essere scalata in questa finestra, non significa che essa
+	sia coinvolta nella procedura. <br>
+  <tt><b>background_create_from_surface(id,x,y,w,h,removeback,smooth)</b></tt> 
+  	Crea uno sfondo copiandolo dall'area indicata della surface con in dato indice. 
+	<tt>removeback</tt> indica
+	se rendere trasparenti tutti i pixel uguali al colore di sfondo (il pixel in basso a sinistra)
+	<tt>smooth</tt> indica se i margini devono essere smussati. Questa funzione da la possibilità
+	di creare qualunque immagine vogliate. Basta disegnare un'immagine nella surface usando le funzioni di disegno
+	e successivamente crea uno sfondo da questa. Notare che il canale alpha viene mantenuto nello sfondo.<br>
+  <tt><b>background_delete(ind)</b></tt> 
+  	Cancella lo sfondo dalla memoria, liberando la memoria usata per esso.<br>
+</blockquote>
+
+<p>
+
+Esiste la seguente funzione per cambiare l'aspetto dell'immagine di sfondo.
+
+<p>
+<blockquote>
+  <tt><b>background_set_alpha_from_background(ind,back)</b></tt> 
+    Cambia i valori di trasparenza dello sfondo con l'indice indicato
+	usando i valori d'intensità dello sfondo <tt>back</tt>. Questa azione non può essere annllata.<br>
+</blockquote>
+
+<p>
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+background_duplicate()
+background_assign()
+background_add()
+background_replace()
+background_add_background()
+background_replace_background()
+background_create_color()
+background_create_gradient()
+background_create_from_screen()
+background_create_from_surface()
+background_delete()
+background_set_alpha_from_background()
+
+-->

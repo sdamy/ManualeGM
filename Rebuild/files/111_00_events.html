@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+//TRADUZIONE IN CORSO DA TIZZIO
+
+<html><head>
+<title>Eventi</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h1>Eventi</h1>
+
+<i>GameMaker</i> usa un approcio orientato agli eventi e funziona nel seguente modo.
+Ogni volta che accade qualcosa nel gioco, le instanze degli oggetti richiamano degli eventi (un tipo di messaggio che dice
+che qualcosa è accaduto). Le instanze possono quindi "reagire" a questo tipo di messaggi eseguendo delle azioni.
+Per ogni oggetto potrai utilizzare una serie di eventi nei quali dovrai inserire delle azioni.
+Prima di tutto, per molti eventi, l'oggetto non dovrà fare niente, per altri invece è richiesto che avvenga qualcosa,
+dovrai quindi impostarlo tramite drag&drop per indicare l'azione.
+
+<p>
+Nel Form delle proprietà dell'oggetto, c'è una lista di eventi ai quali l'oggetto dovrà reagire.
+Inizialmente è vuoto.
+Puoi aggiungere un evento premendo il bottone <b>Add Event</b>.
+Apparirà un altro form in cui potrai scegliere tra diversi tipi di eventi.
+Qui potrai selezionare l'evento che vuoi aggiungere. A volta un menu apparirà per scegliere delle impostazioni extra.
+Per esempio, per gli eventi legati alla tastiera dovrai scegliere il pulsante a cui associare l'evento.
+In basso troverai una lista completa degli eventi, compresa la descrizione.
+Puoi cambiare un evento semplicemente cliccando su "change" e sceglierne un altro.
+Nel prossimo capitolo troverai una descrizione delle azioni che possono eseguire gli eventi.
+(Queste azioni si trovano all'estrema destra dell'interfaccia e sono raggruppate in delle schede.
+Le azioni possono essere "inserite" in un evento semplicemente trascinando l'icona nel riquadro a 
+destra del riquadro eventi.
+Puoi posizionare una o più azioni nell'ordine che preferisci.
+Quando inserirai un azione, si aprirà una finestra in cui dovrai inserire dei parametri relativi
+a quell'azione oppure del codice gml(GameMaker Language).
+La schermata dovrebbe apparire in questo modo
+
+<p>
+<img src="images/form_event_panel.jpg">
+
+<p>
+Adesso puoi iniziare aggiungendo azioni ad un altro evento.
+Clicca col tasto sinistro del mouse sull'evento, poi prendi e trascina delle azioni all'interno
+del riquadro relativo a quell'evento.
+
+<p>
+Puoi cambiare l'ordine delle azioni nella lista trascinandole col mouse.
+Se tieni premuto il tasto &lt;Alt&gt; mentre trascini, puoi fare una copia dell'azione.
+Puoi trascinare le icone anche nella lista azioni di un altro oggetto.
+Se clicchi col tasto destro del mouse su un'azione apparirà un menu in cui puoi cancellarla (o usare il tasto &lt;Del&gt;)
+o copiare/incollare le azioni (puoi usare &lt;Shift&gt;/&lt;Ctrl&gt; per selezionare più azioni contemporaneamente,
+invece  &lt;Ctrl&gt;&lt;A&gt; per selezionare tutte le azioni)
+
+Se tieni fisso il mouse sopra l'icona di un azione, apparirà una breve descrizione.
+
+<p>
+Per cancellare l'azione selezionata clicca sul bottone <b>Delete</b> posizionato in basso.
+Se non ci sono azioni nell'evento, questo verrà cancellato alla chiusura.
+Ricorda: anche se hai assegnato delle azioni, ma vuoi cambiare l'evento 
+(per esempio se vuoi usare l'evento associato ad un altro tasto), puoi farlo tramite il bottone
+<b>Change</b> situato in basso, potrai quindi scegliere un nuovo evento dalla finestra che si aprirà.
+Puoi anche duplicare un evento col tasto destro del mouse, apparirà una finestra, scegli l'evento che vuoi
+e veranno copiate le azioni dell'altro evento, nel nuovo.
+
+<p>
+Come detto sopra, per aggiungere un evento premi il bottone <b>Add Event</b>.
+Apparirà il seguente Form 
+
+<p>
+<img src="images/form_event_selector.jpg">
+
+<p>
+Qui sceglierai l'evento che vuoi aggiungere. Per alcuni eventi, dopo aver cliccato dovrai scegliere per una sottocategoria.
+Di seguito una descrizione dei vari eventi:
+
+<p>
+<b><img src="images/event_create.bmp"> Evento Create (creazione)</b><br>
+Questo evento si attiva quando un instanza di un oggetto viene creata.
+è normalmente usata per settare alcune variabili o azioni che avvengono solo una volta.
+
+<p>
+<b><img src="images/event_destroy.bmp"> Evento Destroy (distruzione)</b><br>
+Questo evento si attiva quando l'instanza viene distrutta. Per essere precisi, appena prima che venga distrutta, quindi
+l'instanza ancora esiste quando l'evento viene eseguito!
+Questo evento è di solito usato per cambiare il punteggio, diminuire le vite del personaggio o creare altre istanze di oggetti.
+
+<p>
+<b><img src="images/event_timer.bmp"> Evento Alarm (sveglie/timer)</b><br>
+Ogni instanza ha 12 alarm.
+L'alarm diminuisce di 1 ogni step finchè non raggiunge il valore 0.
+In quel momento, si attiveranno le azioni che hai scelto.
+Gli alarm sono veramente utili, perchè puoi usarli per far accadere determinate cose, dopo un tot di tempo.
+Un esempio di utilizzo, può essere far cambiare direzione ad un mostro ogni 20 step.
+
+<p>
+<b><img src="images/event_step.bmp"> Evento Step</b><br>
+L'evento step si attiva ogni instante che passa nel gioco.
+Qui puoi inserire le azioni che devono essere eseguite continuamente.
+Per esempio se un oggetto deve seguire un altro, qui puoi modificare la direzione del
+movimento, puntando verso l'oggetto da seguire.
+Presta attenzione però.
+E' sconsigliato usare azioni molto complesse nell'evento Step di oggetti che hanno molte instanze.
+Il gioco potrebbe perdere velocità.
+Per essere precisi, esistono diversi eventi Step.
+Normalmente ti basterà usare quello standard.
+Ma usando il menu puoi anche scegliere tra Evento Begin Step e Evento End Step.
+L'evento Begin Step viene eseguito all'inizio di ogni step, prima di ogni altro evento.
+L'evento Step (normale) viene eseguto appena prima che le instanze vengano posizionate nelle loro nuove posizioni.
+L'evento End Step viene eseguito alla fine dello step, appena prima dell'evento Draw(disegno).
+Questo è tipicamente usato per cambiare Sprite in base alla nuova direzione.
+</p>
+
+<p>
+<b><img src="images/event_collision.bmp"> Collision events</b><br>
+Whenever two instances collide (that is, their sprites overlap) a collision event
+appears. Well, to be precise two collision event occur; one for each instance. The
+instance can react to this collision event. To this end, from the menu select the
+object with which you want to define the collision event. Next you place the actions
+here.
+
+<p>
+There is a difference in what happens when the instance collides with a solid object
+or a non-solid object. First of all, when there are no actions in the collision event,
+nothing happens. The current instance simply keeps on moving; even when the other
+object is solid. When the collision event contains actions the following happens:
+
+<p>
+When the other object is solid, the instance is placed back at its previous place
+(before the collision occurs). Then the event is executed. Finally, the instance is
+moved to its new position. So if the event e.g. reverses the direction of motion, the
+instance bounces against the wall without stopping. If there is still a collision, the
+instance is kept at its previous place. So it effectively stops moving.
+
+<p>
+When the other object is not solid, the instance is not put back. The event is simply
+executed with the instance at its current position. Also, there is no second check for
+a collision. If you think about it, this is the logical thing that should happen.
+Because the object is not solid, we can simply move over it. The event notifies us
+that this is happening.
+
+<p>
+There are many uses for the collision event. Instances can use it to bounce against
+walls. You can use it to destroy objects when, for example, they are hit by a bullet.
+
+<p>
+<b><img src="images/event_keyboard.bmp"> Keyboard events</b><br>
+When the player presses a key, a keyboard event happens for all instances of all
+objects. There is a different event for each key. In the menu you can pick the key for
+which you want to define the keyboard event and next drag actions there. Clearly, only
+a few objects need events for only a few keys. You get an event in every step as long
+as the player keeps the key depressed. There are two special keyboard events. One is called
+&lt;No key&gt;. This event happens in each step when no key is pressed. The second one
+is called &lt;Any key&gt; and happens whatever key is pressed. When the player
+presses multiple keys, the events for all the keys pressed happen. Note that the keys
+on the numeric keypad only produce the corresponding events when &lt;NumLock&gt; is
+pressed.
+
+<p>
+<b><img src="images/event_mouse.bmp"> Mouse events</b><br>
+A mouse event happens for an instance whenever the mouse cursor lies inside the sprite
+representing the instance. Depending on which mouse buttons are pressed you get the no
+button, left button, right button, or middle button event. The mouse button events are
+generated in each step as long as the player keeps the mouse button pressed. The press
+events are only generated once when the button is pressed. The release events are only
+generated when the button is released. Note that these events only occur when the
+mouse is above the instance. If you want to react to mouse press or release events at
+an arbitrary place, use the global mouse events that can be found in a submenu. There are
+two special mouse events. The mouse enter event happens when the mouse enters the
+instance. The mouse leave event happens when the mouse leaves the instance. These
+events are typically used to change the image or play some sound. 
+Mouse wheel up and mouse wheel down events happen when the user moves the mouse wheel.
+Finally there are a
+number of events related to the joystick. You can indicate actions for the four main
+directions of the joystick (in a diagonal direction both events happen). Also you can
+define actions for up to 8 joystick buttons. You can do this both for the primary
+joystick and the secondary joystick.
+
+<p>
+<b><img src="images/event_other.bmp"> Other events</b><br>
+There are a number of other events that can be useful in certain games. They are found
+in this menu. The following events can be found here:
+
+<ul>
+  <li><b>Outside room</b>: This event happens when the instance lies completely outside the
+	room. This is typically a good moment to destroy it.</li>
+  <li><b>Intersect boundary</b>: This event happens when the instance intersects the boundary of
+	the room, that is, it lies (at least) partially outside the room.</li>
+  <li><b>Views</b>: Here you find a number of events that are useful when you use
+    views in your rooms. These events test whether the instance lies completely outside
+	a particular view or interesects the view boundary.</li>
+  <li><b>Game start</b>: This event happens for all instances in the first room when
+	the game starts. It happens before the room start event (see below) but after the
+	creation events for the instances in the room. This event is typically defined in only
+	one &quot;controller&quot; object and is used to start some background music and to
+	initialize some variables, or load some data.</li>
+  <li><b>Game end</b>: The event happens to all instances when the game ends. Again
+	typically just one object defines this event. It is for example used to store certain
+	data in a file.</li>
+  <li><b>Room start</b>: This event happens for all instances initially in a room when
+	the room starts. It happens after the creation events.</li>
+  <li><b>Room end</b>: This event happens to all existing instances when the room ends.</li>
+  <li><b>No more lives</b>: <i>GameMaker</i> has a built-in lives system. There is an
+	action to set and change the number of lives. Whenever the number of lives becomes
+	less than or equal to 0, this event happens. It is typically used to end or restart
+	the game.</li>
+  <li><b>No more health</b>: <i>GameMaker</i> has a built-in health system. There is
+	an action to set and change the health. Whenever the health becomes less than or equal
+	to 0, this event happens. It is typically used to reduce the number of lives or to
+	restart the game.</li>
+  <li><b>Animation end</b>: As indicated above, an animation consists of a number
+	of images that are shown one after the other. After the last one is shown we start
+	again with the first one. The event happens at precisely that moment. As an example,
+	this can be used to change the animation, or destroy the instance.</li>
+  <li><b>End of path</b>: This event happens when the instance follows a path and the
+	end of the path is reached.</li>
+  <li><b>Close button</b>: This event happens when the user clicks on the close button
+    of the window. This only happens when disabling in the game settings the option to have
+	the close button behave as the Escape key.</li>
+  <li><b>User defined</b>: There are 16 of these events. They normally never happen
+	unless you yourself call them from a piece of code.</li>
+</ul>
+
+<p>
+<b><img src="images/event_draw.bmp"> Draw event</b><br>
+Instances, when visible, draw their sprite in each step on the screen. When you
+specify actions in the drawing event, the sprite is not drawn, but these actions are
+executed instead. This can be used to draw something other than the sprite, or first
+make some changes to sprite parameters. There are a number of drawing actions that are
+especially meant for use in the drawing event. Note that the drawing event is only
+executed when the object is visible. Also note that, independent of what you draw,
+collision events are based on the sprite that is associated with the instance.
+
+<p>
+<b><img src="images/event_keypress.bmp"> Key Press events</b><br>
+This event is similar to the keyboard event but it happens only once when the key 
+is pressed, rather than continuously. This is useful when you want an action to 
+happen only once.
+
+<p>
+<b><img src="images/event_keyrelease.bmp"> Key Release events</b><br>
+This event is similar to the keyboard event but it happens only once 
+when the key is released, rather than continuously.
+
+<p>
+In some situation it is important to understand the order in which 
+<i>GameMaker</i> processes the events. This is as follows:
+
+<ul>
+  <li>Begin step events</li>
+  <li>Alarm events</li>
+  <li>Keyboard, Key press, and Key release events</li>
+  <li>Mouse events</li>
+  <li>Normal step events</li>
+  <li>(now all instances are set to their new positions)</li>
+  <li>Collision events</li>
+  <li>End step events</li>
+  <li>Draw events</li>
+</ul>
+
+<p>
+The create, destroy, and other events are performed when the corresponding things
+happen.
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+events
+adding events
+deleting events
+changing events
+create event
+destroy event
+alarm event
+step event
+collision event
+keyboard event
+key press event
+key release event
+mouse event
+joystick event
+other events
+drawing event
+outside event
+boundary event
+room start event
+room end event
+game start event
+game end event
+no more lives event
+no more health event
+end of animation event
+user defined events
+event order
+order of events
+-->
