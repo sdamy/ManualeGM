@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html><head>
-<title>Actions</title>
+<title>Azioni</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
@@ -9,65 +9,64 @@
 
 <h1>Azioni/h1>
 
-Actions indicate the things that happen in a game created with <i>GameMaker</i>. 
-Actions are placed in events of objects. Whenever the event takes place these 
-actions are performed, resulting in certain behavior for the instances of the object. 
-There are a large number of different actions available and it is important 
-that you understand what they do. In this chapter we describe the actions
-available in simple mode. Note that a number of these actions are only available
-in the Standard Edition of <i>GameMaker</i>. This will be indicated.
+Le azioni indicano le cose che accadono in un gioco creato con <i>GameMaker</i>.
+Le azioni vengono piazzate negli eventi degli oggetti. Quando l'evento prende posto queste
+azioni vengono eseguite, formando il comportamento delle istanze dell'oggetto.
+C'è un gran numero di azioni differenti disponibili ed è importante
+che tu capisca cosa fanno. In questo capitolo descriveremo le azioni
+disponibili nella simple mode (modalità semplice). Nota che alcune di queste sono disponibili solo
+nella Standard Edition (versione standard) di <i>GameMaker</i>. Questo verrà indicato.
 
 <p>
-All the actions are found in the tabbed pages at the right of the object property form. 
-There are six sets of actions. You select the set you want by clicking on the correct tab. 
-When you hold you mouse above one of the actions, a short description is 
-shown to remind you of its function.
+Tutte le azioni si trovano nelle schede a destra della finestra delle proprietà dell'oggetto.
+Ci sono sei insiemi di azioni. Puoi selezionare quello che vuoi cliccando nella scheda corretta.
+Quando tieni il puntatore del mouse sopra un'azione, viene mostrata una descrizione breve.
 
 <p>
-Let us briefly repeat: To put an action in an event, just drag it from the 
-tabbed pages to the action list. You can change the order in the list, again 
-using dragging. Holding the &lt;Alt&gt; key while dragging makes a copy of 
-the action. (You can drag and copy actions between the lists in 
-different object property forms.) Use the right mouse button and select the
-correct menu item to remove actions
-(or use the &lt;Del&gt; key) and to copy and paste selected actions.
+Ripetiamo brevemente: Per mettere un'azione in un evento, trascinala dalla
+scheda alla lista delle azioni. Puoi cambiare l'ordine nella lista,
+sempre trascinando. Premendo il tasto &lt;Alt&gt; durante il trascinamento viene fatta una copia
+dell'azione. (Puoi trascinare e copiare le azioni tra le liste
+nelle differenti finestre delle proprietà degli oggetti.) Usa il tasto destro del mouse e seleziona
+l'elemento del menu corretto per rimuovere le azioni
+(o usa il tasto &lt;Del&gt;) e per copiare e incollare le azioni selezionate.
 
 <p>
-When you drop an action in the action list, a window will pop-up most 
-of the time, in which you can fill in certain parameters for the action. 
-The parameters will be described below when describing the actions. 
-Two types of parameters appear in many actions so we will describe these here. 
-At the top you can indicate to which instance the action applies. The default 
-is <tt>self</tt>, which is the instance for which the action is performed. 
-Most of the time, this is what you want. In the case of a collision event, 
-you can also specify to apply the action to the other instance 
-involved in the collision. For instance, in this way you can destroy the 
-other instance. Finally, you can choose to apply the action to all 
-instances of a particular object. In this way you could change all 
-red balls into blue balls. The second type of parameter is the
-box labeled <b>Relative</b>. By checking this box, the values you
-type in are relative to the current values. For example, in this way
-you can add something to the current score, rather than changing 
-the current score to the new value. The other parameters will be 
-described below. You can later change the parameters by double 
-clicking on the action.
+Quando trascini un'azione nella lista delle azioni, uverrà mostrata una finestra
+su cuoi potrai riempire certi parametri per l'azione.
+I parametri verranno descritti sotto quando descriveremo le azioni.
+Appaiono due tipi di parametri in molte azioni quindi questi li descriveremo qui.
+Di sopra puoi indicare a quale istanza l'azione dev'essere applicata. 
+<tt>self</tt> è l'opzione default, che è l'istanza per la quale l'azione �viene eseguita.
+La maggior parte delle volte, <tt>self</tt> è quello che ti serve. Nel caso degli eventi di collisione,
+puoi anche specificare l'azione all'altra istanza
+coinvolta nella collisione. Dall'istanza, in questo modo, puoi distruggere
+l'altra istanza. Infine, puoi scegliere di applicare l'azione a tutte
+le istanze di un particolare oggetto. In questo modo puoi cambiare
+tutte le palle rosse in palle verdi. Il secondo tipo di parametro è
+la casella etichettata con <b>Relative</b>. Selezionando questa casella, 
+i valori che inserisci sono relativi ai valori attuali. Per esempio, in questo modo
+puoi aggiungere qualcosa al punteggio attuale, invece di cambiarlo
+col nuovo valore. Gli altri parametri saranno
+descritti sotto. Puoi cambiare dopo i parametri doppio-cliccando
+nell'azione.
  
  
 <!--HELPONLY-->
 
 <P>
-Information on the different actions can be found in the 
-following pages:
+Possono essere trovate delle informazioni sulle differenti azioni nelle
+pagine seguenti:
 
 <P>
 <blockquote>
-   <a href="112_01_move.html">Move Actions</a><br>
-   <a href="112_02_main1.html">Main Actions, Set 1</a><br>
-   <a href="112_03_main2.html">Main Actions, Set 2</a><br>
-   <a href="112_04_control.html">Control Actions</a><br>
-   <a href="112_05_score.html">Score Actions</a><br>
-   <a href="112_06_draw.html">Draw Actions</a><br>
-   <a href="112_07_variables.html">Using Variables and Expressions</a><br>
+   <a href="112_01_move.html">Azioni di Movimento</a><br>
+   <a href="112_02_main1.html">Azioni Principali, Set 1</a><br>
+   <a href="112_03_main2.html">Azioni Principali, Set 2</a><br>
+   <a href="112_04_control.html">Azioni di Controllo</a><br>
+   <a href="112_05_score.html">Azioni di Punteggio</a><br>
+   <a href="112_06_draw.html">Azioni di Disegno</a><br>
+   <a href="112_07_variables.html">Usare le Variabili e le Espressioni</a><br>
 </blockquote>
 
 <!--ENDHELPONLY-->
@@ -81,7 +80,11 @@ following pages:
 
 <!-- KEYWORDS
 actions
+azioni
 adding actions
+aggiungere azioni
 copying actions
+copiare azioni
 relative
+relativo
 --> 
