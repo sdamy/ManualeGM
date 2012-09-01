@@ -21,10 +21,11 @@ Tutto ciò che si trova in GM non va' tradotto. Quindi non solo roba come sprite
 Perché? Perché se tu gli dici di mettere l'evento "Fine del percorso" a uno che non sa' l'inglese, visto che in GM si chiama "End of path", il tizio non saprà che evento mettere.
 Però si può (anzi, è consigliato) scrivere una traduzione assieme al termine inglese la prima volta che si incontra (per esempio "gli sprites (sprite) sono roba blabla").
 
-Coerenza!
+Coerenza
 =======
 
 Cercate di essere coerenti, usate sempre gli stessi termini se sono stati tradotti, e se state traducendo delle pagine in una sezione, per scegliere il titolo guardate nell'indice della sezione (XXX_index.html o altre) come hanno tradotto gli altri. Non è carino cliccare su "Fantastiche impostazioni riguardo alle preferenze di Game Maker" e ritrovarsi su "Preferenze" o "Preferences".
+Per ridurre i problemi di questo tipo, traducete prima gli indici, poi le pagine normali, guardando ovviamente l'indice collegato per sapere il titolo da mettere tra <title> e <hX>.
 
 Keywords
 =======
