@@ -8,7 +8,7 @@ Come collaborare
 
 Per modificare una pagina basta selezionare il file e premere il tasto edit in alto a destra del textbox. Questo creerà un commit, cioè un oggetto in cui sono contenute le modifiche.
 
-Se volete tradurre una pagina, prima di tutto cambiate il commento del commit (la textbox sotto) alla vostra prima modifica per indicare che ci state lavorando (per esempio scrivendo IN TRADUZIONE) ed eventualmente note per farsi aiutare da altri o consigli semplici su come strutturare la pagina. (per altre discussioni usare gli Issues)
+Se volete tradurre una pagina, prima di tutto cambiate il commento del commit (la textbox sotto, dove c'è scritto "Commit summary") alla vostra prima modifica per indicare che ci state lavorando (per esempio scrivendo IN TRADUZIONE) ed eventualmente note (su Extendend description") per farsi aiutare da altri o consigli semplici su come strutturare la pagina. (per altre discussioni usare gli Issues)
 Successivamente passate alla traduzione vera e propria.
 Quando avete finito, come commento mettete "TRADOTTO".
 
