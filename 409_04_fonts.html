@@ -10,34 +10,34 @@
 
 
 <h3>Fonts</h3>
-It is possible to create, replace, and delete fonts during the game using
-the following functions. (Don't replace a font that is set as the current
-font or at least set it again afterwards.)
+E’ possible creare, rimpiazzare e cancellare fonts durante il gioco
+usando le seguenti funzioni. (Non rimpiazzare una font che è settata
+come la font attuale o almeno resettatela in seguito)
 
 <p>
 <blockquote>
   <tt><b>font_add(name,size,bold,italic,first,last)</b></tt>
-	Adds a new font and returns its index, indicating the name,
-	size, whether it is bold or italic, and the first and last
-	character that must be created.<br>
+	Aggiunge una nuova font e restituisce il suo indice,
+	indicando il nome, la misura, se in grassetto o italico,
+	e il primo e l’ultimo carattere che deve essere creato.<br>
   <tt><b>font_add_sprite(spr,first,prop,sep)</b></tt>
-	Adds a new font and returns its index. The font is created from
-	a sprite. The sprite should contain a subimage for each character.
-	<tt>first</tt> indicate the index of the first character in the sprite.
-	For example, use <tt>ord('0')</tt> if your sprite only contains the
-	digits. <tt>prop</tt> indicates whether the font is proportional.
-	In a proportional font, for each character the width of the bounding box is
-	used as the character width. Finally, <tt>sep</tt> indicates
-	the amount of white space that must separate the characters horizontally.
-	A typical value would lie between 2 and 8 depending on the font size.<BR>
+	Aggiunge una nuova font e restituisce il suo indice. La font è creata da uno sprite.
+	Lo sprite dovrà contenere una sottoimmagine per ogni carattere.
+	<tt>first</tt> indica l’indice del primo carattere nello sprite.
+	Per esempio, usate <tt>ord('0')</tt> se il vostro sprite contiene solo i numeri.
+	<tt>prop</tt>  indica se la font è proporzionale.
+	In una font proporzionale, per ogni carattere la larghezza del profilo esterno
+	(bounding box) è usata come la larghezza del carattere. Infine, <tt>sep</tt> indica
+	l’ammontare dello spazio bianco che deve separare i caratteri orizzontalmente.
+	Un valore tipico deve risiedere tra 2 e 8, dipende dalla misura della font.<BR>
   <tt><b>font_replace(ind,name,size,bold,italic,first,last)</b></tt>
-	Replaces the font <tt>ind</tt> with a new font, indicating the name,
-	size, whether it is bold or italic, and the first and last
-	character that must be created.<br>
+	Sostituisce il font <tt>ind</tt> con un nuovo font indicando nome,
+	misura(size), se deve essere in grassetto o italico, e se devono
+	essere creati il primo e l’ultimo carattere.<br>
   <tt><b>font_replace_sprite(ind,spr,first,prop,sep)</b></tt>
-	Replaces the font <tt>ind</tt> with a new sprite-based font.<br>
+	Sostituisce il font <tt>ind</tt> con una nuova font basata sullo sprite..<br>
   <tt><b>font_delete(ind)</b></tt>
-	Deletes the font with the given index, freeing the memory it uses.<br>
+	Cancella la font con il dato indice, liberando la memoria da essa occupata.<br>
 </blockquote>
 
 <p>
@@ -54,4 +54,4 @@ font_replace()
 font_replace_sprite()
 font_delete()
 
---> 
+-->
