@@ -2,46 +2,46 @@
 
 <html>
 <head>
-<title>Pop-up messages and questions</title>
+<title>Messaggi popup e domande</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Pop-up messages and questions</h3>
+<h3>Messaggi popup e domande</h3>
 
-A number of other functions exist to pop up messages, questions, a menu with choices, 
-or a dialog in which the player can enter a number, a string, or indicate a color 
-or file name:
+Esistono alcune funzioni per mostrare messaggi, domande, menu con scelte, o una
+finestra in cui il giocatore può inserire un numero, una stringa, o indicare un
+colore o il nome di un file:
 
 <p>
 <blockquote>
   <tt><b>show_message(str)</b></tt> 
-    Displays a dialog box with the string as a message.<br>
+    Mostra una finestra con una stringa come messaggio.<br>
   <tt><b>show_message_ext(str,but1,but2,but3)</b></tt>
-    Displays a dialog box with the string as a message and up to three buttons. 
-	But1, but2 and but3 contain the button text. An empty string means that the 
-	button is not shown. In the texts you can use the &amp; symbol to indicate 
-	that the next character should be used as the keyboard shortcut for this 
-	button. The function returns the number of the button pressed (0 if the 
-	user presses the Esc key).<br>
+    Mostra una finestra con una stringa come messaggio e fino a 3 bottoni.
+    	But1, but2 e but3 contengono il testo dei bottoni. Una stringa vuota
+    	indica che il bottone non verrà mostrato. Nelle stringhe puoi usare il
+   	simbolo &amp; per indicare che il prossimo carattere dev'essere usato
+   	come scorciatoia da tastiera per questo bottone. La funzione restituisce
+   	il numero del bottone premuto (0 se il giocatore preme il tasto Esc).<br>
   <tt><b>show_question(str)</b></tt> 
-    Displays a question; returns true when the user selects yes and false otherwise.<br>
+    Mostra una domanda; restituisce true quando il giocatore seleziona yes (sì),
+    altrimenti false.<br>
   <tt><b>get_integer(str,def)</b></tt> 
-    Asks the player in a dialog box for a number. str is the message. 
-	def is the default number shown.<br>
+    Chiede un numero al giocatore. str è il messaggio, def il numero di default.<br>
   <tt><b>get_string(str,def)</b></tt> 
-    Asks the player in a dialog box for a string. str is the message. 
-	def is the default value shown.<br>
+    Chiede al giocatore una stringa. str è il messaggio, def la stringa default.<br>
   <tt><b>message_background(back)</b></tt> 
-    Sets the background image for the pop-up box for any of the functions above. 
-	back must be one of the backgrounds defined in the game. Unfortunately,
-	alpha values are not taken into account. However, if the left-bottom pixel
-	has an alpha value of 0, all pixels with that color will be considered transparent.<br>
-  <tt><b>message_alpha(alpha)</b></tt> 
-    Sets the alpha translucence for the pop-up box for any of the functions 
-	above. alpha must lie between 0 (completely translucent) and 1 (not translucent) 
-	(only for Windows 2000 or later).<br>
+    Imposta il background per le finestre pop-up di tutte le funzioni sopra.
+    	back dev'essere uno dei backgrounds definiti nel gioco. Sfortunatamente,
+    	i valori alpha non sono considerati. Comunque, se il pixel in in basso
+    	a sinistra ha un valore alpha di 0, tutti i pixels con quel colore verranno
+    	considerati trasparenti.<br>
+  <tt><b>message_alpha(alpha)</b></tt>
+    Imposta la traslucenza per le finestre pop-up di tutte le funzioni sopra.
+    alpha dev'essere un valore tra 0 (completamente traslucente) e 1 (non
+    traslucente). Solo per Windows 2000 e successivi.<br>
   <tt><b>message_button(spr)</b></tt> 
     Sets the sprite used for the buttons in the pop-up box. spr must be a 
 	sprite consisting of three images, the first indicates the button when 
