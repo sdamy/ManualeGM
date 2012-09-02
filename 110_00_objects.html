@@ -1,74 +1,74 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html><head>
-<title>Definire gli objects</title>
+<title>Definire gli Objects</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h1>Defining objects</h1>
+<h1>Definire gli Objects</h1>
 
-With the resources you have seen so far you can add some nice images and
-sounds to the game, but they don't do anything. We now come to the most
-important resource of <i>GameMaker</i>, the objects. Objects are
-entities in the game that do things. Most of the time they have a sprite
-as a graphical representation so that you see them. They have behavior
-because they can react to certain events. All things you see in the game
-(except for the background) are objects. (Or to be more precise, they are
-instances of objects.) The characters, the monsters, the balls, the
-walls, etc. are all objects. There might also be certain objects that you
-don't see but which control certain aspects of the game play.
-
-<p>
-Please realize the difference between sprites and objects. Sprites are
-just (animated) images that don't have any behavior. Objects normally
-have a sprite to represent them but objects have behavior. Without
-objects there is no game!
+Con le risorse che hai visto puoi aggiungere delle ottime immagini e
+suoni al gioco, ma essi non fanno niente. Adesso veniamo alla risorsa più
+importante di <i>GameMaker</i>, gli objects (oggetti). Gli objects sono
+entità nel gioco che fanno delle cose. La maggior parte delle volte essi hanno uno sprite
+come rappresentazione grafica quindi tu li vedrai. Essi hanno un comportamento
+perché possono reagire a certi eventi. Tutte le cose che vedi nel gioco
+(ad eccezione dei background) sono oggetti. (O per essere più precisi, essi sono
+istanze di oggetti.) I personaggi, i mostri, le palle, 
+i muri, ecc. sono tutti oggetti. Ci potrebbero essere anche degli oggetti che tu
+non vedi, ma che controllano certi aspetti del gioco.
 
 <p>
-Also realize the difference between objects and instances. An object
-describes a certain entity, e.g. a monster. There can be multiple
-instances of this object in the game. When we talk about an instance we
-mean one particular instance of the object. When we talk about an object
-we mean all the instances of this object.
+Per favore impara la differenza tra sprites e objects. Gli sprites sono
+sono delle immagini (animate e non) che non hanno nessun comportamento. Gli objects normalmente
+hanno uno sprite per rappresentarli ma gli objects hanno un comportamento. Senza
+gli objects non c'è il gioco!
 
 <p>
-To create an object in your game, choose <b>Create Object</b> from the <b>Resources</b> 
-menu. The following form will appear:
+Impara anche la differenza tra objects e instances (istanze). Un object
+descrive una certa entitytà, per esempio un mostro. Ci possono essere
+più istanze di questo oggetto nel gioco. Quando parliamo di un'istanza
+intendiamo una particolare istanza di un oggetto. Quando parliamo di un oggetto
+intendiamo tutte le istanze di questo oggetto.
+
+<p>
+Per creare un oggetto nel tuo gioco, scegli <b>Create Object</b> dal menu <b>Resources</b>
+Apparirà la seguente finestra:
 
 <p>
 <img src="images/form_object.jpg">
 
 <p>
-This is rather complex. At the left there is some general information
-about the object. In the middle there is the list of events that can
-happen to the object. At the right there are the different actions the
-object can perform. Events and actions will be discussed in the coming
-chapters.
+Questo è piuttosto complesso. A sinistra ci sono delle informazioni generali
+riguardo all'oggetto. Nel mezzo c'è una lista di eventi che
+possono accadere all'oggetto. A destra c'i sono le differenti azioni
+che l'oggetto può eseguire. Parleremo di eventi e azioni
+nei prossimi capitoli.
 
 <p>
-As always, you can (and should) give your object a name. Next you can
-choose the sprite for the object. To this end, click with the left
-mouse button on the sprite box or the menu button next to it. A menu will
-pop-up with all the available sprites. Select the one you want to use for
-the object. 
-If you do not have a sprite yet, you can click the button <B>New</B> to
-create a new sprite resource and change it. Also, when you select a resource
-there will be a button <B>Edit</B> here that you can use to change the
-sprite. This is faster than first finding the resource in the list of
-resources and then indicating you want to edit it.
+Come sempre, puoi (anzi, devi) dare un nome al tuo oggetto. Dopo puoi
+scegliere lo sprite per l'oggetto. Per questo scopo, clicca col tasto sinistro
+del mouse nella casella dello sprite o nel bottone del menu vicino ad esso. Un menu
+apparirà con tutti gli sprite disponibili. Seleziona quello che vuoi usare
+per l'oggetto.
+Se non hai ancora uno sprite, puoi cliccare il bottone <B>New</B> per
+creare una nuova risorsa sprite e cambiarla. Inoltre, quando selezioni una risorsa
+ci sarà un bottone <B>Edit</B> che puoi usare per cambiare
+lo sprite. Questo è più veloce rispetto al cercare la risorsa nella lista
+delle risorse e dopo indicare quella che vuoi modificare.
 
 <P>
-Below this there are two check boxes. <b>Visible</b> indicates whether
-instances of this object are visible. Clearly, most objects are visible,
-but sometimes it is useful to have invisible objects. For example, you
+Dopo questo ci sono due caselle di controllo. <b>Visible</b> indica se
+le istanze di questo oggetto sono visibili. Chiaramente, la maggior parte degli oggetti è visibile,
+ma a volta è utile avere degli oggetti invisibili. Per esempio,
 can use them for waypoints for a moving monster. Invisible objects will
-react to events and other instances do collide with them. The box labeled
-<b>Solid</b> indicates whether this is a solid object (like a wall).
-Collisions with solid objects are treated differently from collisions
-with non-solid objects. You are strongly advised to use <b>Solid</b> only
-for object that are not moving.
+puoi reagire agli eventi e le altre istanze possono collidere con esso. La casella etichettata
+<b>Solid</b> indica se questo è un oggetto solido (come un muro).
+Le collisioni con gli oggetti solidi vengono trattate in modo differente dalle collisioni
+con gli oggetti non solidi. Ti raccomandiamo fortemente di usare <b>Solid</b> solo
+per gli oggetti che non si muovono.
 
 <!--END-->
 </body>
@@ -84,4 +84,12 @@ object sprite
 solid
 visible
 
+aggiungere oggetti
+creare oggetti
+oggetti
+istanze
+propriet�a degli oggetti
+sprite deglio ggetti
+solido
+visibile
 --> 
