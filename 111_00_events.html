@@ -111,36 +111,35 @@ Questo è tipicamente usato per cambiare Sprite in base alla nuova direzione.
 </p>
 
 <p>
-<b><img src="images/event_collision.bmp"> Collision events</b><br>
-Whenever two instances collide (that is, their sprites overlap) a collision event
-appears. Well, to be precise two collision event occur; one for each instance. The
-instance can react to this collision event. To this end, from the menu select the
-object with which you want to define the collision event. Next you place the actions
-here.
+<b><img src="images/event_collision.bmp"> Evento Collision (collisione)</b><br>
+Ogni volta che 2 instanze collidono(i loo sprites si sovrappongono) si attiva l'evento collisione.
+Per essere precisi, accadono 2 eventi collisione, uno per ogni instanza.
+L'instanza può reagire a questa collisione, con delle azioni.
+Per inserire delle azioni, sempre tramite il bottone Add Event puoi scegliere collision e infine decidere
+verso quale eggetto "reagire" in caso di collisione. Potrai quindi aggiungere delle azioni nell'apposito riquadro a destra.
+
 
 <p>
-There is a difference in what happens when the instance collides with a solid object
-or a non-solid object. First of all, when there are no actions in the collision event,
-nothing happens. The current instance simply keeps on moving; even when the other
-object is solid. When the collision event contains actions the following happens:
+C'è una differenza in quello che accade in caso di Collisione per gli oggetti solidi e non-solidi.
+Se non ci sono azioni nell'evento Collision, non accadrà niente (esempio: 2 palline che si scontrano, si attraverseranno)
+Quando invece ci sono azioni, accade la seguente cosa:
 
 <p>
-When the other object is solid, the instance is placed back at its previous place
-(before the collision occurs). Then the event is executed. Finally, the instance is
-moved to its new position. So if the event e.g. reverses the direction of motion, the
-instance bounces against the wall without stopping. If there is still a collision, the
-instance is kept at its previous place. So it effectively stops moving.
+Quando l'altro oggetto è solido, l'instanza è posizionata indietro nel punto dove si trovava lo step precedente alla collisione.
+Quindi vegono eseguite le azioni.
+In fine l'instanza viene spostata alla sua nuova posizione. Così ad esempio, se l'azione dice di "invertire la direzione di spostamento"
+l'instanza rimbalza contro il muro senza fermarsi.
+Se continua a esserci collisione, l'instanza viene posizionata alla sua posizione precedente.
+Quindi si fermerà.
 
 <p>
-When the other object is not solid, the instance is not put back. The event is simply
-executed with the instance at its current position. Also, there is no second check for
-a collision. If you think about it, this is the logical thing that should happen.
-Because the object is not solid, we can simply move over it. The event notifies us
-that this is happening.
+Quando l'altro oggetto non è solido l'instanza non è posizionata indietro.
+l'evento viene semplicemente eseguito con l'instanza alla posizione corrente.
+Inoltre, non c'è un secondo controllo di collisione (come nel caso precedente).
 
 <p>
-There are many uses for the collision event. Instances can use it to bounce against
-walls. You can use it to destroy objects when, for example, they are hit by a bullet.
+Ci sono molti utilizzi per l'evento collisione.
+Le instanza possono usarlo per rimbalzare nei muri, oppure non appena collidono vengono distrutti (es. un proiettile).
 
 <p>
 <b><img src="images/event_keyboard.bmp"> Keyboard events</b><br>
