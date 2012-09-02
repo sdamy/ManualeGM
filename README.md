@@ -19,7 +19,7 @@ Traduzione di alcuni termini
 
 Tutto ciò che si trova in GM non va' tradotto. Quindi non solo roba come sprites e background, ma anche i nomi degli eventi, delle azioni, dei menu, cose come advanced mode, ecc...
 Perché? Perché se tu gli dici di mettere l'evento "Fine del percorso" a uno che non sa' l'inglese, visto che in GM si chiama "End of path", il tizio non saprà che evento mettere.
-Però si può (anzi, è consigliato) scrivere una traduzione assieme al termine inglese la prima volta che si incontra (per esempio "gli sprites (sprite) sono roba blabla").
+Però si può (anzi, è consigliato) scrivere una traduzione assieme al termine inglese la prima volta che si incontra (per esempio "gli object (oggetti) sono roba blabla").
 
 Coerenza
 =======
