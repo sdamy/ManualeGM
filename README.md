@@ -37,4 +37,4 @@ Revisione
 
 TRADOTTO non significa che il file è completo, infatti di solito traduciamo velocemente, ma per considerare completo un file dev'essere prima revisionato: se vuoi fare ciò, rileggi tutto cercando e correggendo errori di grammatica e ortografia (errori comuni, che magari non conoscevate, li trovate qui: http://nonciclopedia.wikia.com/wiki/Aiuto:Manuale/Formattazione#Italiacano) e controlla la coerenza con altre pagine collegate (se l'indice chiama questa pagina "cacca", il titolo dev'essere anche qui "cacca"). Una volta fatta la revisione, committa usando come commento "REVISIONATO".
 Comunque la revisione va' fatta alla fine, quando la maggior parte delle pagine sono ormai tradotte, quindi spiegherò dopo le cose da fare in una revisione.
-Se trovate SEDATO in un file, significa che quel file è stato revisionato, e sono stati applicati degli script su di esso per correggere gli accenti (è diventa &amp;egrave; per esempio).
+Se trovate COMPLETO in un file, significa che quel file è stato revisionato, e sono stati applicati degli script su di esso.
