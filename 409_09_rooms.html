@@ -10,79 +10,81 @@
 
 <h3>Rooms</h3>
 
-Manipulating rooms on the fly is a dangerous thing to do. You have to realize that rooms 
-change all the time due to what is happening in the game. This normally only involves the 
-currently active room and there are many routines described in previous sections to 
-manipulate the instances, backgrounds, and tiles in the active room. But changes in the 
-active room will last if the room is persistent. Hence, you should never manipulate 
-aspects of the currently active room or any room that is persistent and that has already 
-been visited before. Such changes in general won't be noticed but might sometimes even 
-lead to unexpected errors. Due to the fact that rooms are linked in a complicated way 
-there is also no routine to delete a room.
+Manipolare le rooms in tempo reale è una cosa pericolosa. Dovreste
+capire che le rooms cambiano tutte le volte in relazione a cosa
+accade nel gioco. Ciò normalmente coinvolge esclusivamente la room
+attiva in quel momento. Ci sono molte routines descritte nelle precedenti
+sezioni per manipolare le istanze, le immagini di sfondo e i tiles
+nella room attiva. Tuttavia i cambiamenti nella room attiva dureranno
+se la room è persistente. Quindi non dovrete mai manipolare aspetti
+della room in corso o di qualsiasi altra room persistente già visitata
+prima. Tali cambiamenti di solito non danno avvisi e conducono a
+volte a degli errori inaspettati. In relazione al fatto che le rooms
+sono collegate fra loro in modo complesso non ci sono routine che le cancellano.
+
 
 <p>
-The following routines are available
+Sono disponibili le seguenti funzioni:
 </p>
 
 <blockquote></b>
   <tt><b>room_set_width(ind,w)</b></tt> 
-  	Sets the width for the room with the indicated index.<br>
+  	Imposta la larghezza per la room con l’indice indicato.<br>
   <tt><b>room_set_height(ind,h)</b></tt> 
-  	Sets the height for the room with the indicated index.<br>
+  	Imposta l’altezza per la room con l’indice indicato.<br>
   <tt><b>room_set_caption(ind,str)</b></tt> 
-  	Sets the caption for the room with the indicated index.<br>
+  	Imposta la didascalia per la room con l’indice indicato.<br>
   <tt><b>room_set_persistent(ind,val)</b></tt> 
-  	Sets whether the room with the indicated 
-	index is persistent or not.<br>
+  	Imposta la room con l’indice indicato
+	se essa è persistente o no.<br>
   <tt><b>room_set_code(ind,str)</b></tt> 
-  	Sets the initialization code string for the room 
-	with the indicated index.<br>
+  	Imposta la stringa di codice di inizializzazione
+	per la room con l’indice indicato.<br>
   <tt><b>room_set_background_color(ind,col,show)</b></tt> 
-  	Sets the color properties for 
-	the room with the indicated index if is does not have a background image. col indicates 
-	the color and show indicates whether the color must be shown or not.<br>
+  	Imposta le proprietà del colore della room con l’indice indicato
+	se non ha un colore di sfondo. Il parametro col indica il colore
+	e il parametro show indica se il colore deve essere mostrato o no.<br>
   <tt><b>room_set_background(ind,bind,vis,fore,back,x,y,htiled,vtiled,hspeed,vspeed,alpha)</b></tt> 
-	Sets background with index bind (0-7) for the room with the indicated index. vis 
-	indicates whether the background is visible and fore whether it is actually a foreground. 
-	back is the index of the background image. x,y indicate the position of the image and 
-	htiled and vtiled indicate whether the image must be tiled. hspeed and vspeed indicate the 
-	speed with which the background moves and alpha indicates an alpha translucency value (1 = 
-	solid and fastest).<br>
+	Imposta lo sfondo con l’indice vincolato (0-7) per la room con l’indice indicato.
+	Il parametro vis indica se lo sfondo è visibile e il parametro fore se è di fatto
+	l’immagine in primo piano. Il parametro back è l’indice dell’immagine di sfondo.
+	x,y indicano la posizione dell’immagine e htiled e vtiled indicano se l’immagine
+	deve essere fatta con il tiles. I parametri hspeed e vspeed indicano la velocità
+	con la quale si sposta lo sfondo e alpha indica un valore di trasparenza alpha (1= solido e veloce). <br>
   <tt><b>room_set_view(ind,vind,vis,xview,yview,wview,hview,xport,yport,wport,hport,hborder,vborder,hspeed,vspeed,obj)</b></tt> 
-	Sets the view with index vind (0-7) for the room with the indicated index. vis indicates 
-	whether the view is visible. xview, yview, wview, and hview indicate the position of the view 
-	in the room. xport, yport, wport, and hport indicate the position on the screen. 
-	When the view must follow an object 
-	hborder and vborder indicate the minimal visible border that must be kept around the 
-	object. hspeed and vspeed indicate the maximal speed with which the view can move. obj is 
-	the index of the object or the index of the instance.<br>
+	Imposta la view con indice vincolato (0-7) per la room con l’indice indicato.
+	Il parametro vis indica se la view è visibile. I parametri xview, yview, wview,
+	e hview indicano la posizione della vista nella room. I parametri xport, yport,
+	wport, e hport indicano la posizione sullo schermo. Quando una view deve seguire
+	un oggetto, hborder e vborder indicano il bordo minimo visibile che deve essere
+	tenuto intorno all’oggetto. hspeed e vspeed indicano la velocità massima con la
+	quale la view si può spostare. Il parametro obj è l’indice dell’oggetto o l’indice dell’istanza.<br>
   <tt><b>room_set_view_enabled(ind,val)</b></tt> 
-  	Sets whether views must be enabled for 
-	the room with the indicated index.<br>
+  	Impostase le view devono essere abilitate per la room con l’indice indicato.<br>
   <tt><b>room_add()</b></tt> 
-  	Adds a new room. It returns the index of the room. Note that 
-	the room will not be part of the room order. So the new room does not have a previous or a 
-	next room. If you want to move to an added room you must provide the index of the room.<br>
+  	Aggiunge una nuova room. Restituisce l’indice della room. Notate che la room
+	non avrà assetto. Ovvero la nuova room non ha una room precedente o successiva.
+	Se volete spostarvi ad una room aggiunta dovete fornire l’indice di questa.<br>
   <tt><b>room_duplicate(ind)</b></tt> 
-  	Adds a copy of the room with the given index. It returns the index of the room.<br>
+  	Aggiunge una copia della room con il dato indice. Restituisce l’indice della room.<br>
   <tt><b>room_assign(ind,room)</b></tt> 
-	Assigns the indicated room to room ind. So this makes a copy of the room.<br> 
+	Assegna la room indicate all’ind della room. Si crea di fatto una copia di essa.<br> 
   <tt><b>room_instance_add(ind,x,y,obj)</b></tt> 
-  	Adds a new instance of object obj to the 
-	room, placing it at the indicate position. It returns the index of the instance.<br>
+  	Aggiunge una nuova istanza dell’oggetto obj alla room, posizionandolo
+	alla posizione indicata. Restituisce l’indice dell’istanza.<br>
   <tt><b>room_instance_clear(ind)</b></tt> 
-  	Removes all instances from the indicated room.<br>
+  	Rimuove tutte le istanze dalla room indicata.<br>
   <tt><b>room_tile_add(ind,back,left,top,width,height,x,y,depth)</b></tt> 
-  	Adds a new tile  
-	to the room at the indicate position. It returns the index of the tile. back is the 
-	background from which the tile is taken. left, top, width and height indicate the part of 
-	the background that forms the tile. x,y is the position of the tile in the room and depth 
-	is the depth of the tile.<br>
+  	Aggiunge un nuovo tile alla room nella posizione indicata.
+	Restituisce l’indice del tile. Il parametro back è lo sfondo
+	dal quale viene preso il tile. I parametri left, top, width e
+	height indicano la parte dello sfondo che formano il tile.
+	x,y indicano la posizione del tile nella room e depth la profondità del tile.<br>
   <tt><b>room_tile_add_ext(ind,back,left,top,width,height,x,y,depth,xscale,yscale,alpha)</b></tt>
- 	Same as the previous routine but this time you can also specify a scaling factor 
-	in x and y direction and an alpha transparency for the tile.<br>
+ 	Come la precedente routine ma questa volta potete anche specificare un
+	fattore di scala nella direzione x e y ed un canale alpha per il tile.<br>
   <tt><b>room_tile_clear(ind)</b></tt> 
-  	Removes all tiles from the indicated room.<br>
+  	Cancella tutti i tiles dalla room indicata..<br>
 </blockquote>
 
 
