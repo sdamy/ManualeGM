@@ -53,24 +53,24 @@ Per esempio, se volete trovare la directory temporanea attuale usate
 </blockquote>
 
 <p>
-The following functions exist:
+Esistono le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>registry_write_string_ext(key,name,str)</b></tt> 
-    Creates an entry in the key in the registry with the given name and string value.<br>
+    Crea una voce (entry) nella chiave di registro con il dato nome e un valore di stringa.<br>
   <tt><b>registry_write_real_ext(key,name,x)</b></tt> 
-    Creates an entry in the key in the registry with the given name and real value.<br>
+    Crea una voce (entry) nella chiave di registro con il nome dato e un valore reale.<br>
   <tt><b>registry_read_string_ext(key,name)</b></tt> 
-    Returns the string that the given name in the indicated key holds. 
-	(The name must exist. Otherwise an empty string is returned.)<br>
+    Restituisce la stringa che il nome dato conserva nella chiave indicata.
+    	(Il nome deve esistere. Altrimenti viene restituita una stringa vuota).<br>
   <tt><b>registry_read_real_ext(key,name)</b></tt> 
-    Returns the real value that the given name in the indicated key holds. 
-	(The name must exist. Otherwise the number 0 is returned.)<br>
+    Restituisce il valore reale che il nome dato conserva nella chiave indicata.
+    (Il nome deve esistere. Altrimenti viene restituito il numero 0).<br>
   <tt><b>registry_exists_ext(key,name)</b></tt> 
-    Returns whether the given name exists in the given key.<br>
+    Restituisce un valore se esiste il nome dato nella data chiave..<br>
   <tt><b>registry_set_root(root)</b></tt>
-    Sets the root for the other routines. Use the following values:<br>
+    Setta l’origine (root) per le altre routines. Usate i seguenti valori:<br>
 	<blockquote>
 	  <b>0</b> = HKEY_CURRENT_USER<br>
 	  <b>1</b> = HKEY_LOCAL_MACHINE<br>
