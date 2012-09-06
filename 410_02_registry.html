@@ -11,7 +11,7 @@
 <h3>Registry</h3>
 
 Se si desidera salvare una piccola quantità di informazioni durante l’esecuzione del gioco,
-esiste un semplice meccanismo rispetto all’uso del file. Potete usare il Registro di sistema.
+esiste un semplice meccanismo rispetto all’uso del file. Potete usare il Registro.
 Il registro è un ampio database che Windows conserva per tenere traccia di tutte le 
 impostazioni dei programmi. Una voce (entry) ha un nome e un valore. Potete usare entrambi, 
 stringhe e valori reali. Esistono le seguenti funzioni:
@@ -19,29 +19,31 @@ stringhe e valori reali. Esistono le seguenti funzioni:
 <p>
 <blockquote>
   <tt><b>registry_write_string(name,str)</b></tt> 
-    Crea una entry nel registro con il nome dato e un valore stringa.<br>
+    Crea una voce (entry) nel registro con il nome dato e un valore stringa.<br>
   <tt><b>registry_write_real(name,x)</b></tt> 
-    Creates an entry in the registry with the given name and real value.<br>
+    Crea una voce (entry) nel registro con il nome dato e un valore reale.<br>
   <tt><b>registry_read_string(name)</b></tt> 
-    Returns the string that the given name holds. (The name must exist. 
-	Otherwise an empty string is returned.)<br>
+    Restituisce la stringa che teneva il nome dato. (Il nome deve esistere. 
+    	Altrimenti viene restituita una stringa vuota).<br>
   <tt><b>registry_read_real(name)</b></tt> 
-    Returns the real value that the given name holds. (The name must exist. 
-    Otherwise the number 0 is returned.)<br>
+    Restituisce il valore reale che tiene il nome dato. (Il nome deve esistere. 
+    	Altrimenti viene restituito un valore 0).<br>
   <tt><b>registry_exists(name)</b></tt> 
-    Returns whether the given name exists.
+    La funzione da risultato se esiste il nome dato.
 </blockquote>
 
 <p>
-Actually, values in the registry are grouped into keys. The above routines 
-all work on values within the key that is especially created for your game. 
-Your program can use this to obtain certain information about the system 
-the game is running on. You can also read values in other keys. You can 
-write them also but be very careful. YOU CAN EASILY DESTROY YOUR SYSTEM this 
-way. (Write is not allowed in secure mode.) Note that keys are again 
-placed in groups. The following routines default work on the group 
-HKEY_CURRENT_USER. But you can change the root group. So, for 
-example, if you want to find out the current temp dir, use
+
+In realtà, i valori nel Registro sono raggruppati in chiavi. Le routine 
+sopra funzionano tutte su valori dentro la key che viene creata appositamente 
+per il vostro gioco. Il programma può utilizzare questo meccanismo per ottenere 
+alcune informazioni sul sistema sul quale il gioco è in esecuzione.
+È anche possibile leggere i valori in altre chiavi. È anche possibile scriverle, 
+ma siate molto attenti. In questo modo POTETE FACILMENTE DISTRUGGERE IL VOSTRO 
+SISTEMA.  (La scrittura ""Write" non è consentita in modalità sicura.) Notate 
+che le chiavi sono ancora sistemate in gruppi. Le seguenti routines lavorano predefinite 
+nel gruppo HKEY_CURRENT_USER. Ma potete cambiare il gruppo principale (root). 
+Per esempio, se volete trovare la directory temporanea attuale usate
 
 <p>
 <blockquote>
