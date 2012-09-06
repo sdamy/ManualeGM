@@ -13,13 +13,13 @@
 Se si desidera salvare una piccola quantità di informazioni durante l’esecuzione del gioco,
 esiste un semplice meccanismo rispetto all’uso del file. Potete usare il Registro di sistema.
 Il registro è un ampio database che Windows conserva per tenere traccia di tutte le 
-impostazioni dei programmi. Una voce ha un nome e un valore. Potete usare entrambi, 
+impostazioni dei programmi. Una voce (entry) ha un nome e un valore. Potete usare entrambi, 
 stringhe e valori reali. Esistono le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>registry_write_string(name,str)</b></tt> 
-    Creates an entry in the registry with the given name and string value.<br>
+    Crea una entry nel registro con il nome dato e un valore stringa.<br>
   <tt><b>registry_write_real(name,x)</b></tt> 
     Creates an entry in the registry with the given name and real value.<br>
   <tt><b>registry_read_string(name)</b></tt> 
