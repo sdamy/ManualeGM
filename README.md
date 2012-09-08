@@ -12,7 +12,7 @@ Se volete tradurre una pagina, prima di tutto cambiate il commento del commit (l
 Successivamente passate alla traduzione vera e propria.
 Quando avete finito, come commento mettete "TRADOTTO".
 
-Quando modificate una pagina vi pu&ograve; capitare un'errore che indica che mentre voi la modificavate qualcun'altro ha modificato un file, anche non necessariamente quello con cui state lavorando quindi &egrave; sempre consigliabile copiare tutto sulla clipboard o su una copia di backup offline, guardare le modifiche fatte dall'altra persona (solo nel caso in cui quella persona ha modificato il vostro stesso file), e riuppare le vostre modifiche + le sue: se per esempio un file contiene "cat dog", tu stavi inviando "gatto dog", e il tizzio di turno stava inviando "cat cane", unisci le due traduzioni, inviando "gatto cane".
+Quando modificate una pagina vi pu&ograve; capitare un'errore che indica che mentre voi la modificavate qualcun'altro ha modificato un file, anche non necessariamente quello con cui state lavorando quindi &egrave; SEMPRE consigliabile copiare tutto sulla clipboard o su una copia di backup offline, guardare le modifiche fatte dall'altra persona (solo nel caso in cui quella persona ha modificato il vostro stesso file), e riuppare le vostre modifiche + le sue: se per esempio un file contiene "cat dog", tu stavi inviando "gatto dog", e il tizzio di turno stava inviando "cat cane", unisci le due traduzioni, inviando "gatto cane".
 
 Traduzione di alcuni termini
 =======
