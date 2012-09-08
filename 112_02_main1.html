@@ -11,7 +11,7 @@
 
 <h3>Azioni principali, set 1</h3>
 
-Il seguente set di azioni si occupa di suoni, di rooms, e di creare, cambiare, distruggere
+Il seguente set di azioni si occupa di suoni, di room, e di creare, cambiare, distruggere
 istanze di oggetti.
 
 <p>
@@ -105,65 +105,71 @@ Ciò è utile per creare esplosioni.
 
 <p>
 <b><img src="images/action_sound.bmp"> Play Sound</b><br>
-With this action you play one of the sound resources you added to your game. 
-You can select the sound you want to play and choose whether it should play only once 
-(the default) or loop continuously. Multiple wave sounds can play at once but 
-only one midi sound can play at a time. So if you start a midi sound, the current midi 
-sound is stopped.
+Con questa azione puoi riprodurre uno dei suoni che hai inserito nel tuo gioco.
+Puoi scegliere il suono che vuoi riprodurre e se questo debba essere riprodotto
+solo una volta (l'opzione di default) o debba ripetersi all'infinito.
+Possono essere riprodotti nello stesso momento più suoni wav, ma un solo midi.
+Perciò se avvii un suono midi, verrà fermato il suono midi attuale.
 
 <p>
 <b><img src="images/action_soundend.bmp"> Stop Sound</b><br>
-This action stops the indicated sound. If multiple instances of this sound 
-are playing all are stopped.
+Questa azione ferma il suono indicato. Se più istanze di questo suono
+sono in riproduzione, verranno fermate tutte.
 
 <p>
 <b><img src="images/action_ifsound.bmp"> Check Sound</b><br>
-If the indicated sound is playing the next action is performed. Otherwise 
-it is skipped. You can select <b>Not</b> to indicate that the next action 
-should be performed if the indicated sound is not playing. For example, 
-you can check whether some background music is playing and, if not, start 
-some new background music.
-Note that this action returns true when the sound actually plays through the speakers. After you call the
-action to play a sound it does not immediately reach the speakers so the action
-might still return false for a while. Similar, when the sound is stopped you still hear
-it for a while (e.g. because of echo) and the action will still return true.
+Se il suono indicato è in riproduzione, l'azione successiva verrà eseguita.
+Altrimenti verrà saltata. Puoi spuntare la casellina <b>Not</b> per
+indicare che l'azione successiva deve essere eseguita se il suono indicato
+non è in riproduzione. Ad esempio, puoi controllare se una musica di sottofondo
+è in riproduzione e, se non lo è, avviarne un'altra.
+Questa azione ritorna true quando il suono è realmente riprodotto dagli altoparlanti.
+Dopo aver eseguito l'azione per far partire un suono, questo non raggiunge immediatamente
+gli altoparlanti, perciò questa azione potrebbe ancora ritornare false per
+qualche momento. Allo stesso mondo, quando il suono viene fermato, lo si percepisce
+ancora per un attimo (ad esempio a causa dell'eco) e l'azione ritornerà ancora true.
 
 <p>
 <b><img src="images/action_roomprevious.bmp"> Previous Room</b><br>
-Move to the previous room. You can indicate the type of transition effect 
-between the rooms. You should experiment to see what works best for you. When the rooms do
-not have the same size you better do not use transitions. 
-If you are in the first room you get an error.
+Con questa azione il gioco torna alla room precedente. Puoi indicare l'effetto di
+transizione tra le room. Dovresti fare delle prove per vedere quale preferisci.
+Quando le room non hanno la stessa dimensione sarebbe meglio non usare gli effetti
+di transizione.
+Se ti trovi nella prima room il gioco darà errore.
 
 <p>
 <b><img src="images/action_roomnext.bmp"> Next Room</b><br>
-Move to the next room. You can indicate the transition.
+Il gioco si sposta alla room successiva. Puoi indicare l'effetto di transizione.
 
 <p>
 <b><img src="images/action_roomcurrent.bmp"> Restart Room</b><br>
-The current room is restarted. You indicate the transition effect.
+La room attuale viene ricominciata. Puoi indicare l'effetto di transizione.
 
 <p>
 <b><img src="images/action_roomother.bmp"> Different Room</b><br>
-With this action you can go to a particular room. You indicate the room and the 
-transition effect.
+Con questa azione puoi spostarti in una room a scelta. Devi indicare la room
+e l'effetto di transizione.
 
 <p>
 <b><img src="images/action_ifroomprevious.bmp"> Check Previous</b><br>
-This action tests whether the previous room exists. If so, the next action 
+Questa azione verifica se esiste una room precedente. In tal caso, l'azione
+successiva viene eseguita. Normalmente userai questo controllo prima di
+passare alla room precedente.
+This action tests whether the previous room exists. If so, the next action
 is executed. You normally need this test before moving to the previous room.
 
 <p>
 <b><img src="images/action_ifroomnext.bmp"> Check Next</b><br>
-This action tests whether the next room exists. If so, the next action 
-is executed. You normally need this test before moving to the next room.
+Questa azione verifica se esiste una room successiva. In tal caso, l'azione
+successiva viene eseguita. Normalmente userai questo controllo prima di
+passare alla room successiva.
 
 <!--END-->
 </body>
 </html>
 
 <!-- KEYWORDS
-creating objects
-object actions
-room actions
+creating objects creare oggetti
+object actions azioni oggetti
+room actions azioni room
 --> 
