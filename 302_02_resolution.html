@@ -15,7 +15,7 @@ Normalmente, la risoluzione non viene cambiata. Ma a volte
 potresti voler eseguire il gioco in delle risoluzioni più basse o potresti voler impostare la frequenza
 del monitor per assicurarti che la sincronizzazione del gioco funzioni correttamente. Se vuoi cambiare
 la risoluzione devi prima selezionare la casella etichettata
-<b>Imposta la risoluzione dello schermo</b>.
+<b>Set the resolution of the screen</b>.
 
 <p>
 Ci sono tre cose che puoi cambiare. Prima di tutto c'è la profondità del colore.
@@ -39,25 +39,25 @@ cambierà automaticamente la risoluzione alla situazione iniziale
 una volta finito il gioco.
 
 <p>
-Finally you can change the refresh frequency. This indicates how many times per second
-the image on the screen is refreshed. If your room speed is larger than the frequency
-not all steps are actually visible. It works best if the frequency is a multiple of
-the room speed. (If you specify a frequency that is too high or not available the
-frequency is not changed.)
+Infine puoi cambiare la frequenza di aggiornamento. Questo indica quante volte al secondo
+l'immagine nello schermo dev'essere aggiornata. Se la velocità della tua room è più alta di questa frequenza
+non tutti gli steps saranno visibili. Funziona meglio se la frequenza è un multiplo
+della velocità della room. (Se specifichi una frequenza che è troppo alta o non è disponibile
+la frequenza non verrà cambiata.)
 
 <p>
-There also is a setting here to <b>Use synchronization to avoid tearing</b>. This requires
-some explanation. A display is redrawn a number of times per second, depending on the 
-refresh frequency. If a room is drawn halfway such a refresh, the top of the display will still
-show the old image while the bottom part shows the new image. This is called tearing. To
-avoid this you can check this option. In this case the new room image is only copied to
-the screen when the refresh is not inside the window avoiding the tearing most of the time.
-The disadvantage is that we normally have to wait till the next refresh. This means that the
-maximal number of frames is bounded by the frequency of the monitor and, when the processing
-is not fast enough, the framerate immediately drops to half that number.
-Also there can be a conflict between the internal timing of the game and the synchronization. 
-If you want to do this best set the monitor frequency to e.g. 60 and also make the room speed
-either 30 or 60.
+C'è anche un'altra impostazione: <b>Use synchronization to avoid tearing</b>. Questa richiede
+delle spiegazioni. Uno schermo viene ridisegnato un certo numero di volte al secondo, in base
+alla frequenza dell'aggiornamento. Se una room viene disegnata a metà di un aggiornamento, la parte alta dello schermo
+mostrerà ancora la vecchia immagine mentre la parte bassa mostrea la nuova immagine. Questo fenomeno è chiamato "tearing". Per
+evitarlo puoi selezionare questa opzione. In questo caso la nuova immagine della room verrà copiata
+nello schermo solo quando l'aggiornamento non è dentro la finestra evitando il "tearing" per la maggior parte del tempo.
+Lo svantaggio è che normalmente si avrà bisogno di aspettare il prossimo aggiornamento. Questo significa che
+il massimo numero di frames �verrà limitato dalla frequenza dello schermo e,
+quando l'elaborazione non sarà abbastanza veloce, il framerate cscenderà immediatamente alla metà di quel numero.
+Inoltre ci potrebbe essere un conflitto tra il tempismo interno del gioco e la sincronizzazione.
+Se vuoi migliorare ciò imposta la frequenza del monitor a valori come 60 e imposta la velocità della room
+a 30 o a 60.
 
 <!--END-->
 </body>
@@ -72,4 +72,12 @@ graphics mode
 color depth
 synchronization
 tearing
+cambiare la risoluzione dello schermo
+risoluzione dello schermo
+risoluzione
+frequenza
+modalità grafiche
+profondità del colore
+sincronizzazione
+lacerazione
 --> 
