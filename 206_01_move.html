@@ -2,66 +2,66 @@
 
 <html>
 <head>
-<title>More move actions</title>
+<title>Altre azioni di movimento</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
 
-<h3>More move actions</h3>
+<h3>Altre azioni di movimento</h3>
 
-Some additional move actions are available in advanced mode. The following actions are added:
-
-<p>
-<b><img src="images/action_path.bmp"> Set Path</b><br>
-With this action you can specify that the instance should follow a particular path. 
-You indicate the path that must be followed and the speed in pixels per step. 
-When the speed is positive the instance starts at the beginning of the path. 
-If it is negative it starts at the end. Next you specify the end behavior, 
-that is, what should happen when the end of the path is reached. You can 
-choose to stop the motion, restart from the beginning, restart from the current 
-position (which is the same when the path is closed), or reverse the motion. 
-Finally you can indicate that the path must be seen as absolute, that is, the 
-position will be as indicated in the path (this is useful when you have designed 
-the path at a particular place in the room) or relative, in which case the start 
-point of the path is placed at the current location of the instance (end point 
-when speed is negative). See the chapter on paths for more information.
+Alcune opzioni di movimento aggiuntive sono disponibile nella modalità avanzata. TQueste sono le azioni aggiunte:
 
 <p>
-<b><img src="images/action_pathend.bmp"> End Path</b><br>
-Use this action to stop the path for the instance. 
+<b><img src="images/action_path.bmp"> Imposta percorso</b><br>
+Con quest'azione puoi far si che un'instanza segua un determinato percorso(path). 
+Devi indicare il percorso che dovrà essere eseguito e la velocità. 
+Quando la velocità è positiva l'instanza comincia a muoversi dall'inizio del percorso. 
+Se è negativa comincia dalla fine. Dopo dovrai specificar eil comportamento alla fine, 
+cioè cosa dovrà succedere quando sarà raggiunta la fine del percorso. Puoi 
+scegliere di fermare il movimento, farlo ripartire dall'inizio, farlo ricominciare dalla posizione 
+corrente(che è la stessa se il percorso è chiuso), o invertire il movimento. 
+Infine si può indicare che il percorso deve essere visto come assoluta, cioè la 
+posizione sarà quella indicata nel percorso(questo è utile quando si ha progettato il
+percorso in un posto particolare nella stanza) o relativo, in questo caso il punto d'inizio
+del percorso sarà piazzato alla corrente posizione dell'instanza (il punto finale se la velocità fosse
+negativa). Vedi il capitolo sui percorsi per maggiorni informazioni.
 
 <p>
-<b><img src="images/action_pathposition.bmp"> Path Position</b><br>
-With this action you can change the current position of the instance in the path. 
-This must be a value between 0 and 1 (0=beginning, 1=end). 
+<b><img src="images/action_pathend.bmp"> Ferma percorso</b><br>
+Usa quest'azione per fermare il corrente percorso dell'instanza. 
 
 <p>
-<b><img src="images/action_pathspeed.bmp"> Path Speed</b><br>
-With this action you can change the speed of the instance on the path. 
-A negative speed moves the instance backwards along the path. Set it to 0 to 
-temporarily stop the motion along the path. 
+<b><img src="images/action_pathposition.bmp"> Posizione del percorso</b><br>
+Con quest'azione puoi modificare la corrente posizone nel percorso. 
+Deve essere un valore tra 0 e 1 (0=inizio, 1=fine). 
 
 <p>
-<b><img src="images/action_steplinear.bmp" > Step Towards</b><br>
-This action should be placed in the step event to let the instance take a step 
-towards a particular position. When the instance is already at the position it 
-will not move any further. You specify the position to move to, the speed with 
-which to move, that is, the size of the step, and whether the motion should stop 
-when hitting a solid instance or when hitting any instance. 
+<b><img src="images/action_pathspeed.bmp"> Velocità del percorso</b><br>
+Con quest'azione puoi cambiare la velocità del movimento durante il percorso. 
+Un valore negativo allontana l'instanza dalla fine del percorso. Impostalo a 0 per
+fermare il movimento sul percorso. 
 
 <p>
-<b><img src="images/action_steppotential.bmp"> Step Avoiding</b><br>
-This is a very powerful motion action. It should be placed in the step event. 
-Like the previous action it lets the instance take a step towards a particular 
-position. But in this case it tries to avoid obstacles. When the instance would 
-run into a solid instance (or any instance) it will change the direction of 
-motion to try to avoid the instance and move around it. The approach is not 
-guaranteed to work but in most easy cases it will effectively move the instance 
-towards the goal. For more complicated cases, there are motion planning functions. 
-You specify the position to move to, the speed with which to move, that is, the 
-size of the step, and whether the motion should avoid solid instances or any instance. 
+<b><img src="images/action_steplinear.bmp" > Passo verso</b><br>
+Quest'azione deve essere messa nello step event per far si che l'instanza si muova 
+verso una posizione particolare. Quando l'instanza è già alla posizione indicata 
+smetterà di muoversi. Devi specificare la posizione verso cui muoversi, la velocità 
+con cui muoversi,cioè la dimensione del passo, e se il movimento deve interrompersi
+quando colpisce un'istanza solida o quando colpisce una qualsiasi istanza. 
+
+<p>
+<b><img src="images/action_steppotential.bmp"> Passo evitando</b><br>
+Questa è un'azione di movimento molto potente. Deve essere messo nello step event. 
+Come l'azione precendente permette di muovere un'instanza verso una particolare posizione.
+Ma in questo caso essa proverà ad evitare gli ostacoli. Quando l'istanza starebbe per collidere
+con un'istanza solida (o qualsiasi istanza) essa cambierà direzione di movimento
+Per provare ad evitare quell'instanza girandogli intorno. Non è garantito che l'approccio 
+funzioni ma in molti casi semplici esso muove con successo l'instanza verso l'obbiettivo.
+Per casi più complicati, ci sono funzioni di pianificazione del movimento. 
+Devi specificare la posizione verso cui spostarsi, la velocità con cui spostarsi, cioè
+la dimensione del passo, e se durante il movimento dovrà evitare solo le instanze solide o tutte le instanze. 
 
 
 <!--END-->
@@ -69,6 +69,6 @@ size of the step, and whether the motion should avoid solid instances or any ins
 </html>
 
 <!-- KEYWORDS
-setting path
-avoiding objects
+setting path impostare percorso
+avoiding objects evitare oggetti
 --> 
