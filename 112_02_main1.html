@@ -16,10 +16,10 @@ istanze di oggetti.
 
 <p>
 <b><img src="images/action_create.bmp"> Create Instance</b><br>
-Con questa azione puoi creare un istanza di un oggetto. Devi specificare quale
+Con questa azione puoi creare un''istanza di un oggetto. Devi specificare quale
 oggetto creare e la posizione dell'istanza. Se spunti la casellina <b>Relative</b>,
 la posizione sarà relativa a quella dell'istanza attuale. Creare istanze durante
-il gioco è estremamente utile. Un'astronave può creare proiettili; una bomba può
+il gioco è estremamente utile. Un'astronave può creare proiettili, una bomba può
 creare un'esplosione, ecc. In diversi giochi sarà utile avere un oggetto controller
 che crei a intervalli di tempo mostri o altri oggetti. Per le istanze create con
 questa azione viene eseguito l'evento Create.
@@ -51,7 +51,7 @@ utile per creare un nemico casuale in una certa posizione, ad esempio.
 <b><img src="images/action_change.bmp"> Change Instance</b><br>
 Con questa azione puoi cambiare l'istanza attuale con un istanza di un
 altro oggetto. Puoi, ad esempio, cambiare l'istanza di una bomba con
-un'istanza di un esplosione. Tutte le impostazioni, come il movimento o
+l'istanza di un esplosione. Tutte le impostazioni, come il movimento o
 il valore delle variabili, rimarranno invariate. Puoi indicare se debbano
 essere eseguiti gli eventi Destroy per l'oggetto corrente e Create per il
 nuovo oggetto.
@@ -69,9 +69,9 @@ quella dell'istanza attuale.
 
 <p>
 <b><img src="images/action_sprite.bmp"> Change Sprite</b><br>
-Usa questa azione per cambiare lo sprite dell'istanza.Devi indicare il nuovo sprite.
+Usa questa azione per cambiare lo sprite dell'istanza. Devi indicare il nuovo sprite.
 Puoi anche indicare quale subimmagine debba essere visualizzata. Normalmente dovresti
-scegliere 0 (la prima subimmagine) a meno che non ti serva una subimmagine in particolare
+scegliere 0 (la prima subimmagine) a meno che non ti serva una subimmagine in particolare.
 Usa -1 se non vuoi cambiare la subimmagine attualmente visualizzata. Puoi infine
 cambiare la velocità dell'animazione delle subimmagini. Se vuoi che sia visualizzata
 soltanto una subimmagine, imposta la velocità a 0. Se la velocità è maggiore di 1,
@@ -109,7 +109,7 @@ Con questa azione puoi riprodurre uno dei suoni che hai inserito nel tuo gioco.
 Puoi scegliere il suono che vuoi riprodurre e se questo debba essere riprodotto
 solo una volta (l'opzione di default) o debba ripetersi all'infinito.
 Possono essere riprodotti nello stesso momento più suoni wav, ma un solo midi.
-Perciò se avvii un suono midi, verrà fermato il suono midi attuale.
+Perciò se avvii un suono midi, verrà fermato il suono midi attualmente in riproduzione.
 
 <p>
 <b><img src="images/action_soundend.bmp"> Stop Sound</b><br>
@@ -155,8 +155,6 @@ e l'effetto di transizione.
 Questa azione verifica se esiste una room precedente. In tal caso, l'azione
 successiva viene eseguita. Normalmente userai questo controllo prima di
 passare alla room precedente.
-This action tests whether the previous room exists. If so, the next action
-is executed. You normally need this test before moving to the previous room.
 
 <p>
 <b><img src="images/action_ifroomnext.bmp"> Check Next</b><br>
