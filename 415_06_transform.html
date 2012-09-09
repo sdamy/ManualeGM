@@ -51,16 +51,16 @@ aggiungono trasformazioni.
 	  con l’ammontare indicato.<br>
 </blockquote>
 
-Realize that rotation and scaling are with respect to the origin of the world, not with
-respect to the object that is to be drawn. If the object is not at the origin it will
-also move to a different place, which is not what we want. So to e.g. rotate an object over
-its own x-axis, we must first translate it to the origin, next rotate it, and finally
-translate it back to its position. This is what the functions to add transformations are
-for. 
+Osservate che la rotazione e lo scaling vengono effettuati in relazione al punto di intersezione del mondo 3D,
+e non in relazione all’oggetto che è stato raffigurato. Se l’oggetto non è nel punto di intersezione, sarà 
+spostato in un punto diverso, che è quello che non volete. Quindi, per esempio per ruotare un oggetto sopra 
+il suo ascisse-x, dobbiamo prima portarlo nel punto di intersezione, ruotarlo, e infine riportarlo nella sua 
+posizione. Questo è quello che le funzioni fanno per aggiungere delle trasformazioni.
 
 <p>
-The following examples might explain this better. Assume we have a sprite <tt>spr</tt> that we
-want to draw at position (100,100,10). We can use the following code to do this
+
+Gli esempi che seguono possono spiegare meglio questo concetto. Supponiamo di avere uno sprite <tt>spr</tt> che 
+vogliamo disegnare alla posizione (100,100,10). Possiamo usare il seguente codice per fare ciò
 
 <p>
 <blockquote>
@@ -74,12 +74,13 @@ want to draw at position (100,100,10). We can use the following code to do this
 </blockquote>
 
 <p>
-Note that because we use a translation we should now draw the sprite at position (0,0). (This
-assumes the current instance has a depth of 0! If you are not sure, first set the depth.) If we
-would use this in our first person shooter we would not see the sprite. The reason is that it
-is still parallel to the xy-plane. We want to rotate it over 90 degrees along the x-axis
-(or y-axis). So we need to add a rotation. Remember the order: we must first rotate the
-sprite and then translate it. So we can use the following code.
+
+Si noti che dato il nostro uso di una traslazione dovremmo disegnare lo sprite alla posizione (0,0). (Questo 
+assume che l’istanza corrente ha una profondità 0! Se non siete sicuri, impostate prima la profondità). Se 
+vogliamo usare il suddetto nel nostro fps non vedremo lo sprite. La ragione è che lo sprite è parallelo 
+al piano-xy. Vogliamo ruotarlo sopra 90 gradi e lungo l’ascisse-x o y. In questo caso abbiamo
+bisogno di aggiungere una rotazione. Ricordate l’ordine: dobbiamo prima ruotare lo sprite e poi traslarlo. 
+Potete usare cosi il codice seguente:
 
 <p>
 <blockquote>
