@@ -96,36 +96,37 @@ Potete usare cosi il codice seguente:
 </blockquote>
 
 <p>
-Sometimes you temporarily want to save the current transformation, for example to add
-an additional transformation and then restore the old one (this often happens when
-drawing hierarchical models). To this end you can push the current transformation on a
-stack and later pop it from the stack to make it the current transformation again. The
-following functions exist for this:
+
+A volte volete salvare temporaneamente l’attuale trasformazione, per esempio questo 
+per aggiungere una trasformazione aggiuntiva e poi riusare quella precedente (questo accade
+spesso quando tracciamo modelli gerarchici). A questo punto potete inserire la corrente 
+trasformazione in uno stack e poi riprenderla da li per rifare la trasformazione. 
+Esistono le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>d3d_transform_stack_clear()</b></tt>
-	  Clears the stack of transformations.<br>
+	  Azzera lo stack delle trasformazioni.<br>
   <tt><b>d3d_transform_stack_empty()</b></tt>
-	  Returns whether the transformation stack is empty.<br>
+	  Da un risultato se lo stack della trasformazione è vuoto.<br>
   <tt><b>d3d_transform_stack_push()</b></tt>
-	  Pushes the current transformation on the stack. Returns whether there was
-	  room on the stack to push it there (if you forget popping transformation
-	  you at some moment will run out of room on the stack).<br>
+	  Invia la trasformazione attuale nello stack. Restituisce un risultato se 
+	  esiste spazio nello stack per poterla inviare (se dimenticate di riprendere 
+	  la trasformazione in alcuni momenti uscirà fuori dallo spazio sullo stack).<br>
   <tt><b>d3d_transform_stack_pop()</b></tt>
-	  Pops the top transformation from the stack and makes it the current one.
-	  Returns whether there was a transformation on the stack.<br>
+	  Prende (fa fuoriuscire) dallo stack la prima trasformazione in ordine di priorità
+	  e la rende quella corrente. La funzione si attiva se esiste una trasformazione nello stack <br>
   <tt><b>d3d_transform_stack_top()</b></tt>
-	  Makes the top transformation the current one, but does not remove it from the stack.
-	  Returns whether there was a transformation on the stack.<br>
+	  Rende corrente la prima trasformazione disponibile, ma non la toglie dallo stack. 
+	  La funzione da risultato se esiste una trasformazione nello stack.<br>
   <tt><b>d3d_transform_stack_discard()</b></tt>
-	  Removes the top transformation from the stack but does not make it the current one.
-	  Returns whether there was a transformation on the stack.<br>
+	  Toglie la prima trasformazione disponibile nello stack ma non la rende corrente. 
+	  La funzione da risultato se esiste una trasformazione nello stack.<br>
 </blockquote>
 
 <p>
-Using transformation is a powerful mechanism. But be careful and always set the transformation
-back to the identity once you are done.
+Usare la trasformazione è un meccanismo potente. Fate quindi attenzione e reimpostate sempre la 
+trasformazione alla sua identità una volta svolto il compito.
 
 <!--END-->
 
