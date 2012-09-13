@@ -2,59 +2,63 @@
 
 <html>
 <head>
-<title>Advanced settings</title>
+<title>Impostazioni avanzate</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Advanced settings</h3>
+<h3>Impostazioni avanzate</h3>
 
-There were two aspects in the <b>settings</b> tab that we have not yet
-discussed. First of all, there is a checkbox labeled <b>Persistent</b>.
-Normally, when you leave a room and return to the same room later, the room
-is reset to its initial settings. This is fine if you have a number of
-levels in your game but it is normally not what you want in for example an
-RPG. Here the room should be the way you left it the last time. Checking the
-box labeled <b>Persistent</b> will do exactly that. The room status will be
-remembered and when you return to it later, it will be exactly the same as
-you left it. Only when you restart the game will the room be reset.
-Actually, there is one exception to this. If you marked certain objects as
-being persistent, instances of this object will not stay in
-the room but move to the next room.
+Ci sono due aspetti del tab <b>settings</b> che non abbiamo ancora considerato.
+Prima di tutto, il checkbox denominato <b>Persistent (persistente)</b>. Generalmente, quando
+si lascia un room e vi si ritorna successivamente, quest'ultima risulta 
+resettata al suo stato originale. Questo comportamento è può essere corretto
+in giochi suddivisi a livelli, ma generalmente non é quello che si vuole per
+esempio in un RPG, dove ci si aspetta che la room si trovi nello stato in cui
+l'abbiamo lasciata in precedenza. Spuntare il checkbox denominato <b>Persistent</b>
+produce esattamente questo risultato. La room sarà preservata in modo
+che al seguente rientro quest'ultima sia esattamente come é stata lasciata.
+Solo al riavvio del gioco la room tornerà al suo stato originario.
+Esiste però un'eccezione a questo comportamento. Nel caso in cui alcuni oggetti
+siano stati a loro volta marcati come persistenti, le istanze di questi oggetti
+non rimarranno nella room ma verranno spostati alla successiva.
+
 
 <p>
-Secondly, there is a button labeled <b>Creation code</b>. Here you can type
-in a piece of code in GML (see later) that is executed when the room is
-created. This is useful to fill in certain variables for the room,
-create certain instances, etc. It is important to understand what exactly
-happens when you move to a particular room in the game.
+Un secondo aspetto riguarda il bottone denominato <b>Creation Code (codice di 
+creazione)</b>. Il bottone rende possibile l'inserimento di un codice in GML
+(vedi prossimi capitoli) che verrà eseguito alla creazione della room.
+Questo può essere utile per definire delle variabili in riferimento alla room,
+per creare istanze, ecc. È importante a questo punto capire cosa esattamente 
+succede quando ci si sposta in una nuova room.
 
 <ul>
-  <li>First, in the current room (if any) all instances get a room-end
-    event. Next the non-persistent instances are removed (no destroy event is
-    generated!).</li>
-  <li>Next, for the new room the persistent instances from the previous room
-    are added.</li>
-  <li>All new instances are created and their creation events are executed
-    (if the room is not persistent or has not been visited before).</li>
-  <li>When this is the first room, for all instances the game-start event is
-    generated.</li>
-  <li>Now the room creation code is executed.</li>
-  <li>Finally, all instances get a room-start event.</li>
+  <li> Prima di tutto, tutte le istanze nella room corrente (se presente)
+  eseguono l'evento room-end. In seguito le istanze non persistenti vengono
+  rimosse (l'evento destroy non questo caso non viene eseguito!).</li>
+  <li>In seguito, le istanze persistenti vengono spostate nella room
+  successiva.</li>
+  <li>Tutte le nuove istanze vengono create e il loro evento create viene
+  eseguito (se la room non é persistente o non è ancora stata visitata).</li>
+  <li>Nel caso in cui questa sia la prima room, l'evento game-start viene
+  eseguito per tutte le istanze (dove presente).</li>
+  <li>A questo punto il creation code della room viene eseguito.</li>
+  <li>Infine, l'evento room-start viene eseguito per tutte le istanze (dove presente)</li>
 </ul>
 
 <p>
-So, for example, the room-start events can use variables set by the creation
-code for the room and in the creation code you can refer to the instances
-(both new ones and persistent ones) in the room.
+Diventa possibile quindi, per esempio, utilizzare variabili impostate nel
+creation code nell'evento room-start, o fare riferimento dal creation code
+alle istanze presenti nella room (sia nuove che persistenti).
 
 <p>
-There is one further option. In the pop-up menu when you right click on an
-instance with the &lt;Ctrl&gt; key you can now indicate some creation code
-for the specific instance. This code is executed when the room is started,
-just before the creation event of the instance is executed. This is very
-useful to e.g. set certain parameters that are specific to the instance.
+Esiste inoltre un'altra impostazione. Nel pop-up menu che compare cliccando
+col tasto destro su un'istanza tenendo premuto il tasto &lt;Ctrl&gt; è
+possibile indicare un creation code per l'istanza specifica. Questo codice
+viene eseguito all'avvio della room, prima dell'evento create dell'istanza.
+Questa funzionalità può essere molto utile per esempio per impostare alcuni
+parametri relativi all'istanza nello specifico.
 
 <!--END-->
 </body>
@@ -62,8 +66,10 @@ useful to e.g. set certain parameters that are specific to the instance.
 
 <!-- KEYWORDS
 persistent rooms
+persistenza, room persistenti
 persistence, rooms
 room creation code
 creation code
 event order
+ordine eventi
 --> 
