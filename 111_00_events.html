@@ -1,5 +1,4 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-//TRADUZIONE IN CORSO DA TIZZIO
 
 <html><head>
 <title>Eventi</title>
@@ -7,6 +6,7 @@
 </head>
 <body background="images/back.gif">
 <!--START-->
+<!--In traduzione da Tizzio-->
 
 <h1>Eventi</h1>
 
@@ -139,31 +139,31 @@ Inoltre, non c'è un secondo controllo di collisione (come nel caso precedente).
 
 <p>
 Ci sono molti utilizzi per l'evento collisione.
-Le instanza possono usarlo per rimbalzare nei muri, oppure non appena collidono vengono distrutti (es. un proiettile).
+Le instanze possono usarlo per rimbalzare nei muri, oppure non appena collidono vengono distrutti (es. un proiettile).
 
 <p>
-<b><img src="images/event_keyboard.bmp"> Keyboard events</b><br>
-When the player presses a key, a keyboard event happens for all instances of all
-objects. There is a different event for each key. In the menu you can pick the key for
-which you want to define the keyboard event and next drag actions there. Clearly, only
-a few objects need events for only a few keys. You get an event in every step as long
-as the player keeps the key depressed. There are two special keyboard events. One is called
-&lt;No key&gt;. This event happens in each step when no key is pressed. The second one
-is called &lt;Any key&gt; and happens whatever key is pressed. When the player
-presses multiple keys, the events for all the keys pressed happen. Note that the keys
-on the numeric keypad only produce the corresponding events when &lt;NumLock&gt; is
-pressed.
+<b><img src="images/event_keyboard.bmp"> Eventi Keyboard (tastiera)</b><br>
+Quando il giocatore preme un tasto, avviene un evento keyboard per tutte le instanze di tutti gli oggetti.
+Ci sono tanti eventi quanti sono i tasti. Nel menu puoi scegliere il tasto per cui vuoi definire
+un evento keyboard e trascinarci le azioni dentro all'apposito riquadro.
+Ci sono 2 eventi eventi keyboard speciali: uno è &lt;No key&gt; che avviene se non è premuto nessun tasto.
+L'altro è &lt;Any key&gt; e avviene se è premuto un tasto qualsiasi della tastiera.
+Quando il player preme tasti multipli, gli eventi per ogni tasto premuto vengono attivati.
+i tasti relativi al "numeric keypad" (tastierino numerico) vengono attivati SOLO se &lt;NumLock&gt; è attivo.
 
 <p>
-<b><img src="images/event_mouse.bmp"> Mouse events</b><br>
-A mouse event happens for an instance whenever the mouse cursor lies inside the sprite
-representing the instance. Depending on which mouse buttons are pressed you get the no
-button, left button, right button, or middle button event. The mouse button events are
-generated in each step as long as the player keeps the mouse button pressed. The press
-events are only generated once when the button is pressed. The release events are only
-generated when the button is released. Note that these events only occur when the
-mouse is above the instance. If you want to react to mouse press or release events at
-an arbitrary place, use the global mouse events that can be found in a submenu. There are
+<b><img src="images/event_mouse.bmp"> Eventi Mouse</b><br>
+Un evento mouse viene attivato per un instanza qando il mouse è posto all'interno del suo sprite che rappresenta
+l'instanza. In base a quale tasto premi possiamo avere "no button", "left button", "right button" o "middle button"
+(in ordine, nessun bottone, sinistro, destro, centrale).
+Gl eventi mouse sono generati ogni step finchè il player tiene il bottone del mouse premuto.
+L'evento press invece, viene attivato solo per lo step in cui il player preme, viceversa quello release, 
+quando viene rilasciato (nota che questo evento avviene SOLO se il mouse è sopra l'instanza).
+Se vuoi invece che gli eventi vengono attivati sempre anche se il mouse non è sopra il mouse, usa i "global mouse event"
+può essere trovato nel submenu.
+Ci sono 2 eventi mouse speciali: Mouse enter (che avviene qando l'instana entra nell'instanza
+
+that can be found in a submenu. There are
 two special mouse events. The mouse enter event happens when the mouse enters the
 instance. The mouse leave event happens when the mouse leaves the instance. These
 events are typically used to change the image or play some sound. 
