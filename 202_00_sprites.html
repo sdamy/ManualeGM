@@ -7,47 +7,46 @@
 <body background="images/back.gif">
 <!--START-->
 
+<h1>Di più sugli sprites</h1>
 
-<h1>More about sprites</h1>
-
-When running <i>GameMaker</i> in advanced mode the 
-A number of advanced options exist. When you open the sprite form it will look as follows:
+Mentre esegui <i>Game Maker</i> nell' Advanced Mode
+esiste un certo numero di opzioni avanzate. Quando apri la finestra "sprite" essa apparirà coma segue:
 
 <p>
 <img src="images/form_sprite_advanced.jpg">
 
 <p>
-A new button <b>Save Sprite</b> has appeared. With this button you can save the sprite
-in a proprietary format. This format will not only store the image(s) of the sprite
-but also other settings, such as collision settings and the origin. The file will have
-the extension .gmspr. <i>GameMaker</i> can load such files but also the games can
-load them.
+Un nuovo pulsante <b>"Save Sprite"</b> (salva sprite) è comparso. Con questo pulsante puoi salvare lo sprite
+in un formato proprio. Questo formato non solo conserverà l'immagine o le immagini dello sprite
+ma anche altre impostazioni, come le impostazioni di collisione e l'origine. Il file avrà
+l'estensione .gmspr. <i>Game Maker</i> può caricare questi file ma anche i giochi possono
+caricarli.
 
 <p>
-At the bottom-left, you can indicate the origin of the sprite. This is the point in the
-sprite that corresponds with its position in the room. When you set an instance at a 
-particular position, the origin of the sprite is placed there. Default it 
-is the top left corner of the sprite but it is sometimes more convenient 
-to use the center (by clicking the <b>Center</b> button)
-or some other important point. You can even choose an 
-origin outside the sprite. You can also set the origin by clicking in the 
-sprite image. The origin will be shown with a cross.
+In basso a sinistra, puoi indicare l'origine dello sprite. Quello è il punto nello
+sprite che corrisponde con la sua posizione nella room. Quando imposti un'istanza in una
+particolare posizione, l'origine dello sprite è posizionata lì. L'impostazione di default
+è l'angolo in alto a sinistra dello sprite ma a volte è più conveniente
+usare il centro (cliccando sul pulsante <b>Center</b> (centro))
+o in qualche altro punto importante. Puoi persino scegliere
+un'origine fuori dallo sprite. Puoi anche scegliere l'origine cliccando
+nell'immagine dello sprite. L'origine verrà mostrata con una croce.
 
 <p>
-Most important are the options related to collision checking. Whenever two instances 
-meet a collision event is generated. Collisions are checked in the following way. 
-Each sprite has a mask. Default this corresponds to all pixels that are not fully transparent.
-When two pixels in the masks of the two sprites overlap, a collision is reported. 
+Le più importanti sono le opzioni relative al controllo della collisione. Ogni volta che due istanze
+si incontrano viene generato un evento collision. Le collisioni sono controllate nel seguente modo.
+Ogni sprite ha una maschera (collision mask). Per l'impostazione di default corrisponde a tutti i pixel che non sono completamente trasparenti.
+Quando due pixel nelle maschere dei due sprite si sovrappongono, avviene una collisione.
 
 <p>
-Sometimes you don't want precise collision checking. In this case, uncheck the
-box <b>Precise collision checking</b>. Now the bounding box is used as the mask.
+A volte potresti non voler precisare il controllo delle collisioni. In questo caso, NON spuntare la
+casella <b>Precise collision checking</b> (precisa il controllo delle collisioni). Ora la bounding box è usata come maschera.
 
 <p>
-When the sprites has multiple subimages, default there is just a single mask that
-combines the masks of all subimages. Normally this is what you want but in certain
-situations you might want each subimage to have its own mask. In this case check
-the box <b>Separate collision masks</b>. 
+Quando gli sprite hanno più subimmagini, per l'impostazione di default c'è una singola maschera che
+combina le maschere di tutte le subimmagini. Normalmente tu vuoi fare in questo modo ma in alcuni
+casi potresti volere che ogni subimmagine abbia una sua maschera. In questo caso spunta
+la casella <b>Separate collision masks</b> (separa le maschere di collisione).
 
 <h3>Collision Masks</h3>
 
