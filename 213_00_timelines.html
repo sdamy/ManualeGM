@@ -1,33 +1,33 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html><head>
-<title>Time lines</title>
+<title>Time lines (Linee del tempo)</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
 
-<h1>Time lines</h1>
+<h1>Time lines (Linee del tempo)</h1>
 
-In many games certain things must happen at certain moments in time. You can
-try to achieve this by using alarm events but when things get too
-complicated this won't work any more. The time line resource is meant for
-this. In a time line you specify which actions must happen at certain
-moments in time. You can use all the actions that are also available for the
-different events. Once you create a time line you can assign it to an
-instance of an object. This instance will then execute the actions at the
-indicated moments of time. Let us explain this with an example. Assume you
-want to make a guard. This guard should move 20 time steps to the left, then
-10 upwards, 20 to the right, 10 downwards and then stop. To achieve this you
-make a time line where you start with setting a motion to the left. At
-moment 20 you set a motion upward, at moment 30 a motion to the right, at
-moment 50 a motion downwards and at moment 60 you stop the motion. Now you
-can assign this time line to the guard and the guard will do exactly what
-you planned. You can also use a time line to control your game more
-globally. Create an invisible controller object, create a time line that at
-certain moments creates enemies, and assign it to the controller object. If
-you start to work with it you will find out it is a very powerful concept.
+In molti giochi alcune cose devono avvenire in determinati momenti nel tempo. Puoi
+provare a farcela usando gli alarm event ma quando le cose diventano troppo
+complicate questo non andrà più bene. La risorsa timeline (linea del tempo) è pensata per
+questo. In una timeline puoi specificare quali azioni devono avvenire in determinati
+momenti nel tempo. Puoi usare tutte le azioni che potresti usare nei
+diversi eventi. Una volta creata una timeline puoi assegnarla a
+un'istanza di un oggetto. Quest'istanza eseguirà le azioni nei
+momenti indicati nel tempo. Quest'esempio ti spiegherà meglio. Mettiamo che tu
+voglia creare una guardia. Questa guardia dovrebbe muoversi per 20 step a sinistra, poi
+10 verso l'alto, 20 a destra, 10 in basso e poi fermarsi.Per farlo tu
+crei una timeline dove tu cominci con l'impostazione del movimento a sinistra (moment 0). Al
+moment (momento) 20 imposti il movimento verso l'alto, al moment 30 il movimento a destra, al
+moment 50 il movimento verso il basso e al moment 60 fermi il movimento.Ora
+puoi assegnare questa timeline alla guardia e la guardia  farà esattamente ciò
+che avevi pianificato. Puoi anche usare una timeline per controllare il tuo gioco in modo più
+globale. Crea un object controllore invisibile, crea una timeline che in
+certi momenti crea nemici, e assegnala all'object controllore. Se
+cominci a lavorare con le timeline potrai capire che sono molto potenti.
 
 <p>
 To create a time line, choose <b>Create Time Line</b> from the <b>Resources</b> menu.
