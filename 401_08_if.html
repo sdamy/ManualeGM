@@ -2,54 +2,54 @@
 
 <html>
 <head>
-<title>If statement</title>
+<title>Costrutto if</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>If statement</h3>
+<h3>Costrutto if</h3>
 
-An if statement has the form
-
-<p>
-<blockquote>
-<pre><b>if</b> (&lt;expression&gt;) &lt;statement&gt;</pre>
-</blockquote>
-
-<p>
-or
+Un costrutto if (if statement) ha questa forma:
 
 <p>
 <blockquote>
-<pre><b>if</b> (&lt;expression&gt;) &lt;statement&gt; <b>else</b> &lt;statement&gt;</pre>
+<pre><b>if</b> (&lt;espressione&gt;) &lt;azione&gt;</pre>
 </blockquote>
 
 <p>
-The statement can also be a block. The expression will be evaluated. If
-the (rounded) value is &lt;=0 (<b>false</b>) the statement after else is
-executed, otherwise (<b>true</b>) the other statement is executed. It is a
-good habit to always put curly brackets around the statements in the if
-statement. So best use
+oppure
+
+<p>
+<blockquote>
+<pre><b>if</b> (&lt;espressione&gt;) &lt;azione&gt; <b>else</b> &lt;azione&gt;</pre>
+</blockquote>
+
+<p>
+L'azione può anche essere un blocco di azioni. L'espressione verrà risolta. Se
+il valore (arrotondato) è &lt;=0 (<b>false</b>(falso)) viene eseguita l'azione dopo
+else (altrimenti), in caso contrario (<b>true</b>(vero)) viene eseguita l'altra azione. È una
+buona abitudine mettere sempre entro parentesi graffe le azioni nel costrutto if.
+Perciò è meglio usare:
 
 <p>
 <blockquote>
 <pre>
-<b>if</b> (&lt;expression&gt;)
+<b>if</b> (&lt;espressione&gt;)
 {
-  &lt;statement&gt;
+  &lt;azione&gt;
 }
 <b>else</b>
 {
-  &lt;statement&gt;
+  &lt;azione&gt;
 }
 </pre>
 </blockquote>
 
 <p>
-<b>Example</b><br>
+<b>Esempio</b><br>
 
-The following program moves the object toward the middle of the screen.
+Il programma seguente muove l'object verso il centro dello schermo:
 
 <p>
 <blockquote>
@@ -60,7 +60,6 @@ The following program moves the object toward the middle of the screen.
 </pre>
 </blockquote>
 
-
 <!--END-->
 </body>
 </html>
@@ -69,4 +68,7 @@ The following program moves the object toward the middle of the screen.
 else
 if
 conditional statement
+else
+if
+costrutto condizionale
 --> 
