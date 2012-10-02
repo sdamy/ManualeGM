@@ -10,39 +10,39 @@
 
 <h3>Istruzione Switch</h3>
 
-In a number of situations you want to let your action depend on a
-particular value. You can do this using a number of if statements but it
-is easier to use the switch statement. A switch statement has the
-following form:
+In alcune situazioni puoi volere che un'azione dipenda da un
+particolare valore. Puoi farlo usando un certo numero di istruzioni If, ma
+è più facile usare l'istruzione Switch (switch statemant). Un'istruzione Switch ha la
+forma seguente:
 
 <p>
 <blockquote>
 <pre>
-<b>switch</b> (&lt;expression&gt;)
+<b>switch</b> (&lt;espressione&gt;)
 {
-  <b>case</b> &lt;expression1&gt;: &lt;statement1&gt;; ... ; <b>break</b>;
-  <b>case</b> &lt;expression2&gt;: &lt;statement2&gt;; ... ; <b>break</b>;
+  <b>case</b> &lt;espressione1&gt;: &lt;azione1&gt;; ... ; <b>break</b>;
+  <b>case</b> &lt;espressione2&gt;: &lt;azione2&gt;; ... ; <b>break</b>;
   ...
-  <b>default</b>: &lt;statement&gt;; ...
+  <b>default</b>: &lt;azione&gt;; ...
 }
 </pre>
 </blockquote>
 
 <p>
-This works as follows. First the expression is executed. Next it is
-compared with the results of the different expressions after the case
-statements. The execution continues after the first case statement with
-the correct value, until a break statement is encountered. If no case
-statement has the right value, execution is continued after the default
-statement. (It is not required to have a default statement.) 
-Note that multiple case
-statements can be placed for the same statement. Also, the break is not
-required. If there is no break statement the execution simply continues
-with the code for the next case statement.
+Funziona nel modo seguente. Prima viene eseguita l'espressione. Poi viene
+confrontata con i risultati delle diverse espressioni che seguono le parole "case"
+(ovvero espressione1,espressione2,ecc.).
+L'esecuzione continua dopo il primo "case" col valore corretto, 
+finché non viene incontrata una parola "break". Se nessun "case"
+ha il valore corretto, l'esecuzione continua fino alla parola "default".
+(Non sei costretto a usare una parola "default".)
+Nota che più "case" possono essere usati per la stessa azione (come nell'esempio
+che segue). Inoltre, non sempre è necessario il "break". Se non ce ne sono
+l'esecuzione continua semplicemente con il prossimo "case".
 
 <p>
-<b>Example</b><br>
-The following program takes action based on a key that is pressed.
+<b>Esempio</b><br>
+Il programma seguente esegue un'azione sulla base del pulsante premuto.
 
 <p>
 <blockquote>
@@ -66,6 +66,9 @@ The following program takes action based on a key that is pressed.
 
 <!-- KEYWORDS
 switch statement
+case
+break
+istruzione switch
 case
 break
 --> 
