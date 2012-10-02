@@ -1,53 +1,53 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html><head>
-<title>Di più sugli objects</title>
+<title>Di più sugli object</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
 
-<h1>Di più sugli objects</h1>
+<h1>Di più sugli object</h1>
 
-When you create an object in advanced mode, you can change some more
-advanced settings.
+Quando crei un object in Advanced Mode, puoi cambiare qualche
+opzione avanzata addizionale.
 
-<h3>Depth</h3>
+<h3>Depth (profondità)</h3>
 
-First of all, you can set the <b>Depth</b> of the instances of the object.
-When the instances are drawn on the screen they are drawn in order of depth.
-Instances with the largest depth are drawn first. Instances with the
-smallest depth are drawn last. When instances have the same depth, they are
-drawn in the order in which they were created. If you want to guarantee that
-an object lies in front of the others give it a negative depth. If you want
-to make sure it lies below other instances, give it a large positive depth.
-You can also change the depth of an instance during the game using the
-variable called depth.
+Per prima cosa, puoi impostare la <b>Depth</b> (profondità) delle istanze dell' object.
+Quando le istanze sono disegnate sullo schermo sono disegnate secondo la loro depth.
+Le istanze con depth maggiore sono disegnate per prime (quindi stanno dietro). Le istanze con la
+depth minore sono disegnate per ultime (quindi stanno davanti). quando delle istanze hanno uguale
+depth, si segue l'ordine secondo cui sono state create. Se vuoi essere sicuro che
+un object stia davanti agli altri, dagli una depth negativa. Se vuoi
+essere sicuro che stia dietro alle altre istanze, dagli una depth grande e positiva.
+Puoi anche cambiare la depth di un'istanza durante il gioco usando la
+variabile chiamata "depth".
+
+<h3>Object persistenti (persistent)</h3>
 
 
-<h3>Persistent objects</h3>
+In secondo luogo, puoi far diventare un object persistente (persistent). Un object persistente
+continuerà a esistere quando ti sposti da una room a un'altra.
+Scompare solo se lo distruggi esplicitamente. Devi solo mettere
+un'istanza di quell'object nella prima room e poi rimarrà disponibile
+in tutte le room. È molto utile quando, per esempio, hai un personaggio principale che si muove
+da una room all'altra. L'uso object persistenti è un meccanismo potente ma
+può portare facilmente a errori.
 
-Secondly, you can make an object persistent. A persistent object will
-continue existing when you move from one room to the next. It only
-disappears when you explicitly destroy it. So you only need to put an
-instance of the object in the first room and then it will remain available
-in all rooms. This is great when you have a main character that moves
-from room to room. Using persistent objects is a powerful mechanism but also
-one that easily leads to errors.
+<h3>Parents (Object "genitori" e "figli")</h3>
 
-<h3>Parents</h3>
-
-Every object can have a parent object. When an object has a parent, it
-inherits the behavior of the parent. Stated differently, the object is a sort
-of special case of the parent object. For example, if you have 4 different
-balls, named ball1, ball2, ball3 and ball4, which all behave the same but
-have a different sprite, you can make ball1 the parent of the other three.
-Now you only need to specify events for ball1. The others will inherit the
-events and behave exactly the same way. Also, when you apply actions to
-instances of the parent object they will also be applied to the children.
-So, for example, if you destroy all ball1 instances the ball2, ball3,
-and ball4 instances will also be destroyed. This saves a lot of work.
+Ogni object può avere un object che è il suo parent ("genitore"). Quando un object ha un parent,
+eredita il comportamento del parent. Detto diversamente, l'object è una specie
+di caso speciale del suo parent. Per esempio, se hai 4 diverse
+palle, chiamate ball1, ball2, ball3 e ball4, che si comportano tutte allo stesso modo ma
+hanno diversi sprite, puoi impostare ball1 come parent degli altri tre.
+Ora devi solo specificare gli eventi per ball1. Gli altri erediteranno gli
+event e si comporteranno esattamente allo stesso modo. Inoltre, quando ti riferisci alle
+istanze di un object che è parent, ti riferisci contemporaneamente anche ai "figli".
+Quindi, per esempio, se distruggi tutte le istanze di ball1, anche le istanze di
+ball2, ball3 e ball4 verranno distrutte. Questo ti fa risparmiare un bel po' di lavoro.
 
 <p>
 Often, objects should behave almost identically but there will be
