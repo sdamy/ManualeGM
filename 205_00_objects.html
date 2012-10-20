@@ -50,63 +50,63 @@ Quindi, per esempio, se distruggi tutte le istanze di ball1, anche le istanze di
 ball2, ball3 e ball4 verranno distrutte. Questo ti fa risparmiare un bel po' di lavoro.
 
 <p>
-Often, objects should behave almost identically but there will be
-some small differences. For example, one monster might move up and down and
-the other left and right. For the rest they have exactly the same behavior.
-In this case almost all events should have the same actions but one or two
-might be different. Again we can make one object the parent of the other.
-But in this case we also define certain events for the child object. These
-events &quot;override&quot; the parent events. So whenever an event for the
-child object contains actions, these are executed instead of the event of
-the parent. If you also want to execute the parent event you can call the
-so-called &quot;inherited&quot; event using the appropriate action.
+Spesso, gli object dovrebbero comportarsi in modo praticamente identico ma
+con qualche piccola differenza. Per esempio, un mostro potrebbe doversi mouvere su e giù e
+l'altro a sinistra e destra. Per il resto hanno esattamente lo stesso comportamento.
+In questo caso quasi tutti gli event dovrebbero avere le stesse azioni ma uno o due
+dovrebbero essere diversi. Di nuovo possiamo impostare un object come parent dell'altro.
+Ma in questo caso dobbiamo ancge definire degli event per l'object "figlio". Questi
+event &quot;hanno la precedenza&quot; sugli event del parent. Quindi se un event del
+"figlio" contiene azioni, queste sono eseguite al posto di quelle contenute nell'event
+del parent. Se vuoi eseguire anche l'event del parent puoi richiamare il
+cosiddetto "&quot;inherited event&quot;" (event ereditato) usando l'apposita azione.
 
 <p>
-It is actually good practice in such cases to create one base object.
-This base object contains all the default behavior
-but is never used in the game. All actual objects have this base object as parent.
-Parent objects can again have parents, and so on. (Obviously you are not
-allowed to create cycles.) In this way you can create an object hierarchy.
-This is extremely useful to keep your game structured and you are strongly
-advised to learn to use this mechanism.
+In alcuni casi può essere una buona cosa creare un object di base.
+Quest'object contiene tutti i comportamenti di base
+ma non viene mai usato nel gioco. Tutti gli object hanno quest'object di base come parent.
+Gli object impostati come parent possono avere un parent, e così via. (ovviamente non
+puoi creare cicli. (Ad esempio: non puoi dire che obj1 è parent di obj2 E CONTEMPORANEAMENTE che obj2 è parent di obj1.))
+Così puoi creare una gerarchia di object. È molto utile per tenere ben strutturato il tuo gioco
+e ti consiglio vivamente di imparare a usare questo meccanismo.
 
 <p>
-There is also a second use of the parent object. It also inherits the
-collision behavior for other objects. Let us explain this with an example.
-Assume you have four different floor objects. When a ball hits the floor it
-must change direction. This has to be specified in the collision event of
-the ball with the floor. Because there are four different floors we need to
-put the code on four different collision events of the ball. But when you
-make one base floor object and make this one the parent of the four actual
-floor objects, you only need to specify the collision event with this base
-floor. The other collisions will perform the same event. Again, this saves a
-lot of copying.
+C'è anche un secondo utilizzo dei parent. Il "figlio" eredita anche il
+comportamento del "padre" quando collide con altri object. Lascia che ti spieghi con un esempio.
+Mettiamo che hai quattro object pavimento differenti. Quando una palla colpisce il pavimento
+deve cambiare direzione. Questo va specificato nel collision event della
+palla col pavimento. Visto che hai quattro diversi pavimenti dobbiamo
+mettere lo stesso codice in quattro diversi collision event nella palla. Ma se 
+crei un object "pavimento di base" e lo rendi parent dei quattro 
+object pavimento, dovrai solo specificare la collisione con questo
+"pavimento di base". Le altre collisioni avvieranno lo stesso evento. Di nuovo, ciò ti fa risparmiare
+molto lavoro di copiatura.
 
 <p>
-As indicated, wherever you use an object, this also implies the descendants.
-This happens when, in an action, you indicate that the action must be
-applied to instances of a certain object. It also happens when you use the
-<tt>with()</tt> statement in code (see below). And it works when you call
-functions like <tt>instance_position</tt>, <tt>instance_number</tt>, etc.
-Finally, it works when you refer to variables in other objects. In the
-example above when you set <tt>ball1</tt>.speed to 10 this also applies to
-ball2, ball3 and ball4.
+Come indicato, ovunque usi un object, usi anche i suoi "discendenti".
+Ciò accade quando, in un'azione, indichi che quell'azione deve essere
+applicata alle istanze di un determinato object. accade anche quando usi
+l'istruzione <tt>with()</tt> nel codice (vedi più in basso). E funziona quando chiami
+funzioni come <tt>instance_position</tt>, <tt>instance_number</tt>, ecc.
+Infine, funziona quando ti riferisci a variabili in altri oggetti.
+Nell'esempio qui sopra quando imposti <tt>ball1</tt>.speed a 10 si applica anche a
+ball2, ball3 e ball4.
 
-<h3>Masks</h3>
+<h3>Maschere di Collisione (Collision Masks)</h3>
 
-When two instances collide a collision event occurs. To decide whether two
-instances intersect, the sprites are used. This is fine in most cases, but
-sometimes you want to base collisions on a different shape. For example, if
-you make an isometric game, objects typically have a height (to give them a
-3D view). But for collisions you only want to use the ground part of the
-sprite. This can be achieved by creating a separate sprite that is used as
-collision mask for the object.
+Quando due istanze collidono, si verifica un Collision Event. Per decidere se due
+istanze si intersecano, sono usati gli sprite. È così in molti casi, ma a volte
+vorrai far basare le collisioni su una forma differente. Per esempio, se
+vuoi creare un gioco isometrico, gli object hanno solitamente un'altezza (per dar loro una
+visuale 3D). Ma per le collisioni vorrai usare solo la parte in basso dello
+sprite. Puoi farcela creando uno sprite separato che è usato come
+maschera di collisione per l'object.
 
-<h3>Information</h3>
+<h3>Informazioni</h3>
 
-The button <b>Show Information</b> gives an overview of all information for
-the object that can also be printed. This is particularly useful when you
-loose overview of all your actions and events.
+Il pulsante <b>Show Information</b> (mostra informazioni) ti dà una panoramica di tutte le informazioni
+dell'object, che possono anche essere stampate. È particolarmente utile quando
+vuoi vedere una panoramica di tutte le tue azioni ed eventi.
 
 <!--END-->
 </body>
@@ -120,4 +120,10 @@ parent object
 inheritance
 masks
 object information
+profondità
+object persistenti
+persistenza, object
+parent object
+eredità
+maschere
 --> 
