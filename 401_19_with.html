@@ -2,13 +2,13 @@
 
 <html>
 <head>
-<title>With constructions</title>
+<title>Costrutti With</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>With constructions</h3>
+<h3>Costrutti With</h3>
 
 Come indicato prima, è possibile leggere e cambiare il valore di
 variabili di altre istanze. Ma in alcuni casi vorrai fare
@@ -43,12 +43,12 @@ il costrutto <b>with</b>. La sua forma generale è
 </blockquote>
 
 <p>
-&lt;expression&gt; indicates one or more instances. For this you can use
-an instance id, the name of an object (to indicate all instances of this
-object) or one of the special objects (all, self, other, noone).
-&lt;statement&gt; is now executed for each of the indicated instances, as
-if that instance is the current (self) instance. So, to move all balls 8
-pixels down, you can type.
+&lt;expression&gt; indica una o più istanze. In questo campo puoi usare
+un id di un'istanza, il nome di un object (per indicare tutte le istanze di
+quest'object) o uno degli object speciali (all, self, other, noone).
+&lt;statement&gt; è eseguito per ciascuna delle istanze indicate, come
+se quell'istanza fosse la corrente istanza (self). Quindi, per muovere tutte le palle di 8
+pixel in basso, puoi digitare:
 
 <p>
 <blockquote>
@@ -56,8 +56,8 @@ pixels down, you can type.
 </blockquote>
 
 <p>
-If you want to execute multiple statements, put curly brackets around
-them. So for example, to move all balls to a random position, you can use
+Se vuoi eseguire più istruzioni, metti quelle azioni tra parentesi graffe.
+quindi, per esempio, per muovere tutte le palle a una posizione casuale, puoi usare
 
 <p>
 <blockquote>
@@ -71,10 +71,10 @@ them. So for example, to move all balls to a random position, you can use
 </blockquote>
 
 <p>
-Note that, within the statement(s), the indicated instance has become the
-self instance. Within the statements the original self instance has become
-the other instance. So for example, to move all balls to the position of
-the current instance, you can type
+Nota che, in questa(e) azione(i), l'istanza indicata è diventata 
+l'istanza "self". Sempre in queste azioni l'istanza "self" originale è diventata
+l'istanza "other". Quindi, per muovere tutte le palle alla posizione
+dell'istanza corrente, puoi digitare
 
 <p>
 <blockquote>
@@ -88,8 +88,8 @@ the current instance, you can type
 </blockquote>
 
 <p>
-Use of the with statement is extremely powerful. Let me give a few more
-examples. To destroy all balls you type
+Il costrutto with è estremamente potente. Lasciami dare qualche
+esempio in più. Per distruggere tutte le palle puoi digitare
 
 <p>
 <blockquote>
@@ -97,8 +97,8 @@ examples. To destroy all balls you type
 </blockquote>
 
 <p>
-If a bomb explodes and you want to destroy all instances close by you can
-use
+Se una bomba esplode e vuoi distruggere tutte le istanze vicine puoi
+usare
 
 <p>
 <blockquote>
@@ -110,7 +110,6 @@ use
 </pre>
 </blockquote>
 
-
 <!--END-->
 </body>
 </html>
@@ -118,4 +117,6 @@ use
 <!-- KEYWORDS
 with construction
 applying code to instances
+costrutto with
+applicare il codice ad altre istanze
 --> 
