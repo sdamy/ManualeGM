@@ -10,11 +10,11 @@
 
 <h3>With constructions</h3>
 
-As indicated before, it is possible to read and change the value of
-variables in other instances. But in a number of cases you want to do a
-lot more with other instances. For example, imagine that you want to move
-all balls 8 pixels down. You might think that this is achieved by the
-following piece of code
+Come indicato prima, è possibile leggere e cambiare il valore di
+variabili di altre istanze. Ma in alcuni casi vorrai fare
+molto di più con le altre istanze. Per esempio, immagina che vuoi muovere
+tutte le palle di 8 pixel in giù. Potresti pensare di riuscirci col
+codice seguente
 
 <p>
 <blockquote>
@@ -22,10 +22,10 @@ following piece of code
 </blockquote>
 
 <p>
-But this is not correct. The right side of the assignment gets the value
-of the y-coordinate of the first ball and adds 8 to it. Next this new
-value is set as y-coordinate of all balls. So the result is that all balls
-get the same y-coordinate. The statement
+Ma non è corretto. Il lato destro dell'assegnazione prende il valore
+dellaa coordinata y della prima palla e aggiunge 8. Poi questo nuovo
+valore viene impostato come coordinata y di tutte le palle. Ne risulta che tutte le palle
+hanno la stessa coordinata y. L'istruzione
 
 <p>
 <blockquote>
@@ -33,9 +33,9 @@ get the same y-coordinate. The statement
 </blockquote>
 
 <p>
-will have exactly the same effect because it is simply an abbreviation of
-the first statement. So how do we achieve this? For this purpose there is
-the <b>with</b> statement. Its global form is
+avrà esattamente lo stesso effetto perché è semplicemente un'abbreviazione
+della prima istruzione. E allora come possiamo fare? Per questo scopo c'è
+il costrutto <b>with</b>. La sua forma generale è
 
 <p>
 <blockquote>
