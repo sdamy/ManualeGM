@@ -1,14 +1,14 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html><head>
-<title>Scripts</title>
+<title>Gli script</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
 
-<h1>Scripts</h1>
+<h1>Gli script</h1>
 
 <p>
 <i>GameMaker</i> ha un linguaggio di programmazione incluso chiamato GML. Quando ti senti
@@ -18,52 +18,52 @@ linguaggio GML vedi la <A HREF="400_index.html">Parte 4</A> di questo manuale.
 </p>
 
 <p>
-There are two ways to
-use the language. First of all you can create scripts. These are pieces of
-code to which you give a name. They are shown in the resource tree and can be
-saved to a file and loaded from a file. They can even be used to form a library
-that extends the possibilities of <i>GameMaker</i>. Alternatively, you can
-add a code action to some event and type a piece of code there. Adding code
-actions works in exactly the same way as adding scripts except for two
-differences. Code actions don't have a name and cannot use arguments. Also
-they have the well-known field to indicate to what objects the action should
-apply. For the rest you enter code in exactly the same way as in scripts. We
-recommend you to use scripts for all but simple pieces of code as <i>GameMaker</i>
-has many more features that deal with scripts.
-So we further concentrate on scripts in this chapter. 
+Ci sono due modi per
+usare questo linguaggio. Prima di tutto puoi creare egli script. Gli script sono pezzi di
+codice a cui dai un nome. Sono mostrati nel grafico delle risorse e possono essere
+salvati e caricati da un file. Possono anche essere usati per creare una libreria
+che estende le possibilità di <i>GameMaker</i>. Altrimenti, puoi
+aggiungere una Code Action (azione codice) in un evento e scrivere là un pezzo di codice. Le Code
+Action funzionano esattamente allo stesso modo degli script, tranne che per due
+differenze. Le Code Action non hanno un nome e non possono avere alcun argument (parametri). Inoltre
+le Code Action hanno il campo che già conosci bene per indicare a quali object viene applicata
+l'azione. Per il resto digiti il codice alla stessa maniera degli script.
+Ti raccomandiamo di usare gli script anziché i semplici pezzi di codicedal momento che <i>GameMaker</i>
+ha molte più funzioni che lavorano con gli script.
+Concentriamoci dunque sugli script in questo capitolo.
 </p>
 
 <p>
-As stated before, a script is written with code in GML (the built-in programming language)
-and is meant to perform a particular task. Scripts can takes input-variables called arguments
-(sometimes called parameters).  To execute a script from any event, you can use
-the script action. In the script action you specify
-the script you want to execute, together with the up to five arguments. 
+Come accennato prima, unon script è scritto in codice GML (il linguaggio di programmazione incluso)
+ed è pensato per svolgere una particolare funzione. Gli script possono prendere degli input chiamati arguments
+(o a volte anche parameters)(entrambi i termini significano "parametri"). Per eseguire uno script da un qualsiasi evento, puoi usare
+la Script Action (azione script). Nella Script Action puoi specificare
+lo script che vuoi eseguire, con fino a cinque argument.
 </p>
 
 <p>
-You can also execute a script from within a piece of code (a different script) in the same way you
-call a GM-function. In that case you can use up to 16 arguments.
-Scripts can return a value. This is often used to build calculating methods
-(mathematical methods). The <b>return</b> keyword is used for this.
-No code after the return keyword is executed!
-When a script returns a value, you can also use it as a function when
-providing values in other actions.
+Puoi anche eseguire uno script da un pezzo di codice (un altro script) esattamente come se tu
+stessi chiamando una funzione di GM. In questo caso puoi usare fino a 16 argument.
+Gli script possono restituire un valore, ovvero darlo come output. Torna spesso utile per costruire metodi di calcolo
+(metodi matematici). La parola-chiave <b>return</b> è usata a questo scopo.
+Non viene eseguito altro dopo la parola-chiave return!
+Quando uno script restituisce un valore, puoi usarlo come funzione per
+fornire valori alle altre azioni.
 </p>
 
 <p>
-Scripts are extremely useful to extend the possibilities of <i>GameMaker</i>. 
-This does though require that you design your scripts carefully. Scripts
-can be stored in files that can be added to your game. To import a
-script file, use the item <b>Import scripts</b> from the <b>Scripts</b> menu. To save your
-scripts in the form of a file use <b>Export scripts</b>. Script libraries
-are simple text files (although they have the extension .gml). Preferably
-don't edit them directly because they have a special structure. 
+Gli script sono estremamente utili per estendere le possibilità di <i>Game Maker</i>.
+Tuttavia, devi fare attenzione mentre scrivi i tuoi script. Gli script
+possono essere salvati in file che possono essere aggiunti al tuo gioco. Per importare un
+file script, usa <b>Import scripts</b> (importa script) dal menu <b>Scripts</b>. Per salvare i tuoi
+script in forma di file usa <b>Export scripts</b> (esporta script). Le librerie script
+sono semplici file di testo (anche se hanno l'estensione .gml). Preferibilmente
+non modificarli direttamente perché hanno una struttura particolare.
 </p>
 
 <p>
-To create a script in your game, choose <b>Create Script</b> from the <b>Resources</b> menu. 
-A code editor will appear that will be described next.
+Per creare uno script nel tuo gioco, scegli <b>Create Script</b> (crea script) dal menu <b>Resources</b> (risorse).
+Apparirà un editor di codice come quello che descriveremo tra poco.
 </p>
 
 
