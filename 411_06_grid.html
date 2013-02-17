@@ -9,116 +9,124 @@
 <!--START-->
 
 
-<h3>Grids</h3>
+<h3>Griglie</h3>
 
-A grid is simply a two-dimensional array. A grid has an integer width and
-height. The structure allows you to set and retrieve the value of cells in
-the grid by giving the index of it (which starts with 0 in both the x- and the
-y-direction). But you can also set the value in regions, add values, and retrieve
-the sum, max, min, and mean value over a region. The structure is useful to
-represent e.g. a playing field. Even though all functionality can also be
-achieved using two-dimensional arrays, the operations on regions are a
-lot faster. The following functions exist:
+Una griglia è semplicemente un array bidimensionale. Essa si definisce 
+impostando la sua larghezza e la sua altezza come numeri interi, che 
+stabiliscono il numero totale di "celle" all'interno della griglia 
+(che è pari al prodotto dell’altezza per la larghezza) e queste celle 
+vengono poi utilizzate per contenere diversi valori di dati 
+(numeri reali o stringhe). Questo tipo di struttura consente di impostare 
+e recuperare il valore delle celle della griglia dando l'indice x e y 
+di esso (che inizia con 0 sia per l’asse delle x che per l’asse delle y 
+ed arriva fino al valore della larghezza -1 e al valore dell’altezza -1). 
+Ma si può anche impostare un valore in specifiche regioni della griglia, 
+aggiungere singoli valori e recuperare la somma, massimo, minimo, ed 
+anche il valore medio di una data regione, rendendo questa struttura dati 
+la più versatile di tutte quelle disponibili. Le seguenti funzioni sono disponibili:
 
 <p>
 <blockquote>
   <tt><b>ds_grid_create(w,h)</b></tt> 
-    Creates a new grid with the indicated width and height. The function returns an integer as 
-	an id that must be used in all other functions to access the particular 
-	grid.<br>
+    Crea una nuova griglia con la larghezza e l'altezza indicata. La funzione restituisce un intero come un id 
+    che deve essere utilizzato in tutte le altre funzioni per accedere a particolari griglie.<br>
   <tt><b>ds_grid_destroy(id)</b></tt> 
-    Destroys the grid with the given id, freeing the memory used. 
-	Don't forget to call this function when you are ready with the structure.<br>
+    Distrugge la griglia dato il suo id, liberando la memoria utilizzata. 
+    Non dimenticate di chiamare questa funzione quando si è pronti con la struttura.<br>
   <tt><b>ds_grid_copy(id,source)</b></tt> 
-    Copies the grid source into the grid with the given id.<br>
+    Copia il contenuto della griglia in un’altra griglia di cui è dato il suo id.<br>
   <tt><b>ds_grid_resize(id,w,h)</b></tt> 
-    Resizes the grid to the new width and height. Existing cells 
-	keep their original value.<br>
+    Ridimensiona la griglia impostando una nuova larghezza e altezza. 
+    Le celle esistenti mantengono il loro valore.<br>
   <tt><b>ds_grid_width(id)</b></tt> 
-    Returns the width of the grid with the indicated id.<br>
+    Restituisce la larghezza della griglia con l'id indicato.<br>
   <tt><b>ds_grid_height(id)</b></tt> 
-    Returns the height of the grid with the indicated id.<br>
+    Restituisce l'altezza della griglia con l'id indicato.<br>
   <tt><b>ds_grid_clear(id,val)</b></tt> 
-    Clears the grid with the given id, to the indicated value (can both be
-	a number or a string).<br>
+    Cambia il contenuto di tutte le celle della griglia con l’id indicato, al 
+    valore indicato (che può essere un numero o una stringa).<br>
   <tt><b>ds_grid_set(id,x,y,val)</b></tt> 
-    Sets the indicated cell in the grid with the given id, to the indicated value (can both be
-	a number or a string).<br>
+    Imposta il valore indicato (può essere sia un numero o una stringa) 
+    in una cella della griglia con l’id indicato, alla posizione x e y.<br>
   <tt><b>ds_grid_add(id,x,y,val)</b></tt> 
-    Add the value to the indicated cell in the grid with the given id. For
-	strings this corresponds to concatenation.<br>
+    Somma il valore (val) alla cella indicata nella griglia dato il suo id. 
+    Per le stringhe corrisponde ad una concatenazione.<br>
   <tt><b>ds_grid_multiply(id,x,y,val)</b></tt> 
-    Multiplies the value to the indicated cell in the grid with the given id. Is only
-	valid for numbers.<br>
+    Moltiplica per il valore indicato (val) il valore presente nella cella indicata della griglia 
+    (di cui è dato il suo id). Questa funzione è valida solo per i numeri.<br>
   <tt><b>ds_grid_set_region(id,x1,y1,x2,y2,val)</b></tt> 
-    Sets the all cells in the region in the grid with the given id, to the indicated value (can both be
-	a number or a string).<br>
+    Imposta tutte le celle di una regione (definita dalle coordinate x1, y1, x2, y2) 
+    della griglia (di cui è dato l’id), al valore indicato (può essere sia un numero o una stringa).<br>
   <tt><b>ds_grid_add_region(id,x1,y1,x2,y2,val)</b></tt> 
-    Add the value to the cell in the region in the grid with the given id. For
-	strings this corresponds to concatenation.<br>
+    Somma il valore indicato alle celle nella regione della griglia 
+    di cui è dato l’id. Per le stringhe corrisponde ad una concatenazione.<br>
   <tt><b>ds_grid_multiply_region(id,x1,y1,x2,y2,val)</b></tt> 
-    Multiplies the value to the cells in the region in the grid with the given id. Is only
-	valid for numbers.<br>
+    Moltiplica per il valore indicato il valore presente nelle celle della regione della 
+    griglia (di cui è dato il suo id). Funzione valida solo per i numeri.<br>
    <tt><b>ds_grid_set_disk(id,xm,ym,r,val)</b></tt> 
-    Sets all cells in the disk with center (xm,ym) and radius r.<br>
+    Imposta tutte le celle nel disco (una regione circolare della griglia) 
+    con il centro (xm, ym) e raggio r, al valore indicato.<br>
    <tt><b>ds_grid_add_disk(id,xm,ym,r,val)</b></tt> 
-    Add the value to all cells in the disk with center (xm,ym) and radius r.<br>
+    Somma il valore a tutte le celle nel disco con il centro (xm, ym) e raggio r.<br>
   <tt><b>ds_grid_multiply_disk(id,xm,ym,r,val)</b></tt> 
-    Multiply the value to all cells in the disk with center (xm,ym) and radius r.<br>
+    Moltiplica per il valore indicato il valore di tutte le celle nel disco di centro (xm, ym) e raggio r.<br>
   <tt><b>ds_grid_set_grid_region(id,source,x1,y1,x2,y2,xpos,ypos)</b></tt>
-    Copies the contents of the cells in the region
-    in grid source to grid id. xpos and ypos indicate the place where the region must be placed in the
-    grid. (Can also be used to copy values from one place in a grid to another.)<br> 
+    Copia il contenuto delle celle della regione indicata (x1, y1, x2, y2) della griglia 
+    di origine (source) nella griglia di cui è dato l’id. xpos e ypos indicano il luogo 
+    in cui la regione copiata deve essere posta in griglia. 
+    (La funzione può essere anche utilizzata per copiare i valori da un posto ad un altro della stessa griglia).<br> 
   <tt><b>ds_grid_add_grid_region(id,source,x1,y1,x2,y2,xpos,ypos)</b></tt>
-    Adds the contents of the cells in the region
-    in grid source to grid id. xpos and ypos indicate the place where the region must be added in the
-    grid. (id and source can be the same.)<br> 
+    Somma il contenuto delle celle della regione indicata (x1, y1, x2, y2) della griglia 
+    di origine (source) alle celle della griglia di cui è dato l’id. 
+    xpos e ypos indicano il luogo in cui la regione deve essere aggiunta alla griglia. 
+    (Id e source possono anche essere uguali).<br> 
   <tt><b>ds_grid_multiply_grid_region(id,source,x1,y1,x2,y2,xpos,ypos)</b></tt>
-    Multiplies the contents of the cells in the region
-    in grid source to grid id. xpos and ypos indicate the place where the region must be multiplied 
-	in the grid. (id and source can be the same.) Only valid for numbers.<br> 
+    Moltiplica il contenuto delle celle della regione indicata (x1, y1, x2, y2) della 
+    griglia di origine (source) alle celle della griglia di cui è dato l’id. 
+    xpos e ypos ypos indicano il luogo in cui la regione deve essere aggiunta alla griglia. 
+    (Id e source possono anche essere uguali). Funzione valida solo per i numeri.<br> 
   <tt><b>ds_grid_get(id,x,y)</b></tt> 
-    Returns the value of the indicated cell in the grid with the given id.<br>
+    Restituisce il valore presente nella cella indicata della griglia di cui è dato l’id.<br>
   <tt><b>ds_grid_get_sum(id,x1,y1,x2,y2)</b></tt> 
-    Returns the sum of the values of the cells in the region in the grid with the given id.
-	Does only work when the cells contain numbers.<br>
+    Restituisce la somma dei valori di tutte le celle della regione indicata, della griglia di cui è dato l’id. 
+    Funziona solo quando le celle contengono numeri.<br>
   <tt><b>ds_grid_get_max(id,x1,y1,x2,y2)</b></tt> 
-    Returns the maximum of the values of the cells in the region in the grid with the given id.
-	Does only work when the cells contain numbers.<br>
+    Restituisce il massimo tra i valori delle celle della regione indicata, della griglia di cui è dato l’id. 
+    Funziona solo quando le celle contengono numeri.<br>
   <tt><b>ds_grid_get_min(id,x1,y1,x2,y2)</b></tt> 
-    Returns the minimum of the values of the cells in the region in the grid with the given id.
-	Does only work when the cells contain numbers.<br>
+    Restituisce il minimo tra i valori delle celle della regione indicata, della griglia di cui è dato l’id. 
+    Funziona solo quando le celle contengono numeri.<br>
   <tt><b>ds_grid_get_mean(id,x1,y1,x2,y2)</b></tt> 
-    Returns the mean of the values of the cells in the region in the grid with the given id.
-	Does only work when the cells contain numbers.<br>
+    Restituisce la media dei valori delle celle della regione indicata, della griglia di cui è dato l’id. 
+    Funziona solo quando le celle contengono numeri.<br>
   <tt><b>ds_grid_get_disk_sum(id,xm,ym,r)</b></tt> 
-    Returns the sum of the values of the cells in the disk.<br>
+    Restituisce la somma dei valori delle celle del disco.<br>
   <tt><b>ds_grid_get_disk_min(id,xm,ym,r)</b></tt> 
-    Returns the min of the values of the cells in the disk.<br>
+    Restituisce il minimo dei valori delle celle del disco.<br>
   <tt><b>ds_grid_get_disk_max(id,xm,ym,r)</b></tt> 
-    Returns the max of the values of the cells in the disk.<br>
+    Restituisce il massimo dei valori delle celle del disco.<br>
   <tt><b>ds_grid_get_disk_mean(id,xm,ym,r)</b></tt> 
-    Returns the mean of the values of the cells in the disk.<br>
+    Restituisce la media dei valori delle celle del disco.<br>
   <tt><b>ds_grid_value_exists(id,x1,y1,x2,y2,val)</b></tt> 
-    Returns whether the value appears somewhere in the region.<br>
+    Restituisce un valore se il valore indicato (val) è presente da qualche parte nella regione.<br>
   <tt><b>ds_grid_value_x(id,x1,y1,x2,y2,val)</b></tt> 
-    Returns the x-coordinate of the cell in which the value appears in the region.<br>
+    Restituisce la coordinata x della cella in cui il valore indicato viene visualizzato nella regione.<br>
   <tt><b>ds_grid_value_y(id,x1,y1,x2,y2,val)</b></tt> 
-    Returns the y-coordinate of the cell in which the value appears in the region.<br>
+    Restituisce la coordinata y della cella in cui il valore indicato viene visualizzato nella regione.<br>
   <tt><b>ds_grid_value_disk_exists(id,xm,ym,r,val)</b></tt> 
-    Returns whether the value appears somewhere in the disk.<br>
+    Restituisce un valore se il valore indicato è presente da qualche parte nel disco.<br>
   <tt><b>ds_grid_value_disk_x(id,xm,ym,r,val)</b></tt> 
-    Returns the x-coordinate of the cell in which the value appears in the disk.<br>
+   Restituisce la coordinata x della cella in cui il valore indicato viene visualizzato nel disco.<br>
   <tt><b>ds_grid_value_disk_y(id,xm,ym,r,val)</b></tt> 
-    Returns the y-coordinate of the cell in which the value appears in the disk.<br>
+    Restituisce la coordinata y della cella in cui il valore indicato viene visualizzato nel disco.<br>
   <tt><b>ds_grid_shuffle(id)</b></tt> 
-    Shuffles the values in the grid such that they end up in a random order.<br>
+    Mescola i valori della griglia e li posiziona casualmente.<br>
   <tt><b>ds_grid_write(id)</b></tt> 
-    Turns the data structure into a string and returns this string. The string can then
-	be used to e.g. save it to a file. This provides an easy mechanism for saving data
-	structures.<br>
+    Converte la struttura dati in una stringa e restituisce questa stringa. 
+    La stringa può quindi essere utilizzata, per esempio, per essere salvata in un file. 
+    Questa funzione fornisce un semplice meccanismo per salvare strutture dati.<br>
   <tt><b>ds_grid_read(id,str)</b></tt> 
-    Reads the data structure from the given string (as created by the previous call).<br>
+    Legge la struttura dati dalla stringa passata come parametro (che può essere creata usando la chiamata precedente).<br>
 </blockquote>
 
 <!--END-->
@@ -127,6 +135,8 @@ lot faster. The following functions exist:
 
 <!-- KEYWORDS
 grids
+
+griglie
 
 ds_grid_create() 
 ds_grid_destroy() 

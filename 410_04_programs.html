@@ -8,33 +8,36 @@
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Executing programs</h3>
+<h3>Eseguire programmi esterni</h3>
 
-<i>GameMaker</i> also has the possibility to start external programs. 
-There are two functions available for this: execute_program and execute_
-shell. The function execute_program starts a program, possibly with some 
-arguments. It can wait for the program to finish (pausing the game) or 
-continue the game. The function execute_shell opens a file. This can be 
-any file for which some association is defined, e.g. an html-file, a word 
-file, etc. Or it can be a program. It cannot wait for completion so the 
-game will continue.
+<i>GameMaker</i> offre anche la possibilità di avviare programmi esterni. 
+Ci sono due funzioni disponibili per fare questo: execute_program e shell_execute. 
+La funzione execute_program avvia un programma, possibilmente con 
+degli arguments. Si può aspettare che il programma finisca 
+la sua esecuzione (mettendo il gioco in pausa) oppure 
+far continuare il gioco. La funzione execute_shell invece apre un file. 
+Questo può essere un qualsiasi tipo di file, associato in qualche modo al 
+gioco, come ad esempio, un file html, un file word, ecc. 
+Oppure può essere un programma. Questa funzione non attende il 
+completamento dell’esecuzione del programma, quindi il gioco continuerà.
 
 <p>
 <blockquote>
   <tt><b>execute_program(prog,arg,wait)</b></tt> 
-    Executes program prog with arguments arg. wait indicates whether to wait for finishing.<br>
+    Esegue il programma "prog" con arguments "arg". Il parametro "wait" indica se fermare il gioco 
+    per far terminare prima l’esecuzione del programma.<br>
   <tt><b>execute_shell(prog,arg)</b></tt>
-     Executes the program (or file) in the shell.<br>
+     Esegue il programma (o file) nella shell.<br>
 </blockquote>
 
 <p>
-Both functions will not work if the player sets the secure mode 
-in the preferences. You can check this using the read-only variable:
+Entrambe le funzioni non funzionano se il giocatore imposta la modalità protetta nelle preferenze. 
+È possibile controllare questo utilizzando la variabile di sola lettura:
 
 <p>
 <blockquote>
   <tt><b>secure_mode*</b></tt> 
-    Whether the game is running in secure mode.<br>
+    Se il gioco è in esecuzione in modalità protetta.<br>
 </blockquote>
 
 <!--END-->
@@ -47,6 +50,9 @@ shell
 starting programs
 programs
 secure mode
+
+avviare programmi
+modalità protetta
 
 execute_program()
 execute_shell()
