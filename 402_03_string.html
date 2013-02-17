@@ -10,81 +10,86 @@
 
 <h3>Funzioni che lavorano sulle stringhe</h3>
 
-The following functions deal with characters and string.
+Le seguenti funzioni lavorano con caratteri e stringhe.
 
 <p>
 <blockquote>
-  <tt><b>chr(val)</b></tt> Returns a string containing the character with code val for printing/displaying based on the current drawing font's character set codepage.<br>
-    If no font is set, it will use default code page for the machine.<br>
-    <b>NOTE:</b> This will change from machine to machine. If you need a specific codepage, then be sure to SET a font yourself at the start of your game..<br>
-	If the font is a sprite font, no translation will be done.<br><br>
+  <tt><b>chr(val)</b></tt>
+    Restituisce una stringa che contiene il carattere con codice val per stamparlo/mostrarlo,
+        basandosi sul font corrente.<br>
+        Se non è impostato nessun font, verrà usato il font di default del dispositivo.<br>
+    <b>NOTA:</b> Questo cambia da un dispositivo all'altro. Se ti serve un carattere particolare,
+        assicurati di IMPOSTARE un font all'iniziondel gioco.<br>
+        Se il font è uno sprite font, non verrà fatta alcuna traduzione.<br><br>
   <tt><b>ansi_char(val)</b></tt>
-    Returns a string containing the character with raw BYTE value set.<br>
-    NOTE: This will not, and should not be display, but it will save correctly to disk for use in encoding.<br><br>
+    Restituisce una stringa contenente il carattere con il puro valore BYTE.<br>
+    NOTA: Questo non verrà, né dovrebbe essere mostrato, ma verrà salvato correttamente
+        su disco per la codifica.<br><br>
   <tt><b>ord(str)</b></tt>
-    Returns the asci code of the first character in str.<br>
+    Restituisce il codice ascii del primo carattere in str.<br>
   <tt><b>real(str)</b></tt>
-    Turns str into a real number. str can contain a minus sign, a decimal 
-	dot and even an exponential part.<br>
+    Converte str in un numero reale. str può contenere un segno meno, un
+        punto decimale e anche una parte esponenziale.<br>
   <tt><b>string(val)</b></tt>
-    Turns the real value into a string using a standard format (no decimal 
-	places when it is an integer, and two decimal places otherwise).<br>
+    Converte il valore reale in una stringa usando il formato standard (nessuna
+        cifra decimale se è un intero, due cifre decimali negli altri casi).<br>
   <tt><b>string_format(val,tot,dec)</b></tt>
-    Turns val into a string using your own format: tot indicates the total 
-	number of places and dec indicates the number of decimal places.<br>
+    Converte val in una stringa usando il tuo formato: tot indica il numero
+        totale delle cifre e dec indica il numero di cifre decimali.<br>
 
   <tt><b>string_length(str)</b></tt>
-    Returns the number of characters in the string.<br>
+    Restituisce il numero di caratteri nella stringa.<br>
 
   <tt><b>string_byte_length(str)</b></tt>
-    Returns the number of BYTES in the string. As strings are now held as UTF8, this means the length of the string is no longer it's BYTE size.<br>
+    Restituisce il numero di BYTE nella stringa. Dal momento che le stringhe sono tenute come UTF8,
+        significa che la lunghezza della stringa non è più uguale alla sua grandezza un BYTE.<br>
 
   <tt><b>string_pos(substr,str)</b></tt>
-    Returns the position of substr in str (0=no occurrence).<br>
+    Restituisce la posizione di substr in str (0=nessuna apparizione).<br>
   <tt><b>string_copy(str,index,count)</b></tt>
-    Returns a substring of str, starting at position index, and of length count.<br>
+    Restituisce un pezzo di str, contato a partire dalla posizione index, e di lunghezza count.<br>
   <tt><b>string_char_at(str,index)</b></tt>
-    Returns the character in str at position index.<br>
+    Restituisce il carattere in str alla posizione index.<br>
 
   <tt><b>string_byte_at(str,index)</b></tt>
-    Returns the raw byte value as a REAL at BYTE position <i>index.</i><br>
+    Restituisce il puro valore byte come un REALE alla posizione BYTE <i>index.</i><br>
 
   <tt><b>string_delete(str,index,count)</b></tt>
-    Returns a copy of str with the part removed that starts at position 
-	index and has length count.<br>
+    Restituisce una copia di str a cui è stata rimossa la parte che comincia alla posizione
+        index e ha lunghezza count.<br>
   <tt><b>string_insert(substr,str,index)</b></tt>
-    Returns a copy of str with substr added at position index.<br>
+    Restituisce una copia di str che ha substr aggiunta alla posizione index.<br>
   <tt><b>string_replace(str,substr,newstr)</b></tt>
-    Returns a copy of str with the first occurrence of substr replaced by newstr.<br>
+    Restituisce una copia di str che ha la prima apparizione di substr sostituita con newstr.<br>
   <tt><b>string_replace_all(str,substr,newstr)</b></tt>
-     Returns a copy of str with all occurrences of substr replaced by newstr.<br>
+     Restituisce una copia di str che ha tutte le apparizioni di substr sostituite con newstr.<br>
   <tt><b>string_count(substr,str)</b></tt>
-    Returns the number of occurrences of substr in str.<br>
+    Restituisce il numero di apparizioni di substr in str.<br>
   <tt><b>string_lower(str)</b></tt>
-    Returns a lowercase copy of str.<br>
+    Restituisce una copia con le lettere minuscole di str.<br>
   <tt><b>string_upper(str)</b></tt>
-    Returns an uppercase copy of str.<br>
+    Restituisce una copia con le lettere maiuscole di str.<br>
   <tt><b>string_repeat(str,count)</b></tt>
-    Returns a string consisting of count copies of str.<br>
+    Restituisce una stringa che consiste in count ripetizioni di str.<br>
   <tt><b>string_letters(str)</b></tt>
-    Returns a string that only contains the letters in str.<br>
+    Restituisce una stringa che contiene solo le lettere presenti in str.<br>
   <tt><b>string_digits(str)</b></tt>
-    Returns a string that only contains the digits in str.<br>
+    Restituisce una stringa che contiene solo la cifre presenti in str.<br>
   <tt><b>string_lettersdigits(str)</b></tt>
-    Returns a string that contains the letters and digits in str.<br>
+    Restituisce una stringa che contiene solo le lettere e le cifre presenti in str.<br>
 </blockquote>
 
 <p>
-The following functions deal with the clipboard for storing text.
+Le seguenti funzioni lavorano con gli appunti per conservare il testo.
 
 <p>
 <blockquote>
   <tt><b>clipboard_has_text()</b></tt>
-    Returns whether there is any text on the clipboard.<br>
+    Restituisce se c'è del testo negli appunti.<br>
   <tt><b>clipboard_get_text()</b></tt>
-    Returns the current text on the clipboard.<br>
+    Restituisce il testo presente negli appunti.<br>
   <tt><b>clipboard_set_text(str)</b></tt>
-    Sets the string str on the clipboard.<br>
+    Mette la stringa str negli appunti.<br>
 </blockquote>
 
 
@@ -95,6 +100,9 @@ The following functions deal with the clipboard for storing text.
 <!-- KEYWORDS
 string functions
 clipboard functions
+
+funzioni sulle stringhe
+funzioni sugli appunti
 
 real()
 string()
