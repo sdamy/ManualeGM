@@ -2,40 +2,46 @@
 
 <html>
 <head>
-<title>Error options</title>
+<title>Opzioni sugli Errori</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Error options</h3>
+<h3>Opzioni sugli Errori</h3>
 
-Here you can set a number of options that relate to the way errors are reported.
+<h3>Opzioni sugli Errori</h3>
+
+Qui puoi impostare delle opzioni relative al modo in cui vengono riportati gli errori.
 
 <p>
 <b>Display error messages</b><br>
-When checked, error messages are shown to the player. In the final 
-version of the game you might want to uncheck this option.
+Significa "Mostra i messaggi d'errore".
+Quando è attivata, i messaggi d'errore vengono mostrati. Nella versione
+finale del gioco vorrai disattivare questa opzione.
 
 <p>
 <b>Write error messages to file <tt>game_errors.log</tt></b><br>
-When checked all error messages are written to a file called 
-<tt>game_errors.log</tt> in the game folder.
+Significa "Registra i messaggi d'errore nel file <tt>game_errors.log</tt>".
+Quando è attivata, tutti i messaggi d'errore vengono scritti in un file
+chiamato <tt>game_errors.log</tt> nella cartella del gioco.
 
 <p>
 <b>Abort on all error messages</b><br>
-Normally, certain errors are fatal while others can be ignored. 
-When checking this option all errors are considered fatal and lead 
-to aborting the game. In the final version of the game you distribute 
-you might want to check this option.
+Significa "Termina con tutti i messaggi d'errore".
+Normalmente, alcuni errori sono fatali mentre altri possono essere ignorati.
+Attivando questa opzione tutti gli errori verranno consideratio fatali e
+termineranno il gioco. Nella versione finale del tuo gioco, quando lo
+pubblicherai, vorrai attivare questa opzione.
 
 <p>
 <b>Treat uninitialized variables as 0</b><br>
-One common error is to use a variable before a value is assigned to it. 
-Sometimes this is difficult to avoid. When checking this option such 
-uninitialized variables no longer report an error but are treated as 
-value 0. Be careful though. It might mean that you don't spot typing 
-mistakes anymore.
+Significa "Considera le variabili non inizializzate come 0".
+Un errore comune è usare una variabile prima che le venga assegnato
+un valore. A volte, tuttavia, ciò è difficile da evitare. Attivando
+questa opzione tali variabili non inizializzate non riporteranno
+più un errore ma verranno considerate come 0. Fa' attenzione, però.
+Significa che potresti non accorgerti dei tuoi errori di battitura.
 
 <!--END-->
 </body>
@@ -46,5 +52,10 @@ error messages
 error options
 uninitialized variables
 error log
+game_error.log
+messaggi d'errore
+opzioni sugli errori
+variabili non inizializzate
+diario degli errori
 game_error.log
 --> 
