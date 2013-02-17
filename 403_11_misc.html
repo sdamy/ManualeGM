@@ -10,81 +10,81 @@
 
 <h3>Svariate altre Variabili e Funzioni</h3>
 
-Here are some variables and functions that deal with errors.
+Ecco alcune variabili e funzioni che lavorano con gli errori.
 
 <p>
 <blockquote>
   <tt><b>error_occurred</b></tt>
-    Indicates whether an error has occurred.<br>
+    Indica se è avvenuto un errore.<br>
   <tt><b>error_last</b></tt>
-    String indicating the last error message.<br>
+    Una stringa che indica l'ultimo messaggio d'errore.<br>
   <tt><b>show_debug_message(str)</b></tt>
-    Shows the string in debug mode.<br>
+    Mostra la stringa nella debug mode.<br>
   <tt><b>debug_mode</b></tt>
-    This read-only variable indicates whether the game is running in debug mode.<br>
+    Questa variabile di sola lettura indica se il gioco sta venendo eseguito in debug mode.<br>
 </blockquote>
 
-The following variables can be used to make sure your code will work for the appropriate version and edition
-of <i>GameMaker</i>.
+Le seguenti variabili possono essere usate per assicurarti che il tuo codice funzioni per l'appropriata
+versione ed edizione di <i>GameMaker</i>.
 
 <p>
 <blockquote>
   <tt><b>gamemaker_pro</b></tt>
-    Indicates whether the game is created with the Standard Edition.<br>
+    Indica se il gioco è creato con la Standard Edition (altrimenti conosciuta come "Versione PRO").<br>
   <tt><b>gamemaker_registered</b></tt>
-    Same as <tt>gamemaker_pro</tt><br>
+    Come <tt>gamemaker_pro</tt><br>
   <tt><b>gamemaker_version</b></tt>
-    The version of <i>GameMaker</i>. This is an integer. For version 8.0 this can be
-	anything between 800 and 809. For version 8.1 this will be something between
-	810 and 819, etc. So never check a particular version but better check for a range.
-	This variable is not available in version before 800.<br>
+    La versione di <i>GameMaker</i>. È un intero. Per la versione 8.0 potrebbe essere
+        un valore tra 800 e 809. Per la versione 8.1 sarà qualcosa tra 810 e 819, ecc.
+        Quindi non cercare una particolare versione ma piuttosto un raggio.
+        Questa variabile non è disopnibile nelle versioni precedenti alla 800.<br>
 </blockquote>
 
 <p>
-The following functions exist that allow you to check whether certain variables 
-exist and with which you can set variables and get their values. In all 
-these functions the variable name is passed as a string!
+Esistono le seguenti funzioni per controllare se determinate variabili esistono
+e con cui puoi impostare le variabili e ottenere i loro valori. In tutte
+queste funzioni il nome della variabile è passato come una stringa!
 
 <p>
 <blockquote>
   <tt><b>variable_global_exists(name)</b></tt>
-    Returns whether a global variable with the given name (a string) exists.<br>
+    Restituisce se esiste una variabile globale col nome dato (una stringa).<br>
   <tt><b>variable_local_exists(name)</b></tt>
-    Returns whether a local variable with the given name (a string) exists for the current instance.<br>
+    Restituisce se nell'istanza corrente esiste una variabile locale col nome dato (una stringa).<br>
   <tt><b>variable_global_get(name)</b></tt>
-    Returns the value of the global variable with the given name (a string).<br>
+    Restituisce il valore della variabile globale col nome dato (una stringa).<br>
   <tt><b>variable_global_array_get(name,ind)</b></tt>
-    Returns the value of index ind of the global array variable with the given name (a string).<br>
+    Restituisce il valore di indice ind di un variabile array globale col nome dato (una stringa).<br>
   <tt><b>variable_global_array2_get(name,ind1,ind2)</b></tt>
-    Returns the value of index ind1,ind2 of the global 2-dimensional array variable 
-	with the given name (a string).<br>
+    Restituisce il valore di indice ind1,ind2 della variabile array bidimensionale globale
+        col nome dato (una stringa).<br>
   <tt><b>variable_local_get(name)</b></tt>
-    Returns the value of the local variable with the given name (a string).<br>
+    Restituisce il valore della variabile locale col nome dato (una stringa).<br>
   <tt><b>variable_local_array_get(name,ind)</b></tt>
-    Returns the value of index ind of the local array variable with the given name (a string).<br>
+    Restituisce il valore di indice ind della variabile array locale col nome dato (una stringa).<br>
   <tt><b>variable_local_array2_get(name,ind1,ind2)</b></tt>
-    Returns the value of index ind1,ind2 of the local 2-dimensional array 
-	variable with the given name (a string).<br>
+    Restituisce il valore di indice ind1,ind2 della variabile array bidimensionale locale
+        col nome dato (una stringa).<br>
   <tt><b>variable_global_set(name,value)</b></tt>
-    Sets the global variable with the given name (a string) to the given value.<br>
+    Imposta la variabile globale col nome dato (una stringa) al valore indicato.<br>
   <tt><b>variable_global_array_set(name,ind,value)</b></tt>
-    Sets the index ind in the global array variable with the given name (a string) 
-	to the given value.<br>
+    Imposta l'indice ind nella variabile array globale col nome dato (una stringa)
+        al valore indicato.<br>
   <tt><b>variable_global_array2_set(name,ind1,ind2,value)</b></tt>
-    Sets the index ind1,ind2 in the global 2-dimensional array variable with the 
-	given name (a string) to the given value.<br>
+    Imposta l'indice ind1,ind2 nella variabile array bidimensionale globale col
+        nome dato (una stringa) al valore indicato.<br>
   <tt><b>variable_local_set(name,value)</b></tt>
-    Sets the local variable with the given name (a string) to the given value.<br>
+    Imposta la variabile locale col nome dato (una stringa) al valore indicato.<br>
   <tt><b>variable_local_array_set(name,ind,value)</b></tt>
-    Sets the index ind in the local array variable with the given name 
-	(a string) to the given value.<br>
+    Imposta l'indice ind nella variabile array locale col nome dato (una stringa)
+        al valore indicato.<br>
   <tt><b>variable_local_array2_set(name,ind1,ind2,value)</b></tt>
-    Sets the index ind1,ind2 in the local 2-dimensional array variable with 
-	the given name (a string) to the given value.<br>
+    Imposta l'indice ind1,ind2 nella variabile array bidimensionale locale col
+        nome dato (una stringa) al valore indicato.<br>
 </blockquote>
 
 <p>
-For example, you can write:
+Per esempio, puoi scrivere:
 
 <p>
 <blockquote>
@@ -99,38 +99,40 @@ For example, you can write:
 </blockquote>
 
 <p>
-You can also use these functions to pass variables to a script in a sort of by-reference 
-way, by passing their names as strings and using the functions to change them.
+puoi anche usare queste funzioni per passare le variabili a uno script in una sorta di
+via per riferimento, passando i loro nomi come stringhe e usando le funzioni per cambiarle.
 
 <p>
-You can change the program priority using the following function:
+Puoi cambiare la priorità del programma usando la seguente funzione:
 
 <p>
 <blockquote>
   <tt><b>set_program_priority(priority)</b></tt>
-    Sets the priority for the program. You can indicate a value between -3 and +3. 
-	A value of -3 means that the program will only run if no other process on the 
-	computer requires processing time, or stated differently, when all other 
-	processes are idle. Values of -2 and -1 are below normal, so other processes 
-	will get priority. 0 is the normal value. +1 and +2 give a higher priority, 
-	resulting possibly in higher speed and smoother game flow. But other 
-	processes will get much less processing time. +3 indicates real-time mode. 
-	In real-time mode basically all time is allotted to the game. This can 
-	lead to serious problems with any other applications running on the computer. 
-	Also keyboard events and e.g. the pressing of the close box might no longer 
-	be recorded by Windows. So only use this if you want all the processor time. 
-	Also better check carefully before using it and save the game before running.<br>
+    Imposta la priorità del programma. Puoi indicare un valore tra -3 e +3.
+        Il valore -3 significa che il programma verrà eseguito solo se nessun altro
+        processo richiede il processore, o in altre parole, quando tutti gli altri
+        processi sono fermi. I valori -2 e -1 sono sotto la normalità, quindi altri
+        processi avranno la priorità. 0 è il valore normale. +1 e +2 danno una
+        priorità più alta, che si traduce in una maggiore velocità e un migliore
+        flusso del gioco. Ma gli altri processi avranno molto meno processore.
+        +3 indica la modalità in tempo reale. In questa modalità praticamente
+        tutto il processore è dedicato al gioco.  Questo può portare a seri problemi
+        con ogni altra applicazione in esecuzione sul computer. anche gli eventi
+        tastiera e cose come la pressione del tasto "chiudi" potrebbero non venire
+        più rilevate da Windows. Quindi usala solo se ti serve tutto il processore.
+        Dovresti anche fare attenzione prima di usarla e salvare il gioco prima di
+        lanciarlo.<br>
 </blockquote>
 
 <p>
-Finally, you can use the following function to set the title of the application:
+Infine, puoi usare la seguente funzione per impostare il titolo dell'applicazione:
 </p>
 
 <p>
 <blockquote>
   <tt><b>set_application_title(title)</b></tt>
-    Sets the title of the application to the given string. The title is for example shown
-	in the task bar.<br>
+    Imposta il titolo dell'applicazione alla stringa data. Il titolo viene mostrato, per
+        esempio, nella barra delle applicazioni.<br>
 </blockquote>
 
 
@@ -144,6 +146,11 @@ program priority
 priority
 application title
 taskbar
+
+priorità del programma
+priorità
+titolo dell'applicazione
+barra delle applicazioni
 
 error_occurred
 error_last
