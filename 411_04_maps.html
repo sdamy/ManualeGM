@@ -8,62 +8,68 @@
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Maps</h3>
+<h3>Mappe</h3>
 
-In quite a few situations you need to store pairs consisting of a key 
-and a value. For example, a character can have a number of different 
-items and for each item it has a particular number of those. In this 
-case the item is the key and the number is the value. Maps maintain 
-such pairs, sorted by key. You can add pairs to the map and search 
-for the value corresponding to certain keys. Because the keys are 
-sorted you can also find previous and next keys. Sometimes it is also 
-useful to use a map to just store keys without a corresponding value. 
-In that case you can simply use a value of 0. The following functions exist:
+In un bel po’ di situazioni è necessario memorizzare delle coppie, 
+composte da una chiave e un valore. Per esempio, il personaggio di un 
+gioco può avere una certa quantità di elementi diversi e per ogni 
+singolo elemento può avere un certo numero dello stesso, come in un 
+gioco RPG dove si possono avere 10 pozioni di salute, 
+5 pozioni di mana e 100 monete d'oro. In questo caso l'elemento è 
+la chiave e il numero è il valore. Le mappe mantengono tali coppie, 
+in ordine di chiave. È possibile aggiungere delle coppie alla mappa 
+e fare ricerche per trovare il valore corrispondente ad una certa chiave. 
+Poiché le chiavi sono ordinate si possono anche trovare chiavi precedenti 
+e successive. A volte è utile anche utilizzare una mappa per memorizzare 
+solo chiavi senza un valore corrispondente. In questo caso si può 
+semplicemente utilizzare un valore pari a 0. Le seguenti funzioni sono disponibili:
 
 <p>
 <blockquote>
   <tt><b>ds_map_create()</b></tt> 
-    Creates a new map. The function returns an integer as an id that must be 
-	used in all other functions to access the particular map.<br>
+    Crea una nuova mappa. La funzione restituisce un intero come un id che deve essere utilizzato 
+    in tutte le altre funzioni per accedere a particolari mappe.<br>
   <tt><b>ds_map_destroy(id)</b></tt> 
-    Destroys the map with the given id, freeing the memory used. Don't forget 
-	to call this function when you are ready with the structure.<br>
+    Distrugge la mappa dato il suo id, liberando la memoria utilizzata. Non dimenticate 
+    di chiamare questa funzione quando si è pronti con la struttura.<br>
   <tt><b>ds_map_clear(id)</b></tt> 
-    Clears the map with the given id, removing all data from it 
-	but not destroying it.<br>
+    Cancella la mappa dato il suo id, rimuovendo tutti i dati da essa, ma senza distruggerla.<br>
   <tt><b>ds_map_copy(id,source)</b></tt> 
-    Copies the map source into the map with the given id.<br>
+    Copia il contenuto della mappa in un’altra mappa dato il suo id.<br>
   <tt><b>ds_map_size(id)</b></tt> 
-    Returns the number of key-value pairs stored in the map.<br>
+    Restituisce il numero delle coppie chiave-valore memorizzate nella mappa.<br>
   <tt><b>ds_map_empty(id)</b></tt> 
-    Returns whether the map is empty. This is the same as testing whether the size is 0.<br>
+    Restituisce un valore se la mappa è vuota. È come testare se la dimensione è 0.<br>
   <tt><b>ds_map_add(id,key,val)</b></tt> 
-    Adds the key-value pair to the map.<br>
+    Aggiunge una coppia chiave-valore alla mappa.<br>
   <tt><b>ds_map_replace(id,key,val)</b></tt> 
-    Replaces the value corresponding with the key with a new value.<br>
+    Sostituisce il valore corrispondente alla chiave (key) con un nuovo valore (val).<br>
   <tt><b>ds_map_delete(id,key)</b></tt> 
-    Deletes the key and the corresponding value from the map. (If there 
-	are multiple entries with the same key, only one is removed.)<br>
+    Cancella la chiave e il valore corrispondente 
+    dalla mappa. (Se ci sono più elementi con la stessa chiave, uno solo sarà rimosso).<br>
   <tt><b>ds_map_exists(id,key)</b></tt> 
-    Returns whether the key exists in the map.<br>
+    Restituisce un valore se la chiave esiste nella mappa.<br>
   <tt><b>ds_map_find_value(id,key)</b></tt> 
-    Returns the value corresponding to the key.<br>
+    Restituisce il valore corrispondente alla chiave.<br>
   <tt><b>ds_map_find_previous(id,key)</b></tt> 
-    Returns the largest key in the map smaller than the indicated key. (Note 
-	that the key is returned, not the value. You can use the previous 
-	routine to find the value.)<br>
+    Restituisce la chiave più grande nella mappa che è più piccola della chiave indicata 
+    come parametro. (Si noti che viene restituita la chiave, non il valore. 
+    È possibile utilizzare la procedura precedente per trovare il valore).<br>
   <tt><b>ds_map_find_next(id,key)</b></tt> 
-    Returns the smallest key in the map larger than the indicated key.<br>
+    Restituisce la chiave più piccola nella mappa che è più 
+    grande della chiave indicata come parametro.<br>
   <tt><b>ds_map_find_first(id)</b></tt> 
-    Returns the smallest key in the map.<br>
+    Restituisce la chiave più piccola nella mappa.<br>
   <tt><b>ds_map_find_last(id)</b></tt> 
-    Returns the largest key in the map.<br>
+    Restituisce la chiave più grande nella mappa.<br>
   <tt><b>ds_map_write(id)</b></tt> 
-    Turns the data structure into a string and returns this string. The string can then
-	be used to e.g. save it to a file. This provides an easy mechanism for saving data
-	structures.<br>
+    Converte la struttura-dati (data structure) in una stringa e restituisce 
+    questa stringa. La stringa può quindi essere utilizzata, per esempio, 
+    per essere salvata in un file. Questa funzione fornisce un semplice 
+    meccanismo per salvare strutture dati.<br>
   <tt><b>ds_map_read(id,str)</b></tt> 
-    Reads the data structure from the given string (as created by the previous call).<br>
+    Legge la struttura dati dalla stringa passata come parametro 
+    (che può essere creata usando la chiamata precedente).<br>
 </blockquote>
 
 <!--END-->
