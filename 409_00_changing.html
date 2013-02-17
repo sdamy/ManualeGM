@@ -2,62 +2,62 @@
 
 <html>
 <head>
-<title>Changing Resources</title>
+<title>Cambiare le Risorse</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h1>Changing resources</h1>
+<h1>Cambiare le risorse</h1>
 
-<i><b>This functionality is only available in the Standard Edition of GameMaker.</b></i>
+<i><b>Questa funzionalit&agrave; &egrave; disponibile solo nella Standard Edition di Game Maker.</b></i>
 
 <P>
-It is possible to create new resources during the game. Also you can change existing 
-resources. This chapter describes the possibilities. Be warned though. <b>Changing 
-resources easily leads to serious errors in your games!!!</b> You must follow the 
-following rules when changing resources:
+&Egrave; possibile creare nuove risorse durante il gioco. Puoi anche cambiare.
+le risorse esistenti. Questo capitolo descrive le possibilit&agrave;. Fai attenzione. <b>Cambiare 
+le risorse pu&ograve; facilmente portare a seri errori nei tuoi giochi!!!</b>. Devi seguire
+le regole seguenti quando cambi le risorse:
 
 <ul>
-  <li>Don't change resources that are being used. This will lead to errors! For example, 
-	don't change a sprite that is being used by an instance.</li>
-  <li>When you save the game during playing, added and changed resources are NOT stored 
-	with the save game. So if you load the saved game later, these might not be there anymore. 
-	In general, when you manipulate resources you can no longer use the built-in system for 
-	loading and saving games.</li>
-  <li>When you restart the game during playing, the changed resources are NOT restored to 
-	their original shape. In general, when you manipulate resources you can no longer use the 
-	action or function to restart the game.</li>
-  <li>Resource manipulation can be slow. For example, changing sprites or backgrounds is 
-	relatively slow. So don't use it during the game play.</li>
-  <li>Creating resources during game play (in particular sprites and background) easily 
-	uses huge amount of memory. So be extremely careful with this. For example, if you have a 
-	32 frame 128x128 animated sprite and you decide to create 36 rotated copies of it you will 
-	use up 36x32x128x128x4 = 72 MB of memory!</li>
-  <li>Make sure you delete resources you no longer need. Otherwise the system soon runs 
-	out of memory.</li>
+  <li>Non cambiare le risorse in uso. Questo porter&agrave; ad errori! Per esempio, 
+	non cambiare uno sprite in uso da un'istanza.</li>
+  <li>Quando salvi il gioco mentre &egrave; in esecuzione, le risorse aggiunte e cambiate
+	non vengono memorizzate con il gioco salvato. Quindi se salvi il gioco in seguito, 
+	queste potrebbero non esserci pi&ugrave;. In generale, quando manipoli le risorse non puoi più usare
+	il sistema built-in per caricare o salvare la partita.</li>
+  <li>Quando riavvii il gioco mentre &egrave; in esecuzione, le risorse cambiate non verranno memorizzate
+	nella loro forma originale. In generale, quando manipoli le risorse non puoi pi&ugrave; usare
+	le funzioni o le azioni per riavviare il gioco.</li>
+  <li>La manipolazione delle risorse pu&ograve; essere lenta. Per esempio, cambiare gli sprites o
+	i background &egrave; relativamente lento. Dunque non usarli durante la partita.</li>
+  <li>Creare risorse durante la partita (in particolare sprites e background) pu&ograve; facilmente
+	usare una grande quantit&agrave; di memoria. Dunque sii estremamente attento con questo. Per esempio, 
+	se hai uno sprite animato 128x128 con 32 frames e decidi di creare 36 copie ruotate di esso
+	userai 36x32x128x128x4 = 72 MB di memoria!</li>
+  <li>Assicurati di eliminare le risorse di cui non hai pi&ugrave; bisogno. Altrimenti il sistema
+	consumer&agrave; presto la memoria.</li>
 </ul>
 
-In general, you should not change any resources during game play. Better create and change 
-the resources at the beginning of the game or maybe at the beginning of a room.
+In generale, non dovresti cambiare nessuna risorsa mentre si gioca. &Egrave; meglio creare e cambiare
+le risorse all'inizio del gioco o della room.
 
 <!--HELPONLY-->
 
  <P>
-Information on changing resources can be found in the following pages:
+&Egrave; possibile trovare le informazioni sul cambiamento delle risorse in queste pagine:
 
 <P>
 <p>
 <blockquote>
     <a href="409_01_sprites.html">Sprites</a><br>
-    <a href="409_02_sounds.html">Sounds</a><br>
+    <a href="409_02_sounds.html">Suoni</a><br>
     <a href="409_03_backgrounds.html">Backgrounds</a><br>
     <a href="409_04_fonts.html">Fonts</a><br>
-    <a href="409_05_paths.html">Paths</a><br>
+    <a href="409_05_paths.html">Percorsi</a><br>
     <a href="409_06_scripts.html">Scripts</a><br>
     <a href="409_07_timelines.html">Time lines</a><br>
-    <a href="409_08_objects.html">Objects</a><br>
-    <a href="409_09_rooms.html">Rooms</a><br>
+    <a href="409_08_objects.html">Oggetti</a><br>
+    <a href="409_09_rooms.html">Stanze</a><br>
 </blockquote>
 
 <p>
@@ -77,4 +77,10 @@ deleting resources
 creating resources
 setting resource properties
 
+risorse
+cambiare risorse
+aggiungere risorse
+cancellare risorse
+creare risorse
+impostare risorse
 --> 
