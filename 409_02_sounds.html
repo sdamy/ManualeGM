@@ -2,32 +2,33 @@
 
 <html>
 <head>
-<title>Sounds</title>
+<title>Suoni</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Sounds</h3>
+<h3>Suoni</h3>
 
-The following routines can be used to create new sounds and to remove them.
+Le funzioni seguenti possono essere utilizzate per creare dei suoni e per rimuoverli.
 
 <p>
 <blockquote>
   <tt><b>sound_add(fname,kind,preload)</b></tt> 
-  	Adds a sound resource to the 
-	game. fname is the name of the sound file. kind indicates the kind of sound 
-	(0=normal, 1=background, 2=3d, 3=mmplayer) preload indicates whether the 
-	sound should immediately be stored in audio memory (true or false). The function returns the index 
-	of the new sound, which can be used to play the sound. (-1 if an error occurred, e.g. the 
-	file does not exist).<br>
+	Aggiunge una risorsa di tipo suono al gioco. fname è il nome del file che contiene
+	il suono. kind indica il tipo di suono (0=normal, 1=background, 2=3d, 3=mmplayer).
+	preload indica se il suono dev'essere memorizzato immediatamente nella memoria audio
+	(utilizzare true o false. La funziona restituisce l'indice del nuovo suono, che
+	pu&ograve; essere utilizzato per riprodurre il suono. (-1 se c'è stato un errore,
+	per esempio se il file non esiste. <br>
+	.
   <tt><b>sound_replace(index,fname,kind,preload)</b></tt> 
-  	Same as the 
-	previous function but this time a new sound is not created but the existing sound index is 
-	replaced, freeing the old sound. Returns whether correct.<br>
+	Lo stesso della funzione precedente ma con questa non viene creato un nuovo suono, 
+	ma viene sostituito l'indice del suono precedente, eliminandolo. Ritorna quando 
+	non ci sono stati errori.
   <tt><b>sound_delete(index)</b></tt> 
-  	Deletes the indicated sound, freeing all memory 
-	associated with it. It can no longer be restored.<br>
+	Cancella il suono indicato, cancellando tutta la memoria associata ad esso.
+	Non potr&agrave; essere ripristinato pi&ugrave;.</br>
 </blockquote>
 
 <p>
