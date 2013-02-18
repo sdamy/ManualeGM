@@ -9,15 +9,15 @@
 <!--START-->
 
 
-<h3>Simple Effects</h3>
+<h3>Semplici effetti</h3>
 
-The easiest way of creating particles is to use the effects mechanism.
-Effects are created using the particle system but you do not have to worry
-about all the details. You simply specify the type of effect, the position
-where it must be created, its size, and its color. That is all. 
+Il modo più semplice di creare particelle è quello di utilizzare il meccanismo degli effetti.
+Gli effetti vengono creati utilizzando sistemi di particelle, senza preoccuparsi 
+di tutti i dettagli. È sufficiente specificare il tipo di effetto, la posizione in cui deve 
+essere creato, le sue dimensioni, e il suo colore. Questo è tutto.
 
 <p>
-There are a number of different kinds of effects:
+Ci sono diversi tipi di effetti:
 
   <ul>
     <li><tt>ef_explosion</tt></li>
@@ -35,36 +35,35 @@ There are a number of different kinds of effects:
   </ul>
 
 <p>
-Some you want to create just once (like the explosion) and some you want to create in every step (like the
-smoke or the rain). Note that rain and snow are always created at the top of the room so the position
-is irrelevant in this case.
+Ci sono effetti che si desidera creare una sola volta (come l'esplosione) e altri che si 
+desidera, invece, creare in ogni momento del gioco (come il fumo o la pioggia). Si noti che 
+la pioggia e la neve sono sempre create nella parte superiore della stanza (room) e quindi 
+settare la posizione è irrilevante in questo caso.
 
 <p>
-Even though this might sound limited, they can actually be used to create great effects. For example
-by creating a smal puff of red smoke below a moving spaceship in each step, a tail of fire is created.
-The following two functions exist to create the effects:
+Anche se questo può sembrare limitato, si possono effettivamente creare grandi effetti. 
+Per esempio, con la creazione di un piccolo sbuffo di fumo rosso sotto una navicella spaziale in 
+movimento, ad ogni step, si crea una fantastica coda di fuoco. Ci sono le seguenti funzioni 
+per creare questo tipo di effetto:
 
 <p>
 <blockquote>
   <tt><b>effect_create_below(kind,x,y,size,color)</b></tt> 
-    Creates an effect of the given kind (see above) at the
-	indicated position. size give the size as follows: 0 = small,
-	1 = medium, 2 = large. color indicates the color to
-	be used. The effect is created below the instances, that is,
-	at a depth of 100000.<br>
+    Crea un effetto del tipo dato (vedi sopra), nella posizione indicata. 
+    size indica la dimensione: 0 = piccola, 1 = medio, 2 = grande. color indica il colore da utilizzare. 
+    L'effetto viene creato sotto gli oggetti, cioè, ad una profondità di 100000.<br>
   <tt><b>effect_create_above(kind,x,y,size,color)</b></tt> 
-    Similar to the previous function but this time the 
-	effect is created on top of the instances, that is,
-	at a depth of -100000.<br>
+    Simile alla funzione precedente ma questa volta viene creato l'effetto sopra gli 
+    oggetti, cioè, ad una profondità di -100000.<br>
 </blockquote>
 
 <p>
-If you want to remove all effects, call the following function:
+Se si desidera rimuovere tutti gli effetti, chiamare la seguente funzione:
 
 <p>
 <blockquote>
   <tt><b>effect_clear()</b></tt> 
-    Clears all effects.<br>
+    Cancella tutti gli effetti.<br>
 </blockquote>
 
 
@@ -76,6 +75,11 @@ If you want to remove all effects, call the following function:
 Effects
 Explosions
 Creating effects
+
+Effetti
+Esplosioni
+Creare effetti
+
 effect_create_below()
 effect_create_above()
 effect_clear()
