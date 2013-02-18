@@ -119,62 +119,69 @@ di rotazione antiorario, in gradi.
 </blockquote>
 
 
-<h3>Color and blending</h3>
+<h3>Colori e miscelazione</h3>
 
-Particles will have a color. There are different ways in which you can specify colors for
-a particle. The simplest way is to indicate a single color. You can also specify two or three
-colors between which the color of the particle is interpolated during its life time. For example,
-the particle can start white and become more and more black over its lifetime. Another possibility
-is that you indicate that the color of each particle must be different, picked from a range of colors.
-You can either give a range in red, green and blue, or a range in hue, saturation, and value.
+Le particelle avranno un colore. Ci sono diversi modi in cui è possibile specificare i colori 
+di una particella. Il modo più semplice è quello di indicare un unico colore. 
+È anche possibile specificare due o tre colori tra cui viene interpolato il colore 
+della particella durante il suo tempo di vita. Per esempio, la particella può iniziare 
+bianca e diventare più nera durante la sua vita. Un'altra possibilità è quella di 
+indicare che i colori di tutte le particelle siano diversi, scelti tra una gamma di 
+colori. È possibile definire un intervallo tra rossi, verdi e blu, o un intervallo 
+tra tonalità, saturazioni e valori.
 
 <p>
-Default the color is white. When you use a sprite with its own colors, this is normally what you
-want and no color needs to be specified. 
+Di default il colore è bianco. Quando si utilizza uno sprite con i propri colori, 
+nessun colore deve essere specificato.
 
 <p>
 <blockquote>
   <tt><b>part_type_color1(ind,color1)</b></tt> 
-    Indicates a single color to be used for the particle.<br>
+    Indica un singolo colore da utilizzare per la particella.<br>
   <tt><b>part_type_color2(ind,color1,color2)</b></tt> 
-    Specifies two colors between which the color is interpolated.<br>
+   Specifica due colori tra i quali il colore della particella sarà interpolato. 
+   Si passerà gradualmente dal color1 al color2.<br>
   <tt><b>part_type_color3(ind,color1,color2,color3)</b></tt> 
-    Similar but this time the color is interpolated between three colors that represent
-	the color at the start, half-way, and at the end.<br>
+    Simile alla precedente, ma questa volta il colore è interpolato tra tre colori che 
+    rappresentano il colore all'inizio, a metà strada, e alla fine.<br>
   <tt><b>part_type_color_mix(ind,color1,color2)</b></tt> 
-    With this function you indicate that the particle should get a color that is a random mixture
-	of the two indicated colors. This color will remain fixed over the lifetime of the particle.<br>
+    Con questa funzione si indica che la particella dovrebbe ottenere un colore che è una miscela casuale dei due 
+    colori indicati. Questo colore rimane fisso per tutta la durata della particella.<br>
   <tt><b>part_type_color_rgb(ind,rmin,rmax,gmin,gmax,bmin,bmax)</b></tt> 
-    Can be used to indicate that each particle must have a fixed color but choosen from a range.
-	You specify a range in the red, green, and blue component of the color (each between 0 and 255).<br>
+    Può essere usata per indicare che ogni particella deve avere un colore fisso, ma scelto 
+    tra un intervallo. È possibile specificare un intervallo tra le componenti rosse, verdi 
+    e blu del colore (ciascuna compreso tra 0 e 255).<br>
   <tt><b>part_type_color_hsv(ind,hmin,hmax,smin,smax,vmin,vmax)</b></tt> 
-    Can be used to indicate that each particle must have a fixed color but choosen from a range.
-	You specify a range in the hue saturation and value component of the color (each between 0 and 255).<br>
+   Può essere usata per indicare che ogni particella deve avere un colore fisso, ma scelto tra un intervallo. 
+   È possibile specificare un intervallo tra le componenti di saturazione, tonalità e valore del 
+   colore (ciascuna compreso tra 0 e 255).<br>
 </blockquote>
 	
 <p>
-Besides the color you can also give an alpha transparency value. The built-in particle shapes already
-have some alpha transparency but you can use these settings to e.g. make the particle vanish over its
-life time.
+Oltre al colore si può anche dare un valore di trasparenza. Le particelle di forma precostruita hanno già una 
+certa trasparenza, ma è possibile utilizzare queste funzioni, ad esempio, per far svanire una particella che 
+ha terminato il suo tempo di vita.
 
 <p>
 <blockquote>
   <tt><b>part_type_alpha1(ind,alpha1)</b></tt> 
-    Sets a single alpha transparency parameter (0-1) for the particle type.<br>
+   Imposta un unico parametro di trasparenza (0-1) per il tipo di particella.<br>
   <tt><b>part_type_alpha2(ind,alpha1,alpha2)</b></tt> 
-    Similar but this time a start and end value are given and the alpha value is interpolated between them.<br>
+    Simile, ma con un valore iniziale e finale di trasparenza che daranno alla 
+    particella un valore di trasparenza interpolato.<br>
   <tt><b>part_type_alpha3(ind,alpha1,alpha2,alpha3)</b></tt> 
-    This time three values are given between which the alpha transparency is interpolated.<br>
+    Questa volta sono riportati tre valori tra i quali la trasparenza viene interpolato.<br>
 </blockquote>
 	
 <p>
-Normally particles are blended with the background in the same way as sprites. But it is also possible
-to use additive blending. This gives in particular a great effect for explosion. 
+Normalmente le particelle si fondono con lo sfondo nello stesso modo degli sprite. 
+Ma è anche possibile utilizzare altre modalità di fusione. 
+Ciò permette di realizzare splendidi effetti di esplosione. 
 
 <p>
 <blockquote>
   <tt><b>part_type_blend(ind,additive)</b></tt> 
-    Sets whether to use additive blending (1) or normal blending (0) for the particle type.<br>
+    Consente di scegliere se usare una modalità di fusione aggiuntiva (1) oppure no (0) per un tipo di particella.<br>
 </blockquote>
 
 
