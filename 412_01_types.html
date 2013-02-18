@@ -11,36 +11,36 @@
 
 <h3>Tipi di particelle</h3>
 
-A particle type describes the shape, color, motion, etc. of a particular kind of particles. 
-You need to define a particle type only once in the game. After this it can be used in any
-particle system in the game. Particle types have a large number of parameters that can be used
-to change all aspects of it. Setting these right you can create almost any effect you like.
-We will discuss the settings below.
+Un tipo di particella descrive la forma, colore, movimento, ecc. di un particolare genere di particella.
+È necessario definire un tipo di particella solo una volta nel gioco. Dopo aver fatto questo lo 
+si può usare in qualunque sistema particellare nel gioco. I tipi di particelle hanno un gran numero 
+di parametri che possono essere usati per modificare tutti gli aspetti. Con il settaggio di questi è 
+possibile creare praticamente qualsiasi effetto desiderato.
 
 <p>
-A number of routines are available to create new particle types and destroy them again:
+Un certo numero di procedure sono disponibili per creare o distruggere nuovi tipi di particelle:
 
 <p>
 <blockquote>
   <tt><b>part_type_create()</b></tt> 
-    Creates a new particle type. It returns the index of the type. 
-	This index must be used in all calls below to set the properties of the particle type.
-	So you will often store it in a global variable.<br>
+    Crea un nuovo tipo di particella. Restituisce l'indice del tipo. 
+    Questo indice deve essere usato in tutte le chiamate sottostanti per 
+    impostare le proprietà del tipo di particella. Solitamente lo si salva in una variabile globale.<br>
   <tt><b>part_type_destroy(ind)</b></tt> 
-    Destroys particle type ind. Call this if you don't need it anymore to save space.<br>
+    Distrugge il tipo di particella ind. Usa questa funzione se il tipo non serve più per risparmiare spazio.<br>
   <tt><b>part_type_exists(ind)</b></tt> 
-    Returns whether the indicated particle type exists.<br>
+    Restituisce un valore se il tipo di particella indicato esiste.<br>
   <tt><b>part_type_clear(ind)</b></tt> 
-    Clears the particle type ind to its default settings.<br>
+    Cancella il tipo di particella ind e lo riporta alle impostazioni predefinite.<br>
 </blockquote>
 
 
-<h3>The shape of a particle</h3>
+<h3>La forma di una particella</h3>
 
-A particle has a shape. This shape is indicated by a sprite. You can use any sprite you like
-for your particles but there are 15 built-in sprites. These are all 64x64 in size and have
-alpha values set such that they nicely blend with the background. They are
-indicate by the following constants:
+Una particella ha una forma. Questa forma è indicata da uno sprite. È possibile utilizzare qualsiasi 
+sprite che si vuole per le particelle, ma ci sono 15 sprite già precostruti. Questi sono tutti di 
+dimensioni 64x64 e hanno valori di trasparenza preimpostati in modo che ben si fondono con lo sfondo. 
+Essi sono indicati dalle seguenti costanti:
 
   <ul>
     <li><tt>pt_shape_pixel</tt></li>
@@ -60,62 +60,62 @@ indicate by the following constants:
   </ul>
 
 <p>
-You set the shape using the following function:
+È possibile impostare la forma con la seguente funzione:
 
 <p>
 <blockquote>
   <tt><b>part_type_shape(ind,shape)</b></tt> 
-    Sets the shape of the particle type to any of the constants above (default is pt_shape_pixel).<br>
+    Imposta la forma di un tipo di particella ad una delle precedenti costanti (di default è pt_shape_pixel).<br>
 </blockquote>
 
 <p>
-You can also use your own sprite for the particle. If the sprite has multiple subimages you can
-indicate what should be done with them. You can pick a random one, animate the sprite, start at
-the beginning of the animation or at a random place, etc. You use the following function for this.
+È inoltre possibile utilizzare un vostro sprite per la particella. Se lo sprite ha più sotto-immagini, è 
+possibile indicare la sotto-immagine che si vuole usare. È anche possibile sceglierne una a caso, animare 
+lo sprite, cominciare dall'inizio dell'animazione o in un posto a caso, ecc.
+È possibile utilizzare la seguente funzione per questo:
  
 <p>
 <blockquote>
   <tt><b>part_type_sprite(ind,sprite,animat,stretch,random)</b></tt> 
-    Sets your own sprite for the particle type. With animate you indicate whether 
-	the sprite should be animated (1) or not (0). With stretch (1 or 0) you indicate whether the 
-	animation must be stretched over the lifetime of the particle. 
-	And with random (1 or 0) you can indicate whether a random subimage must be choosen as starting image.<br>
+    Imposta il tuo sprite per il tipo di particella. Con il parametro animate si indica se lo sprite 
+    deve essere animato (1) o no (0). Con stretch (1 o 0) si indica se prolungare o meno l’animazione
+    dello sprite per tutta la durata della particella. E con random (1 o 0) è possibile indicare se
+    una casuale sotto-immagine deve essere scelta come immagine iniziale.<br>
 </blockquote>
 
 <p>
-Once you have choosen the sprite for the particle type (either a default shape or your own) you 
-can indicate the size of it. A size of 1 indicates the normal size of the sprite.
-A particle type can be defined such that all particles have the
-same size or have different sizes. You can indicate a range of sizes. Also, you can indicate
-whether the size should change over the lifetime of the particle and whether some wiggling in
-the size will happen, giving a blinking effect. 
+Una volta che avete scelto lo sprite per il tipo di particella (o una forma di default o il proprio sprite) 
+è possibile indicare le dimensioni di esso. Una dimensione di valore 1 indica la dimensione normale dello 
+sprite. Un tipo di particella può essere definito in modo tale che le particelle o hanno tutte la stessa 
+dimensione o hanno dimensioni diverse. È possibile indicare un intervallo di dimensioni ed anche se la 
+dimensione deve cambiare nel corso della vita di una particella. È anche possibile cambiare ad intervalli 
+di tempo la dimensione, creando un effetto lampeggiante. 
  
 <p>
 <blockquote>
   <tt><b>part_type_size(ind,size_min,size_max,size_incr,size_wiggle)</b></tt> 
-    Sets the size parameters for the particle type. You specify the minimum starting size,
-	the maximum starting size, the size increase in each step (use a negative number for
-	a decrease in size) and the amount of wiggling.
-	(The default size is 1 and default the size does not change.)<br>
+    Imposta i parametri dimensionali per il tipo di particella. È possibile specificare la dimensione minima 
+    di partenza, la dimensione massima di partenza, l'aumento di dimensione in ogni passaggio 
+    (usando un numero negativo per una diminuzione della dimensione) e il valore di “wiggling”. 
+    (La dimensione di default è 1 e la dimensione di default non cambia).<br>
   <tt><b>part_type_scale(ind,xscale,yscale)</b></tt> 
-    Sets the horizontal and vertical scale. This factor is multiplied with the size. 
-	It is in particular useful when you need to scale differently in x- and y-direction.<br>
+    Imposta il valore di scala orizzontale e verticale. Questo fattore viene moltiplicato per la dimensione. 
+    È utile in particolare quando è necessario scalare in modo diverso le direzioni x e y.<br>
 </blockquote>
 
 <p>
-The particles also have an orientation. Again the orientation can be the same for all
-particles, can be different, and can change over the lifetime of the sprite. The angles
-specify counter-clockwise rotations, in degrees.
+Le particelle hanno anche un orientamento. L'orientamento può lo stesso per tutte le particelle, può 
+essere diverso, e può cambiare nel corso della vita dello sprite. Gli angoli specificano il verso 
+di rotazione antiorario, in gradi.
 
 <p>
 <blockquote>
   <tt><b>part_type_orientation(ind,ang_min,ang_max,ang_incr,ang_wiggle,ang_relative)</b></tt> 
-    Sets the orientation angle properties for the particle type. You specify the minimum
-	angle, the maximum angle, the increase in each step and the amount of wiggling in angle.
-	(Default all values are 0.) You can also indicate whether the given angle should be
-	relative (1) to the current direction of motion or absolute (0). E.g. by setting
-	all values to 0 but ang_relative to 1, the particle orientation will precisely follow
-	the path of the particle. <br>
+    Imposta le proprietà degli angoli di orientamento per il tipo di particella. È possibile 
+    specificare l'angolo minimo, l’angolo massimo, l’incremento ad ogni passo e la quantità di “wiggling”. 
+    (Di default tutti i valori sono). È anche possibile indicare se l’angolo dato è relativo (1) 
+    alla direzione corrente di movimento oppure assoluto (0). Ad esempio, impostando tutti i valori 
+    a 0, ma ang_relative a 1, l'orientamento delle particelle seguirà precisamente il percorso della particella. <br>
 </blockquote>
 
 
