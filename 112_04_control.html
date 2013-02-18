@@ -43,107 +43,108 @@ per tutte le istanze dell'oggetto. Per esempio, puoi controllare se per tutte
 le palline la posizione a destra è libera da collisioni.
 
 <p>
-The following questions and related actions are available. (Note that they all have 
-a differently shaped icon and a different background color so that they can 
-more easily be distinguished from other actions.)
+Sono disponibili le seguenti domande e azioni. (Nota che hanno tutte
+una forma differente e un colore differente in modo tale da
+poter essere distinti più facilmente dalle altre azioni.
 
 <p>
 <b><img src="images/action_iffree.bmp"> Check Empty</b><br>
-This question returns true if the current instance, placed at the indicated 
-position does not generate a collision with an object. You can specify the 
-position as either absolute or relative. You can also indicate whether only solid, 
-or all objects, should be taken into account. 
-This action is typically used to check whether the instance can move to a 
-particular position.
+Questa domanda restituisce true se l'attuale istanza, piazzata alla posizione indicata, 
+non genera una collisione con un oggetto. Puoi specificare
+la posizione come assoluta o relativa. Puoi anche indicare se
+devono essere considerati tutti gli oggetti oppure solo quelli solidi.
+Quest'azione è tipicamente usata per controllare se l'istanza può muoversi
+verso una certa posizione.
 
 <p>
 <b><img src="images/action_ifcollision.bmp"> Check Collision</b><br>
-This is the reverse of the previous action. It returns true if there is a collision 
-when the current instance is placed at the given position (again, either only with 
-solid objects or with all objects).
+Questa è il contrario dell'azione precedente. Restituisce true se c'è una collisione
+quando l'istanza corrente è piazzata ad una certa posizione (di nuovo, 
+si può scegliere se considerare solo i solidi).
 
 <p>
 <b><img src="images/action_ifobject.bmp"> Check Object</b><br>
-This question returns true if the instance placed at the indicate position meets 
-an instance of the indicated object.
+Questa domanda restituisce true se l'istanza piazzata alla posizione indicata incontra
+un'istanza dell'oggetto indicato.
 
 <p>
 <b><img src="images/action_ifnumber.bmp"> Test Instance Count</b><br>
-You specify an object and a number. If the current number of instances of the 
-object is equal to the number the question returns true. Otherwise it returns 
-false. You can also indicate that the check should be whether the number of 
-instances is smaller than the given value or larger than the given value. This 
-is typically used to check whether all instances of a particular type are gone. 
-This is often the moment to end a level or a game.
+Bisogna specificare un oggetto e un numero. Se il numero delle istanze dell'oggetto
+è uguale al numero in questione restituisce true. Altrimenti restituisce
+false. Puoi anche indicare se il controllo va fatto
+se il numero di istanze è minore del valore dato o maggiore. Questo
+è tipicamente usato per controllare se tutte le istanze di un certo tipo sono andate.
+Questo è spesso il momento di terminare un livello o una partita.
 
 <p>
 <b><img src="images/action_ifdice.bmp"> Test Chance</b><br>
-You specify the number of sides of a dice which is then thrown. Then if the dice lands on one, 
-the result is true and the next action is performed. This can be used to put 
-an element of randomness in your game. For example, in each step you can 
-generate with a particular chance a bomb or a change of direction. The larger the 
-number of sides of the dice, the smaller the chance. You can actually use 
-real numbers. For example if you set the number of sides to 1.5 the next 
-action is performed two out of three times. Using a number smaller than 1 makes no sense.
+Bisogna specificare il numero di lati di un dado che viene lanciato. Quindi se il dado
+atterra su lato con uno, il risultato sarà positivo e verrà eseguite la prossima azione.
+Questo può essere utilizzati per aggiungere un elemento di casualità nel gioco. Per esempio,
+in ogni step puoi generare una bomba o cambiare una direzione con una certa probabilità.
+Più è grande il numero dei lati di un dado, più è piccola la probabilità. Puoi usare
+dei numeri reali. Per esempio se usi 1.5 lati la prossima azione
+verrà eseguita due volte su tre. Usare un numero più piccolo di 1 non ha senso.
 
 <p>
 <b><img src="images/action_ifquestion.bmp"> Check Question</b><br>
-You specify a question. A dialog is shown to the player with a yes and a no 
-button. The result is true is the player answers yes.
+Bisogna specificare una domanda. Una finestra verrà mostrata al giocatore contenente
+sì (o yes, in base alla localizzazione) o no. Il risultato sarà positivo se il giocatore
+avrà risposto sì.
 
 <p>
 <b><img src="images/action_if.bmp"> Test Expression</b><br>
-This is the most general question action. You can enter an arbitrary expression. 
-If the expression evaluates to true (that is, a number larger or equal to 0.5) 
-the next action is performed. See below for more information on expressions.
+Questa è l'azione di domanda più generale. Puoi inserire un'espressione arbitraria.
+Se l'espressione restituisce true (cioè, se il numero è maggiore o uguale a 0.5)
+verrà eseguita la prossima azione. Vedi sotto per maggiori informazioni sulle espressioni.
 
 <p>
 <b><img src="images/action_ifmouse.bmp"> Check Mouse</b><br>
-Returns true if the indicated mouse button is pressed. A standard use is in 
-the step event. You can check whether a mouse button is pressed and, if so, 
-for example move to that position (use the jump to a point action with 
-values <tt>mouse_x</tt> and <tt>mouse_y</tt>).
+Restituisce true se il tasto del mouse indicato viene premuto. Un uso standard
+è nell'evento step. Puoi controllare se un tasto del mouse è premuto, e se lo è, 
+per esempio si può muovere in quella posizione (usa l'azione "jump to a point" con
+i valori <tt>mouse_x</tt> e <tt>mouse_y</tt>).
 
 <p>
 <b><img src="images/action_ifgrid.bmp"> Check Grid</b><br>
-Returns true if the position of the instance lies on a grid. You 
-specify the horizontal and vertical spacing of the grid. This is 
-very useful when certain actions, like making a turn, are only a
-llowed when the instance is on a grid position.
+Restituisce true se la posizione dell'istanza si trova in una griglia.
+Bisogna specificare la spaziatura orizzontale e verticale della griglia. 
+Questo è molto utile quando certe azioni, come fare un turno, sono
+permesse solo quando l'istanza è in una posizione della griglia.
 
 <p>
 <b><img src="images/action_begin.bmp"> Start Block</b><br>
-Indicates the start of a block of actions.
+Indica l'inizio di un blocco di azioni.
 
 <p>
 <b><img src="images/action_end.bmp"> End Block</b><br>
-Indicates the end of a block of actions.
+Indica la fine di un blocco di azioni.
 
 <p>
 <b><img src="images/action_else.bmp"> Else</b><br>
-Behind this action the else part follows, that is executed when 
-the result of the question is false.
+Sotto questa azione segue la parte else, che viene eseguita quando
+il risultato della domanda è negativo.
 
 <p>
 <b><img src="images/action_repeat.bmp"> Repeat</b><br>
-This action is used to repeat the next action (or block of actions) 
-a number of times. You simply indicate the number.
+Questa azione viene usata per ripetere la prossima azione (o blocco di azioni)
+un certo numero di volte. Devi semplicemente indicare il numero.
 
 <p>
 <b><img src="images/action_exit.bmp"> Exit Event</b><br>
-When this action is encountered no further actions in this event are 
-executed. This is typically used after a question. For example, when 
-a position is free nothing needs to be done so we exit the event. In 
-this example, the following actions are only executed when there is 
-a collision.
+Quando questa azione viene incontrata non verranno più eseguite altre azioni
+in questo evento. Questo è usato tipicamente dopo una domanda. Per esempio, quando
+una posizione è libera non c'è bisogno di fare niente quindi bisogna uscire dall'evento.
+In questo esempio, le azioni seguenti vengono eseguite solo quando c'è
+una collisione.
 
 
 <p>
-If you want more control over what is happening in the game you can use the
-built-in programming language that is described in <A HREF="400_index.html">Part 4</A> of the documentation.
-If gives you much more flexibility than using the actions. There are also actions
-to define and test variables. They are simpler to use than code and can be very useful for your games.
-The following actions deal with this.
+Se desideri avere un controllo maggiore su ciò che succede nel gioco puoi usare
+il linguaggio di programmazione built-in descritto nella <A HREF="400_index.html">Parte 4</A>
+della documentazione. Ti da' più flessibilità delle azioni. Ci sono anche azioni
+per definire e testare le variabili. Sono più semplici da usare del codice e possono essere
+molto utili per il tuo gioco. Le seguenti funzioni trattano ciò.
 
 <p>
 <b><img src="images/action_code.bmp"> Execute Code</b><br>
