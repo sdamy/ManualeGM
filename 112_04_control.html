@@ -14,32 +14,33 @@ Ci sono alcune azioni con cui puoi controllare quali altre azioni vengono esegui
 La maggior parte di queste azioni controlla qualcosa, per esempio se una posizione è vuota.
 Quando la risposta è positiva (true) la prossima azione viene eseguita, altrimenti viene
 ignorata.
-If you want multiple actions to be executed or skipped based on the outcome you 
-can put them in a block by putting start block and end block actions 
-around them. There can also be an else part which is executed when the 
-answer is no. So a question typically looks as follows:
+Se vuoi che vengano eseguite o ignorate più azioni, in base al risultato,
+puoi metterle dentro a un blocco mettendo le azioni di inizio e fine blocco
+intorno ad esse. Può anche esserci una parte "else" che viene eseguita quando
+la risposta è negativa. Quindi una domanda appare tipicamente in questo modo:
 
 <p>
 <img src="images/form_control_actions.jpg">
 
 <p>
-Here the question is asked whether a position for the current 
-instance is collision free. If so, the instance starts moving in a given direction. 
-If not, the instance jumps to a given position. Note that the blocks are indented.
-This gives a better overview of the actions. (In particular when you use blocks inside blocks.)
-Also it is easier to detect when you forgot a start block or end block action.
+Qui la domanda chiede se la posizione dell'istanza corrente è libera.
+Se è così, l'istanza comincia a muoversi nella direzione data.
+Se no, l'istanza salta verso una certa posizione. Nota che i blocchi sono indentati.
+Questo rende le azioni più leggibili. (In particolare quando usi dei blocchi dentro altri
+blocchi.)
+Inoltre è facile rilevare quando dimentichi un'azione di inizio/fine blocco.
 
 <p>
-For all questions there is a field labeled <b>NOT</b>. If you check this field, 
-the result of the question is reversed. That is, if the result was true it becomes 
-false and if it was false, it becomes true. This allows you to perform certain 
-actions when a question is not true.
+Per tutte le domande c'è un campo etichettato con <b>NOT</b>. Se selezioni questo campo,
+il risultato della domanda viene invertito. Ovvero, se il risultato era positivo diventa
+negative e se era negativo diventa positivo. Questo ti permette di eseguire delle certe
+azioni quando una domanda è falsa.
 
 <p>
-For many questions you can indicate that they should apply to all instances 
-of a particular object. In this case the result is true only if it is true 
-for all instances of the object. For example, you can check whether for all 
-balls the position slightly to the right is collision free.
+Per molte domande puoi indicare se devono applicare a tutte le istanza
+di un particolare oggetto. In questo caso il risultato è vero soltanto se è vero
+per tutte le istanze dell'oggetto. Per esempio, puoi controllare se per tutte
+le palline la posizione a destra è libera da collisioni.
 
 <p>
 The following questions and related actions are available. (Note that they all have 
