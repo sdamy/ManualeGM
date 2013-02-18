@@ -11,69 +11,70 @@
 
 <h1>Strutture dati</h1>
 
-<i><b>This functionality is only available in the Standard Edition of GameMaker.</b></i>
+<i><b>Questa funzionalità è disponibile solo nella versione Standard Edition di GameMaker.</b></i>
 
 <p>
-In games you often need to store information. For example you need to store 
-lists of items that a person carries or you want to store places that still 
-need to be visited. You can use the arrays for this. But if you want to do more 
-complicated operations, like sorting the data or searching for a particular item, 
-you need to write large pieces of GML code which can be slow to execute.
+Nei giochi c’è spesso la necessità di memorizzare informazioni. 
+Ad esempio può essere necessario memorizzare elenchi di elementi 
+che un giocatore conserva oppure memorizzare luoghi che devono 
+ancora essere visitati. Si possono utilizzare le matrici per 
+fare questo. Ma se si vogliono fare operazioni più complesse, come 
+l'ordinamento dei dati o la ricerca di un elemento particolare, è 
+necessario scrivere lunghi codici in GML che possono rallentare l’esecuzione.
 
 <p>
-To remedy this, <i>GameMaker</i> has a number of built-in data 
-structures that can be accessed through functions. At the moment 
-there are six different types of data structure available: stacks, 
-queues, lists, maps, priority queues, and grids. Each of these data structures 
-is tuned for a particular type of use (see below).
+Per rimediare a questo, <i>GameMaker</i> ha numerose strutture dati precostruite 
+che possono essere accessibili tramite funzioni. Al momento ci sono sei 
+diversi tipi di strutture dati disponibili: pile, code, liste, mappe, 
+code di priorità, e griglie. Ciascuna di queste strutture dati è 
+specializzata per fini diversi (vedi sotto).
 
 <p>
-All data structures work globally in the same way. You can create a data 
-structure with a function that returns an id for the structures. You use 
-this id to perform operations on the data structures. Once you are done 
-you destroy the data structure again to save storage. You can use as many 
-of the structures at the same moment as you want. All structure can store 
-both strings and real values.
+Tutte le strutture dati funzionano globalmente nello stesso modo. 
+È possibile creare una struttura dati con una funzione che restituisce 
+un ID per essa. È possibile utilizzare questo ID per eseguire operazioni 
+sulle strutture dati. Una volta terminate le operazioni occorre distruggere 
+la struttura dati per liberare memoria. È possibile utilizzare più strutture 
+nello stesso momento. Tutte le strutture sono in grado di memorizzare stringhe e valori reali.
 
 <p>
-Please note that data structures and their content are not saved when you
-save the game using the actions or functions for that. If you use data
-structures and want to allow for saves you have to create your own mechanism
-for that.
+Si noti che le strutture dati e il loro contenuto non vengono salvate quando 
+si salva il gioco utilizzando le apposite funzioni. Se si utilizzano strutture 
+dati e si desidera salvarle è necessario creare un proprio meccanismo per fare questo.
 
 <p>
-When comparing values, for example when searching in a map or sorting a list, 
-<i>GameMaker</i> must decide when two values are equal. For strings and integer 
-values this is clear but for real numbers, due to round-off errors, equal number 
-can easily become unequal. For example (5/3)*3 will not be equal to 5. To avoid 
-this, a precision is used. When the difference between two numbers is smaller 
-than this precision they are considered equal. Default a precision of 0.0000001 
-is used. You can change this precision using the following function:
+Quando si confrontano valori, ad esempio quando si cerca in una mappa o si ordina una lista, 
+<i>GameMaker</i> deve decidere se due valori sono uguali. Per le stringhe e valori interi 
+questo è facile, ma per i numeri reali, a causa di errori di arrotondamento, numeri uguali
+possono facilmente diventare diseguali. Per esempio (5/3) * 3 non è uguale a 5. Per evitare 
+questo, viene usato un numero di precisione: quando la differenza tra due numeri è minore di 
+tale precisione, essi sono considerati uguali. La precisione predefinita è di 0.0000001. 
+È possibile modificare questa precisione utilizzando la seguente funzione:
 
 <p>
 <blockquote>
   <tt><b>ds_set_precision(prec)</b></tt> 
-    Sets the precision used for comparisons.<br>
+   Imposta la precisione che verrà utilizzata per confronti di numeri reali.<br>
 </blockquote>
 
 <p>
-This precision is used in all data structures but not in other comparisons in GML!
+Questa precisione è utilizzata in tutte le strutture dati, ma non in altri confronti in GML!
 
 
 <!--HELPONLY-->
 
  <P>
-Information on data structures can be found in the following pages:
+Informazioni sulle strutture dati si possono trovare nelle pagine seguenti:
 
 <P>
 <p>
 <blockquote>
-    <a href="411_01_stacks.html">Stacks</a><br>
-    <a href="411_02_queues.html">Queues</a><br>
-    <a href="411_03_lists.html">Lists</a><br>
-    <a href="411_04_maps.html">Maps</a><br>
-    <a href="411_05_priority.html">Priority Queues</a><br>
-    <a href="411_06_grid.html">Grids</a><br>
+    <a href="411_01_stacks.html">Pile</a><br>
+    <a href="411_02_queues.html">Code</a><br>
+    <a href="411_03_lists.html">Liste</a><br>
+    <a href="411_04_maps.html">Mappe</a><br>
+    <a href="411_05_priority.html">Code di priorità</a><br>
+    <a href="411_06_grid.html">Griglie</a><br>
 </blockquote>
 
 <p>
@@ -88,5 +89,7 @@ Information on data structures can be found in the following pages:
 <!-- KEYWORDS
 data structures
 ds_set_precision()
+
+strutture dati
 
 --> 
