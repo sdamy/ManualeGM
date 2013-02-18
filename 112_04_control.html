@@ -17,7 +17,7 @@ ignorata.
 Se vuoi che vengano eseguite o ignorate più azioni, in base al risultato,
 puoi metterle dentro a un blocco mettendo le azioni di inizio e fine blocco
 intorno ad esse. Può anche esserci una parte "else" che viene eseguita quando
-la risposta è negativa. Quindi una domanda appare tipicamente in questo modo:
+la risposta è negativa. Quindi una domanda (question) appare tipicamente in questo modo:
 
 <p>
 <img src="images/form_control_actions.jpg">
@@ -148,46 +148,46 @@ molto utili per il tuo gioco. Le seguenti funzioni trattano ciò.
 
 <p>
 <b><img src="images/action_code.bmp"> Execute Code</b><br>
-When you add this action, a form shows in which you can type a piece of code
-which must be execute. This can contain simple function calls or more complex
-code.  Use the code action preferably only for small pieces of code. 
-For longer pieces you are strongly advised to use scripts which are described
-in <A HREF="200_index.html">Part 2</A> of the documentation.&nbsp; Normally when you 
-    use this command you will get the rather unhelpful comment <i>&quot;Execute a piece 
-    of code&quot;</i> inside the actions pane. However, you can change this by adding a 
-    three slash ( <b>///</b> ) comment on the first line of the program, and the 
-    contents are used as the script description instead.<p>
+Quando aggiungi questa azione, viene mostrata una finestra nella quale puoi inserire del codice
+da eseguire. Questo può contenere semplici chiamate a funzioni oppure del codice più complesso.
+Usa l'azione codice preferibilmente soltanto per piccoli pezzi di codice.
+Per pezzi di codice più lunghi è meglio utilizzare gli script, descritti nella
+<A HREF="200_index.html">Parte 2</A> della docuomentazione. Normalmente quando
+usi questo comando ottieni il poco esplicativo commento <i>&quot;Execute a piece
+of code&quot;</i> dentro il pannello delle azioni. Comunque, puoi cambiarlo aggiungendo
+tre slash ( <b>///</b> ) e il commento nella prima linea del programma, e
+i contenuti verranno utilizzati come descrizione dello script.<p>
 <b><img src="images/action_comment.bmp"> Comment</b><br>
-Use this action to add a line of comment to the action list. 
-The line is shown in italic font. Adding comments helps you remember 
-what your events are doing.
-The action does not do anything. But realize that it still is an action.
-So when you place it after a conditional action it is the action that is executed
-if the condition is true (even though it does not do anything).
+Usa questa azione per aggiungere una linea di commento nella lista delle azioni.
+La linea viene mostrata in una font italica. Aggiungere commenti ti aiuta a ricordare
+cosa fanno i tuoi eventi.
+L'azione non fa niente. Ma è comunque un'azione.
+Quindi quando la piazzi dopo un'azione condizionale è l'azione che verrà eseguita
+se la condizione sarà vera (anche se non fa niente).
 
 <p>
 <b><img src="images/action_variable.bmp"> Set Variable</b><br>
-There are many built-in variables in the game. With this action you can change these. 
-Also you can create your own variables and assign values to them. You specify the 
-name of the variable and the new value. When you check the <b>Relative</b> box, 
-the value is added to the current value of the variable. Please note that this 
-can only be done if the variable already has a value assigned to it! See below 
-for more information about variables.
+Ci sono molte variabili built-in nel gioco. Con questa azione puoi cambiarle.
+Puoi anche creare le tue variabili e assegnare loro dei valori. Devi specificare
+il nome della variabile e il nuovo valore. Quando selezioni la casella <b>Relative</b>,
+il valore verrà aggiunto all'attuale valore della variabile. Per favore nota che questo
+può essere fatto solo se una variabile ha già un valore assegnato! Vedi sotto
+per altre informazioni riguardo alle variabili.
 
 <p>
 <b><img src="images/action_ifvariable.bmp"> Test Variable</b><br>
-With this action you can check what the value of a particular variable is. 
-If the value of the variable is equal to the number provided, the question 
-returns true. Otherwise it returns false. You can also indicate that the 
-check should be whether the value is smaller than the given value or larger 
-than the given value. See below for more information about variables. 
-Actually, you can use this action also to compare two expressions.
+Con questa azione puoi controllare com'è il valore di una variabile.
+Se il valore è uguale al numero specificato, l'azione restituisce true.
+Altrimenti false. Puoi anche indicare se
+il controllo dev'essere fatto se il valore è più piccolo del valore speficato o
+più grande. Vedi sotto per maggiori informazioni riguardo alle variabili.
+Puoi usare questa azione anche per comparare due espressioni.
 
 <p>
 <b><img src="images/action_drawvariable.bmp"> Draw Variable</b><br>
-With this action you can draw the value of a variable at a 
-particular position on the screen. Note that this can only be used
-in the draw event of an object.
+Con questa azione puoi disegnare il valore della variabile a
+una certa posizione nello schermo. Nota che questo può essere usato solo
+nell'evento draw di un oggetto.
 
 
 <!--END-->
@@ -200,5 +200,11 @@ if actions
 questions
 code action
 variable actions
+
+azioni di controllo
+azioni if
+azioni di codice
+domande
+azioni delle variabili
 --> 
 
