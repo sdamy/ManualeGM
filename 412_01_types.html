@@ -185,55 +185,58 @@ Ciò permette di realizzare splendidi effetti di esplosione.
 </blockquote>
 
 
-<h3>Life and death</h3>
+<h3>Vita e morte</h3>
 
-Particles live for a limited amount of time, their lifetime. After this they disappear. Lifetime is
-measured in steps. You can indicate the lifetime (or a range of lifetimes) for each particle type. 
-Particles can create new particles of different types. There are two ways for this. They can create new particles in 
-each step or they can create particles when they die. Be careful that the total number of 
-particles does not get too high.
+Particelle possono vivere per un periodo di tempo limitato. Dopo questo scompaiono. 
+La vita si misura in passi (steps). È possibile indicare la durata di vita 
+(o una serie di tempi di vita) per ciascun tipo di particella. Le particelle possono 
+creare nuove particelle di tipo diverso. Ci sono due modi per questo. Loro possono 
+creare nuove particelle in ogni passo oppure possono creare particelle solo quando muoiono. 
+Si eviti comunque che il numero di particelle diventi troppo alto.
 
 <p>
 <blockquote>
   <tt><b>part_type_life(ind,life_min,life_max)</b></tt> 
-    Sets the lifetime bounds for the particle type. (Default both are 100.)<br>
+   Imposta i limiti di durata per il tipo di particella. (Di default entrambi sono 100).<br>
   <tt><b>part_type_step(ind,step_number,step_type)</b></tt> 
-    Sets the number and type of particles that must be generated in each 
-	step for the indicated particle type. If you use a negative value,
-	in each step a particle is generated with a chance -1/number. 
-	So for example with a value of -5 a particle is generated on average once every 5 steps.<br>
+    Imposta il numero e il tipo di particelle che devono essere generati ad ogni passo 
+    per il tipo di particella indicato. Se si utilizza un valore negativo, ad ogni passo 
+    viene generata una particella con una possibilità di -1/numero. Così, per esempio con 
+    un valore di -5 una particella viene generata in media una volta ogni 5 passi.<br>
   <tt><b>part_type_death(ind,death_number,death_type)</b></tt> 
-    Sets the number and type of particles that must be generated when a particle of the 
-	indicated type dies. Again you can use negative numbers to create a particle with
-	a particular chance. Note that these particles are only created when the particle dies 
-	at the end of its life, not when it dies because of a destroyer (see below).<br>
+    Imposta il numero e il tipo di particelle che devono essere generate quando una particella 
+    del tipo indicato muore. Anche in questo caso è possibile utilizzare numeri negativi per 
+    creare una particella con una possibilità particolare. Si noti che queste particelle sono 
+    create solo quando la particella muore (è alla fine della sua vita), non quando muore a 
+    causa di un distruttore (vedi sotto).<br>
 </blockquote>
 
 
-<h3>Particle motion</h3>
+<h3>Movimento delle particelle</h3>
 
-Particles can move during their lifetime. They can get an initial speed (or range of speeds)
-and direction, and the speed and direction can change over time. Also gravity can be defined
-that pulls the particles in a particular direction. The following functions exist for this:
+Le particelle possono muoversi durante la loro vita. Esse possono avere una velocità iniziale 
+(o un range di velocità) e una direzione, e la velocità e la direzione possono cambiare nel 
+tempo. Anche la gravità può essere definita per attrarre le particelle in una direzione 
+particolare. Le funzioni seguenti esistono per questo:
 
 <p>
 <blockquote>
   <tt><b>part_type_speed(ind,speed_min,speed_max,speed_incr,speed_wiggle)</b></tt> 
-    Sets the speed properties for the particle type. (Default all values are 0.)
-	You specify a minimal and maximal speed. A random value between the given bounds
-	is chosen when the particle is created. You can indicate a speed increase in
-	each step Use a negative number to slow the particle down (the speed will never 
-	become smaller than 0). Finally you can indicate some amount of wiggling of the speed.<br>
+  Imposta le proprietà di velocità per il tipo di particella. (Di default tutti i valori sono 0). 
+  È possibile specificare una velocità minima e massima. Quando la particella viene creata un valore 
+  casuale compreso tra i limiti indicati viene scelto. È possibile indicare un aumento di velocità 
+  ad ogni passo. Usare un numero negativo per rallentare la particella (la velocità non sarà mai 
+  inferiore a 0). Infine, si può indicare una certa quantità di “wiggling” della velocità.<br>
   <tt><b>part_type_direction(ind,dir_min,dir_max,dir_incr,dir_wiggle)</b></tt> 
-    Sets the direction properties for the particle type. (Default all values are 0.)
-	Again you specify a range of directions (in counterclockwise degrees; 
-	0 indicated a motion to the right). For example, to let the particle move 
-	 in a random direction choose 0 and 360 as values. You can specify an increase
-	 in direction for each step, and an amount of wiggling.<br>
+    Imposta le proprietà di direzione per il tipo di particella. (Di default tutti i valori sono 0). 
+    Anche in questo caso si specifica un intervallo di direzioni (in gradi in senso antiorario, 0 
+    indica un movimento a destra). Per esempio, far muovere le particelle in una direzione casuale 
+    scegliere 0 e 360 come valori. È possibile specificare un aumento di direzione per ogni passo, 
+    e una quantità di “wiggling”.<br>
   <tt><b>part_type_gravity(ind,grav_amount,grav_dir)</b></tt> 
-    Sets the gravity properties for the particle type. (Default there is no gravity.)
-	You specify the amount of gravity to be added in each step and the direction. E.g.
-	use 270 for a downwards direction.<br>
+    Imposta le proprietà di gravità per il tipo di particella. (Di default non c'è gravità).
+    Si può specificare un valore di gravità da aggiungere ad ogni passo ed anche la direzione. 
+    Ad esempio, si può 270 per una direzione verso il basso.<br>
 </blockquote>
 
 
