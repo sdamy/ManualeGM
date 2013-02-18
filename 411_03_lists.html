@@ -27,13 +27,13 @@ Le seguenti funzioni sono disponibili:
     Distrugge la lista con dato id, liberando la memoria usata. Non
     	dimenticarti di chiamare questa funzioni quando sei pronto con la struttura.<br>
   <tt><b>ds_list_clear(id)</b></tt> 
-    Pulisce la lista con dato id, rimuovendo tutti i dati da esso ma senza distruggerla.<br>
+    Pulisce la lista con dato id, rimuovendo tutti i dati da essa ma senza distruggerla.<br>
   <tt><b>ds_list_copy(id,source)</b></tt> 
-    Copia il sorgente della list nella lista con dato id.<br>
+    Copia il contenuto della lista nella lista con dato id.<br>
   <tt><b>ds_list_size(id)</b></tt> 
     Ritorna il numero di valori memorizzati nella lista.<br>
   <tt><b>ds_list_empty(id)</b></tt> 
-    Ritorna quando la lista è vuota. Questo è lo stesso test quando la dimensione è 0.<br>
+    Ritorna quando la lista è vuota. È come testare se la dimensione è 0.<br>
   <tt><b>ds_list_add(id,val)</b></tt> 
     Aggiunge il valore alla fine della lista.<br>
   <tt><b>ds_list_insert(id,pos,val)</b></tt> 
@@ -53,9 +53,9 @@ Le seguenti funzioni sono disponibili:
   <tt><b>ds_list_shuffle(id)</b></tt> 
     Mescola i valori nella lista in modo tale da finire in un ordine casuale.<br>
   <tt><b>ds_list_write(id)</b></tt> 
-    Trasforma la struttura dati in una stringa e la ritorna. La stringa può essere
-    	usata, ad esempio, salvata in un file. Questo fornisce un facile meccanismo per
-    	il salvataggio delle strutture dati.<br>
+    Converte la struttura-dati (data structure) in una stringa e restituisce questa stringa. 
+    La stringa può quindi essere utilizzata, per esempio, per essere salvata in un file. 
+    Questa funzione fornisce un semplice meccanismo per salvare strutture dati.<br>
   <tt><b>ds_list_read(id,str)</b></tt> 
     Legge la struttura dati dalla stringa data (creata dalla precedente chiamata).<br>
 </blockquote>
@@ -67,8 +67,9 @@ Le seguenti funzioni sono disponibili:
 <!-- KEYWORDS
 list
 sorting
+
 lista
-mescolamento
+ordinamento
 
 ds_list_create()
 ds_list_destroy()
