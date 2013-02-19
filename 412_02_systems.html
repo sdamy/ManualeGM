@@ -9,102 +9,98 @@
 <!--START-->
 
 
-<h3>Particle systems</h3>
+<h3>Sistemi di particelle</h3>
 
-Particles live in particle systems. So to have particles in your game you need 
-to create one or more particle systems. There can be different particle 
-systems (but preferably keep their number small). 
-For example, if your game has a number of balls and each ball should 
-have a tail of particles, most likely each ball has its own particle system.
-The easiest way to deal with particle systems is to create one and then 
-create particles in it, using the particle types you specified before. 
-But, as we will see below, particle systems can contain emitters that 
-automatically produce particles, attractors that attract them, and 
-destroyers that destroy them.
-
-<p>
-Once particles are added to a particle system they are automatically
-updated each step and drawn. No further action is required. To make it possible
-that particles are drawn, behind, in front of, or between object instances, 
-each particle system has a depth, similar to instances and tiles. 
+Le particelle vivono in sistemi di particelle. Quindi, per poter avere delle particelle 
+nel vostro gioco è necessario creare uno o più sistemi di particelle. Ci possono essere 
+diversi sistemi di particelle (è consigliato mantenere piccolo il loro numero). Ad esempio, 
+se il gioco ha un certo numero di sfere e ciascuna sfera dovrebbe avere una coda di particelle,
+molto probabilmente ciascuna sfera avrà un proprio sistema particellare. Il modo più semplice 
+per gestire sistemi di particelle è quello di crearne uno e successivamente creare delle 
+particelle in esso, utilizzando i tipi di particelle descritti precedentemente. Ma, come 
+vedremo in seguito, i sistemi di particelle possono contenere emettitori che automaticamente 
+producono particelle, attrattori che le attraggono, e distruttori che le distruggono.
 
 <p>
-Particle systems will live on forever after they are created. So even if
-you change room or restart the game, the systems and the particles remain.
-So you better make sure you destroy them once you no longer need them.
+Una volta che le particelle vengono aggiunte ad un sistema particellare ad ogni passo vengono 
+aggiornate e disegnate automaticamente. Non sono necessarie altre operazioni. Per rendere possibile 
+il disegno su schermo delle particelle (dietro, avanti, o tra istanze di oggetti), ciascun sistema 
+di particelle ha una profondità, simile a  quella di istanze e tiles.
 
 <p>
-The following basic functions deal with particle systems:
+I sistemi particellari vivranno per sempre dopo la loro creazione. Quindi, anche se si cambia 
+stanza o ricominciare il gioco, i sistemi e le particelle rimangono. È meglio, quindi, assicurarsi 
+di distruggerli una volta che non sono più necessari.
+
+<p>
+Le seguenti funzioni di base permettono la gestione di sistemi particellari:
 
 <p>
 <blockquote>
   <tt><b>part_system_create()</b></tt> 
-    Creates a new particle system. It returns the index of the system. 
-	This index must be used in all calls below to set the properties of 
-	the particle system.<br>
+    Crea un nuovo sistema di particelle. Restituisce l'indice del sistema. 
+    Questo indice deve essere usato in tutte le funzioni sottostanti per impostare 
+    le proprietà del sistema di particelle.<br>
   <tt><b>part_system_destroy(ind)</b></tt> 
-    Destroys the particle system ind. Call this if you don't need 
-	it anymore to save space.<br>
+    Distrugge il sistema particellare dato il suo indice. Chiamare questa 
+    funzione se non serve più, per risparmiare spazio.<br>
   <tt><b>part_system_exists(ind)</b></tt> 
-    Returns whether the indicated particle system exists.<br>
+    Restituisce un valore se il sistema di particelle indicato esiste.<br>
   <tt><b>part_system_clear(ind)</b></tt> 
-    Clears the particle system ind to its default settings, removing 
-	all particles and emitter and attractors in it.<br>
+    Pulisce il sistema particellare dato il suo indice e lo riporta alle sue impostazioni predefinite, 
+    cancellando tutte le particelle, gli emettitore e gli attrattori in esso.<br>
   <tt><b>part_system_draw_order(ind,oldtonew)</b></tt>
-    Sets the order in which the particle system draws the particles. 
-	When oldtonew is true the oldest particles are drawn first 
-	and the newer one lie on top of them (default). Otherwise the 
-	newest particles are drawn first. This can give rather different effects.<br>
+    Imposta l'ordine con cui il sistema di particelle disegna le particelle. Quando il parametro oldtonew 
+    è vero le particelle più vecchie vengono disegnate per prime e quello nuove, invece, giacciono su 
+    di esse (default). In caso contrario, le particelle nuove saranno disegnate per prime. Questo può 
+    dare effetti piuttosto differenti.<br>
   <tt><b>part_system_depth(ind,depth)</b></tt>
-    Sets the depth of the particle system. This can be used to let the
-	particles appear behind, in front of, or in between instances.<br>
+    Imposta la profondità del sistema di particelle. Questo può essere utilizzato per permettere alle 
+    particelle di apparire dietro, avanti, o tra le istanze.<br>
   <tt><b>part_system_position(ind,x,y)</b></tt>
-    Sets the position where the particle system is drawn. This is normally
-	not necessary but if you want to have particles at a position relative
-	to a moving object, you can set the position e.g. to that object.<br>
+   Imposta la posizione in cui verrà disegnato il sistema particellare. Questo non è necessario, ma 
+   se si vogliono avere delle particelle ad una posizione relativa ad un oggetto in movimento, è 
+   possibile impostare la posizione a tale oggetto.<br>
 </blockquote>
 
 <p>
-As indicated above, the particle system is automatically updated and drawn.
-But sometimes this is not what you want. To facilitate this, you can switch
-off automatic updating or drawing and then decide yourself when to update or
-draw the particle system. For this you can use the following functions:	
+Come indicato sopra, il sistema di particelle viene automaticamente aggiornato e disegnato. Ma a 
+volte questo non è ciò che si vuole. Per facilitare questa operazione, è possibile disattivare l'aggiornamento 
+automatico, o il disegno, e poi decidere da soli quando aggiornare o disegnare il sistema di particelle. Per 
+questo è possibile utilizzare le seguenti funzioni:
 	
 <p>
 <blockquote>
   <tt><b>part_system_automatic_update(ind,automatic)</b></tt> 
-    Indicates whether the particle system must be updated
-	automatically (1) or not (0). Default is 1.<br>
+    Indica se il sistema di particelle deve essere aggiornato automaticamente (1) o no (0). 
+    Il valore predefinito è 1.<br>
   <tt><b>part_system_automatic_draw(ind,automatic)</b></tt> 
-    Indicates whether the particle system must be drawn
-	automatically (1) or not (0). Default is 1.<br>
+    Indica se il sistema di particelle deve essere disegnato automaticamente (1) o no (0).
+    Il valore predefinito è 1.<br>
   <tt><b>part_system_update(ind)</b></tt> 
-    This functions updates the position of all particles in the 
-	system and lets the emitters create particles. 
-	You only have to call this when updating is not automatic.
-	(Although sometimes it is also useful to call this function
-	a couple of time to get the system going.)<br>
+    Questa funzione aggiorna la posizione di tutte le particelle nel sistema e permette agli 
+    emettitori di creare particelle. Bisogna chiamare questa funzione solo quando l'aggiornamento 
+    non è automatico. (Anche se a volte è utile chiamare questa funzione per ottenere il sistema in corso).<br>
   <tt><b>part_system_drawit(ind)</b></tt> 
-    This functions draws the particles in the system.
-	You only have to call this when drawing is not automatic. 
-	It should be called in the draw event of some object.<br>
+    Questa funzione disegna le particelle nel sistema. Bisogna chiamare questa funzione solo quando 
+    il disegno non è automatico. Deve essere chiamata nell’evento draw degli oggetti.<br>
 </blockquote>
 
 <p>
-The following functions deal with particles in a particle systems:
+Le seguenti funzioni manipolano le particelle di un sistema di particelle:
 
 <p>
 <blockquote>
   <tt><b>part_particles_create(ind,x,y,parttype,number)</b></tt> 
-    This functions creates <tt>number</tt> particles of the indicated type at postion (x,y) in the system.<br>
+    Questa funzione crea un numero (number) di particelle del tipo indicato alla posizione (x,y) nel sistema.<br>
   <tt><b>part_particles_create_color(ind,x,y,parttype,color,number)</b></tt> 
-    This functions creates <tt>number</tt> particles of the indicated type at postion (x,y) in the system
-	with the indicated color. This is only useful when the particle type defines a single color (or does
-	not define a color at all).<br>
+    Questa funzione crea un numero di particelle del tipo indicato alla posizione (x,y) nel sistema, con 
+    il colore indicato. Questa funzione è utile solo quando il tipo di particella definisce un singolo 
+    colore (o non definisce un colore a tutti).<br>
   <tt><b>part_particles_clear(ind)</b></tt>
-    This functions removes all particles in the system.<br>
+   Questa funzione rimuove tutte le particelle nel sistema.<br>
   <tt><b>part_particles_count(ind)</b></tt> 
-    This functions returns the number of particles in the system.<br>
+    Questa funzione restituisce il numero di particelle nel sistema.<br>
 </blockquote>
 
 
