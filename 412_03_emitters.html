@@ -8,18 +8,17 @@
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Emitters</h3>
+<h3>Emettitori</h3>
 
-Emitters create particles. They can either create a continuous stream of 
-particles or can burst out a number of particles when using the appropriate 
-function. A particle system can have an arbitrary number of emitters.
-An emitter has the following properties:
+Gli emettitori creano particelle. Possono creare un flusso continuo di particelle 
+oppure un blocco di particelle quando si utilizza la funzione appropriata. Un sistema 
+particellare può avere un numero arbitrario di emettitori. Un emettitore ha le seguenti proprietà:
 
 <ul>
   <li><tt><b>xmin, xmax, ymin, ymax</b></tt> 
-    indicate the extent of the region in which the particles are generated.</li>
+    indicano l'ampiezza della regione di spazio in cui sono generate le particelle.</li>
   <li><tt><b>shape</b></tt> 
-    indicates the shape of the region. It can have the following values:</li>
+    indica la forma della regione. Può avere i seguenti valori:</li>
   <ul>
     <li><tt>ps_shape_rectangle</tt></li>
     <li><tt>ps_shape_ellipse</tt></li>
@@ -27,55 +26,54 @@ An emitter has the following properties:
     <li><tt>ps_shape_line</tt></li>
   </ul>
   <li><tt><b>distribution</b></tt> 
-    indicates the distribution used to generate the particles. It can have the following values:</li>
+    indica la distribuzione usata per generare le particelle. Può avere i seguenti valori:</li>
   <ul>
     <li><tt>ps_distr_linear</tt> 
-	  indicates a linear distribution, that is everywhere in the region the chance is equal</li>
+	  indica una distribuzione lineare, in ogni parte della regione di spazio c’è la stessa probabilità</li>
     <li><tt>ps_distr_gaussian</tt> 
-	  indicates a Gaussian distribution in which more particles are generated 
-	  in the center than at the sides of the region</li>   
+	  indica una distribuzione gaussiana in cui si generano più particelle nel centro rispetto 
+	  ai lati della regione</li>   
 	<li><tt>ps_distr_invgaussian</tt> 
-	  indicates an inverse Gaussian distribution in which more particles are generated 
-	  at the sides of the region than in the center</li>
+	  indica una distribuzione gaussiana inversa in cui si generano più particelle ai lati della
+	  regione rispetto al centro</li>
   </ul>
   <li><tt><b>particle type</b></tt> 
-    indicates the type of particles being generated</li>
+    indica il tipo di particelle che viene generato</li>
   <li><tt><b>number</b></tt> 
-    indicates the number of particles generated in each step. 
-	If smaller than 0, in each step a particle is generated with a chance -1/number. 
-	So for example with a value of -5 a particle is generated on average once every 5 steps.</li>
+    indica il numero di particelle generate ad ogni passo. Se minore di 0, in ciascuna fase, una 
+    particella viene generata con un numero -1/number di possibilità. Così, per esempio, con 
+    un valore di -5 una particella viene generata in media una volta ogni 5 passi.</li>
 </ul>
 
 <p>
-The following functions are available to set the emitters and to let them 
-create particles. Note that each of them gets the index of the particle system 
-to which it belongs as a first argument.
+Le seguenti funzioni sono disponibili per impostare gli emettitori e per far creare particelle. 
+Si noti che ciascuno delle funzioni accetta come primo parametro l’indice del sistema particellare 
+al quale deve appartenere l’emettitore.
 
 <p>
 <blockquote>
   <tt><b>part_emitter_create(ps)</b></tt> 
-    Creates a new emitter in the given particle system. It returns the 
-	index of the emitter. This index must be used in all 
-	calls below to set the properties of the emitter.<br>
+    Crea un nuovo emettitore nel sistema particellare dato. Restituisce l'indice dell’emettitore. 
+    Questo indice deve essere usato in tutte le funzioni sottostanti per impostare 
+    le proprietà di un emettitore.<br>
   <tt><b>part_emitter_destroy(ps,ind)</b></tt> 
-    Destroys emitter ind in the particle system. Call this 
-    if you don't need it anymore to save space.<br>
+    Distrugge l’emettitore ind del sistema particellare (ps). 
+    Chiamare questa funzione se non serve più, per risparmiare spazio.<br>
   <tt><b>part_emitter_destroy_all(ps)</b></tt> 
-    Destroys all emitters in the particle system that have been created.<br>
+    Distrugge tutti gli emettitori del sistema di particelle che sono state creati.<br>
   <tt><b>part_emitter_exists(ps,ind)</b></tt> 
-    Returns whether the indicated emitter exists in the particle system.<br>
+   Restituisce un valore se l'emettitore indicato esiste nel sistema particellare.<br>
   <tt><b>part_emitter_clear(ps,ind)</b></tt> 
-    Clears the emitter ind to its default settings.<br>
+    Riporta l'emettitore ind alle sue impostazioni predefinite.<br>
   <tt><b>part_emitter_region(ps,ind,xmin,xmax,ymin,ymax,shape,distribution)</b></tt> 
-    Sets the region and distribution for the emitter.<br>
+    Imposta la regione e la distribuzione per l'emettitore.<br>
   <tt><b>part_emitter_burst(ps,ind,parttype,number)</b></tt> 
-    Bursts once <tt>number</tt> particles of the indicated type from the emitter.<br>
+    Emette in blocco un numero (number) di particelle del tipo indicato dall’emettitore.<br>
   <tt><b>part_emitter_stream(ps,ind,parttype,number)</b></tt>
-    From this moment on create <tt>number</tt> particles of the indicated type 
-	from the emitter in every step. If you indicate a number smaller 
-	than 0 in each step a particle is generated with a chance of -1/number. 
-	So for example with a value of -5 a particle is generated on
-	average once every 5 steps.<br>
+    Da questo momento in poi viene creato un numero di particelle del tipo indicato ad ogni passo. 
+    Se si indica un numero minore di 0, ad ogni passo una particella viene generata con una 
+    probabilità di -1/number. Così, per esempio, con un valore di -5 una particella viene 
+    generata in media una volta ogni 5 passi.<br>
 </blockquote>
 
 
