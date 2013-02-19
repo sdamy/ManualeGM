@@ -1,3 +1,6 @@
+È adesso disponibile un'anteprima delle pagine su: http://ziocrocifisso.github.com/ManualeGM/
+
+
 Manuale
 =======
 
