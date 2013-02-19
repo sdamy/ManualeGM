@@ -1,8 +1,8 @@
-s/è/\&egrave;/
-s/é/\&eacute;/
-s/È/\&Egrave;/
-s/É/\&Eacute;/
-s/à/\&agrave;/
-s/ì/\&igrave;/
-s/ò/\&ograve;/
-s/ù/\&ugrave;/
+s/è/\&egrave;/g
+s/é/\&eacute;/g
+s/È/\&Egrave;/g
+s/É/\&Eacute;/g
+s/à/\&agrave;/g
+s/ì/\&igrave;/g
+s/ò/\&ograve;/g
+s/ù/\&ugrave;/g
