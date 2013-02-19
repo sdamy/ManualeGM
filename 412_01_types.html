@@ -104,7 +104,7 @@ di tempo la dimensione, creando un effetto lampeggiante.
 </blockquote>
 
 <p>
-Le particelle hanno anche un orientamento. L'orientamento pu&ograve; lo stesso per tutte le particelle, può 
+Le particelle hanno anche un orientamento. L'orientamento pu&ograve; lo stesso per tutte le particelle, pu&ograve; 
 essere diverso, e pu&ograve; cambiare nel corso della vita dello sprite. Gli angoli specificano il verso 
 di rotazione antiorario, in gradi.
 
@@ -215,18 +215,18 @@ Si eviti comunque che il numero di particelle diventi troppo alto.
 <h3>Movimento delle particelle</h3>
 
 Le particelle possono muoversi durante la loro vita. Esse possono avere una velocit&agrave; iniziale 
-(o un range di velocit&agrave;) e una direzione, e la velocità e la direzione possono cambiare nel 
+(o un range di velocit&agrave;) e una direzione, e la velocit&agrave; e la direzione possono cambiare nel 
 tempo. Anche la gravit&agrave; pu&ograve; essere definita per attrarre le particelle in una direzione 
 particolare. Le funzioni seguenti esistono per questo:
 
 <p>
 <blockquote>
   <tt><b>part_type_speed(ind,speed_min,speed_max,speed_incr,speed_wiggle)</b></tt> 
-  Imposta le propriet&agrave; di velocità per il tipo di particella. (Di default tutti i valori sono 0). 
+  Imposta le propriet&agrave; di velocit&agrave; per il tipo di particella. (Di default tutti i valori sono 0). 
   &Egrave; possibile specificare una velocit&agrave; minima e massima. Quando la particella viene creata un valore 
   casuale compreso tra i limiti indicati viene scelto. &Egrave; possibile indicare un aumento di velocit&agrave; 
-  ad ogni passo. Usare un numero negativo per rallentare la particella (la velocit&agrave; non sarà mai 
-  inferiore a 0). Infine, si pu&ograve; indicare una certa quantit&agrave; di “wiggling” della velocità.<br>
+  ad ogni passo. Usare un numero negativo per rallentare la particella (la velocit&agrave; non sar&agrave; mai 
+  inferiore a 0). Infine, si pu&ograve; indicare una certa quantit&agrave; di “wiggling” della velocit&agrave;.<br>
   <tt><b>part_type_direction(ind,dir_min,dir_max,dir_incr,dir_wiggle)</b></tt> 
     Imposta le propriet&agrave; di direzione per il tipo di particella. (Di default tutti i valori sono 0). 
     Anche in questo caso si specifica un intervallo di direzioni (in gradi in senso antiorario, 0 
@@ -234,7 +234,7 @@ particolare. Le funzioni seguenti esistono per questo:
     scegliere 0 e 360 come valori. &Egrave; possibile specificare un aumento di direzione per ogni passo, 
     e una quantit&agrave; di “wiggling”.<br>
   <tt><b>part_type_gravity(ind,grav_amount,grav_dir)</b></tt> 
-    Imposta le propriet&agrave; di gravità per il tipo di particella. (Di default non c'&egrave; gravità).
+    Imposta le propriet&agrave; di gravit&agrave; per il tipo di particella. (Di default non c'&egrave; gravit&agrave;).
     Si pu&ograve; specificare un valore di gravit&agrave; da aggiungere ad ogni passo ed anche la direzione. 
     Ad esempio, si pu&ograve; impostare 270 per una direzione verso il basso.<br>
 </blockquote>

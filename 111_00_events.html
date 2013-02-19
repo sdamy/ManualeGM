@@ -18,7 +18,7 @@ Prima di tutto, per molti eventi, l'oggetto non dovr&agrave; fare niente, per al
 dovrai quindi impostarlo tramite drag&drop per indicare l'azione.
 
 <p>
-Nel Form delle propriet&agrave; dell'oggetto, c'&egrave; una lista di eventi ai quali l'oggetto dovrà reagire.
+Nel Form delle propriet&agrave; dell'oggetto, c'&egrave; una lista di eventi ai quali l'oggetto dovr&agrave; reagire.
 Inizialmente &egrave; vuoto.
 Puoi aggiungere un evento premendo il bottone <b>Add Event</b>.
 Apparir&agrave; un altro form in cui potrai scegliere tra diversi tipi di eventi.
@@ -125,7 +125,7 @@ Se non ci sono azioni nell'evento Collision, non accadr&agrave; niente (esempio:
 Quando invece ci sono azioni, accade la seguente cosa:
 
 <p>
-Quando l'altro oggetto &egrave; solido, l'instanza è posizionata indietro nel punto dove si trovava lo step precedente alla collisione.
+Quando l'altro oggetto &egrave; solido, l'instanza &egrave; posizionata indietro nel punto dove si trovava lo step precedente alla collisione.
 Quindi vegono eseguite le azioni.
 In fine l'instanza viene spostata alla sua nuova posizione. Cos&igrave; ad esempio, se l'azione dice di "invertire la direzione di spostamento"
 l'instanza rimbalza contro il muro senza fermarsi.
@@ -133,7 +133,7 @@ Se continua a esserci collisione, l'instanza viene posizionata alla sua posizion
 Quindi si fermer&agrave;.
 
 <p>
-Quando l'altro oggetto non &egrave; solido l'instanza non è posizionata indietro.
+Quando l'altro oggetto non &egrave; solido l'instanza non &egrave; posizionata indietro.
 l'evento viene semplicemente eseguito con l'instanza alla posizione corrente.
 Inoltre, non c'&egrave; un secondo controllo di collisione (come nel caso precedente).
 
@@ -146,8 +146,8 @@ Le instanze possono usarlo per rimbalzare nei muri, oppure non appena collidono 
 Quando il giocatore preme un tasto, avviene un evento keyboard per tutte le instanze di tutti gli oggetti.
 Ci sono tanti eventi quanti sono i tasti. Nel menu puoi scegliere il tasto per cui vuoi definire
 un evento keyboard e trascinarci le azioni dentro all'apposito riquadro.
-Ci sono 2 eventi eventi keyboard speciali: uno &egrave; &lt;No key&gt; che avviene se non è premuto nessun tasto.
-L'altro &egrave; &lt;Any key&gt; e avviene se è premuto un tasto qualsiasi della tastiera.
+Ci sono 2 eventi eventi keyboard speciali: uno &egrave; &lt;No key&gt; che avviene se non &egrave; premuto nessun tasto.
+L'altro &egrave; &lt;Any key&gt; e avviene se &egrave; premuto un tasto qualsiasi della tastiera.
 Quando il player preme tasti multipli, gli eventi per ogni tasto premuto vengono attivati.
 i tasti relativi al "numeric keypad" (tastierino numerico) vengono attivati SOLO se &lt;NumLock&gt; &egrave; attivo.
 

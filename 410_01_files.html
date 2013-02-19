@@ -73,7 +73,7 @@ Per manipolare i file &egrave; possibile utilizzare le seguenti funzioni:
   <tt><b>file_find_first(mask,attr)</b></tt> 
     Restituisce il nome del primo file che soddisfa la maschera (mask) e
     gli attributi (attr). Se tale file non esiste, viene restituita la stringa vuota. 
-    La maschera pu&ograve; contenere un percorso e può contenere wildchars (caratteri jolly), per 
+    La maschera pu&ograve; contenere un percorso e pu&ograve; contenere wildchars (caratteri jolly), per 
     esempio 'C:. \ Temp \ * doc'. Gli attributi specificano il tipo di file che si vuole cercare (cos&igrave; vengono 
     sempre restituiti i file che soddisfano il percorso). &Egrave; possibile aggiungere le 
     seguenti costanti per cercare il tipo di file che si desidera:<br>
@@ -188,7 +188,7 @@ Le seguenti quattro variabili di sola lettura possono essere utili:
     di lavoro, a meno che il gioco, ad esempio, apre un file utilizzando il selettore di file. 
     Si noti che quando si testa un gioco che si sta creando la working directory e 
     la program directory saranno diverse. In tal caso, la directory di lavoro &egrave; il luogo 
-    in cui &egrave; memorizzato il file editabile del gioco, mentre la directory del programma è 
+    in cui &egrave; memorizzato il file editabile del gioco, mentre la directory del programma &egrave; 
     una directory temporanea per il test.<br>
   <tt><b>temp_directory*</b></tt> 
     Directory temporanea creata per il gioco (escluso il backslash finale). 
@@ -208,7 +208,7 @@ la possibilit&agrave; di fornire righe di comando al gioco in esecuzione
   <tt><b>parameter_string(n)</b></tt> 
     Restituisce il parametro della riga di comando di indice n. 
     Il primo parametro ha indice 1. L'ultimo ha indice parameter_count (). 
-    L’indice 0 &egrave; un indice speciale: è il nome del file eseguibile del gioco (incluso il percorso).<br>
+    L’indice 0 &egrave; un indice speciale: &egrave; il nome del file eseguibile del gioco (incluso il percorso).<br>
 </blockquote>
 
 <p>
@@ -229,12 +229,12 @@ Infine, se siete interessati alla dimensione del disco e allo spazio libero,
 <blockquote>
   <tt><b>disk_size(drive)</b></tt> 
   Restituisce la dimensione del disco indicata in byte. “drive” deve essere una 
-  lettera maiuscola, ad esempio 'C'. Se non si specifica l'unit&agrave;, verrà restituita 
+  lettera maiuscola, ad esempio 'C'. Se non si specifica l'unit&agrave;, verr&agrave; restituita 
   la dimensione dell'unit&agrave; in cui si trova la directory di lavoro.<br>
   <tt><b>disk_free(drive)</b></tt> 
   Restituisce la quantit&agrave; di spazio libero sul disco indicata in byte. 
   “drive” deve essere una lettera maiuscola, ad esempio 'C'. 
-  Se non si specifica l'unit&agrave;, verrà restituita la quantità di spazio 
+  Se non si specifica l'unit&agrave;, verr&agrave; restituita la quantit&agrave; di spazio 
   libero dell'unit&agrave; in cui si trova la directory di lavoro.<br>
 </blockquote>
 

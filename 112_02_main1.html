@@ -19,7 +19,7 @@ istanze di oggetti.
 Con questa azione puoi creare un''istanza di un oggetto. Devi specificare quale
 oggetto creare e la posizione dell'istanza. Se spunti la casellina <b>Relative</b>,
 la posizione sar&agrave; relativa a quella dell'istanza attuale. Creare istanze durante
-il gioco &egrave; estremamente utile. Un'astronave pu&ograve; creare proiettili, una bomba può
+il gioco &egrave; estremamente utile. Un'astronave pu&ograve; creare proiettili, una bomba pu&ograve;
 creare un'esplosione, ecc. In diversi giochi sar&agrave; utile avere un oggetto controller
 che crei a intervalli di tempo mostri o altri oggetti. Per le istanze create con
 questa azione viene eseguito l'evento Create.
@@ -29,7 +29,7 @@ questa azione viene eseguito l'evento Create.
 Questa azione funziona esattamente come quella precedente, ma ha due campi
 d'inserimento in pi&ugrave;. Qui puoi anche specificare la velocit&agrave; e la direzione
 dell'instanza che verr&agrave; creata. Se spunti la casellina <B>Relative</B>,
-la posizione sar&agrave; relativa, ma non lo saranno la velocità e la direzione.
+la posizione sar&agrave; relativa, ma non lo saranno la velocit&agrave; e la direzione.
 Per esempio, per far muovere un proiettile nella direzione della persona che
 lo spara devi usare un piccolo trucco. Inserisci 0,0 come posizione, e spunta
 la casellina <B>Relative</B>. Come direzione ci serve la direzione attuale
@@ -63,7 +63,7 @@ Questa azione distrugge l'istanza attuale. L'evento Destroy verr&agrave; eseguit
 <p>
 <b><img src="images/action_killposition.bmp"> Destroy at Position</b><br>
 Questa azione distrugge tutti gli oggetti il cui bounding box contiene la
-posizione indicata. Ci&ograve; può essere utile, ad esempio, per l'esplosione di una bomba.
+posizione indicata. Ci&ograve; pu&ograve; essere utile, ad esempio, per l'esplosione di una bomba.
 Se spunti la casellina <b>Relative</b>, la posizione indicata sar&agrave; relativa a
 quella dell'istanza attuale.
 
@@ -74,10 +74,10 @@ Puoi anche indicare quale subimmagine debba essere visualizzata. Normalmente dov
 scegliere 0 (la prima subimmagine) a meno che non ti serva una subimmagine in particolare.
 Usa -1 se non vuoi cambiare la subimmagine attualmente visualizzata. Puoi infine
 cambiare la velocit&agrave; dell'animazione delle subimmagini. Se vuoi che sia visualizzata
-soltanto una subimmagine, imposta la velocit&agrave; a 0. Se la velocità &egrave; maggiore di 1,
+soltanto una subimmagine, imposta la velocit&agrave; a 0. Se la velocit&agrave; &egrave; maggiore di 1,
 alcune subimmagini verranno saltate. Non usare velocit&agrave; negative.
 Cambiare sprite &egrave; molto utile. Per esempio, capita spesso che tu voglia cambiare
-lo sprite di un personaggio a seconda della direzione in cui cammina. Ci&ograve; può essere realizzato
+lo sprite di un personaggio a seconda della direzione in cui cammina. Ci&ograve; pu&ograve; essere realizzato
 creando sprite differenti per ognuna delle (quattro) direzioni e inserendo
 all'interno degli eventi Keyboard delle le quattro frecce il cambiamento della direzione
 e dello sprite.
@@ -85,15 +85,15 @@ e dello sprite.
 <p>
 <b><img src="images/action_spritetransform.bmp"> Transform Sprite</b><br>
 Usa questa azione per cambiare la dimensione e la rotazione dello sprite dell'istanza.
-Usa i fattori scalari per renderlo pi&ugrave; grande o più piccolo. L'angolo ruota lo sprite
+Usa i fattori scalari per renderlo pi&ugrave; grande o pi&ugrave; piccolo. L'angolo ruota lo sprite
 in senso antiorario. Per esempio, per ruotare lo sprite nella direzione del movimento
-usa <tt>direction</tt> come angolo. Ci&ograve; può essere utile per un'automobile. Puoi
+usa <tt>direction</tt> come angolo. Ci&ograve; pu&ograve; essere utile per un'automobile. Puoi
 anche indicare se lo sprite debba essere specchiato orizzontalmente o verticalmente.
 <b><i>Questa azione &egrave; disponibile soltanto nella Standard Edition.</i></b>
 
 <p>
 <b><img src="images/action_spritecolor.bmp"> Color Sprite</b><br>
-Normalmente lo sprite &egrave; disegnato cos&igrave; com'è. Con questa azione puoi cambiare il colore
+Normalmente lo sprite &egrave; disegnato cos&igrave; com'&egrave;. Con questa azione puoi cambiare il colore
 dello sprite. Questo colore viene mescolato con lo sprite, ovvero viene combinato
 con i colori dello sprite. Se vuoi disegnare lo sprite in diversi colori dovresi
 creare lo sprite in bianco e nero e usare questa azione per cambiare il colore reale.
@@ -122,7 +122,7 @@ Se il suono indicato &egrave; in riproduzione, l'azione successiva verr&agrave; 
 Altrimenti verr&agrave; saltata. Puoi spuntare la casellina <b>Not</b> per
 indicare che l'azione successiva deve essere eseguita se il suono indicato
 non &egrave; in riproduzione. Ad esempio, puoi controllare se una musica di sottofondo
-&egrave; in riproduzione e, se non lo è, avviarne un'altra.
+&egrave; in riproduzione e, se non lo &egrave;, avviarne un'altra.
 Questa azione ritorna true quando il suono &egrave; realmente riprodotto dagli altoparlanti.
 Dopo aver eseguito l'azione per far partire un suono, questo non raggiunge immediatamente
 gli altoparlanti, perci&ograve; questa azione potrebbe ancora ritornare false per

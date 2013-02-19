@@ -38,7 +38,7 @@ azioni quando una domanda &egrave; falsa.
 
 <p>
 Per molte domande puoi indicare se devono applicare a tutte le istanza
-di un particolare oggetto. In questo caso il risultato &egrave; vero soltanto se è vero
+di un particolare oggetto. In questo caso il risultato &egrave; vero soltanto se &egrave; vero
 per tutte le istanze dell'oggetto. Per esempio, puoi controllare se per tutte
 le palline la posizione a destra &egrave; libera da collisioni.
 
@@ -58,7 +58,7 @@ verso una certa posizione.
 
 <p>
 <b><img src="images/action_ifcollision.bmp"> Check Collision</b><br>
-Questa &egrave; il contrario dell'azione precedente. Restituisce true se c'è una collisione
+Questa &egrave; il contrario dell'azione precedente. Restituisce true se c'&egrave; una collisione
 quando l'istanza corrente &egrave; piazzata ad una certa posizione (di nuovo, 
 si pu&ograve; scegliere se considerare solo i solidi).
 
@@ -79,10 +79,10 @@ Questo &egrave; spesso il momento di terminare un livello o una partita.
 <p>
 <b><img src="images/action_ifdice.bmp"> Test Chance</b><br>
 Bisogna specificare il numero di lati di un dado che viene lanciato. Quindi se il dado
-atterra su lato con uno, il risultato sar&agrave; positivo e verrà eseguite la prossima azione.
+atterra su lato con uno, il risultato sar&agrave; positivo e verr&agrave; eseguite la prossima azione.
 Questo pu&ograve; essere utilizzati per aggiungere un elemento di casualit&agrave; nel gioco. Per esempio,
 in ogni step puoi generare una bomba o cambiare una direzione con una certa probabilit&agrave;.
-Pi&ugrave; &egrave; grande il numero dei lati di un dado, più è piccola la probabilit&agrave;. Puoi usare
+Pi&ugrave; &egrave; grande il numero dei lati di un dado, pi&ugrave; &egrave; piccola la probabilit&agrave;. Puoi usare
 dei numeri reali. Per esempio se usi 1.5 lati la prossima azione
 verr&agrave; eseguita due volte su tre. Usare un numero pi&ugrave; piccolo di 1 non ha senso.
 
@@ -95,13 +95,13 @@ avr&agrave; risposto s&igrave;.
 <p>
 <b><img src="images/action_if.bmp"> Test Expression</b><br>
 Questa &egrave; l'azione di domanda pi&ugrave; generale. Puoi inserire un'espressione arbitraria.
-Se l'espressione restituisce true (cio&egrave;, se il numero è maggiore o uguale a 0.5)
+Se l'espressione restituisce true (cio&egrave;, se il numero &egrave; maggiore o uguale a 0.5)
 verr&agrave; eseguita la prossima azione. Vedi sotto per maggiori informazioni sulle espressioni.
 
 <p>
 <b><img src="images/action_ifmouse.bmp"> Check Mouse</b><br>
 Restituisce true se il tasto del mouse indicato viene premuto. Un uso standard
-&egrave; nell'evento step. Puoi controllare se un tasto del mouse è premuto, e se lo è, 
+&egrave; nell'evento step. Puoi controllare se un tasto del mouse &egrave; premuto, e se lo &egrave;, 
 per esempio si pu&ograve; muovere in quella posizione (usa l'azione "jump to a point" con
 i valori <tt>mouse_x</tt> e <tt>mouse_y</tt>).
 
@@ -134,7 +134,7 @@ un certo numero di volte. Devi semplicemente indicare il numero.
 <b><img src="images/action_exit.bmp"> Exit Event</b><br>
 Quando questa azione viene incontrata non verranno pi&ugrave; eseguite altre azioni
 in questo evento. Questo &egrave; usato tipicamente dopo una domanda. Per esempio, quando
-una posizione &egrave; libera non c'è bisogno di fare niente quindi bisogna uscire dall'evento.
+una posizione &egrave; libera non c'&egrave; bisogno di fare niente quindi bisogna uscire dall'evento.
 In questo esempio, le azioni seguenti vengono eseguite solo quando c'&egrave;
 una collisione.
 

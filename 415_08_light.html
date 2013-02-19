@@ -15,7 +15,7 @@ Le scene raffigurate con le funzioni citate sopra sono piuttosto piatte dato che
 Anche il colore se le facciate sono uguali, indipendentemente dal loro orientamento.
 Per creare delle scene pi&ugrave; realistiche da guardare dovete abilitare l’illuminazione e
 sistemare le luci nei posti esatti. La creazione di scene correttamente illuminate non
-&egrave; semplice, ma l’effetto è davvero soddisfacente.  
+&egrave; semplice, ma l’effetto &egrave; davvero soddisfacente.  
 
 <p>
 Per abilitare l’illuminazione potete usare la seguente funzione:
@@ -30,7 +30,7 @@ Quando usate l’illuminazione, viene determinato il colore per ogni vertice di 
 Poi, il colore dei pixels interni &egrave; basato sul colore di questi vertici. Ci sono due modi
 per realizzare ci&ograve;: Sia l’intero poligono prende lo stesso colore, o il colore &egrave;
 leggermente interpolato sopra il poligono. Viene usata predefinitivamente una
-sfumatura liscia. Ci&ograve; può essere modificato usando la seguente funzione:
+sfumatura liscia. Ci&ograve; pu&ograve; essere modificato usando la seguente funzione:
 
 <blockquote>
   <tt><b>d3d_set_shading(smooth)</b></tt>
@@ -46,7 +46,7 @@ La luce ha un colore. (Supportiamo solo luci diffuse, nessun riflesso speculare)
 	Esistono le seguenti funzioni per definire ed usare le luci:<blockquote>
   <tt><b>d3d_light_define_direction(ind,dx,dy,dz,col)</b></tt>
 	  Definisce una luce direzionale. <tt>ind</tt> &egrave; l'indice della luce (usa un puccolo
-	  numero positivo). (dx,dy,dz) &egrave; la direzione della luce. <tt>col</tt> è il
+	  numero positivo). (dx,dy,dz) &egrave; la direzione della luce. <tt>col</tt> &egrave; il
 	  colore della luce (spesso si usa <tt>c_white</tt>. 
 	  Questa funzione non attiva la luce.<br>
   <tt><b>d3d_light_define_point(ind,x,y,z,range,col)</b></tt>
@@ -62,7 +62,7 @@ La luce ha un colore. (Supportiamo solo luci diffuse, nessun riflesso speculare)
 <p>
     <br />
 La prossima funzione serve per controllare una particolare luce chiamata luce <i>ambientale</i>.
-La luce ambientale &egrave; una particolare luce che illumina dove non è presente della luce.
+La luce ambientale &egrave; una particolare luce che illumina dove non &egrave; presente della luce.
 E' effettivamente il colore della luminosit&agrave; della scena.
 Per controllare questa luce usate questa funzione:
 
@@ -77,7 +77,7 @@ direzione della luce e dalla perpendicolarit&agrave; della superficie, cio&egrav
 rotta di puntamento lontana dalla facciata, questa rotta &egrave; chiamata "normale" (normal)
 di una superficie. Quindi, per creare oggetti illuminati
 avete bisogno non solo di fornire la posizione dei vertici ma anche le loro
-perpendicolarit&agrave;. Sono disponibili per questa necessità quattro funzioni per
+perpendicolarit&agrave;. Sono disponibili per questa necessit&agrave; quattro funzioni per
 definire i vertici delle primitive:
 
 <p>
