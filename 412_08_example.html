@@ -9,25 +9,25 @@
 <!--START-->
 
 
-<h3>Firework Example</h3>
+<h3>Esempio di fuoco d’artificio</h3>
 
-Here is an example of a particle system that creates fireworks. 
-The firework uses two particle types: one that forms the rocket 
-and one that forms the actual fireworks. The rocket generates 
-the firework particles when it dies. We also generate one 
-emitter in the particle system that regularly stream out rocket 
-particles along the bottom of the screen. To make this work you need an object. 
-In its creation event we place the following code that creates 
-the particle types, particle system, and the emitter:
+Ecco un esempio di un sistema particellare che crea fuochi d'artificio. 
+Il fuoco d'artificio utilizza due tipi di particelle: uno che forma il 
+razzo e uno che fa l’effettivo fuochi d'artificio. Il razzo genera le 
+particelle del fuoco d'artificio solo quando muore. Dobbiamo anche creare
+un emettitore nel sistema particellare che regolarmente genera il flusso 
+delle particelle del razzo lungo la parte inferiore dello schermo. Per fare 
+questo lavoro è necessario un oggetto. Nel suo evento create mettiamo il 
+seguente codice che crea i tipi di particelle, il sistema di particelle, e l'emettitore:
 
 <p>
 <blockquote>
 <pre>
 {
-  // make the particle system
+  // crea il sistema particellare
   ps = part_system_create();
 
-  // the firework particles
+  // particelle del fuoco d'artificio
   pt1 = part_type_create();
   part_type_shape(pt1,pt_shape_flare);
   part_type_size(pt1,0.1,0.2,0,0);
@@ -38,7 +38,7 @@ the particle types, particle system, and the emitter:
   part_type_life(pt1,20,30);
   part_type_gravity(pt1,0.2,270);
 
-  // the rocket
+  // il razzo
   pt2 = part_type_create();
   part_type_shape(pt2,pt_shape_sphere);
   part_type_size(pt2,0.2,0.2,0,0);
@@ -47,19 +47,20 @@ the particle types, particle system, and the emitter:
   part_type_color2(pt2,c_white,c_gray);
   part_type_life(pt2,30,60);
   part_type_gravity(pt2,0.2,270);
-  part_type_death(pt2,150,pt1);    // create the firework on death
+  part_type_death(pt2,150,pt1);    // crea il fuoco d'artificio quando muore il razzo
 
-  // create the emitter
+  // crea l'emettitore
   em = part_emitter_create(ps);
   part_emitter_region(ps,em,100,540,480,490,ps_shape_rectangle,ps_distr_linear);
-  part_emitter_stream(ps,em,pt2,-4);   // create one every four steps
+  part_emitter_stream(ps,em,pt2,-4);   // crea uno ogni 4 passi
 }
 </pre>
 </blockquote>
 
 <p>
-That will do the trick. You might want to make sure the particle system (and maybe particle types) are
-destroyed when moving to another room, otherwise the firework will continue forever.
+Questo creerà l’effetto. È necessario assicurarsi che il sistema particellare 
+(e probabilmente anche i tipi) vengano distrutti quando si cambia livello (room), 
+altrimenti il fuoco d’artificio continuerà a vivere per sempre.
 
 <!--END-->
 </body>
