@@ -6,3 +6,4 @@ s/à/\&agrave;/g
 s/ì/\&igrave;/g
 s/ò/\&ograve;/g
 s/ù/\&ugrave;/g
+s/’/'/g
