@@ -12,43 +12,43 @@
 
 In molti giochi alcune cose devono avvenire in determinati momenti nel tempo. Puoi
 provare a farcela usando gli alarm event ma quando le cose diventano troppo
-complicate questo non andrà più bene. La risorsa timeline (linea del tempo) è pensata per
+complicate questo non andr&agrave; pi&ugrave; bene. La risorsa timeline (linea del tempo) &egrave; pensata per
 questo. In una timeline puoi specificare quali azioni devono avvenire in determinati
 momenti nel tempo. Puoi usare tutte le azioni che potresti usare nei
 diversi eventi. Una volta creata una timeline puoi assegnarla a
-un'istanza di un oggetto. Quest'istanza eseguirà le azioni nei
-momenti indicati nel tempo. Quest'esempio ti spiegherà meglio. Mettiamo che tu
+un'istanza di un oggetto. Quest'istanza eseguir&agrave; le azioni nei
+momenti indicati nel tempo. Quest'esempio ti spiegher&agrave; meglio. Mettiamo che tu
 voglia creare una guardia. Questa guardia dovrebbe muoversi per 20 step a sinistra, poi
 10 verso l'alto, 20 a destra, 10 in basso e poi fermarsi.Per farlo tu
 crei una timeline dove tu cominci con l'impostazione del movimento a sinistra (moment 0). Al
 moment (momento) 20 imposti il movimento verso l'alto, al moment 30 il movimento a destra, al
 moment 50 il movimento verso il basso e al moment 60 fermi il movimento.Ora
-puoi assegnare questa timeline alla guardia e la guardia  farà esattamente ciò
-che avevi pianificato. Puoi anche usare una timeline per controllare il tuo gioco in modo più
+puoi assegnare questa timeline alla guardia e la guardia  far&agrave; esattamente ci&ograve;
+che avevi pianificato. Puoi anche usare una timeline per controllare il tuo gioco in modo pi&ugrave;
 globale. Crea un object controllore invisibile, crea una timeline che in
 certi momenti crea nemici, e assegnala all'object controllore. Se
 cominci a lavorare con le timeline potrai capire che sono molto potenti.
 
 <p>
 Per creare una timeline, scegli <b>Create Time Line</b> (crea timeline) dal menu <b>Resources</b> (risorse).
-Comparirà la finestra seguente.
+Comparir&agrave; la finestra seguente.
 
 <p>
 <img src="images/form_timeline.jpg">
 
 <p>
-Sembra un po' somigliante alla finestra delle proprietà degli object. Sulla sinistra puoi impostare il
+Sembra un po' somigliante alla finestra delle propriet&agrave; degli object. Sulla sinistra puoi impostare il
 nome e ci sono pulsanti per aggiungere e modificare i moment nella timeline. Accanto
-c'è la lista dei moment. Questa lista specifica i moment espressi in step
-in cui avverrà/avverranno la/le azione/azioni assegnata/assegnate. Poi c'è la familiare lista delle
-azioni per il moment selezionato e infine è disponibile l'insieme di
+c'&egrave; la lista dei moment. Questa lista specifica i moment espressi in step
+in cui avverr&agrave;/avverranno la/le azione/azioni assegnata/assegnate. Poi c'&egrave; la familiare lista delle
+azioni per il moment selezionato e infine &egrave; disponibile l'insieme di
 tutte le azioni.
 
 Sulla sinistra puoi usare i pulsanti seguenti:
 
 <ul>
-  <li><b>Add</b> (aggiungi). Usalo per aggiungere un moment alla timeline. Devi indicare il moment, cioè
-    il numero di step che sono passati da quando la timeline è stata fatta partire. Ora puoi
+  <li><b>Add</b> (aggiungi). Usalo per aggiungere un moment alla timeline. Devi indicare il moment, cio&egrave;
+    il numero di step che sono passati da quando la timeline &egrave; stata fatta partire. Ora puoi
     trascinare le azioni nella lista come per gli event degli object.</li>
   <li><b>Change</b> (cambia). Usa questo pulsante per cambiare gli stp per il moment correntemente selezionato.</li>
   <li><b>Delete</b> (rimuovi). Usa questo pulsante per rimuovere un moment o un insieme di moment. Devi indicare lo step
@@ -56,7 +56,7 @@ Sulla sinistra puoi usare i pulsanti seguenti:
   <li><b>Clear</b> (cancella tutto). Usa questo pulsante per cancellare l'intera lista dei moment.</li>
   <li><b>Shift</b> (sposta). Usa questo pulsante per spostare un insieme di moment in un nuovo moment. Devi indicare
     l'inizio dell'insieme, la fine dell'insieme, e il nuovo step dove l'inizio dell'insieme
-    dovrà essere spostato. Quando due moment coincidono, le loro azioni verranno unificate.</li>
+    dovr&agrave; essere spostato. Quando due moment coincidono, le loro azioni verranno unificate.</li>
   <li><b>Duplicate</b> (duplica). Ha circa lo stesso effetto del pulsante "Shift", ma in questo caso
     viene creata una copia dei moment.</li>
   <li><b>Spread</b> (allontana/avvicina). Usa questo pulsante per distanziare un insieme di moment aggiungendo del tempo tra loro o
@@ -64,7 +64,7 @@ Sulla sinistra puoi usare i pulsanti seguenti:
     per li distanziamento. Una percentuale uguale a 100 non provoca cambiamenti. Con valori minori di 100 i moment vengono
     avvicinati e con valori maggiori di 100 vengono distanziati.Per esempio, se hai dei moment agli step 5, 8
     e 12 e tu indichi come range 5:12 e percentuale 200, i moment verranno spostati agli step 5, 11 e 19.
-    (Gli intervalli fra loro sono raddoppiati.) Quando due o più moment coincidono, le loro azioni verranno unificate.</li>
+    (Gli intervalli fra loro sono raddoppiati.) Quando due o pi&ugrave; moment coincidono, le loro azioni verranno unificate.</li>
   <li><b>Merge</b> (unifica). Usa questo pulsante per unificare un insieme di moment in uno solo. Specifica l'inizio e la
     fine dell'insieme e verranno tutti unificati nel primo moment.</li>
 </ul>
@@ -74,7 +74,7 @@ Asicurati di non creare moment negativi.
 Non verranno mai eseguiti.
 
 <p>
-C'è anche un pulsante <b>Show Information</b> (mostra informazioni) che mostra la timeline in una finestra leggibile.
+C'&egrave; anche un pulsante <b>Show Information</b> (mostra informazioni) che mostra la timeline in una finestra leggibile.
 
 <p>
 Ci sono alcune azioni relative alle timeline. Le puoi trovare nella sezione

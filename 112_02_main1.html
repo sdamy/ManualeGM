@@ -18,33 +18,33 @@ istanze di oggetti.
 <b><img src="images/action_create.bmp"> Create Instance</b><br>
 Con questa azione puoi creare un''istanza di un oggetto. Devi specificare quale
 oggetto creare e la posizione dell'istanza. Se spunti la casellina <b>Relative</b>,
-la posizione sarà relativa a quella dell'istanza attuale. Creare istanze durante
-il gioco è estremamente utile. Un'astronave può creare proiettili, una bomba può
-creare un'esplosione, ecc. In diversi giochi sarà utile avere un oggetto controller
+la posizione sar&agrave; relativa a quella dell'istanza attuale. Creare istanze durante
+il gioco &egrave; estremamente utile. Un'astronave pu&ograve; creare proiettili, una bomba può
+creare un'esplosione, ecc. In diversi giochi sar&agrave; utile avere un oggetto controller
 che crei a intervalli di tempo mostri o altri oggetti. Per le istanze create con
 questa azione viene eseguito l'evento Create.
 
 <p>
 <b><img src="images/action_createspeed.bmp"> Create Moving</b><br>
 Questa azione funziona esattamente come quella precedente, ma ha due campi
-d'inserimento in più. Qui puoi anche specificare la velocità e la direzione
-dell'instanza che verrà creata. Se spunti la casellina <B>Relative</B>,
-la posizione sarà relativa, ma non lo saranno la velocità e la direzione.
+d'inserimento in pi&ugrave;. Qui puoi anche specificare la velocit&agrave; e la direzione
+dell'instanza che verr&agrave; creata. Se spunti la casellina <B>Relative</B>,
+la posizione sar&agrave; relativa, ma non lo saranno la velocità e la direzione.
 Per esempio, per far muovere un proiettile nella direzione della persona che
 lo spara devi usare un piccolo trucco. Inserisci 0,0 come posizione, e spunta
 la casellina <B>Relative</B>. Come direzione ci serve la direzione attuale
-dell'istanza della persona, che può essere ottenuta scrivendo nel campo
-<tt>direction</tt>.(In realtà questa è una variabile che indica sempre la
+dell'istanza della persona, che pu&ograve; essere ottenuta scrivendo nel campo
+<tt>direction</tt>.(In realt&agrave; questa &egrave; una variabile che indica sempre la
 direzione in cui si sta muovendo l'istanza.)
 
 <p>
 <b><img src="images/action_createrandom.bmp"> Create Random</b><br>
 Questa azione ti permette di creare un'istanza di un oggetto scelto
 casualmente fra quattro. Devi specificare i quattro oggetti e la posizione.
-Verrà creata un'istanza di uno di questi quattro oggetti nella posizione
-indicata. Se spunti la casellina <b>Relative</b>, la posizione sarà relativa 
+Verr&agrave; creata un'istanza di uno di questi quattro oggetti nella posizione
+indicata. Se spunti la casellina <b>Relative</b>, la posizione sar&agrave; relativa 
 a quella dell'istanza attuale. Se ti serve una scelta fra meno di quattro
-oggetti puoi lasciare No Object per alcuni di essi. Questa azione può essere
+oggetti puoi lasciare No Object per alcuni di essi. Questa azione pu&ograve; essere
 utile per creare un nemico casuale in una certa posizione, ad esempio.
 
 <p>
@@ -58,13 +58,13 @@ nuovo oggetto.
 
 <p>
 <b><img src="images/action_destroy.bmp"> Destroy Instance</b><br>
-Questa azione distrugge l'istanza attuale. L'evento Destroy verrà eseguito.
+Questa azione distrugge l'istanza attuale. L'evento Destroy verr&agrave; eseguito.
 
 <p>
 <b><img src="images/action_killposition.bmp"> Destroy at Position</b><br>
 Questa azione distrugge tutti gli oggetti il cui bounding box contiene la
-posizione indicata. Ciò può essere utile, ad esempio, per l'esplosione di una bomba.
-Se spunti la casellina <b>Relative</b>, la posizione indicata sarà relativa a
+posizione indicata. Ci&ograve; può essere utile, ad esempio, per l'esplosione di una bomba.
+Se spunti la casellina <b>Relative</b>, la posizione indicata sar&agrave; relativa a
 quella dell'istanza attuale.
 
 <p>
@@ -73,11 +73,11 @@ Usa questa azione per cambiare lo sprite dell'istanza. Devi indicare il nuovo sp
 Puoi anche indicare quale subimmagine debba essere visualizzata. Normalmente dovresti
 scegliere 0 (la prima subimmagine) a meno che non ti serva una subimmagine in particolare.
 Usa -1 se non vuoi cambiare la subimmagine attualmente visualizzata. Puoi infine
-cambiare la velocità dell'animazione delle subimmagini. Se vuoi che sia visualizzata
-soltanto una subimmagine, imposta la velocità a 0. Se la velocità è maggiore di 1,
-alcune subimmagini verranno saltate. Non usare velocità negative.
-Cambiare sprite è molto utile. Per esempio, capita spesso che tu voglia cambiare
-lo sprite di un personaggio a seconda della direzione in cui cammina. Ciò può essere realizzato
+cambiare la velocit&agrave; dell'animazione delle subimmagini. Se vuoi che sia visualizzata
+soltanto una subimmagine, imposta la velocit&agrave; a 0. Se la velocità &egrave; maggiore di 1,
+alcune subimmagini verranno saltate. Non usare velocit&agrave; negative.
+Cambiare sprite &egrave; molto utile. Per esempio, capita spesso che tu voglia cambiare
+lo sprite di un personaggio a seconda della direzione in cui cammina. Ci&ograve; può essere realizzato
 creando sprite differenti per ognuna delle (quattro) direzioni e inserendo
 all'interno degli eventi Keyboard delle le quattro frecce il cambiamento della direzione
 e dello sprite.
@@ -85,49 +85,49 @@ e dello sprite.
 <p>
 <b><img src="images/action_spritetransform.bmp"> Transform Sprite</b><br>
 Usa questa azione per cambiare la dimensione e la rotazione dello sprite dell'istanza.
-Usa i fattori scalari per renderlo più grande o più piccolo. L'angolo ruota lo sprite
+Usa i fattori scalari per renderlo pi&ugrave; grande o più piccolo. L'angolo ruota lo sprite
 in senso antiorario. Per esempio, per ruotare lo sprite nella direzione del movimento
-usa <tt>direction</tt> come angolo. Ciò può essere utile per un'automobile. Puoi
+usa <tt>direction</tt> come angolo. Ci&ograve; può essere utile per un'automobile. Puoi
 anche indicare se lo sprite debba essere specchiato orizzontalmente o verticalmente.
-<b><i>Questa azione è disponibile soltanto nella Standard Edition.</i></b>
+<b><i>Questa azione &egrave; disponibile soltanto nella Standard Edition.</i></b>
 
 <p>
 <b><img src="images/action_spritecolor.bmp"> Color Sprite</b><br>
-Normalmente lo sprite è disegnato così com'è. Con questa azione puoi cambiare il colore
+Normalmente lo sprite &egrave; disegnato cos&igrave; com'è. Con questa azione puoi cambiare il colore
 dello sprite. Questo colore viene mescolato con lo sprite, ovvero viene combinato
 con i colori dello sprite. Se vuoi disegnare lo sprite in diversi colori dovresi
 creare lo sprite in bianco e nero e usare questa azione per cambiare il colore reale.
-Puoi anche indicare la trasparenza. Con il valore 1 lo sprite sarà opaco, mentre 
-con un valore nullo (zero) sarà completamente trasparente, diventando perciò invisibile.
+Puoi anche indicare la trasparenza. Con il valore 1 lo sprite sar&agrave; opaco, mentre 
+con un valore nullo (zero) sar&agrave; completamente trasparente, diventando perci&ograve; invisibile.
 Con un valore intermedio potrai vedere parzialmente il background attraverso lo sprite.
-Ciò è utile per creare esplosioni.
-<b><i>Questa azione è disponibile soltanto nella Standard Edition.</i></b>
+Ci&ograve; &egrave; utile per creare esplosioni.
+<b><i>Questa azione &egrave; disponibile soltanto nella Standard Edition.</i></b>
 
 <p>
 <b><img src="images/action_sound.bmp"> Play Sound</b><br>
 Con questa azione puoi riprodurre uno dei suoni che hai inserito nel tuo gioco.
 Puoi scegliere il suono che vuoi riprodurre e se questo debba essere riprodotto
 solo una volta (l'opzione di default) o debba ripetersi all'infinito.
-Possono essere riprodotti nello stesso momento più suoni wav, ma un solo midi.
-Perciò se avvii un suono midi, verrà fermato il suono midi attualmente in riproduzione.
+Possono essere riprodotti nello stesso momento pi&ugrave; suoni wav, ma un solo midi.
+Perci&ograve; se avvii un suono midi, verr&agrave; fermato il suono midi attualmente in riproduzione.
 
 <p>
 <b><img src="images/action_soundend.bmp"> Stop Sound</b><br>
-Questa azione ferma il suono indicato. Se più istanze di questo suono
+Questa azione ferma il suono indicato. Se pi&ugrave; istanze di questo suono
 sono in riproduzione, verranno fermate tutte.
 
 <p>
 <b><img src="images/action_ifsound.bmp"> Check Sound</b><br>
-Se il suono indicato è in riproduzione, l'azione successiva verrà eseguita.
-Altrimenti verrà saltata. Puoi spuntare la casellina <b>Not</b> per
+Se il suono indicato &egrave; in riproduzione, l'azione successiva verr&agrave; eseguita.
+Altrimenti verr&agrave; saltata. Puoi spuntare la casellina <b>Not</b> per
 indicare che l'azione successiva deve essere eseguita se il suono indicato
-non è in riproduzione. Ad esempio, puoi controllare se una musica di sottofondo
-è in riproduzione e, se non lo è, avviarne un'altra.
-Questa azione ritorna true quando il suono è realmente riprodotto dagli altoparlanti.
+non &egrave; in riproduzione. Ad esempio, puoi controllare se una musica di sottofondo
+&egrave; in riproduzione e, se non lo è, avviarne un'altra.
+Questa azione ritorna true quando il suono &egrave; realmente riprodotto dagli altoparlanti.
 Dopo aver eseguito l'azione per far partire un suono, questo non raggiunge immediatamente
-gli altoparlanti, perciò questa azione potrebbe ancora ritornare false per
+gli altoparlanti, perci&ograve; questa azione potrebbe ancora ritornare false per
 qualche momento. Allo stesso mondo, quando il suono viene fermato, lo si percepisce
-ancora per un attimo (ad esempio a causa dell'eco) e l'azione ritornerà ancora true.
+ancora per un attimo (ad esempio a causa dell'eco) e l'azione ritorner&agrave; ancora true.
 
 <p>
 <b><img src="images/action_roomprevious.bmp"> Previous Room</b><br>
@@ -135,7 +135,7 @@ Con questa azione il gioco torna alla room precedente. Puoi indicare l'effetto d
 transizione tra le room. Dovresti fare delle prove per vedere quale preferisci.
 Quando le room non hanno la stessa dimensione sarebbe meglio non usare gli effetti
 di transizione.
-Se ti trovi nella prima room il gioco darà errore.
+Se ti trovi nella prima room il gioco dar&agrave; errore.
 
 <p>
 <b><img src="images/action_roomnext.bmp"> Next Room</b><br>

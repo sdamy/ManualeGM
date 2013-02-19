@@ -2,57 +2,57 @@
 
 <html>
 <head>
-<title>Considerazioni sulla velocità</title>
+<title>Considerazioni sulla velocit&agrave;</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h1>Considerazioni sulla velocità</h1>
+<h1>Considerazioni sulla velocit&agrave;</h1>
 
-Se stai facendo giochi complessi probabilmente vorrai farli andare il più velocemente possibile.
+Se stai facendo giochi complessi probabilmente vorrai farli andare il pi&ugrave; velocemente possibile.
 Anche se <i>GameMaker</i> fa del suo meglio per far andare velocemente i goichi, molto dipende da come
-strutturi il tuo gioco. Inoltre, è piuttosto facile creare giochi che usano grandi quantità di
-memoria. In questa pagina diamo dei consigli su come rendere i tuoi giochi più veloci e più piccoli.
+strutturi il tuo gioco. Inoltre, &egrave; piuttosto facile creare giochi che usano grandi quantit&agrave; di
+memoria. In questa pagina diamo dei consigli su come rendere i tuoi giochi pi&ugrave; veloci e più piccoli.
 
 <p>
 Prima di tutto, guarda attentamente gli sprite e i background che usi.
 Gli sprite animati occupano un sacco di memoria e per disegnare tanti sprite ci vuole tanto tempo.
-Perciò i tuoi sprite dovrebbero essere più piccoli possibile. Rimuovi le aree invisibili intorno a esso
+Perci&ograve; i tuoi sprite dovrebbero essere pi&ugrave; piccoli possibile. Rimuovi le aree invisibili intorno a esso
 (il comando <b>Crop</b> (taglia) nello sprite editor lo fa automaticamente. Lo stesso
 vale per i background.
 Se stai usando un background per coprire, assicurati di disattivare l'uso del
 colore di sfondo (background color).
 
 <p>
-Se usi la modalità Fullscreen, assicurati che la dimensione della room
-(o della finestra) non sia mai maggiore di quella dello schermo. La maggior parte delle schede grafiche può
-ingrandire efficientemente le immagini ma sono molto più lente a rimpicciolirle!
-Quando è possibile, disattiva il cursore. Rallenta la grafica.
+Se usi la modalit&agrave; Fullscreen, assicurati che la dimensione della room
+(o della finestra) non sia mai maggiore di quella dello schermo. La maggior parte delle schede grafiche pu&ograve;
+ingrandire efficientemente le immagini ma sono molto pi&ugrave; lente a rimpicciolirle!
+Quando &egrave; possibile, disattiva il cursore. Rallenta la grafica.
 
 <p>
 Inoltre, sii attento se usi molte view. Per ognuna di esse la room viene ridisegnata.
 
 <p>
-Riguardo alla grafica, ci sono anche altri aspetti che influenzano la velocità.
+Riguardo alla grafica, ci sono anche altri aspetti che influenzano la velocit&agrave;.
 Assicurati di avere meno istanze possibili. In particolare, distruggi
-le istanze quando non sono più necessarie (ad esempio quando lasciano la room).
-Così eviti moltissimo lavoro negli step event e nei draw event delle istanze. Spesso
-le cose non necessitano di essere controllate ad ogni step. L'interpretazione del codice è
-abbastanza veloce, ma è comunque interpretata. Inoltre, alcune funzioni e azioni
+le istanze quando non sono pi&ugrave; necessarie (ad esempio quando lasciano la room).
+Cos&igrave; eviti moltissimo lavoro negli step event e nei draw event delle istanze. Spesso
+le cose non necessitano di essere controllate ad ogni step. L'interpretazione del codice &egrave;
+abbastanza veloce, ma &egrave; comunque interpretata. Inoltre, alcune funzioni e azioni
 richiedono tantissimo tempo; in particolare quelle che devono controllare tutte le istanze
 (per esempio l'azione rimbalzo (bounce)).
 
 <p>
 Quando ti servono processi complicati (per esempio un'intelligenza artificiale avanzata)
-faresti meglio a scrivere una DLL in un altro linguaggio e creare un'estensione fuori da ciò
+faresti meglio a scrivere una DLL in un altro linguaggio e creare un'estensione fuori da ci&ograve;
 per importare la DLL usando le funzioni descritte nella pagina <A HREF="414_00_dlls.html">Usando le DLL</A>.
 </p>
 
 <p>
 Rifletti su dove calcolare i collision event. Di solito hai due
 opzioni. Gli object che non hanno alcun collision event sono calcolati molto
-più velocemente, quindi preferibilmente calcola le collisioni negli object di cui usi
+pi&ugrave; velocemente, quindi preferibilmente calcola le collisioni negli object di cui usi
 solo poche istanze.
 
 <p>
@@ -62,7 +62,7 @@ puoi esemplificarli.
 
 <p>
 Infine, se vuoi fare un gioco che possa essere giocato da molte persone, assicurati
-di testarlo su diverse piattaforme, in particolare su quelle più vecchie.
+di testarlo su diverse piattaforme, in particolare su quelle pi&ugrave; vecchie.
 
 
 <!--END-->
@@ -74,7 +74,7 @@ speed
 fast games
 testing
 memory consumption
-velocità
+velocit&agrave;
 giochi veloci
 controllare
 consumo di memoria

@@ -10,18 +10,18 @@
 
 <h3>Mappe</h3>
 
-In un bel po’ di situazioni è necessario memorizzare delle coppie, 
+In un bel po’ di situazioni &egrave; necessario memorizzare delle coppie, 
 composte da una chiave e un valore. Per esempio, il personaggio di un 
-gioco può avere una certa quantità di elementi diversi e per ogni 
-singolo elemento può avere un certo numero dello stesso, come in un 
+gioco pu&ograve; avere una certa quantit&agrave; di elementi diversi e per ogni 
+singolo elemento pu&ograve; avere un certo numero dello stesso, come in un 
 gioco RPG dove si possono avere 10 pozioni di salute, 
-5 pozioni di mana e 100 monete d'oro. In questo caso l'elemento è 
-la chiave e il numero è il valore. Le mappe mantengono tali coppie, 
-in ordine di chiave. È possibile aggiungere delle coppie alla mappa 
+5 pozioni di mana e 100 monete d'oro. In questo caso l'elemento &egrave; 
+la chiave e il numero &egrave; il valore. Le mappe mantengono tali coppie, 
+in ordine di chiave. &Egrave; possibile aggiungere delle coppie alla mappa 
 e fare ricerche per trovare il valore corrispondente ad una certa chiave. 
-Poiché le chiavi sono ordinate si possono anche trovare chiavi precedenti 
-e successive. A volte è utile anche utilizzare una mappa per memorizzare 
-solo chiavi senza un valore corrispondente. In questo caso si può 
+Poich&eacute; le chiavi sono ordinate si possono anche trovare chiavi precedenti 
+e successive. A volte &egrave; utile anche utilizzare una mappa per memorizzare 
+solo chiavi senza un valore corrispondente. In questo caso si pu&ograve; 
 semplicemente utilizzare un valore pari a 0. Le seguenti funzioni sono disponibili:
 
 <p>
@@ -31,7 +31,7 @@ semplicemente utilizzare un valore pari a 0. Le seguenti funzioni sono disponibi
     in tutte le altre funzioni per accedere a particolari mappe.<br>
   <tt><b>ds_map_destroy(id)</b></tt> 
     Distrugge la mappa dato il suo id, liberando la memoria utilizzata. Non dimenticate 
-    di chiamare questa funzione quando si è pronti con la struttura.<br>
+    di chiamare questa funzione quando si &egrave; pronti con la struttura.<br>
   <tt><b>ds_map_clear(id)</b></tt> 
     Cancella la mappa dato il suo id, rimuovendo tutti i dati da essa, ma senza distruggerla.<br>
   <tt><b>ds_map_copy(id,source)</b></tt> 
@@ -39,37 +39,37 @@ semplicemente utilizzare un valore pari a 0. Le seguenti funzioni sono disponibi
   <tt><b>ds_map_size(id)</b></tt> 
     Restituisce il numero delle coppie chiave-valore memorizzate nella mappa.<br>
   <tt><b>ds_map_empty(id)</b></tt> 
-    Restituisce un valore se la mappa è vuota. È come testare se la dimensione è 0.<br>
+    Restituisce un valore se la mappa &egrave; vuota. &Egrave; come testare se la dimensione è 0.<br>
   <tt><b>ds_map_add(id,key,val)</b></tt> 
     Aggiunge una coppia chiave-valore alla mappa.<br>
   <tt><b>ds_map_replace(id,key,val)</b></tt> 
     Sostituisce il valore corrispondente alla chiave (key) con un nuovo valore (val).<br>
   <tt><b>ds_map_delete(id,key)</b></tt> 
     Cancella la chiave e il valore corrispondente 
-    dalla mappa. (Se ci sono più elementi con la stessa chiave, uno solo sarà rimosso).<br>
+    dalla mappa. (Se ci sono pi&ugrave; elementi con la stessa chiave, uno solo sar&agrave; rimosso).<br>
   <tt><b>ds_map_exists(id,key)</b></tt> 
     Restituisce un valore se la chiave esiste nella mappa.<br>
   <tt><b>ds_map_find_value(id,key)</b></tt> 
     Restituisce il valore corrispondente alla chiave.<br>
   <tt><b>ds_map_find_previous(id,key)</b></tt> 
-    Restituisce la chiave più grande nella mappa che è più piccola della chiave indicata 
+    Restituisce la chiave pi&ugrave; grande nella mappa che &egrave; più piccola della chiave indicata 
     come parametro. (Si noti che viene restituita la chiave, non il valore. 
-    È possibile utilizzare la procedura precedente per trovare il valore).<br>
+    &Egrave; possibile utilizzare la procedura precedente per trovare il valore).<br>
   <tt><b>ds_map_find_next(id,key)</b></tt> 
-    Restituisce la chiave più piccola nella mappa che è più 
+    Restituisce la chiave pi&ugrave; piccola nella mappa che &egrave; più 
     grande della chiave indicata come parametro.<br>
   <tt><b>ds_map_find_first(id)</b></tt> 
-    Restituisce la chiave più piccola nella mappa.<br>
+    Restituisce la chiave pi&ugrave; piccola nella mappa.<br>
   <tt><b>ds_map_find_last(id)</b></tt> 
-    Restituisce la chiave più grande nella mappa.<br>
+    Restituisce la chiave pi&ugrave; grande nella mappa.<br>
   <tt><b>ds_map_write(id)</b></tt> 
     Converte la struttura-dati (data structure) in una stringa e restituisce 
-    questa stringa. La stringa può quindi essere utilizzata, per esempio, 
+    questa stringa. La stringa pu&ograve; quindi essere utilizzata, per esempio, 
     per essere salvata in un file. Questa funzione fornisce un semplice 
     meccanismo per salvare strutture dati.<br>
   <tt><b>ds_map_read(id,str)</b></tt> 
     Legge la struttura dati dalla stringa passata come parametro 
-    (che può essere creata usando la chiamata precedente).<br>
+    (che pu&ograve; essere creata usando la chiamata precedente).<br>
 </blockquote>
 
 <!--END-->

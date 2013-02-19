@@ -11,7 +11,7 @@
 <h3>Messaggi popup e domande</h3>
 
 Esistono alcune funzioni per mostrare messaggi, domande, menu con scelte, o una
-finestra in cui il giocatore può inserire un numero, una stringa, o indicare un
+finestra in cui il giocatore pu&ograve; inserire un numero, una stringa, o indicare un
 colore o il nome di un file:
 
 <p>
@@ -21,17 +21,17 @@ colore o il nome di un file:
   <tt><b>show_message_ext(str,but1,but2,but3)</b></tt>
     Mostra una finestra con una stringa come messaggio e fino a 3 bottoni.
     	But1, but2 e but3 contengono il testo dei bottoni. Una stringa vuota
-    	indica che il bottone non verrà mostrato. Nelle stringhe puoi usare il
+    	indica che il bottone non verr&agrave; mostrato. Nelle stringhe puoi usare il
    	simbolo &amp; per indicare che il prossimo carattere dev'essere usato
    	come scorciatoia da tastiera per questo bottone. La funzione restituisce
    	il numero del bottone premuto (0 se il giocatore preme il tasto Esc).<br>
   <tt><b>show_question(str)</b></tt> 
-    Mostra una domanda; restituisce true quando il giocatore seleziona yes (sì),
+    Mostra una domanda; restituisce true quando il giocatore seleziona yes (s&igrave;),
     altrimenti false.<br>
   <tt><b>get_integer(str,def)</b></tt> 
-    Chiede un numero al giocatore. str è il messaggio, def il numero di default.<br>
+    Chiede un numero al giocatore. str &egrave; il messaggio, def il numero di default.<br>
   <tt><b>get_string(str,def)</b></tt> 
-    Chiede al giocatore una stringa. str è il messaggio, def la stringa default.<br>
+    Chiede al giocatore una stringa. str &egrave; il messaggio, def la stringa default.<br>
   <tt><b>message_background(back)</b></tt> 
     Imposta il background per le finestre pop-up di tutte le funzioni sopra.
     	back dev'essere uno dei backgrounds definiti nel gioco. Sfortunatamente,
@@ -45,12 +45,12 @@ colore o il nome di un file:
   <tt><b>message_button(spr)</b></tt> 
     Imposta lo sprite da usare per i bottoni nelle finestre pop-up.
     	spr dev'essere uno sprite composto da 3 immagini: la prima indica
-    	il bottone quando non è premuto, il secondo quando il puntatore
+    	il bottone quando non &egrave; premuto, il secondo quando il puntatore
     	del mouse sta sopra al bottone, il terzo quando il bottone viene
     	premuto. Sfortunatamente, i valori alpha non sono considerati, ma
     	anche qui il pixel in basso a sinistra indica il colore trasparente. <br>
   <tt><b>message_text_font(name,size,color,style)</b></tt> 
-    Imposta la font per il testo nella finestra pop-up. (Questa è una normale
+    Imposta la font per il testo nella finestra pop-up. (Questa &egrave; una normale
     font di Windows, non una delle risorse che puoi aggiungere nel gioco!) style
     indice lo stile della font (0=normale, 1=grassetto, 2=italico, 3=entrambi).<br>
   <tt><b>message_button_font(name,size,color,style)</b></tt> 
@@ -60,7 +60,7 @@ colore o il nome di un file:
 	
   <tt><b>message_text_charset(type,charset)</b></tt> 
     Questa funzione ti permette di cambiare il charset usato dalle finestre pop-up.
-	type può essere uno di questi: 
+	type pu&ograve; essere uno di questi: 
 	<blockquote><tt>
 	text_type<br />
 	button_type<br />
@@ -89,7 +89,7 @@ colore o il nome di un file:
 	</blockquote>
 	
   <tt><b>message_mouse_color(col)</b></tt> 
-    Imposta il colore della font per i bottoni nelle pop-up box quando il mouse è sopra di loro.<br>
+    Imposta il colore della font per i bottoni nelle pop-up box quando il mouse &egrave; sopra di loro.<br>
   <tt><b>message_input_color(col)</b></tt> 
     Imposta il colore dello sfondo della casella di testo.<br>
   <tt><b>message_caption(show,str)</b></tt> 
@@ -99,10 +99,10 @@ colore o il nome di un file:
     Imposta la posizione della finestra pop-up nello schermo. Usa -1, -1 per centrare la finestra.<br>
   <tt><b>message_size(w,h)</b></tt> 
     Stabilisce la dimensione della finestra pop-up nello schermo. Se scegli -1 per la larghezza,
-    	verrà usata la larghezza dell'immagine. Se scegli -1 per l'altezza, l'altezza verrà
+    	verr&agrave; usata la larghezza dell'immagine. Se scegli -1 per l'altezza, l'altezza verrà
     	calcolata in base al numero di linee del messaggio.<br>
   <tt><b>show_menu(str,def)</b></tt> 
-    Mostra un menu pop-up. str indica il testo del menu. Questo è composto dai
+    Mostra un menu pop-up. str indica il testo del menu. Questo &egrave; composto dai
     	differenti elementi del menu con una barra verticale tra di essi. Per
     	esempio, str = 'menu0|menu1|menu2'. Quando il primo elemento viene selezionato,
     	la funzione restituisce 0, ecc.
@@ -110,7 +110,7 @@ colore o il nome di un file:
   <tt><b>show_menu_pos(x,y,str,def)</b></tt> 
     Mostra un menu pop-up come nella funzione precedente, ma in delle coordinate specifiche.<br>
   <tt><b>get_color(defcol)</b></tt> 
-    Chiede un colore al giocatore. defcol è il colore di default. Se il giocatore preme
+    Chiede un colore al giocatore. defcol &egrave; il colore di default. Se il giocatore preme
     	Cancel/Annulla viene restituito -1.<br>
   <tt><b>get_open_filename(filter,fname)</b></tt> 
     Chiede al giocatore il nome di un file da aprire specificando il filtro. Il filtro ha
@@ -121,10 +121,10 @@ colore o il nome di un file:
   <tt><b>get_save_filename(filter,fname)</b></tt> 
     Chiede al giocatore il nome di un file da salvare.<br>
   <tt><b>get_directory(dname)</b></tt> 
-    Chiede una directory (cartella). dname è il nome di default. Se il giocatore preme
+    Chiede una directory (cartella). dname &egrave; il nome di default. Se il giocatore preme
     	Cancel/Annulla viene restituita una stringa vuota.<br>
   <tt><b>get_directory_alt(capt,root)</b></tt> 
-  Un modo alternativo per chiedere una directory. capt è la didascalia da mostrare,
+  Un modo alternativo per chiedere una directory. capt &egrave; la didascalia da mostrare,
   	la radice dell'albero da mostrare. Usa la stringa vuota per mostrare l'intero
   	albero. Se l'utente preme Cancel/Annulla viene restituita una stringa vuota.<br>
   <tt><b>show_error(str,abort)</b></tt> 

@@ -11,7 +11,7 @@
 <h3>Paths</h3>
 
 E’ possible creare dei path e aggiungere dei punti ad essi. Comunque non cambiate mai un
-path che è attualmente in uso da un'istanza. QUesto può portare ad errori inaspettati.
+path che &egrave; attualmente in uso da un'istanza. QUesto pu&ograve; portare ad errori inaspettati.
 Esistono le seguenti funzioni per la modifica dei path:
 
 <p>
@@ -23,7 +23,7 @@ Esistono le seguenti funzioni per la modifica dei path:
 	Imposta se il path deve essere chiuso (true) o aperto(false).<br>
   <tt><b>path_set_precision(ind,prec)</b></tt> 
 	Imposta la precisione con la quale calcolare le curve morbide
-	del path (dovrà essere tra 1 e 8)<br>
+	del path (dovr&agrave; essere tra 1 e 8)<br>
   <tt><b>path_add()</b></tt> 
 	Crea un nuovo path vuoto e ne restituisce l'indice.<br>
   <tt><b>path_delete(ind)</b></tt> 
@@ -31,21 +31,21 @@ Esistono le seguenti funzioni per la modifica dei path:
   <tt><b>path_duplicate(ind)</b></tt> 
 	Crea una copia del path indicato e ne restituisce l'indice.<br>
   <tt><b>path_assign(ind,path)</b></tt> 
-	Assegna il path all'indice indicato. Questo creerà una copia del path.
+	Assegna il path all'indice indicato. Questo creer&agrave; una copia del path.
 	In questo modo puoi impostare facilmente un path esistente in un'altro,
 	per esempio uno nuovo.<br>
   <tt><b>path_append(ind,path)</b></tt> 
 	Aggiunge il path indicato al path con indice <tt>ind</tt>. <br>
   <tt><b>path_add_point(ind,x,y,speed)</b></tt> 
 	Aggiunge un punto al path con il dato indice alla posizione (x,y) e
-	con la velocità <tt>speed</tt> indicata. Ricordate che un valore di 100
-	corrisponde alla velocità attuale. Valori più bassi faranno rallentare
-	mentre valori più alti faranno accelerare.<br>
+	con la velocit&agrave; <tt>speed</tt> indicata. Ricordate che un valore di 100
+	corrisponde alla velocit&agrave; attuale. Valori pi&ugrave; bassi faranno rallentare
+	mentre valori pi&ugrave; alti faranno accelerare.<br>
   <tt><b>path_insert_point(ind,n,x,y,speed)</b></tt> 
 	Inserisce un punto al path con il dato indice alla posizione (x,y) prima
-	del punto n con la velocità indicata.<br>
+	del punto n con la velocit&agrave; indicata.<br>
   <tt><b>path_change_point(ind,n,x,y,speed)</b></tt> 
-	Modifica il punto n nel path con il dato indice indicando posizione (x,y) e velocità.<br>
+	Modifica il punto n nel path con il dato indice indicando posizione (x,y) e velocit&agrave;.<br>
   <tt><b>path_delete_point(ind,n)</b></tt> 
 	Elimina il punto n del path con il dato indice.<br>
   <tt><b>path_clear_points(ind)</b></tt> 

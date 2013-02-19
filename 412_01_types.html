@@ -12,9 +12,9 @@
 <h3>Tipi di particelle</h3>
 
 Un tipo di particella descrive la forma, colore, movimento, ecc. di un particolare genere di particella.
-È necessario definire un tipo di particella solo una volta nel gioco. Dopo aver fatto questo lo 
-si può usare in qualunque sistema particellare nel gioco. I tipi di particelle hanno un gran numero 
-di parametri che possono essere usati per modificare tutti gli aspetti. Con il settaggio di questi è 
+&Egrave; necessario definire un tipo di particella solo una volta nel gioco. Dopo aver fatto questo lo 
+si pu&ograve; usare in qualunque sistema particellare nel gioco. I tipi di particelle hanno un gran numero 
+di parametri che possono essere usati per modificare tutti gli aspetti. Con il settaggio di questi &egrave; 
 possibile creare praticamente qualsiasi effetto desiderato.
 
 <p>
@@ -25,9 +25,9 @@ Un certo numero di procedure sono disponibili per creare o distruggere nuovi tip
   <tt><b>part_type_create()</b></tt> 
     Crea un nuovo tipo di particella. Restituisce l'indice del tipo. 
     Questo indice deve essere usato in tutte le chiamate sottostanti per 
-    impostare le proprietà del tipo di particella. Solitamente lo si salva in una variabile globale.<br>
+    impostare le propriet&agrave; del tipo di particella. Solitamente lo si salva in una variabile globale.<br>
   <tt><b>part_type_destroy(ind)</b></tt> 
-    Distrugge il tipo di particella ind. Usa questa funzione se il tipo non serve più per risparmiare spazio.<br>
+    Distrugge il tipo di particella ind. Usa questa funzione se il tipo non serve pi&ugrave; per risparmiare spazio.<br>
   <tt><b>part_type_exists(ind)</b></tt> 
     Restituisce un valore se il tipo di particella indicato esiste.<br>
   <tt><b>part_type_clear(ind)</b></tt> 
@@ -37,8 +37,8 @@ Un certo numero di procedure sono disponibili per creare o distruggere nuovi tip
 
 <h3>La forma di una particella</h3>
 
-Una particella ha una forma. Questa forma è indicata da uno sprite. È possibile utilizzare qualsiasi 
-sprite che si vuole per le particelle, ma ci sono 15 sprite già precostruti. Questi sono tutti di 
+Una particella ha una forma. Questa forma &egrave; indicata da uno sprite. &Egrave; possibile utilizzare qualsiasi 
+sprite che si vuole per le particelle, ma ci sono 15 sprite gi&agrave; precostruti. Questi sono tutti di 
 dimensioni 64x64 e hanno valori di trasparenza preimpostati in modo che ben si fondono con lo sfondo. 
 Essi sono indicati dalle seguenti costanti:
 
@@ -60,78 +60,78 @@ Essi sono indicati dalle seguenti costanti:
   </ul>
 
 <p>
-È possibile impostare la forma con la seguente funzione:
+&Egrave; possibile impostare la forma con la seguente funzione:
 
 <p>
 <blockquote>
   <tt><b>part_type_shape(ind,shape)</b></tt> 
-    Imposta la forma di un tipo di particella ad una delle precedenti costanti (di default è pt_shape_pixel).<br>
+    Imposta la forma di un tipo di particella ad una delle precedenti costanti (di default &egrave; pt_shape_pixel).<br>
 </blockquote>
 
 <p>
-È inoltre possibile utilizzare un vostro sprite per la particella. Se lo sprite ha più sotto-immagini, è 
-possibile indicare la sotto-immagine che si vuole usare. È anche possibile sceglierne una a caso, animare 
+&Egrave; inoltre possibile utilizzare un vostro sprite per la particella. Se lo sprite ha pi&ugrave; sotto-immagini, &egrave; 
+possibile indicare la sotto-immagine che si vuole usare. &Egrave; anche possibile sceglierne una a caso, animare 
 lo sprite, cominciare dall'inizio dell'animazione o in un posto a caso, ecc.
-È possibile utilizzare la seguente funzione per questo:
+&Egrave; possibile utilizzare la seguente funzione per questo:
  
 <p>
 <blockquote>
   <tt><b>part_type_sprite(ind,sprite,animat,stretch,random)</b></tt> 
     Imposta il tuo sprite per il tipo di particella. Con il parametro animate si indica se lo sprite 
     deve essere animato (1) o no (0). Con stretch (1 o 0) si indica se prolungare o meno l’animazione
-    dello sprite per tutta la durata della particella. E con random (1 o 0) è possibile indicare se
+    dello sprite per tutta la durata della particella. E con random (1 o 0) &egrave; possibile indicare se
     una casuale sotto-immagine deve essere scelta come immagine iniziale.<br>
 </blockquote>
 
 <p>
 Una volta che avete scelto lo sprite per il tipo di particella (o una forma di default o il proprio sprite) 
-è possibile indicare le dimensioni di esso. Una dimensione di valore 1 indica la dimensione normale dello 
-sprite. Un tipo di particella può essere definito in modo tale che le particelle o hanno tutte la stessa 
-dimensione o hanno dimensioni diverse. È possibile indicare un intervallo di dimensioni ed anche se la 
-dimensione deve cambiare nel corso della vita di una particella. È anche possibile cambiare ad intervalli 
+&egrave; possibile indicare le dimensioni di esso. Una dimensione di valore 1 indica la dimensione normale dello 
+sprite. Un tipo di particella pu&ograve; essere definito in modo tale che le particelle o hanno tutte la stessa 
+dimensione o hanno dimensioni diverse. &Egrave; possibile indicare un intervallo di dimensioni ed anche se la 
+dimensione deve cambiare nel corso della vita di una particella. &Egrave; anche possibile cambiare ad intervalli 
 di tempo la dimensione, creando un effetto lampeggiante. 
  
 <p>
 <blockquote>
   <tt><b>part_type_size(ind,size_min,size_max,size_incr,size_wiggle)</b></tt> 
-    Imposta i parametri dimensionali per il tipo di particella. È possibile specificare la dimensione minima 
+    Imposta i parametri dimensionali per il tipo di particella. &Egrave; possibile specificare la dimensione minima 
     di partenza, la dimensione massima di partenza, l'aumento di dimensione in ogni passaggio 
     (usando un numero negativo per una diminuzione della dimensione) e il valore di “wiggling”. 
-    (La dimensione di default è 1 e la dimensione di default non cambia).<br>
+    (La dimensione di default &egrave; 1 e la dimensione di default non cambia).<br>
   <tt><b>part_type_scale(ind,xscale,yscale)</b></tt> 
     Imposta il valore di scala orizzontale e verticale. Questo fattore viene moltiplicato per la dimensione. 
-    È utile in particolare quando è necessario scalare in modo diverso le direzioni x e y.<br>
+    &Egrave; utile in particolare quando &egrave; necessario scalare in modo diverso le direzioni x e y.<br>
 </blockquote>
 
 <p>
-Le particelle hanno anche un orientamento. L'orientamento può lo stesso per tutte le particelle, può 
-essere diverso, e può cambiare nel corso della vita dello sprite. Gli angoli specificano il verso 
+Le particelle hanno anche un orientamento. L'orientamento pu&ograve; lo stesso per tutte le particelle, può 
+essere diverso, e pu&ograve; cambiare nel corso della vita dello sprite. Gli angoli specificano il verso 
 di rotazione antiorario, in gradi.
 
 <p>
 <blockquote>
   <tt><b>part_type_orientation(ind,ang_min,ang_max,ang_incr,ang_wiggle,ang_relative)</b></tt> 
-    Imposta le proprietà degli angoli di orientamento per il tipo di particella. È possibile 
-    specificare l'angolo minimo, l’angolo massimo, l’incremento ad ogni passo e la quantità di “wiggling”. 
-    (Di default tutti i valori sono). È anche possibile indicare se l’angolo dato è relativo (1) 
+    Imposta le propriet&agrave; degli angoli di orientamento per il tipo di particella. &Egrave; possibile 
+    specificare l'angolo minimo, l’angolo massimo, l’incremento ad ogni passo e la quantit&agrave; di “wiggling”. 
+    (Di default tutti i valori sono). &Egrave; anche possibile indicare se l’angolo dato &egrave; relativo (1) 
     alla direzione corrente di movimento oppure assoluto (0). Ad esempio, impostando tutti i valori 
-    a 0, ma ang_relative a 1, l'orientamento delle particelle seguirà precisamente il percorso della particella. <br>
+    a 0, ma ang_relative a 1, l'orientamento delle particelle seguir&agrave; precisamente il percorso della particella. <br>
 </blockquote>
 
 
 <h3>Colori e miscelazione</h3>
 
-Le particelle avranno un colore. Ci sono diversi modi in cui è possibile specificare i colori 
-di una particella. Il modo più semplice è quello di indicare un unico colore. 
-È anche possibile specificare due o tre colori tra cui viene interpolato il colore 
-della particella durante il suo tempo di vita. Per esempio, la particella può iniziare 
-bianca e diventare più nera durante la sua vita. Un'altra possibilità è quella di 
+Le particelle avranno un colore. Ci sono diversi modi in cui &egrave; possibile specificare i colori 
+di una particella. Il modo pi&ugrave; semplice &egrave; quello di indicare un unico colore. 
+&Egrave; anche possibile specificare due o tre colori tra cui viene interpolato il colore 
+della particella durante il suo tempo di vita. Per esempio, la particella pu&ograve; iniziare 
+bianca e diventare pi&ugrave; nera durante la sua vita. Un'altra possibilit&agrave; &egrave; quella di 
 indicare che i colori di tutte le particelle siano diversi, scelti tra una gamma di 
-colori. È possibile definire un intervallo tra rossi, verdi e blu, o un intervallo 
-tra tonalità, saturazioni e valori.
+colori. &Egrave; possibile definire un intervallo tra rossi, verdi e blu, o un intervallo 
+tra tonalit&agrave;, saturazioni e valori.
 
 <p>
-Di default il colore è bianco. Quando si utilizza uno sprite con i propri colori, 
+Di default il colore &egrave; bianco. Quando si utilizza uno sprite con i propri colori, 
 nessun colore deve essere specificato.
 
 <p>
@@ -139,27 +139,27 @@ nessun colore deve essere specificato.
   <tt><b>part_type_color1(ind,color1)</b></tt> 
     Indica un singolo colore da utilizzare per la particella.<br>
   <tt><b>part_type_color2(ind,color1,color2)</b></tt> 
-   Specifica due colori tra i quali il colore della particella sarà interpolato. 
-   Si passerà gradualmente dal color1 al color2.<br>
+   Specifica due colori tra i quali il colore della particella sar&agrave; interpolato. 
+   Si passer&agrave; gradualmente dal color1 al color2.<br>
   <tt><b>part_type_color3(ind,color1,color2,color3)</b></tt> 
-    Simile alla precedente, ma questa volta il colore è interpolato tra tre colori che 
-    rappresentano il colore all'inizio, a metà strada, e alla fine.<br>
+    Simile alla precedente, ma questa volta il colore &egrave; interpolato tra tre colori che 
+    rappresentano il colore all'inizio, a met&agrave; strada, e alla fine.<br>
   <tt><b>part_type_color_mix(ind,color1,color2)</b></tt> 
-    Con questa funzione si indica che la particella dovrebbe ottenere un colore che è una miscela casuale dei due 
+    Con questa funzione si indica che la particella dovrebbe ottenere un colore che &egrave; una miscela casuale dei due 
     colori indicati. Questo colore rimane fisso per tutta la durata della particella.<br>
   <tt><b>part_type_color_rgb(ind,rmin,rmax,gmin,gmax,bmin,bmax)</b></tt> 
-    Può essere usata per indicare che ogni particella deve avere un colore fisso, ma scelto 
-    tra un intervallo. È possibile specificare un intervallo tra le componenti rosse, verdi 
+    Pu&ograve; essere usata per indicare che ogni particella deve avere un colore fisso, ma scelto 
+    tra un intervallo. &Egrave; possibile specificare un intervallo tra le componenti rosse, verdi 
     e blu del colore (ciascuna compreso tra 0 e 255).<br>
   <tt><b>part_type_color_hsv(ind,hmin,hmax,smin,smax,vmin,vmax)</b></tt> 
-   Può essere usata per indicare che ogni particella deve avere un colore fisso, ma scelto tra un intervallo. 
-   È possibile specificare un intervallo tra le componenti di saturazione, tonalità e valore del 
+   Pu&ograve; essere usata per indicare che ogni particella deve avere un colore fisso, ma scelto tra un intervallo. 
+   &Egrave; possibile specificare un intervallo tra le componenti di saturazione, tonalit&agrave; e valore del 
    colore (ciascuna compreso tra 0 e 255).<br>
 </blockquote>
 	
 <p>
-Oltre al colore si può anche dare un valore di trasparenza. Le particelle di forma precostruita hanno già una 
-certa trasparenza, ma è possibile utilizzare queste funzioni, ad esempio, per far svanire una particella che 
+Oltre al colore si pu&ograve; anche dare un valore di trasparenza. Le particelle di forma precostruita hanno gi&agrave; una 
+certa trasparenza, ma &egrave; possibile utilizzare queste funzioni, ad esempio, per far svanire una particella che 
 ha terminato il suo tempo di vita.
 
 <p>
@@ -175,20 +175,20 @@ ha terminato il suo tempo di vita.
 	
 <p>
 Normalmente le particelle si fondono con lo sfondo nello stesso modo degli sprite. 
-Ma è anche possibile utilizzare altre modalità di fusione. 
-Ciò permette di realizzare splendidi effetti di esplosione. 
+Ma &egrave; anche possibile utilizzare altre modalit&agrave; di fusione. 
+Ci&ograve; permette di realizzare splendidi effetti di esplosione. 
 
 <p>
 <blockquote>
   <tt><b>part_type_blend(ind,additive)</b></tt> 
-    Consente di scegliere se usare una modalità di fusione aggiuntiva (1) oppure no (0) per un tipo di particella.<br>
+    Consente di scegliere se usare una modalit&agrave; di fusione aggiuntiva (1) oppure no (0) per un tipo di particella.<br>
 </blockquote>
 
 
 <h3>Vita e morte</h3>
 
 Particelle possono vivere per un periodo di tempo limitato. Dopo questo scompaiono. 
-La vita si misura in passi (steps). È possibile indicare la durata di vita 
+La vita si misura in passi (steps). &Egrave; possibile indicare la durata di vita 
 (o una serie di tempi di vita) per ciascun tipo di particella. Le particelle possono 
 creare nuove particelle di tipo diverso. Ci sono due modi per questo. Loro possono 
 creare nuove particelle in ogni passo oppure possono creare particelle solo quando muoiono. 
@@ -201,42 +201,42 @@ Si eviti comunque che il numero di particelle diventi troppo alto.
   <tt><b>part_type_step(ind,step_number,step_type)</b></tt> 
     Imposta il numero e il tipo di particelle che devono essere generati ad ogni passo 
     per il tipo di particella indicato. Se si utilizza un valore negativo, ad ogni passo 
-    viene generata una particella con una possibilità di -1/numero. Così, per esempio con 
+    viene generata una particella con una possibilit&agrave; di -1/numero. Cos&igrave;, per esempio con 
     un valore di -5 una particella viene generata in media una volta ogni 5 passi.<br>
   <tt><b>part_type_death(ind,death_number,death_type)</b></tt> 
     Imposta il numero e il tipo di particelle che devono essere generate quando una particella 
-    del tipo indicato muore. Anche in questo caso è possibile utilizzare numeri negativi per 
-    creare una particella con una possibilità particolare. Si noti che queste particelle sono 
-    create solo quando la particella muore (è alla fine della sua vita), non quando muore a 
+    del tipo indicato muore. Anche in questo caso &egrave; possibile utilizzare numeri negativi per 
+    creare una particella con una possibilit&agrave; particolare. Si noti che queste particelle sono 
+    create solo quando la particella muore (&egrave; alla fine della sua vita), non quando muore a 
     causa di un distruttore (vedi sotto).<br>
 </blockquote>
 
 
 <h3>Movimento delle particelle</h3>
 
-Le particelle possono muoversi durante la loro vita. Esse possono avere una velocità iniziale 
-(o un range di velocità) e una direzione, e la velocità e la direzione possono cambiare nel 
-tempo. Anche la gravità può essere definita per attrarre le particelle in una direzione 
+Le particelle possono muoversi durante la loro vita. Esse possono avere una velocit&agrave; iniziale 
+(o un range di velocit&agrave;) e una direzione, e la velocità e la direzione possono cambiare nel 
+tempo. Anche la gravit&agrave; pu&ograve; essere definita per attrarre le particelle in una direzione 
 particolare. Le funzioni seguenti esistono per questo:
 
 <p>
 <blockquote>
   <tt><b>part_type_speed(ind,speed_min,speed_max,speed_incr,speed_wiggle)</b></tt> 
-  Imposta le proprietà di velocità per il tipo di particella. (Di default tutti i valori sono 0). 
-  È possibile specificare una velocità minima e massima. Quando la particella viene creata un valore 
-  casuale compreso tra i limiti indicati viene scelto. È possibile indicare un aumento di velocità 
-  ad ogni passo. Usare un numero negativo per rallentare la particella (la velocità non sarà mai 
-  inferiore a 0). Infine, si può indicare una certa quantità di “wiggling” della velocità.<br>
+  Imposta le propriet&agrave; di velocità per il tipo di particella. (Di default tutti i valori sono 0). 
+  &Egrave; possibile specificare una velocit&agrave; minima e massima. Quando la particella viene creata un valore 
+  casuale compreso tra i limiti indicati viene scelto. &Egrave; possibile indicare un aumento di velocit&agrave; 
+  ad ogni passo. Usare un numero negativo per rallentare la particella (la velocit&agrave; non sarà mai 
+  inferiore a 0). Infine, si pu&ograve; indicare una certa quantit&agrave; di “wiggling” della velocità.<br>
   <tt><b>part_type_direction(ind,dir_min,dir_max,dir_incr,dir_wiggle)</b></tt> 
-    Imposta le proprietà di direzione per il tipo di particella. (Di default tutti i valori sono 0). 
+    Imposta le propriet&agrave; di direzione per il tipo di particella. (Di default tutti i valori sono 0). 
     Anche in questo caso si specifica un intervallo di direzioni (in gradi in senso antiorario, 0 
     indica un movimento a destra). Per esempio, per far muovere le particelle in una direzione casuale 
-    scegliere 0 e 360 come valori. È possibile specificare un aumento di direzione per ogni passo, 
-    e una quantità di “wiggling”.<br>
+    scegliere 0 e 360 come valori. &Egrave; possibile specificare un aumento di direzione per ogni passo, 
+    e una quantit&agrave; di “wiggling”.<br>
   <tt><b>part_type_gravity(ind,grav_amount,grav_dir)</b></tt> 
-    Imposta le proprietà di gravità per il tipo di particella. (Di default non c'è gravità).
-    Si può specificare un valore di gravità da aggiungere ad ogni passo ed anche la direzione. 
-    Ad esempio, si può impostare 270 per una direzione verso il basso.<br>
+    Imposta le propriet&agrave; di gravità per il tipo di particella. (Di default non c'&egrave; gravità).
+    Si pu&ograve; specificare un valore di gravit&agrave; da aggiungere ad ogni passo ed anche la direzione. 
+    Ad esempio, si pu&ograve; impostare 270 per una direzione verso il basso.<br>
 </blockquote>
 
 

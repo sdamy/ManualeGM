@@ -10,7 +10,7 @@
 
 <h3>File</h3>
 
-È utile utilizzare file esterni nei giochi. Ad esempio, è 
+&Egrave; utile utilizzare file esterni nei giochi. Ad esempio, &egrave; 
 possibile creare un file che descrive in quali momenti 
 certe cose devono accadere. Potrebbe essere utile, inoltre, 
 salvare nei file alcune informazioni utili per la prossima esecuzione del 
@@ -21,8 +21,8 @@ per leggere o scrivere dati in file di testo:
 <blockquote>
   <tt><b>file_text_open_read(fname)</b></tt> 
     Apre il file con il nome indicato per leggerlo. La funzione restituisce l'id del file 
-    che deve essere usato in altre funzioni. È possibile aprire più file 
-    contemporaneamente (massimo 32). Non dimenticate di chiuderli una volta che si è finito con loro.<br>
+    che deve essere usato in altre funzioni. &Egrave; possibile aprire pi&ugrave; file 
+    contemporaneamente (massimo 32). Non dimenticate di chiuderli una volta che si &egrave; finito con loro.<br>
   <tt><b>file_text_open_write(fname)</b></tt> 
     Apre il file indicato per la scrittura, creandolo se non esiste. 
     La funzione restituisce l'id del file che deve essere usato in altre funzioni.<br>
@@ -46,13 +46,13 @@ per leggere o scrivere dati in file di testo:
   <tt><b>file_text_readln(fileid)</b></tt> 
     Salta il resto della riga nel file e comincia la lettura dall'inizio della riga successiva.<br>
   <tt><b>file_text_eof(fileid)</b></tt> 
-    Restituisce un valore se si è raggiunta la fine del file.<br>
+    Restituisce un valore se si &egrave; raggiunta la fine del file.<br>
   <tt><b>file_text_eoln(fileid)</b></tt> 
-    RRestituisce un valore se si è raggiunta la fine di una riga nel file.<br>
+    RRestituisce un valore se si &egrave; raggiunta la fine di una riga nel file.<br>
 </blockquote>
 
 <p>
-Per manipolare i file è possibile utilizzare le seguenti funzioni:
+Per manipolare i file &egrave; possibile utilizzare le seguenti funzioni:
 
 <p>
 <blockquote>
@@ -68,14 +68,14 @@ Per manipolare i file è possibile utilizzare le seguenti funzioni:
     Restituisce un valore se la directory indicata non esiste. 
     Il nome deve includere il percorso completo, non un percorso relativo.<br>
   <tt><b>directory_create(dname)</b></tt> 
-    Crea una directory con il nome dato (incluso il suo percorso) se non esiste già. 
+    Crea una directory con il nome dato (incluso il suo percorso) se non esiste gi&agrave;. 
     Il nome deve includere il percorso completo, non un percorso relativo.<br>
   <tt><b>file_find_first(mask,attr)</b></tt> 
     Restituisce il nome del primo file che soddisfa la maschera (mask) e
     gli attributi (attr). Se tale file non esiste, viene restituita la stringa vuota. 
-    La maschera può contenere un percorso e può contenere wildchars (caratteri jolly), per 
-    esempio 'C:. \ Temp \ * doc'. Gli attributi specificano il tipo di file che si vuole cercare (così vengono 
-    sempre restituiti i file che soddisfano il percorso). È possibile aggiungere le 
+    La maschera pu&ograve; contenere un percorso e può contenere wildchars (caratteri jolly), per 
+    esempio 'C:. \ Temp \ * doc'. Gli attributi specificano il tipo di file che si vuole cercare (cos&igrave; vengono 
+    sempre restituiti i file che soddisfano il percorso). &Egrave; possibile aggiungere le 
     seguenti costanti per cercare il tipo di file che si desidera:<br>
 
       <blockquote>
@@ -108,7 +108,7 @@ funzioni non agiscono su file effettivi ma solo su stringhe.
     Restituisce il  percorso del file indicato, compreso il backslash finale.<br>
   <tt><b>filename_dir(fname)</b></tt> 
     Restituisce la directory del file indicato, che normalmente 
-    è uguale al percorso senza il backslash finale.<br>
+    &egrave; uguale al percorso senza il backslash finale.<br>
   <tt><b>filename_drive(fname)</b></tt> 
     Restituisce le informazioni sul drive del file.<br>
   <tt><b>filename_ext(fname)</b></tt> 
@@ -116,60 +116,60 @@ funzioni non agiscono su file effettivi ma solo su stringhe.
   <tt><b>filename_change_ext(fname,newext)</b></tt> 
     Restituisce il nome del file indicato, con l'estensione (compreso il punto) 
     sostituita dalla nuova estensione (newext). Utilizzando una stringa vuota come newext 
-    è possibile rimuovere l'estensione.<br>
+    &egrave; possibile rimuovere l'estensione.<br>
 </blockquote>
 
 <p>
-In rari casi può essere necessario leggere i dati da file binari. Le seguenti 
+In rari casi pu&ograve; essere necessario leggere i dati da file binari. Le seguenti 
 funzioni di basso livello sono disponibili per fare questo:
 
 <p>
 <blockquote>
   <tt><b>file_bin_open(fname,mod)</b></tt> 
-    Apre il file con il nome indicato. La modalità (mod) indica cosa si 
-    può fare con il file: 0 = lettura, 1 = scrittura, 2 = lettura e scrittura). 
+    Apre il file con il nome indicato. La modalit&agrave; (mod) indica cosa si 
+    pu&ograve; fare con il file: 0 = lettura, 1 = scrittura, 2 = lettura e scrittura). 
     Quando il file non esiste viene creato. La funzione restituisce l'id del file 
-    che deve essere usato in altre funzioni. È possibile aprire più file 
-    contemporaneamente (massimo 32). È importante chiudere il file una finito con esso.<br>
+    che deve essere usato in altre funzioni. &Egrave; possibile aprire pi&ugrave; file 
+    contemporaneamente (massimo 32). &Egrave; importante chiudere il file una finito con esso.<br>
   <tt><b>file_bin_rewrite(fileid)</b></tt> 
-    Riscrive il file di cui è dato l’id, ovvero, cancella 
+    Riscrive il file di cui &egrave; dato l’id, ovvero, cancella 
     il contenuto del file e comincia a scrivere dall’inizio.<br>
   <tt><b>file_bin_close(fileid)</b></tt> 
-    Chiude il file con di cui è dato l’id.<br>
+    Chiude il file con di cui &egrave; dato l’id.<br>
   <tt><b>file_bin_size(fileid)</b></tt> 
-    Restituisce la dimensione (in byte) del file di cui è dato l’id.<br>
+    Restituisce la dimensione (in byte) del file di cui &egrave; dato l’id.<br>
   <tt><b>file_bin_position(fileid)</b></tt> 
-    Restituisce la posizione corrente (in byte; 0 è la prima posizione) 
-    del file di cui è dato l’id.<br>
+    Restituisce la posizione corrente (in byte; 0 &egrave; la prima posizione) 
+    del file di cui &egrave; dato l’id.<br>
   <tt><b>file_bin_seek(fileid,pos)</b></tt> 
     Sposta la posizione corrente del file alla posizione indicata. Per accodare un file bisogna spostare la posizione 
     del file alla dimensione del file prima di poter cominciare a scrivere.<br>
   <tt><b>file_bin_write_byte(fileid,byte)</b></tt> 
-    Scrive un byte di dati nel file di cui è dato l’id.<br>
+    Scrive un byte di dati nel file di cui &egrave; dato l’id.<br>
   <tt><b>file_bin_read_byte(fileid)</b></tt> 
     Legge un byte di dati dal file e restituisce questo valore.<br>
 </blockquote>
 
 <p>
-Se il giocatore ha selezionato la modalità protetta nelle preferenze, per 
-un certo numero di queste funzioni, non è consentito specificare un percorso, e 
+Se il giocatore ha selezionato la modalit&agrave; protetta nelle preferenze, per 
+un certo numero di queste funzioni, non &egrave; consentito specificare un percorso, e 
 solo i file nella cartella di gioco posso essere, ad esempio, scritti.
 
 <p>
 Se sono inclusi dei file nell'eseguibile del gioco e non vengono esportati automaticamente
-all'inizio del gioco, è possibile utilizzare le seguenti funzioni per fare questo:
+all'inizio del gioco, &egrave; possibile utilizzare le seguenti funzioni per fare questo:
 
 <p>
 <blockquote>
   <tt><b>export_include_file(fname)</b></tt> 
     Esporta il file incluso nel gioco con nome fname. 
-    Il nome è una variabile stringa, quindi sono necessarie le virgolette.<br>
+    Il nome &egrave; una variabile stringa, quindi sono necessarie le virgolette.<br>
   <tt><b>export_include_file_location(fname,location)</b></tt> 
     Esporta il file incluso nel gioco con nome fname alla posizione indicata. 
     La posizione (location) deve contenere il percorso e il nome del file.<br>
   <tt><b>discard_include_file(fname)</b></tt> 
     Elimina il file incluso con il nome fname, liberando la memoria utilizzata. 
-    Il nome è una variabile stringa, quindi sono necessarie le virgolette.<br>
+    Il nome &egrave; una variabile stringa, quindi sono necessarie le virgolette.<br>
 </blockquote>
 
 <p>
@@ -178,27 +178,27 @@ Le seguenti quattro variabili di sola lettura possono essere utili:
 <p>
 <blockquote>
   <tt><b>game_id*</b></tt> 
-    Unico numero che identifica il gioco. Si può usare questa viabile se si 
+    Unico numero che identifica il gioco. Si pu&ograve; usare questa viabile se si 
     necessita di un nome univoco per un file.<br>
   <tt><b>working_directory*</b></tt> 
     Directory di lavoro del gioco. (Non compresa il backslash finale).<br>
   <tt><b>program_directory*</b></tt> 
-    Directory nella quale è presente il gioco eseguibile (escluso il backslash finale). 
-    Quando si esegue un gioco standalone questa directory è normalmente la stessa directory 
+    Directory nella quale &egrave; presente il gioco eseguibile (escluso il backslash finale). 
+    Quando si esegue un gioco standalone questa directory &egrave; normalmente la stessa directory 
     di lavoro, a meno che il gioco, ad esempio, apre un file utilizzando il selettore di file. 
     Si noti che quando si testa un gioco che si sta creando la working directory e 
-    la program directory saranno diverse. In tal caso, la directory di lavoro è il luogo 
-    in cui è memorizzato il file editabile del gioco, mentre la directory del programma è 
+    la program directory saranno diverse. In tal caso, la directory di lavoro &egrave; il luogo 
+    in cui &egrave; memorizzato il file editabile del gioco, mentre la directory del programma è 
     una directory temporanea per il test.<br>
   <tt><b>temp_directory*</b></tt> 
     Directory temporanea creata per il gioco (escluso il backslash finale). 
-    È possibile memorizzare i file temporanei qui. Saranno rimossi al termine del gioco.
+    &Egrave; possibile memorizzare i file temporanei qui. Saranno rimossi al termine del gioco.
 </blockquote>
 
 <p>
 In alcune situazioni si potrebbe desiderare di dare ai giocatori 
-la possibilità di fornire righe di comando al gioco in esecuzione 
-(ad esempio per creare trucchi o speciali modalità). Per fare questo si possono usare:
+la possibilit&agrave; di fornire righe di comando al gioco in esecuzione 
+(ad esempio per creare trucchi o speciali modalit&agrave;). Per fare questo si possono usare:
 
 <p>
 <blockquote>
@@ -208,11 +208,11 @@ la possibilità di fornire righe di comando al gioco in esecuzione
   <tt><b>parameter_string(n)</b></tt> 
     Restituisce il parametro della riga di comando di indice n. 
     Il primo parametro ha indice 1. L'ultimo ha indice parameter_count (). 
-    L’indice 0 è un indice speciale: è il nome del file eseguibile del gioco (incluso il percorso).<br>
+    L’indice 0 &egrave; un indice speciale: è il nome del file eseguibile del gioco (incluso il percorso).<br>
 </blockquote>
 
 <p>
-È possibile leggere il valore delle variabili d'ambiente con la seguente funzione:
+&Egrave; possibile leggere il valore delle variabili d'ambiente con la seguente funzione:
 
 <p>
 <blockquote>
@@ -222,20 +222,20 @@ la possibilità di fornire righe di comando al gioco in esecuzione
 
 <p>
 Infine, se siete interessati alla dimensione del disco e allo spazio libero, 
-è possibile utilizzare le seguenti funzioni:
+&egrave; possibile utilizzare le seguenti funzioni:
 </p>
 
 <p>
 <blockquote>
   <tt><b>disk_size(drive)</b></tt> 
   Restituisce la dimensione del disco indicata in byte. “drive” deve essere una 
-  lettera maiuscola, ad esempio 'C'. Se non si specifica l'unità, verrà restituita 
-  la dimensione dell'unità in cui si trova la directory di lavoro.<br>
+  lettera maiuscola, ad esempio 'C'. Se non si specifica l'unit&agrave;, verrà restituita 
+  la dimensione dell'unit&agrave; in cui si trova la directory di lavoro.<br>
   <tt><b>disk_free(drive)</b></tt> 
-  Restituisce la quantità di spazio libero sul disco indicata in byte. 
+  Restituisce la quantit&agrave; di spazio libero sul disco indicata in byte. 
   “drive” deve essere una lettera maiuscola, ad esempio 'C'. 
-  Se non si specifica l'unità, verrà restituita la quantità di spazio 
-  libero dell'unità in cui si trova la directory di lavoro.<br>
+  Se non si specifica l'unit&agrave;, verrà restituita la quantità di spazio 
+  libero dell'unit&agrave; in cui si trova la directory di lavoro.<br>
 </blockquote>
 
 

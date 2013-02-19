@@ -10,53 +10,53 @@
 
 <h3>Risoluzione</h3>
 
-In questa scheda puoi impostare la risoluzione dello schermo su cui il tuo gioco verrà eseguito.
+In questa scheda puoi impostare la risoluzione dello schermo su cui il tuo gioco verr&agrave; eseguito.
 Normalmente, la risoluzione non viene cambiata. Ma a volte
-potresti voler eseguire il gioco in delle risoluzioni più basse o potresti voler impostare la frequenza
+potresti voler eseguire il gioco in delle risoluzioni pi&ugrave; basse o potresti voler impostare la frequenza
 del monitor per assicurarti che la sincronizzazione del gioco funzioni correttamente. Se vuoi cambiare
 la risoluzione devi prima selezionare la casella etichettata
 <b>Set the resolution of the screen</b>.
 
 <p>
-Ci sono tre cose che puoi cambiare. Prima di tutto c'è la profondità del colore.
+Ci sono tre cose che puoi cambiare. Prima di tutto c'&egrave; la profondit&agrave; del colore.
 Questa indica il numero di bits usati per rappresentare il colore di un pixel.
-La maggior parte delle macchine di oggi permette solo le profondità di 16 bit (High Color) e di 32 bit (Full Color) ma
+La maggior parte delle macchine di oggi permette solo le profondit&agrave; di 16 bit (High Color) e di 32 bit (Full Color) ma
 le vecchie macchine permettevano anche 8 bit e 24 bit.
 <i>GameMaker</i> funziona correttamente solo con i colori a 16 bit e a 32 bit.
-I colori a 32 bit danno un aspetto migliore ma richiedono più memoria e
-più tempo. Se vuoi che il tuo gioco venga eseguito sulle macchine più vecchie imposta
-la profondità a 16 bit. Altrimenti usa la 32 bit o non cambiarla.
+I colori a 32 bit danno un aspetto migliore ma richiedono pi&ugrave; memoria e
+pi&ugrave; tempo. Se vuoi che il tuo gioco venga eseguito sulle macchine più vecchie imposta
+la profondit&agrave; a 16 bit. Altrimenti usa la 32 bit o non cambiarla.
 
 <p>
-La seconda opzione è la risoluzione dello schermo, il numero
+La seconda opzione &egrave; la risoluzione dello schermo, il numero
 di pixel (orizzontali e verticali) nello schermo. Cambiare
-la risoluzione è utile quando per esempio le rooms sono molto piccole. In questo caso
+la risoluzione &egrave; utile quando per esempio le rooms sono molto piccole. In questo caso
 potrebbe esserti utile ridurre la risoluzione dello schermo. 
-Questo influenzerà le altre applicazioni in esecuzione. In particolare questo potrebbe
-dare problemi con le risoluzioni basse. Quindi in generale è meglio
-fare ciò solo quando il gioco è in modalità schermo intero. <i>GameMaker</i>
-cambierà automaticamente la risoluzione alla situazione iniziale
+Questo influenzer&agrave; le altre applicazioni in esecuzione. In particolare questo potrebbe
+dare problemi con le risoluzioni basse. Quindi in generale &egrave; meglio
+fare ci&ograve; solo quando il gioco &egrave; in modalit&agrave; schermo intero. <i>GameMaker</i>
+cambier&agrave; automaticamente la risoluzione alla situazione iniziale
 una volta finito il gioco.
 
 <p>
 Infine puoi cambiare la frequenza di aggiornamento. Questo indica quante volte al secondo
-l'immagine nello schermo dev'essere aggiornata. Se la velocità della tua room è più alta di questa frequenza
-non tutti gli steps saranno visibili. Funziona meglio se la frequenza è un multiplo
-della velocità della room. (Se specifichi una frequenza che è troppo alta o non è disponibile
-la frequenza non verrà cambiata.)
+l'immagine nello schermo dev'essere aggiornata. Se la velocit&agrave; della tua room &egrave; pi&ugrave; alta di questa frequenza
+non tutti gli steps saranno visibili. Funziona meglio se la frequenza &egrave; un multiplo
+della velocit&agrave; della room. (Se specifichi una frequenza che &egrave; troppo alta o non è disponibile
+la frequenza non verr&agrave; cambiata.)
 
 <p>
-C'è anche un'altra impostazione: <b>Use synchronization to avoid tearing</b>. Questa richiede
+C'&egrave; anche un'altra impostazione: <b>Use synchronization to avoid tearing</b>. Questa richiede
 delle spiegazioni. Uno schermo viene ridisegnato un certo numero di volte al secondo, in base
-alla frequenza dell'aggiornamento. Se una room viene disegnata a metà di un aggiornamento, la parte alta dello schermo
-mostrerà ancora la vecchia immagine mentre la parte bassa mostrea la nuova immagine. Questo fenomeno è chiamato "tearing". Per
-evitarlo puoi selezionare questa opzione. In questo caso la nuova immagine della room verrà copiata
-nello schermo solo quando l'aggiornamento non è dentro la finestra evitando il "tearing" per la maggior parte del tempo.
-Lo svantaggio è che normalmente si avrà bisogno di aspettare il prossimo aggiornamento. Questo significa che
-il massimo numero di frames �verrà limitato dalla frequenza dello schermo e,
-quando l'elaborazione non sarà abbastanza veloce, il framerate cscenderà immediatamente alla metà di quel numero.
+alla frequenza dell'aggiornamento. Se una room viene disegnata a met&agrave; di un aggiornamento, la parte alta dello schermo
+mostrer&agrave; ancora la vecchia immagine mentre la parte bassa mostrea la nuova immagine. Questo fenomeno &egrave; chiamato "tearing". Per
+evitarlo puoi selezionare questa opzione. In questo caso la nuova immagine della room verr&agrave; copiata
+nello schermo solo quando l'aggiornamento non &egrave; dentro la finestra evitando il "tearing" per la maggior parte del tempo.
+Lo svantaggio &egrave; che normalmente si avr&agrave; bisogno di aspettare il prossimo aggiornamento. Questo significa che
+il massimo numero di frames �verr&agrave; limitato dalla frequenza dello schermo e,
+quando l'elaborazione non sar&agrave; abbastanza veloce, il framerate cscenderà immediatamente alla metà di quel numero.
 Inoltre ci potrebbe essere un conflitto tra il tempismo interno del gioco e la sincronizzazione.
-Se vuoi migliorare ciò imposta la frequenza del monitor a valori come 60 e imposta la velocità della room
+Se vuoi migliorare ci&ograve; imposta la frequenza del monitor a valori come 60 e imposta la velocit&agrave; della room
 a 30 o a 60.
 
 <!--END-->
@@ -76,8 +76,8 @@ cambiare la risoluzione dello schermo
 risoluzione dello schermo
 risoluzione
 frequenza
-modalità grafiche
-profondità del colore
+modalit&agrave; grafiche
+profondit&agrave; del colore
 sincronizzazione
 lacerazione
 --> 

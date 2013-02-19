@@ -10,10 +10,10 @@
 
 <h3>Costrutti With</h3>
 
-Come indicato prima, è possibile leggere e cambiare il valore di
+Come indicato prima, &egrave; possibile leggere e cambiare il valore di
 variabili di altre istanze. Ma in alcuni casi vorrai fare
-molto di più con le altre istanze. Per esempio, immagina che vuoi muovere
-tutte le palle di 8 pixel in giù. Potresti pensare di riuscirci col
+molto di pi&ugrave; con le altre istanze. Per esempio, immagina che vuoi muovere
+tutte le palle di 8 pixel in gi&ugrave;. Potresti pensare di riuscirci col
 codice seguente
 
 <p>
@@ -22,7 +22,7 @@ codice seguente
 </blockquote>
 
 <p>
-Ma non è corretto. Il lato destro dell'assegnazione prende il valore
+Ma non &egrave; corretto. Il lato destro dell'assegnazione prende il valore
 dellaa coordinata y della prima palla e aggiunge 8. Poi questo nuovo
 valore viene impostato come coordinata y di tutte le palle. Ne risulta che tutte le palle
 hanno la stessa coordinata y. L'istruzione
@@ -33,9 +33,9 @@ hanno la stessa coordinata y. L'istruzione
 </blockquote>
 
 <p>
-avrà esattamente lo stesso effetto perché è semplicemente un'abbreviazione
-della prima istruzione. E allora come possiamo fare? Per questo scopo c'è
-il costrutto <b>with</b>. La sua forma generale è
+avr&agrave; esattamente lo stesso effetto perch&eacute; &egrave; semplicemente un'abbreviazione
+della prima istruzione. E allora come possiamo fare? Per questo scopo c'&egrave;
+il costrutto <b>with</b>. La sua forma generale &egrave;
 
 <p>
 <blockquote>
@@ -43,10 +43,10 @@ il costrutto <b>with</b>. La sua forma generale è
 </blockquote>
 
 <p>
-&lt;expression&gt; indica una o più istanze. In questo campo puoi usare
+&lt;expression&gt; indica una o pi&ugrave; istanze. In questo campo puoi usare
 un id di un'istanza, il nome di un object (per indicare tutte le istanze di
 quest'object) o uno degli object speciali (all, self, other, noone).
-&lt;statement&gt; è eseguito per ciascuna delle istanze indicate, come
+&lt;statement&gt; &egrave; eseguito per ciascuna delle istanze indicate, come
 se quell'istanza fosse la corrente istanza (self). Quindi, per muovere tutte le palle di 8
 pixel in basso, puoi digitare:
 
@@ -56,7 +56,7 @@ pixel in basso, puoi digitare:
 </blockquote>
 
 <p>
-Se vuoi eseguire più istruzioni, metti quelle azioni tra parentesi graffe.
+Se vuoi eseguire pi&ugrave; istruzioni, metti quelle azioni tra parentesi graffe.
 quindi, per esempio, per muovere tutte le palle a una posizione casuale, puoi usare
 
 <p>
@@ -71,8 +71,8 @@ quindi, per esempio, per muovere tutte le palle a una posizione casuale, puoi us
 </blockquote>
 
 <p>
-Nota che, in questa(e) azione(i), l'istanza indicata è diventata 
-l'istanza "self". Sempre in queste azioni l'istanza "self" originale è diventata
+Nota che, in questa(e) azione(i), l'istanza indicata &egrave; diventata 
+l'istanza "self". Sempre in queste azioni l'istanza "self" originale &egrave; diventata
 l'istanza "other". Quindi, per muovere tutte le palle alla posizione
 dell'istanza corrente, puoi digitare
 
@@ -88,8 +88,8 @@ dell'istanza corrente, puoi digitare
 </blockquote>
 
 <p>
-Il costrutto with è estremamente potente. Lasciami dare qualche
-esempio in più. Per distruggere tutte le palle puoi digitare
+Il costrutto with &egrave; estremamente potente. Lasciami dare qualche
+esempio in pi&ugrave;. Per distruggere tutte le palle puoi digitare
 
 <p>
 <blockquote>

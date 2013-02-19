@@ -11,14 +11,14 @@
 <h3>Distruttori</h3>
 
 I distruttori distruggono le particelle quando entrano nella loro regione. 
-Un sistema particellare può avere un numero arbitrario di distruttori. 
-Un distruttore ha le seguenti proprietà:
+Un sistema particellare pu&ograve; avere un numero arbitrario di distruttori. 
+Un distruttore ha le seguenti propriet&agrave;:
  
 <ul>
   <li><tt><b>xmin, xmax, ymin, ymax</b></tt> 
     indicano la dimensione della regione in cui si distruggono le particelle.</li>
   <li><tt><b>shape</b></tt> 
-    indica la forma della regione. Può avere i seguenti valori:</li>
+    indica la forma della regione. Pu&ograve; avere i seguenti valori:</li>
   <ul>
     <li><tt>ps_shape_rectangle</tt></li>
     <li><tt>ps_shape_ellipse</tt></li>
@@ -34,10 +34,10 @@ come primo parametro l'indice del sistema particellare al quale appartiene.
 <blockquote>
   <tt><b>part_destroyer_create(ps)</b></tt> 
     Crea un nuovo distruttore nel dato sistema di particelle. Restituisce l'indice del distruttore. 
-    Questo indice deve essere usato in tutte le funzioni di seguito per impostare le proprietà del distruttore.<br>
+    Questo indice deve essere usato in tutte le funzioni di seguito per impostare le propriet&agrave; del distruttore.<br>
   <tt><b>part_destroyer_destroy(ps,ind)</b></tt> 
     Distrugge il distruttore ind nel sistema particellare. 
-    Chiamare questa funzione se non serve più, per risparmiare spazio.<br>
+    Chiamare questa funzione se non serve pi&ugrave;, per risparmiare spazio.<br>
   <tt><b>part_destroyer_destroy_all(ps)</b></tt> 
     Distrugge tutti i distruttori che sono stati creati nel sistema di particelle.<br>
   <tt><b>part_destroyer_exists(ps,ind)</b></tt> 

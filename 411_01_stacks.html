@@ -10,9 +10,9 @@
 
 <h3>Pile</h3>
 
-Una pila è una struttura dati LIFO (Last In First Out -  il primo ad entrare è 
-l’ultimo ad uscire). È possibile aggiungere e rimuovere valori dalla pila. 
-Il valore che si trova in cima alla pila (l’ultimo che è stato messo) sarà 
+Una pila &egrave; una struttura dati LIFO (Last In First Out -  il primo ad entrare è 
+l’ultimo ad uscire). &Egrave; possibile aggiungere e rimuovere valori dalla pila. 
+Il valore che si trova in cima alla pila (l’ultimo che &egrave; stato messo) sar&agrave; 
 il primo ad essere rimosso. Le pile sono spesso usate per gestire interruzioni 
 (interrupts), o quando si hanno funzioni ricorsive. Per le gestire le pile sono 
 disponibili le seguenti funzioni:
@@ -21,18 +21,18 @@ disponibili le seguenti funzioni:
 <blockquote>
   <tt><b>ds_stack_create()</b></tt> 
    Crea una nuova pila. La funzione restituisce un intero come un id che deve essere utilizzato in tutte le altre 
-   funzioni per accedere a pile particolari. È possibile creare più pile.<br>
+   funzioni per accedere a pile particolari. &Egrave; possibile creare pi&ugrave; pile.<br>
   <tt><b>ds_stack_destroy(id)</b></tt> 
     Distrugge la pila dato il suo id, liberando la memoria utilizzata. Non dimenticate di 
-    chiamare questa funzione quando si è pronti con la struttura.<br>
+    chiamare questa funzione quando si &egrave; pronti con la struttura.<br>
   <tt><b>ds_stack_clear(id)</b></tt> 
     Cancella tutti i dati della pila dato il suo id, senza distruggerla.<br>
   <tt><b>ds_stack_copy(id,source)</b></tt> 
-    Copia il contenuto della pila source in un’altra pila di cui è dato l’id.<br>
+    Copia il contenuto della pila source in un’altra pila di cui &egrave; dato l’id.<br>
   <tt><b>ds_stack_size(id)</b></tt> 
    Restituisce il numero di valori memorizzati nella pila.<br>
   <tt><b>ds_stack_empty(id)</b></tt> 
-    Restituisce un valore se la pila è vuota. È come verificare se la pila ha dimensione 0.<br>
+    Restituisce un valore se la pila &egrave; vuota. &Egrave; come verificare se la pila ha dimensione 0.<br>
   <tt><b>ds_stack_push(id,val)</b></tt> 
     Inserisce un valore in cima alla pila.<br>
   <tt><b>ds_stack_pop(id)</b></tt> 
@@ -41,11 +41,11 @@ disponibili le seguenti funzioni:
    Restituisce il valore in cima alla pila, ma non lo rimuove dalla pila.<br>
   <tt><b>ds_stack_write(id)</b></tt> 
     Converte la struttura-dati (data structure) in una stringa e restituisce questa stringa. 
-    La stringa può quindi essere utilizzata, per esempio, per essere salvata in un file. 
+    La stringa pu&ograve; quindi essere utilizzata, per esempio, per essere salvata in un file. 
     Questa funzione fornisce un semplice meccanismo per salvare strutture dati.<br>
   <tt><b>ds_stack_read(id,str)</b></tt> 
     Legge la struttura dati dalla stringa passata come parametro 
-    (che può essere creata usando la chiamata precedente).<br>
+    (che pu&ograve; essere creata usando la chiamata precedente).<br>
 </blockquote>
 
 <!--END-->

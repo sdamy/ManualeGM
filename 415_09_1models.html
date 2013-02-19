@@ -12,20 +12,20 @@
 
 <h3>Creare Modelli</h3>
 
-Quando hai bisogno di disegnare dei modelli grandi è abbastanza costoso chiamare tutte le differenti
+Quando hai bisogno di disegnare dei modelli grandi &egrave; abbastanza costoso chiamare tutte le differenti
 funzioni di disegno ad ogni step. Per evitare questo puoi creare dei modelli.
 Un modello consiste in un numero di disegni di primitive e di forme. Una volta creato il modello
 puoi disegnarlo in posizioni differenti con una sola funzione. I modelli possono anche essere
 caricati o salvati in un file.
 
 <p>
-Prima di descrivere le differenti funzioni disponibili c'è un importante punto: la manipolazione
+Prima di descrivere le differenti funzioni disponibili c'&egrave; un importante punto: la manipolazione
 delle textures. Come descritto prima, le texture vengono prese da sprites e brackgrounds.
 Gli indici delle texture possono essere differenti in differenti momenti. Quindi i modelli
 non contengono nessuna informazione sulle texture. Solo quando disegni un modello fornisci
-la texture. Quindi puoi usare solo una texture in un modello. Se hai bisogno di più textures
+la texture. Quindi puoi usare solo una texture in un modello. Se hai bisogno di pi&ugrave; textures
 devi unirle in una sola (trattando attentamente con le coordinate della texture) o usare
-più modelli. Il vantaggio è che puoi disegnare lo stesso modello con textures differenti.
+pi&ugrave; modelli. Il vantaggio &egrave; che puoi disegnare lo stesso modello con textures differenti.
 
 <p>
 Per creare, caricare, salvare, e disegnare modelli, esistono le seguenti funzioni:
@@ -33,7 +33,7 @@ Per creare, caricare, salvare, e disegnare modelli, esistono le seguenti funzion
 <p>
 <blockquote>
   <tt><b>d3d_model_create()</b></tt>
-	  Crea un nuovo modello e restituisce il suo indice. L'indice verrà usato in tutte
+	  Crea un nuovo modello e restituisce il suo indice. L'indice verr&agrave; usato in tutte
 	  le altre funzioni che trattano coi modelli.<br>
   <tt><b>d3d_model_destroy(ind)</b></tt>
 	  Distrugge il modello con l'indice indicato, liberando la sua memoria.<br>
@@ -44,13 +44,13 @@ Per creare, caricare, salvare, e disegnare modelli, esistono le seguenti funzion
   <tt><b>d3d_model_load(ind,fname)</b></tt>
 	  Carica il modello dal file indicato.<br>
   <tt><b>d3d_model_draw(ind,x,y,z,texid)</b></tt>
-	  Disegna il modello alla posizione (x,y,z). <tt>texid</tt> è la texture che dev'essere
+	  Disegna il modello alla posizione (x,y,z). <tt>texid</tt> &egrave; la texture che dev'essere
           usata. Usa -1 se non vuoi usare una texture. Se vuoi ruotare o ridimensionare il
           modello puoi usare le routines di trasformazione descritte prima.<br>
 </blockquote>
 
 <p>
-Per ogni funzione che tratta le primitive ce n'è una equivalente per aggiungerle al modello.
+Per ogni funzione che tratta le primitive ce n'&egrave; una equivalente per aggiungerle al modello.
 Le funzioni hanno gli stessi argomenti, ma hanno come primo argomento l'indice del modello,
 e non sono necessarie le informazioni sulla texture.
 
@@ -103,7 +103,7 @@ quasi uguali ma con un indice del modello e senza le informazioni della texture:
 </blockquote>
 
 <p>
-Usare i modelli può velocizzare significativamente la grafica nel vostro gioco 3D e tu
+Usare i modelli pu&ograve; velocizzare significativamente la grafica nel vostro gioco 3D e tu
 dovresti usarle ogni volta che puoi.
 
 <!--END-->

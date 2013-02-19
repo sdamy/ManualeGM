@@ -11,15 +11,15 @@
 <h3>Deviatori</h3>
 
 I deviatori deviano le particelle quando entrano nella loro regione. 
-Si noti che solo la posizione della particella è presa in considerazione, non 
-il suo sprite o la sua dimensione. Un sistema particellare può avere un numero 
-arbitrario di deviatori. Un deviatore ha le seguenti proprietà:
+Si noti che solo la posizione della particella &egrave; presa in considerazione, non 
+il suo sprite o la sua dimensione. Un sistema particellare pu&ograve; avere un numero 
+arbitrario di deviatori. Un deviatore ha le seguenti propriet&agrave;:
 
 <ul>
   <li><tt><b>xmin, xmax, ymin, ymax</b></tt> 
      indicano la dimensione della regione in cui sono deviate le particelle.</li>
   <li><tt><b>kind</b></tt>
-     indica il tipo di deviatore. Esso può avere i seguenti valori:</li>
+     indica il tipo di deviatore. Esso pu&ograve; avere i seguenti valori:</li>
   <ul>
     <li><tt>ps_deflect_horizontal</tt> 
 	  devia la particella in senso orizzontale, in genere utilizzato per le pareti verticali</li>
@@ -27,8 +27,8 @@ arbitrario di deviatori. Un deviatore ha le seguenti proprietà:
 	  devia la particella in senso verticale, in genere utilizzato per le pareti orizzontali</li>
   </ul>
   <li><tt><b>friction</b></tt> 
-   indicata la quantità di attrito a seguito dell'impatto con il deviatore. 
-   Maggiore è la quantità presente, più la particella è rallentata all’impatto.</li>
+   indicata la quantit&agrave; di attrito a seguito dell'impatto con il deviatore. 
+   Maggiore &egrave; la quantit&agrave; presente, pi&ugrave; la particella è rallentata all’impatto.</li>
 </ul>
 
 <p>
@@ -40,10 +40,10 @@ come primo parametro l'indice del sistema particellare al quale appartiene.
   <tt><b>part_deflector_create(ps)</b></tt> 
     Crea un nuovo deviatore nel dato sistema particellare. 
     Restituisce l'indice del deviatore. Questo indice deve essere usato in tutte le 
-    seguenti funzioni per impostare le proprietà del deviatore.<br>
+    seguenti funzioni per impostare le propriet&agrave; del deviatore.<br>
   <tt><b>part_deflector_destroy(ps,ind)</b></tt> 
     Distrugge il deviatore ind nel sistema particellare. Chiamare 
-    questa funzione se non serve più, per risparmiare spazio.<br>
+    questa funzione se non serve pi&ugrave;, per risparmiare spazio.<br>
   <tt><b>part_deflector_destroy_all(ps)</b></tt> 
     Distrugge tutti i deviatori che sono stati creati nel sistema di particelle.<br>
   <tt><b>part_deflector_exists(ps,ind)</b></tt> 
