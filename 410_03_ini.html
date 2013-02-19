@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>File INI</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>File INI</h3>
+
+L’uso dei files INI è un meccanismo standard per passare determinati settaggi di 
+parametri a dei programmi.I file INI contengono sezioni ed ogni sezione contiene 
+una serie di coppie nome-valore. Ad esempio, ecco un tipico file INI:
+
+<p>
+<blockquote>
+<pre>
+[Form]
+Top=100
+Left=100
+Caption=Il miglior gioco di sempre
+[Game]
+MaxScore=12324
+</pre>
+</blockquote>
+
+<p>
+Questo file contiene due sezioni, una chiamata Form e l’altra chiamata Game.
+La prima sezione contiene tre coppie. Le prime due hanno un valore reale mentre
+la terza ha un valore stringa.  Tali file INI sono facili da creare e modificare.
+Sono presenti le seguenti funzioni in <i> GameMaker </ i> per
+leggere e modificare i dati in essi contenuti.
+<p>
+<blockquote>
+  <tt><b>ini_open(name)</b></tt> 
+    Apre il file INI con il nome dato. Il file ini deve essere
+	memorizzato nella stessa cartella del gioco!<br>
+  <tt><b>ini_close()</b></tt> 
+    Chiude il file INI aperto.<br>
+  <tt><b>ini_read_string(section,key,default)</b></tt> 
+    Legge il valore della stringa della chiave indicata nella sezione indicata. Quando la chiave o la
+	sezione non esiste viene restituito il valore predefinito.<br>
+  <tt><b>ini_read_real(section,key,default)</b></tt> 
+    Legge il valore reale della chiave indicata nella sezione indicata.Quando la chiave o la 
+	sezione non esiste viene resituito il valore predefinito.<br>
+  <tt><b>ini_write_string(section,key,value)</b></tt> 
+    Scrive il valore della stringa per la chiave indicata nella sezione indicata.<br>
+  <tt><b>ini_write_real(section,key,value)</b></tt> 
+    Scrive il valore reale per la chiave indicata nella sezione indicata.<br>
+  <tt><b>ini_key_exists(section,key)</b></tt> 
+    Restituisce un valore se esiste la chiave indicata nella sezione indicata.<br>
+  <tt><b>ini_section_exists(section)</b></tt> 
+    Restituisce un valore se esiste la sezione indicata.<br>
+  <tt><b>ini_key_delete(section,key)</b></tt> 
+    Cancella la chiave indicata dalla sezione indicata.<br>
+  <tt><b>ini_section_delete(section)</b></tt> 
+    Cancella la sezione indicata.<br>
+</blockquote>
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+ini files
+
+ini_open()
+ini_close()
+ini_read_string()
+ini_read_real()
+ini_write_string()
+ini_write_real()
+ini_key_exists()
+ini_section_exists()
+ini_key_delete()
+ini_section_delete()
+
+--> 

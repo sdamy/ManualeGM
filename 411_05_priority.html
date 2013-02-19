@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Priority queues</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Code di priorità</h3>
+
+In una coda di priorità vengono memorizzati diversi valori, ciascuno 
+con una priorità. È possibile trovare rapidamente i valori 
+con minima e massima priorità. Questa struttura può 
+essere molto utile per la costruzione di classifiche o liste di 
+informazioni in cui l'importanza di ogni voce può essere ponderata. 
+Le seguenti funzioni sono disponibili:
+
+<p>
+<blockquote>
+  <tt><b>ds_priority_create()</b></tt> 
+    Crea una nuova coda di priorità. La funzione restituisce un intero come un id che 
+    deve essere utilizzato in tutte le altre funzioni per accedere a particolari code di priorità.<br>
+  <tt><b>ds_priority_destroy(id)</b></tt> 
+    Distrugge la coda di priorità dato il suo id, liberando la memoria utilizzata. Non 
+    dimenticate di chiamare questa funzione quando si è pronti con la struttura.<br>
+  <tt><b>ds_priority_clear(id)</b></tt> 
+    Azzera la coda di priorità dato il suo id, 
+    rimuovendo tutti i dati da essa, ma senza distruggerla.<br>
+  <tt><b>ds_priority_copy(id,source)</b></tt> 
+    Copia il contenuto della coda di priorità nella coda di cui è dato l’id.<br>
+  <tt><b>ds_priority_size(id)</b></tt> 
+    Restituisce il numero di valori memorizzati nella coda di priorità.<br>
+  <tt><b>ds_priority_empty(id)</b></tt> 
+    Restituisce un valore se la coda di priorità è vuota. È come testare se la dimensione è 0.<br>
+  <tt><b>ds_priority_add(id,val,prio)</b></tt> 
+    Aggiunge un valore (val) con priorità (prio) alla coda di priorità.<br>
+  <tt><b>ds_priority_change_priority(id,val,prio)</b></tt> 
+    Cambia la priorità del valore indicato nella coda di priorità.<br>
+  <tt><b>ds_priority_find_priority(id,val)</b></tt> 
+    Restituisce la priorità del valore indicato nella coda di priorità.<br>
+  <tt><b>ds_priority_delete_value(id,val)</b></tt> 
+    Cancella il valore (con la sua priorità) dalla coda di priorità.<br>
+  <tt><b>ds_priority_delete_min(id)</b></tt> 
+    Restituisce il valore con la minor priorità e lo elimina dalla coda di priorità.<br>
+  <tt><b>ds_priority_find_min(id)</b></tt> 
+    Restituisce il valore con la minor priorità, ma non lo cancella dalla coda di priorità.<br>
+  <tt><b>ds_priority_delete_max(id)</b></tt> 
+    Restituisce il valore con la più grande priorità e lo elimina dalla coda di priorità.<br>
+  <tt><b>ds_priority_find_max(id)</b></tt> 
+   Restituisce il valore con la più grande priorità, ma non lo cancella dalla coda di priorità.<br>
+  <tt><b>ds_priority_write(id)</b></tt> 
+    Converte la struttura dati in una stringa e restituisce questa stringa. La stringa 
+    può quindi essere utilizzata, per esempio, per essere salvata in un file. Questa funzione 
+    fornisce un semplice meccanismo per salvare strutture dati.<br>
+  <tt><b>ds_priority_read(id,str)</b></tt> 
+    Legge la struttura dati dalla stringa passata come parametro 
+    (che può essere creata usando la chiamata precedente).<br>
+</blockquote>
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+priority queues
+
+code di priorità
+
+ds_priority_create()
+ds_priority_destroy()
+ds_priority_clear()
+ds_priority_copy()
+ds_priority_size()
+ds_priority_empty()
+ds_priority_add()
+ds_priority_change_priority()
+ds_priority_find_priority()
+ds_priority_delete_value()
+ds_priority_delete_min()
+ds_priority_find_min()
+ds_priority_delete_max()
+ds_priority_find_max()
+ds_priority_write()
+ds_priority_read()
+--> 

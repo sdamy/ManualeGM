@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Funzioni che lavorano sulle stringhe</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Funzioni che lavorano sulle stringhe</h3>
+
+Le seguenti funzioni lavorano con caratteri e stringhe.
+
+<p>
+<blockquote>
+  <tt><b>chr(val)</b></tt>
+    Restituisce una stringa che contiene il carattere con codice val per stamparlo/mostrarlo,
+        basandosi sul font corrente.<br>
+        Se non è impostato nessun font, verrà usato il font di default del dispositivo.<br>
+    <b>NOTA:</b> Questo cambia da un dispositivo all'altro. Se ti serve un carattere particolare,
+        assicurati di IMPOSTARE un font all'iniziondel gioco.<br>
+        Se il font è uno sprite font, non verrà fatta alcuna traduzione.<br><br>
+  <tt><b>ansi_char(val)</b></tt>
+    Restituisce una stringa contenente il carattere con il puro valore BYTE.<br>
+    NOTA: Questo non verrà, né dovrebbe essere mostrato, ma verrà salvato correttamente
+        su disco per la codifica.<br><br>
+  <tt><b>ord(str)</b></tt>
+    Restituisce il codice ascii del primo carattere in str.<br>
+  <tt><b>real(str)</b></tt>
+    Converte str in un numero reale. str può contenere un segno meno, un
+        punto decimale e anche una parte esponenziale.<br>
+  <tt><b>string(val)</b></tt>
+    Converte il valore reale in una stringa usando il formato standard (nessuna
+        cifra decimale se è un intero, due cifre decimali negli altri casi).<br>
+  <tt><b>string_format(val,tot,dec)</b></tt>
+    Converte val in una stringa usando il tuo formato: tot indica il numero
+        totale delle cifre e dec indica il numero di cifre decimali.<br>
+
+  <tt><b>string_length(str)</b></tt>
+    Restituisce il numero di caratteri nella stringa.<br>
+
+  <tt><b>string_byte_length(str)</b></tt>
+    Restituisce il numero di BYTE nella stringa. Dal momento che le stringhe sono tenute come UTF8,
+        significa che la lunghezza della stringa non è più uguale alla sua grandezza un BYTE.<br>
+
+  <tt><b>string_pos(substr,str)</b></tt>
+    Restituisce la posizione di substr in str (0=nessuna apparizione).<br>
+  <tt><b>string_copy(str,index,count)</b></tt>
+    Restituisce un pezzo di str, contato a partire dalla posizione index, e di lunghezza count.<br>
+  <tt><b>string_char_at(str,index)</b></tt>
+    Restituisce il carattere in str alla posizione index.<br>
+
+  <tt><b>string_byte_at(str,index)</b></tt>
+    Restituisce il puro valore byte come un REALE alla posizione BYTE <i>index.</i><br>
+
+  <tt><b>string_delete(str,index,count)</b></tt>
+    Restituisce una copia di str a cui è stata rimossa la parte che comincia alla posizione
+        index e ha lunghezza count.<br>
+  <tt><b>string_insert(substr,str,index)</b></tt>
+    Restituisce una copia di str che ha substr aggiunta alla posizione index.<br>
+  <tt><b>string_replace(str,substr,newstr)</b></tt>
+    Restituisce una copia di str che ha la prima apparizione di substr sostituita con newstr.<br>
+  <tt><b>string_replace_all(str,substr,newstr)</b></tt>
+     Restituisce una copia di str che ha tutte le apparizioni di substr sostituite con newstr.<br>
+  <tt><b>string_count(substr,str)</b></tt>
+    Restituisce il numero di apparizioni di substr in str.<br>
+  <tt><b>string_lower(str)</b></tt>
+    Restituisce una copia con le lettere minuscole di str.<br>
+  <tt><b>string_upper(str)</b></tt>
+    Restituisce una copia con le lettere maiuscole di str.<br>
+  <tt><b>string_repeat(str,count)</b></tt>
+    Restituisce una stringa che consiste in count ripetizioni di str.<br>
+  <tt><b>string_letters(str)</b></tt>
+    Restituisce una stringa che contiene solo le lettere presenti in str.<br>
+  <tt><b>string_digits(str)</b></tt>
+    Restituisce una stringa che contiene solo la cifre presenti in str.<br>
+  <tt><b>string_lettersdigits(str)</b></tt>
+    Restituisce una stringa che contiene solo le lettere e le cifre presenti in str.<br>
+</blockquote>
+
+<p>
+Le seguenti funzioni lavorano con gli appunti per conservare il testo.
+
+<p>
+<blockquote>
+  <tt><b>clipboard_has_text()</b></tt>
+    Restituisce se c'è del testo negli appunti.<br>
+  <tt><b>clipboard_get_text()</b></tt>
+    Restituisce il testo presente negli appunti.<br>
+  <tt><b>clipboard_set_text(str)</b></tt>
+    Mette la stringa str negli appunti.<br>
+</blockquote>
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+string functions
+clipboard functions
+
+funzioni sulle stringhe
+funzioni sugli appunti
+
+real()
+string()
+string_format()
+chr()
+ansi_char()
+ord()
+string_length()
+string_byte_length()
+string_pos()
+string_copy()
+string_char_at()
+string_byte_at()
+string_delete()
+string_insert()
+string_lower()
+string_upper()
+string_repeat()
+string_letters()
+string_digits()
+string_lettersdigits()
+string_replace()
+string_replace_all()
+string_count()
+clipboard_has_text()
+clipboard_set_text()
+clipboard_get_text()
+--> 

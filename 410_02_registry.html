@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Registro (Registry)</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Registry</h3>
+
+Se si desidera salvare una piccola quantità di informazioni durante l’esecuzione del gioco,
+esiste un semplice meccanismo rispetto all’uso del file. Potete usare il Registro.
+Il registro è un ampio database che Windows conserva per tenere traccia di tutte le 
+impostazioni dei programmi. Una voce (entry) ha un nome e un valore. Potete usare entrambi, 
+stringhe e valori reali. Esistono le seguenti funzioni:
+
+<p>
+<blockquote>
+  <tt><b>registry_write_string(name,str)</b></tt> 
+    Crea una voce (entry) nel registro con il nome dato e un valore stringa.<br>
+  <tt><b>registry_write_real(name,x)</b></tt> 
+    Crea una voce (entry) nel registro con il nome dato e un valore reale.<br>
+  <tt><b>registry_read_string(name)</b></tt> 
+    Restituisce la stringa che teneva il nome dato. (Il nome deve esistere. 
+    	Altrimenti viene restituita una stringa vuota).<br>
+  <tt><b>registry_read_real(name)</b></tt> 
+    Restituisce il valore reale che tiene il nome dato. (Il nome deve esistere. 
+    	Altrimenti viene restituito un valore 0).<br>
+  <tt><b>registry_exists(name)</b></tt> 
+    La funzione da risultato se esiste il nome dato.
+</blockquote>
+
+<p>
+
+In realtà, i valori nel Registro sono raggruppati in chiavi. Le routine 
+sopra funzionano tutte su valori dentro la key che viene creata appositamente 
+per il vostro gioco. Il programma può utilizzare questo meccanismo per ottenere 
+alcune informazioni sul sistema sul quale il gioco è in esecuzione.
+È anche possibile leggere i valori in altre chiavi. È anche possibile scriverle, 
+ma siate molto attenti. In questo modo POTETE FACILMENTE DISTRUGGERE IL VOSTRO 
+SISTEMA.  (La scrittura ""Write" non è consentita in modalità sicura.) Notate 
+che le chiavi sono ancora sistemate in gruppi. Le seguenti routines lavorano predefinite 
+nel gruppo HKEY_CURRENT_USER. Ma potete cambiare il gruppo principale (root). 
+Per esempio, se volete trovare la directory temporanea attuale usate
+
+<p>
+<blockquote>
+<pre>
+  path = registry_read_string_ext('\Environment','TEMP');
+</pre>
+</blockquote>
+
+<p>
+Esistono le seguenti funzioni:
+
+<p>
+<blockquote>
+  <tt><b>registry_write_string_ext(key,name,str)</b></tt> 
+    Crea una voce (entry) nella chiave di registro con il dato nome e un valore di stringa.<br>
+  <tt><b>registry_write_real_ext(key,name,x)</b></tt> 
+    Crea una voce (entry) nella chiave di registro con il nome dato e un valore reale.<br>
+  <tt><b>registry_read_string_ext(key,name)</b></tt> 
+    Restituisce la stringa che il nome dato conserva nella chiave indicata.
+    	(Il nome deve esistere. Altrimenti viene restituita una stringa vuota).<br>
+  <tt><b>registry_read_real_ext(key,name)</b></tt> 
+    Restituisce il valore reale che il nome dato conserva nella chiave indicata.
+    (Il nome deve esistere. Altrimenti viene restituito il numero 0).<br>
+  <tt><b>registry_exists_ext(key,name)</b></tt> 
+    Restituisce un valore se esiste il nome dato nella data chiave..<br>
+  <tt><b>registry_set_root(root)</b></tt>
+    Setta l’origine (root) per le altre routines. Usate i seguenti valori:<br>
+	<blockquote>
+	  <b>0</b> = HKEY_CURRENT_USER<br>
+	  <b>1</b> = HKEY_LOCAL_MACHINE<br>
+	  <b>2</b> = HKEY_CLASSES_ROOT<br>
+	  <b>3</b> = HKEY_USERS
+	</blockquote>
+</blockquote>
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+registry
+
+registry_write_string()
+registry_write_real()
+registry_read_string()
+registry_read_real()
+registry_exists()
+registry_write_string_ext()
+registry_write_real_ext()
+registry_read_string_ext()
+registry_read_real_ext()
+registry_exists_ext()
+registry_set_root()
+
+--> 

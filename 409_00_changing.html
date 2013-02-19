@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Cambiare le Risorse</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h1>Cambiare le risorse</h1>
+
+<i><b>Questa funzionalit&agrave; &egrave; disponibile solo nella Standard Edition di Game Maker.</b></i>
+
+<P>
+&Egrave; possibile creare nuove risorse durante il gioco. Puoi anche cambiare.
+le risorse esistenti. Questo capitolo descrive le possibilit&agrave;. Fai attenzione. <b>Cambiare 
+le risorse pu&ograve; facilmente portare a seri errori nei tuoi giochi!!!</b>. Devi seguire
+le regole seguenti quando cambi le risorse:
+
+<ul>
+  <li>Non cambiare le risorse in uso. Questo porter&agrave; ad errori! Per esempio, 
+	non cambiare uno sprite in uso da un'istanza.</li>
+  <li>Quando salvi il gioco mentre &egrave; in esecuzione, le risorse aggiunte e cambiate
+	non vengono memorizzate con il gioco salvato. Quindi se salvi il gioco in seguito, 
+	queste potrebbero non esserci pi&ugrave;. In generale, quando manipoli le risorse non puoi più usare
+	il sistema built-in per caricare o salvare la partita.</li>
+  <li>Quando riavvii il gioco mentre &egrave; in esecuzione, le risorse cambiate non verranno memorizzate
+	nella loro forma originale. In generale, quando manipoli le risorse non puoi pi&ugrave; usare
+	le funzioni o le azioni per riavviare il gioco.</li>
+  <li>La manipolazione delle risorse pu&ograve; essere lenta. Per esempio, cambiare gli sprites o
+	i background &egrave; relativamente lento. Dunque non usarli durante la partita.</li>
+  <li>Creare risorse durante la partita (in particolare sprites e background) pu&ograve; facilmente
+	usare una grande quantit&agrave; di memoria. Dunque sii estremamente attento con questo. Per esempio, 
+	se hai uno sprite animato 128x128 con 32 frames e decidi di creare 36 copie ruotate di esso
+	userai 36x32x128x128x4 = 72 MB di memoria!</li>
+  <li>Assicurati di eliminare le risorse di cui non hai pi&ugrave; bisogno. Altrimenti il sistema
+	consumer&agrave; presto la memoria.</li>
+</ul>
+
+In generale, non dovresti cambiare nessuna risorsa mentre si gioca. &Egrave; meglio creare e cambiare
+le risorse all'inizio del gioco o della room.
+
+<!--HELPONLY-->
+
+ <P>
+&Egrave; possibile trovare le informazioni sul cambiamento delle risorse in queste pagine:
+
+<P>
+<p>
+<blockquote>
+    <a href="409_01_sprites.html">Sprites</a><br>
+    <a href="409_02_sounds.html">Suoni</a><br>
+    <a href="409_03_backgrounds.html">Backgrounds</a><br>
+    <a href="409_04_fonts.html">Fonts</a><br>
+    <a href="409_05_paths.html">Percorsi</a><br>
+    <a href="409_06_scripts.html">Scripts</a><br>
+    <a href="409_07_timelines.html">Time lines</a><br>
+    <a href="409_08_objects.html">Oggetti</a><br>
+    <a href="409_09_rooms.html">Stanze</a><br>
+</blockquote>
+
+<p>
+
+<!--ENDHELPONLY-->
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+resources
+changing resources
+adding resources
+deleting resources
+creating resources
+setting resource properties
+
+risorse
+cambiare risorse
+aggiungere risorse
+cancellare risorse
+creare risorse
+impostare risorse
+--> 

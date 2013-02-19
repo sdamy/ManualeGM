@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Opzioni grafiche</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+
+<h3>Opzioni grafiche</h3>
+
+In questa scheda puoi impostare un numero di opzioni riguardanti l'aspetto grafico
+del tuo gioco. È normalmente utile controllare gli effetti di queste
+opzioni perché possono avere un effetto significativo nel modo in cui il gioco appare.
+Ricorda che differenti utenti hanno delle differenti macchine. Quindi è meglio assicurarsi
+che le impostazioni funzionano anche sulle macchine degli altri.
+
+<p>
+<b>Start in fullscreen mode</b><br>
+Quando è selezionato il gioco parte in full screen (a schermo intero); altrimenti parte in una finestra.
+
+<p>
+<b>Scaling</b><br>
+Qui puoi indicare cosa succede quando la finestra è più grande della room
+o quando il gioco �viene eseguito un modalità full-screen. Ci sono tre scelte. Puoi
+indicare una dimensione fissa (fixed scaling). La room verrà disegnata ridimensionata con la quantità inserita
+al centro della finestra o al centro dello schermo. 100 indica che non verrà ridimensionata.
+Di solito devi usare la dimensione fissa quando i tuoi sprites e le tue rooms sono molto piccoli.
+La seconda opzione �ridimensiona la room in modo che riempie la finestra o lo schermo, ma mantiene
+l'aspect ratio (il rapporto tra larghezza e altazza) uguale. La terza
+opzione ridimensiona in modo che la finestra o lo schermo sia completamente riempita. Questa opzione
+può provocare distorsioni nell'immagine (in particolare nella modalità finestra quando
+l'utente la ridimensiona).
+
+<p>
+<b>Interpolate colors between pixels</b><br>
+Quando viene selezionata, i colori dei pixels negli sprites, background e tiles che non sono
+allineati con i pixel nello schermo verranno interpolati. Questo in particolare è il caso quando
+essi vengono ruotati, ridimensionati o piazzati in posizioni non intere. L'interpolazione
+rende i movimenti più morbidi, ma potrebbe anche dare un effetto sfocato. (Anche per le tiles
+può provocare delle fratture tra di esse, se non correttamente progettate.)
+
+<p>
+<b>Color outside the room region</b><br>
+Quando la room non riempie completamente la finestra o lo schermo c'è dell'area
+inusata attorno ad esso. Qui puoi sceficiare il colore di quest'area.
+
+<p>
+<b>Allow the player to resize the game window</b><br>
+Quando viene selezionata questa opzione nella modalità finestra l'utente può cambiare la dimensione della finestra
+trascinando col mouse i suoi bordi.
+
+<p>
+<b>Let the game window always stay on top</b><br>
+Quando viene selezionata in modalità finestra, questa rimane sempre sopra rispetto alle altre finestre.
+
+<p>
+<b>Don't draw a border in windowed mode</b><br>
+Quando viene selezionata in modalità finestra, questa non avrà né bordo né barra del titolo.
+
+<p>
+<b>Don't show the buttons in the window caption</b><br>
+Quando viene selezionata in modalità finestra, questa non avrà i bottoni della barra del titolo
+per chiudere la finestra, minimizzarla o massimizzarla.
+
+<p>
+<b>Display the cursor</b><br>
+Indica se mostrare il puntatore del mouse. Disattivandolo
+è normalmente più veloce.
+(Puoi facilmente creare il tuo oggetto cursore in <i>GameMaker</i>.)
+
+<p>
+<b>Freeze the game when the form loses focus</b><br>
+Quando viene selezionata, se il giocatore porta altre finestre sopra quella del gioco (per esempio
+un'altra applicazione) il gioco si congelerà finché la finestra del gioco riavrà
+il focus.
+
+<p>
+<b>Disable screensavers and power saving actions</b><br>
+Quando viene selezionata (gli screensavers e le azioni di risparmio energetico (come l'ibernazione) non
+verranno attivate mentre il gioco è in esecuzione. Questo è importante perché queste potrebbero distruggere
+alcuni aspetti grafici del gioco (come le surfaces).
+
+	
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+fullscreen mode
+scaling
+window
+resizable window
+window border
+border window
+outside color
+displaying the cursor
+cursor display
+freezing
+modalità fullscreen
+modalità schermo intero
+finestra
+finestra ridimensionabile
+bordo della finestra
+bordo finestra
+colore esterno
+mostrare il cursore
+cursore mostrare
+congelamento
+--> 

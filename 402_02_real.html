@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Funzioni che lavorano sui numeri reali</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Funzioni che lavorano sui numeri reali</h3>
+
+Esistono le seguenti funzioni che lavorano coi numeri reali.
+
+<p>
+<blockquote>
+  <tt><b>random(x)</b></tt>
+    Restituisce un numero reale casuale compreso tra 0 (incluso) e x (escluso).<br>
+  <tt><b>random_range(x1,x2)</b></tt>
+    Restituisce un numero reale casuale compreso tra x1 (incluso) e x2 (escluso).<br>
+  <tt><b>irandom(x)</b></tt>
+    Restituisce un numero intero casuale compreso tra 0 (incluso) e x (incluso se è intero).<br>
+  <tt><b>irandom_range(x1,x2)</b></tt>
+    Restituisce un numero intero casuale compreso tra x1 (incluso) e x2 (incluso). Sia x1 che x2
+        devono essere interi (altrimenti verranno arrotondati per difetto).<br>
+  <tt><b>random_set_seed(seed)</b></tt>
+    Imposta il seed (un intero) che viene usato per la generazione di numeri casuali. Può essere usato
+        per ottenere lo stesso numero casuale più volte. (Nota che anche alcune azioni e lo stesso
+        sistema usano numeri casuali.)<br>
+  <tt><b>random_get_seed()</b></tt>
+    Restituisce il seed corrente.<br>
+  <tt><b>randomize()</b></tt>
+    Imposta il seed a un numero casuale.<br>
+  <tt><b>choose(val1,val2,val3,...)</b></tt>
+    Sceglie un valore a caso tra quelli dati e lo restituisce.
+        La funzione può avere fino a 16 argument.<br>
+  <tt><b>abs(x)</b></tt>
+    Restituisce il valore assoluto di x.<br>
+  <tt><b>sign(x)</b></tt>
+    Restituisce il segno di x (-a, 0 oppure 1).<br>
+  <tt><b>round(x)</b></tt>
+    Restituisce x arrotondato all'intero più vicino.<br>
+  <tt><b>floor(x)</b></tt>
+    Restituisce x arrotondato per difetto.<br>
+  <tt><b>ceil(x)</b></tt>
+    Restituisce x arrotondato per eccesso.<br>
+  <tt><b>frac(x)</b></tt>
+    Restituisce la parte decimale di x, ovvero la parte dopo il punto decimale.<br>
+  <tt><b>sqrt(x)</b></tt>
+    Restituisce la radice quadrata di x. x deve essere positivo.<br>
+  <tt><b>sqr(x)</b></tt>
+    Restituisce x*x.<br>
+  <tt><b>power(x,n)</b></tt>
+    Restituisce x elevato alla potenza n.<br>
+  <tt><b>exp(x)</b></tt>
+    Restituisce e alla poetnza x.<br>
+  <tt><b>ln(x)</b></tt>
+    Restituisce il logaritmo naturale di x.<br>
+  <tt><b>log2(x)</b></tt>
+    Restituisce il logaritmo in base 2 di x.<br>
+  <tt><b>log10(x)</b></tt>
+    Restituisce il logaritmo in base 10 di x.<br>
+  <tt><b>logn(n,x)</b></tt>
+    Restituisce il logaritmo in base n di x.<br>
+  <tt><b>sin(x)</b></tt>
+    Restituisce il seno di x (x è in radianti).<br>
+  <tt><b>cos(x)</b></tt>
+    Restituisce il coseno di x (x è in radianti).<br>
+  <tt><b>tan(x)</b></tt>
+    Restituisce la tangente di x (x è in radianti).<br>
+  <tt><b>arcsin(x)</b></tt>
+    Restituisce il seno inverso di x.<br>
+  <tt><b>arccos(x)</b></tt>
+    Restituisce il coseno inverso di x.<br>
+  <tt><b>arctan(x)</b></tt>
+    Restituisce la tangente inversa di x.<br>
+  <tt><b>arctan2(y,x)</b></tt>
+    Calcola arctan(Y/X), e restituisce un angolo nel quadrante corretto.<br>
+  <tt><b>degtorad(x)</b></tt>
+    Converte i gradi in radianti.<br>
+  <tt><b>radtodeg(x)</b></tt>
+    Converte i radianti in gradi.<br>
+  <tt><b>min(val1,val2,val3,...)</b></tt>
+    Restituisce il valore minimo tra quelli dati. La funzione può avere fino a 16 argument.
+        Devono essere o tutti reali o tutte stringhe.<br>
+  <tt><b>max(val1,val2,val3,...)</b></tt>
+    Restituisce il valore massimo tra quelli dati. La funzione può avere fino a 16 argument.
+        Devono essere o tutti reali o tutte stringhe..<br>
+  <tt><b>mean(val1,val2,val3,...)</b></tt>
+    Restituisce la media dei valori dati. La funzione può avere fino a 16 argument.
+        Devono essere tutti reali.<br>
+  <tt><b>median(val1,val2,val3,...)</b></tt>
+    Restituisce la mediana dei valori, ovvero in valore centrale. (Se gli argument
+        sono un numero pari, viene restituito il più piccolo tra i due.)
+        La funzione può avere fino a 16 argument.
+        Devono essere tutti reali.<br>
+  <tt><b>point_distance(x1,y1,x2,y2)</b></tt>
+    Restituisce la distanza tra il punto (x1,y1) e il punto (x2,y2).<br>
+  <tt><b>point_distance_3d(x1,y1,z1,x2,y2,z2)</b></tt>
+    Restituisce la distanza tra il punto (x1,y1,z1) e il punto (x2,y2,z2).<br>
+  <tt><b>point_direction(x1,y1,x2,y2)</b></tt>
+    Restituisce la direzione dal punto (x1,y1) verso il punto (x2,y2) in gradi.<br>
+  <tt><b>lengthdir_x(len,dir)</b></tt>
+    Restituisce la componente orizzontale (componente x) del vettore con
+        la lunghezza e la direzione indicate.<br>
+  <tt><b>lengthdir_y(len,dir)</b></tt>
+    Restituisce la componente verticale (componente y) del vettore con
+        la lunghezza e la direzione indicate.<br>
+  <tt><b>dot_product(x1,y1,x2,y2)</b></tt>
+    Semplifica i vettori (x1,y1) e (x2,y2) per unirli, poi restituisce il
+        prodotto vettoriale di questi vettori semplificati.<br>
+  <tt><b>dot_product_3d(x1,y1,z1,x2,y2,z2)</b></tt>
+    Semplifica i vettori (x1,y1,z1) e (x2,y2,z2) per unirli, poi restituisce il
+        prodotto vettoriale di questi vettori semplificati.<br>
+  <tt><b>is_real(x)</b></tt>
+    Restituisce se x è un numero reale (inteso come opposto di una stringa).<br>
+  <tt><b>is_string(x)</b></tt>
+    Restituisce se x è una stringa (inteso come opposta di un numero reale).<br>
+</blockquote>
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+mathematical functions
+computing
+calculations
+mathematics
+trigonometric functions
+
+funzioni matematiche
+calcoli
+calcolare
+matematica
+funzioni trigonometriche
+
+is_real()
+is_string()
+random()
+random_range()
+irandom()
+irandom_range()
+random_set_seed()
+random_get_seed()
+randomize()
+choose()
+abs()
+round()
+floor()
+ceil()
+sign()
+frac()
+sqrt()
+sqr()
+exp()
+ln()
+log2()
+log10()
+sin()
+cos()
+tan()
+arcsin()
+arccos()
+arctan()
+arctan2()
+degtorad()
+radtodeg()
+power()
+logn()
+min()
+max()
+mean()
+median()
+point_distance()
+point_distance_3d()
+point_direction()
+lengthdir_x()
+lengthdir_y()
+dot_product()
+
+--> 

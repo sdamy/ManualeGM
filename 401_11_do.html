@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Il costrutto Do (Do statement)</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Il costrutto Do (Do statement)</h3>
+
+Il costrutto Do (oppure Do statement) ha la seguente forma
+<p>
+<blockquote>
+<pre><b>do</b> &lt;istruzione&gt; <b>until</b>(&lt;espressione&gt;)</pre>
+</blockquote>
+
+<p>
+L'istruzione viene eseguita fino a quando l'espressione è vera. L'istruzione viene eseguita minimo una volta. Sii attento con la ripetizione "Do". Puoi facilmente far diventare la ripetizione infinita, in quel caso, il gioco si bloccherà e non reagirà ad alcun input dell'utente'
+
+<p>
+<b>Example</b><br>
+Il seguente programma cerca di piazzare l'oggetto corrente in una posizione libera (simile all'azione di muovere un oggetto in una posizione casuale)'
+
+<p>
+<blockquote>
+<pre>
+{
+  <b>do</b>
+  {
+    x = random(room_width);
+    y = random(room_height);
+  }
+  <b>until</b> (place_free(x,y))
+}
+</pre>
+</blockquote>
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+do statement
+until
+costrutto do
+fino a quando
+--> 

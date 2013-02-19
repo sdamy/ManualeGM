@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Paths</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Paths</h3>
+
+E’ possible creare dei path e aggiungere dei punti ad essi. Comunque non cambiate mai un
+path che è attualmente in uso da un'istanza. QUesto può portare ad errori inaspettati.
+Esistono le seguenti funzioni per la modifica dei path:
+
+<p>
+<blockquote>
+  <tt><b>path_set_kind(ind,val)</b></tt> 
+	Setta il tipo di connessioni delle curve del path con
+	il dato indice (0= spigolose, 1 = morbide).<br>
+  <tt><b>path_set_closed(ind,closed)</b></tt> 
+	Imposta se il path deve essere chiuso (true) o aperto(false).<br>
+  <tt><b>path_set_precision(ind,prec)</b></tt> 
+	Imposta la precisione con la quale calcolare le curve morbide
+	del path (dovrà essere tra 1 e 8)<br>
+  <tt><b>path_add()</b></tt> 
+	Crea un nuovo path vuoto e ne restituisce l'indice.<br>
+  <tt><b>path_delete(ind)</b></tt> 
+	Elimina il path con il dato indice.<br>
+  <tt><b>path_duplicate(ind)</b></tt> 
+	Crea una copia del path indicato e ne restituisce l'indice.<br>
+  <tt><b>path_assign(ind,path)</b></tt> 
+	Assegna il path all'indice indicato. Questo creerà una copia del path.
+	In questo modo puoi impostare facilmente un path esistente in un'altro,
+	per esempio uno nuovo.<br>
+  <tt><b>path_append(ind,path)</b></tt> 
+	Aggiunge il path indicato al path con indice <tt>ind</tt>. <br>
+  <tt><b>path_add_point(ind,x,y,speed)</b></tt> 
+	Aggiunge un punto al path con il dato indice alla posizione (x,y) e
+	con la velocità <tt>speed</tt> indicata. Ricordate che un valore di 100
+	corrisponde alla velocità attuale. Valori più bassi faranno rallentare
+	mentre valori più alti faranno accelerare.<br>
+  <tt><b>path_insert_point(ind,n,x,y,speed)</b></tt> 
+	Inserisce un punto al path con il dato indice alla posizione (x,y) prima
+	del punto n con la velocità indicata.<br>
+  <tt><b>path_change_point(ind,n,x,y,speed)</b></tt> 
+	Modifica il punto n nel path con il dato indice indicando posizione (x,y) e velocità.<br>
+  <tt><b>path_delete_point(ind,n)</b></tt> 
+	Elimina il punto n del path con il dato indice.<br>
+  <tt><b>path_clear_points(ind)</b></tt> 
+	Elimina tutti i punti del path ottenendo un path vuoto.<br>
+  <tt><b>path_reverse(ind)</b></tt> 
+	Inverte il path.<br>
+  <tt><b>path_mirror(ind)</b></tt> 	
+	Specchia il path orizzontalmente (rispetto al suo centro)<br>
+  <tt><b>path_flip(ind)</b></tt> 
+	Specchia il path verticalmente (rispetto al suo centro)<br>
+  <tt><b>path_rotate(ind,angle)</b></tt> 
+	Ruota il path in senso antiorario con l'angolo indicato in gradi (rispetto al suo centro)<br>
+  <tt><b>path_scale(ind,xscale,yscale)</b></tt> 
+	Scala il path con i valori indicati (rispetto al suo centro)<br>
+  <tt><b>path_shift(ind,xshift,yshift)</b></tt> 
+	Sposta il path con i valori indicati.<br>
+</blockquote>
+
+<p>
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+path_set_kind()
+path_set_closed()
+path_set_precision()
+path_add()
+path_assign()
+path_duplicate()
+path_append()
+path_delete()
+path_add_point()
+path_insert_point()
+path_change_point()
+path_delete_point()
+path_clear_points()
+path_reverse()
+path_mirror()
+path_flip()
+path_rotate()
+path_scale()
+path_shift()
+
+--> 

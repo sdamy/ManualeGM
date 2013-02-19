@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Costrutto Switch</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Costrutto Switch</h3>
+
+In alcune situazioni puoi volere che un'azione dipenda da un
+particolare valore. Puoi farlo usando un certo numero di costrutti If, ma
+è più facile usare il costrutto Switch (switch statement). Un costrutto Switch ha la
+forma seguente:
+
+<p>
+<blockquote>
+<pre>
+<b>switch</b> (&lt;espressione&gt;)
+{
+  <b>case</b> &lt;espressione1&gt;: &lt;azione1&gt;; ... ; <b>break</b>;
+  <b>case</b> &lt;espressione2&gt;: &lt;azione2&gt;; ... ; <b>break</b>;
+  ...
+  <b>default</b>: &lt;azione&gt;; ...
+}
+</pre>
+</blockquote>
+
+<p>
+Funziona nel modo seguente. Prima viene eseguita l'espressione. Poi viene
+confrontata con i risultati delle diverse espressioni che seguono i "case"
+(ovvero espressione1,espressione2,ecc.).
+L'esecuzione continua dopo il primo "case" col valore corretto, 
+finché non viene incontrato un "break". Se nessun "case"
+ha il valore corretto, l'esecuzione continua fino al "default".
+(Non sei costretto a usare un "default".)
+Nota che più "case" possono essere usati per la stessa azione (come nell'esempio
+che segue). Inoltre, non sempre è necessario il "break". Se non ce ne sono
+l'esecuzione continua semplicemente con il prossimo "case".
+
+<p>
+<b>Esempio</b><br>
+Il programma seguente esegue un'azione sulla base del pulsante premuto.
+
+<p>
+<blockquote>
+<pre>
+<b>switch</b> (keyboard_key)
+{
+  <b>case</b> vk_left:
+  <b>case</b> vk_numpad4:
+    x -= 4; <b>break</b>;
+  <b>case</b> vk_right:
+  <b>case</b> vk_numpad6:
+    x += 4; <b>break</b>;
+}
+</pre>
+</blockquote>
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+switch statement
+case
+break
+istruzione switch
+case
+break
+--> 

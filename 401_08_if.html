@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Costrutto If</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Costrutto If</h3>
+
+Il costrutto If (if statement) ha questa forma:
+
+<p>
+<blockquote>
+<pre><b>if</b> (&lt;espressione&gt;) &lt;azione&gt;</pre>
+</blockquote>
+
+<p>
+oppure
+
+<p>
+<blockquote>
+<pre><b>if</b> (&lt;espressione&gt;) &lt;azione&gt; <b>else</b> &lt;azione&gt;</pre>
+</blockquote>
+
+<p>
+L'azione può anche essere un blocco di azioni. L'espressione verrà risolta. Se
+il valore (arrotondato) è &lt;=0 (<b>false</b>(falso)) viene eseguita l'azione dopo
+else (altrimenti), in caso contrario (<b>true</b>(vero)) viene eseguita l'altra azione. È una
+buona abitudine mettere sempre entro parentesi graffe le azioni nel costrutto if.
+Perciò è meglio usare:
+
+<p>
+<blockquote>
+<pre>
+<b>if</b> (&lt;espressione&gt;)
+{
+  &lt;azione&gt;
+}
+<b>else</b>
+{
+  &lt;azione&gt;
+}
+</pre>
+</blockquote>
+
+<p>
+<b>Esempio</b><br>
+
+Il programma seguente muove l'object verso il centro dello schermo:
+
+<p>
+<blockquote>
+<pre>
+{
+  <b>if</b> (x&lt;200) {x += 4} <b>else</b> {x -= 4};
+}
+</pre>
+</blockquote>
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+else
+if
+conditional statement
+else
+if
+istruzione condizionale
+--> 

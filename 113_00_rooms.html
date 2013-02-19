@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html><head>
+<title>Creare le rooms</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h1>Creare le rooms (stanze)</h1>
+
+Ora che sono stati definiti gli oggetti con i loro comportamenti in forma di eventi ed azioni, è il tempo di creare rooms (stanze) o livelli nella quale il gioco avrà luogo. Ogni gioco richiede minimo una room (stanza).In queste room metteremo le istanze dei vari oggetti.
+Una volta che il gioco parte, la prima stanza viene visualizzata e le istanze prendono vita in base alle azioni presenti nell'evento "create".
+
+<p>
+Ci sono un gran numero di possibilità quando le room vengono create. Oltre ad impostare un certo numero di proprietà aggiungendo le istanze degli objects (oggetti), puoi aggiungere backgrounds (sfondi), definire le views (viste), e aggiungere tiles. Molte di queste impostazioni sono discusse successivamente.
+In questo capitolo parleremo soltanto delle impostazioni di base, dell'aggiunta delle istanze degli objects (oggetti) e dei settaggi dell'immagine di background (sfondo)
+
+<p>
+Per creareuna stanza, scegli <b>Create Room</b> (crea una stanza) dal menu <b>Resources</b> (risorse).
+Apparirà il seguente modulo:
+
+<p>
+<img src="images/form_room.jpg">
+
+<p>
+Nella parte alta del modulo c'è una barra degli strumenti. Su di questa puoi indicare la grandezza delle celle della griglia utilizzate per l'allineamento degli oggetti. Puoi anche indicare se mostrare o meno la griglia oppure lo sfondo etc... Qualche volta è importnante nascondere temporaneamente certi aspetti della room. Comunque quando aggiungi le istanze degli objects (oggetti), quasti saranno sempre visibili, indipendentemente dalle impostazioni scelte.
+Ci sono, anche, dei pulsanti che permettono di cancellare tutte le istanze nella room e che permettono di spostare tutte le istanze di un certo numero di pixel. Utilizza numeri negativi per spostarli verso sinistra o verso l'alto. Questo è molto utile quando decidi di ingrandire la room. (Puoi anche decidere di inserire oggetti al di fuori della stanza. Può essere utile qualche volta).
+Ci sono anche il pulsante <b>undo</b> (annulla) per annullare l'ultimo cambiamento effettuato nella room, e il pulsante <b>OK</b> per salvare i cambiamenti. (clicca sulla "X" in alto a destra per uscire dal modulo senza salvare i cambiamenti.)<p>
+    In fine le tre icone alla fine, ti permettono di zoomare (ingrandire o rimpicciolire) la stanza.
+L'icona centrale serve per far tornare lo zoom al livello normale. Gli elementi nella stanza torneranno ad essere visti in scala 1:1.
+Potrai trovare utile l'utilizzo della rotellina del mouse. Ruotandola avanti o dietro, sarà possibile zoomare dinamicamente la stanza per poi, così, mouversi velocemente in tutte le parti della stanza.
+Tramite il tasto centrale del mouse è possibile muoversi nel livello. Questo metodo è piu veloce rispetto all'utilizzo delle scrollbar, permettendoti di esplorare il livello utilizzando un solo pulsante.<p>
+At the left you will see three tab pages (five in advanced mode). The object
+tab is where you add instances of objects to the room. In the <b>settings</b> tab you
+can indicate a number of settings for the room. In the <b>backgrounds</b> tab you can
+set background images for the room.
+
+
+<h3>Adding instances</h3>
+
+At the right in the room design form you see the room. At the start it is empty, with
+a gray background.
+
+<p>
+<img src="images/form_room_objects.jpg">
+
+<p>
+To add instances to the room, first select the <b>objects</b> tab if this one is not
+already visible. Next select the object you want to add by clicking on the button with
+the menu icon (or by clicking in the image area at the left). The image of the object
+appears at the left. (Note that when you changed the origin of the sprite
+there is a cross in the image. This indicates how the
+instances will be aligned with the grid.) Now click with your left mouse button in the
+room area at the right. An instance of the object appears. It will snap to the
+indicated grid. If you hold the &lt;Alt&gt; key while placing the instance it is not
+aligned to the grid. If you hold down the mouse button while dragging it over the
+room, you move the instance to the correct place. If you hold the &lt;Shift&gt; key
+while pressing and moving the mouse multiple instances are added. With the right mouse
+button you can remove instances. In this way you define the contents of the room.
+
+<p>
+As you will notice, if you place an instance on top of another one, the original
+instance disappears. Normally this is what you want, but not always. This can be
+avoided by unchecking the box labeled <b>Delete underlying</b> at the left.
+
+<p>
+If you want to change the position of an instance, hold the &lt;Ctrl&gt; key and click
+with the left mouse button on the instance and hold down the button. You can now drag
+it to a new position. (Use &lt;Alt&gt; for precise positioning.)
+
+<p>
+If you hold the &lt;Ctrl&gt; key while clicking with the right mouse button on an
+instance, a menu appears. Here you can delete the object, type in a precise position
+for the instance, or move the bottommost instance at the position to the top or send
+the topmost instance to the bottom.
+
+
+
+<h3>Room setting</h3>
+
+Each room has a number of settings that you can change by clicking on the <b>settings</b> tab.
+
+<p>
+<img src="images/form_room_settings.jpg">
+
+<p>
+Each room has a name. Best give it a meaningful name. There also is a caption. This
+caption is displayed in the window caption when the game is running. You can set the
+width and height of the room (in pixels). Also you can set the speed of the game. This
+is the number of steps per second. The higher the speed, the smoother the motion is.
+But you will need a faster computer to run it.
+
+
+
+<h3>Setting the background</h3>
+
+With the tab <b>backgrounds</b> you can set the background image for the room.
+Actually, you can specify multiple backgrounds. The tab page looks as follows:
+
+<p>
+<img src="images/form_room_backgrounds.jpg">
+
+<p>
+At the top you will see the background color. You can click on it to change it. The
+background color is only useful if you don't use a background image that covers the
+whole room. Otherwise, best uncheck the box labeled <b>Draw background color</b>
+because this will be a waste of time.
+
+<p>
+At the top you see a list of 8 backgrounds. You can define each of them but most of
+the time you will need just one or two. To define a background, first select it in the
+list. Next check the box labeled <b>Visible when room starts</b> otherwise you won't
+see it. The name of the background will become bold when it is defined. Now indicate a
+background image in the menu. There are a number of settings you can change. First of
+all you can indicate whether the background image should tile the room horizontally
+and/or vertically. You can also indicate the position of the background in the room
+(this will also influence the tiling). A different option is to stretch the
+background. The background will then be scaled so that it fills the entire room.
+The aspect ration of the image will not be maintained. Finally
+you can make the background scrolling by giving it a horizontal or vertical speed
+(pixels per step). Better not use scrolling with a stretched background. The result
+will be a bit jaggy.
+
+<p>
+There is one more checkbox labeled <b>Foreground image</b>. When you check this box,
+the background is actually a foreground, which is drawn on top of everything else
+rather than behind it. Clearly such an image should be partially transparent to be of
+any use.
+
+<!--END-->
+<p>
+    &nbsp;</p>
+</body>
+</html>
+
+<!-- KEYWORDS
+adding rooms
+creating rooms
+rooms
+caption
+room caption
+instances
+adding instances
+background color
+room color
+background
+room background
+foregrounds
+tiled backgrounds
+streched backgrounds
+room settings
+room speed
+room size
+grid
+snapping
+delete underlying
+--> 
+

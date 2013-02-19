@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Suoni</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Suoni</h3>
+
+Le funzioni seguenti possono essere utilizzate per creare dei suoni e per rimuoverli.
+
+<p>
+<blockquote>
+  <tt><b>sound_add(fname,kind,preload)</b></tt> 
+	Aggiunge una risorsa di tipo suono al gioco. fname è il nome del file che contiene
+	il suono. kind indica il tipo di suono (0=normal, 1=background, 2=3d, 3=mmplayer).
+	preload indica se il suono dev'essere memorizzato immediatamente nella memoria audio
+	(utilizzare true o false). La funzione restituisce l'indice del nuovo suono, che
+	pu&ograve; essere utilizzato per riprodurre il suono. (-1 se c'è stato un errore,
+	per esempio se il file non esiste). <br>
+	.
+  <tt><b>sound_replace(index,fname,kind,preload)</b></tt> 
+	Lo stesso della funzione precedente, ma con questa non viene creato un nuovo suono, 
+	ma viene sostituito l'indice del suono precedente, eliminandolo. Restituisce quando 
+	non ci sono stati errori.
+  <tt><b>sound_delete(index)</b></tt> 
+	Cancella il suono indicato, cancellando tutta la memoria associata ad esso.
+	Non potr&agrave; essere ripristinato pi&ugrave;.</br>
+</blockquote>
+
+<p>
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+sound_add()
+sound_replace()
+sound_delete()
+
+--> 

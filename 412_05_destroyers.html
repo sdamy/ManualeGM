@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Destroyers</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Distruttori</h3>
+
+I distruttori distruggono le particelle quando entrano nella loro regione. 
+Un sistema particellare può avere un numero arbitrario di distruttori. 
+Un distruttore ha le seguenti proprietà:
+ 
+<ul>
+  <li><tt><b>xmin, xmax, ymin, ymax</b></tt> 
+    indicano la dimensione della regione in cui si distruggono le particelle.</li>
+  <li><tt><b>shape</b></tt> 
+    indica la forma della regione. Può avere i seguenti valori:</li>
+  <ul>
+    <li><tt>ps_shape_rectangle</tt></li>
+    <li><tt>ps_shape_ellipse</tt></li>
+    <li><tt>ps_shape_diamond</tt></li>
+  </ul>
+</ul>
+
+<p>
+Ci sono diverse funzioni per definire i distruttori. Si noti che ciascuna di esse ammette 
+come primo parametro l'indice del sistema particellare al quale appartiene.
+
+<p>
+<blockquote>
+  <tt><b>part_destroyer_create(ps)</b></tt> 
+    Crea un nuovo distruttore nel dato sistema di particelle. Restituisce l'indice del distruttore. 
+    Questo indice deve essere usato in tutte le funzioni di seguito per impostare le proprietà del distruttore.<br>
+  <tt><b>part_destroyer_destroy(ps,ind)</b></tt> 
+    Distrugge il distruttore ind nel sistema particellare. 
+    Chiamare questa funzione se non serve più, per risparmiare spazio.<br>
+  <tt><b>part_destroyer_destroy_all(ps)</b></tt> 
+    Distrugge tutti i distruttori che sono stati creati nel sistema di particelle.<br>
+  <tt><b>part_destroyer_exists(ps,ind)</b></tt> 
+    Restituisce un valore se il distruttore indicato esiste nel sistema particellare.<br>
+  <tt><b>part_destroyer_clear(ps,ind)</b></tt> 
+    Riporta il distruttore ind alle impostazioni predefinite.<br>
+  <tt><b>part_destroyer_region(ps,ind,xmin,xmax,ymin,ymax,shape)</b></tt> 
+    Imposta l'area del distruttore.<br>
+</blockquote>
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+part_destroyer_create()
+part_destroyer_destroy()
+part_destroyer_destroy_all()
+part_destroyer_exists()
+part_destroyer_clear()
+part_destroyer_region()
+
+--> 

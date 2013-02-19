@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Usare le date e il tempo</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Usare le date e il tempo</h3>
+
+In <i>GameMaker</i> ci sono alcune funzioni per lavorare con le date e il tempo.
+Una combinazione data-ora è salvata in un numero reale. La parte intera di un
+valore data-ora è il numero di giorni passati dal 30/12/1899. La parte decimale
+è la parte di un giorno di 24 ore che è passata finora.
+Esistono le seguenti funzioni:
+
+<p>
+<blockquote>
+	<tt><b>date_current_datetime()</b></tt>
+          Restituisce il valore data-ora che corrisponde al momento corrente.<br>
+	<tt><b>date_current_date()</b></tt>
+          Restituisce il valore data-ora che corrisponde alla data corrente (ignorando l'ora).<br>
+	<tt><b>date_current_time()</b></tt>
+          Restituisce il valore data-ora che corrisponde all'ora corrente (ignorando la data).<br>
+	<tt><b>date_create_datetime(year,month,day,hour,minute,second)</b></tt>
+          Crea un valore data-ora corrispondente alla data e all'ora indicate.<br>
+	<tt><b>date_create_date(year,month,day)</b></tt>
+          Crea un valore data-ora corrispondente alla data indicata.<br>
+	<tt><b>date_create_time(hour,minute,second)</b></tt>
+          Crea un valore data-ora corrispondente all'ora indicata.<br>
+	<tt><b>date_valid_datetime(year,month,day,hour,minute,second)</b></tt>
+          Restituisce se la data e l'ora indicate sono valide.<br>
+	<tt><b>date_valid_date(year,month,day)</b></tt>
+          Restituisce se la data indicata è valida.<br>
+	<tt><b>date_valid_time(hour,minute,second)</b></tt>
+          Restituisce se l'ora indicata è valida.<br>
+	<tt><b>date_inc_year(date,amount)</b></tt>
+          Restituisce una nuova data che è amount anni nel futuro rispetto
+          alla data indicata. amount deve essere un intero.<br>
+	<tt><b>date_inc_month(date,amount)</b></tt>
+          Restituisce una nuova data che è amount mesi nel futuro rispetto
+          alla data indicata. amount deve essere un intero.<br>
+	<tt><b>date_inc_week(date,amount)</b></tt>
+          Restituisce una nuova data che è amount settimane nel futuro rispetto
+          alla data indicata. amount deve essere un intero.<br>
+	<tt><b>date_inc_day(date,amount)</b></tt>
+          Restituisce una nuova data che è amount giorni nel futuro rispetto
+          alla data indicata. amount deve essere un intero.<br>
+	<tt><b>date_inc_hour(date,amount)</b></tt>
+          Restituisce una nuova data che è amount ore nel futuro rispetto
+          alla data indicata. amount deve essere un intero.<br>
+	<tt><b>date_inc_minute(date,amount)</b></tt>
+          Restituisce una nuova data che è amount minuti nel futuro rispetto
+          alla data indicata. amount deve essere un intero.<br>
+	<tt><b>date_inc_second(date,amount)</b></tt>
+          Restituisce una nuova data che è amount secondi nel futuro rispetto
+          alla data indicata. amount deve essere un intero.<br>
+	<tt><b>date_get_year(date)</b></tt>
+          Restituisce l'anno corrispondente alla data.<br>
+	<tt><b>date_get_month(date)</b></tt>
+          Restituisce il mese corrispondente alla data.<br>
+	<tt><b>date_get_week(date)</b></tt>
+          Restituisce la settimana dell'anno corrispondente alla data.<br>
+	<tt><b>date_get_day(date)</b></tt>
+          Restituisce il giorno del mese corrispondente alla data.<br>
+	<tt><b>date_get_hour(date)</b></tt>
+          Restituisce l'ora corrispondente alla data.<br>
+	<tt><b>date_get_minute(date)</b></tt>
+          Restituisce il minuto corrispondente alla data.<br>
+	<tt><b>date_get_second(date)</b></tt>
+          Restituisce il secondo corrispondente alla data.<br>
+	<tt><b>date_get_weekday(date)</b></tt>
+          Restituisce il giorno della settimana corrispondente alla data.<br>
+	<tt><b>date_get_day_of_year(date)</b></tt>
+          Restituisce il giorno dell'anno corrispondente alla data.<br>
+	<tt><b>date_get_hour_of_year(date)</b></tt>
+          Restituisce l'ora dell'anno corrispondente alla data.<br>
+	<tt><b>date_get_minute_of_year(date)</b></tt>
+          Restituisce il minuto dell'anno corrispondente alla data.<br>
+	<tt><b>date_get_second_of_year(date)</b></tt>
+          Restituisce il secondo dell'anno corrispondente alla data.<br>
+	<tt><b>date_year_span(date1,date2)</b></tt>
+          Restituisce il numero di anni che intercorre tra le due date.
+          Riporta un anno incompleto nella parte decimale. <br>
+	<tt><b>date_month_span(date1,date2)</b></tt>
+          Restituisce il numero di mesi che intercorre tra le due date.
+          Riporta un mese incompleto nella parte decimale. <br>
+	<tt><b>date_week_span(date1,date2)</b></tt>
+          Restituisce il numero di settimane che intercorre tra le due date.
+          Riporta una settimana incompleta nella parte decimale. <br>
+	<tt><b>date_day_span(date1,date2)</b></tt>
+          Restituisce il numero di giorni che intercorre tra le due date.
+          Riporta un giorno incompleto nella parte decimale. <br>
+	<tt><b>date_hour_span(date1,date2)</b></tt>
+          Restituisce il numero di ore che intercorre tra le due date.
+          Riporta un'ora incompleta nella parte decimale. <br>
+	<tt><b>date_minute_span(date1,date2)</b></tt>
+          Restituisce il numero di minuti che intercorre tra le due date.
+          Riporta un minuto incompleto nella parte decimale. <br>
+	<tt><b>date_second_span(date1,date2)</b></tt>
+          Restituisce il numero di secondi che intercorre tra le due date.
+          Riporta un secondo incompleto nella parte decimale. <br>
+	<tt><b>date_compare_datetime(date1,date2)</b></tt>
+          confronta i due valori data-ora. Restituisce -1 se date1<date2,
+          0 se date1=date2 o 1 se date1>date2. <br>
+	<tt><b>date_compare_date(date1,date2)</b></tt>
+          Confronta i due valori data-ora prendendo in considerazione solo la parte data.
+          Restituisce -1 se date1<date2, 0 se date1=date2, 1 se date1>date2. <br>
+	<tt><b>date_compare_time(date1,date2)</b></tt>
+          Confronta i due valori data-ora prendendo in considerazione solo la parte ora.
+          Restituisce -1 se date1<date2, 0 se date1=date2, 1 se date1>date2. <br>
+	<tt><b>date_date_of(date)</b></tt>
+          Restituisce la parte data del valore data-ora indicato,
+          impostando a 0 la parte ora.<br>
+	<tt><b>date_time_of(date)</b></tt>
+          Restituisce la parte ora del valore data-ora indicato,
+          impostando a 0 la parte data. <br>
+	<tt><b>date_datetime_string(date)</b></tt>
+          Restituisce una stringa che indica la data e l'ora fornite nel formato
+          di default del sistema.<br>
+	<tt><b>date_date_string(date)</b></tt>
+          Restituisce una stringa che indica la data fornita nel formato di default
+          del sistema.<br>
+	<tt><b>date_time_string(date)</b></tt>
+          Restituisce una stringa che indica l'ora fornita nel formato di default
+          del sistema.<br>
+	<tt><b>date_days_in_month(date)</b></tt>
+          Restituisce il numero di giorni nel mese indicato dal valore data-ora.<br>
+	<tt><b>date_days_in_year(date)</b></tt>
+          Restituisce il numero di giorni nell'anno indicato dal valore data-ora.<br>
+	<tt><b>date_leap_year(date)</b></tt>
+          Restituisce se l'anno indicato dal valore data-ora è bisestile.<br>
+	<tt><b>date_is_today(date)</b></tt>
+          Restituisce se il valore data-ora indicato è oggi.<br>
+</blockquote>
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+date functions
+time functions
+
+funzioni sulla data
+funzioni sul tempo
+
+date_current_datetime()
+date_current_date()
+date_current_time()
+date_create_datetime()
+date_create_date()
+date_create_time()
+date_valid_datetime()
+date_valid_date()
+date_valid_time()
+date_inc_year()
+date_inc_month()
+date_inc_week()
+date_inc_day()
+date_inc_hour()
+date_inc_minute()
+date_inc_second()
+date_get_year()
+date_get_month()
+date_get_week()
+date_get_day()
+date_get_hour()
+date_get_minute()
+date_get_second()
+date_get_weekday()
+date_get_day_of_year()
+date_get_hour_of_year()
+date_get_minute_of_year()
+date_get_second_of_year()
+date_year_span()
+date_month_span()
+date_week_span()
+date_day_span()
+date_hour_span()
+date_minute_span()
+date_second_span()
+date_compare_datetime()
+date_compare_date()
+date_compare_time()
+date_date_of()
+date_time_of()
+date_datetime_string()
+date_date_string()
+date_time_string()
+date_days_in_month()
+date_days_in_year()
+date_leap_year()
+date_is_today()
+--> 

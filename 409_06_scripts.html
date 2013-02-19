@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Scripts</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Scripts</h3>
+
+Gli script non possono essere cambiati durante l'esecuzione del gioco. Gli script sono parte
+della logica del programma. Cambiare gli script condurrebbe alla autoriscrittura del codice che
+porterebbe facilmente ad errori. Ci sono altri sistemi per far fronte a questa necessità.
+Se avete veramente bisogno di eseguire un pezzo di codice che non è stato creato durante lo sviluppo
+(ad esempio, leggere il codice da un file) potete usare le seguenti funzioni:
+
+<blockquote>
+  <tt><b>execute_string(str,arg0,arg1,...)</b></tt> 
+    Esegue il pezzo di codice contenuto nella stringa <tt>str</tt> con gli argomenti indicati.<br/>
+  <tt><b>execute_file(fname,arg0,arg1,...)</b></tt> 
+  Esegue il pezzo di codice contenuto in un file con gli argomenti indicati.<br/>
+</blockquote>
+
+<p>
+A volte vorrete memorizzare l'indice di uno script in una variabile ed eseguirlo.
+Per fare ciò usate le seguenti funzioni:
+</p>
+
+<blockquote>
+ <tt><b>script_execute(scr,arg0,arg1,...)</b></tt> 
+ 	Esegue lo script con indice <tt>scr</tt> con gli argomenti indicati.</blockquote>
+
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+execute_string()
+execute_file()
+script_execute()
+
+--> 

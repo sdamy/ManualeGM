@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Gli Array</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Gli Array</h3>
+
+Nel GML puoi usare array mono- e bi-dimensionali. Semplicemente metti l'indice
+tra parentesi quadre per un array monodimensionale, e due indici
+separati da una virgola per un array bdimensionale. Nel momento in cui usi
+un indice viene generato l'array. Ogni array comincia da indice 0. Perciò
+fa' attenzione quandi usi indici grandi perché verrà usato un grande
+spazio in memoria. Non usare MAI indici negativi. Il sistema mette un limite di 32000 su
+ogni indice e 1000000 di dimensioni totali. Per esempio puoi scrivere il
+codice seguente:
+
+<p>
+<blockquote>
+<pre>
+{
+  a[0] = 1;
+  i = 1;
+  <b>while</b> (i &lt; 10) { a[i] = 2*a[i-1]; i += 1;}
+  b[4,6] = 32;
+}
+</pre>
+</blockquote>
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+arrays
+2-dimensional arrays
+1-dimensional arrays
+array
+array monodimensionali
+array bidimensionali
+--> 

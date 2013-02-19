@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Costrutti With</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Costrutti With</h3>
+
+Come indicato prima, è possibile leggere e cambiare il valore di
+variabili di altre istanze. Ma in alcuni casi vorrai fare
+molto di più con le altre istanze. Per esempio, immagina che vuoi muovere
+tutte le palle di 8 pixel in giù. Potresti pensare di riuscirci col
+codice seguente
+
+<p>
+<blockquote>
+<pre>ball.y = ball.y + 8;</pre>
+</blockquote>
+
+<p>
+Ma non è corretto. Il lato destro dell'assegnazione prende il valore
+dellaa coordinata y della prima palla e aggiunge 8. Poi questo nuovo
+valore viene impostato come coordinata y di tutte le palle. Ne risulta che tutte le palle
+hanno la stessa coordinata y. L'istruzione
+
+<p>
+<blockquote>
+<pre>ball.y += 8;</pre>
+</blockquote>
+
+<p>
+avrà esattamente lo stesso effetto perché è semplicemente un'abbreviazione
+della prima istruzione. E allora come possiamo fare? Per questo scopo c'è
+il costrutto <b>with</b>. La sua forma generale è
+
+<p>
+<blockquote>
+<pre><b>with</b> (&lt;expression&gt;) &lt;statement&gt;</pre>
+</blockquote>
+
+<p>
+&lt;expression&gt; indica una o più istanze. In questo campo puoi usare
+un id di un'istanza, il nome di un object (per indicare tutte le istanze di
+quest'object) o uno degli object speciali (all, self, other, noone).
+&lt;statement&gt; è eseguito per ciascuna delle istanze indicate, come
+se quell'istanza fosse la corrente istanza (self). Quindi, per muovere tutte le palle di 8
+pixel in basso, puoi digitare:
+
+<p>
+<blockquote>
+<pre><b>with</b> (ball) y += 8;</pre>
+</blockquote>
+
+<p>
+Se vuoi eseguire più istruzioni, metti quelle azioni tra parentesi graffe.
+quindi, per esempio, per muovere tutte le palle a una posizione casuale, puoi usare
+
+<p>
+<blockquote>
+<pre>
+<b>with</b> (ball)
+{
+  x = random(room_width);
+  y = random(room_height);
+}
+</pre>
+</blockquote>
+
+<p>
+Nota che, in questa(e) azione(i), l'istanza indicata è diventata 
+l'istanza "self". Sempre in queste azioni l'istanza "self" originale è diventata
+l'istanza "other". Quindi, per muovere tutte le palle alla posizione
+dell'istanza corrente, puoi digitare
+
+<p>
+<blockquote>
+<pre>
+<b>with</b> (ball)
+{
+  x = other.x;
+  y = other.y;
+}
+</pre>
+</blockquote>
+
+<p>
+Il costrutto with è estremamente potente. Lasciami dare qualche
+esempio in più. Per distruggere tutte le palle puoi digitare
+
+<p>
+<blockquote>
+<pre><b>with</b> (ball) instance_destroy();</pre>
+</blockquote>
+
+<p>
+Se una bomba esplode e vuoi distruggere tutte le istanze vicine puoi
+usare
+
+<p>
+<blockquote>
+<pre>
+<b>with</b> (all)
+{
+  <b>if</b> (distance_to_object(other) &lt; 50) instance_destroy();
+}
+</pre>
+</blockquote>
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+with construction
+applying code to instances
+costrutto with
+applicare il codice ad altre istanze
+--> 

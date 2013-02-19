@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Firework Example</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+
+<h3>Esempio di fuoco d’artificio</h3>
+
+Ecco un esempio di un sistema particellare che crea fuochi d'artificio. 
+Il fuoco d'artificio utilizza due tipi di particelle: uno che forma il 
+razzo e uno che fa l’effettivo fuochi d'artificio. Il razzo genera le 
+particelle del fuoco d'artificio solo quando muore. Dobbiamo anche creare
+un emettitore nel sistema particellare che regolarmente genera il flusso 
+delle particelle del razzo lungo la parte inferiore dello schermo. Per fare 
+questo lavoro è necessario un oggetto. Nel suo evento create mettiamo il 
+seguente codice che crea i tipi di particelle, il sistema di particelle, e l'emettitore:
+
+<p>
+<blockquote>
+<pre>
+{
+  // crea il sistema particellare
+  ps = part_system_create();
+
+  // particelle del fuoco d'artificio
+  pt1 = part_type_create();
+  part_type_shape(pt1,pt_shape_flare);
+  part_type_size(pt1,0.1,0.2,0,0);
+  part_type_speed(pt1,0.5,4,0,0);
+  part_type_direction(pt1,0,360,0,0);
+  part_type_color1(pt1,c_red);
+  part_type_alpha2(pt1,1,0.4);
+  part_type_life(pt1,20,30);
+  part_type_gravity(pt1,0.2,270);
+
+  // il razzo
+  pt2 = part_type_create();
+  part_type_shape(pt2,pt_shape_sphere);
+  part_type_size(pt2,0.2,0.2,0,0);
+  part_type_speed(pt2,10,14,0,0);
+  part_type_direction(pt2,80,100,0,0);
+  part_type_color2(pt2,c_white,c_gray);
+  part_type_life(pt2,30,60);
+  part_type_gravity(pt2,0.2,270);
+  part_type_death(pt2,150,pt1);    // crea il fuoco d'artificio quando muore il razzo
+
+  // crea l'emettitore
+  em = part_emitter_create(ps);
+  part_emitter_region(ps,em,100,540,480,490,ps_shape_rectangle,ps_distr_linear);
+  part_emitter_stream(ps,em,pt2,-4);   // crea uno ogni 4 passi
+}
+</pre>
+</blockquote>
+
+<p>
+Questo creerà l’effetto. È necessario assicurarsi che il sistema particellare 
+(e probabilmente anche i tipi) vengano distrutti quando si cambia livello (room), 
+altrimenti il fuoco d’artificio continuerà a vivere per sempre.
+
+<!--END-->
+</body>
+</html> 

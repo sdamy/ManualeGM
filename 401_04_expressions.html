@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Espressioni</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Espressioni</h3>
+
+Le espressioni possono essere numeri reali (es.3.4), numeri esadecimali, preceduti
+dal segno $ (es. $00FFAA), stringhe messe tra apici singoli o
+doppi (es. 'hello' o &#8220;hello&#8221;) o espressioni
+più complicate. (Nota che le stringhe possono stare su più righe!)
+Per le espressioni, esistono i seguenti operatori binari (in
+ordine di priorità):
+
+<ul>
+  <li>&amp;&amp; || ^^: combinano valori Booleani (true/false) (&amp;&amp; = and, || = or,
+^^ = xor)</li>
+  <li>&lt; &lt;= == != &gt; &gt;=: confronti, risultano true (1) o
+false (0)</li>
+  <li>| &amp; ^: operatori bitwise (| = bitwise or, &amp; = bitwise and, ^
+= bitwise xor)</li>
+  <li>&lt;&lt; &gt;&gt;: operatori bitwise (&lt;&lt; = shift left, &gt;
+&gt; = shift right)</li>
+  <li>+ -: addizione, sottrazione</li>
+  <li>* / div mod: moltiplicazione, divisione, divisione intera e resto
+</li>
+</ul>
+
+<p>
+Nota che
+il valore di <tt>x div y</tt> è il valore di <tt>x/y</tt> arrotondato per difetto all'intero più vicino.
+L'operatore <tt>mod</tt> Restituisce il resto ottenuto dividendo i suoi operandi.
+In altre parole, <tt>x mod y = x - (x div y) * y</tt>.
+
+Esistono anche i seguenti operatori unici:
+
+<ul>
+  <li>!: not (non), trasforma true in false e viceversa</li>
+  <li>-: nega il prossimo valore</li>
+  <li>~: nega il prossimo valore bitwise</li>
+</ul>
+
+Come valori puoi usare numeri, variabili, o funzioni che restituiscono un
+valore. Le sub-espressioni possono essere messe tra parentesi. Tutti gli operatori funzionano
+coi numeri reali. Le comparazioni finzionano anche per le stringhe, e il + può concatenare
+le stringhe. (Nota che, a differenza di altri linguaggi, entrambi gli argomenti
+di un'operazione Booleana sono sempre calcolati, anche se il primo
+determina già il risultato.)
+
+<p>
+<b>Esempio</b>
+
+<p>
+Ecco degli esempi di assegnazioni.
+
+<p>
+<blockquote>
+<pre>
+{
+  x = 23;
+  color = $FFAA00;
+  str = 'hello world';
+  y += 5;
+  x *= y;
+  x = y &lt;&lt; 2;
+  x = 23*((2+4) / sin(y));
+  str = 'hello' + &quot; world&quot;;
+  b = (x &lt; 5) &amp;&amp; !(x==2 || x==4);
+}
+</pre>
+</blockquote>
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+hexadecimal numbers
+expressions
+operators
+binary operators
+unary operators
+bitwise operators
+boolean operators
+logical operators
+numeri esadecimali
+espressioni
+operatori
+operatori binari
+operatori unici
+operatori bitwise
+operatori booleani
+operatori logici
+--> 

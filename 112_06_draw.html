@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Azioni di disegno</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+
+<h3>Azioni di disegno</h3>
+Normalmente in ogni step del gioco, per ogni istanza, viene disegnato uno sprite nella room.
+Puoi cambiarlo mettendo azioni nell'evento draw. (Questa azione viene eseguita solo
+quando l'istanza è visibile!) Le seguenti azioni di disegno sono disponibili.
+Queste azioni hanno senso solo nell'evento draw. In altri posti sono ignorate.
+
+<p>
+<b><img src="images/action_drawsprite.bmp"> Draw Sprite</b><br>
+Specifica lo sprite, la posizione (assoluta o relativa
+alla posizione dell'istanza corrente) e la subimage dello sprite
+(le subimage sono numerate da 0 in su.) Se vuoi 
+disegnare la subimage corrente, usa il numero -1.
+
+<p>
+<b><img src="images/action_drawbackground.bmp"> Draw Background</b><br>
+Indica un background, la posizione (assoluta o relativa) e
+se l'immagine dovrebbe essere piatrellata su tutta la room oppure no.
+
+<p>
+<b><img src="images/action_drawtext.bmp"> Draw Text</b><br>
+Specifica il testo e la posizione. Un simbolo # è interpretato 
+come andare alla prossima linea. (Usa \# per stampare #.) Così puoi 
+creare testi multi-linea. Se il testo inizia per apice (') o per doppio apice ("),
+è interpretato come un espressione. Per esempio, Tu puoi usare
+
+<pre>
+'X: ' + string(x)
+</pre>
+
+<p>
+Per mostrare il valore della coorditata x dell'istanza.
+(la variabile x contiene la coordinata x corrente. La funzione <tt>string()</tt> cambia
+questo numero in una stringa. il + concatena le due stringhe.)
+
+<p>
+<b><img src="images/action_drawtextext.bmp"> Draw Scaled Text</b><br>
+Questa funzione è simile alla precedente ma questa volta puoi anche
+specificare la scalatura orizzontale e verticale per cambiare la dimensione del
+testo e puoi specificare un angolo per ruotarlo
+<b><i>Questa azione è disponibile solo nella versione Standard.</i></b> 
+
+<p>
+<b><img src="images/action_drawrectangle.bmp"> Draw Rectangle</b><br>
+Specifica le coordinate dei due angoli opposti del rettangolo;
+se assolute o relative alla posizione dell'istanza corrente.
+
+<p>
+<b><img src="images/action_drawhorgradient.bmp"> Horizontal Gradient</b><br>
+Anche questa azione disegna un rettangolo ma questa volta usando un gradiente di colore che
+passa da sinitra a destra. Specifica il rettangolo e i due colori da usare.
+<b><i>Questa azione è disponibile solo nella versione Standard.</i></b> 
+
+<p>
+<b><img src="images/action_drawvertgradient.bmp"> Vertical Gradient</b><br>
+Anche questa azione disegna un rettangolo ma questa volta usando un gradiente di colore che
+passa dall'alto al basso. Specifica il rettangolo e i due colori da usare.
+<b><i>Questa azione è disponibile solo nella versione Standard.</i></b>
+
+<p>
+<b><img src="images/action_drawellipse.bmp"> Draw Ellipse</b><br>
+Questa azione disegna un ellisse.
+Specifica le coordinate dei due angoli opposti del rettangolo circostante;
+s assolute o relative alla posizione dell'istanza corrente.
+
+<p>
+<b><img src="images/action_drawellipsegradient.bmp"> Gradient Ellipse</b><br>
+Again an ellipse is drawn but this time you specify a color for the center and
+the boundary.
+<b><i>Questa azione è disponibile solo nella versione Standard.</i></b>
+
+<p>
+<b><img src="images/action_drawline.bmp"> Draw Line</b><br>
+Specifica le coordinate dei due punti finali della linea;
+se assolute o relative alla posizione dell'istanza corrente.
+
+<p>
+<b><img src="images/action_drawarrow.bmp"> Draw Arrow</b><br>
+Disegna una freccia. Specifica le coordinate dei due punti finale dell linea
+e la grandezza della punta della freccia.
+
+<p>
+<b><img src="images/action_color.bmp"> Set Color</b><br>
+Consente di impostare il colore usato per disegnare le forme, linee, e testo.
+(Non influenza il modo in cui vengono disegnati sprite e background.)
+
+<p>
+<b><img src="images/action_fullscreen.bmp"> Set Full Screen</b><br>
+Con questa azzione puoi cambiare la nodalità dello schermo da finestra schermo intero
+e viceversa. Puoi indicare se cambiare la modalità o passare da 
+finestra s schermo intero
+
+<p>
+<b><img src="images/action_snapshot.bmp"> Take Snapshot</b><br>
+con questa azione puoi catturare una immagine del gioco e immagazzinarla
+in un file .png. Specifica il nome del file in cui immagazzinare l'immagine.
+<b><i>Questa azione è disponibile solo nella versione Standard.</i></b>
+
+<p>
+<b><img src="images/action_explosion.bmp"> Create Effect</b><br>
+Con questa azione puoi creare tutti i tipi di oggetti in un modo veramente facile.
+Specifica il tipo di effetto, p.e. un eplosione o del fumo, la sua posizione, la sua grandezza e il suo colore e
+se dovrebbe essere mostrato sotto gli oggetti o al di sopra di loro. Per
+il resto lavora automaticamente.
+(Per la pioggia e per la neve la posizione è irrilevante
+cade sempre dalla parte superiore dello schermo, per creare
+continuamente la piogga dovrai crearla ogni step.)
+Si nota che sotto realmente significa ad una profondità di 100000
+e sopra significa ad una profondità di -100000.
+<b><i>Questa azione è disponibile solo nella versione Standard.</i></b>
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+drawing actions 
+drawing shapes
+
+azioni di disegno
+disegnare forme
+--> 

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Device specific commands</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Comandi specifici per dispositivo</h3>
+
+<i>GameMaker</i> offre anche la possibilità di avviare programmi esterni. 
+Ci sono due funzioni disponibili per fare questo: execute_program e shell_execute. 
+La funzione execute_program avvia un programma, possibilmente con 
+degli arguments. Si può aspettare che il programma finisca 
+la sua esecuzione (mettendo il gioco in pausa) oppure 
+far continuare il gioco. La funzione execute_shell invece apre un file. 
+Questo può essere un qualsiasi tipo di file, associato in qualche modo al 
+gioco, come ad esempio, un file html, un file word, ecc. 
+Oppure può essere un programma. Questa funzione non attende il 
+completamento dell’esecuzione del programma, quindi il gioco continuerà.
+
+<p>
+<blockquote>
+  <tt><b>os_type</b></tt>&nbsp;&nbsp; Questa variabile memorizza il tipo di piattaforma sulla quale il gioco è in esecuzione. Essa può essere una delle seguenti:-<br />
+    <ul>
+    <li><tt>os_win32</tt> eseguibile di Windows a 32bit.</li>
+    <li><tt>os_win64</tt> eseguibile di Windows a 64bit.</li>
+    <li><tt>os_macosx</tt> Mac OSX.</li>
+    <li><tt>os_psp</tt> Playstation portable.</li>
+    <li><tt>os_ios</tt> Apple iOS (iPhone, iPad, iPod Touch etc.)</li>
+    <li><tt>os_android</tt> dispositivi Android (telefoni o tablet)</li>
+    </ul>
+    <br />
+  <tt><b>os_device</b></tt>&nbsp;&nbsp; Questa variabile consente di classificare ulteriormente il dispositivo sul quale il vostro gioco è in esecuzione. Può essere uno dei seguenti:-<br />
+    <ul>
+    <li><tt>device_ios_iphone</tt> iPhone non-retina.</li>
+    <li><tt>device_ios_iphone_retina</tt> iPhone con display retina.</li>
+    <li><tt>device_ios_ipad</tt> iPad device.</li>
+    </ul>
+    <br />
+</blockquote>
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+executing programs
+shell
+starting programs
+programs
+secure mode
+
+avviare programmi
+modalità protetta
+
+execute_program()
+execute_shell()
+secure_mode
+
+os_type
+os_win32
+os_win64
+os_macosx
+os_psp
+os_ios
+os_android
+
+
+os_device
+device_ios_iphone
+device_ios_iphone_retina
+device_ios_ipad
+
+
+--> 

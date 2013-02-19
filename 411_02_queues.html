@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Queues</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Code</h3>
+
+Una coda è molto simile ad una pila ma è basata sul metodo FIFO 
+(First In First Out - il primo ad entrare è anche il primo ad uscire). 
+Il valore che per primo viene inserito nella coda è anche il primo ad 
+essere rimosso. Le code funzionano come quelle dei supermercati: la 
+persona che è prima in una coda è servita per prima. Le code sono 
+in genere utilizzate per memorizzare cose che non sono state ancora 
+fatte, ma ci sono anche molti altri usi. Sono disponibili le seguenti 
+funzioni (si noti che le prime cinque sono equivalenti alle funzioni 
+delle pile; tutte le strutture dati hanno queste cinque funzioni in comune):
+
+<p>
+<blockquote>
+  <tt><b>ds_queue_create()</b></tt> 
+    Crea una nuova coda. La funzione restituisce un intero come un id che deve 
+    essere utilizzato in tutte le altre funzioni per accedere a code particolari. 
+    È possibile creare più code.<br>
+  <tt><b>ds_queue_destroy(id)</b></tt> 
+    Distrugge la coda dato il suo id, liberando la memoria utilizzata. 
+    Non dimenticate di chiamare questa funzione quando si è pronti con la struttura.<br>
+  <tt><b>ds_queue_clear(id)</b></tt> 
+    Cancella la coda dato il suo id, rimuovendo tutti i dati da essa, ma senza distruggerla.<br>
+  <tt><b>ds_queue_copy(id,source)</b></tt> 
+    Copia il contenuto della coda in un’altra coda dato il suo id.<br>
+  <tt><b>ds_queue_size(id)</b></tt> 
+    Restituisce il numero di valori memorizzati nella coda.<br>
+  <tt><b>ds_queue_empty(id)</b></tt> 
+    Restituisce un valore se la coda è vuota. È come testare se la dimensione è 0.<br>
+  <tt><b>ds_queue_enqueue(id,val)</b></tt> 
+    Inserisce un valore nella coda.<br>
+  <tt><b>ds_queue_dequeue(id)</b></tt> 
+    Restituisce il valore a capo della coda e lo rimuove dalla coda.<br>
+  <tt><b>ds_queue_head(id)</b></tt> 
+    Restituisce il valore a capo della coda, e non lo rimuove dalla coda.<br>
+  <tt><b>ds_queue_tail(id)</b></tt> 
+   Restituisce il valore alla fine della coda, cioè, il valore che più 
+   recentemente è stato aggiunto alla coda. (E non lo rimuove dalla coda).<br>
+  <tt><b>ds_queue_write(id)</b></tt> 
+    Converte la struttura-dati (data structure) in una stringa e restituisce questa stringa. 
+    La stringa può quindi essere utilizzata, per esempio, per essere salvata in un file. 
+    Questa funzione fornisce un semplice meccanismo per salvare strutture dati.<br>
+  <tt><b>ds_queue_read(id,str)</b></tt> 
+    Legge la struttura dati dalla stringa passata come parametro 
+    (che può essere creata usando la chiamata precedente).<br>
+</blockquote>
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+queues
+
+code
+
+ds_queue_create()
+ds_queue_destroy()
+ds_queue_clear()
+ds_queue_copy()
+ds_queue_size()
+ds_queue_empty()
+ds_queue_enqueue()
+ds_queue_dequeue()
+ds_queue_head()
+ds_queue_tail()
+ds_queue_write()
+ds_queue_read()
+
+--> 

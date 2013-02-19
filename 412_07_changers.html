@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Changers</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Modificatori</h3>
+
+I modificatori cambiano alcune particelle quando entrano nella loro regione.
+Un sistema particellare può avere un numero arbitrario di modificatori. 
+Un modificatore ha le seguenti proprietà:
+
+<ul>
+  <li><tt><b>xmin, xmax, ymin, ymax</b></tt> 
+    indicano la dimensione della zona in cui le particelle vengono modificate.</li>
+  <li><tt><b>shape</b></tt> 
+    indica la forma della regione. Esso può avere i seguenti valori:</li>
+  <ul>
+    <li><tt>ps_shape_rectangle</tt></li>
+    <li><tt>ps_shape_ellipse</tt></li>
+    <li><tt>ps_shape_diamond</tt></li>
+  </ul>
+  <li><tt><b>parttype1</b></tt> 
+    indica il tipo di particella che viene cambiata.</li>
+  <li><tt><b>parttype2</b></tt> 
+    indica il tipo di particella in cui viene cambiata.</li>
+  <li><tt><b>kind</b></tt> 
+    indica il tipo di cambio. Esso può avere i seguenti valori:</li>
+  <ul>
+    <li><tt>ps_change_motion</tt> 
+	  cambia solo i parametri di movimento della particella, non il colore e la forma o il tempo di vita.</li>
+    <li><tt>ps_change_shape</tt> 
+	  cambia solo i parametri di forma come la dimensione, il colore e la forma.</li>
+    <li><tt>ps_change_all</tt> 
+	  cambia tutti i parametri, ciò significa che la particella viene distrutta 
+	  e una nuova di un nuovo tipo viene creata.</li>
+  </ul>
+</ul>
+
+<p>
+Ci sono diverse funzioni per definire i modificatori. Si noti che ciascuna di esse ammette 
+come primo parametro l'indice del sistema particellare al quale appartiene.
+
+<p>
+<blockquote>
+  <tt><b>part_changer_create(ps)</b></tt> 
+    Crea un nuovo modificatore nel dato sistema particellare. Restituisce l'indice del modificatore. 
+    Questo indice deve essere usato in tutte le funzioni di seguito per impostare le proprietà del modificatore.<br>
+  <tt><b>part_changer_destroy(ps,ind)</b></tt> 
+    Distrugge il modificatore ind nel sistema particellare. 
+    Chiamare questa funzione se non serve più, per risparmiare spazio.<br>
+  <tt><b>part_changer_destroy_all(ps)</b></tt> 
+    Distrugge tutti i modificatori che sono stati creati nel sistema di particelle.<br>
+  <tt><b>part_changer_exists(ps,ind)</b></tt> 
+    Restituisce un valore se il modificatore indicato esiste nel sistema particellare.<br>
+  <tt><b>part_changer_clear(ps,ind)</b></tt> 
+    Riporta il modificatore ind alle impostazioni predefinite.<br>
+  <tt><b>part_changer_region(ps,ind,xmin,xmax,ymin,ymax,shape)</b></tt> 
+    Imposta l'area per il modificatore.<br>
+  <tt><b>part_changer_types(ps,ind,parttype1,parttype2)</b></tt> 
+    Imposta il tipo di particelle che il modificatore deve cambiare in un altro tipo.<br>
+  <tt><b>part_changer_kind(ps,ind,kind)</b></tt> 
+    Imposta il tipo per il modificatore.
+</blockquote>
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+part_changer_create()
+part_changer_destroy()
+part_changer_destroy_all()
+part_changer_exists()
+part_changer_clear()
+part_changer_region()
+part_changer_kind()
+part_changer_types()
+ps_change_all
+ps_change_shape
+ps_change_motion
+
+--> 

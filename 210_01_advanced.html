@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Impostazioni avanzate</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Impostazioni avanzate</h3>
+
+Ci sono due aspetti del tab <b>settings</b> che non abbiamo ancora considerato.
+Prima di tutto, il checkbox denominato <b>Persistent (persistente)</b>. Generalmente, quando
+si lascia un room e vi si ritorna successivamente, quest'ultima risulta 
+resettata al suo stato originale. Questo comportamento è può essere corretto
+in giochi suddivisi a livelli, ma generalmente non é quello che si vuole per
+esempio in un RPG, dove ci si aspetta che la room si trovi nello stato in cui
+l'abbiamo lasciata in precedenza. Spuntare il checkbox denominato <b>Persistent</b>
+produce esattamente questo risultato. La room sarà preservata in modo
+che al seguente rientro quest'ultima sia esattamente come é stata lasciata.
+Solo al riavvio del gioco la room tornerà al suo stato originario.
+Esiste però un'eccezione a questo comportamento. Nel caso in cui alcuni oggetti
+siano stati a loro volta marcati come persistenti, le istanze di questi oggetti
+non rimarranno nella room ma verranno spostati alla successiva.
+
+
+<p>
+Un secondo aspetto riguarda il bottone denominato <b>Creation Code (codice di 
+creazione)</b>. Il bottone rende possibile l'inserimento di un codice in GML
+(vedi prossimi capitoli) che verrà eseguito alla creazione della room.
+Questo può essere utile per definire delle variabili in riferimento alla room,
+per creare istanze, ecc. È importante a questo punto capire cosa esattamente 
+succede quando ci si sposta in una nuova room.
+
+<ul>
+  <li> Prima di tutto, tutte le istanze nella room corrente (se presente)
+  eseguono l'evento room-end. In seguito le istanze non persistenti vengono
+  rimosse (l'evento destroy non questo caso non viene eseguito!).</li>
+  <li>In seguito, le istanze persistenti vengono spostate nella room
+  successiva.</li>
+  <li>Tutte le nuove istanze vengono create e il loro evento create viene
+  eseguito (se la room non é persistente o non è ancora stata visitata).</li>
+  <li>Nel caso in cui questa sia la prima room, l'evento game-start viene
+  eseguito per tutte le istanze (dove presente).</li>
+  <li>A questo punto il creation code della room viene eseguito.</li>
+  <li>Infine, l'evento room-start viene eseguito per tutte le istanze (dove presente)</li>
+</ul>
+
+<p>
+Diventa possibile quindi, per esempio, utilizzare variabili impostate nel
+creation code nell'evento room-start, o fare riferimento dal creation code
+alle istanze presenti nella room (sia nuove che persistenti).
+
+<p>
+Esiste inoltre un'altra impostazione. Nel pop-up menu che compare cliccando
+col tasto destro su un'istanza tenendo premuto il tasto &lt;Ctrl&gt; è
+possibile indicare un creation code per l'istanza specifica. Questo codice
+viene eseguito all'avvio della room, prima dell'evento create dell'istanza.
+Questa funzionalità può essere molto utile per esempio per impostare alcuni
+parametri relativi all'istanza nello specifico.
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+persistent rooms
+persistenza, room persistenti
+persistence, rooms
+room creation code
+creation code
+event order
+ordine eventi
+--> 

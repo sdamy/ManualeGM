@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Svariate altre Variabili e Funzioni</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Svariate altre Variabili e Funzioni</h3>
+
+Ecco alcune variabili e funzioni che lavorano con gli errori.
+
+<p>
+<blockquote>
+  <tt><b>error_occurred</b></tt>
+    Indica se è avvenuto un errore.<br>
+  <tt><b>error_last</b></tt>
+    Una stringa che indica l'ultimo messaggio d'errore.<br>
+  <tt><b>show_debug_message(str)</b></tt>
+    Mostra la stringa nella debug mode.<br>
+  <tt><b>debug_mode</b></tt>
+    Questa variabile di sola lettura indica se il gioco sta venendo eseguito in debug mode.<br>
+</blockquote>
+
+Le seguenti variabili possono essere usate per assicurarti che il tuo codice funzioni per l'appropriata
+versione ed edizione di <i>GameMaker</i>.
+
+<p>
+<blockquote>
+  <tt><b>gamemaker_pro</b></tt>
+    Indica se il gioco è creato con la Standard Edition (altrimenti conosciuta come "Versione PRO").<br>
+  <tt><b>gamemaker_registered</b></tt>
+    Come <tt>gamemaker_pro</tt><br>
+  <tt><b>gamemaker_version</b></tt>
+    La versione di <i>GameMaker</i>. È un intero. Per la versione 8.0 potrebbe essere
+        un valore tra 800 e 809. Per la versione 8.1 sarà qualcosa tra 810 e 819, ecc.
+        Quindi non cercare una particolare versione ma piuttosto un raggio.
+        Questa variabile non è disopnibile nelle versioni precedenti alla 800.<br>
+</blockquote>
+
+<p>
+Esistono le seguenti funzioni per controllare se determinate variabili esistono
+e con cui puoi impostare le variabili e ottenere i loro valori. In tutte
+queste funzioni il nome della variabile è passato come una stringa!
+
+<p>
+<blockquote>
+  <tt><b>variable_global_exists(name)</b></tt>
+    Restituisce se esiste una variabile globale col nome dato (una stringa).<br>
+  <tt><b>variable_local_exists(name)</b></tt>
+    Restituisce se nell'istanza corrente esiste una variabile locale col nome dato (una stringa).<br>
+  <tt><b>variable_global_get(name)</b></tt>
+    Restituisce il valore della variabile globale col nome dato (una stringa).<br>
+  <tt><b>variable_global_array_get(name,ind)</b></tt>
+    Restituisce il valore di indice ind di un variabile array globale col nome dato (una stringa).<br>
+  <tt><b>variable_global_array2_get(name,ind1,ind2)</b></tt>
+    Restituisce il valore di indice ind1,ind2 della variabile array bidimensionale globale
+        col nome dato (una stringa).<br>
+  <tt><b>variable_local_get(name)</b></tt>
+    Restituisce il valore della variabile locale col nome dato (una stringa).<br>
+  <tt><b>variable_local_array_get(name,ind)</b></tt>
+    Restituisce il valore di indice ind della variabile array locale col nome dato (una stringa).<br>
+  <tt><b>variable_local_array2_get(name,ind1,ind2)</b></tt>
+    Restituisce il valore di indice ind1,ind2 della variabile array bidimensionale locale
+        col nome dato (una stringa).<br>
+  <tt><b>variable_global_set(name,value)</b></tt>
+    Imposta la variabile globale col nome dato (una stringa) al valore indicato.<br>
+  <tt><b>variable_global_array_set(name,ind,value)</b></tt>
+    Imposta l'indice ind nella variabile array globale col nome dato (una stringa)
+        al valore indicato.<br>
+  <tt><b>variable_global_array2_set(name,ind1,ind2,value)</b></tt>
+    Imposta l'indice ind1,ind2 nella variabile array bidimensionale globale col
+        nome dato (una stringa) al valore indicato.<br>
+  <tt><b>variable_local_set(name,value)</b></tt>
+    Imposta la variabile locale col nome dato (una stringa) al valore indicato.<br>
+  <tt><b>variable_local_array_set(name,ind,value)</b></tt>
+    Imposta l'indice ind nella variabile array locale col nome dato (una stringa)
+        al valore indicato.<br>
+  <tt><b>variable_local_array2_set(name,ind1,ind2,value)</b></tt>
+    Imposta l'indice ind1,ind2 nella variabile array bidimensionale locale col
+        nome dato (una stringa) al valore indicato.<br>
+</blockquote>
+
+<p>
+Per esempio, puoi scrivere:
+
+<p>
+<blockquote>
+<pre>
+{
+  <b>if</b> variable_global_exists('ammunition')
+    <b>global</b>.ammunition += 1
+  <b>else</b>
+    <b>global</b>.ammunition = 0
+}
+</pre>
+</blockquote>
+
+<p>
+puoi anche usare queste funzioni per passare le variabili a uno script in una sorta di
+via per riferimento, passando i loro nomi come stringhe e usando le funzioni per cambiarle.
+
+<p>
+Puoi cambiare la priorità del programma usando la seguente funzione:
+
+<p>
+<blockquote>
+  <tt><b>set_program_priority(priority)</b></tt>
+    Imposta la priorità del programma. Puoi indicare un valore tra -3 e +3.
+        Il valore -3 significa che il programma verrà eseguito solo se nessun altro
+        processo richiede il processore, o in altre parole, quando tutti gli altri
+        processi sono fermi. I valori -2 e -1 sono sotto la normalità, quindi altri
+        processi avranno la priorità. 0 è il valore normale. +1 e +2 danno una
+        priorità più alta, che si traduce in una maggiore velocità e un migliore
+        flusso del gioco. Ma gli altri processi avranno molto meno processore.
+        +3 indica la modalità in tempo reale. In questa modalità praticamente
+        tutto il processore è dedicato al gioco.  Questo può portare a seri problemi
+        con ogni altra applicazione in esecuzione sul computer. anche gli eventi
+        tastiera e cose come la pressione del tasto "chiudi" potrebbero non venire
+        più rilevate da Windows. Quindi usala solo se ti serve tutto il processore.
+        Dovresti anche fare attenzione prima di usarla e salvare il gioco prima di
+        lanciarlo.<br>
+</blockquote>
+
+<p>
+Infine, puoi usare la seguente funzione per impostare il titolo dell'applicazione:
+</p>
+
+<p>
+<blockquote>
+  <tt><b>set_application_title(title)</b></tt>
+    Imposta il titolo dell'applicazione alla stringa data. Il titolo viene mostrato, per
+        esempio, nella barra delle applicazioni.<br>
+</blockquote>
+
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+program priority
+priority
+application title
+taskbar
+
+priorità del programma
+priorità
+titolo dell'applicazione
+barra delle applicazioni
+
+error_occurred
+error_last
+show_debug_message()
+debug_mode
+gamemaker_pro
+gamemaker_registered
+gamemaker_version
+variable_global_exists()
+variable_global_get()
+variable_global_array_get() 
+variable_global_array2_get()
+variable_global_set()
+variable_global_array_set()
+variable_global_array2_set()
+variable_local_exists()
+variable_local_get()
+variable_local_array_get() 
+variable_local_array2_get()
+variable_local_set()
+variable_local_array_set()
+variable_local_array2_set()
+set_program_priority()
+set_application_title()
+
+--> 

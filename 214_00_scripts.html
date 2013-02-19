@@ -1,0 +1,368 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html><head>
+<title>Gli script</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+
+<h1>Gli script</h1>
+
+<p>
+<i>GameMaker</i> ha un linguaggio di programmazione incluso chiamato GML. Quando ti senti
+a tuo agio con <i>GameMaker</i> e vuoi usarlo al massimo del suo potenziale,
+è consigliabile cominciare a imparare a usare questo linguaggio. Per maggiori dettagli sul
+linguaggio GML vedi la <A HREF="400_index.html">Parte 4</A> di questo manuale.
+</p>
+
+<p>
+Ci sono due modi per
+usare questo linguaggio. Prima di tutto puoi creare egli script. Gli script sono pezzi di
+codice a cui dai un nome. Sono mostrati nel grafico delle risorse e possono essere
+salvati e caricati da un file. Possono anche essere usati per creare una libreria
+che estende le possibilità di <i>GameMaker</i>. Altrimenti, puoi
+aggiungere una Code Action (azione codice) in un evento e scrivere là un pezzo di codice. Le Code
+Action funzionano esattamente allo stesso modo degli script, tranne che per due
+differenze. Le Code Action non hanno un nome e non possono avere alcun argument (parametri). Inoltre
+le Code Action hanno il campo che già conosci bene per indicare a quali object viene applicata
+l'azione. Per il resto digiti il codice alla stessa maniera degli script.
+Ti raccomandiamo di usare gli script anziché i semplici pezzi di codicedal momento che <i>GameMaker</i>
+ha molte più funzioni che lavorano con gli script.
+Concentriamoci dunque sugli script in questo capitolo.
+</p>
+
+<p>
+Come accennato prima, unon script è scritto in codice GML (il linguaggio di programmazione incluso)
+ed è pensato per svolgere una particolare funzione. Gli script possono prendere degli input chiamati arguments
+(o a volte anche parameters)(entrambi i termini significano "parametri"). Per eseguire uno script da un qualsiasi evento, puoi usare
+la Script Action (azione script). Nella Script Action puoi specificare
+lo script che vuoi eseguire, con fino a cinque argument.
+</p>
+
+<p>
+Puoi anche eseguire uno script da un pezzo di codice (un altro script) esattamente come se tu
+stessi chiamando una funzione di GM. In questo caso puoi usare fino a 16 argument.
+Gli script possono restituire un valore, ovvero darlo come output. Torna spesso utile per costruire metodi di calcolo
+(metodi matematici). La parola-chiave <b>return</b> è usata a questo scopo.
+Non viene eseguito altro dopo la parola-chiave return!
+Quando uno script restituisce un valore, puoi usarlo come funzione per
+fornire valori alle altre azioni.
+</p>
+
+<p>
+Gli script sono estremamente utili per estendere le possibilità di <i>Game Maker</i>.
+Tuttavia, devi fare attenzione mentre scrivi i tuoi script. Gli script
+possono essere salvati in file che possono essere aggiunti al tuo gioco. Per importare un
+file script, usa <b>Import scripts</b> (importa script) dal menu <b>Scripts</b>. Per salvare i tuoi
+script in forma di file usa <b>Export scripts</b> (esporta script). Le librerie script
+sono semplici file di testo (anche se hanno l'estensione .gml). Preferibilmente
+non modificarli direttamente perché hanno una struttura particolare.
+</p>
+
+<p>
+Per creare uno script nel tuo gioco, scegli <b>Create Script</b> (crea script) dal menu <b>Resources</b> (risorse).
+Apparirà un editor di codice come quello che descriveremo tra poco.
+</p>
+
+
+<h3>L'editor di codice</h3>
+
+<p>
+Mentre crei o modifichi uno script (o una Code Action) apparirà la seguente finestra dell'editor di codice
+(nell'esempio abbiamo già aggiunto un
+piccolo script che calcola il prodotto di due argument).
+</p>
+
+<p>
+<img src="images/form_script.jpg">
+</p>
+
+<p>
+In alto a destra puoi indicare il nome dello script. Dovresti dare a tutti
+i tuoi script un nome unico. Assicurati inoltre che contenga solo lettere, numeri,
+e il simbolo underscore (_). Non farlo cominciare con una cifra. In questo modo puoi usare lo
+script come una funzione nel codice.
+</p>
+
+<p>
+In alto hai una barra degli strumenti con dei pulsanti utili. Da sinistra a destra,
+hai il pulsante OK per chiudere l'editor, salvando le modifiche,  i pulsanti per caricare
+e salvare lo script in un file di testo, e quello per stamparlo. 
+</p>
+
+<p>
+Accanto ci sono i pulsanti Annulla e Ripeti. L'editor ricorda tutti
+i cambiamenti che hai fatto e puoi annullarli (o rifare ciò che hai annullato). Puoi cambiare
+il numero massimo di operazioni di annullamento in Preferences (impostazioni). Lì potrai anche
+indicare se vuoi raggruppare le operazioni di annullamento (per esempio la digitazione
+di una riga di codice può essere annullata in un colpo solo) o se vuoi salvare separatamente ogni
+tasto che viene battuto. Puoi usare <b>&lt;Ctrl&gt; + Z</b> per annullare 
+e <b>&lt;Ctrl&gt;</b> + <b>&lt;Shift&gt; + Z</b> per ripetere.
+</p>
+
+<p>
+Accanto ci sono i pulsanti per tagliare, copiare e incollare il testo, come dovresti già saper
+fare. Gli ultimi due bottoni servono a trovare e sostituire il testo e per controllare il codice.
+Verranno spiegati dettagliatamente più avanti.
+</p>
+
+<p>
+Sotto la barra degli strumenti c'è un'area dove puoi digitare il testo. Sulla sinistra ci sono i
+numeri delle righe. (Puoi nasconderli con F9.) La riga dove si trova il cursore
+è indicata in grassetto. La barra color rosso scuro vicino ad alcuni numeri delle righe indicano che quelle
+righe sono state modificate. Noterai che puoi scrivere ovunque nele righe. Quindi
+una riga non ha realmente una fine. Questo torna utile quando devi allineare il testo. Ci
+sono molte possibilità per la modifica del codice, che vengono descritte qua sotto.
+</p>
+
+<p>
+In basso c'è la barra di stato. Questa mostra, da sinistra a destra, la riga corrente,
+il totale delle righe, la posizione del cursore e la modalità di scrittura (Inserisci o Sovrascrivi). In
+modalità Sovrascrivi cambia anche il cursore per far capire chiaramente che stai sovrascrivento il testo esistente.
+Infine trovi la dimensione del carattere in punti (pt), che puoi aumentare o diminuire con F7 e F8.
+(Puoi avere un maggiore controllo su tipo e dimensione del carattere in Preferences.)
+</p>
+
+
+<h3>Strumenti di modifica</h3>
+
+<p>
+L'editor ha molte possibilità per la modifica. Puoi avere accesso ad alcune di esse tramite il
+menu pop-up che appare alla pressione del tasto destro del mouse. Ecco i più importanti:
+</p>
+
+<ul>
+  <li>Annullamenti e ripetizioni multiple sia per ogni tasto premuto che per gruppi</li>
+  <li>I tasti cursore ti fanno muovere attraverso il testo. Usa <b>&lt;Ctrl&gt;</b> con
+    la freccia destra o sinistra per muovere all'inizio della parola precedente
+        o successiva. Puoi usare <b>&lt;Ctrl&gt;</b> con la freccia superiore o inferiore
+        al posto della barra di scorrimento sulla destra.
+        Tieni premuto <b>&lt;Shift&gt;</b> per selezionare del testo.</li>
+  <li>Clicca due volte sul numero di una riga per selezionarla tutta.</li>
+  <li>I pulsanti Home e Fine portano all'inizio o alla fine della riga.
+    Se usati assieme a <b>&lt;Ctrl&gt;</b>, portano all'inizio o alla fine dello script.
+        Tieni premuto <b>&lt;Shift&gt;</b> per selezionare del testo.</li>
+  <li>Puoi scorrere il testo con la rotellina del mouse. Se tieni premuto <b>&lt;Ctrl&gt;</b>,
+    anche il cursore si muoverà. (come con <b>&lt;Ctrl&gt;</b> + freccia su/giù.)
+        Tieni premuto <b>&lt;Shift&gt;</b> per selezionare del testo.</li>
+  <li>Rientro automatico che allinea con la riga precedente quando usi il
+    ritorno a capo o quando cancelli (può essere impostato nelle Preferences).</li>
+  <li>Tabulazione intelligente che tabula fino al primo carattere diverso da spazio nelle
+    righe precedenti (può essere impostato in Preferences).</li>
+  <li>Usa <b>&lt;TAB&gt; </b>&nbsp; per far rientrare le righe <i>selezionate</i> e <b>&lt;Shift&gt; +
+    &lt;TAB&gt;</b> per far fuoriuscire (inteso come contrario di rientrare) le righe <i>selezionate</i>.</li>
+  <li>Tieni premuto <b>&lt;Ctrl&gt;</b> mentre usi Backspace o Canc per cancellare fino
+    all'inizio della parola successiva o precedente.</li>
+  <li>Puoi trascinare la selezione con il mouse. (Usa <b>&lt;Ctrl&gt;</b> per copiarla.)
+    La nuova posizione viene mostrata subito.</li>
+  <li>Taglia, copia e incolla il testo tra le finestre degli script e gli altri programmi.</li>
+  <li>Usa <b>F12</b> per aprire lo script o la risorsa su cui è posizionato il cursore.</li>
+</ul>
+
+
+<h3>Colorazione del codice</h3>
+Come potresti aver notato, parte del testo dello script è colorato. L'editor
+tiene traccia degli object esistenti, le variabili e le funzioni integrate ecc.
+La colorazione del codice ti dà un grande aiuto per evitare di sbagliare.
+In particolare, vadi subito se hai sbagliato un nome o hai usato una parola-chiave
+come nome di una variabile. Se non ti piace la colorazione del codice, puoi
+attivarla o disattivarla in Preferences (puoi anche usare <b>F10</b>). In Preferences
+puoi anche cambiare il colore delle differenti parti del codice.
+</p>
+
+
+<h3>Aiuto con funzioni e variabili</h3>
+
+<p>
+<i>Game Maker</i> ha molte funzioni e variabili integrate a cui tu aggiungi le tue
+risorse e i tuoi script. Quindi potrebbe essere difficile ricordarsele tutte. Fortunatamente
+l'editorti aiuta. Quando scrivi una parte di un nome (almeno due caratteri) e
+aspetti qualche secondo, appare una lista con tutte le possibilità. Segue un esempio:
+</p>
+
+<p>
+<img src="images/form_completion.jpg">
+</p>
+
+<p>
+Puoi continuare a digitare e la lista si adatterà. Puoi usare le frecce su e giù per scorrere
+la lista e premere Invio per sostituire il testo che stavi digitando con la funzione o la variabile selezionata.
+</p>
+
+<p>
+Puoi attivare o disattivare questa funzionalità in Preferences. Puoi forzare l'apparizione della lista
+con <b>&lt;Ctrl&gt; + Spazio,</b> e puoi farla sparire con <b>&lt;ESC&gt;</b>.
+</p>
+
+<p>
+Ti viene dato altro aiuto mentre stai digitando gli argument peer una funzione. In questo caso, nella
+barra di stato in basso viene mostrata la funzione con i suoi argument. Quello che stai digitando p
+mostrato in grassetto. Così non dimenticherai mai qualche argument né li metterai nell'ordine sbagliato.
+</p>
+
+<h3>Trova e sostituisci</h3>
+
+<p>
+comunemente vorrai trovare del testo nel tuo codice o sostituire del testo con uno diverso.
+A questo fine puoi premere il pulsante Find (cerca) nella barra degli stumenti, o premere <b>
+    &lt;CTRL&gt;+F</b>. Apparirà il seguente pannello sulla destra: </p>
+
+<p>
+<img src="images/form_script2.jpg">
+</p>
+
+<p>
+Puoi digitare in alto la stringa da cercare. Nota che nel codice tutte le apparizioni della stringa che stai cercando
+sono subito evidenziate in giallo. (Puoi disattivarlo nelle Perferences.) Come al solito puoi indicare se la ricerca
+debba essere "case-sensitive" (che normalmente è quello che vuoi visto che anche i nomi di variabili e funzioni in GML
+sono "case-sensitive")("case-sensitive" significa che GM fa differenza tra le lettere maiuscole e minuscole)
+e se vuoi trivare solo parole intere. Nota che l'editor ricorda le tue ricerche più recenti.
+</p>
+
+<p>
+Con i bottoni a forma di freccia blu puoi ora muoverti all'apparizione precedente o successiva (o anche prima o ultima)
+della stringa che stai cercando. Verrà selezionata nel testo in modo che tu possa farci quello che vuoi
+(cancellarla, per esempio).
+</p>
+
+<p>
+Quando vuoi sostituire le apparizioni, digita del testo anche nella casella "Replace". Puoi usare i pulsanti per
+sostituire l'apparizione precedente o successiva (o anche prima o ultima) o sostituirle tutte insieme. Ricorda che
+puoi sempre usare Annulla per annullare le sostituzioni. 
+</p>
+
+<h3>Gli snippet</h3>
+
+<p>
+Gli snippet (propriamente "ritagli") sono dei piccoli pezzi di codice che vengono usati spesso. Puoi aggiungerli al
+tuo codice dal menu snippet, che puoi aprire con F2. Apparirà un menu da cui puoi scegliere lo snippet. Verrà inserito
+alla posizione del cursore nel tuo codice. Ci sono alcune parole in maiuscolo che devono essere sostituite da te.
+La prima è già selezionata per essere sostituita. Per sostituirne un'altra, fa' doppio clic su di essa. 
+</p>
+
+<p>
+Puoi creare i tuoi snippet, se lo desideri. Gli snippet sono sonservati nel file <tt>snippets.txt</tt> nella
+cartella in cui hai installato <i>GameMaker</i>. Puoi modificare questo file con un qualsiasi editor di testo.
+Ogni snippet corrisponde a una riga. Non lasciare righe vuote. Comincia con il nome dello snippet (quello mostrato
+nel menu) seguito dai due punti (:) e dallo snippet. Usa # per il ritorno a capo e metti il testo che dev'essere
+selezionato per primo tra barre verticali (|). Vedi gli esempi che sono già presenti nel file.
+(Meglio se fai un backup del file prima di modificarlo.)
+</p>
+
+<h3>Controllo degli errori</h3>
+
+<p>
+Nella barra degli strumenti in cima alla finestra c'è un pulsante che ti permette di attivare o disattivare
+il controllo degli errori. Mentre è attivo, <i>GameMaker</i> controlla costantemente il codice che stai digitando
+e riporta il primo errore che trova in fondo alla finestra. Anche il numero della riga dove si trova l'errore
+diventa rosso. Puoi cliccare sul messaggio d'errore per andare alla riga e posizione sbagliata per
+correggere l'errore. Nota che non vengono controllati tutti gli aspetti del codice, ma solo la
+sintassi del codice e l'esistenza delle funzioni usate.
+</p>
+
+<p>
+Quando cominci a digitare uno script, il controllo degli errori potrebbe essere noioso e vorrai disattivarlo.
+Ma quando lo script è quasi finito ti conviene attivarlo e correggere tutti gli errori. Nota che anche la
+colorazione del codice ti aiuta a trovare gli errori. Infine, quando posizioni il cursore davanti a una parentesi,
+l'editor mostra quella corrispondente. Se non c'è, la parentesi viene colorata in rosso.
+(Puoi disattivarlo nelle Preferences.)
+</p>
+
+
+<h3>Debug</h3>
+
+<p>
+È facile commettere sbagli srivendo gli script. Controlla sempre gli script
+usando il pulsante di controllo degli errori. Comunque, ciò non rileverà tutti
+gli errori. Quindi dovrai lanciare il gioco per provare il tuo codice.
+</p>
+
+<p>
+Quando si verifica un errore durante l'esecuzione di uno script ti viene
+riportato, con un'indicazione del tipo di errore, lo script o l'azione in
+cui si verifica, la riga e la posizione. Vedrai raramente l'avviso
+"Unexpected error occurred during the game".
+(Si è verificato un errore inaspettato durante il gioco).
+Questo messaggio d'errore indica che c'è qualche problema con Windows o
+nell'hardware. Le cause più comuni sono la (?)ricorsione(?) infinita,
+mancanza di memoria o hardware, driver o firmware insufficiente.
+In generale, ciò ha cause esterne a <i>GameMaker</i>.
+</p>
+
+<p>
+Se devi controllare con più attenzione, puoi lanciare il gioco in
+modalità debug. Se lo fai, apparirà una finestra da cui puoi
+controllare un sacco di informazioni sul tuo gioco.
+</p>
+
+<p>
+<img src="images/form_debug.jpg">
+</p>
+
+<p>
+Nel menu <b>Run</b> (lancia) puoi mettere il gioco in pausa, vederlo uno
+step alla volta o farlo ricominciare da capo. Dal menu <b>Watch</b> (osserva)
+puoi osservare il valore di alcune espressioni. Usa <b>Add</b> (aggiungi)
+per inserire delle espressioni il cui valore verrà mostrato in ogni step
+del gioco. Così puoi controllare se il gioco sta andando nel modo giusto.
+Puoi osservare più espressioni. Puoi anche salvarle per un uso futuro
+(per esempio dopo aver fatto delle correzioni). Sotto <b>Tools</b> (strumenti)
+puoi vedere ancora più informazioni. Puoi vedere una lista di tutte le istanze
+del gioco, tutte le variabili globali (o almeno le più importanti) e le
+variabili locali di un'istanza (usa il nome dell'object o l'id dell'istanza).
+Puoi anche vedere i messaggi che puoi inviare dal tuo codice con la funzione
+<tt>show_debug_message(str)</tt>. Infine puoi impartire comandi al gioco e
+cambiarne la velocità. Se stai facendo giochi complicati dovresti imparare
+a usare queste funzioni di debug.
+</p>
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+adding scripts
+creating scripts
+scripts
+importing scripts
+exporting scripts
+script files
+color coding
+completion
+auto-completion
+function help
+code snippets
+snippets
+testing scripts
+scripts, function help
+code editor
+script, editor
+debugging
+watching variables
+watching instances
+show_debug_message
+frames per second
+agguingere script
+creare script
+script
+importare script
+esportare script
+file script
+colorazione del codice
+completamento
+completamento automatico
+aiuto con le funzioni
+codici snippet
+snippet
+testare gli script
+script, aiuto con le funzioni
+editor di codice
+script, editor di
+debug
+osservare le variabili
+osservare le istanze
+show_debug_message
+fps
+--> 

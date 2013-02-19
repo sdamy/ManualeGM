@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Time lines</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+<h3>Time lines</h3>
+
+Le seguenti funzioni sono disponibili per creare e modificare le time line.
+Non cambiate le time line mentre le state usando!
+
+<p>
+<blockquote>
+  <tt><b>timeline_add()</b></tt> 
+ 	 Crea una nuova time line e ne restituisce l'indice.<br>
+  <tt><b>timeline_delete(ind)</b></tt> 
+  	Elimina la time line con il dato indice.
+	Assicuratevi di non avere istanze che la usano.<br>
+  <tt><b>timeline_clear(ind)</b></tt> 
+  	Pulisce la time line con il dato indice rimuovendo tutti i momenti.
+	Assicuratevi di non avere istanze che usano la time line mentre usate questa funzione.<br>
+  <tt><b>timeline_moment_add(ind,step,codestr)</b></tt> 
+  	Aggiunge l'azione codice alla timeline nel momento step. codestr deve contenere il codice di questa azione.
+	Se lo step non esiste verrà creato. In questo modo puoi aggiungere varie azioni di codice nello stesso momento.<br>
+  <tt><b>timeline_moment_clear(ind,step)</b></tt> 
+  	Puoi usare questa funzione per pulire tutte le azioni di un particolare momento.<br>
+</blockquote>
+<p>
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+timeline_add()
+timeline_delete()
+timeline_clear()
+timeline_moment_clear()
+timeline_moment_add()
+
+--> 

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Azioni punteggio</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+
+<h3>Azioni punteggio</h3>
+
+In molti giochi il giocatore avrà un punteggio(score). Alcuni giochi danno 
+un certo numero di vite(lives). Infine, spesso il giocatore ha della salute(health). Le seguenti azioni 
+rendono più semplice lavorare con i punteggi, le vite, la salute del giocatore.
+
+<p>
+<b><img src="images/action_score.bmp"> Imposta punteggio</b><br>
+<i>GameMaker</i> ha un meccanismo di gestione punteggio. Il punteggio di solito 
+viene mostrato nella finestra di gioco. Puoi usare quest'azione per cambiare il punteggio. 
+Devi semplicemente indicarne il nuovo valore. Spesso potresti voler aggiungere qualcosa 
+al punteggio. In questo caso non dimenticarti di spuntare la casella <b>Relative</b>.
+
+<p>
+<b><img src="images/action_ifscore.bmp"> Controlla punteggio</b><br>
+Con quest'azione puoi verificare se il punteggio ha raggiunto un particolare 
+valore. Devi indicare il valore e se il punteggio deve essere uguale, 
+minore o maggiore a quel valore.
+
+<p>
+<b><img src="images/action_drawscore.bmp"> Disegna punteggio</b><br>
+Con quest'azione puoi disegnare il valore del punteggio ad una determinata posizione 
+dello schermo. Devi solo inserire la posizione e il testo che deve apparire davanti al 
+punteggio. Il punteggio è disegnato con il font corrente.
+Quest'azione può essere usata solo nell'evento disegno(draw) di un oggetto.
+
+<p>
+<b><img src="images/action_highscore.bmp"> Mostra punteggi migliori</b><br>
+In ogni gioco vengono memorizzati i dieci punteggi migliori. Quest'azione mostra la lista dei 
+punteggi più alti. Se il punteggio corrente è tra i dieci più alti, il nuovo punteggio
+viene aggiunto e il giocatore può inserire il suo nome. 
+Puoi indicare quale immagine di sfondo usare, se la finestra 
+deve avere o meno il bordo, il colore del nuovo e dei vecchi punteggi
+e quale font usare.
+
+<p>
+<b><img src="images/action_highscoreclear.bmp"> Cancella punteggi migliori</b><br>
+Quest'azione cancella il contenuto della tabella dei punteggi.
+
+<p>
+<b><img src="images/action_lives.bmp"> Imposta vite</b><br>
+<i>GameMaker</i> ha anche un sistema di gestione delle vite.Con quest'azione puoi 
+Cambiare delle vite restanti. Normalmente si mettono 3 vite
+all'inizio del gioco e l'aumentare o il diminuire del loro numero dipende da 
+da cosa accade. Non dimenticare di spuntare la casella <b>Relative</b> se vuoi
+aggiungere o sottrarre delle vite. Quando il numero di vite 
+diventa 0 (o minore di 0) viene generato un evento &quot;no more lives&quot; .
+
+<p>
+<b><img src="images/action_iflives.bmp"> Controlla vite</b><br>
+Con quest'azione puoi contorllare se il numero delle vite ha raggiunto un particolare 
+valore. Devi indicare il valore e se il numero delle vite deve essere uguale, 
+minore o maggiore a quel valore.
+
+<p>
+<b><img src="images/action_drawlives.bmp"> Disegna vite</b><br>
+Con quest'azione puoi disegnare il valore delle vite ad una determinata posizione 
+dello schermo. Devi solo inserire la posizione e il testo che deve apparire davanti alle
+vite. Le vite sono disegnate con il font corrente.
+Quest'azione può essere usata solo nell'evento disegno(draw) di un oggetto.
+
+<p>
+<b><img src="images/action_drawlivesimage.bmp"> Disegna l'immagine delle vite</b><br>
+Invece di disegnare il numero di vite rimaste, è meglio
+utilizzare delle piccole immagini. Quest'azione fa esattamente questo. Devi 
+specificare la posizione e l'immagine e a quella posizione verrà disegnato il numero 
+di vite sotto forma di immagini.
+Quest'azione può essere usata solo nell'evento disegno(draw) di un oggetto.
+
+<p>
+<b><img src="images/action_health.bmp"> Imposta salute</b><br>
+<i>GameMaker</i> ha un sistema di gestione della salute. Puoi usare quest'azione per 
+cambaire la salute. Un valore di 100 indica piena salute mentre un valore di 0 indica 
+nessuna salute. Devi semplicemnte indicare il nuovo valore della salute. Spesso vorrai 
+sottrarre qualcosa dalla vita. In questo caso non dimenticare di spuntare la casella 
+<b>Relative</b>. Quando la salute diventa uguale o minore a 0 viene 
+generato un evento di fine salute.
+
+<p>
+<b><img src="images/action_ifhealth.bmp"> Controlla salute</b><br>
+Con quest'azione puoi contorllare se il valore della salute ha raggiunto un particolare 
+valore. Devi indicare il valore e se il valore della salute deve essere uguale, 
+minore o maggiore a quel valore.
+
+<p>
+<b><img src="images/action_drawhealth.bmp"> Disegna salute</b><br>
+Con quest'azione puoi disegnare la salute sotto forma di barra della salute. Quando 
+la salute è 100 la barra è completamente piena. Quando è 0 la barra è vuota. Devi 
+indicare la posizione e la dimensione della barra della vita,il colore della barra
+e del suo sfondo.
+
+<p>
+<b><img src="images/action_caption.bmp"> Testo punteggio</b><br>
+Normalmente nella finestra viene mostrato il nome della room e il punteggio. 
+Con quest'azione puoi cambiarlo. Puoi indicare se mostrare o no il punteggio 
+le vite, e/o la salute che testo dovrà avere ognuno di essi.
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+score punteggio
+life vita
+health salute
+--> 

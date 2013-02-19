@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Azioni principali, set 2</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+<!--START-->
+
+
+<h3>Azioni principali, set 2</h3>
+
+Ci sono altre azioni principali, che riguardano il tempismo, i messaggi all'utente,
+e il gioco nella sua interezza.
+
+<p>
+<b><img src="images/action_alarm.bmp"> Set Alarm</b><br>
+Con quest'azione puoi impostare uno dei 12 alarm clocks dell'istanza.
+Puoi selezionare il numero di steps e l'alarm clock. Dopo 
+il numero di steps indicati, l'istanza riceverà l'evento alarm corrispondente.
+Puoi anche aumentare o diminuire il valore selezionando la casella <b>Relative</b>.
+Se imposti l'alarm a un valore minore o uguale a 0 lo disattivi,
+in modo che l'evento non venga generato.
+
+<p>
+<b><img src="images/action_sleep.bmp"> Sleep</b><br>
+Con questa azione puoi congelare la scena per un certo periodo.
+Di solito questa viene usata all'iniizio o alla fine di un livello, oppure quando
+mostri al giocatore un messaggio. Puoi specificare il numero di millisecondi in cui congelare.
+Inoltre puoi indicare se lo schernmo dev'essere prima ridisegnato per
+riflettere la situazione più recente.
+
+<p>
+<b><img src="images/action_info.bmp"> Display Message</b><br>
+Con questa azione puoi mostrare un messaggio in una finestra. Devi semplicemente scrivere
+il messaggio. Se usi il simbolo # nel messaggio verrà interpretato
+come il carattere "new line" (per andare a capo). Per ottenere il simbolo # scrivi \#. Se il messaggio
+inizia con un apice o doppio apice, questo viene interpretato come
+un'espressione. Vedi sotto per maggiori informazioni riguardo alle espressioni.
+
+<p>
+<b><img src="images/action_help.bmp"> Show Info</b><br>
+Con questa azione puoi mostrare la finestra delle informazioni del gioco.
+
+<p>
+<b><img src="images/action_gamerestart.bmp"> Restart Game</b><br>
+Con questa azione fai ricominciare il gioco dall'inizio.
+
+<p>
+<b><img src="images/action_gameend.bmp"> End Game</b><br>
+Con questa azione fai ricominciare il gioco.
+
+<p>
+<b><img src="images/action_gamesave.bmp"> Save Game</b><br>
+Con questa azione salvi lo stato attuale del gioco. Puoi specificare
+il nome del file da salvare (il file viene creato nella "working directory" per
+il gioco). Dopo il gioco potrà essere caricato con la prossima azione.
+(Sappi che vengono salvate solo le informazioni di base del gioco.
+Per esempio, non viene salvato il suono attualmente in riproduzione,
+e altri aspetti come i contenuti delle strutture dati, le particelle, etc.)
+
+<p>
+<b><img src="images/action_gameload.bmp"> Load Game</b><br>
+Carica lo stato del gioco da un file. PDevi specificare il nome dekl file. Assicurati
+che il salvataggio sia per lo stesso gioco e creato con la stessa versione
+di <i>GameMaker</i>. Altrimenti verrà mostrato un errore. (Per essere più precisi,
+il gioco viene caricato alla fine dello step corrente. Quindi alcune azioni
+successive a questa verranno eseguite nello stesso gioco, non in quello caricato!)
+
+
+<!--END-->
+</body>
+</html>
+
+<!-- KEYWORDS
+sound actions
+game actions
+alarm clocks
+timing
+azioni di suono
+azioni del gioco
+allarmi
+tempismo
+--> 
+ 
