@@ -7,3 +7,4 @@ s/ì/\&igrave;/g
 s/ò/\&ograve;/g
 s/ù/\&ugrave;/g
 s/’/'/g
+s/ual'\&egrave/ual \&egrave/g
