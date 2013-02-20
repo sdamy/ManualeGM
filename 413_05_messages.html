@@ -2,72 +2,72 @@
 
 <html>
 <head>
-<title>Messages</title>
+<title>Messaggi</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Messages</h3>
+<h3>Messaggi</h3>
 
-The second communication mechanism that <i>GameMaker</i> supports 
-is the sending and receiving of messages. A player can send messages 
-to one or all other players. Players can see whether messages have 
-arrived and take action accordingly. Messages can be sent in a 
-guaranteed mode in which you are sure they arrive (but this can be 
-slow) or in a non-guaranteed mode, which is faster.
+Il secondo meccanismo di comunicazione che supporta <i>GameMaker</i> è l'invio e la 
+ricezione di messaggi. Un giocatore può inviare messaggi ad uno o a tutti gli 
+altri giocatori. I giocatori possono vedere se i messaggi sono arrivati e agire 
+di conseguenza. I messaggi possono essere inviati tramite una guaranteed mode 
+(modalità con garanzia) che da la certezza che il messaggio arrivi (ma può essere 
+più lenta), o in una non-guaranteed mode (modalità senza garanzia), che è più veloce.
 
 <p>
-The following messaging routines exist:
+Sono disponibili le seguenti funzioni per gestire l’invio dei messaggi:
 
 <p>
 <blockquote>
   <tt><b>mplay_message_send(player,id,val)</b></tt> 
-    sends a message to the indicated player (either an identifier 
-	or a name; use 0 to send the message to all players). id is an 
-	integer message identifier and val is the value (either a real 
-	or a string). The message is sent in non-guaranteed mode. If val 
-	contains a string the maximal string length allowed is 30000 characters.<br>
+    invia un messaggio al giocatore indicato (un identificatore o un nome, 
+    usare 0 per inviare il messaggio a tutti i giocatori). id è un numero 
+    intero che identifica il messaggio e val è il valore (numero reale o 
+    una stringa). Il messaggio viene inviato nella modalità senza garanzia. 
+    Se val contiene una stringa la lunghezza massima consentita è di 30000 caratteri.<br>
   <tt><b>mplay_message_send_guaranteed(player,id,val)</b></tt> 
-    sends a message to the indicated player (either an identifier 
-	or a name; use 0 to send the message to all players). id is an 
-	integer message identifier and val is the value (either a real 
-	or a string). This is a guaranteed send. If val contains a string 
-	the maximal string length allowed is 30000 characters.<br>
+    invia un messaggio al giocatore indicato (un identificatore o un nome, usare 
+    0 per inviare il messaggio a tutti i giocatori). id è un numero intero che 
+    identifica il messaggio e val è il valore (numero reale o una stringa). 
+    Il messaggio viene inviato nella modalità con garanzia. Se val contiene una 
+    stringa la lunghezza massima consentita è di 30000 caratteri.<br>
   <tt><b>mplay_message_receive(player)</b></tt> 
-    receives the next message from the message queue that came from 
-	the indicated player (either an identifier or a name). Use 0 for 
-	messages from any player. The routine returns whether there was 
-	indeed a new message. If so you can use the following routines 
-	to get its contents:<br>
+    riceve il messaggio successivo dalla coda dei messaggi che proviene dal giocatore
+    indicato (un identificatore o un nome). Utilizzare 0 per i messaggi di un qualsiasi 
+    giocatore. La routine restituisce un valore se c’è davvero un nuovo messaggio da ricevere.
+    In tal caso è possibile utilizzare le seguenti routine per ottenere il suo contenuto:<br>
   <tt><b>mplay_message_id()</b></tt> 
-    Returns the identifier of  the last received message.<br>
+    Restituisce l'identificatore del messaggio ricevuto.<br>
   <tt><b>mplay_message_value()</b></tt> 
-    Returns the value of  the last received message.<br>
+    Restituisce il valore dell'ultimo messaggio ricevuto.<br>
   <tt><b>mplay_message_player()</b></tt> 
-    Returns the player who sent the last received message.<br>
+    Restituisce il giocatore che ha inviato l'ultimo messaggio ricevuto.<br>
   <tt><b>mplay_message_name()</b></tt> 
-    Returns the name of the player who sent the last received message.<br>
+    Restituisce il nome del giocatore che ha inviato l'ultimo messaggio ricevuto.<br>
   <tt><b>mplay_message_count(player)</b></tt> 
-    Returns the number of messages left in the queue from the player (use 0 to count all message).<br>
+    Restituisce il numero di messaggi in coda del giocatore (utilizzare 0 per contare tutti i messaggi).<br>
   <tt><b>mplay_message_clear(player)</b></tt> 
-    Removes all messages left in the queue from the player (use 0 to remove all message).<br>
+    Rimuove tutti i messaggi lasciati nella coda dal giocatore (usare 0 per 
+    rimuovere tutti i messaggi di tutti i giocatori).<br>
 </blockquote>
 
 <p>
-A few remarks are pertinent here. First of all, if you want to send a message 
-to a particular player only, you will need to know the player's unique id. 
-As indicated earlier you can obtain this with the function <tt>mplay_player_id()</tt>. 
-This player identifier is also used when receiving messages from a particular 
-player. Alternatively, you can give the name of the player as a string. 
-If multiple players have the same name, only the first will get the message.
+Alcune osservazioni sono pertinenti. Prima di tutto, se si desidera inviare un messaggio 
+a solo un determinato giocatore, è necessario conoscere l'ID univoco del giocatore. 
+Come indicato in precedenza, è possibile ottenere questo ID con la funzione <tt>mplay_player_id ()</tt>.
+Questo identificatore del giocatore viene utilizzato anche per ricevere messaggi da un particolare 
+giocatore. In alternativa, si può dare il nome del giocatore sotto forma di stringa. 
+Se più giocatori hanno lo stesso nome, solo il primo otterrà il messaggio.
 
 <p>
-Secondly, you might wonder why each message has an integer identifier.
-The reason is that this helps your application to send different types of 
-messages. The receiver can check the type of message using the id and take 
-appropriate actions. (Because messages are not guaranteed to arrive, 
-sending id and value in different messages would cause serious problems.)
+In secondo luogo, ci si potrebbe chiedere perché ogni messaggio ha un numero intero 
+come identificatore. Il motivo è che questo numero aiuta la vostra applicazione ad 
+inviare diversi tipi di messaggi. Il ricevitore può controllare il tipo di messaggio 
+utilizzando l'ID e intraprendere le azioni appropriate. (Poiché non è garantito che i
+messaggi arrivino, l'invio di id e valore in diversi messaggi potrebbe causare seri problemi).
 
 <!--END-->
 </body>
@@ -76,6 +76,9 @@ sending id and value in different messages would cause serious problems.)
 <!-- KEYWORDS
 messages
 message passing
+
+messaggi
+invio di messaggi
 
 mplay_message_send()
 mplay_message_send_guaranteed()
