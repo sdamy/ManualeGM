@@ -8,41 +8,41 @@
 <body background="images/back.gif">
 <!--START-->
 
-<h1>Using DLL's</h1>
+<h1>Usare le DLL</h1>
 
-<i><b>This functionality is only available in the Standard Edition of GameMaker.</b></i>
+<i><b>Questa funzionalità è disponibile sono nella Standard Edition di Game Maker.</b></i>
 
 
 <p>
-<i><b>Please note that since version 7 there is a new extension mechanism in GameMaker.
-You are strongly encouraged to use that extension mechanism, rather than the functions
-described in this section. 
-See
+<i><b>Ricorda che dalla versione 7 c'è un nuovo meccanismo per le estensioni.
+È meglio utilizzare il meccanismo delle estensioni, piuttosto che le funzioni
+descritte in questa sezione.
+Vedi
 <a href="http://www.yoyogames.com/extensions" target="_blank">http://www.yoyogames.com/extensions</a>
-for details.
-These functions are mainly left in for compatibility
-with the past.</b></i>
+per i dettagli.
+Queste funzioni vengono mantenute principalmente per compatibilità
+con il passato.</b></i>
 
 
 <p>
-In those cases were the functionality of GML is not enough for your wishes, 
-you can actually extend the possibilities by using plug-ins. A plug-in comes 
-in the form of a DLL file (a Dynamic Link Library). In such a DLL file you 
-can define functions. Such functions can be programmed in any programming 
-language that supports the creation of DLL's (e.g. Delphi, C, C++, etc.) 
-You will though need to have some programming skill to do this. Plug-in 
-functions must have a specific format. They can have between 0 and 16 
-arguments, each of which can either be a real number (double in C) or 
-a null-terminated string. (For more than 4 arguments, only real 
-arguments are supported at the moment.) They must return either 
-a real or a null-terminated string.
+In quei casi in cui le funzionalità del GML non sono sufficienti,
+puoi estendere le possibilità usando i plug-ins. Un plug-in
+nella forma di file DLL (una libreria a collegamento dinamico. In un file DLL
+puoi definire delle funzioni. Queste funzioni possono essere scritte in qualunque
+linguaggio di programmazione che supporta la creazione di DLL (Delphi, C, C++, ecc.)
+Dovrai comunque aver bisogno di esperienza con la programmazione per fare ciò.
+Le funzioni esterne devono avere un formato specifico. Possono avere da 0 a 16
+argomenti, ognuno dei quali può essere un numero reale (double sul C) oppure
+una stringa null-terminated (che termina con il carattere \0). (Per più di 4 argomenti,
+sono supportati solo i numeri reali al momento). Esse devono ritornare
+un numero reale o una stringa null-terminated.
 
 <p>
-In Delphi you create a DLL by first choosing <b>New</b> 
-from the <b>File</b> menu and then choosing DLL. Here 
-is an example of a DLL you can use with <i>GameMaker</i> 
-written in Delphi. (Note that this is Delphi code, 
-not GML code!)
+Nel Delphi puoi creare una DLL scegliendo prima <b>New</b>
+dal menu <b>File</b> e dopo scegliere DLL. Qui
+c'è un esempio di una DLL che puoi usare con <i>GameMaker</i>
+scritto in Delphi. (Nota che questo è del codice Delphi,
+non GML!)
 
 <p>
 <blockquote>
@@ -73,31 +73,31 @@ end.
 </blockquote>
 
 <p>
-This DLL defines two functions: <tt>MyMin</tt> that takes two real arguments 
-and returns the minimum of the two, and <tt>DoubleString</tt> that 
-doubles the string. Note that you have to be careful with memory 
-management. That is why I declared the resulting string global. 
-Also notice the use of the cdecl calling convention. You can 
-either use cdecl or stdcall calling conventions. Once you build 
-the DLL in Delphi you will get a file <tt>MyDLL.DLL</tt>. This 
-file must be placed in the running directory of your game. 
-(Or any other place where Windows can find it.) 
+Questa DLL definisce due funzioni: <tt>MyMin</tt> prende due argomenti reali
+e restituisce il minore tra i due, e <tt>DoubleString</tt>
+raddoppia la stringa. Nota che devi fare attenzione con la gestione della memoria.
+Questo è il motivo per cui ho dichiarato la stringa risultante globale.
+Inoltre ricorda l'uso della convezione per le chiamate "cdecl". Puoi
+usare sia cdecl che stdcall. Dopo che hai creato
+la DLL in Delphi otterrai un file chiamato <tt>MyDLL.DLL</tt>. Questo
+file dev'essere piazzato nella directory di esecuzione del tuo gioco.
+(O in qualunque altro posto in cui Windows può trovarlo).
 
 <p>
-To use this DLL in <i>GameMaker</i> you first need to specify the 
-external functions you want to use and what type of arguments they 
-take. For this there is the following function in GML:
+Per usare questa DLL su <i>GameMaker</i> devi prima specificare
+le funzioni esterne che vuoi utilizzare e quali tipi di argomenti
+prendono. Per questo c'è la seguente funzione GML:
 
 <p>
 <blockquote>
   <tt><b>external_define(dll,name,calltype,restype,argnumb,arg1type,arg2type, ...)</b></tt> 
-    Defines an external function. dll is the name of the dll file. 
-	name is the name of the functions. calltype is the calling convention 
-	used. For this use either dll_cdecl or dll_stdcall. restype is the 
-	type of the result. For this use either ty_real or ty_string. argnumb 
-	is the number of arguments (0-16). Next, for each argument you must 
-	specify its type. For this again use either ty_real or ty_string. 
-	When there are more than 4 arguments all of them must be of type ty_real.<br>
+	Definisce una funzione esterna. dll è il nome del file DLL.
+	name è il nome della funzione. calltype è la convenzione per le chiamate
+	da usare. Per questa puoi mettere sia dll_cdecl che dll_stdcall. restype è
+	il tipo del risultato. Per questo puoi usare ty_real o ty_string. argnumb
+	è il numero di argomenti (0-16). Poi, per ogni argomento devi
+	specificare il suo tipo, usando ty_real o ty_string.
+	Quando ci sono più di 4 argomenti, devono essere tutti ty_real.<br>
 </blockquote>
 
 <p>
