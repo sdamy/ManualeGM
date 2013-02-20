@@ -1,10 +1,10 @@
 #!/bin/sh
-#Usare con ./post-revisione.sh scelta-default
+#Usare con ./pre-revisione.sh scelta-default
 
 echo > traduttori
 for file in $(ls -1 | grep '\.html$')
 	do
-	sed -f accenti.sed < $file > _
+	sed -f correzioni.sed < $file > _
 	mv _ $file
 	IFS="
 "
