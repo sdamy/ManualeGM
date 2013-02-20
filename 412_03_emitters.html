@@ -29,7 +29,7 @@ particellare pu&ograve; avere un numero arbitrario di emettitori. Un emettitore 
     indica la distribuzione usata per generare le particelle. Pu&ograve; avere i seguenti valori:</li>
   <ul>
     <li><tt>ps_distr_linear</tt> 
-	  indica una distribuzione lineare, in ogni parte della regione di spazio c’&egrave; la stessa probabilit&agrave;</li>
+	  indica una distribuzione lineare, in ogni parte della regione di spazio c'&egrave; la stessa probabilit&agrave;</li>
     <li><tt>ps_distr_gaussian</tt> 
 	  indica una distribuzione gaussiana in cui si generano pi&ugrave; particelle nel centro rispetto 
 	  ai lati della regione</li>   
@@ -47,17 +47,17 @@ particellare pu&ograve; avere un numero arbitrario di emettitori. Un emettitore 
 
 <p>
 Le seguenti funzioni sono disponibili per impostare gli emettitori e per far creare particelle. 
-Si noti che ciascuno delle funzioni accetta come primo parametro l’indice del sistema particellare 
-al quale deve appartenere l’emettitore.
+Si noti che ciascuno delle funzioni accetta come primo parametro l'indice del sistema particellare 
+al quale deve appartenere l'emettitore.
 
 <p>
 <blockquote>
   <tt><b>part_emitter_create(ps)</b></tt> 
-    Crea un nuovo emettitore nel sistema particellare dato. Restituisce l'indice dell’emettitore. 
+    Crea un nuovo emettitore nel sistema particellare dato. Restituisce l'indice dell'emettitore. 
     Questo indice deve essere usato in tutte le funzioni sottostanti per impostare 
     le propriet&agrave; di un emettitore.<br>
   <tt><b>part_emitter_destroy(ps,ind)</b></tt> 
-    Distrugge l’emettitore ind del sistema particellare (ps). 
+    Distrugge l'emettitore ind del sistema particellare (ps). 
     Chiamare questa funzione se non serve pi&ugrave;, per risparmiare spazio.<br>
   <tt><b>part_emitter_destroy_all(ps)</b></tt> 
     Distrugge tutti gli emettitori del sistema di particelle che sono state creati.<br>
@@ -68,7 +68,7 @@ al quale deve appartenere l’emettitore.
   <tt><b>part_emitter_region(ps,ind,xmin,xmax,ymin,ymax,shape,distribution)</b></tt> 
     Imposta la regione e la distribuzione per l'emettitore.<br>
   <tt><b>part_emitter_burst(ps,ind,parttype,number)</b></tt> 
-    Emette in blocco un numero (number) di particelle del tipo indicato dall’emettitore.<br>
+    Emette in blocco un numero (number) di particelle del tipo indicato dall'emettitore.<br>
   <tt><b>part_emitter_stream(ps,ind,parttype,number)</b></tt>
     Da questo momento in poi viene creato un numero di particelle del tipo indicato ad ogni passo. 
     Se si indica un numero minore di 0, ad ogni passo una particella viene generata con una 

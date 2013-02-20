@@ -13,39 +13,39 @@
 <i><b>Queste funzioni sono disponibili solo nella versione Standard di GameMaker.</b></i>
 
 <p>
-<i>GameMaker</i> è un programma pensato per fare i giochi a 2 dimensionali o isometrici. 
-Ci sono, però, anche alcune funzioni per creare una grafica tridimensionale. Prima di iniziare 
+<i>GameMaker</i> &egrave; un programma pensato per fare i giochi a 2 dimensionali o isometrici. 
+Ci sono, per&ograve;, anche alcune funzioni per creare una grafica tridimensionale. Prima di iniziare 
 ci sono alcune cose da chiarire.
 
 <ul>
-  <li> Le funzionalità 3D, in <i>GameMaker</i>, sono limitate alla parte grafica. Non vi è alcun 
-  supporto per altre funzionalità 3D. Una volta iniziato ad usare la grafica 3D si potrebbero 
-  riscontare problemi con altri aspetti di <i>GameMaker</i>, come le views, ordinamento delle profondità, 
-  ecc. Queste funzionalità sono limitate ed hanno poche possibilità di essere estese. 
+  <li> Le funzionalit&agrave; 3D, in <i>GameMaker</i>, sono limitate alla parte grafica. Non vi &egrave; alcun 
+  supporto per altre funzionalit&agrave; 3D. Una volta iniziato ad usare la grafica 3D si potrebbero 
+  riscontare problemi con altri aspetti di <i>GameMaker</i>, come le views, ordinamento delle profondit&agrave;, 
+  ecc. Queste funzionalit&agrave; sono limitate ed hanno poche possibilit&agrave; di essere estese. 
   Quindi non ci si aspetti supporto per modelli di oggetti 3D, ecc.</li>
-  <li> Quando si utilizza la funzionalità 3D, ci sono una serie di altre cose che 
-  non possono più essere utilizzate. 
+  <li> Quando si utilizza la funzionalit&agrave; 3D, ci sono una serie di altre cose che 
+  non possono pi&ugrave; essere utilizzate. 
 	<ul>
-	  <li> Non sarà più possibile usare sfondi nelle room. (Il motivo è che essi sono “piastrelle” che servono 
-	  a riempire l'immagine, ma con proiezioni prospettiche queste non funzionano più correttamente).</li>
-	  <li> Non sarà più possibile utilizzare la posizione del mouse. Le sue coordinate non verranno 
-	  trasformate in coordinate 3D. È ancora possibile ottenere la posizione del mouse sullo schermo 
-	  (nella vista), ma bisognerà farsi da soli un calcolo (o non usare proprio il mouse).</li>
-	  <li> Non sarà più possibile utilizzare le piastrelle (tiles). 
-	  I tiles probabilmente non corrisponderanno più correttamente.</li>
+	  <li> Non sar&agrave; pi&ugrave; possibile usare sfondi nelle room. (Il motivo &egrave; che essi sono “piastrelle” che servono 
+	  a riempire l'immagine, ma con proiezioni prospettiche queste non funzionano pi&ugrave; correttamente).</li>
+	  <li> Non sar&agrave; pi&ugrave; possibile utilizzare la posizione del mouse. Le sue coordinate non verranno 
+	  trasformate in coordinate 3D. &Egrave; ancora possibile ottenere la posizione del mouse sullo schermo 
+	  (nella vista), ma bisogner&agrave; farsi da soli un calcolo (o non usare proprio il mouse).</li>
+	  <li> Non sar&agrave; pi&ugrave; possibile utilizzare le piastrelle (tiles). 
+	  I tiles probabilmente non corrisponderanno pi&ugrave; correttamente.</li>
 	  <li> I controlli di collisione utilizzeranno ancora le posizioni bidimensionali delle istanze nella room. 
-	  Pertanto non c'è il rilevamento delle collisioni in 3D. A volte si potranno usare questi, se 
+	  Pertanto non c'&egrave; il rilevamento delle collisioni in 3D. A volte si potranno usare questi, se 
 	  si utilizza la room come la rappresentazione di un mondo piatto (ad esempio per giochi di corse o FPS), ma 
-	  in altre situazioni che occorrerà implementare da soli un sistema di collisioni.</li>
+	  in altre situazioni che occorrer&agrave; implementare da soli un sistema di collisioni.</li>
 	</ul>
-  <li> Tutte le funzionalità 3D lavorano tramite codice. Bisogna essere molto preparati sul codice GML. 
+  <li> Tutte le funzionalit&agrave; 3D lavorano tramite codice. Bisogna essere molto preparati sul codice GML. 
   Inoltre occorre conoscere molto bene come funziona <i>GameMaker</i> altrimenti si verificheranno dei problemi.</li>
-  <li> È necessario disporre di una conoscenza di base di grafica 3D. In particolare, si useranno termini come 
+  <li> &Egrave; necessario disporre di una conoscenza di base di grafica 3D. In particolare, si useranno termini come 
   proiezioni prospettiche, rimozione di superfici nascoste, illuminazione, e nebbia, senza molte spiegazioni</li>
-  <li> Non vi è alcuna possibilità di modellazione 3D in <i>GameMaker</i>. Non c’è nemmeno molta intenzione di aggiungere 
+  <li> Non vi &egrave; alcuna possibilit&agrave; di modellazione 3D in <i>GameMaker</i>. Non c'&egrave; nemmeno molta intenzione di aggiungere 
   un supporto per il caricamento di modelli 3D.</li>
-  <li> È necessario lavorare con attenzione per mantenere una velocità ragionevole. Inoltre, alcune cose non sono 
-  realmente ottimizzate per ottenere alte velocità.</li>
+  <li> &Egrave; necessario lavorare con attenzione per mantenere una velocit&agrave; ragionevole. Inoltre, alcune cose non sono 
+  realmente ottimizzate per ottenere alte velocit&agrave;.</li>
 </ul>
 
 <p>

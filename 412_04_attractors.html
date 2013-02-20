@@ -17,13 +17,13 @@ l'elaborazione delle particelle. Un attrattore ha le seguenti propriet&agrave;:
 
 <ul>
   <li><tt><b>x,y</b></tt> 
-    indicano la posizione dell’attrattore.</li>
+    indicano la posizione dell'attrattore.</li>
   <li><tt><b>force</b></tt> 
     indica la forza di attrazione dell'attrattore. Come la forza agisce 
     sulle particelle dipende dai seguenti parametri.</li>
   <li><tt><b>dist</b></tt> 
    indica la distanza massima alla quale l'attrattore ha effetto. Solo le particelle pi&ugrave; 
-   vicine, che non superano questa distanza, saranno attratte dall’attrattore</li>
+   vicine, che non superano questa distanza, saranno attratte dall'attrattore</li>
   <li><tt><b>kind</b></tt> 
    indica il tipo di attrattore:</li>
   <ul>
@@ -31,7 +31,7 @@ l'elaborazione delle particelle. Un attrattore ha le seguenti propriet&agrave;:
 	  definisce una forza costante, indipendente dalla distanza.</li>
     <li><tt>ps_force_linear</tt> 
 	  definisce una forza linearmente crescente. Alla distanza massima la forza &egrave; 0
-	  mentre alla minima distanza dall’attrattore essa raggiunge il valore dato.</li>
+	  mentre alla minima distanza dall'attrattore essa raggiunge il valore dato.</li>
     <li><tt>ps_force_quadratic</tt> 
 	 definisce una forza che cresce quadratamente.</li>
   </ul>
@@ -48,10 +48,10 @@ parametro l'indice del sistema particellare al quale appartiene.
 <p>
 <blockquote>
   <tt><b>part_attractor_create(ps)</b></tt> 
-    Crea un nuovo attrattore nel dato sistema particellare. Restituisce l'indice dell’attrattore. 
+    Crea un nuovo attrattore nel dato sistema particellare. Restituisce l'indice dell'attrattore. 
     Questo indice deve essere usato in tutte le chiamate di seguito per impostare le propriet&agrave; del attrattore.<br>
   <tt><b>part_attractor_destroy(ps,ind)</b></tt> 
-    Distrugge l’attrattore ind nel sistema particellare. 
+    Distrugge l'attrattore ind nel sistema particellare. 
     Usare questa funzione se non serve pi&ugrave;, per risparmiare spazio.<br>
   <tt><b>part_attractor_destroy_all(ps)</b></tt> 
     Distrugge tutti gli attrattori del sistema di particelle che sono stati creati.<br>
@@ -60,9 +60,9 @@ parametro l'indice del sistema particellare al quale appartiene.
   <tt><b>part_attractor_clear(ps,ind)</b></tt> 
     Riporta l'attrattore ind alle impostazioni predefinite.<br>
   <tt><b>part_attractor_position(ps,ind,x,y)</b></tt> 
-    Imposta la posizione dell’attrattore ind a (x, y).<br>
+    Imposta la posizione dell'attrattore ind a (x, y).<br>
   <tt><b>part_attractor_force(ps,ind,force,dist,kind,aditive)</b></tt> 
-    Imposta i parametri di forza dell’attrattore ind.<br>
+    Imposta i parametri di forza dell'attrattore ind.<br>
 </blockquote>
 
 <!--END-->

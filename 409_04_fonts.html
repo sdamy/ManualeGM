@@ -10,7 +10,7 @@
 
 
 <h3>Fonts</h3>
-E’ possible creare, rimpiazzare e cancellare fonts durante il gioco
+E' possible creare, rimpiazzare e cancellare fonts durante il gioco
 usando le seguenti funzioni. (Non rimpiazzare una font che &egrave; settata
 come la font attuale o almeno resettatela in seguito)
 
@@ -19,21 +19,21 @@ come la font attuale o almeno resettatela in seguito)
   <tt><b>font_add(name,size,bold,italic,first,last)</b></tt>
 	Aggiunge una nuova font e restituisce il suo indice,
 	indicando il nome, la misura, se in grassetto o italico,
-	e il primo e l’ultimo carattere che deve essere creato.<br>
+	e il primo e l'ultimo carattere che deve essere creato.<br>
   <tt><b>font_add_sprite(spr,first,prop,sep)</b></tt>
 	Aggiunge una nuova font e restituisce il suo indice. La font &egrave; creata da uno sprite.
 	Lo sprite dovr&agrave; contenere una sottoimmagine per ogni carattere.
-	<tt>first</tt> indica l’indice del primo carattere nello sprite.
+	<tt>first</tt> indica l'indice del primo carattere nello sprite.
 	Per esempio, usate <tt>ord('0')</tt> se il vostro sprite contiene solo i numeri.
 	<tt>prop</tt>  indica se la font &egrave; proporzionale.
 	In una font proporzionale, per ogni carattere la larghezza del profilo esterno
 	(bounding box) &egrave; usata come la larghezza del carattere. Infine, <tt>sep</tt> indica
-	l’ammontare dello spazio bianco che deve separare i caratteri orizzontalmente.
+	l'ammontare dello spazio bianco che deve separare i caratteri orizzontalmente.
 	Un valore tipico deve risiedere tra 2 e 8, dipende dalla misura della font.<BR>
   <tt><b>font_replace(ind,name,size,bold,italic,first,last)</b></tt>
 	Sostituisce il font <tt>ind</tt> con un nuovo font indicando nome,
 	misura(size), se deve essere in grassetto o italico, e se devono
-	essere creati il primo e l’ultimo carattere.<br>
+	essere creati il primo e l'ultimo carattere.<br>
   <tt><b>font_replace_sprite(ind,spr,first,prop,sep)</b></tt>
 	Sostituisce il font <tt>ind</tt> con una nuova font basata sullo sprite..<br>
   <tt><b>font_delete(ind)</b></tt>

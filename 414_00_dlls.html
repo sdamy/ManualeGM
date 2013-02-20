@@ -10,38 +10,38 @@
 
 <h1>Usare le DLL</h1>
 
-<i><b>Questa funzionalità è disponibile sono nella Standard Edition di Game Maker.</b></i>
+<i><b>Questa funzionalit&agrave; &egrave; disponibile sono nella Standard Edition di Game Maker.</b></i>
 
 
 <p>
-<i><b>Ricorda che dalla versione 7 c'è un nuovo meccanismo per le estensioni.
-È meglio utilizzare il meccanismo delle estensioni, piuttosto che le funzioni
+<i><b>Ricorda che dalla versione 7 c'&egrave; un nuovo meccanismo per le estensioni.
+&Egrave; meglio utilizzare il meccanismo delle estensioni, piuttosto che le funzioni
 descritte in questa sezione.
 Vedi
 <a href="http://www.yoyogames.com/extensions" target="_blank">http://www.yoyogames.com/extensions</a>
 per i dettagli.
-Queste funzioni vengono mantenute principalmente per compatibilità
+Queste funzioni vengono mantenute principalmente per compatibilit&agrave;
 con il passato.</b></i>
 
 
 <p>
-In quei casi in cui le funzionalità del GML non sono sufficienti,
-puoi estendere le possibilità usando i plug-ins. Un plug-in
+In quei casi in cui le funzionalit&agrave; del GML non sono sufficienti,
+puoi estendere le possibilit&agrave; usando i plug-ins. Un plug-in
 nella forma di file DLL (una libreria a collegamento dinamico. In un file DLL
 puoi definire delle funzioni. Queste funzioni possono essere scritte in qualunque
 linguaggio di programmazione che supporta la creazione di DLL (Delphi, C, C++, ecc.)
-Dovrai comunque aver bisogno di esperienza con la programmazione per fare ciò.
+Dovrai comunque aver bisogno di esperienza con la programmazione per fare ci&ograve;.
 Le funzioni esterne devono avere un formato specifico. Possono avere da 0 a 16
-argomenti, ognuno dei quali può essere un numero reale (double sul C) oppure
-una stringa null-terminated (che termina con il carattere \0). (Per più di 4 argomenti,
+argomenti, ognuno dei quali pu&ograve; essere un numero reale (double sul C) oppure
+una stringa null-terminated (che termina con il carattere \0). (Per pi&ugrave; di 4 argomenti,
 sono supportati solo i numeri reali al momento). Esse devono ritornare
 un numero reale o una stringa null-terminated.
 
 <p>
 Nel Delphi puoi creare una DLL scegliendo prima <b>New</b>
 dal menu <b>File</b> e dopo scegliere DLL. Qui
-c'è un esempio di una DLL che puoi usare con <i>GameMaker</i>
-scritto in Delphi. (Nota che questo è del codice Delphi,
+c'&egrave; un esempio di una DLL che puoi usare con <i>GameMaker</i>
+scritto in Delphi. (Nota che questo &egrave; del codice Delphi,
 non GML!)
 
 <p>
@@ -76,28 +76,28 @@ end.
 Questa DLL definisce due funzioni: <tt>MyMin</tt> prende due argomenti reali
 e restituisce il minore tra i due, e <tt>DoubleString</tt>
 raddoppia la stringa. Nota che devi fare attenzione con la gestione della memoria.
-Questo è il motivo per cui ho dichiarato la stringa risultante globale.
+Questo &egrave; il motivo per cui ho dichiarato la stringa risultante globale.
 Inoltre ricorda l'uso della convezione per le chiamate "cdecl". Puoi
 usare sia cdecl che stdcall. Dopo che hai creato
 la DLL in Delphi otterrai un file chiamato <tt>MyDLL.DLL</tt>. Questo
 file dev'essere piazzato nella directory di esecuzione del tuo gioco.
-(O in qualunque altro posto in cui Windows può trovarlo).
+(O in qualunque altro posto in cui Windows pu&ograve; trovarlo).
 
 <p>
 Per usare questa DLL su <i>GameMaker</i> devi prima specificare
 le funzioni esterne che vuoi utilizzare e quali tipi di argomenti
-prendono. Per questo c'è la seguente funzione GML:
+prendono. Per questo c'&egrave; la seguente funzione GML:
 
 <p>
 <blockquote>
   <tt><b>external_define(dll,name,calltype,restype,argnumb,arg1type,arg2type, ...)</b></tt> 
-	Definisce una funzione esterna. dll è il nome del file DLL.
-	name è il nome della funzione. calltype è la convenzione per le chiamate
-	da usare. Per questa puoi mettere sia dll_cdecl che dll_stdcall. restype è
+	Definisce una funzione esterna. dll &egrave; il nome del file DLL.
+	name &egrave; il nome della funzione. calltype &egrave; la convenzione per le chiamate
+	da usare. Per questa puoi mettere sia dll_cdecl che dll_stdcall. restype &egrave;
 	il tipo del risultato. Per questo puoi usare ty_real o ty_string. argnumb
-	è il numero di argomenti (0-16). Poi, per ogni argomento devi
+	&egrave; il numero di argomenti (0-16). Poi, per ogni argomento devi
 	specificare il suo tipo, usando ty_real o ty_string.
-	Quando ci sono più di 4 argomenti, devono essere tutti ty_real.<br>
+	Quando ci sono pi&ugrave; di 4 argomenti, devono essere tutti ty_real.<br>
 </blockquote>
 
 <p>
@@ -143,23 +143,23 @@ Dunque, per esempio, scriveresti:
 </blockquote>
 
 <p>
-Se non hai più bisogno di utilizzare la DLL è meglio se liberi la sua memoria.
+Se non hai pi&ugrave; bisogno di utilizzare la DLL &egrave; meglio se liberi la sua memoria.
 
 <p>
 <blockquote>
   <tt><b>external_free(dll)</b></tt> 
-	Libera la memoria della DLL con il nome dato. Questo è particolarmente
-	necessario se il gioco deve rimuovere la DLL. FInchè la DLL non viene liberata
-	non può essere rimossa. È meglio fare ciò in un evento di fine gioco.<br>
+	Libera la memoria della DLL con il nome dato. Questo &egrave; particolarmente
+	necessario se il gioco deve rimuovere la DLL. FInch&egrave; la DLL non viene liberata
+	non pu&ograve; essere rimossa. &Egrave; meglio fare ci&ograve; in un evento di fine gioco.<br>
 </blockquote>
 
 <p>
 Potresti chiederti come fare una funzione in una DLL che
 fa qualcosa nel gioco. Per esempio, potresti voler creare
-una DLL che aggiunge istanze di oggetto nel tuo gioco. Il modo più semplice per farlo
-è usare una funzione della DLL che restituisce una stringa che
+una DLL che aggiunge istanze di oggetto nel tuo gioco. Il modo pi&ugrave; semplice per farlo
+&egrave; usare una funzione della DLL che restituisce una stringa che
 contiene un pezzo di codice GML. Questa stringa che contiene
-il codice GML può essere eseguita con la funzione GML:
+il codice GML pu&ograve; essere eseguita con la funzione GML:
 
 <p>
 <blockquote>
@@ -169,7 +169,7 @@ il codice GML può essere eseguita con la funzione GML:
 
 <p>
 Alternativamente puoi far creare alla DLL un file con
-uno script che dev'essere eseguito (questa funzione può anche essere
+uno script che dev'essere eseguito (questa funzione pu&ograve; anche essere
 usata per modificare successivamente il comportamento di un gioco).
 
 <p>
@@ -193,8 +193,8 @@ Adesso puoi chiamare una funzione esterna e dunque eseguire la stringa risultant
 
 <p>
 In alcuni rari casi la tua DLL potrebbe aver bisogno di conoscere l'handle della
-finestra grafica principale del gioco. Questa può essere ottenuta con la seguente
-funzione e può dunque essere passata alla DLL:
+finestra grafica principale del gioco. Questa pu&ograve; essere ottenuta con la seguente
+funzione e pu&ograve; dunque essere passata alla DLL:
 
 <p>
 <blockquote>
@@ -203,19 +203,19 @@ funzione e può dunque essere passata alla DLL:
 </blockquote>
 
 <p>
-Nota che le DLL non possono essere eseguite in modalità sicura.
+Nota che le DLL non possono essere eseguite in modalit&agrave; sicura.
 
 <p>
-Usare le DLL esterne è un meccanismo estremamente potente.
-Ma per favore utilizzalo solo se sai ciò che stai facendo.
+Usare le DLL esterne &egrave; un meccanismo estremamente potente.
+Ma per favore utilizzalo solo se sai ci&ograve; che stai facendo.
 
 <p>
 <blockquote>
   <tt><b>get_function_address('function_name')</b></tt> 
-	Restituisce l'indirizzo di una funzione GameMaker. Questo può essere passato
+	Restituisce l'indirizzo di una funzione GameMaker. Questo pu&ograve; essere passato
 	alla DLL in modo da chiamarla direttamente su GameMaker.
 	This feature is unsuported, so care must be taken when using this function.<br>
-	Questa funzionalità non è supportata, quindi bisogna fare attenzione quando
+	Questa funzionalit&agrave; non &egrave; supportata, quindi bisogna fare attenzione quando
 	si utilizza questa funzione.<br>
 	Per favore nota che queste funzioni usano la convenzione per le chiamate "Delphi 2010 PASCAL", lo stesso per il formato delle stringhe.</b><br>
 </blockquote>
@@ -240,7 +240,7 @@ executing files
 
 funzioni esterne
 estendere GameMaker
-aggiungere funzionalità
+aggiungere funzionalit&agrave;
 handle della finestra
 eseguire stringhe
 eseguire script esterni

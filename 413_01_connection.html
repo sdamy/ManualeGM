@@ -12,14 +12,14 @@
 
 Per comunicare due computer necessitano di un protocollo di connessione. 
 Come molti giochi, Game Maker offre quattro tipi differenti di connessioni; 
-IPX, TCP/IP, Modem e Seriale. La connessione IPX (per essere precisi è un protocollo) 
-lavora in un modo trasparente. Può essere usata per giocare con altre persone 
+IPX, TCP/IP, Modem e Seriale. La connessione IPX (per essere precisi &egrave; un protocollo) 
+lavora in un modo trasparente. Pu&ograve; essere usata per giocare con altre persone 
 nella stessa area locale. Deve essere installata sul computer per essere usata 
 (Se non funziona consulta la documentazione di Windows o vai nel pannello di 
-controllo alla sezione Rete ed aggiungilo). TCP/IP è il protocollo usato in 
-internet. Può essere usato per giocare ad un gioco usando una linea internet, 
-sapendo solo il tuo indirizzo IP. In una connessione locale non è necessario 
-che tu fornisca il tuo indirizzo. Una connessione di tipo modem è usata esclusivamente 
+controllo alla sezione Rete ed aggiungilo). TCP/IP &egrave; il protocollo usato in 
+internet. Pu&ograve; essere usato per giocare ad un gioco usando una linea internet, 
+sapendo solo il tuo indirizzo IP. In una connessione locale non &egrave; necessario 
+che tu fornisca il tuo indirizzo. Una connessione di tipo modem &egrave; usata esclusivamente 
 per chi possiede un modem. Tu devi dare alcune opzioni del modem (una stringa di 
 inizializzazione ed un numero di telefono) per poterlo usare. Infine quando usi 
 una linea seriale (una connessione diretta tra computers) devi dare un numero di porta. 
@@ -30,29 +30,29 @@ Ci sono quattro funzioni GML che permettono di inizializzare queste connessioni:
   <tt><b>mplay_init_ipx()</b></tt> 
     inizializza una connessione IPX.<br>
   <tt><b>mplay_init_tcpip(addr)</b></tt> 
-    inizializza una connessione TCP/IP. addr è una stringa che può contenere un indirizzo web 
+    inizializza una connessione TCP/IP. addr &egrave; una stringa che pu&ograve; contenere un indirizzo web 
     o IP come "www.gioco.es" o "123.123.123.12" possibilmente seguiti da il numero di porta 
-    (che non è indispensabile) come ":12". Solo quando partecipi ad una sessione (vedi dopo) 
-    devi provvedere il tuo indirizzo. In un'area locale non c'è bisogno che tu fornisca un 
+    (che non &egrave; indispensabile) come ":12". Solo quando partecipi ad una sessione (vedi dopo) 
+    devi provvedere il tuo indirizzo. In un'area locale non c'&egrave; bisogno che tu fornisca un 
     indirizzo, ma devi comunque chiamare la funzione.<br>
   <tt><b>mplay_init_modem(initstr,phonenr)</b></tt> 
     inizializza una connessione modem. initstr sta per stringa di inizializzazione del modem 
-    (può essere vuota). telefon è una stringa che conterrà il numero da chiamare (es. "0453232242"). 
+    (pu&ograve; essere vuota). telefon &egrave; una stringa che conterr&agrave; il numero da chiamare (es. "0453232242"). 
     Solo quando partecipi ad una sessione devi fornire il numero di telefono.<br>
   <tt><b>mplay_init_serial(portno,baudrate,stopbits,parity,flow)</b></tt> 
-    inizializza una connessione seriale. portno è il numero di porta, da 1 a 4. 
-    baudrate è la velocità di trasmissione da usare (100-256K). 
-    stopbits è il numero di stopbits (0 = 1 bit, 1 = 1.5 bit, 2 = 2 bits). 
-    parity indica il numero di parità (0 =none, 1=dispari, 2=pari, 3=mark). 
+    inizializza una connessione seriale. portno &egrave; il numero di porta, da 1 a 4. 
+    baudrate &egrave; la velocit&agrave; di trasmissione da usare (100-256K). 
+    stopbits &egrave; il numero di stopbits (0 = 1 bit, 1 = 1.5 bit, 2 = 2 bits). 
+    parity indica il numero di parit&agrave; (0 =none, 1=dispari, 2=pari, 3=mark). 
     E flow indica il tipo di controllo di flusso (0=none, 1=xon/xoff, 2=rts, 3=dtr, 4=rts e dtr). 
-    Restituisce se ha successo. Una tipica chiamata seriale è mplay_init_serial (1,57600,0,0,4). 
+    Restituisce se ha successo. Una tipica chiamata seriale &egrave; mplay_init_serial (1,57600,0,0,4). 
     Dare 0 come primo parametro per aprire una finestra di dialogo per l'utente per modificare le impostazioni.<br>
 </blockquote>
 
 <p>
 Il gioco dovrebbe chiamare una di queste funzioni una sola volta. Tutte le funzioni ritornano valori 
-se hanno avuto successo. Possono non avere successo se il particolare protocollo non è installato o 
-supportato dalla macchina. Per verificare se vi sia una connessione disponibile è possibile utilizzare 
+se hanno avuto successo. Possono non avere successo se il particolare protocollo non &egrave; installato o 
+supportato dalla macchina. Per verificare se vi sia una connessione disponibile &egrave; possibile utilizzare 
 la seguente funzione:
 
 <p>
@@ -73,14 +73,14 @@ Per terminare la chiamata di connessione:
 
 <p>
 Quando si utilizza una connessione TCP / IP bisognerebbe chiedere alla persona con cui si vuole giocare 
-l’indirizzo ip del proprio computer. La seguente funzione ti aiuta per fare questo:
+l'indirizzo ip del proprio computer. La seguente funzione ti aiuta per fare questo:
 
 <p>
 <blockquote>
   <tt><b>mplay_ipaddress()</b></tt> 
     restituisce l'indirizzo IP della macchina (ad esempio, '123 .123.123.12 ') come una stringa. 
-    È possibile ad esempio far visualizzare questo numero da qualche parte sullo schermo. 
-    NB: questa funzione è lenta, non bisogna chiamarla per tutto il tempo del gioco.<br>
+    &Egrave; possibile ad esempio far visualizzare questo numero da qualche parte sullo schermo. 
+    NB: questa funzione &egrave; lenta, non bisogna chiamarla per tutto il tempo del gioco.<br>
 </blockquote>
 
 <!--END-->

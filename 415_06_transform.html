@@ -28,31 +28,31 @@ aggiungono trasformazioni.
   <tt><b>d3d_transform_set_scaling(xs,ys,zs)</b></tt>
 	  Imposta la trasformazione per scalare con il valore indicato.<br>
   <tt><b>d3d_transform_set_rotation_x(angle)</b></tt>
-	  Imposta la trasformazione ad una rotazione intorno all’ascisse-x con l’ammontare indicato.<br>
+	  Imposta la trasformazione ad una rotazione intorno all'ascisse-x con l'ammontare indicato.<br>
   <tt><b>d3d_transform_set_rotation_y(angle)</b></tt>
-	  Imposta la trasformazione per una rotazione intorno all’ascisse-y con l’ammontare indicato.<br>
+	  Imposta la trasformazione per una rotazione intorno all'ascisse-y con l'ammontare indicato.<br>
   <tt><b>d3d_transform_set_rotation_z(angle)</b></tt>
-	  Imposta la trasformazione ad una rotazione intorno all’ascisse-z con l’ammontare indicato.<br>
+	  Imposta la trasformazione ad una rotazione intorno all'ascisse-z con l'ammontare indicato.<br>
   <tt><b>d3d_transform_set_rotation_axis(xa,ya,za,angle)</b></tt>
-	  Imposta la trasformazione ad una rotazione intorno all’ascisse indicato dalla rotta 
-	  con l’ammontare indicato..<br>
+	  Imposta la trasformazione ad una rotazione intorno all'ascisse indicato dalla rotta 
+	  con l'ammontare indicato..<br>
   <tt><b>d3d_transform_add_translation(xt,yt,zt)</b></tt>
 	  Imposta una trasformazione sopra la rotta indicata.<br>
   <tt><b>d3d_transform_add_scaling(xs,ys,zs)</b></tt>
-	  Aggiunge una scalatura con l’ammontare indicato.<br>
+	  Aggiunge una scalatura con l'ammontare indicato.<br>
   <tt><b>d3d_transform_add_rotation_x(angle)</b></tt>
-	  Aggiunge una rotazione intorno all’ascisse-x con il valore indicato.<br>
+	  Aggiunge una rotazione intorno all'ascisse-x con il valore indicato.<br>
   <tt><b>d3d_transform_add_rotation_y(angle)</b></tt>
-	  Aggiunge una rotazione intorno all’ascisse-y con l’ammontare indicato.<br>
+	  Aggiunge una rotazione intorno all'ascisse-y con l'ammontare indicato.<br>
   <tt><b>d3d_transform_add_rotation_z(angle)</b></tt>
-	  Aggiunge una rotazione intorno all’ascisse-z con il valore indicato.<br>
+	  Aggiunge una rotazione intorno all'ascisse-z con il valore indicato.<br>
   <tt><b>d3d_transform_add_rotation_axis(xa,ya,za,angle)</b></tt>
-	  Aggiunge una rotazione intorno all’ascisse indicato dal vettore 
-	  con l’ammontare indicato.<br>
+	  Aggiunge una rotazione intorno all'ascisse indicato dal vettore 
+	  con l'ammontare indicato.<br>
 </blockquote>
 
 Osservate che la rotazione e lo scaling vengono effettuati in relazione al punto di intersezione del mondo 3D,
-e non in relazione all’oggetto che &egrave; stato raffigurato. Se l’oggetto non &egrave; nel punto di intersezione, sar&agrave; 
+e non in relazione all'oggetto che &egrave; stato raffigurato. Se l'oggetto non &egrave; nel punto di intersezione, sar&agrave; 
 spostato in un punto diverso, che &egrave; quello che non volete. Quindi, per esempio per ruotare un oggetto sopra 
 il suo ascisse-x, dobbiamo prima portarlo nel punto di intersezione, ruotarlo, e infine riportarlo nella sua 
 posizione. Questo &egrave; quello che le funzioni fanno per aggiungere delle trasformazioni.
@@ -76,10 +76,10 @@ vogliamo disegnare alla posizione (100,100,10). Possiamo usare il seguente codic
 <p>
 
 Si noti che dato il nostro uso di una traslazione dovremmo disegnare lo sprite alla posizione (0,0). (Questo 
-assume che l’istanza corrente ha una profondit&agrave; 0! Se non siete sicuri, impostate prima la profondit&agrave;). Se 
+assume che l'istanza corrente ha una profondit&agrave; 0! Se non siete sicuri, impostate prima la profondit&agrave;). Se 
 vogliamo usare il suddetto nel nostro fps non vedremo lo sprite. La ragione &egrave; che lo sprite &egrave; parallelo 
-al piano-xy. Vogliamo ruotarlo sopra 90 gradi e lungo l’ascisse-x o y. In questo caso abbiamo
-bisogno di aggiungere una rotazione. Ricordate l’ordine: dobbiamo prima ruotare lo sprite e poi traslarlo. 
+al piano-xy. Vogliamo ruotarlo sopra 90 gradi e lungo l'ascisse-x o y. In questo caso abbiamo
+bisogno di aggiungere una rotazione. Ricordate l'ordine: dobbiamo prima ruotare lo sprite e poi traslarlo. 
 Potete usare cosi il codice seguente:
 
 <p>
@@ -97,7 +97,7 @@ Potete usare cosi il codice seguente:
 
 <p>
 
-A volte volete salvare temporaneamente l’attuale trasformazione, per esempio questo 
+A volte volete salvare temporaneamente l'attuale trasformazione, per esempio questo 
 per aggiungere una trasformazione aggiuntiva e poi riusare quella precedente (questo accade
 spesso quando tracciamo modelli gerarchici). A questo punto potete inserire la corrente 
 trasformazione in uno stack e poi riprenderla da li per rifare la trasformazione. 

@@ -11,24 +11,24 @@
 
 <h3>Illuminazione</h3>
 
-Le scene raffigurate con le funzioni citate sopra sono piuttosto piatte dato che non c’&egrave; luce.
+Le scene raffigurate con le funzioni citate sopra sono piuttosto piatte dato che non c'&egrave; luce.
 Anche il colore se le facciate sono uguali, indipendentemente dal loro orientamento.
-Per creare delle scene pi&ugrave; realistiche da guardare dovete abilitare l’illuminazione e
+Per creare delle scene pi&ugrave; realistiche da guardare dovete abilitare l'illuminazione e
 sistemare le luci nei posti esatti. La creazione di scene correttamente illuminate non
-&egrave; semplice, ma l’effetto &egrave; davvero soddisfacente.  
+&egrave; semplice, ma l'effetto &egrave; davvero soddisfacente.  
 
 <p>
-Per abilitare l’illuminazione potete usare la seguente funzione:
+Per abilitare l'illuminazione potete usare la seguente funzione:
 
 <blockquote>
   <tt><b>d3d_set_lighting(enable)</b></tt>
-	  Abilita o disabilita l’uso dell’illuminazione.<br>
+	  Abilita o disabilita l'uso dell'illuminazione.<br>
 </blockquote>
 
 <p>
-Quando usate l’illuminazione, viene determinato il colore per ogni vertice di un poligono.
+Quando usate l'illuminazione, viene determinato il colore per ogni vertice di un poligono.
 Poi, il colore dei pixels interni &egrave; basato sul colore di questi vertici. Ci sono due modi
-per realizzare ci&ograve;: Sia l’intero poligono prende lo stesso colore, o il colore &egrave;
+per realizzare ci&ograve;: Sia l'intero poligono prende lo stesso colore, o il colore &egrave;
 leggermente interpolato sopra il poligono. Viene usata predefinitivamente una
 sfumatura liscia. Ci&ograve; pu&ograve; essere modificato usando la seguente funzione:
 
@@ -38,7 +38,7 @@ sfumatura liscia. Ci&ograve; pu&ograve; essere modificato usando la seguente fun
 </blockquote>
 
 <p>
-Per usare l’illuminazione ovviamente avete necessit&agrave; di definire le luci.
+Per usare l'illuminazione ovviamente avete necessit&agrave; di definire le luci.
 Esistono luci diverse: luci direzionali (come il sole), e luci posizionabili.
 La luce ha un colore. (Supportiamo solo luci diffuse, nessun riflesso speculare)
     Di solito sono disponibili solo <b>8</b> luci tramite hardware, quindi dovrete usare
@@ -52,7 +52,7 @@ La luce ha un colore. (Supportiamo solo luci diffuse, nessun riflesso speculare)
   <tt><b>d3d_light_define_point(ind,x,y,z,range,col)</b></tt>
 	  Definisce un punto luce. <tt>ind</tt> &egrave; l'indice della luce (usa un puccolo
 	  numero positivo). (x,y,z) &egrave; la posizione della luce. <tt>range</tt>
-	  indica quanto lontano brilla la luce. L’intensit&agrave; della luce
+	  indica quanto lontano brilla la luce. L'intensit&agrave; della luce
 	  decrescer&agrave; lungo questo range. <tt>col</tt> &egrave; il colore
 	  della luce. Questa funzione non attiva la luce.<br>
   <tt><b>d3d_light_enable(ind,enable)</b></tt>
@@ -72,7 +72,7 @@ Per controllare questa luce usate questa funzione:
 </p>
 
 <p>
-Il modo con il quale un oggetto riflette la luce dipende dall’angolo tra la
+Il modo con il quale un oggetto riflette la luce dipende dall'angolo tra la
 direzione della luce e dalla perpendicolarit&agrave; della superficie, cio&egrave;, la
 rotta di puntamento lontana dalla facciata, questa rotta &egrave; chiamata "normale" (normal)
 di una superficie. Quindi, per creare oggetti illuminati

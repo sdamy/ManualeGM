@@ -30,11 +30,11 @@ per leggere o scrivere dati in file di testo:
     Apre il file indicato per l'aggiunta di dati alla fine, creandolo se non esiste. 
     La funzione restituisce l'id del file che deve essere usato in altre funzioni.<br>
   <tt><b>file_text_close(fileid)</b></tt> 
-    Chiude il file con dato l’id del file.<br>
+    Chiude il file con dato l'id del file.<br>
   <tt><b>file_text_write_string(fileid,str)</b></tt> 
-    Scrive una stringa nel file dato l’id.<br>
+    Scrive una stringa nel file dato l'id.<br>
   <tt><b>file_text_write_real(fileid,x)</b></tt> 
-    Scrive un valore reale nel file dato l’id. 
+    Scrive un valore reale nel file dato l'id. 
     (Per separare la parte intera dalla parte decimale bisogna sempre usate il punto).<br>
   <tt><b>file_text_writeln(fileid)</b></tt> 
     Scrive una nuova riga nel file (va a capo).<br>
@@ -92,7 +92,7 @@ Per manipolare i file &egrave; possibile utilizzare le seguenti funzioni:
   <tt><b>file_find_close()</b></tt> 
     Deve essere chiamata dopo la gestione di tutti i file per liberare memoria.<br>
   <tt><b>file_attributes(fname,attr)</b></tt> 
-    Restituisce un valore se il file ha tutte le caratteristiche indicate dall’attributo attr. 
+    Restituisce un valore se il file ha tutte le caratteristiche indicate dall'attributo attr. 
     Usa una combinazione delle costanti indicate sopra.<br>
 </blockquote>
 
@@ -112,7 +112,7 @@ funzioni non agiscono su file effettivi ma solo su stringhe.
   <tt><b>filename_drive(fname)</b></tt> 
     Restituisce le informazioni sul drive del file.<br>
   <tt><b>filename_ext(fname)</b></tt> 
-   Restituisce l’estensione del file indicato, compreso il punto iniziale.<br>
+   Restituisce l'estensione del file indicato, compreso il punto iniziale.<br>
   <tt><b>filename_change_ext(fname,newext)</b></tt> 
     Restituisce il nome del file indicato, con l'estensione (compreso il punto) 
     sostituita dalla nuova estensione (newext). Utilizzando una stringa vuota come newext 
@@ -132,20 +132,20 @@ funzioni di basso livello sono disponibili per fare questo:
     che deve essere usato in altre funzioni. &Egrave; possibile aprire pi&ugrave; file 
     contemporaneamente (massimo 32). &Egrave; importante chiudere il file una finito con esso.<br>
   <tt><b>file_bin_rewrite(fileid)</b></tt> 
-    Riscrive il file di cui &egrave; dato l’id, ovvero, cancella 
-    il contenuto del file e comincia a scrivere dall’inizio.<br>
+    Riscrive il file di cui &egrave; dato l'id, ovvero, cancella 
+    il contenuto del file e comincia a scrivere dall'inizio.<br>
   <tt><b>file_bin_close(fileid)</b></tt> 
-    Chiude il file con di cui &egrave; dato l’id.<br>
+    Chiude il file con di cui &egrave; dato l'id.<br>
   <tt><b>file_bin_size(fileid)</b></tt> 
-    Restituisce la dimensione (in byte) del file di cui &egrave; dato l’id.<br>
+    Restituisce la dimensione (in byte) del file di cui &egrave; dato l'id.<br>
   <tt><b>file_bin_position(fileid)</b></tt> 
     Restituisce la posizione corrente (in byte; 0 &egrave; la prima posizione) 
-    del file di cui &egrave; dato l’id.<br>
+    del file di cui &egrave; dato l'id.<br>
   <tt><b>file_bin_seek(fileid,pos)</b></tt> 
     Sposta la posizione corrente del file alla posizione indicata. Per accodare un file bisogna spostare la posizione 
     del file alla dimensione del file prima di poter cominciare a scrivere.<br>
   <tt><b>file_bin_write_byte(fileid,byte)</b></tt> 
-    Scrive un byte di dati nel file di cui &egrave; dato l’id.<br>
+    Scrive un byte di dati nel file di cui &egrave; dato l'id.<br>
   <tt><b>file_bin_read_byte(fileid)</b></tt> 
     Legge un byte di dati dal file e restituisce questo valore.<br>
 </blockquote>
@@ -208,7 +208,7 @@ la possibilit&agrave; di fornire righe di comando al gioco in esecuzione
   <tt><b>parameter_string(n)</b></tt> 
     Restituisce il parametro della riga di comando di indice n. 
     Il primo parametro ha indice 1. L'ultimo ha indice parameter_count (). 
-    L’indice 0 &egrave; un indice speciale: &egrave; il nome del file eseguibile del gioco (incluso il percorso).<br>
+    L'indice 0 &egrave; un indice speciale: &egrave; il nome del file eseguibile del gioco (incluso il percorso).<br>
 </blockquote>
 
 <p>
