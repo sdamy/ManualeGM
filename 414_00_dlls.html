@@ -101,9 +101,9 @@ prendono. Per questo c'è la seguente funzione GML:
 </blockquote>
 
 <p>
-This function returns the id of the external function that 
-must be used for calling it. So in the above example, at the 
-start of the game you would use the following GML code:
+Questa funzione restituisce l'id della funzione esterna che
+dev'essere utilizzata per chiamarla. Dunque nell'esempio sovrastante, 
+all'inizio del gioco utililzzeresti il seguente codice GML:
 
 <p>
 <blockquote>
@@ -118,19 +118,19 @@ start of the game you would use the following GML code:
 </blockquote>
 
 <p>
-Now whenever you need to call the functions, you use the following function:
+Adesso ogni volta che avrai bisogno di chiamare la funzione, dovrai usere la seguente:
 
 <p>
 <blockquote>
   <tt><b>external_call(id,arg1,arg2,...)</b></tt> 
-    Calls the external function with the given id, and the given 
-	arguments. You need to provide the correct number of arguments 
-	of the correct type (real or string). The function returns
-	the result of the external function.<br>
+	Chiama la funzione esterna con l'id indiciato, e
+	gli argomenti dati. Devi inserire il numero corretto di argomenti
+	del tipo corretto (reale o stringa). La funzione restituisce
+	il risultato della funzione esterna.<br>
 </blockquote>
 
 <p>
-So, for example, you would write:
+Dunque, per esempio, scriveresti:
 
 <p>
 <blockquote>
@@ -143,43 +143,43 @@ So, for example, you would write:
 </blockquote>
 
 <p>
-If you don't need to use the DLL anymore you had better free it.
+Se non hai più bisogno di utilizzare la DLL è meglio se liberi la sua memoria.
 
 <p>
 <blockquote>
   <tt><b>external_free(dll)</b></tt> 
-    Frees the DLL with the given name. This is in particular necessary if the 
-	game should remove the DLL. As long as the DLL is not freed it cannot be 
-	removed. Best do this e.g. in an end of game event.<br>
+	Libera la memoria della DLL con il nome dato. Questo è particolarmente
+	necessario se il gioco deve rimuovere la DLL. FInchè la DLL non viene liberata
+	non può essere rimossa. È meglio fare ciò in un evento di fine gioco.<br>
 </blockquote>
 
 <p>
-You might wonder how to make a function in a DLL that does 
-something in the game. For example, you might want to create 
-a DLL that adds instances of objects to your game. The easiest 
-way is to let your DLL function return a string that 
-contains a piece of GML code. This string that contains 
-the piece of GML can be executed using the GML function
+Potresti chiederti come fare una funzione in una DLL che
+fa qualcosa nel gioco. Per esempio, potresti voler creare
+una DLL che aggiunge istanze di oggetto nel tuo gioco. Il modo più semplice per farlo
+è usare una funzione della DLL che restituisce una stringa che
+contiene un pezzo di codice GML. Questa stringa che contiene
+il codice GML può essere eseguita con la funzione GML:
 
 <p>
 <blockquote>
   <tt><b>execute_string(str,arg0,arg1,...)</b></tt> 
-    Execute the piece of code in the string str with the indicated arguments.<br>
+	Esegue il pezzo di codice nella stringa str con gli argomenti indicati.<br>
 </blockquote>
 
 <p>
-Alternatively you can let the DLL create a file with a 
-script that can be executed (this function can also be 
-used to later modify the behavior of a game).
+Alternativamente puoi far creare alla DLL un file con
+uno script che dev'essere eseguito (questa funzione può anche essere
+usata per modificare successivamente il comportamento di un gioco).
 
 <p>
 <blockquote>
   <tt><b>execute_file(fname)</b></tt> 
-    Execute the piece of code in the file.<br>
+	Esegue il pezzo di codice nel file.<br>
 </blockquote>
 
 <p>
-Now you can call an external function and then execute the resulting string, e.g. as follows:
+Adesso puoi chiamare una funzione esterna e dunque eseguire la stringa risultante: 
 
 <p>
 <blockquote>
@@ -192,29 +192,32 @@ Now you can call an external function and then execute the resulting string, e.g
 </blockquote>
 
 <p>
-In some rare cases your DLL might need to know the handle of the main
-graphics window for the game. This can be obtained with the following 
-function and can then be passed to the DLL:
+In alcuni rari casi la tua DLL potrebbe aver bisogno di conoscere l'handle della
+finestra grafica principale del gioco. Questa può essere ottenuta con la seguente
+funzione e può dunque essere passata alla DLL:
 
 <p>
 <blockquote>
   <tt><b>window_handle()</b></tt> 
-    Returns the window handle for the main window.<br>
+	Restituisce l'handle della finestra principale.<br>
 </blockquote>
 
 <p>
-Note that DLLs cannot be used in secure mode.
+Nota che le DLL non possono essere eseguite in modalità sicura.
 
 <p>
-Using external DLLs is an extremely powerful mechanism. 
-But please only use it if you know what you are doing.
+Usare le DLL esterne è un meccanismo estremamente potente.
+Ma per favore utilizzalo solo se sai ciò che stai facendo.
 
 <p>
 <blockquote>
   <tt><b>get_function_address('function_name')</b></tt> 
-    Returns the address of a GameMaker function. This can be passed to DLL's so the can call directly into GameMaker.<br>
+	Restituisce l'indirizzo di una funzione GameMaker. Questo può essere passato
+	alla DLL in modo da chiamarla direttamente su GameMaker.
 	This feature is unsuported, so care must be taken when using this function.<br>
-	<b>Please Note: These functions use Delphi 2010 PASCAL calling convention and string formats.</b><br>
+	Questa funzionalità non è supportata, quindi bisogna fare attenzione quando
+	si utilizza questa funzione.<br>
+	Per favore nota che queste funzioni usano la convenzione per le chiamate "Delphi 2010 PASCAL", lo stesso per il formato delle stringhe.</b><br>
 </blockquote>
 
 
@@ -234,6 +237,14 @@ window handle
 executing strings
 executing external scripts
 executing files
+
+funzioni esterne
+estendere GameMaker
+aggiungere funzionalità
+handle della finestra
+eseguire stringhe
+eseguire script esterni
+eseguire files
 
 external_call()
 external_define()
