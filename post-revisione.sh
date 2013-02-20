@@ -1,12 +1,17 @@
 #!/bin/sh
 #Usare con ./post-revisione.sh scelta-default
 
+echo > traduttori
 for file in $(ls -1 | grep '\.html$')
 	do
 	sed -f accenti.sed < $file > _
 	mv _ $file
 	IFS="
 "
+
+	echo "Chi ha tradotto $file? (usa gli spazi per separare più nomi)"
+	read author
+	echo "$file $author" >> traduttori
 	for link in $(grep -o '<a[^>\n]*href="[^"\n]*"[^>\n]*>.*</a>' $file)
 		do
 		atitle=`echo $link | grep -m 1 -o '>[^<]*<' | grep -o '[^<>]*'`
