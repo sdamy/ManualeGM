@@ -8,34 +8,36 @@
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Shared data</h3>
+<h3>Condivisione dei dati</h3>
 
-Shared data communication is probably the easiest way to synchronize 
-the game. All communication is shielded from you. There is a set of 
-1000000 values that are common to all entities of the game (preferably 
-only use the first few to save memory). Each entity can set values and 
-read values. <i>GameMaker</i> makes sure that each entity sees 
-the same values. A value can either be a real or a string. There 
-are just two routines:
+La comunicazione tramite la condivisione dei dati è probabilmente 
+il modo più semplice per sincronizzare il gioco. Tutta la comunicazione 
+è protetta da voi. Vi è un insieme di 1000000 valori che sono comuni a 
+tutte le entità del gioco (usarne preferibilmente pochi per risparmiare memoria). 
+Ogni entità può impostare e leggere valori. <i>GameMaker</i> fa in modo che ogni 
+entità vede gli stessi valori. Un valore può essere un numero reale o una stringa. 
+Ci sono solo due procedure:
 
 <p>
 <blockquote>
   <tt><b>mplay_data_write(ind,val)</b></tt> 
-    write value val (string or real) into location ind (ind between 0 and 1000000).<br>
+    scrive il valore val (stringa o numero reale) nella posizione ind (compresa tra 0 e 1000000).<br>
   <tt><b>mplay_data_read(ind)</b></tt> 
-    returns the value in location ind (ind between 0 and 1000000). Initially all values are 0.<br>
+    restituisce il valore presente nella posizione ind (compresa tra 0 e 1000000). 
+    Inizialmente tutti i valori sono pari a 0.<br>
 </blockquote>
 
 <p>
-To synchronize the data on the different machines you can either use a 
-guaranteed mode that makes sure that the change arrives on the other machine 
-(but which is slow) or non-guaranteed. To change this use the following routine:
+Per sincronizzare i dati sulle diverse macchine è possibile utilizzare una guaranteed mode 
+(modalità con garanzia) che fa in modo che il cambiamento arrivi sull'altra macchina 
+(ma è più lenta), oppure una non-guaranteed mode (modalità senza garanzia). 
+Per modificare questa utilizzare la seguente funzione:
 
 <p>
 <blockquote>
   <tt><b>mplay_data_mode(guar)</b></tt> 
-    sets whether or not to use guaranteed transmission for 
-	shared data. guar should either be true (the default) or false.<br>
+    imposta se utilizzare o meno la trasmissione garantita per condividere dati. 
+    guar può essere o true (impostazione predefinita) o false.<br>
 </blockquote>
 
 <!--END-->
@@ -44,6 +46,8 @@ guaranteed mode that makes sure that the change arrives on the other machine
 
 <!-- KEYWORDS
 shared data
+
+condivisione dei dati
 
 mplay_data_write()
 mplay_data_read()
