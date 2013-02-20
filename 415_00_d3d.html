@@ -2,61 +2,59 @@
 
 <html>
 <head>
-<title>3D Graphics</title>
+<title>Grafica 3D</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<H1>3D Graphics</H1>
+<H1>Grafica 3D</H1>
 
-<i><b>This functionality is only available in the Standard Edition of GameMaker.</b></i>
+<i><b>Queste funzioni sono disponibili solo nella versione Standard di GameMaker.</b></i>
 
 <p>
-<i>GameMaker</i> is a program meant for making 2-dimensional and isometric games. Still
-there is some functionality to create 3-dimensional graphics. Before you start with this though 
-there are a few things you must understand.
+<i>GameMaker</i> è un programma pensato per fare i giochi a 2 dimensionali o isometrici. 
+Ci sono, però, anche alcune funzioni per creare una grafica tridimensionale. Prima di iniziare 
+ci sono alcune cose da chiarire.
 
 <ul>
-  <li> The 3D functionality in <i>GameMaker</i> is limited to the graphics part. There is
-    no support for other 3D functionality. Once you start using 3D graphics you might
-	get problems with other aspects of <i>GameMaker</i>, like the views,
-	depth ordering, etc. The functionality is limited and has low priority to
-	be extended. So don't expect support for 3D object models, etc.</li>
-  <li> When you use the 3D functionality, there are a number of other things that can no
-    longer be used. 
+  <li> Le funzionalità 3D, in <i>GameMaker</i>, sono limitate alla parte grafica. Non vi è alcun 
+  supporto per altre funzionalità 3D. Una volta iniziato ad usare la grafica 3D si potrebbero 
+  riscontare problemi con altri aspetti di <i>GameMaker</i>, come le views, ordinamento delle profondità, 
+  ecc. Queste funzionalità sono limitate ed hanno poche possibilità di essere estese. 
+  Quindi non ci si aspetti supporto per modelli di oggetti 3D, ecc.</li>
+  <li> Quando si utilizza la funzionalità 3D, ci sono una serie di altre cose che 
+  non possono più essere utilizzate. 
 	<ul>
-	  <li> You cannot use background and foregrounds in your rooms
-	    anymore. (The reason is that they are tiled to fill the image but with perspective
-	    projections this no longer work correctly).</li>
-	  <li> You cannot use the mouse position anymore. The mouse will not be transformed to the 
-	    3D coordinates. You can still get the position of the mouse on the screen (in the view)
-		but you will have to do calculation with this yourself (or not use the mouse at all).</li>
-	  <li> You cannot use tiles anymore. Tiles will most likely no longer match up correctly.</li>
-	  <li> Collision checking still uses the 2-d positions of the instances in the room. So there
-	    is no collision detection in 3D. Sometimes you can still use this (if you use the room
-		as a representation of a flat world (e.g. for racing or FPS games) but in other situations
-		you have to do things yourself.</li>
+	  <li> Non sarà più possibile usare sfondi nelle room. (Il motivo è che essi sono “piastrelle” che servono 
+	  a riempire l'immagine, ma con proiezioni prospettiche queste non funzionano più correttamente).</li>
+	  <li> Non sarà più possibile utilizzare la posizione del mouse. Le sue coordinate non verranno 
+	  trasformate in coordinate 3D. È ancora possibile ottenere la posizione del mouse sullo schermo 
+	  (nella vista), ma bisognerà farsi da soli un calcolo (o non usare proprio il mouse).</li>
+	  <li> Non sarà più possibile utilizzare le piastrelle (tiles). 
+	  I tiles probabilmente non corrisponderanno più correttamente.</li>
+	  <li> I controlli di collisione utilizzeranno ancora le posizioni bidimensionali delle istanze nella room. 
+	  Pertanto non c'è il rilevamento delle collisioni in 3D. A volte si potranno usare questi, se 
+	  si utilizza la room come la rappresentazione di un mondo piatto (ad esempio per giochi di corse o FPS), ma 
+	  in altre situazioni che occorrerà implementare da soli un sistema di collisioni.</li>
 	</ul>
-  <li> All 3D functionality is through code. You must be rather fluent with the GML language. 
-    Also you must really understand a lot about how <i>GameMaker</i> works otherwise you will
-	run into trouble.</li>
-  <li> You must have some basic knowledge about 3D graphics. In particular I will use terms
-    like perspective projections, hidden surface removal, lighting, and fog, without much
-	explanation.</li>
-  <li> There is no 3D modelling in <i>GameMaker</i>. Also I do not plan on adding support
-    for loading 3D models.</li>
-  <li> You must work carefully to keep a reasonable speed. Also, things are not really 
-    optimized for speed. </li>
+  <li> Tutte le funzionalità 3D lavorano tramite codice. Bisogna essere molto preparati sul codice GML. 
+  Inoltre occorre conoscere molto bene come funziona <i>GameMaker</i> altrimenti si verificheranno dei problemi.</li>
+  <li> È necessario disporre di una conoscenza di base di grafica 3D. In particolare, si useranno termini come 
+  proiezioni prospettiche, rimozione di superfici nascoste, illuminazione, e nebbia, senza molte spiegazioni</li>
+  <li> Non vi è alcuna possibilità di modellazione 3D in <i>GameMaker</i>. Non c’è nemmeno molta intenzione di aggiungere 
+  un supporto per il caricamento di modelli 3D.</li>
+  <li> È necessario lavorare con attenzione per mantenere una velocità ragionevole. Inoltre, alcune cose non sono 
+  realmente ottimizzate per ottenere alte velocità.</li>
 </ul>
 
 <p>
-If this did not discourage you, read on.
+Se questo non ti scoraggia, continua a leggere.
 
 <!--HELPONLY-->
 
  <P>
-Information on 3d graphics can be found in the following pages:
+Le informazioni sulla grafica 3D si possono trovare nelle pagine seguenti:
 
 <P>
 <p>
@@ -84,4 +82,5 @@ Information on 3d graphics can be found in the following pages:
 
 <!-- KEYWORDS
 3D graphics
+Grafica 3D
 --> 
