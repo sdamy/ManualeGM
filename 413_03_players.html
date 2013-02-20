@@ -8,26 +8,22 @@
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Players</h3>
+<h3>Giocatori</h3>
 
-Each instance of the game that joins a session is a player. 
-As indicated above, players have names. There are three routines 
-that deal with players.
+Ogni istanza del gioco che si unisce ad una sessione è un giocatore. Come indicato in precedenza, i 
+giocatori hanno dei nomi. Ci sono tre funzioni che si gestiscono i giocatori.
 
 <p>
 <blockquote>
   <tt><b>mplay_player_find()</b></tt> 
-    searches for all players in the current session and returns 
-	the number of players found.<br>
+    cerca tutti i giocatori nella sessione corrente e restituisce il numero di giocatori presenti.<br>
   <tt><b>mplay_player_name(numb)</b></tt> 
-    returns the name of player number numb (0 is the first player, 
-	which is always yourself). This routine can only be called after 
-	calling the previous routine.<br>
+    restituisce il nome del giocatore numero “numb” (0 è il primo giocatore, che si è sempre se stessi).
+    Questa routine può essere chiamata solo dopo aver chiamato la routine precedente.<br>
   <tt><b>mplay_player_id(numb)</b></tt> 
-    returns the unique id of player number numb (0 is the first player, 
-	which is always yourself). This routine can only be called after 
-	calling the first routine. This id is used in sending and receiving 
-	messages to and from individual players.<br>
+   restituisce l'ID univoco del giocatore numero “numb” (0 è il primo giocatore, che si è sempre se stessi). 
+   Questa routine può essere chiamata solo dopo aver chiamato la prima routine. 
+   Questo ID viene utilizzato per l'invio e la ricezione di messaggi da e verso i singoli giocatori.<br>
 </blockquote>
 
 
@@ -37,6 +33,8 @@ that deal with players.
 
 <!-- KEYWORDS
 players
+
+giocatori
 
 mplay_player_find()
 mplay_player_name()
