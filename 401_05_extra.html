@@ -10,17 +10,17 @@
 
 <h3>Variabili in più</h3>
 
-You create new variables by assigning a value to them (no need to declare
-them first). If you simply use a variable name, the variable will be
-stored with the current object instance only. So don't expect to find it
-when dealing with another object (or another instance of the same object)
-later. You can also set and read variables in other objects by putting the
-object name with a dot before the variable name.
+È possibile creare nuove variabili, assegnando loro un valore (non è necessario dichiararle prima). 
+Se si usa semplicemente solo il nome di una variabile, la variabile verrà memorizzata con l'istanza 
+dell'oggetto corrente. Quindi non ci si aspetti di poterla usare quando si programmano le azioni di 
+un altro oggetto (e il suo valore sarà diverso anche in altre istanze dello stesso oggetto). 
+È anche possibile impostare e leggere variabili in altri oggetti mettendo il nome dell'oggetto con 
+un punto prima del nome della variabile.
 
 <p>
-To create global variables, that are visible to all object instances,
-precede them with the word <tt>global</tt> and a dot. So for example you
-can write:
+Per creare variabili globali, che sono visibili a tutte le istanze degli 
+oggetti, occorre precedere al nome della variabile la parola <tt>global</tt> con un punto. 
+Si può scrivere, per esempio, così:
 
 <p>
 <blockquote>
@@ -36,8 +36,7 @@ can write:
 </blockquote>
 
 <p>
-Alternatively you can declare the variables as being global.
-This declaration looks as follows.
+In alternativa, è possibile dichiarare le variabili come globali come segue:
 
 <p>
 <blockquote>
@@ -45,17 +44,16 @@ This declaration looks as follows.
 </blockquote>
 
 <p>
-Once this declaration has been executed, the variable is always treated as global without
-the need to put the word <tt>global</tt> and a dot in front of it. It only needs to
-be declared once in a piece of code that is executed. After that in all other
-places the variable is considered as being global.
+Una volta che la dichiarazione è stata eseguita, la variabile verrà sempre considerata come globale, 
+senza la necessità di mettere la parola <tt>global</tt> e un punto di fronte ad essa. Ha solo bisogno 
+di essere dichiarata una sola volta in un pezzo di codice che verrà eseguito. Dopo di che in tutti 
+gli altri luoghi la variabile sarà considerata come globale.
 
 <p>
-Sometimes you want variables only within the current piece of code or
-script. In this way you avoid wasting memory and you are sure there is no
-naming conflict. It is also faster than using global variables. To achieve
-this you must declare the variables at the beginning of the piece of code
-using the keyword var. This declaration looks as follows.
+A volte si vogliono solo delle variabili all'interno del pezzo di codice corrente o di uno script. 
+In questo modo si evita di sprecare memoria e si è certi che non vi saranno conflitti di denominazione. 
+È anche più veloce rispetto all'utilizzo di variabili globali. Per raggiungere questo obiettivo è necessario 
+dichiarare le variabili all'inizio del pezzo di codice utilizzando la parola chiave var, come segue:
 
 <p>
 <blockquote>
@@ -63,7 +61,7 @@ using the keyword var. This declaration looks as follows.
 </blockquote>
 
 <p>
-For example, you can write:
+Per esempio, si può scrivere:
 
 <p>
 <blockquote>
@@ -87,4 +85,9 @@ local variables
 declaring variables
 var
 globalvar
+
+variabili globali
+variabili locali
+dichiarare variabili
+
 --> 
