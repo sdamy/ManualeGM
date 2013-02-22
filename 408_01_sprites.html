@@ -10,45 +10,45 @@
 
 <h3>Sprites</h3>
 
-The following functions will give you information about a sprite:
+Le seguenti funzioni ti daranno informazioni su uno sprite:
 
 <p>
 <blockquote>
   <tt><b>sprite_exists(ind)</b></tt>
-	  Returns whether a sprite with the given index exists.<br>
+          Ritorna quando uno sprite con il dato indice esiste.<br>
   <tt><b>sprite_get_name(ind)</b></tt>
-	  Returns the name of the sprite with the given index.<br>
+	  Ritorna il nome dello sprite con il dato indice.<br>
   <tt><b>sprite_get_number(ind)</b></tt>
-	  Returns the number of subimages of the sprite with the given index.<br>
+	  Ritorna il numero di sottoimmagini dello sprite con il dato indice.<br>
   <tt><b>sprite_get_width(ind)</b></tt>
-	  Returns the width of the sprite with the given index.<br>
+	  Ritorna la larghezza dello sprite con il dato indice.<br>
   <tt><b>sprite_get_height(ind)</b></tt>
-	  Returns the height of the sprite with the given index.<br>
+	  Ritorna l'altezza dello sprite con il dato indice.<br>
   <tt><b>sprite_get_xoffset(ind)</b></tt>
-	  Returns the x-offset of the sprite with the given index.<br>
+	  Ritorna l'x-offset dello sprite con il dato indice.<br>
   <tt><b>sprite_get_yoffset(ind)</b></tt>
-	  Returns the y-offset of the sprite with the given index.<br>
+	  Ritorna l'y-offset dello sprite con il dato indice.<br>
   <tt><b>sprite_get_bbox_left(ind)</b></tt>
-	  Returns the left side of the bounding box of the sprite with the given index.<br>
+	  Ritorna il lato sinistro del bounding box dello sprite con il dato indice.<br>
   <tt><b>sprite_get_bbox_right(ind)</b></tt>
-	  Returns the right side of the bounding box of the sprite with the given index.<br>
+	  Ritorna il lato destro del bounding box dello sprite con il dato indice.<br>
   <tt><b>sprite_get_bbox_top(ind)</b></tt>
-	  Returns the top side of the bounding box of the sprite with the given index.<br>
+	  Ritorna il lato superiore del bounding box dello sprite con il dato indice.<br>
   <tt><b>sprite_get_bbox_bottom(ind)</b></tt>
-	  Returns the bottom side of the bounding box of the sprite with the given index.<br>
+	  Ritorna il lato inferiore del bounding box dello sprite con il dato indice.<br>
 </blockquote>
 
-In certain situations you might want to save the bitmap corresponding to a particular
-subimage of the sprite to a file. For this the following functions can be used:
+In certe situazioni potresti voler salvare il bitmpap corrispondente ad una particolare
+sottoimmagine dello sprite su un file. Per questo la seguente funzione può essere usata:
 
 <p>
 <blockquote>
   <tt><b>sprite_save(ind,subimg,fname)</b></tt> 
-    Saves subimage subimg of sprite ind to the file with the name fname. This must
-	be a .png file. <b><i>Only available in the Standard Edition.</i></b><br>
+    Salva la sottoimmagine subimg dello sprite ind al file con il nome fname. Questo deve
+        essere un file .png. <b><i>Disponibile solo nell'edizione Standard.</i></b><br>
   <tt><b>sprite_save_strip(ind,fname)</b></tt> 
-    Saves all subimages of sprite ind as a strip to the file with the name fname. This must
-	be a .png file. <b><i>Only available in the Standard Edition.</i></b><br>
+    Salva tutte le sottoimmagini dello sprite ind come una strip al file con il nome fname. Questo deve
+        essere un file .png. <b><i>Disponibile solo nell'edizione Standard.</i></b><br>
 </blockquote>
 
 <!--END-->
