@@ -2,25 +2,25 @@
 
 <html>
 <head>
-<title>Scripts</title>
+<title>Script</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Scripts</h3>
+<h3>Script</h3>
 
-When you create a script, you want to access the arguments passed to it
-(either when using the script action, or when calling the script as a
-function from a program (or from another, or even the same script). These
-arguments are stored in the variables argument0, <tt>argument1</tt>, ...,
-<tt>argument15</tt>. So there can be at most 16 arguments. (Note that when
-calling the script from an action, only the first 5 arguments can be
-specified.) You can also use <tt>argument[0]</tt> etc.
+Quando si crea uno script, si desidera accedere agli argomenti (o parametri) 
+passati ad esso (sia quando si sta scrivendo lo script, sia quando lo si chiama
+come una funzione dal programma, o da un altro, o anche dallo stesso script - ricorsione -). 
+Questi argomenti vengono memorizzati nelle variabili <tt>argument0</tt>, <tt>argument1</tt>, ...,
+<tt>argument15</tt>. Quindi ci possono essere al massimo 16 argomenti. 
+(Si noti che quando si chiama lo script dall’icona, solo i primi 5 argomenti possono essere specificati). 
+Si possono anche usare argomenti di tipo array, come <tt>argument[0]</tt> etc.
 
 <p>
-Scripts can also return a value, so that they can be used in
-expressions. For this end you use the return statement:
+Gli script possono anche restituire un valore, in modo che possano essere utilizzati 
+nelle espressioni. A questo scopo si utilizza l'istruzione return:
 
 <p>
 <blockquote>
@@ -28,12 +28,11 @@ expressions. For this end you use the return statement:
 </blockquote>
 
 <p>
-Execution of the script ends at the return statement!
+L'esecuzione di uno script termina con l'istruzione return!
 
 <p>
-<b>Example</b><br>
-Here is the definition for a little script that computes the square of the
-argument:
+<b>Esempio</b><br>
+Ecco la definizione di un piccolo script che calcola il quadrato di un numero (argument0):
 
 <p>
 <blockquote>
@@ -45,9 +44,9 @@ argument:
 </blockquote>
 
 <p>
-To call a script from within a piece of code, just act the same way as
-when calling functions. That is, write the script name with the argument
-values in parentheses.
+Per chiamare uno script all'interno di un pezzo di codice si fa la stessa cosa 
+di quando si chiamano le funzioni, ovvero, si scrive il nome dello script con i valori 
+degli argomenti tra parentesi.
 
 
 <!--END-->
@@ -58,4 +57,7 @@ values in parentheses.
 scripts
 calling scripts
 return value
+
+chiamare script
+restituire valori
 --> 
