@@ -64,52 +64,54 @@ La versione 8.1 di <i>GameMaker</i> ha alcuni miglioramenti e correzioni di bug 
 
 <h1>Correzioni</h1>
 <ul>
-    <li>Undo in Text Editor. when you undo a change and then save the script or run the game, the change is not saved. </li><br>
-    <li>Error in reading reals from text files. When you read two numbers from a single line in a text file and the first one is 0, the numbers are not read correctly. </li><br>
-    <li>0000536. mp_grid_add_cell is bugged. Also fixed same issue in mp_grid_clear_cell is bugged </li><br>
-    <li>0000597. Overly large images were not being clamped correctly and were causing corruption. </li><br>
-    <li>0000589: tile_layer_find() doesn't account for scaling. (also in tile_layer_delete_at(), tile_find(), tile_delete_at() ) </li><br>
-    <li>0000255: Replacing code at the start of the line. cursor column was going negative. </li><br>
-    <li>0000580 - If you use sprite_create_from_surface on a blank surface the sprite will be completely opaque. </li><br>
-    <li>sprite_create_from_surface: if you set paramater "removeback" to 2, it will now copy the alpha "as is". </li><br>
-    <li>If you created a background image but didn't add one, the game would fail to load.</li><br>
+    <li>Undo nell'editor di testo. Quando tu annulli un cambiamento e poi salvi lo script o avvi il gioco, il cambiamento non è salvato. </li><br>
+    <li>Errore nella lettura di reals dai files di testo. Quando leggi due numeri da una singola linea nel file di testo e il primo è 0, i numeri non sono letti corretamente </li><br>
+    <li>0000536. mp_grid_add_cell è buggato. Corretto anche lo stesso errore in in mp_grid_clear_cell è buggato </li><br>
+    <li>0000597. Immagini eccessivamente di grandi dimensioni non erano scalate correttamente e causavano corruzione. </li><br>
+    <li>0000589: tile_layer_find() non tiene conto per il ridimensionamento. (anche in tile_layer_delete_at(), tile_find(), tile_delete_at() ) </li><br>
+    <li>0000255: Sostituendo il codice all'inizio della linea. Il cursore di colonna andava negativo. </li><br>
+    <li>0000580 - Se usi sprite_create_from_surface su una surface vuota, lo sprite sarà completamente opaco. </li><br>
+    <li>sprite_create_from_surface: se setti il parametro "removeback" a 2, copierà ora l'alfa "com'è". </li><br>
+    <li>Se hai creato un'immagine sfondo ma non l'hai aggiunta, il gioco fallisce il caricamento.</li><br>
 </ul>
 
 
 <br>
 <br>
-<h1>What is New in Version 8.0</h1>
+<h1>Cosa è nuovo nella versione 8.0</h1>
 
 <p>
-    Version 8.0 of <i>GameMaker</i></i> has a large number of improvements over version 7.0.
-Below the most important changes are described.
+    La versione 8.0 di <i>GameMaker</i></i> ha un largo numero di miglioramenti dalla versione 7.0.
+Sotto i più importanti cambiamenti sono descritti.
 
 
-<h3>Incompatibilities</h3>
-
-<p>
-Text splash screens can no longer show images. However, web splash screens have been added that can
-show full html documents with images, etc.
+<h3>Incompatibilità</h3>
 
 <p>
-A number of changes have been made to the functions related to sprite and background resources. This
-is due to the fact that <i>GameMaker</i> uses a completely new mechanism for these resources. If your game
-uses a lot of calls to functions that load or save image resources on the fly you are strongly recommended
-to keep using the old version 7.0 for that game.
+Le schermate di testo splash non possono più visualizzare immagini. Comunque, le schermate splash web sono state aggiunte che possono
+visualizzare completi documenti html con immagini, etc.
 
 <p>
-If you use extension packages you will have to reinstall them.
+Un numero di cambiamenti è stato fatto per le funzioni relative alle risorse sprites e background. Questo
+è dovuto al fatto che <i>GameMaker</i> usa un completamente nuovo meccanismo per queste risorse. Se il tuo gioco
+usa molte chiamate alle funzioni per caricare o salvare le risorse immagini al volo sei fortemente raccomandato di
+lasciare usando la vecchia versione 7.0 per quel gioco.
+
+<p>
+Se usi i paccheti estensioni dovrai reinstallarli.
 </p>
 
 <p>
-Some changes have been made to the timeline mechanism that can lead to incompatibilities. In particular, assigning a
-timeline and starting it are now two separate things.
+Alcuni cambiamenti sono stati fatti per il meccanismo delle timeline che possono portare a incompatibilità. In particolare, assegnando una
+timeline e iniziarla sono ora due cose separate.
+
 </p>
 
 <p>
-An important bug has been solved in which collision events where executed twice if two
-objects have collision events with each other. Some games however might have relied on this bug
-and, hence, might no longer function correctly.
+Un importante bug è stato risolto negli eventi di collisione dove eseguiti due volte se due
+oggetti hanno eventi di collisioni con gli altri. Alcuni giochi comunque potrebbero essersi affidati su questo bug
+e, di conseguenza, potrebbero non funzionare correttamente.
+
 </p>
 
 <h3>Notizie</h3>
@@ -162,7 +164,7 @@ close button is added to the splash screens. Also a number of new actions have b
 different types of splash pages and to change splash settings. (The old Show Video and Webpage actions have
 been removes as the new actions include them. They will though still work in old games.)
 
-<h3>Trigger events</h3>
+<h3>Eventi Trigger</h3>
 
 <p>
 A new type of event has been introduced: Trigger events. Trigger events you can specify yourself. You give them
@@ -173,43 +175,47 @@ this you can easily extend the functionality of <i>GameMaker</i>.
 <h3>Time lines</h3>
 
 <p>
-The timelines have been extended. The property form has additional buttons to e.g. spread out the moments and
-to delete or duplicate ranges of moments. Timelines can now be paused and restarted and they can even be played backwards.
-Also they can now loop automatically.
+Le timelines sono state estese. Il modulo proprietà ha pulsanti aggiuntivi, ad esempio per diffondere i momenti e
+per cancellare o duplicare intervalli di momenti. Le timelines possono ora essere pausate e riavviate e possono anche essere riprodotte all'indietro.
+Possono ora anche ciclare automaticamente.
+
 </p>
 
-<h3>Importing and exporting resources</h3>
+<h3>Importando ed esportando risorse</h3>
 
 <p>
-The possibility to merge games has been replaced by a much more extensive system to import and export resources. 
-The user can indicate which resources to export to a file (.gmres). Next they can be imported in a different game. 
-In principle only one resource can exist for each name. When there is a name conflict when importing the 
-use can specify to keep the original, replace anyway, take the one that is most recently changed, or 
-keep both (not recommended). To be able to do the third option, all resources now keep track of when 
-they were last changed.
+La possibilità di unire giochi è stata sostituita da un più sistema estensivo di importazione ed esportazione di risorse.
+L'utente può indicare quali risorse esportare al file (.gmres). Poi loro possono essere importate in giochi diversi.
+In principio solo una risorsa può esistere per ogni nome. Quando c'è un conflitto di nome quando importato
+l'uso, può specificare se lasciare l'originale, sostituendo in ogni caso, prendendo quello che è più recentemente cambiato, o
+lasciare entrambi (non raccomandato). Per essere abile a fare la terza opzione, tutte le risorse ora mantengono traccia di quando
+sono state cambiate l'ultima volta.
+
 </p>
 
-<h3>Rewritten script and code editor</h3>
+<h3>Riscritti script e editor codice</h3>
 
 <p>
-The built-in script/code editor has been completely rewritten, making it a lot easier to write code. 
-For example there is pop-up function name completion, argument help, matching brackets, improved color coding, 
-line numbers, on-the-fly error checking, code snippets, and a sophisticated find and replace functionality.
+L'editor script/codice integrato è stato completamente riscritto, facendolo molto più semplice per scrivere codice.
+Per esempio c'è un pop-up per completamento dei nomi delle funzioni, aiuto argomenti, parentesi corrispondenti, colorazione codice migliorata, 
+numeri linee, controlli errori al volo, snippets codici, e una sofisticata funzionalità cerca e sostituisci.
+
 </p>
 
-<h3>Speed improvements</h3>
+<h3>Miglioramenti velocità</h3>
 
 <p>
-The speed of games that use code has been considerably improved. A speed-up of up to 100% is 
-sometimes possible. Also the loading time for games is often considerably improved. 
-Also when running a stand-alone game.
+La velocità dei giochi che usano codice sono stati considerevolmente migliorati. Un'accelerazione del 100% è
+a volte possibile. Anche il tempo di caricamento per i giochi è spesso considerevolmente migliorato.
+Anche quando avviato un gioco stand-alone.
+
 </p>
 
 
-<h3>Other changes</h3>
+<h3>Altri cambiamenti</h3>
 
 <p>
-There are a number of other changes and additions. Here are some of the important ones.
+C'è un numero di altri cambiamento e aggiunte. Qui sono alcuni di quelli importanti.
 
 <ul>
   <li>You can now use high quality icons for your games.</li>  
@@ -233,10 +239,10 @@ There are a number of other changes and additions. Here are some of the importan
 </ul>
 
 
-<h3>Corrected bugs</h3>
+<h3>Bugs corretti</h3>
 
 <p>
-The following bugs were corrected. A number of other smaller bugs were corrected as well.
+I seguenti bus sono stati corretti. Un numero di altri piccoli bug sono stati corretti pure.
 
 <ul>
   <li> An error message when starting the Maker on Vista with Active User Control is now removed.</li>
