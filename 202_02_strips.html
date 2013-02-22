@@ -2,79 +2,79 @@
 
 <html>
 <head>
-<title>Strips</title>
+<title>Striscie (Strips)</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Strips</h3>
+<h3>Striscie (Strips)</h3>
 
 <p>
-As indicated above, sprites are normally either stored as animated gif files or
-as strips in PNG files, in which all subimages are placed next to each other. In the
-second case the file name should end with _stripXX where XX indicates the number
-of subimages.
+Come indicato sopra, le immagini sono normalmente o memorizzate come files gif animati o
+come striscie (strips) nei files PNG, in cui tutte le sottoimmagini sono posti accanto alle altre. Nel
+secondo caso, il nome del file dovrebbe finire con _stripXX dove XX indica il numero
+di sottoimmagini.
 
 <p>
-However, sometimes sprites are part of a larger bitmap in which the sub images can
-be stored next to each other or below each other and maybe there are separating lines
-between them. Such a strip cannot be read automatically as <i>GameMaker</i> will not 
-know the size and position of the subimage. For example, the following piece of a strip file 
-contains four different animations.
+Comunque, a volte le immagini sono parte di un largo bitmap in cui le sotto immagini posso
+essere memorizzate accanto alle latre o sotto le altre e forse ci sono linee di separazione
+tra di esse. Tale striscia non può essere letta automaticamente come <i>GameMaker</i> non
+conoscerà la dimensione e la posizione delle sottoimmagini. Per esempio, il seguente pezzo di un strip file
+contiene quattro animazioni diverse.
 
 <p>
 <img src="images/sprites2.gif">
 
 <p>
-If you want to pick a certain animation out of such a file you must indicate where the
-images are. To this end you can choose 
-<b>Create from Strip</b> or <b>Add from Strip</b> from the <b>File</b> menu
-in the sprite editor. 
-After indicating the appropriate strip image file, the following form will show:
+Se vuoi scegliere una certa animazione di un file, devi indicare dove le
+immagini sono. Per questo fine puoi scegliere
+<b>Create from Strip (Crea dalla striscia)</b> o <b>Add from Strip (Aggiungi dalla striscia)</b> dal menu <b>File</b>
+nell'editor immagini.
+Dopo indicato l'appropriato file di immagini striscia, il seguente modulo mostrerà:
 
 <p>
 <img src="images/form_strip.jpg">
 
 <p>
-At the right you see (part of) the strip image you selected. At the left you 
-can specify a number of parameters that specify which subimages you are 
-interested in. Note that one or more rectangles in the image indicate the 
-images you are selecting. The following parameters can be specified:
+A destra vedi (parte de) l'immagine striscia che hai selezionato. A sinistra
+puoi specificare un numero di parametri che specificano a quali sottoimmagini sei
+interessato. Nota che uno o più rettangoli nell'immagine indicano le immagini
+da te selezionate. I seguenti parametri sono specificati:
 
 <p>
 <ul>
-  <li><b>Number of images.</b> 
-    This is the number of sub images you want to take from the strip.</li>
-  <li><b>Images per row.</b> 
-    How many images of the ones you want are there per row. For example, 
-	by setting this to 1 you will select a vertical sequence of images.</li>
-  <li><b>Image width.</b> 
-    Width of the individual images.</li>
-  <li><b>Image height.</b> 
-    Height of the individual images.</li>
-  <li><b>Horizontal cell offset.</b> 
-    If you don't want to select the top-left images, you can set here 
-	how many images should be skipped horizontally.</li>
-  <li><b>Vertical cell offset.</b> 
-    Here you indicate how many images to skip vertically.</li>
-  <li><b>Horizontal pixel offset.</b> 
-    Sometimes there is some additional space at the left top. 
-	Here you indicate this amount (in pixels). You can also use the mouse to indicate
-	the place where the first image should start</li>
-  <li><b>Vertical pixel offset.</b> 
-    Vertical amount of extra space.</li>
-  <li><b>Horizontal separation.</b> 
-    In some strips there are lines or empty space between the images. Here 
-	you can indicate the horizontal amount to skip between the images (in pixels).</li>
-  <li><b>Vertical separation.</b> 
-    Vertical amount to skip between the images.</li>
+  <li><b>Numero di immagini.</b> 
+    Questo è il numero di sotto immagini che vuoi prendere dalla striscia.</li>
+  <li><b>Immagini per riga.</b>
+    Quante immagini di quelle che vuoi ci siano per riga. Per esempio,
+    seleziando questo a 1 selezionerai una sequenza verticale di immagini.</li>
+  <li><b>Larghezza immagine.</b> 
+    Larghezza delle immagini individuali.</li>
+  <li><b>Altezza immagine.</b> 
+    Altezza delle immagini individuali.</li>
+  <li><b>Offset cella orizzontale</b>
+    Se non vuoi seleziona l'immagine sopra a sinistra, puoi impostare qui
+        quante immagini dovrebbero essere saltate orizzontalmente.</li>
+  <li><b>Offset cella verticale.</b> 
+    Qui indichi quante immagini da saltare verticalmente.</li>
+  <li><b>Offset pixel orizzontali.</b>
+    A volte c'è dello spazio aggiuntivo a sinistra in alto.
+        Qui indichi l'ammontare (in pixels). Puoi anche usare il mouser per indicare
+        la posizione dove la prima immagine dovrebbe iniziare</li>
+  <li><b>Offset pixel verticale.</b> 
+    Ammontare verticale di spazio extra.</li>
+  <li><b>Separazione orizzontale.</b> 
+    In alcune striscie ci sono linee o spazi vuoti tra le immagini. Qui
+        puoi indicare l'ammontare orizzontale da saltare tra le immagini (in pixels).</li>
+  <li><b>Separazione verticale</b> 
+    Ammontare verticale da saltare tra le immagini.</li>
 </ul>
 
 <p>
-Once you selected the correct set of images, press <b>OK</b> to create your sprite. 
-Please remember that you are only allowed to use images created by others when you 
-have their permission or when they are freeware.
+Una volta che hai selezionato il corretto insieme di immagini, premi <b>OK</b> per creare la tua immagine.
+Per favore ricorda che sei solo autorizzato ad usare immagini create da altri quando tu
+hai i loro permessi o quando sono freeware.
 
 
 <!--END-->
@@ -83,4 +83,5 @@ have their permission or when they are freeware.
 
 <!-- KEYWORDS
 strips
+striscie
 --> 

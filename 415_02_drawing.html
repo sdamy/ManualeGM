@@ -2,28 +2,31 @@
 
 <html>
 <head>
-<title>Easy drawing</title>
+<title>Disegno semplice</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 
 <!--START-->
 
-<h3>Easy drawing</h3>
+<h3>Disegno semplice</h3>
 
-Once 3D mode has been switched on you can use <i>GameMaker</i> as you are used to it (except
-for the remarks made at the beginning). Only objects will appear in different sizes based on 
-their depth setting. You can even use views. One additional function can be useful. If you 
-draw a number of things in a piece of code you might want to change the depth value between
-the primitives you draw. For this you use:
+Una volta che la modalità 3D è stata attivata, puoi usare <i>GameMaker</i> come sei abituato (ad eccezione
+per le osservazioni fatte all'inizio). Solo gli oggetti apparirrano in dimensione diverse basate
+sulla loro impostazione di profondità (depth). Puoi anche usare le viste (views). Una funzione aggiuntiva può esssere d'aiuto. Se tu
+disegni una serie di cose nel pezzo di codice, si potrebbe desiderare di cambiare il valore di profondità tra
+le primitive che disegni. Per questo usi:
 
 <p>
 <blockquote>
   <tt><b>d3d_set_depth(depth)</b></tt>
-    Sets the depth used for drawing.<br>
+    Imposta la profondità (depth) usata per il disegno.<br>
 </blockquote>
 
 <p>
+Nota che al momento che una nuova istanza è disegnata, la profondità (depth) è di nuovo impostata alla profondità 
+dell'istanza.
+
 Note that at the moment a new instance is drawn the depth is again set to the depth of that
 instance. 
 
