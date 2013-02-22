@@ -2,41 +2,41 @@
 
 <html>
 <head>
-<title>Objects</title>
+<title>Oggetti</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Objects</h3>
+<h3>Oggetti</h3>
 
-The following functions will give you information about an object:
+Le seguenti funzioni ti daranno informazioni su un oggetto:
 
 <p>
 <blockquote>
   <tt><b>object_exists(ind)</b></tt>
-	  Returns whether an object with the given index exists.<br>
+	  Ritorna quando un oggetto con il dato indice esiste.<br>
   <tt><b>object_get_name(ind)</b></tt>
-	  Returns the name of the object with the given index.<br>
+	  Ritorna il nome dell'oggetto con il dato indice.<br>
   <tt><b>object_get_sprite(ind)</b></tt>
-	  Returns the index of the default sprite of the object with
-    the given index.<br>
+	  Ritorna l'indice dello sprite predefinito dell'oggetto
+    con il dato indice.<br>
   <tt><b>object_get_solid(ind)</b></tt>
-	  Returns whether the object with the given index is default solid.<br>
+	  Ritorna quando l'oggetto con il dato indice è solid di default.<br>
   <tt><b>object_get_visible(ind)</b></tt>
-	  Returns whether the object with the given index is default visible.<br>
+	  Ritorna quando l'oggetto con il dato indice è visibile di default.<br>
   <tt><b>object_get_depth(ind)</b></tt>
-	  Returns the depth of the object with the given index.<br>
+	  Ritorna la depth (profondità) dell'oggetto con il dato indice.<br>
   <tt><b>object_get_persistent(ind)</b></tt>
-	  Returns whether the object with the given index is persistent.<br>
+	  Ritorna quando l'oggetto con il dato indice è persistente.<br>
   <tt><b>object_get_mask(ind)</b></tt>
-	  Returns the index of the mask of the object with the given
-    index (-1 if is has no special mask).<br>
+	  Ritorna l'indica della mask (maschera) dell'oggetto con il dato indice
+	  (-1 se non ha una mask speciale).<br>
   <tt><b>object_get_parent(ind)</b></tt>
-	  Returns index of the parent object of object ind (a negative value is returned if it
-    has no parent).<br>
+	  Ritorna l'indice dell'oggetto parent (genitore) dell'oggetto ind (un valore negativo è ritornato
+	  se non ha parent)<br>
   <tt><b>object_is_ancestor(ind1,ind2)</b></tt>
-	 Returns whether object <tt>ind2</tt> is an ancestor of object <tt>ind1</tt>.<br>
+	 Ritorna quando l'oggetto <tt>ind2</tt> è un antenato dell'oggetto <tt>ind2</tt>.<br>
 </blockquote>
 
 <p>
