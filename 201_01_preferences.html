@@ -1,3 +1,4 @@
+<!-- NB: Il testo delle opzioni non va tradotto! -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
@@ -128,29 +129,29 @@ Qui diamo giusto una piccola osservazione:
   	<li><b>Group undo operations</b> Quando delle azioni multiple (come scrivere un'intera linea) diventano
 	una sola operazione per undo.</li>
 	<li><b>Number of undo</b> Puoi cambiare questo numero, ma in generale questo dovrebbe andar bene.</li>
-	<li><b>Automatic indentation</b> When set Enter and Backspace keys cleverly deal with indents.</li> <!-- Eh? -->
+	<li><b>Automatic indentation</b> Quando viene impostato, i tasti Invio e Backspace trattano con l'indentazione.
 	<li><b>Indent amount</b> Quanto indentare con ogni tab.</li>
-	<li><b>Smart tabs</b> When set tabs go to the position below the first non-empty space in the previous line.</li>
-	<li><b>Allow cursor beyond end of line</b> When checked you can place the cursor at any position in the editor screen,
-	    also beyond the end of line. If unchecked this is not possible. This also changes the behavior
-		of the left and right arrow keys.</li>
-	<li><b>Show auto-completion options</b> When set help is given on which functions and variables start with the
-	  letters you are typing.</li>
-	<li><b>Dealy (msec)</b> The delay in milliseconds before the help is shown. Set e.g. to 0 for immediate.</li>
-	<li><b>Show function argument help</b> When set, when typing function arguments, in the statusbar help about
-	  this is provided.</li>
-	<li><b>Show find string</b> When set, whenever typing in a find string, all locations are shown in the code.</li>
-	<li><b>Show line numbers</b> Whether the editor should display the line numbers.</li>
-	<li><b>Show matching brackets</b> Whether the editor should indicate matching open en close brackets.</li>
-	<li><b>Show code snippets with F2</b> When set, pressing F2 will bring up a number of useful code snippets.</li>
-	<li><b>Check code while typing</b> When set the code is constantly checked and errors reported.</li>
-    <li><b>Enable BOLD on script keywords</b> Allows you to have all script keywords in BOLD. 
-        Please select a FONT where the width of the BOLD string, is the same as the 
-        width of the NON-BOLD string.</li>
-	<li><b>Use color coding</b> Whether to use color coding in the editor.</li>
-	<li><b>Colors</b> Here you can set the colors used for color coding. You can also reset the default colors.</li>
-	<li><b>Font</b> Here you can select the font for the editor. Note that only fixed pitch fonts are shown. Also
-	  note that only the font and the size are used.</li>
+	<li><b>Smart tabs</b> Se selezionato, i tabs vanno nella posizione sottostante al primo spazio non vuoto nella linea precedente.</li>
+	<li><b>Allow cursor beyond end of line</b> Se selezionato, puoi piazzare il cursore in ogni posizione nell'editor,
+	anche al di là della fine della linea. Non è possibile fare ciò quando non è selezionato.
+		Questo cambia anche il comportamento dei tasti &larr; e &rarr;.
+	<li><b>Show auto-completion options</b> Se selezionato, verrà dato aiuto riguardo alle funzioni e variabili che
+	cominciano con ne lettere che stai scrivendo.</li>
+	<li><b>Dealy (msec)</b> Il ritardo in millisecondi prima che l'aiuto venga mostrato. Impostalo per esempio a 0 per renderlo immediato.</li>
+	<li><b>Show function argument help</b> Se selezionato, quando scriverai gli argomenti delle funzioni, nella statusbar
+	verrà mostrato aiuto riguardo a questi.</li>
+	<li><b>Show find string</b> Se selezionato, ogni volta che si scriverà una stringa da cercare, verranno mostrate tutte le posizioni nel codice.</li>
+	<li><b>Show line numbers</b> Se selezionato, l'editor mostrerà i numeri delle linee.</li>
+	<li><b>Show matching brackets</b> Se selezionato, l'editor indicherà le parentesi che combaciano.</li>
+	<li><b>Show code snippets with F2</b> Se selezionato, premendo F2 verranno mostrati degli utili snippet di codice.</li>
+	<li><b>Check code while typing</b> Se selezionato, il codice verrà costantemente controllato per eventuali errori.</li>
+    <li><b>Enable BOLD on script keywords</b> Ti permette di avere tutte le parole chiave in grassetto. 
+	Per favore seleziona un font dove la larghezza della stringa in grassetto è
+	uguale a quella della stringa normale.</li>
+	<li><b>Use color coding</b> Se selezionato, verranno usati i colori nell'editor.</li>
+	<li><b>Colors</b> Qui puoi impostare i colori usati per la colorazione del codice. Puoi anche reimpostare i colori di default.</li>
+	<li><b>Font</b> Qui puoi selezionare il font per l'editor. Nota che solo le font con un tono fisso vengono mostrate. Inoltre
+	considera che solo il carattere e la dimensione vengono utilizzati.</li>
   </ul>
 	  
 <h3>Editors</h3>
@@ -160,48 +161,54 @@ Qui diamo giusto una piccola osservazione:
 </p>
 
 <p>
-Here you can choose whether to use the built-in code editor (highly recommended) or
-an external editor. In the case of an external editor, the script text is saved as
-a .txt file and the editor is called with this file as an argument. After editing it
-you should save the file and close the editor such that <i>GameMaker</i> can read the
-file back in.
+Qui puoi scegliere se usare l'editor di codice built-in (fortemente raccomandato) o
+un editor esterno. Nel caso di un editor esterno, il testo dello script viene salvato
+in un file .txt e l'editor viene chiamato con questo file come argomento. Dopo averlo
+modificato dovresti salvare il file e chiudere l'editor così che <i>GameMaker</i> possa
+rileggere il file.
 </p>
 
 <p>
-Also you can choose whether to use the built-in image editor (highly recommended) or
-an external editor. In the case of an external editor, the image is saved as
-a .png file and the editor is called with this file as an argument. After editing it
-you should save the file and close the editor such that <i>GameMaker</i> can read the
-file back in.
+Inoltre puoi scegliere se usare l'editor di immagini built-in (fortemente raccomandato)
+o un editor esterno. Nel caso dell'editor esterno, l'immagine viene salvata come un
+file .png e l'editor viene chiamato con questo file come argomento. Dopo averlo
+modificato dovresti salvare il file e chiudere l'editor permettendo a <i>GameMaker</i>
+di rileggere il file.
 </p>
 
 <p>
-Finally you can indicate the different external editors for the sound files you want to use.
-<i>GameMaker</i> does not contain internal sound editors. There are three possible editors
-handling .wav, .mid and .mp3 files. In the case of an external editor, the sound is saved as
-a .wav, .mid, or .mp3 file and the corresponding editor is called with this file as an argument. 
-After editing it
-you should save the file and close the editor such that <i>GameMaker</i> can read the
-file back in.
+Infine puoi indicare i vari editor esterni per i souni che vuoi usare.
+<i>GameMaker</i> non contiene un editor interno. Ci sono tre possibili editor
+trattanti file .waw, .mid e .mp3. Nel caso di un editor esterno, il suono verrà salvato
+come un file .wav, .mid o .mp3 e l'editor corrispondente verrà chiamato con questo file
+come argomento.
+Dopo averlo modificato
+dovresti salvare il file e chiudere l'editor permettendo così a <i>GameMaker</i> di
+rileggere il file.
 </p>
 
-<h3>Other Settings</h3>
+<h3>Altre Impostazioni</h3>
 
 <p>
-It is also possible to change the location of the temp files that <i>GameMaker</i> creates
-to e.g. store the game that is tested. This location cannot be changed from the Preferences but
-is changes by creating a file <tt>tempdir.txt</tt> in the folder where <i>GameMaker</i> is located.
-In this file there should be one line containing the location of the folder in which the temp files
-are creates, for example <tt>C:\GMTEMP</tt>. Note that the name must include the complete path
-and should <b>not</b> end with a backslash. Each time <i>GameMaker</i> is run a unique temporary folder is
-created within this location. So things will work out fine, even when multiple instances of <i>GameMaker</i>
-use the same location. (Note that the games themselves also create a temp folder for their files. Again,
-this can be changed by creating a file <tt>tempdir.txt</tt> and placing it in the folder where the game
-executable is located.)</p>
+&Egrave; inoltre possibile cambiare la posizione dei file temporanei che il programma
+crea per memorizzare per esempio il gioco che viene testato. Questa posizione non può
+essere cambiata dal menu preferenza, ma si può cambiare creando un file
+<tt>tempdir.txt</tt> nella cartella in cui <i>GameMaker</i> si trova.
+In questo file ci dovrebbe essere una linea contenente la posizione della cartella in
+cui i file vanno creati, per esempio <tt>C:\GMTEMP</tt>. Ricorda che il nome deve
+includere il percorso completo
+e <b>non</b> deve finire con un backslash. Ogni volta che <i>GameMaker</i> viene
+eseguito viene creata una cartella univoca per i file temporanei in questa posizione.
+Quindi le cose funzioneranno correttamente, anche quando delle istanze multiple
+di <i>GameMaker</i> usano la stessa posizione. (Ricorda che anche i giochi stessi
+creano una cartella temporanea per i loro file. Di nuovo, ciò può essere cambiato
+creando un file <tt>tempdir.txt</tt> e piazzandolo nella cartella in cui l'eseguibile
+si trova).</p>
 
 <p>
-Secondly, it is possible to change the image <i>GameMaker</i> is using for the background of its main form.
-To this end place an image file <tt>back.bmp</tt> in the folder where <i>GameMaker</i> is located.
+Inoltre, è possibile cambiare l'immagine che <i>GameMaker</i> usa come sfondo della
+sua finestra principale. Per fare ciò piazza un file <tt>back.bmp</tt> nella cartella
+in cui <i>GameMaker</i> si trova.
 </p>
 
 <!--END-->
@@ -222,4 +229,17 @@ external sound editor
 temp files
 location temp files
 temporary files
+
+preferenze
+modalità sicura
+origine degli sprite
+impostazioni del codice
+impostazioni dell'editor
+editor del codice esterno
+editor di immagini esterno
+editor di suoni
+editor di suoni esterno
+file temporanei
+posizione dei file temporanei
+file temp
 --> 
