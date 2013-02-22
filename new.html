@@ -268,38 +268,38 @@ I seguenti bus sono stati corretti. Un numero di altri piccoli bug sono stati co
   <li>Corretti gli eventi Outside View e Boundary View.</li>
   <li>Il gioco ora si avvia (con avviso) quando non c'è una scheda sonora abilitata.</li>
   <li>Quando la finestra del gioco perde il focus, gli eventi IO come la pressione dei tasti sono ora puliti.</li>
-	<li>Corrected and improved error reporting for the creation code of rooms and
-          instances in rooms.</li>
-	<li>room_tile_add and room_tile_add_ext now correctly set the blending
-          color to white and return the correct tile index.</li>
-	<li>Now correctly setting the application title to the file name.</li>
-	<li>Corrected a bug in draw_line_width_color when the length is 0.</li>
-	<li>Tiles with negative scale factors are now correctly drawn.</li>
-	<li>Changed the reading and writing of reals in text files. As decimal
-          separator now always a dot is used. However, when reading, both a dot or comma 
-          are accepted.</li>
-	<li>A group of resources that is empty will now have the correct closed folder icon.</li>
-	<li>Solved the problem with the flashing of the resource tree.</li>
-	<li>Functions string and string_format no longer crash when the number
-          is too large and they will return the string ERROR.</li>
-	<li>Long paths are now correctly drawn with draw_path.</li>
-	<li>Collapsing the resource tree now works correctly.</li>
-	<li>In an if condition, a value of 0.5 is now treated as true.</li>
-	<li>Solved a bug that sometimes occured when pressing the ~ key.</li>
-	<li>sign() function now correctly returns 0 when the argument is 0.</li>
-	<li>In the path editor, when choosing a room, clicking outside the menu no longer 
-          clears the room.</li>
-	<li>Slightly enlarged the debug form to show all toolbar icons. Also made
-          the watch grid columns scale when the form resizes.</li>
-	<li>Corrected a bug that can cause a crash when resizing the game window to 0 height.</li>
-	<li>Solved a bug in ds_grid_add/multiply/set_grid_region.</li>
-	<li>Calls to scripts and extension functions now return a value of 0 when they do
-          not assign a return value themselves.</li>
-	<li>Solved a serious bug in which collision events where executed twice if two
-          objects have collision events with each other.</li>
-	<li>Solved a bug in draw_text_ext with empty lines (multiple #) and a problem with 
-          drawing strings that contains CR-LF pairs (when using multiline strings in code).</li>
-	<li>Read-only files can now be used as included files without errors.</li>
+	<li>Corretta e migliorata la segnalazione di errori per il codice di crezione delle rooms e
+          le istances nelle rooms.</li>
+	<li>room_tile_add e room_tile_add_ext impostano ora correttamente il colore
+	  di mescolazione a bianco e ritornano il corretto indice tile.</li>
+	<li>Impostato ora correttamente il titolo applicazione al nome del file.</li>
+	<li>Corretto un bug in draw_line_width_color quando la lunghezza è 0.</li>
+	<li>Tiles con fattori di scala negativo sono ora correttamente disegnati.</li>
+	<li>Cambiata la lettura e scrittura di reali nei files di testo. Così come i separatori 
+	  decimali ora usano sempre un punto. Comunque, quando leggendo, entrambi punto o virgola
+	  sono accettati.</li>
+	<li>Un gruppo di risorse che è vuoto ora hanno l'icona della cartella chiusa correttamente.</li>
+	<li>Risolto il problema del lampeggiamento dell'albero delle risorse.</li>
+	<li>Le funzioni string e string_format non crashano più quando il numero
+          è molto grande e ritornano la stringa ERROR.</li>
+	<li>I paths lunghi sono ora correttamente disegnati con draw_path.</li>
+	<li>Collasso dell'albero delle risorse ora funziona correttamente.</li>
+	<li>In una condizione if, un valore di 0.5 è ora trattato come true.</li>
+	<li>Risolto un bug che a volte si è verificato permendo il tasto ~.</li>
+	<li>sign() funziona ora correttamente e ritorna 0 quando l'argomento è 0.</li>
+	<li>Nell'editor path, quando scegliendo una room, cliccando fuori il menu non cancella
+          più la room.</li>
+	<li>Leggermente ingrandito il modulo debug per mostrare tutte le icone della barra degli strumenti. Fatta anche 
+	  le colonne vedi griglia quando si ridimensiona il modulo.</li>
+	<li>Corretto un bug che può causare un crash quando ridimensionando la finestra del gioco all'altezza 0.</li>
+	<li>Risolto un bug in ds_grid_add/multiply/set_grid_region.</li>
+	<li>Le chiamte agli scripts e le funzioni di estenzione ritornano ora un valore di 0 quando esse non
+          assegnano un valore di ritorno.</li>
+	<li>Risolto un bug serio dove gli eventi di collisione vengono eseguiti due volte se due 
+	  oggetti hanno eventi di collisioni con ogni altro.</li>
+	<li>Risolto un bug in draw_text_ext con linee vuote (multipli #) e un programma con il
+          disegno di stringhe contengono le coppie CR-LF (quando usando stringhe multilinea nel codice).</li>
+	<li>I files di sola lettura possono ora essere files inclusi senza errori.</li>
 </ul>
 
 
