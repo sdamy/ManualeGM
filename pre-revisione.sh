@@ -8,9 +8,25 @@ for file in $(ls -1 | grep '\.html$')
 	mv _ $file
 	IFS="
 "
+	authors=$(git log -E --grep='(TRADOTTO|REVISIONATO)' $file | grep -o 'Author: [^ ]*' | sed 's/Author: //' | uniq)
+	trcount=$(echo "$authors" | wc -l)
 
-	echo "Chi ha tradotto $file? (usa gli spazi per separare più nomi)"
-	read author
+	if [ $trcount -ne 1 ]; then
+		echo "Chi ha tradotto $file?"
+		echo "     0	(Altro)"
+		echo "$authors" | cat -n
+		read choice
+
+		if [ "$choice" -gt 0 ]; then
+			author=$(echo $authors | sed -n "${choice}p")
+		else
+			echo "Scrivi il nome dell'autore/i (separati da spazi)"
+			read author
+		fi
+	else
+		author=$(echo $authors | sed -n 1p)
+	fi
+
 	echo "$file $author" >> traduttori
 	for link in $(grep -o '<a[^>\n]*href="[^"\n]*"[^>\n]*>.*</a>' $file)
 		do
