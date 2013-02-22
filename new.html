@@ -218,27 +218,27 @@ Anche quando avviato un gioco stand-alone.
 <h3>Altri cambiamenti</h3>
 
 <p>
-C'è un numero di altri cambiamento e aggiunte. Qui sono alcuni di quelli importanti.
+C'è un numero di altri cambiamenti e aggiunte. Qui sono alcuni di quelli importanti.
 
 <ul>
-  <li>You can now use high quality icons for your games.</li>  
-  <li> Constants can now be defined in their own form (rather than through the Global Game Settings). 
-    As a result they can remain visible while you are e.g. writing scripts. You can also load and
-	save the constants to text files. </li>
-  <li> Also included files are no longer shown in the Global Game Settings but in their own form.</li>
-  <li> Many small visual improvements</li>
-  <li> Added function random_range(x1,x2), irandom(x), and irandom_range(x1,x2). The latter do give
-    integer results and can include x or x2.</li>
-	<li>Added functions mouse_wheel_up and mouse_wheel_down.</li>
-	<li>Added a function set_application_title(title) to set the title of the application 
-          (which is shown in the taskbar).</li>
-	<li>Added function file_text_eoln().</li>
-	<li>Added read-only variabe debug_mode.</li>
-  <li> There is now a game setting to disallow screensavers or powersaving options (sleep, hybernate) while
-    the game is running (default disallowed).</li>
-  <li>Added functions disk_size(drive) and disk_free(drive) and a variable gamemaker_version.</li>
-  <li>Runtime error messages better indicate the position of the error</li>
-  <li>You can now change to location of the temporary files, see the page on Preferences.</li>
+  <li>Puoi usare usare icone di alta qualità per i tuoi giochi.</li>  
+  <li>Le costanti possono essere ora definiti in un loro modulo (piuttosto che attraverso le impostazioni globali del gioco). 
+    In seguito possono rimanere visibile mentre stai, ad esempio, scrivendo scripts. Puoi anche caricare
+        e salvare le costanti dai files di testo. </li>
+  <li> Anche i files inclusi non sono più mostrati nelle impostagioni di gioco globale ma nel loro modulo.</li>
+  <li> Molti miglioramenti visuali minori</li>
+  <li> Aggiunte le funzioni random_range(x1,x2), irandom(x), e irandom_range(x1,x2). Il secondo da'
+    risultati interi e può includere x o x2.</li>
+	<li>Aggiunte le funzioni mouse_wheel_up e mouse_wheel_down.</li>
+	<li>Aggiunta una funzione set_application_title(title) per impostare il titolo dell'applicazione
+          (che è mostrato nella taskbar).</li>
+	<li>Aggiunta la funzione file_text_eoln().</li>
+	<li>Aggiunta la variabile di sola lettura debug_mode.</li>
+  <li> C'è una nuova impostazione di gioco per non consentire screensavers e opzioni di risparmio energetico (pausa, ibernazione) mentre
+    il gioco è avviato (non consentito di default).</li>
+  <li>Aggiunte le funzioni disk_size(drive) e disk_free(drive) e una variabile gamemaker_version.</li>
+  <li>I messaggi d'errore a runtime indicano meglio la posizione dell'errore</li>
+  <li>Puoi ora cambiare la posizione dei files temporanei, vedi la pagina sulle Preferenze.</li>
 </ul>
 
 
@@ -248,26 +248,26 @@ C'è un numero di altri cambiamento e aggiunte. Qui sono alcuni di quelli import
 I seguenti bus sono stati corretti. Un numero di altri piccoli bug sono stati corretti pure.
 
 <ul>
-  <li> An error message when starting the Maker on Vista with Active User Control is now removed.</li>
-  <li> Corrected a bug that when using Alt many fields in forms became invisible under Vista.</li>
-  <li> Corrected a bug with action hints not showing in the object and time line forms.</li>
-  <li> When opening a game or starting a new one, no longer for all open changed 
-    resource windows a separate save confirmation question is asked.</li>
-  <li> Corrected a (sort of) error with the precision of comparison operators in code.</li>
-  <li>Solved bug with a bad background for the Applies To field in code editor.</li>
-  <li>Creating a standalone now correctly checks whether there are any rooms.</li>
-  <li>Replaced all Ctrl+Alt combinatations by Shift+Ctrl because some of 
-      combinations are important for German keyboards. Also corrected the shortcut for creating
-      sprites.</li>
-  <li>In simple modes, short-cuts for hidden resources and menu items now are 
-      disabled as well. Also the Scripts menu is hidden.</li>
-  <li>Corrected a bug in the function window_get_color().</li>
-  <li>Increased the limit on the number of vertices in drawing 3D primitives
-      for models from 1000 to 32000.</li>
-  <li>Corrected a bug in ignoring z-value for model vertices.</li>
-  <li>Corrected the Outside View and Boundary View events.</li>
-  <li>Game will now run (with warning) when there is no enabled sound card.</li>
-  <li>When the game window looses focus, io events like key presses are now cleared.</li>
+  <li> Un messaggio d'errore quando avviato il programma su Vista con Controllo Utente Attivo è ora rimosso.</li>
+  <li> Corretto un bug che quando usando Alt molti campi nel modulo diventavano invisibili sotto Vista.</li>
+  <li> Corretto un bug con i suggerimenti delle azioni che non venivao mostrati nei moduli degli oggetti e timeline.</li>
+  <li> Quando aprendo un gioco o iniziandone uno nuovo, non più per tutte le finestre di risorse aperte cambiate,
+  una domanda di conferma di salvataggio separato è chiesta.</li>
+  <li> Corretto un (sorte di) errore con la precisione degli operatori di comparazione nel codice.</li>
+  <li>Risolto un bug con uno sfondo errato per i campi Applies To (applica a) nell'editor di codice.</li>
+  <li>Creando un standalone ora controlla correttamente quado ci sono tutte le rooms.</li>
+  <li>Sostituite tutte le combinazioni Ctrl+Alt a Shift+Ctrl perchè alcuni delle
+      combinazioni sono importanti per le tastiere tedesche. Corretta anche la scorciatoria per la creazione
+      di sprites.</li>
+  <li>Nella modalità semplice, le scorciatoie per nascondere risorse e le voci del menu ora sono 
+      disabilitate bene. Anche il menu Scripts è nascosto.</li>
+  <li>Corretto un bu nella funzione window_get_color().</li>
+  <li>Incrementato il numero di vertici nel disegno di primitive 3D
+      per i modelli da 1000 a 32000.</li>
+  <li>Corretto un bug nell'ignorare lo z-value per i vertici dei modelli.</li>
+  <li>Corretti gli eventi Outside View e Boundary View.</li>
+  <li>Il gioco ora si avvia (con avviso) quando non c'è una scheda sonora abilitata.</li>
+  <li>Quando la finestra del gioco perde il focus, gli eventi IO come la pressione dei tasti sono ora puliti.</li>
 	<li>Corrected and improved error reporting for the creation code of rooms and
           instances in rooms.</li>
 	<li>room_tile_add and room_tile_add_ext now correctly set the blending
