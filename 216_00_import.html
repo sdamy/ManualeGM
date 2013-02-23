@@ -2,142 +2,158 @@
 
 <html>
 <head>
-<title>Exporting and importing resources</title>
+<title>Esportare ed importare risorse</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
 
-<h1>Exporting and importing resources</h1>
+<h1>Esportare ed importare risorse</h1>
 
-<b><i>This functionality is only available in the Standard Edition of GameMaker.</i></b>
-
-<p>
-<b>Note:</b> Import and export of resources is only for experienced users. Carefully read
-this section before using these features. Also, always make a back-up copy of your game
-before importing resources.
+<b><i>Questa funzionalit&agrave; &egrave; disponibile soltanto nella Standard Edition di GameMaker.</i></b>
 
 <p>
-Sometimes you want to copy certain resources (sprites, sounds, rooms, etc.) from one game
-to another game. For example when you want to create a new game using the same sprites and
-sounds as another game. Or when you are working together on a game. One of you might have
-created some additional rooms that you then want to import in the other game.
-To this end <i>GameMaker</i> has commands to import and export resources.
+<b>Nota:</b> L'importazione/esportazione delle risorse va fatta solo da utenti con esperienza. Leggi attentamente
+questa sezione prima di usare queste funzionalit&agrave;. Inoltre, crea sempre delle copie di
+backup del tuo gioco prima di importare risorse.
+
+<p>
+A volte potresti aver bisogno di copiare certe risorse (sprites, sounds, rooms, ecc.)
+da un gioco all'altro. Per esempio quando vuoi creare un nuovo gioco usando gli stessi
+sprite e suoni di un altro. Oppure quando stai lavorando insieme a qualcuno a un gioco.
+Uno di vuoi potrebbe aver creato delle room aggiuntive che successivamente vorrai
+importare nell'altro gioco. Per fare ci&ograve; <i>GameMaker</i> ha dei comandi per importare
+ed esportare risorse.
 </p>
 
-<h3>Exporting resources</h3>
+<h3>Esportare risorse</h3>
 
 <p>
-To export resources, choose <b>Export Resources</b> from the <b>File</b> menu. First of all
-it is checked whether all resources have different names. Because resources in one game are
-linked to the ones in the other game by name, it is essential that all resources have different
-names. If not, you get an error message and no resources can be exported. Otherwise, a file selector
-is shown in which you can indicate the name of the file in which you want to export the resources.
-These files must end with the extension <tt>.gmres</tt>. Next the following form is shown:
+Per esportare delle risorse, scegli <b>Export Resources</b> dal menu <b>File</b>. Prima
+di tutto verr&agrave; controllato se le risorse hanno dei nomi differenti. Poich&egrave; le risorse
+in un gioco sono collegate alle altre in un altro gioco dal nome, &egrave; essenziale che 
+tutte le risorse abbiano nomi differenti. Altrimenti, otterrai un errore e non verranno
+esportate le risorse. Se tutto andr&agrave; bene, verr&agrave; mostrato un selezionatore di file
+nel quale indichi il file in cui esportare le risorse.
+Questi files devono terminare con l'estensione <tt>.gmres</tt>. Dopo verr&agrave; mostrata la
+seguente finestra:
 </p>
 
 <p>
 <img src="images/form_export.jpg">
 
 <p>
-In this form you can indicate which resources must be exported. Default all are exported but you can
-select the particular types of resources you want to export.
-Care must be taken when exporting objects, timelines, or rooms.
-These will refer to sprites, sounds, triggers, etc. So if you do not export these other resources as well
-you must be certain that these other resources already exist in the game in which you are going to
-import the resources (under the same names). If you are uncertain, better export everything.
+In questa finestra puoi indicare quali risorse vanno esportate. Normalmente tutte le
+risosre vengono esportate, ma puoi selezionare i vari tipi di risorse da esportare.
+Fai attenzione quando esporti oggetti, timelines o rooms.
+Queste si riferiranno agli sprites, suoni, triggers, ecc. Quindi se non esporti queste
+altre risorse devi accertarti che queste risorse esistano gi&agrave; nel gioco nel quale stai
+importando le risorse (con lo stesso nome). Se sei incerto, esporta tutto.
 
 
-<h3>Importing resources</h3>
+<h3>Importare risorse</h3>
 
 <p>
-Once you have a file containing resources you can import them in a different game by
-choosing <b>Import Resources</b> from the <b>File</b> menu. First of all
-it is checked whether all resources have different names. Again, because resources in one game are
-linked to the ones in the other game by name, it is essential that all resources have different
-names. If not, you get an error message and no resources can be imported. Otherwise, a file selector
-is shown in which you can indicate the name of the file from which you want to import the resources.
-These files will end with the extension <tt>.gmres</tt>. Next all open property forms are closed. 
-This is necessary because imported resources might replace 
-existing ones. Next the following form is shown: 
+Una volta ottenuto il file contenente le risorse puoi importarlo in un altro gioco
+scegliendo <b>Import Resources</b> dal menu <b>File</b>. Prima di tutto viene
+controllato se tutte le risorse hanno nomi differenti. Poich&eacute; le risorse in un
+gioco sono collegate alle altre in un altro gioco dal nome, &egrave; essenziale che tutte le
+risorse abbiano nomi differenti. Se no, otterrai un errore e non verranno importate
+le risorse. Altrimenti, verr&agrave; mostrato un selezionatore di file in cui indichi il nome
+del file <tt>.gmres</tt> dal quale importare le risorse. Successivamente tutte le
+finestre di propriet&agrave; verranno chiuse. Questo &egrave; necessario perch&eacute; le risorse importate
+potrebbero sostituire quelle esistenti. Successivamente verr&agrave; mostrata questa finestra:
 </p>
 
 <p>
 <img src="images/form_import.jpg">
 
 <p>
-All types of resources in the file are shown. (The ones that were not exported and grayed out.) 
-You can select which of these resources you want to import. Most of the time you want to import all
-but sometimes you want to make a selection. Be careful when importing objects, rooms, or timelines
-while not importing other resources. As indicated above this can lead to problems if the resources they
-refer to do not exist in your game under the same name. In such a case they will be replaced by non-existing
-resources. (For example, in the rooms it means the corresponding instances will be removed.) 
+Tutti i tipi di risorse nel file vengono mostrati. (Quelli non esportati sono grigi).
+Puoi selezionare quali di queste risorse vuoi importare. La maggior parte delle volte
+le importerai tutte, ma a volte potresti voler fare una selezione. Fai attenzione
+quando importi gli oggetti, le rooms, o le timelines mentre non importi le altre 
+risorse. Come indicato sopra questo pu&ograve; portare a dei problemi se le risorse a cui si
+riferiscono non esistono nel tuo gioco sotto lo stesso nome. In tal caso essi verranno
+rimpiazzati da risorse non esistenti. (Per esempio, nelle rooms significa che le
+istanze corrispondenti verranno rimosse).
 </p>
 
 <p>
-When resources in the file have the same name as resources in the game a naming conflict appears. You can
-indicate how that should be resolved. The default is that you keep the resource that was changed last. 
-You can however also choose to always keep the original in the game or always replace it with the
-resource in the file. A fourth option is to keep both. Only use this when it is absolutely necessary,
-because you will now end up with multiple resources with the same name which can lead to conflicts
-when referring to them. When you import resources into an empty game, better choose to always replace them.
-(This may sound strange but for example otherwise the global game settings will not be replaced as the new
-empty game is of a more recent date!)
+Quando le risorse nel file hanno lo stesso nome delle risorse nel gioco apparir&agrave; un
+conflitto dei nomi. Puoi indicare come va risolto. Normalmente mantieni le risorse
+modificate per ultime. Puoi comunque scegliere di mantenere sempre l'originale nel
+gioco o sostituirlo sempre con la risorsa nel file. Una quarta opzione &egrave; mantenere
+entrambi. Usa questo solo quando &egrave; assolutamente necessario, poich&eacute; ci&ograve; porter&agrave;
+a risorse multiple con lo stesso nome che possono portare a conflitti. Quando importi
+risorse in un gioco vuoto, &egrave; meglio se scegli di rimpiazzarle sempre. (Questo potrebbe
+sembrare strano, ma per esempio se non si fa cos&igrave; le impostazioni globali del gioco
+non verranno rimpiazzate quando il gioco vuoto &egrave; di una data pi&ugrave; recente!)
 </p>
 
 <p>
-Finally you can indicate whether to place the new resources (that is, the ones that do not already occur) in
-a new group. This might be useful to distinguish (visually) the imported resources from the existing ones. If
-you check this box the new resources will be place in a group. The name of this group is the name of the
-import file.
+Infine puoi indicare se piazzare le nuove risorse (quelle che non ci sono gi&agrave;) in un
+nuovo gruppo. Questo potrebbe essere utile per distinguere visualmente le risorse
+importate da quelle esistenti. Se scegli questa casella le nuove risorse verranno
+piazzate in un gruppo, chiamato come il file d'importazione.
 </p>
 
 <p>
-Once you press <b>OK</b> the resources are added to the game, replacing existing resources with
-the same name when required. You will see them appear in the resource selector at the left.
+Una volta premuto <b>OK</b> le risorse verranno aggiunte al gioco, rimpiazzando quelle
+esistenti con lo stesso nome se richiesto. Le vedrai apparire nel selezionatore di
+risorse a sinistra.
 </p>
 
-<h3>Warnings and Remarks</h3>
+<h3>Avvisi e osservazioni</h3>
 
 <p>
-Importing and exporting resources is a powerful mechanism, in particular when you are working
-on a game with multiple people. However, if you do not understand what you are doing it might
-lead to errors and frustration. Here are some important warnings that you should read and
-understand.
+L'importazione e l'esportazione delle risorse &egrave; un meccanismo potente, in particolare
+quando stai lavorando a un gioco con pi&ugrave; persone. Per&ograve;, se non capisci ci&ograve; che stai
+facendo potresti causare errori e frustrazione. Qui ci sono degli avvertimenti
+importanti che dovresti leggere e capire.
 </p>
 
 <ul>
-  <li>Always make a backup copy of your game before importing resources. Otherwise your hard
-      work might be lost. You cannot undo the import of resources.</li>
-  <li>Always check after an import whether everything was imported correctly. Also immediately
-      run the game to see if it all works. Otherwise return to your backup copy.</li>
-  <li>Note that the indices of resources, instances, and tiles, most likely change in the process to
-      guarantee that they remain unique. This will cause problems
-      when you refer to resources (or instances) by number. Also it will cause problems if you assume
-	  anything about the order in which instances are created.</li>
-  <li>Note that the resources will be added in the order in which they are given in the resource list/tree.
-      New resources will be added at the end. However, the group structure is maintained.
-	  This is normally what you expect but in some rare cases 
-	  you might have to move resources to a different location. For example, when you have a start room,
-	  an end room and some rooms in between, when somebody adds some rooms (in between) and you then export
-	  these and import them in the original game, they will appear at the end (because they are new). You then
-	  must move the end room to the appropriate location again.!</li>
-  <li>Note that constants and triggers only globally store information about when they were last changed.
-      So when you change one constant or one trigger, all will be replaced when choosing
-	  <b>Keep Last Changed</b>.</li>	
-  <li>For the global game settings the same holds. They are either all, or not at all replaced.</li>  
-  <li>Note that an empty game will have a new date at which it was last changed. This means that if
-  	  you import resources in a new empty game, the constants, triggers, and global game settings will
-  	  <b>not</b> be imported, unless you set the name conflict handling to always replace.</li>
-  <li>Don't remove resources from a game before importing the same resources again! This might
-      sound a logical thing to do but it will not work. Once you remove a resource from a game
-	  it no longer exists. Hence all references to it will become undefined. Importing the
-	  same resource later will not restore those references because the program cannot know
-	  it is the same resource. Instead let the import feature replace the resources.</li>
-  <li>If you have worked on a game for a long time adding and deleting many resources, it is useful
-      to completely export it and then import it into an empty game (with the option to always replace).
-	  The game will work as before but will be stripped of lots of unused data.</li>
+  <li>Fai sempre una copia di backup del tuo gioco prima di importare risorse.
+	Altrimenti il tuo duro lavoro potrebbe andar perso. Non puoi annullare
+	l'importazione delle risorse.</li>
+  <li>Controlla sempre dopo un'importazione se tutto &egrave; stato importato correttamente.
+	Inoltre esegui immediatamente il gioco per vedere se tutto funziona. Altrimenti
+	ritorna alla tua copia backup.</li>
+  <li>Nota che gli indici delle risore, istanze e tiles cambiano sicuramente nel
+	processo per garantire che rimangano unici. Questo causer&agrave; dei problemi
+	se ti riferisci alle risorse col numero. Inoltre causer&agrave; problemi se
+	ti basi sull'ordine in cui le istanze vengono create.</li>
+  <li>Nota che le risorse verranno aggiunte nell'ordine in cui sono state date
+	nella lista di risorse.
+	Le nuove risorse verranno aggiunte alla fine. Comunque, la struttura dei gruppi
+	verr&agrave; mantenuta. Questo &egrave; ci&ograve; che normalmente ti aspetti ma in qualche raro
+	caso potresti aver bisogno di spostare le risorse in una posizione diversa. Per
+	esempio quando hai una room iniziale, una finale e alcune in mezzo, quando 
+	qualcuno aggiunge delle room e doopo le importi, queste appariranno alla fine
+	(perch&eacute; sono nuove). Dopo dovrai
+	spostare la room finale nella posizione appropriata di nuovo!</li>
+  <li>Nota che le costanti e i triggers memorizzano globalmente soltanto le
+	informazioni riguardo a quando sono state cambiate l'ultima volta.
+	Quindi quando cambi una costante o un trigger, verranno tutti rimpiazzati
+	quando scegli <b>Keep Last Changed</b>.</li>
+  <li>Per le informazioni globali lo stesso. Vengono sostituite tutte o non sostituite affatto.</li>  
+  <li>Nota che un gioco vuoto avr&agrave; una nuova data nel momeno in cui verr&agrave; cambiato.
+	Ci&ograve; significa che se importi risorse in un gioco vuoto, le costanti, i trigger
+	e le impostazioni globali <b>non</b> verranno importate se non imposti la
+	risoluzione dei conflitti per sostituire sempre.</li>
+  <li>Non rimuovere risorse da un gioco prima di reimportarle di nuovo! Questo potrebbe
+	sembrare una cosa logica da fare ma non funzioner&agrave;. Una volta rimossa una
+	risorsa da un gioco questa non esister&agrave; pi&ugrave;. Tutti i riferimenti ad essa
+	diventeranno indefiniti.
+	Importare le stesse risorse in seguito non riporter&agrave; questi riferimenti perch&eacute;
+	il programma non potr&agrave; sapere se &egrave; la stessa risorsa. Invece permetti alla
+	funzionalit&agrave; di importazione di sostituire le risorse.</li>
+  <li>Se hai lavorato a un gioco per molto tempo aggiungendo e rimuovendo molte
+	risorse, &egrave; utile esportarle completamente e reimportarle in un gioco vuoto
+	(con l'opzione "always replace"). Questo gioco non funzioner&agrave; come prima,
+	ma verranno ridotti molti dati inutili</li>
 </ul>
 
 <!--END-->
@@ -150,4 +166,10 @@ exporting resources
 merging games
 working together
 collaborating
+
+importare risorse
+esportare risorse
+unire giochi
+lavorare assieme
+collaborare
 --> 
