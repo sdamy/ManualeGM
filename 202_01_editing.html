@@ -154,97 +154,100 @@ puoi scegliere se applicarle solo alla subimmagine corrente o a tutte le subimma
 </ul>
 
 
-<H3>Images menu</H3>
+<H3>Il menu Images (immagini)</H3>
 
 <p>
-In the images menu you can perform a number of operation on the images. Some of these
-are only available in the Standard Edition.
+Nel menu Images puoi eseguire alcune operazioni sulle immagini. Alcune sono disponibili
+solo nella Standard Edition.
 
 <ul>
-  <li><b>Cycle Left.</b> 
-    Cycles all images one place to the left. This effectively starts 
-	the animation at a different point.</li>
-  <li><b>Cycle Right.</b> 
-    Cycles all images one place to the right.</li>
-  <li><b>Black and White.</b> 
-    Makes the image(s) black and white (that is, grayscale).</li>
-  <li><b>Colorize.</b> 
-    Here you can change the color (hue) of the images. 
-	Use the slider to pick the new hue. When you indicate to shift the
-	hue the colors are shifted over the amount indicated giving rather interesting 
-	effects.</li>
-  <li><b>Colorize Partial.</b> 
-    Here you can change the color (hue) of part of the images. You can 
-	select the old hue and a tolerance around it and then indicate the new 
-	hue with which to replace this range of colors. This can be used 
-	for instance to change only the color of the shirts of players. You can pick the old
-	hue also by clicking in the left image. </li>
-  <li><b>Intensity.</b> 
-    Here you can change the intensity by providing values for the color 
-	saturation and the value of the new images.</li>
-  <li><b>Invert.</b> 
-    Inverts the colors in the images.</li>
-  <li><b>Make Opaque.</b> 
-    Remove all transparency information from the images, making them opaque.</li>
-  <li><b>Erase a Color.</b> 
-    You can select a color (either by clicking on the color box or by clicking in the left image.
-	Also you specify a tolerance. All pixels with a color close the the selected color will be
-	made transparent.</li>
-  <li><b>Smooth Edges.</b> 
-    Smooth the edges around the opaque part of the image(s) somewhat to make them look nicer. 
-	(A stronger effect can be created by using Blur but only blurring the transparency; see below.</li>
-  <li><b>Opacity.</b> 
-    Here you can change the opacity (transparency) for the whole image. You can either set it 
-	relative to the current opacity or absolute. (Fully transparent pixels always stay fully
-	transparent.)</li>
-  <li><b>Set Alpha from File.</b> 
-    You select an image. The lightness of the pixels of that image will be used as transparency value.
-	Black pixels will lead to completely transparent pixels, while white pixels will lead to opaque
-	pixels. When the image does not have the correct size it will be stretched.
-	<b><i>Only available in the Standard Edition.</i></b></li>
-  <li><b>Fade.</b> 
-    Here you specify a color and an amount. The pixels in the image(s) 
-	are now faded towards this color with the given amount.</li>
-  <li><b>Blur.</b> 
-    By blurring the images the colors are mixed a bit, making it more vague. You can select a
-	small, medium, or large blur. Also you can select whether to blur the color values and/or
-	the transparency values. Only blurring the transparency values is a nice way to smooth the
-	boundary of the images.</li>
-  <li><b>Sharpen.</b> 
-    This is sort of the reverse of blurring. The image will be made more sharp, enhancing the
-	edges. You can do a subtle sharpening or a strong sharpening. The special sharpening puts
-	additional empasis on the edges, leading to a funny effect. You can sharpen the color
-	values and/or the transparency values. </li>
-  <li><b>Outline.</b> 
-    Create an outline around the image. You are asked for the color and a thickness of the outline.
-	You can also indicate to place the outline inside the image. You can indicate whether to
-	remove the image itself, just keeping the outline, and whether to smooth the outline.
-	<b><i>Only available in the Standard Edition.</i></b></li>
-  <li><b>Shadow.</b> 
-    Create a shadow behind the image. (This will only work when the image is partially transparent.)
-	You indicate the color of the shadow and the opacity. Also you indicate the relative position
-	of the shadow. Finally you can indicate whether it should be a soft or a hard shadow.
-	<b><i>Only available in the Standard Edition.</i></b></li>  
-	<li><b>Glow.</b> 
-    Create a colored glow around the image.
-	You indicate the color of the glow, the opacity and the thickness. 
-	You can also indicate to place the glow inside the image.
-	<b><i>Only available in the Standard Edition.</i></b></li>
-	<li><b>Buttonize.</b> 
-    Turn the image(s) into a button. You specify the color of the button and the opacity. Also you
-	must indicate the thickness of the button boundary and whether it should be smooth or not.
-	<b><i>Only available in the Standard Edition.</i></b></li>
-	<li><b>Gradient Fill.</b> 
-    Adds a gradient fill to the image(s). You specify the two colors of the fill, the opacity,
-	and the kind of fill. Default the image is replace by the gradient although the transparency is
-	maintained. By unchecking the Replace box the gradient is blended onto the image. By checking
-	the Change Transparency box the alpha value of the original image is changed as well. You 
-	can create great effects. For example, make an image black-and-white and then blend a gradient
-	on it. <b><i>Only available in the Standard Edition.</i></b></li>
+  <li><b>Cycle Left. (Sposta tutto a sinistra)</b> 
+    Sposta tutte le subimmagini di un posto a sinistra. Di fatto fa
+        cominciare l'animazione da un punto diverso.</li>
+  <li><b>Cycle Right. (Sposta tutto a destra)</b> 
+    Sposta tutte le subimmagini di un posto a destra.</li>
+  <li><b>Black and White. (Bianco e nero)</b> 
+    Converte la(le) subimmagine(i) in bianco e nero (ovvero in scala di grigi).</li>
+  <li><b>Colorize. (Tingi)</b> 
+    Qui puoi cambiare il colore (tonalità) delle subimmagini.
+        Usa il cursore per prendere una nuova tonalità. Quando scegli di 
+        aggiungere tonalità (casella "Shift the hue") ogni colore è cambiato
+        separatamente in base alla posizione del cursore, dando effetti
+        piuttosto interessanti.</li>
+  <li><b>Colorize Partial. (Tingi parzialmente)</b> 
+    Qui puoi cambiare il colore (tonalità) di una parte dell'immagine. Puoi
+        selezionare la vecchia tonalità e il margine (tolerance) attorno a essa
+        (più è alto, più tonalità simili vengono cambiate oltre a quella scelta)
+        e poi indicare la nuova tonalità con cui rimpiazzare quell'insieme di colori.
+        Può essere usato, ad esempio, per cambiare solo il colore della maglietta dei
+        giocatori. Puoi selezionare la vecchia tonalità anche cliccando sull'immagine
+        a sinistra. </li>
+  <li><b>Intensity. (Intensità)</b> 
+    Qui puoi cambiare l'intensità fornendo il valore per la saturazione
+        dei colori e il valore delle nuove immagini.</li>
+  <li><b>Invert. (Inverti)</b> 
+    Inverte i colori delle immagini.</li>
+  <li><b>Make Opaque. (Rendi opaco)</b> 
+    Rimuove completamente la trasparenza dalle immagini, rendendole opache.</li>
+  <li><b>Erase a Color. (Cancella un colore)</b>
+    Puoi scegliere il colore cliccando sulla casella del colore o nell'immagine di sinistra
+        e il margine (vedi Colorize Partial). Tutti i pixel con un colore abbastanza vicino a
+        quello selezionato verranno resi completamente trasparenti.</li>
+  <li><b>Smooth Edges. (Smussa i bordi)</b> 
+    Smussa i bordi attorno alle parti opache della(delle) immagine(i) per renderle più belle a
+        vedersi. È possibile ottenere un effetto migliore usando Blur sfocando solo le trasparenze (vedi sotto).</li>
+  <li><b>Opacity. (Opacità)</b> 
+    Qui puoi cambiare l'opacità (trasparenza) di tutta l'immagine. Puoi impostarla relativa all'opacità
+        corrente o assoluta. (I pixel completamente trasparenti resteranno sempre tali.)</li>
+  <li><b>Set Alpha from File. (Imposta Alpha da un file)</b> 
+    Scegli un'immagine. La luminosità dei pixel di quell'immagine verrà usata come valore di trasparenza.
+        Pixel neri significano pixel completamente trasparenti, quelli bianchi significano pixel opachi.
+        Se l'immagine non ha la giusta dimensione viene allargata.
+        <b><i>Disponibile solo nella Standard Edition.</i></b></li>
+  <li><b>Fade. (Sbiadisci)</b> 
+    Specifica un colore e un numero. I pixel della(delle) immagine(i)
+        verranno sbiaditi verso questo colore dell'ammontare fornito.</li>
+  <li><b>Blur. (Sfoca)</b> 
+    Sfocando le immagini i colori sono mischiati un po', rendendoli più vaghi. Puoi selezionare
+        una sfocatura piccola, media o grande. Puoi anche scegliere se sfocare i colori e/o
+        le trasparenze. Sfocare solo le trasparenze è un buon modo per smussare i bordi delle
+        immagini.</li>
+  <li><b>Sharpen. (Affina)</b> 
+    È una specie di contrario di sfocare. L'immagine verrà resa più netta, enfatizzando i bordi.
+        Puoi applicare un effetto debole o forte. L'effetto speciale enfatizza ancora di più
+        i bordi, generando un effetto buffo. Puoi affinare i colori e/o le trasparenze.</li>
+  <li><b>Outline. (Cornice)</b> 
+    Crea una cornice attorno all'immagine. Ti viene chiesto il colore e lo spessore della cornice.
+        Puoi anche piazzarla dentro l'immagine. Puoi indicare se rimuovere l'immagine stessa, lasciando
+        solo la cornice, e se smussarla.
+        <b><i>Disponibile solo nella Standard Edition.</i></b></li>
+  <li><b>Shadow. (Ombra)</b> 
+    Crea un'ombra dietro all'immagine. (Funziona solo se l'immagine è parzialmente trasparente.)
+        Puoi indicare il colore e l'opacità dell'ombra. Puoi anche indicare la posizione relativa
+        dell'ombra. Infimne puoi indicare se deve essere un'ombra debole o forte.
+        <b><i>Disponibile solo nella Standard Edition.</i></b></li>  
+  <li><b>Glow. (Alone)</b> 
+    Crea un alone colorato attorno all'immagine.
+        Indica il colore, l'opacità e lo spessore dell'alone.
+        Puoi anche piazzarlo dentro l'immagine.
+        <b><i>Disponibile solo nella Standard Edition.</i></b></li> 
+  <li><b>Buttonize. (Effetto pulsante)</b> 
+    Trasforma la(le) immagine(i) in un pulsante. Specifica il colore e l'opacità del pulsante.
+        Devi anche indicare lo spessore del bordo del bottone e se deve essere smussato o no.
+        <b><i>Disponibile solo nella Standard Edition.</i></b></li> 
+  <li><b>Gradient Fill. (Riempimento graduale)</b> 
+    Agguinge un riempimento graduale alla(alle) immagine(i). Specifica i due colori del riempimento,
+        l'opacità e il tipo di riempimento. L'impostazione di default prevede che l'immagine
+        venga sostituita dal riempimento nonostante la trasparenza venga mantenuta. Deselezionando
+        la casella Replace (Sostituisci) il riempimento è mischiato con l'immagine. Selezionando
+        la casella Change Transparency (Cambia trasparenza) l'Alpha dell'immagine originale verrà cambiata.
+        Puoi creare grandi effetti. Ad esempio, prova a convertire un'immagine in bianco e nero
+        e mescolarvi un riempimento graduale.
+        <b><i>Disponibile solo nella Standard Edition.</i></b></li> 
 </ul>
 
 <p>
-You will have to experiment with these commands to get the sprites you want.
+Dovrai fare degli esperimenti con questi comandi per ottenere gli sprite che desideri.
 
 
 <H3>Animation menu</H3>
