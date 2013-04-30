@@ -12,50 +12,51 @@
 <h3>Disegnando forme di base</h3>
 
 <p>
-A number of functions exist for drawing basic shapes, like blocks and walls.
-Note that these shapes also work correctly with backface culling on.
+Un numero di funzioni esistono per il disegno di forme di base, come blocchi e muri.
+Nota che queste forme funzionano anche correttamente con backface culling attivo.
 
 <p>
 <blockquote>
   <tt><b>d3d_draw_block(x1,y1,z1,x2,y2,z2,texid,hrepeat,vrepeat)</b></tt>
-	  Draws a block in the current color with the indicated opposite corners using the indicated
-	  texture. Use -1 to not use a texture. <tt>hrepeat</tt> indicates how often the texture must be
-	  repeated along the horizontal edge of each face. <tt>vrepeat</tt>
-	  does the same for the vertical edge.<br>
+  	  Disegna un blocco nel colore attuale con gli angoli opposti indicati usando la texture
+  	  indicata. Usa -1 per non usare una teture. <tt>hrepeat</tt> indica quante volte le texture
+  	  devono essere ripeture lungo il bordo orizzontale di ogni faccia. <tt>vrepeat</tt>
+  	  fa lo stesso con il bordo verticale.<br>
   <tt><b>d3d_draw_cylinder(x1,y1,z1,x2,y2,z2,texid,hrepeat,vrepeat,closed,steps)</b></tt>
-	  Draws a vertical cylinder in the current color in the indicated bounding box using the indicated
-	  texture. Use -1 to not use a texture. <tt>hrepeat</tt> indicates how often the texture must be
-	  repeated along the horizontal edge of each face. <tt>vrepeat</tt>
-	  does the same for the vertical edge. <tt>closed</tt> indicates whether to
-	  close the top and bottom of the cylinder. <tt>steps</tt> indicates
-	  how many rotational steps must be taken. A typical value is 24.<br>
+	  Disegna un cilindro verticale nel colore attuale nel bounding box indicato usando la texture
+	  indicata. Usa -1 per non usare una texture. <tt>hrepeat</tt> indica quante volte la texture deve essere
+	  ripetura lungo il bordo orizzontale di ogni faccia. <tt>vrepeat</tt>
+	  fa lo stesso per il bordo verticale. <tt>closed</tt> indica quando chiudere
+	  sopra e sotto al cilindro. <tt>steps</tt> indica quanti steps di rotazione devono essere presi.
+	  Un valore tiico è 24.<br>
   <tt><b>d3d_draw_cone(x1,y1,z1,x2,y2,z2,texid,hrepeat,vrepeat,closed,steps)</b></tt>
-	  Draws a vertical cone in the current color in the indicated bounding box using the indicated
-	  texture. Use -1 to not use a texture. <tt>hrepeat</tt> indicates how often the texture must be
-	  repeated along the horizontal edge of each face. <tt>vrepeat</tt>
-	  does the same for the vertical edge. <tt>closed</tt> indicates whether to
-	  close the top and bottom of the cylinder. <tt>steps</tt> indicates
-	  how many rotational steps must be taken. A typical value is 24.<br>
+  	  Disegna un cono verticale nel colore attuale nel bounding box indicato usando la texture
+  	  indicata. Usa -1 per non usare una texture. <tt>hrepeat</tt> indica quante volte le texture
+  	  devono essere ripeture lungo il bordo orizzontale di ogni faccia. <tt>vrepeat</tt>
+  	  fa lo stesso con il bordo verticale. <tt>closed</tt> indica quando chiudere
+	  sopra e sotto al cono. <tt>steps</tt> indica quanti steps di rotazione devono essere presi.
+	  Un valore tiico è 24.<br>
   <tt><b>d3d_draw_ellipsoid(x1,y1,z1,x2,y2,z2,texid,hrepeat,vrepeat,steps)</b></tt>
-	  Draws an ellipsoid in the current color in the indicated bounding box using the indicated
-	  texture. Use -1 to not use a texture. <tt>hrepeat</tt> indicates how often the texture must be
-	  repeated along the horizontal edge of each face. <tt>vrepeat</tt>
-	  does the same for the vertical edge. <tt>steps</tt> indicates
-	  how many rotational steps must be taken. A typical value is 24.<br>
+  	  Disegna un ellisoide nel colore attuale nel bounding box indicato usando la texture
+  	  indicata. Usa -1 per non usare una texture. <tt>hrepeat</tt> indica quante volte le texture
+  	  devono essere ripeture lungo il bordo orizzontale di ogni faccia. <tt>vrepeat</tt>
+  	  fa lo stesso con il bordo verticale. <tt>closed</tt> indica quando chiudere
+	  sopra e sotto al cono. <tt>steps</tt> indica quanti steps di rotazione devono essere presi.
+	  Un valore tiico è 24.<br>
   <tt><b>d3d_draw_wall(x1,y1,z1,x2,y2,z2,texid,hrepeat,vrepeat)</b></tt>
-	  Draws a vertical wall in the current color with the given corners using the indicated
-	  texture. Use -1 to not use a texture. <tt>hrepeat</tt> indicates how often the texture must be
-	  repeated along the horizontal edge of each face. <tt>vrepeat</tt>
-	  does the same for the vertical edge. <br>
+  	  Disegna un muro verticale nel colore attuale nel bounding box indicato usando la texture
+  	  indicata. Usa -1 per non usare una texture. <tt>hrepeat</tt> indica quante volte le texture
+  	  devono essere ripeture lungo il bordo orizzontale di ogni faccia. <tt>vrepeat</tt>
+  	  fa lo stesso con il bordo verticale. <br>
   <tt><b>d3d_draw_floor(x1,y1,z1,x2,y2,z2,texid,hrepeat,vrepeat)</b></tt>
-	  Draws a (slanted) floor in the current color with the given corners using the indicated
-	  texture. Use -1 to not use a texture. <tt>hrepeat</tt> indicates how often the texture must be
-	  repeated along the horizontal edge of each face. <tt>vrepeat</tt>
-	  does the same for the vertical edge. <br>
+  	  Disegna un pavimento (inclinato) nel colore attuale nel bounding box indicato usando la texture
+  	  indicata. Usa -1 per non usare una texture. <tt>hrepeat</tt> indica quante volte le texture
+  	  devono essere ripeture lungo il bordo orizzontale di ogni faccia. <tt>vrepeat</tt>
+  	  fa lo stesso con il bordo verticale. <br>
 </blockquote>
 
 <p>
-The following piece of code draws two blocks:
+Il seguente pezzo di codice disegna due blocchi:
 
 <p>
 <blockquote>
@@ -81,6 +82,12 @@ ellipsoid
 block
 wall
 floor
+sfera
+cilindro
+ellissoide
+blocco
+muro
+pavimento
 
 d3d_draw_block()
 d3d_draw_cylinder()
