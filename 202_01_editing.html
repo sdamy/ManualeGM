@@ -250,72 +250,73 @@ solo nella Standard Edition.
 Dovrai fare degli esperimenti con questi comandi per ottenere gli sprite che desideri.
 
 
-<H3>Animation menu</H3>
+<H3>Il menu Animation (animazione)</H3>
 
 <p>
-Under the animation menu you can create new animated sprites out of the current sprite. 
-There are many options and you should experiment a bit with them to create the effects 
-you want. Also don't forget that you can always save an animated sprite and later add it to 
-the current one. Also you can always add some empty images and delete unwanted ones. 
-We will briefly go through the different possibilities.
+Sotto il menu Animation puoi creare nuovi sprite animati partendo dallo sprite corrente.
+Ci sono molte opzioni e dovresti sperimentare un po' per ottenere gli effetti che vuoi.
+Inoltre non dimenticare che puoi sempre salvare uno sprite animato per poi aggiungerlo
+a quello corrente. Puoi anche agguingere delle immagini vuote e cancellare quelle inutili.
+Adesso esamineremo brevemente le diverse possibilità.
 
 <ul>
-  <li><b>Set Length.</b> 
-    Here you can change the length of your animation. The animation is 
-	repeated enough times to create the number of frames you indicate. 
-	(Normally you want this to be a multiple of the current number of frames.)</li>
-  <li><b>Stretch.</b> 
-    This command also changes the length of the animation. But this time, 
-	frames are duplicated or removed to get the right number. So if you 
-	increase the number of frames the animation goes slower and if you 
-	decrease the number it goes faster.</li>
-  <li><b>Reverse.</b> 
-    Well, as you could guess this reverses the animation. So it is played backwards.</li>
-  <li><b>Add Reverse.</b> 
-    This time the reverse sequence is added, doubling the number of frames. 
-	This is very useful for making an object go left and right, change color 
-	and return, etc. You sometimes might want to remove the double first 
-	and middle frame that occur.</li>
-  <li><b>Translation Sequence.</b> 
-    You can create an animation in which the image slightly translates in 
-	each step. You must provide the number of frames and the total amount 
-	to move horizontally and vertically.</li>
-  <li><b>Rotation Sequence.</b> 
-    Creates an animation in which the image rotates. You can either choose 
-	clockwise or counterclockwise rotation. Specify the number of frames and 
-	the total angle in degrees (360 is a complete turn). (You might need to 
-	resize the canvas first to make sure the total image remains visible 
-	during the rotation.)</li>
-  <li><b>Colorize.</b> 
-    Creates an animation that turns the image into a particular color.</li>
-  <li><b>Fade to color.</b> 
-    Creates an animation that fades the image to a particular color.</li>
-  <li><b>Disappear.</b> 
-    Makes the image disappear by making it more transparent in each step.</li>
-  <li><b>Shrink.</b> 
-    Shrinks the image to nothing. You can indicate the direction.</li>
-  <li><b>Grow.</b> 
-    Grows the image from nothing.</li>
-  <li><b>Flatten.</b> 
-    Flattens the image to nothing in a given direction.</li>
-  <li><b>Raise.</b> 
-    Raises the image from a given direction.</li>
-  <li><b>Overlay.</b> 
-    Overlays the animation with another sprite or image in a file. You indicate the file
-	and the image(s) from that file are then placed on top of the current animation.
-	When the image from the file has a different size it is stretched.</li>
-  <li><b>Morph.</b> 
-    Morphs the animation to an animation or image from a file. Note that 
-	morphing works best if the two animations cover the same area of the 
-	image. Otherwise, halfway certain pixels disappear and others suddenly appear.</li>
+  <li><b>Set Length. (Imposta lunghezza)</b> 
+    Qui puoi cambiare la lunghezza dell'animazione. La sequenza delle immagini
+        viene ripetuta abbastanza volte per creare il numero di immagini indicato.
+        (Di solito vorrai che sia un multiplo del numero corrente di immagini.)</li>
+  <li><b>Stretch. (Allunga)</b> 
+    Anche questo comando cambia la lunghezza dell'animazione. Ma stavolta
+        le immagini sono duplicate o rimosse per ottenere il giusto numero.
+        Quindi se aumenti il numero di immagini l'animazione andrà più lenta
+        e se lo diminuisci andrà più veloce.</li>
+  <li><b>Reverse. (Inverti)</b> 
+    Be', come potrai indovinare fa andare l'animazione al contrario.</li>
+  <li><b>Add Reverse. (Aggiungi invertito)</b> 
+    Questa volta la sequenza invertita viene aggiunta, raddoppiando il numero
+        di immagini. È molto utile per far andare un oggetto a destra e a sinistra,
+        Cambiare il colore e tornare indietro, ecc. A volte vorrai rimuovere le
+        doppie immagini ce compaiono agli estremi e a metà dell'animazione.</li>
+  <li><b>Translation Sequence. (Sequenza di traslazione)</b> 
+    Puoi creare un'animazione in cui l'immagine si sposta leggermente a ogni step.
+        Devi fornire il numero di immagini e lo spostamento finale sull'asse
+        orizzontale e su quello verticale.</li>
+  <li><b>Rotation Sequence. (Sequenza di rotazione)</b> 
+    Crea un'animazione in cui l'immagine ruota. Puoi scegliere la rotazione in
+        senso orario o antiorario. Specifica il numero di immagini e l'angolo
+        totale in gradi (360 è un giro completo). (Potresti aver bisogno di
+        ridimensionare il canvas prima, per essere sicuro che l'immagine
+        rimanga visibile durante la rotazione.)</li>
+  <li><b>Colorize. (Tingi)</b> 
+    Crea un'animazione in cui l'immagine cambia lentamente il colore,
+        da quello originale a quello originale a quello dato.</li>
+  <li><b>Fade to color. (Sbiadisci verso un colore)</b> 
+    Crea un'animazione in cui l'immagine sbiadisce lentamente verso il colore dato.</li>
+  <li><b>Disappear. (Sparisci)</b> 
+    Fa sparire l'immagine rendendola sempre più trasparente in ogni step.</li>
+  <li><b>Shrink. (Ritira)</b> 
+    Fa ritirare l'immagine verso il nulla. Puoi indicare la direzione.</li>
+  <li><b>Grow. (Cresci)</b> 
+    Fa crescere l'immagine dal nulla da una direzione data. (Di fatto, è il contrario di Shrink.)</li>
+  <li><b>Flatten. (Appiattisci)</b> 
+    Appiattisce l'immagine verso il nulla in una direzione data.</li>
+  <li><b>Raise. (Espandi)</b> 
+    Espande l'immagine dal nulla da una direzione data. (Di fatto, è il contrario di Flatten.)</li>
+  <li><b>Overlay. (Sovrapponi)</b> 
+    Sovrappone all'animazione un altro sprite o immagine in un file. Indica il file
+        e la(le) immagine(i) presenti nel file che verranno messe in cima all'animazione
+        corrente. Se l'immagine ha una dimansione diversa verrà ridimensionata.</li>
+  <li><b>Morph. (Trasforma)</b> 
+    Crea un'animazione in cui l'animazione corrente si trasforma in un'altra presa da un file.
+        Nota che la trasformazione viene meglio se le due animazioni coprono la stessa
+        area. Altrimenti, i pixel a metà potrebbero sparire e altri apparire improvvisamente.</li>
 </ul>
 
 <p>
-In particular the last two commands are very powerful. For example, to blow 
-up an object, add a number of copies and then a number of empty frames. 
-Then overlay it with an explosion animation. (Make sure the numbers of images 
-match.) Alternatively, morph it to the explosion. With some practice you 
-can make great sprites.
+In particolare questi ultimi due comandi sono molto potenti. Per esempio,
+per far esplodere un oggetto, aggiungi un po' di copie e poi un po' di
+immagini vuote. Poi sovrapponi un'animazione di un'esplosione. (Assicurati
+che il numero delle immagini corrisponda.) Oppure potresti trasformarlo
+nell'esplosione. Con un po' di pratica potrai creare grandi sprite.
 
 
 <!--END-->
@@ -331,4 +332,14 @@ GIF files
 PNG files
 animation
 transformations
+editor di sprite
+modificare gli sprite
+creare gli sprite
+anteprima, sprite
+file GIF
+file PNG
+GIF, file
+PNG, file
+animazione
+trasformazione
 --> 
