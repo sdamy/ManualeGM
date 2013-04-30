@@ -52,104 +52,101 @@ alla finestra c'è una barra di stato con alcune informazioni riguardo allo stru
 di disegno corrente, la posizione del mouse, la dimensione dell'immagine e l'ammontare
 di memoria che richiede.
 
-<h3>Drawing tools</h3>
+<h3>Strumenti di disegno</h3>
 
 <p>
-The following drawing tools are available (from left to right, top to bottom).
+Sono disponibili i seguenti strumenti di disegno (da sinistra a destra, dall'alto verso il basso).
 
 <ul>
-  <li><b>Paint.</b> 
-    With this tool you can paint on the image. You can use the left or right mouse
-	button to paint in the different colors. You can select the size of the pen.
-	When holding &lt;Shift&gt; when starting to paint you only paint horizontal or
-	vertical lines. When holding the &lt;Ctrl&gt; key you can select a new paint color.</li>
-  <li><b>Spray.</b> 
-    With this tool you can spray on the image. Spray is like paint except that you use a
-	brush that is partially transparent at the sides. You can use the left or right mouse
-	button to paint in the different colors. You can select the size of the brush. You can
-	also select the hardness of the brush. A soft brush will be more transparent near the sides.
-	When holding &lt;Shift&gt; when starting to spray you only paint horizontal or
-	vertical lines. When holding the &lt;Ctrl&gt; key you can select a new spray color.</li>
-  <li><b>Erase.</b> 
-    With this tool you can erase part the image. It looks a lot like spray but you erase
-	what is below the mouse. How much you erase depends on the the Opacity. For a value of
-	255 you erase completely. For a smaller value you only make the image a bit more
-	transparent. You can set the hardness of the eraser.
-	When holding &lt;Shift&gt; when starting to spray you only paint horizontal or
-	vertical lines.</li>
-  <li><b>Color Picker.</b> 
-    With this tool you can set the left or right mouse color to the color of a pixel in the
-	image. Note that also the opacity value is set.</li>
-  <li><b>Line.</b> 
-    With this tool you can can draw straight lines.
-	When holding &lt;Shift&gt; you can draw horizontal,	vertical, or diagonal lines. 
-	You can set the width of the line and whether is should have arrows. By selecting <b>Anti-alias</b>
-	the line is drawn with partially transparent pixels on the side to make it more smooth.</li>
-  <li><b>Polygon.</b> 
-    With this tool you can can draw a closed polygon. You click on the position of the first vertex.
-	Next you can either drag the next vertex or click on the position of the next vertex. In this way
-	you continue. You end the polygon with the &lt;Esc&gt; key.  
-	When holding &lt;Shift&gt; you can draw horizontal,	vertical, or diagonal lines. 
-	You can set the width of the line and whether the polygon should be filled or not.
-	By selecting <b>Anti-alias</b>
-	the polygon is drawn with partially transparent pixels on the side to make it more smooth.</li>
-  <li><b>Rectangle.</b> 
-    With this tool you can can draw a rectangle.   
-	When holding &lt;Shift&gt; you can draw a square.
-	When holding &lt;Ctrl&gt; you draw the rectangle from the center. 
-	You can set the width of the line and whether the rectangle should be filled or not.
-	By selecting <b>Anti-alias</b>
-	the rectangle is drawn with partially transparent pixels on the side to make it more smooth.</li>
-  <li><b>Ellipse.</b> 
-    With this tool you can can draw an ellipse.   
-	When holding &lt;Shift&gt; you can draw a circle. 
-	When holding &lt;Ctrl&gt; you draw the ellipse from the center. 
-	You can set the width of the line and whether the ellipse should be filled or not.
-	By selecting <b>Anti-alias</b>
-	the ellipse is drawn with partially transparent pixels on the side to make it more smooth.</li>
-  <li><b>Rounded Rectangle.</b> 
-    With this tool you can can draw a rounded rectangle.   
-	When holding &lt;Shift&gt; you can draw a square. 
-	When holding &lt;Ctrl&gt; you draw the rounded rectangle from the center. 
-	You can set the width of the line and whether the rounded rectangle should be filled or not.
-	By selecting <b>Anti-alias</b>
-	the rounded rectangle is drawn with partially transparent pixels on the side to make it more smooth.</li>
-  <li><b>Select Region.</b> 
-    With this tool you can can select a rectangular region. You can extend the current selection by
-	holding the &lt;Shift&gt; key. Also you can remove parts by holding the &lt;Ctrl&gt; key.
-	Once you made a selection you can pick it up with the mouse and drag it to a new position. When you 
-	use the right mouse button you make a copy. The selection can also be cut or copied to the 
-	clipboard. It can be deleted with the  &lt;Del&gt; key. You can end the selection using the
-	&lt;Esc&gt; key.</li>
-  <li><b>Select with Magic Wand.</b> 
-    In this case you make the selection by clicking on a pixel. All connected pixels with the same
-	color will be selected. You can indicate the tolerance in color valu with which to select pixels
-	and whether only the color or also the transparency value should match. You can extend the current selection by
-	holding the &lt;Shift&gt; key. Also you can remove parts by holding the &lt;Ctrl&gt; key. You can
-	manipulate the selection as above.</li>
-  <li><b>Select by Spraying.</b> 
-    In this case you make the selection by spraying with the mouse on the image. You can set the size
-	of the selector. For the rest the selection can be treated as above. Different selection types
-	can be combined.</li>
-  <li><b>Text.</b> 
-    To add a text click on the image. A pop-up window appears in which you
-	can enter the text. Use the # symbol to insert a newline. Once you press
-	<B>OK</B> the text is put in the image, with a box around it. You can now move
-	the text by pressing with the mouse in the box and dragging the text. You can change
-	the text by clicking with the right mouse button in the box. You can set the Font of the text
-	and how the different lines should be alligned.</li>
-  <li><b>Fill.</b> 
-    Click on a pixel in the image and all connected pixels with the same color will be turned
-	into the new pixel. You can set the tolerance with which the color should match. Also you can
-	set whether to only match on the color value or also take the transparency value into account.
-	Not that when the Color Mode is set to Blend the fill color is blended with the existing one. To 
-	replace it, set the Color Mode to Replace.</li>
-  <li><b>Change Color.</b> 
-    Click on a pixel in the image and all pixels in the image with the same color will be turned
-	into the new pixel. You can set the tolerance with which the color should match. Also you can
-	set whether to only match on the color value or also take the transparency value into account.
-	Not that when the Color Mode is set to Blend the new color is blended with the existing one. To 
-	replace it, set the Color Mode to Replace.</li>
+  <li><b>Paint. (Disegna)</b> 
+    Con questo strumento puoi disegnare sull'immagine. Puoi usare il pulsante sinistro
+        o destro per disegnare con colori diversi. Puoi scegliere la dimensione della
+        matita. Tieni premuto &lt;Shift&gt; mentre cominci per disegnare linee
+        orizzontali e verticali. Tieni premuto &lt;Ctrl&gt; per selezionare un nuovo colore.</li>
+  <li><b>Spray. (Spruzza)</b> 
+    Con questo strumento puoi spruzzare sull'immagine. Spruzzare è come disegnare ma usi un pennello
+        parzialmente trasparente sui bordi. Puoi usare il pulsante sinistro o destro del mouse per
+        disegnare con colori diversi. Puoi selezionare la dimensione del pennello e anche la sua
+        durezza. Un pennello meno duro sarà più trasparente sui bordi. Tieni premuto &lt;Shift&gt;
+        mentre cominci per disegnare linee orizzontali e verticali. Tieni premuto &lt;Ctrl&gt;
+        per selezionare un nuovo colore.</li>
+  <li><b>Erase. (Cancella)</b> 
+    Con questo strumento puoi cancellare una parte dell'immagine. È un po' come spruzzare ma cancelli
+        ciò che sta sotto il mouse. Quanto cancelli dipende dall'Opacità. Con un valore di 255 cancelli
+        completamente. Con un valore minore rendi solo l'immagine un po' più trasparente. Puoi impostare
+        la durezza della gomma. Tieni premuto &lt;Shift&gt; mentre cominci per cancellare su linee
+        orizzontali e verticali.</li>
+  <li><b>Color Picker. (Copia un colore)</b> 
+    con questo strumento puoi impostare il colore del pulsante sinistro o destro del mouse
+        prendendolo da un pixel dell'immagine. Nota che viene impostato anche il valore dell'opacità.</li>
+  <li><b>Line. (Linea)</b> 
+    Con questo strumento puoi disegnare linee dritte. Tieni premuto &lt;Shift&gt; per disegnare linee
+        orizzontali, verticali o diagonali. Puoi impostare la larghezza della linea e anche aggiungere
+        delle frecce. Selezionando <b>Anti-alias</b> la linea verrà disegnata con i pixel sul bordo
+        parzialmente trasparenti per farla venire più smussata.</li>
+  <li><b>Polygon. (Poligono)</b> 
+    Con questo strumento puoi disegnare un poligono chiuso. Clicca sulla posizione del primo vertice,
+        poi trascina il vertice successivo o clicca sulla sua posizione, e così via. Termina la
+        costruzione con &lt;Esc&gt;. Tieni premuto &lt;Shift&gt; per disegnare linee orizzontali,
+        verticali o diagonali. Puoi impostare la larghezza delle linee e se il poligono deve essere
+        riempito o no. Selezionando <b>Anti-alias</b> il poligono verrà disegnato con i pixel sul bordo
+        parzialmente trasparenti per farlo venire più smussato.</li>
+  <li><b>Rectangle. (Rettangolo)</b> 
+    Con questo strumento puoi disegnare un rettangolo.
+        Tieni premuto &lt;Shift&gt; per disegnare un quadrato.
+        Tieni premuto &lt;Ctrl&gt; per disegnare il rettangolo dal centro.
+        Puoi impostare la larghezza delle linee e se il rettangolo deve essere riempito o no.
+        Selezionando <b>Anti-alias</b> il rettangolo verrà disegnato con i pixel sul bordo
+        parzialmente trasparenti per farlo venire più smussato.</li>
+  <li><b>Ellipse. (Ellisse)</b> 
+    Con questo strumento puoi disegnare un'ellisse.
+        Tieni premuto &lt;Shift&gt; per disegnare un cerchio.
+        Tieni premuto &lt;Ctrl&gt; per disegnare l'ellisse dal centro.
+        Puoi impostare la larghezza delle linee e se l'ellisse deve essere riempita o no.
+        Selezionando <b>Anti-alias</b> l'ellisse verrà disegnata con i pixel sul bordo
+        parzialmente trasparenti per farla venire più smussata.</li>
+  <li><b>Rounded Rectangle. (Rettangolo arrotondato)</b> 
+    Con questo strumento puoi disegnare un rettangolo arrotondato.
+        Tieni premuto &lt;Shift&gt; per disegnare un quadrato arrotondato.
+        Tieni premuto &lt;Ctrl&gt; per disegnare il rettangolo arrotondato dal centro.
+        Puoi impostare la larghezza delle linee e se il rettangolo arrotondato deve essere riempito o no.
+        Selezionando <b>Anti-alias</b> il rettangolo arrotondato verrà disegnato con i pixel sul bordo
+        parzialmente trasparenti per farlo venire più smussato.</li>
+  <li><b>Select Region. (Seleziona regione)</b> 
+    Con questo strumento puoi selezionare una regione rettangolare. Aggiungi delle parti alla selezione con
+        &lt;Shift&gt; e rimuovi delle parti dalla selezione con &lt;Ctrl&gt;. Una volta che hai completato
+        la selezione puoi spostarla trascinandola con il tasto sinistro o puoi copiarla trascinandola
+        con il tasto destro. La selezione può anche essere tagliata o copiata negli appunti.
+        Può essere cancellata con &lt;Canc&gt;. Puoi disattivare la selezione con &lt;Esc&gt;</li>
+  <li><b>Select with Magic Wand. (Seleziona con bacchetta magica)</b> 
+    In questo caso operi la selezione cliccando su un pixel. Tutti i pixel connessi con lo stesso colore
+        verranno selezionati. Puoi anche indicare la tolleranza per i colori simili. Spuntando la casella
+        Color Only (Solo Colore) i valori della trasparenza verranno ignorati. Aggiungi delle parti alla
+        selezione con &lt;Shift&gt; e rimuovi delle parti dalla selezione con &lt;Ctrl&gt;. Puoi manipolare
+        la selezione come spiegato sopra.</li>
+  <li><b>Select by Spraying. (Seleziona disegnando)</b> 
+    In questo case operi la selezione disegnando col mouse sull'immagine. puoi impostare la dimensione del
+        selettore. Per il resto la selezione può essere trattata come sopra. Puoi combinare i diversi
+        tipi di selezione.</li>
+  <li><b>Text. (Testo)</b> 
+    Per aggiungere del testo, clicca sull'immagine. Apparirà una finestra di dialogo in cui puoi
+        inserire il testo. Usa il simbolo # per andare a capo. Quando premi <B>OK</B> il testo
+        viene inserito nell'immagine, con una cornice attorno. Ora puoi muovere il testo
+        trascinandolo con il tasto sinistro del mouse. Clicca con il tasto destro per modificare il
+        testo. Puoi impostare il font (carattere) del testo e l'allineamento.</li>
+  <li><b>Fill. (Riempi)</b> 
+    Clicca su un pixel nell'immagine e tutti i pixel connessi con lo stesso colore diventeranno del
+        colore con cui stai disegnando. Puoi indicare la tolleranza per i colori simili. Spuntando
+        la casella Color Only (Solo Colore) i valori della trasparenza verranno ignorati. Nota che
+        se la Modalità Colore è impostata su Mescola (Blend), il colore di riempimento verrà mescolato
+        con quello esistente. Per sostituirlo, imposta la Modalità Colore su Sostituisci.</li>
+  <li><b>Change Color. (Cambia colore)</b> 
+    Clicca su un pixel nell'immagine e tutti i pixel con lo stesso colore (indipendentemente dalla
+        posizione) diventeranno del colore con cui stai disegnando. Puoi indicare la tolleranza
+        per i colori simili. Spuntando la casella Color Only (Solo Colore) i valori della trasparenza
+        verranno ignorati. Nota che se la Modalità Colore è impostata su Mescola (Blend), il colore
+        di riempimento verrà mescolato con quello esistente. Per sostituirlo, imposta la Modalità
+        Colore su Sostituisci.</li>
 </ul>
 
 
