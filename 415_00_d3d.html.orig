@@ -34,9 +34,15 @@ ci sono alcune cose da chiarire.
 	  <li> Non sar&agrave; pi&ugrave; possibile utilizzare le piastrelle (tiles). 
 	  I tiles probabilmente non corrisponderanno pi&ugrave; correttamente.</li>
 	  <li> I controlli di collisione utilizzeranno ancora le posizioni bidimensionali delle istanze nella room. 
+<<<<<<< HEAD
+	  Pertanto non c'&egrave; il rilevamento delle collisioni in 3D. A volte si potranno usare questi, se 
+	  si utilizza la room come la rappresentazione di un mondo piatto (ad esempio per giochi di corse o FPS), ma 
+	  in altre situazioni che occorrer&agrave; implementare da soli un sistema di collisioni.</li>
+=======
 	  Pertanto non ci sarà il rilevamento delle collisioni in 3D. A volte si potranno usare questi, se 
 	  si utilizza la room come la rappresentazione di un mondo piatto (ad esempio per giochi di corse o FPS), ma 
 	  in altre situazioni occorrerà implementare da soli un sistema di collisioni.</li>
+>>>>>>> master
 	</ul>
   <li> Tutte le funzionalit&agrave; 3D lavorano tramite codice. Bisogna essere molto preparati sul codice GML. 
   Inoltre occorre conoscere molto bene come funziona <i>GameMaker</i> altrimenti si verificheranno dei problemi.</li>

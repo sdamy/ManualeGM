@@ -2,48 +2,50 @@
 
 <html>
 <head>
-<title>Collision checking</title>
+<title>Rilevare le collisioni</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Collision checking</h3>
+<h3>Rilevare le collisioni</h3>
 
-When planning motions or deciding on certain actions, it is often important 
-to see whether there are collisions with other objects at certain places. The 
-following routines can be used for this. All these have three arguments in 
-common: The argument <TT>obj</TT> can be an object, the keyword <TT><B>all</b></tt>,
-or the id of an instance. The argument <TT>prec</TT> indicates whether 
- the check should be precise or only based on the bounding box of the instance. 
- Precise checking is only done when the sprite for the instance has the 
- precise collision checking set. The argument <TT>notme</TT> can be set 
- to true to indicate that the calling instance should not be checked. 
- All these functions return either the id of one of the instances that 
- collide, or they return a negative value when there is no collision.
+Quando pianifichi i movimenti o decidi di fare certe azioni, spesso è importante
+vedere se ci sono collisioni con altri object in certi posti. I seguenti comandi
+servono a questo scopo. Tutti hanno tre argument in comune: l'argument <TT>obj</TT>
+può essere un object, la parola chiave <TT><B>all</b></tt> o l'id di un'istanza.
+L'argument <TT>prec</TT>  indica se il controllo deve essere preciso o semplicemente
+basato sulla bounding box dell'istanza. Il controllo preciso può essere effettuato
+solo se lo sprite dell'istanza ha il controllo preciso attivato. Se all'argument
+<TT>notme</TT> viene passato true, l'istanza chiamante non viene controllata.
+Tutte queste funzioni restituiscono l'id di una delle istanze che collidono
+o un valore negativo se non ci sono collisioni.
 
 <p>
 <blockquote>
   <tt><b>collision_point(x,y,obj,prec,notme)</b></tt>
-    This function tests whether at point (x,y) there is a collision 
-	with entities of object obj. <br>
+    Questa funzione controlla se al punto (x,y) c'è una collisione
+        con una o più istanze dell'object obj. <br>
   <tt><b>collision_rectangle(x1,y1,x2,y2,obj,prec,notme)</b></tt>
-    This function tests whether there is a collision between the (filled) 
-	rectangle with the indicated opposite corners and entities of object obj.
-	For example, you can use this to test whether an area is free of obstacles.<br>
+    Questa funzione controlla se c'è una collisione tra il rettangolo
+        (riempito) con i vertici opposti indicati e una o più istanze
+        dell'object obj. Per esempio, puoi usarla per controllare se
+        un'area è libera da ostacoli.<br>
   <tt><b>collision_circle(xc,yc,radius,obj,prec,notme)</b></tt>
-    This function tests whether there is a collision between the (filled) 
-	circle centered at position (xc,yc) with the given radius and entities 
-	of object obj. For example, you can use this to test whether there is 
-	an object close to a particular location.<br>
+    Questa funzione controlla se c'è una collisione tra il cerchio
+        (riempito) centrato in (xc,yc) con raggio radius e una o più
+        istanze dell'object obj. Per esempio, puoi usarla per controllare
+        se c'è un object vicino a un luogo particolare.<br>
   <tt><b>collision_ellipse(x1,y1,x2,y2,obj,prec,notme)</b></tt>
-    This function tests whether there is a collision between the (filled) 
-	ellipse with the indicated opposite corners and entities of object obj. <br>
+    Questa funzione controlla se c'è una collisione tra l'ellisse
+        (riempita) con gli angoli opposti indicati e una o più istanze
+        dell'object obj. <br>
   <tt><b>collision_line(x1,y1,x2,y2,obj,prec,notme)</b></tt>
-    This function tests whether there is a collision between the line segment 
-	from (x1,y1) to (x2,y2) and entities of object obj. This is a powerful 
-	function. You can e.g. use it to test whether an instance can see another 
-	instance by checking whether the line segment between them intersects a wall.<br>
+    Questa funzione controlla se c'è una collisione tra il segmento con
+        estremi (x1,y1) e (x2,y2) e una o più istanze dell'object obj.
+        Questa funzione è molto potente. Puoi usarla, per esempio, per
+        controllare se un'istanza può vedere un'altra controllando se
+        il segmento che le unisce interseca dei muri.<br>
 </blockquote>
 
 <!--END-->
@@ -52,6 +54,8 @@ or the id of an instance. The argument <TT>prec</TT> indicates whether
 
 <!-- KEYWORDS
 collision checking
+
+rilevare le collisioni
 
 collision_point()
 collision_rectangle()

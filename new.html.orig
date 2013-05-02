@@ -1,0 +1,310 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Novit&agrave;</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/back.gif">
+
+<!--START-->
+
+
+<h1>Novit&agrave; di Game Maker 8.1</h1>
+
+<p>
+La versione 8.1 di <i>GameMaker</i> ha alcuni miglioramenti e correzioni di bug rispetto alla 8.0.
+
+<h3>Cambiamenti</h3>
+<ul>
+    <li>Cambiate le priorit&agrave; del tasto destro del mouse nell'editor di room. Appare il menu normalmente, ma premendo Ctrl si attiva la cancellazione </li><br>
+    <li>Modalit&agrave; ZOOM nelle room aggiunta </li><br>
+    <li>La rotellina del mouse esegue lo ZOOM nell'editor di room </li><br>
+    <li>Il tasto centrale del mouse fa una panoramica della room. </li><br>
+<<<<<<< HEAD
+    <li>La finestra delle impostazioni dei background trasparenti &egrave; stata spostata alla finestra principale. </li><br>
+    <li>Transparent Background grid size now a global setting.</li><br>
+=======
+    <li>La finestra delle impostazioni dei background trasparenti è stata spostata alla finestra principale. </li><br>
+    <li>La dimensione della griglia dei background trasparenti ora ha un'impostazione globale.</li><br>
+>>>>>>> master
+    <li>Aggiunta la griglia di sfondo trasparente al room editor. </li><br>
+    <li>Il colore della griglia di sfondo trasparente ora pu&ograve; essere personalizzato.</li><br> 
+    <li>Ora puoi usare la rotellina del mouse per ingrandire nell'Image Editor. </li><br>
+    <li>Ora puoi usare il tasto centrale del mouse per una "pan" (panoramica) nell'Image Editor</li><br>
+    <li>Puoi eseguire una panoramica all'interno dell'editor PATH con il tasto centrale del mouse. </li><br>
+    <li>Puoi modificare il colore di sfondo di default per le stanze(room) (quando non &egrave; stato impostato uno sfondo nella "room")</li><br>
+    <li>Ora puoi disattivare lo sfondo di riempimento in una "room", in modo da poter vedere la griglia di sfondo quando non &egrave; stato impostato uno sfondo nella "room". </li><br>
+    <li>Aggiunti i pulsanti di zoom +/-/= per la barra degli strumenti della "room" </li><br>
+    <li>Puoi fare "clic destro" su un oggetto e modificarlo dall'interno dell'editor della stanza. </li><br>
+    <li>Rendering velocizzato nell'editor di codice. </li><br>
+    <li>Dentro l'editor di codice, puoi ora marcare un blocco di testo e usare TAB e SHIFT-TAB per tabularlo dentro e fuori. </li><br>
+    <li>La finestra notizie è ora ridimensionabile. </li><br>
+    <li>Le impostazioni room ora ricordano l'impostazione "massimizata". </li><br>
+    <li>Nuovo box ABOUT brillante. </li><br>
+    <li>La rinomina delle risorse è tornata a predefinito window; F2 (era cambiata da F2 a CTRL-R in GM 8.0) </li><br>
+    <li>La finestra del codice ha ora un'icona "cambiare" per la completazione del codice on/off </li><br>
+    <li>Puoi ora premere ESCAPE dentro l'editor di codice per liberarsi dalla casella di completazione del codice. <li><br>
+    <li>GameMaker ora salva files .gm81 (invece of .gmk) </li><br>
+    <li>Nuova criptazione .EXE </li><br>
+    <li>Nuovo sistema di news feed aggiunto <li><br>
+    <li>draw_self() aggiunto </li><br>
+    <li>os_type ritorna il sistema operativo su cui è eseguito (win, mac, ios etc.) </li><br>
+    <li>os_device ritorna il tipo di dispositivo (iPhone, iPhone4, iPad etc.) </li><br>
+    <li>ZBuffer è ora a 24Bit </li><br>
+    <li>Hardware T&L per rendering veloce 2D e 3D. </li><br>
+    <li>Puoi ora cambiare i colori di sfondo dell'editor di codice, includendo la linea attuale e selezione. </li><br>
+    <li>"Delete underlying objects" ora disattivo di predefinito nell'editor room. </li><br>
+    <li>Puoi ora usare &ltAltGr&gr (right alt) nell'editor di codice per inserire caratteri accentati. </li><br>
+    <li>d3d_light_define_ambient( colour ) aggiunto per un ambiente globale </li><br>
+    <li>Puoi ora impostare di predefinito TAB sul panello oggetto (quindi puoi predefinire per il pannello codice per esempio) </li><br>
+    <li>Nell'edizione standard, la ricerca script cercherà ora TUTTI i scripts, includendo oggetti, rooms, eventi di creazione, timelines e triggers. </li><br>
+    <li>aggiunto dot_product(x1,y1, x2,y2) </li><br>
+    <li>aggiunto dot_product_3d(x1,y1,z1, x2,y2,z2) </li><br>
+    <li>aggiunto point_distance_3d(x1,y1,z1, x2,y2,z2) </li><br>
+    <li>Creazione font totalmente riscritto. Ora produce meglio fonts anti-aliasied, e non li interrompe. </li><br>
+    <li>Puoi ora cambiare il "Execute a piece of code" nella lista azioni D&D, usando la 1° linea del tuo script e uno stile di commento "///" all'inizio. </li><br>
+</ul>
+
+
+<h1>Correzioni</h1>
+<ul>
+    <li>Undo nell'editor di testo. Quando tu annulli un cambiamento e poi salvi lo script o avvi il gioco, il cambiamento non è salvato. </li><br>
+    <li>Errore nella lettura di reals dai files di testo. Quando leggi due numeri da una singola linea nel file di testo e il primo è 0, i numeri non sono letti corretamente </li><br>
+    <li>0000536. mp_grid_add_cell è buggato. Corretto anche lo stesso errore in in mp_grid_clear_cell è buggato </li><br>
+    <li>0000597. Immagini eccessivamente di grandi dimensioni non erano scalate correttamente e causavano corruzione. </li><br>
+    <li>0000589: tile_layer_find() non tiene conto per il ridimensionamento. (anche in tile_layer_delete_at(), tile_find(), tile_delete_at() ) </li><br>
+    <li>0000255: Sostituendo il codice all'inizio della linea. Il cursore di colonna andava negativo. </li><br>
+    <li>0000580 - Se usi sprite_create_from_surface su una surface vuota, lo sprite sarà completamente opaco. </li><br>
+    <li>sprite_create_from_surface: se setti il parametro "removeback" a 2, copierà ora l'alfa "com'è". </li><br>
+    <li>Se hai creato un'immagine sfondo ma non l'hai aggiunta, il gioco fallisce il caricamento.</li><br>
+</ul>
+
+
+<br>
+<br>
+<h1>Cosa è nuovo nella versione 8.0</h1>
+
+<p>
+    La versione 8.0 di <i>GameMaker</i></i> ha un largo numero di miglioramenti dalla versione 7.0.
+Sotto i più importanti cambiamenti sono descritti.
+
+
+<h3>Incompatibilità</h3>
+
+<p>
+Le schermate di testo splash non possono più visualizzare immagini. Comunque, le schermate splash web sono state aggiunte che possono
+visualizzare completi documenti html con immagini, etc.
+
+<p>
+Un numero di cambiamenti è stato fatto per le funzioni relative alle risorse sprites e background. Questo
+è dovuto al fatto che <i>GameMaker</i> usa un completamente nuovo meccanismo per queste risorse. Se il tuo gioco
+usa molte chiamate alle funzioni per caricare o salvare le risorse immagini al volo sei fortemente raccomandato di
+lasciare usando la vecchia versione 7.0 per quel gioco.
+
+<p>
+Se usi i paccheti estensioni dovrai reinstallarli.
+</p>
+
+<p>
+Alcuni cambiamenti sono stati fatti per il meccanismo delle timeline che possono portare a incompatibilità. In particolare, assegnando una
+timeline e iniziarla sono ora due cose separate.
+
+</p>
+
+<p>
+Un importante bug è stato risolto negli eventi di collisione dove eseguiti due volte se due
+oggetti hanno eventi di collisioni con gli altri. Alcuni giochi comunque potrebbero essersi affidati su questo bug
+e, di conseguenza, potrebbero non funzionare correttamente.
+
+</p>
+
+<h3>Notizie</h3>
+
+<p>
+<i>GameMaker</i> now default shows a News page when it is started. Here new versions will be announced, 
+new resources will be indicated, there
+is information about competition, and game design tips and tricks. News is shown only once a day. In the Standard
+Edition this can be switched off. You can always access the news through the Help menu and you are encouraged
+to regularly check the news for important information about <i>GameMaker</i>.
+
+
+<h3>Tutorial</h3>
+
+<p>
+<i>GameMaker</i> now has a standard built-in tutorial for beginners. It is shown in a panel at the right of the
+screen. Experienced users can indicate that they do not want to see the tutorial anymore. To accommodate for the
+tutorial panel, <i>GameMaker</i> is now default started in full screen mode. It does however remember its settings
+so changing it once to windowed mode will from that moment on start it in that mode.
+</p>
+
+
+<h3>Alpha-blended backgrounds and sprites</h3>
+
+<p>
+The new version <i>GameMaker</i> uses backgrounds and sprites with alpha (transparency) channels. This makes it
+possible to create and use much nicer sprites. PNG files with such information are now correctly loaded. The sprite
+and image editor have been completely rewritten, including many new drawing options and effects. A new
+sprite file selector was added that shows the animations in the sprites. Also we bundle
+a large number of high-quality sprites with <i>GameMaker</i> that you can use for free in your games.
+</p>
+
+
+<h3>Enhanced collision checking</h3>
+
+<p>
+You now have more collision checking options. For example, you can indicate that collisions should be with an
+enclosed disk and you have better control over the bounding box. 
+The sub-image of the sprite can have a combined
+mask and you can set the dependence on the alpha transparency value.
+</p>
+
+
+<h3>Splash screens</h3>
+
+<p>
+A new function splash_show_web(url,delay) has been added that can be used to show web pages as splash screens.
+You can also use local html pages for this. This allows for a powerful mechanism to e.g. create help pages. A
+close button is added to the splash screens. Also a number of new actions have been added to show the
+different types of splash pages and to change splash settings. (The old Show Video and Webpage actions have
+been removes as the new actions include them. They will though still work in old games.)
+
+<h3>Eventi Trigger</h3>
+
+<p>
+A new type of event has been introduced: Trigger events. Trigger events you can specify yourself. You give them
+a name and a condition, written in GML. After this they can be used in all objects, just like other events. With
+this you can easily extend the functionality of <i>GameMaker</i>.
+</p>
+
+<h3>Time lines</h3>
+
+<p>
+Le timelines sono state estese. Il modulo proprietà ha pulsanti aggiuntivi, ad esempio per diffondere i momenti e
+per cancellare o duplicare intervalli di momenti. Le timelines possono ora essere pausate e riavviate e possono anche essere riprodotte all'indietro.
+Possono ora anche ciclare automaticamente.
+
+</p>
+
+<h3>Importando ed esportando risorse</h3>
+
+<p>
+La possibilità di unire giochi è stata sostituita da un più sistema estensivo di importazione ed esportazione di risorse.
+L'utente può indicare quali risorse esportare al file (.gmres). Poi loro possono essere importate in giochi diversi.
+In principio solo una risorsa può esistere per ogni nome. Quando c'è un conflitto di nome quando importato
+l'uso, può specificare se lasciare l'originale, sostituendo in ogni caso, prendendo quello che è più recentemente cambiato, o
+lasciare entrambi (non raccomandato). Per essere abile a fare la terza opzione, tutte le risorse ora mantengono traccia di quando
+sono state cambiate l'ultima volta.
+
+</p>
+
+<h3>Riscritti script e editor codice</h3>
+
+<p>
+L'editor script/codice integrato è stato completamente riscritto, facendolo molto più semplice per scrivere codice.
+Per esempio c'è un pop-up per completamento dei nomi delle funzioni, aiuto argomenti, parentesi corrispondenti, colorazione codice migliorata, 
+numeri linee, controlli errori al volo, snippets codici, e una sofisticata funzionalità cerca e sostituisci.
+
+</p>
+
+<h3>Miglioramenti velocità</h3>
+
+<p>
+La velocità dei giochi che usano codice sono stati considerevolmente migliorati. Un'accelerazione del 100% è
+a volte possibile. Anche il tempo di caricamento per i giochi è spesso considerevolmente migliorato.
+Anche quando avviato un gioco stand-alone.
+
+</p>
+
+
+<h3>Altri cambiamenti</h3>
+
+<p>
+C'è un numero di altri cambiamento e aggiunte. Qui sono alcuni di quelli importanti.
+
+<ul>
+  <li>You can now use high quality icons for your games.</li>  
+  <li> Constants can now be defined in their own form (rather than through the Global Game Settings). 
+    As a result they can remain visible while you are e.g. writing scripts. You can also load and
+	save the constants to text files. </li>
+  <li> Also included files are no longer shown in the Global Game Settings but in their own form.</li>
+  <li> Many small visual improvements</li>
+  <li> Added function random_range(x1,x2), irandom(x), and irandom_range(x1,x2). The latter do give
+    integer results and can include x or x2.</li>
+	<li>Added functions mouse_wheel_up and mouse_wheel_down.</li>
+	<li>Added a function set_application_title(title) to set the title of the application 
+          (which is shown in the taskbar).</li>
+	<li>Added function file_text_eoln().</li>
+	<li>Added read-only variabe debug_mode.</li>
+  <li> There is now a game setting to disallow screensavers or powersaving options (sleep, hybernate) while
+    the game is running (default disallowed).</li>
+  <li>Added functions disk_size(drive) and disk_free(drive) and a variable gamemaker_version.</li>
+  <li>Runtime error messages better indicate the position of the error</li>
+  <li>You can now change to location of the temporary files, see the page on Preferences.</li>
+</ul>
+
+
+<h3>Bugs corretti</h3>
+
+<p>
+I seguenti bus sono stati corretti. Un numero di altri piccoli bug sono stati corretti pure.
+
+<ul>
+  <li> An error message when starting the Maker on Vista with Active User Control is now removed.</li>
+  <li> Corrected a bug that when using Alt many fields in forms became invisible under Vista.</li>
+  <li> Corrected a bug with action hints not showing in the object and time line forms.</li>
+  <li> When opening a game or starting a new one, no longer for all open changed 
+    resource windows a separate save confirmation question is asked.</li>
+  <li> Corrected a (sort of) error with the precision of comparison operators in code.</li>
+  <li>Solved bug with a bad background for the Applies To field in code editor.</li>
+  <li>Creating a standalone now correctly checks whether there are any rooms.</li>
+  <li>Replaced all Ctrl+Alt combinatations by Shift+Ctrl because some of 
+      combinations are important for German keyboards. Also corrected the shortcut for creating
+      sprites.</li>
+  <li>In simple modes, short-cuts for hidden resources and menu items now are 
+      disabled as well. Also the Scripts menu is hidden.</li>
+  <li>Corrected a bug in the function window_get_color().</li>
+  <li>Increased the limit on the number of vertices in drawing 3D primitives
+      for models from 1000 to 32000.</li>
+  <li>Corrected a bug in ignoring z-value for model vertices.</li>
+  <li>Corrected the Outside View and Boundary View events.</li>
+  <li>Game will now run (with warning) when there is no enabled sound card.</li>
+  <li>When the game window looses focus, io events like key presses are now cleared.</li>
+	<li>Corrected and improved error reporting for the creation code of rooms and
+          instances in rooms.</li>
+	<li>room_tile_add and room_tile_add_ext now correctly set the blending
+          color to white and return the correct tile index.</li>
+	<li>Now correctly setting the application title to the file name.</li>
+	<li>Corrected a bug in draw_line_width_color when the length is 0.</li>
+	<li>Tiles with negative scale factors are now correctly drawn.</li>
+	<li>Changed the reading and writing of reals in text files. As decimal
+          separator now always a dot is used. However, when reading, both a dot or comma 
+          are accepted.</li>
+	<li>A group of resources that is empty will now have the correct closed folder icon.</li>
+	<li>Solved the problem with the flashing of the resource tree.</li>
+	<li>Functions string and string_format no longer crash when the number
+          is too large and they will return the string ERROR.</li>
+	<li>Long paths are now correctly drawn with draw_path.</li>
+	<li>Collapsing the resource tree now works correctly.</li>
+	<li>In an if condition, a value of 0.5 is now treated as true.</li>
+	<li>Solved a bug that sometimes occured when pressing the ~ key.</li>
+	<li>sign() function now correctly returns 0 when the argument is 0.</li>
+	<li>In the path editor, when choosing a room, clicking outside the menu no longer 
+          clears the room.</li>
+	<li>Slightly enlarged the debug form to show all toolbar icons. Also made
+          the watch grid columns scale when the form resizes.</li>
+	<li>Corrected a bug that can cause a crash when resizing the game window to 0 height.</li>
+	<li>Solved a bug in ds_grid_add/multiply/set_grid_region.</li>
+	<li>Calls to scripts and extension functions now return a value of 0 when they do
+          not assign a return value themselves.</li>
+	<li>Solved a serious bug in which collision events where executed twice if two
+          objects have collision events with each other.</li>
+	<li>Solved a bug in draw_text_ext with empty lines (multiple #) and a problem with 
+          drawing strings that contains CR-LF pairs (when using multiline strings in code).</li>
+	<li>Read-only files can now be used as included files without errors.</li>
+</ul>
+
+
+<!--END-->
+</body>
+</html> 

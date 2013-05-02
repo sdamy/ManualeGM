@@ -2,70 +2,80 @@
 
 <html>
 <head>
-<title>Various other options</title>
+<title>Varie Altre Opzioni</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Various other options</h3>
+<h3>Varie Altre Opzioni</h3>
 
-Here you can set a number of additional options. First of all you can set some default keys:
+Qui puoi impostare alcune opzioni addizzionali. Prima di tutto puoi impostare qualche tasto predefinito:
 
 <p>
 <b>Let &lt;Esc&gt; end the game</b><br>
-When checked, pressing the escape key will end the game. More advanced games 
-normally don't want this to happen because they might want to do some processing 
-(like saving) before ending the game. In this case, uncheck this box and provide 
-your own actions for the escape key. 
+<i>Lascia che &lt;Esc&gt; termini il gioco</i>
+Quando è spuntato, premere &lt;Esc&gt; causerà la chiusura del gioco. I giochi avanzati
+di solito non lo vogliono perché vorrebbero fare qualcosa (come salvare) prima di chiudere
+il gioco. In questo caso, leva il segno di spunta e dai le tue azioni per il tasto &lt;Esc&gt;.
 
 <p>
 <b>Treat the close button as &lt;Esc&gt; key</b><br>
-When checked the close button of the window will generate an escape key event. When
-not checked the close button events are called instead.
+<i>Tratta il pulsante Chiudi come il tasto &lt;Esc&gt;</i>
+Quando è spuntato il pulsante Chiudi sulla finestra genera un &lt;Esc&gt; Key Event.
+Quando NON è spuntato genera invece un Close Button Event (sotto Other Events).
 
 <p>
 <b>Let &lt;F1&gt; show the game information</b><br>
-When checked pressing the F1 key will display the game information.
+<i>Lascia che &lt;F1&gt; mostri le informazioni del gioco</i>
+Quando è spuntato F1 mostrerà le informazioni del gioco.
 
 <p>
 <b>Let &lt;F4&gt; switch between screen modes</b><br>
-When checked the F4 key will switch between fullscreen and windowed mode.
+<i>Lascia che &lt;F4&gt; scambi tra le modalità dello schermo</i>
+Quando è spuntato F4 scambierà tra le modalità schermo intero e finestra.
 
 <p>
 <b>Let &lt;F5&gt; save the game and &lt;F6&gt; load a game</b><br>
-When checked the player can use &lt;F5&gt; to store the current game situation
-and &lt;F6&gt; to load the last saved game. (Note that only the basic game
-data is stored. Once you use advanced features like particles or data structures
-those settings are not saved and you might have to create a save mechanism yourself.
+<i>Lascia che &lt;F5&gt; salvi il gioco e che &lt;F6&gt; lo carichi</i>
+Quando è spuntato il giocatore può usare &lt;F5&gt; per salvare la
+situazione corrente e &lt;F6&gt; per caricare l'ultimo gioco salvato.
+(Nota che vengono salvate solo le informazioni di base. Quando usi
+funzionalità avanzate come gli effetti particellari o le strutture di dati
+queste impostazioni non vengono salvate e dovrai crearti da solo un meccanismo
+di salvataggio.)
 
 <p>
 <b>Let &lt;F9&gt; take a screenshot of a game</b><br>
-When checked the player can use &lt;F9&gt; to create a screenshot of the game.
-This screenshot will be place in the file screenshotXXX.png in the folder where
-the game is running, where XXX is the number of the screenshot. When creating
-multiple screenshot the number is automatically increased.
+<i>Lascia che &lt;F9&gt; prenda un'istantanea del gioco</i>
+Quando è spuntato il giocatore può premere &lt;F9&gt; per creare un'istantanea
+del gioco. Quest'istantanea viene salvata nel file screenshotXXX.png nella
+cartella da cuiil gioco sta venendo eseguito, dove XXX è il numero dell'istantanea.
+Se crei più istantanee il numero viene incrementato automaticamente.
 
 <p>
-Also you can set the priority of the game process. This priority indicates how 
-much processor time is allotted to the game. In normal mode the operating system 
-tries to give processor time to each process that needs it in some reasonable way. 
-The higher you put the priority the more time is allotted to the game, making it 
-run more smoothly and faster. But other processes get less time (also Windows 
-processes so even the mouse might not move anymore). Use this with care.
+Puoi anche impostare la priorità del processo del gioco. La priorità indica quanto
+tempo del processore viene dedicato al gioco. In modalità normale il sistema operativo
+prova a dare il tempo del processore a tutti i processi che lo richiedono in modo
+ragionevole. Più la priorità del gioco è alta, più tempo gli viene dedicato, in modo
+che venga eseguito meglio e più velocemente. Ma gli altri processi ricevono meno tempo
+(anche i processi di Windows, quindi pure il mouse potrebbe smettere di muoversi).
+Usala con cautela.
 
 <p>
-Finally, you can set the version information of the game. This information is shown in the
-helptip that pops up when the user rests his mouse on the game executable. It is also
-shown when the users clicks with the right mouse button on the program and chooses 
-properties and then version. If you distribute your game you best fill in this 
-information. 
+Infine, puoi impostare le informazioni della versione. queste informazioni vengono mostrate
+nella casellina che compare quando l'utente tiene fermo il mouse sull'eseguibile del gioco.
+Vengono mostrate anche quando l'utente clicca col tasto destro del mouse sul programma
+e sceglie Proprietà e poi Versione. Se vuoi pubblicare il tuo gioco farai bene a
+inserire queste informazioni.
 
 <p>
-You should give your game a version number that consists of four parts: the major version,
-the minor version, the release number and the build number. Also you should provide the
-name of the company (you), the name of the product, the copyright information, and a
-very brief description. All these fields should be at most 64 characters long.
+Devi dare al tuo gioco un numero di versione diviso in quattro parti: la versione maggiore,
+la versione minore, il numero del rilascio e il numero della costruzione. (Queste sono
+traduzioni letterali, le definizioni inglesi sono: major, minor, release, build.)
+Devi anche fornire il nome della compagnia (tu), il nome del prodotto, le informazioni
+sul copyright e una descrizione molto breve. Tutti questi campi non devono superare
+i 64 caratteri.
 
 <!--END-->
 </body>
@@ -74,4 +84,6 @@ very brief description. All these fields should be at most 64 characters long.
 <!-- KEYWORDS
 special keys
 priority
+tasti speciali
+priorità
 --> 

@@ -1,0 +1,191 @@
+
+A#(da`tradurre)#T#3D Sound#F#406_03_3d.html#
+A#(da`tradurre)#T#Advanced Drawing Functions#F#405_06_advanced.html#
+A#(da`tradurre)#T#Aggiungere tiles#F#210_02_tiles.html#
+A#(da`tradurre)#T#Azioni delle particelle#F#206_05_particles.html#
+A#(da`tradurre)#T#Backgrounds#F#405_02_backgrounds.html#
+A#(da`tradurre)#T#Basic sound functions#F#406_01_basic.html#
+A#(da`tradurre)#T#CD Music#F#406_04_cd.html#
+A#(da`tradurre)#T#Deactivating instances#F#403_06_deactive.html#
+A#(da`tradurre)#T#Drawing Shapes#F#405_04_shapes.html#
+A#(da`tradurre)#T#Drawing Sprites and Backgrounds#F#405_03_drawing.html#
+A#(da`tradurre)#T#Drawing Surfaces#F#405_07_surfaces.html#
+A#(da`tradurre)#T#Drawing polygons in 3D#F#415_03_primitives.html#
+A#(da`tradurre)#T#Eventi#F#111_00_events.html#
+A#(da`tradurre)#T#Fonts and Text#F#405_05_text.html#
+A#(da`tradurre)#T#Fonts#F#211_00_fonts.html#
+A#(da`tradurre)#T#Highscore list#F#407_03_highscore.html#
+A#(da`tradurre)#T#Including files in stand-alone games#F#209_00_include.html#
+A#(da`tradurre)#T#Istanze#F#403_05_instances.html#
+A#(da`tradurre)#T#Motion planning#F#403_03_planning.html#
+A#(da`tradurre)#T#Muoversi attorno#F#403_01_moving.html#
+A#(da`tradurre)#T#Paths#F#212_00_paths.html#
+A#(da`tradurre)#T#Paths#F#403_02_paths.html#
+A#(da`tradurre)#T#Paths#F#408_05_paths.html#
+A#(da`tradurre)#T#Repainting the Screen#F#405_12_repaint.html#
+A#(da`tradurre)#T#Rooms#F#403_08_rooms.html#
+A#(da`tradurre)#T#Sound Effects#F#406_02_effects.html#
+A#(da`tradurre)#T#Sound and music#F#406_00_sound.html#
+A#(da`tradurre)#T#Splash screens#F#407_01_splash.html#
+A#(da`tradurre)#T#Sprites and Images#F#405_01_sprites.html#
+A#(da`tradurre)#T#Sprites#F#409_01_sprites.html#
+A#(da`tradurre)#T#The Display#F#405_09_display.html#
+A#(da`tradurre)#T#The Mouse#F#404_02_mouse.html#
+A#(da`tradurre)#T#The Window#F#405_10_window.html#
+A#(da`tradurre)#T#Tiles#F#405_08_tiles.html#
+A#(da`tradurre)#T#Timing#F#403_07_timing.html#
+A#(da`tradurre)#T#Viewing the world#F#415_05_projection.html#
+A#(da`tradurre)#T#Views#F#210_03_views.html#
+A#(da`tradurre)#T#Views#F#405_11_views.html#
+A#Cosimo93#T#Andare in modalit&agrave; 3D#F#415_01_mode.html#
+A#Cosimo93#T#Attrattori#F#412_04_attractors.html#
+A#Cosimo93#T#Code di priorit&agrave;#F#411_05_priority.html#
+A#Cosimo93#T#Code#F#411_02_queues.html#
+A#Cosimo93#T#Comandi specifici per dispositivo#F#410_05_device.html#
+A#Cosimo93#T#Condivisione dei dati#F#413_04_shared.html#
+A#Cosimo93#T#Creare particelle#F#412_00_particles.html#
+A#Cosimo93#T#Deviatori#F#412_06_deflectors.html#
+A#Cosimo93#T#Distruttori#F#412_05_destroyers.html#
+A#Cosimo93#T#Emettitori#F#412_03_emitters.html#
+A#Cosimo93#T#Eseguire programmi esterni#F#410_04_programs.html#
+A#Cosimo93#T#Esempio di fuoco d'artificio#F#412_08_example.html#
+A#Cosimo93#T#File#F#410_01_files.html#
+A#Cosimo93#T#Funzioni#F#401_17_functions.html#
+A#Cosimo93#T#Giocatori#F#413_03_players.html#
+A#Cosimo93#T#Giochi Multiplayer#F#413_00_multiplayer.html#
+A#Cosimo93#T#Grafica 3D#F#415_00_d3d.html#
+A#Cosimo93#T#Griglie#F#411_06_grid.html#
+A#Cosimo93#T#Indirizzamento di variabili in altre istanze#F#401_06_addressing.html#
+A#Cosimo93#T#Mappe#F#411_04_maps.html#
+A#Cosimo93#T#Messaggi#F#413_05_messages.html#
+A#Cosimo93#T#Modificatori#F#412_07_changers.html#
+A#Cosimo93#T#Opzioni di caricamento#F#302_04_loading.html#
+A#Cosimo93#T#Pile#F#411_01_stacks.html#
+A#Cosimo93#T#Script#F#401_18_scripts.html#
+A#Cosimo93#T#Semplici effetti#F#412_01_1explosions.html#
+A#Cosimo93#T#Settare una connessione#F#413_01_connection.html#
+A#Cosimo93#T#Sistemi di particelle#F#412_02_systems.html#
+A#Cosimo93#T#Strutture dati#F#411_00_datastructures.html#
+A#Cosimo93#T#Tipi di particelle#F#412_01_types.html#
+A#Cosimo93#T#Variabili in pi&ugrave;#F#401_05_extra.html#
+A#Daviex#T#Definire gli Sprites#F#107_00_sprites.html#
+A#Daviex#T#L'interfaccia utente globale#F#106_00_interface.html#
+A#Daviex#T#Usare le Variabili e le Espressioni#F#112_07_variables.html#
+A#Daviex#T#Uso Avanzato#F#200_index.html#
+A#Delfad0r#T#Azioni principali, set 1#F#112_02_main1.html#
+A#Homunculus84#T#Advanced mode (modalit&agrave; avanzata)#F#201_00_advanced.html#
+A#Homunculus84#T#Impostazioni avanzate#F#210_01_advanced.html#
+A#Innominato#T#Altre azioni di controllo#F#206_03_control.html#
+A#Innominato#T#File INI#F#410_03_ini.html#
+A#Innominato#T#Informazioni sul gioco#F#302_06_info.html#
+A#Innominato#T#More actions#F#206_00_actions.html#
+A#Innominato#T#Registro (Registry)#F#410_02_registry.html#
+A#Innominato#T#Trasformazioni#F#415_06_transform.html#
+A#Netherface#T#Backgrounds#F#409_03_backgrounds.html#
+A#Netherface#T#Files, registro, esecuzione programmi e device specifico#F#410_00_files.html#
+A#Netherface#T#Fog#F#415_07_fog.html#
+A#Netherface#T#Fonts#F#409_04_fonts.html#
+A#Netherface#T#Illuminazione#F#415_08_light.html#
+A#Netherface#T#Manuale GameMaker#F#index.html#
+A#Netherface#T#Oggetti#F#409_08_objects.html#
+A#Netherface#T#Paths#F#409_05_paths.html#
+A#Netherface#T#Rooms#F#409_09_rooms.html#
+A#Netherface#T#Scripts#F#409_06_scripts.html#
+A#Netherface#T#Suoni#F#408_02_sounds.html#
+A#Netherface#T#Time lines#F#409_07_timelines.html#
+A#Pasquiindustry#T#Assegnazioni#F#401_03_assignments.html#
+A#Pasquiindustry#T#L'istruzione "Break" (Break statement)#F#401_14_break.html#
+A#Pasquiindustry#T#L'istruzione Continue (Continue statement)#F#401_15_continue.html#
+A#Pasquiindustry#T#Un programma#F#401_01_program.html#
+A#Pasquiindustry#T#Variabili#F#401_02_variables.html#
+A#Pasquiindustryindustry#T#Il costrutto "Repeat" (Repeat statement)#F#401_09_repeat.html#
+A#Pasquiindustryindustry#T#Il costrutto "While"'(While statement)#F#401_10_while.html#
+A#Pasquiindustryindustry#T#Il costrutto Do (Do statement)#F#401_11_do.html#
+A#Pasquiindustryindustry#T#Il costrutto For (For statement)#F#401_12_for.html#
+A#Pasquiindustryindustry#T#Rooms#F#408_09_rooms.html#
+A#SolidSnake96#T#Azioni di Disegno#F#112_06_draw.html#
+A#SolidSnake96#T#Azioni extra#F#206_06_extra.html#
+A#SolidSnake96#T#Interazione Utente#F#404_00_interaction.html#
+A#Tiger07 ZioCrocifisso#T#Anteprima del Linguaggio GML#F#401_00_language.html#
+A#Tiger07#T#Altre azioni di movimento#F#206_01_move.html#
+A#Tiger07#T#Altro riguardo agli sfondi#F#204_00_backgrounds.html#
+A#Tiger07#T#Azioni di Movimento#F#112_01_move.html#
+A#Tiger07#T#Azioni di Punteggio#F#112_05_score.html#
+A#Torchipeppo#T#Calcolare delle cose#F#402_00_computing.html#
+A#Torchipeppo#T#Commenti#F#401_20_comment.html#
+A#Torchipeppo#T#Considerazioni sulla velocit&agrave;#F#303_00_speed.html#
+A#Torchipeppo#T#Costrutti With#F#401_19_with.html#
+A#Torchipeppo#T#Costrutto If#F#401_08_if.html#
+A#Torchipeppo#T#Costrutto Switch#F#401_13_switch.html#
+A#Torchipeppo#T#Di pi&ugrave; sugli Objects#F#205_00_objects.html#
+A#Torchipeppo#T#Di pi&ugrave; sugli Sprite#F#202_00_sprites.html#
+A#Torchipeppo#T#Espressioni#F#401_04_expressions.html#
+A#Torchipeppo#T#Eventi trigger#F#208_00_triggers.html#
+A#Torchipeppo#T#Funzioni che lavorano sui numeri reali#F#402_02_real.html#
+A#Torchipeppo#T#Funzioni che lavorano sulle stringhe#F#402_03_string.html#
+A#Torchipeppo#T#Funzioni e variabili nel GML#F#401_21_funcvar.html#
+A#Torchipeppo#T#Game play#F#403_00_gameplay.html#
+A#Torchipeppo#T#Generare Eventi#F#403_10_events.html#
+A#Torchipeppo#T#Gli Array#F#401_07_arrays.html#
+A#Torchipeppo#T#La Tastiera#F#404_01_keyboard.html#
+A#Torchipeppo#T#Modificare i tuoi sprite#F#202_01_editing.html#
+A#Torchipeppo#T#Modificare singole immagini#F#202_03_individual.html#
+A#Torchipeppo#T#Opzioni sugli Errori#F#302_05_errors.html#
+A#Torchipeppo#T#Rilevare le collisioni#F#403_04_collision.html#
+A#Torchipeppo#T#Scripts#F#214_00_scripts.html#
+A#Torchipeppo#T#Svariate altre Variabili e Funzioni#F#403_11_misc.html#
+A#Torchipeppo#T#Time lines (Linee del tempo)#F#213_00_timelines.html#
+A#Torchipeppo#T#Usare le date e il tempo#F#402_04_dates.html#
+A#Torchipeppo#T#Varie Altre Opzioni#F#302_03_various.html#
+A#Xeryan#T#Aggiornare dalla Lite Edition#F#103_00_pro.html#
+A#Xeryan#T#Altre azioni principali#F#206_02_main.html#
+A#Xeryan#T#Backgrounds#F#408_03_backgrounds.html#
+A#Xeryan#T#Creando ed entrando nelle sessioni#F#413_02_sessions.html#
+A#Xeryan#T#Creare Rooms#F#113_00_rooms.html#
+A#Xeryan#T#Di pi&ugrave; sui suoni e musica#F#203_00_sounds.html#
+A#Xeryan#T#Dichiarazione Exit#F#401_16_exit.html#
+A#Xeryan#T#Disegnando forme di base#F#415_04_shapes.html#
+A#Xeryan#T#Disegno semplice#F#415_02_drawing.html#
+A#Xeryan#T#Fonts#F#408_04_fonts.html#
+A#Xeryan#T#Grafica del gioco#F#405_00_graphics.html#
+A#Xeryan#T#Il Joystick#F#404_03_joystick.html#
+A#Xeryan#T#Il Linguaggio di Game Maker (GML)#F#400_index.html#
+A#Xeryan#T#Informazioni del gioco#F#301_00_information.html#
+A#Xeryan#T#Installazione#F#102_00_installation.html#
+A#Xeryan#T#Liste#F#411_03_lists.html#
+A#Xeryan#T#Migliorando il tuo gioco#F#300_index.html#
+A#Xeryan#T#Novit&agrave;#F#new.html#
+A#Xeryan#T#Oggetti#F#408_08_objects.html#
+A#Xeryan#T#Pacchetti estensione#F#215_00_extensions.html#
+A#Xeryan#T#Punteggio#F#403_09_score.html#
+A#Xeryan#T#Quindi vuoi creare il tuo gioco per computer#F#101_00_introduction.html#
+A#Xeryan#T#Risorse#F#408_00_resources.html#
+A#Xeryan#T#Sprites#F#408_01_sprites.html#
+A#Xeryan#T#Strips (sprite animati)#F#202_02_strips.html#
+A#Xeryan#T#Time lines#F#408_07_timelines.html#
+A#Xeryan#T#Usando GameMaker#F#100_index.html#
+A#ZioCrocifisso#T#Altre Azioni di disegno#F#206_04_draw.html#
+A#ZioCrocifisso#T#Azioni di controllo#F#112_04_control.html#
+A#ZioCrocifisso#T#Azioni principali, set 2#F#112_03_main2.html#
+A#ZioCrocifisso#T#Azioni#F#112_00_actions.html#
+A#ZioCrocifisso#T#Backgrounds#F#109_00_backgrounds.html#
+A#ZioCrocifisso#T#Cambiare le Risorse#F#409_00_changing.html#
+A#ZioCrocifisso#T#Costanti#F#207_00_constants.html#
+A#ZioCrocifisso#T#Costanti#F#402_01_constants.html#
+A#ZioCrocifisso#T#Creare Modelli#F#415_09_1models.html#
+A#ZioCrocifisso#T#Definire gli Objects#F#110_00_objects.html#
+A#ZioCrocifisso#T#Di pi&ugrave; sulle Room#F#210_00_rooms.html#
+A#ZioCrocifisso#T#Distribuire il tuo gioco#F#114_00_distributing.html#
+A#ZioCrocifisso#T#Importare ed esportare risorse#F#216_00_import.html#
+A#ZioCrocifisso#T#Impostazioni Globali del Gioco#F#302_00_settings.html#
+A#ZioCrocifisso#T#Impostazioni sulla Grafica e sulle Finestre#F#302_01_graphics.html#
+A#ZioCrocifisso#T#Iniziare#F#104_00_idea.html#
+A#ZioCrocifisso#T#Messaggi popup e domande#F#407_02_messages.html#
+A#ZioCrocifisso#T#Preferenze#F#201_01_preferences.html#
+A#ZioCrocifisso#T#Risoluzione#F#302_02_resolution.html#
+A#ZioCrocifisso#T#Schermate iniziali, classifiche e altri pop-ups#F#407_00_splash.html#
+A#ZioCrocifisso#T#Scripts#F#408_06_scripts.html#
+A#ZioCrocifisso#T#Suoni e Musica#F#108_00_sounds.html#
+A#ZioCrocifisso#T#Suoni#F#409_02_sounds.html#
+A#ZioCrocifisso#T#Ultime parole#F#415_09_final.html#
+A#ZioCrocifisso#T#Usare le DLL#F#414_00_dlls.html#

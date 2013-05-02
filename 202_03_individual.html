@@ -2,239 +2,239 @@
 
 <html>
 <head>
-<title>Editing individual images</title>
+<title>Modificare singole immagini</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
 
-<h3>Editing individual images</h3>
+<h3>Modificare singole immagini</h3>
 
-<i>GameMaker</i> has a built-in image editor that can be used to edit
-individual subimages of sprites and background images. To call the editor
-for a subimage of a sprite, select the subimage in the sprite editor
-and choose <b>Edit Image</b> from the <b>Image</b> menu (or double click on it).
-To edit a background, open the background properties for and press the button
-<b>Edit Background</b>.
-
-<p>
-The built-in image editor is pretty powerful and especially suited for creating
-sprites and backgrounds for <i>GameMaker</i>. However, it does not have all
-the features of full-blown paint and drawing packages. The buitl-in editor
-is primarily meant for making changes to images, not for creating sprites and
-backgrounds from scratch. For this you probably want to use a separate paint
-program, save the images as PNG files, and load them into <i>GameMaker</i>.
-You can also set an external image editor in the preferences.
+<i>GameMaker</i> ha un editor di imagini integrato che può essere usato
+per modificare singole immagini degli sprite e i background. Per chiamare
+l'editor per una subimmagine di uno sprite, seleziona quell'immagine
+nell'editor di sprite e scegli <b>Edit Image</b> (Modifica Immagine) dal
+menu <b>Image</b> (Immagine) (o fa' doppio click su di essa).
+Per modificare un background, apri le proprietà del background e clicca su
+<b>Edit Background</b> (Modifica Background).
 
 <p>
-When you start the image editor it will typically looks as follows:
+L'editor di immagini integrato è abbastanza potente, specialmente per creare
+sprite e background per <i>GameMaker</i>. Tuttavia, non ha tutte le funzioni
+dei pacchetti di disegno completi. L'editor integrato è pensato principalmente
+per applicare modifiche alle immagini, non per creare sprite e background dal
+nulla. A questo scopo vorrai probabilmente usare un programma separato, salvare
+le immagini come file PNG e caricarle in <i>GameMaker</i>. Puoi anche impostare
+un editor di immagini esterno in Preferences.
+
+<p>
+Quando avvii l'editor di immagini, di solito somiglia a questo:
 
 <p>
 <img src="images/form_image_editor.jpg">
 
 <p>
-The form shows the image in the middle and a number of  drawing tools at 
-the left. Below there you can set certain properties of the drawing tools. 
-These will change depending on the tool you select (see below). In the middle
-you see the current image. You can zoom in and out using the buttons on the
-toolbar. At the right there is information about the colors with which the draw.
-You can set a separate color for the left and the right mouse button. You can change
-these by clicking with the left or right mouse button in the color selector images.
-Also you can change them by clicking in the boxes at the top that repesent the colors.
-Below the colors you see the Opacity. This indicates how opaque or transparent the color is.
-When you set it to 255 the pixels your draw are fully opaque. When you set it to 0 
-they are fully transparent. Normally when you draw partially transparent pixels they
-are blended with the current color. By setting the Color Mode to Replace, the pixels
-will be replaced with the new color. Finally at the bottom of the form there is a
-statusbar with some infomation about the current drawing tool, the position of the mouse, 
-the size of the image, and the amount of memory it requires. 
+La finestra mostra l'immagine al centro e gli strumenti di disegno a sinistra.
+Sotto puoi vedere le proprietà degli strumenti di disegno, che cambiano a seconda
+dello strumento selezionato (vedi sotto). Al centro puoi vedere l'immagine corrente.
+Puoi fare zoom avanti e indietro usando i pulsanti nella barra degli strumenti.
+Sulla destra ci sono delle informazioni sui colori con cui stai disegnando. Puoi
+scegliere colori separati per i bottoni sinistro e destro del mouse. Puoi cambiarli
+cliccando con il bottone sinistro o destro sulla tavolozza o cliccando sulle caselle
+innalto che rappresentano i colori.Sotto i colori puoi vedere l'Opacità. Indica quanto
+opaco o trasparente deve essere il colore. Quando lo imposti a 255 i pixel che disegni
+sono completamente opachi. Quando lo imposti a 0 sono completamente trasparenti.
+Normalmente, quando disegni pixel parzialmente trasparenti, questi vengono mescolati
+con il colore già presente. Impostando la Modalità Colore (Color Mode) su Sostituisci
+(Replace), i pixel presenti verranno sostituiti con il nuovo colore. Infine in fondo
+alla finestra c'è una barra di stato con alcune informazioni riguardo allo strumento
+di disegno corrente, la posizione del mouse, la dimensione dell'immagine e l'ammontare
+di memoria che richiede.
 
-<h3>Drawing tools</h3>
+<h3>Strumenti di disegno</h3>
 
 <p>
-The following drawing tools are available (from left to right, top to bottom).
+Sono disponibili i seguenti strumenti di disegno (da sinistra a destra, dall'alto verso il basso).
 
 <ul>
-  <li><b>Paint.</b> 
-    With this tool you can paint on the image. You can use the left or right mouse
-	button to paint in the different colors. You can select the size of the pen.
-	When holding &lt;Shift&gt; when starting to paint you only paint horizontal or
-	vertical lines. When holding the &lt;Ctrl&gt; key you can select a new paint color.</li>
-  <li><b>Spray.</b> 
-    With this tool you can spray on the image. Spray is like paint except that you use a
-	brush that is partially transparent at the sides. You can use the left or right mouse
-	button to paint in the different colors. You can select the size of the brush. You can
-	also select the hardness of the brush. A soft brush will be more transparent near the sides.
-	When holding &lt;Shift&gt; when starting to spray you only paint horizontal or
-	vertical lines. When holding the &lt;Ctrl&gt; key you can select a new spray color.</li>
-  <li><b>Erase.</b> 
-    With this tool you can erase part the image. It looks a lot like spray but you erase
-	what is below the mouse. How much you erase depends on the the Opacity. For a value of
-	255 you erase completely. For a smaller value you only make the image a bit more
-	transparent. You can set the hardness of the eraser.
-	When holding &lt;Shift&gt; when starting to spray you only paint horizontal or
-	vertical lines.</li>
-  <li><b>Color Picker.</b> 
-    With this tool you can set the left or right mouse color to the color of a pixel in the
-	image. Note that also the opacity value is set.</li>
-  <li><b>Line.</b> 
-    With this tool you can can draw straight lines.
-	When holding &lt;Shift&gt; you can draw horizontal,	vertical, or diagonal lines. 
-	You can set the width of the line and whether is should have arrows. By selecting <b>Anti-alias</b>
-	the line is drawn with partially transparent pixels on the side to make it more smooth.</li>
-  <li><b>Polygon.</b> 
-    With this tool you can can draw a closed polygon. You click on the position of the first vertex.
-	Next you can either drag the next vertex or click on the position of the next vertex. In this way
-	you continue. You end the polygon with the &lt;Esc&gt; key.  
-	When holding &lt;Shift&gt; you can draw horizontal,	vertical, or diagonal lines. 
-	You can set the width of the line and whether the polygon should be filled or not.
-	By selecting <b>Anti-alias</b>
-	the polygon is drawn with partially transparent pixels on the side to make it more smooth.</li>
-  <li><b>Rectangle.</b> 
-    With this tool you can can draw a rectangle.   
-	When holding &lt;Shift&gt; you can draw a square.
-	When holding &lt;Ctrl&gt; you draw the rectangle from the center. 
-	You can set the width of the line and whether the rectangle should be filled or not.
-	By selecting <b>Anti-alias</b>
-	the rectangle is drawn with partially transparent pixels on the side to make it more smooth.</li>
-  <li><b>Ellipse.</b> 
-    With this tool you can can draw an ellipse.   
-	When holding &lt;Shift&gt; you can draw a circle. 
-	When holding &lt;Ctrl&gt; you draw the ellipse from the center. 
-	You can set the width of the line and whether the ellipse should be filled or not.
-	By selecting <b>Anti-alias</b>
-	the ellipse is drawn with partially transparent pixels on the side to make it more smooth.</li>
-  <li><b>Rounded Rectangle.</b> 
-    With this tool you can can draw a rounded rectangle.   
-	When holding &lt;Shift&gt; you can draw a square. 
-	When holding &lt;Ctrl&gt; you draw the rounded rectangle from the center. 
-	You can set the width of the line and whether the rounded rectangle should be filled or not.
-	By selecting <b>Anti-alias</b>
-	the rounded rectangle is drawn with partially transparent pixels on the side to make it more smooth.</li>
-  <li><b>Select Region.</b> 
-    With this tool you can can select a rectangular region. You can extend the current selection by
-	holding the &lt;Shift&gt; key. Also you can remove parts by holding the &lt;Ctrl&gt; key.
-	Once you made a selection you can pick it up with the mouse and drag it to a new position. When you 
-	use the right mouse button you make a copy. The selection can also be cut or copied to the 
-	clipboard. It can be deleted with the  &lt;Del&gt; key. You can end the selection using the
-	&lt;Esc&gt; key.</li>
-  <li><b>Select with Magic Wand.</b> 
-    In this case you make the selection by clicking on a pixel. All connected pixels with the same
-	color will be selected. You can indicate the tolerance in color valu with which to select pixels
-	and whether only the color or also the transparency value should match. You can extend the current selection by
-	holding the &lt;Shift&gt; key. Also you can remove parts by holding the &lt;Ctrl&gt; key. You can
-	manipulate the selection as above.</li>
-  <li><b>Select by Spraying.</b> 
-    In this case you make the selection by spraying with the mouse on the image. You can set the size
-	of the selector. For the rest the selection can be treated as above. Different selection types
-	can be combined.</li>
-  <li><b>Text.</b> 
-    To add a text click on the image. A pop-up window appears in which you
-	can enter the text. Use the # symbol to insert a newline. Once you press
-	<B>OK</B> the text is put in the image, with a box around it. You can now move
-	the text by pressing with the mouse in the box and dragging the text. You can change
-	the text by clicking with the right mouse button in the box. You can set the Font of the text
-	and how the different lines should be alligned.</li>
-  <li><b>Fill.</b> 
-    Click on a pixel in the image and all connected pixels with the same color will be turned
-	into the new pixel. You can set the tolerance with which the color should match. Also you can
-	set whether to only match on the color value or also take the transparency value into account.
-	Not that when the Color Mode is set to Blend the fill color is blended with the existing one. To 
-	replace it, set the Color Mode to Replace.</li>
-  <li><b>Change Color.</b> 
-    Click on a pixel in the image and all pixels in the image with the same color will be turned
-	into the new pixel. You can set the tolerance with which the color should match. Also you can
-	set whether to only match on the color value or also take the transparency value into account.
-	Not that when the Color Mode is set to Blend the new color is blended with the existing one. To 
-	replace it, set the Color Mode to Replace.</li>
+  <li><b>Paint. (Disegna)</b> 
+    Con questo strumento puoi disegnare sull'immagine. Puoi usare il pulsante sinistro
+        o destro per disegnare con colori diversi. Puoi scegliere la dimensione della
+        matita. Tieni premuto &lt;Shift&gt; mentre cominci per disegnare linee
+        orizzontali e verticali. Tieni premuto &lt;Ctrl&gt; per selezionare un nuovo colore.</li>
+  <li><b>Spray. (Spruzza)</b> 
+    Con questo strumento puoi spruzzare sull'immagine. Spruzzare è come disegnare ma usi un pennello
+        parzialmente trasparente sui bordi. Puoi usare il pulsante sinistro o destro del mouse per
+        disegnare con colori diversi. Puoi selezionare la dimensione del pennello e anche la sua
+        durezza. Un pennello meno duro sarà più trasparente sui bordi. Tieni premuto &lt;Shift&gt;
+        mentre cominci per disegnare linee orizzontali e verticali. Tieni premuto &lt;Ctrl&gt;
+        per selezionare un nuovo colore.</li>
+  <li><b>Erase. (Cancella)</b> 
+    Con questo strumento puoi cancellare una parte dell'immagine. È un po' come spruzzare ma cancelli
+        ciò che sta sotto il mouse. Quanto cancelli dipende dall'Opacità. Con un valore di 255 cancelli
+        completamente. Con un valore minore rendi solo l'immagine un po' più trasparente. Puoi impostare
+        la durezza della gomma. Tieni premuto &lt;Shift&gt; mentre cominci per cancellare su linee
+        orizzontali e verticali.</li>
+  <li><b>Color Picker. (Copia un colore)</b> 
+    con questo strumento puoi impostare il colore del pulsante sinistro o destro del mouse
+        prendendolo da un pixel dell'immagine. Nota che viene impostato anche il valore dell'opacità.</li>
+  <li><b>Line. (Linea)</b> 
+    Con questo strumento puoi disegnare linee dritte. Tieni premuto &lt;Shift&gt; per disegnare linee
+        orizzontali, verticali o diagonali. Puoi impostare la larghezza della linea e anche aggiungere
+        delle frecce. Selezionando <b>Anti-alias</b> la linea verrà disegnata con i pixel sul bordo
+        parzialmente trasparenti per farla venire più smussata.</li>
+  <li><b>Polygon. (Poligono)</b> 
+    Con questo strumento puoi disegnare un poligono chiuso. Clicca sulla posizione del primo vertice,
+        poi trascina il vertice successivo o clicca sulla sua posizione, e così via. Termina la
+        costruzione con &lt;Esc&gt;. Tieni premuto &lt;Shift&gt; per disegnare linee orizzontali,
+        verticali o diagonali. Puoi impostare la larghezza delle linee e se il poligono deve essere
+        riempito o no. Selezionando <b>Anti-alias</b> il poligono verrà disegnato con i pixel sul bordo
+        parzialmente trasparenti per farlo venire più smussato.</li>
+  <li><b>Rectangle. (Rettangolo)</b> 
+    Con questo strumento puoi disegnare un rettangolo.
+        Tieni premuto &lt;Shift&gt; per disegnare un quadrato.
+        Tieni premuto &lt;Ctrl&gt; per disegnare il rettangolo dal centro.
+        Puoi impostare la larghezza delle linee e se il rettangolo deve essere riempito o no.
+        Selezionando <b>Anti-alias</b> il rettangolo verrà disegnato con i pixel sul bordo
+        parzialmente trasparenti per farlo venire più smussato.</li>
+  <li><b>Ellipse. (Ellisse)</b> 
+    Con questo strumento puoi disegnare un'ellisse.
+        Tieni premuto &lt;Shift&gt; per disegnare un cerchio.
+        Tieni premuto &lt;Ctrl&gt; per disegnare l'ellisse dal centro.
+        Puoi impostare la larghezza delle linee e se l'ellisse deve essere riempita o no.
+        Selezionando <b>Anti-alias</b> l'ellisse verrà disegnata con i pixel sul bordo
+        parzialmente trasparenti per farla venire più smussata.</li>
+  <li><b>Rounded Rectangle. (Rettangolo arrotondato)</b> 
+    Con questo strumento puoi disegnare un rettangolo arrotondato.
+        Tieni premuto &lt;Shift&gt; per disegnare un quadrato arrotondato.
+        Tieni premuto &lt;Ctrl&gt; per disegnare il rettangolo arrotondato dal centro.
+        Puoi impostare la larghezza delle linee e se il rettangolo arrotondato deve essere riempito o no.
+        Selezionando <b>Anti-alias</b> il rettangolo arrotondato verrà disegnato con i pixel sul bordo
+        parzialmente trasparenti per farlo venire più smussato.</li>
+  <li><b>Select Region. (Seleziona regione)</b> 
+    Con questo strumento puoi selezionare una regione rettangolare. Aggiungi delle parti alla selezione con
+        &lt;Shift&gt; e rimuovi delle parti dalla selezione con &lt;Ctrl&gt;. Una volta che hai completato
+        la selezione puoi spostarla trascinandola con il tasto sinistro o puoi copiarla trascinandola
+        con il tasto destro. La selezione può anche essere tagliata o copiata negli appunti.
+        Può essere cancellata con &lt;Canc&gt;. Puoi disattivare la selezione con &lt;Esc&gt;</li>
+  <li><b>Select with Magic Wand. (Seleziona con bacchetta magica)</b> 
+    In questo caso operi la selezione cliccando su un pixel. Tutti i pixel connessi con lo stesso colore
+        verranno selezionati. Puoi anche indicare la tolleranza per i colori simili. Spuntando la casella
+        Color Only (Solo Colore) i valori della trasparenza verranno ignorati. Aggiungi delle parti alla
+        selezione con &lt;Shift&gt; e rimuovi delle parti dalla selezione con &lt;Ctrl&gt;. Puoi manipolare
+        la selezione come spiegato sopra.</li>
+  <li><b>Select by Spraying. (Seleziona disegnando)</b> 
+    In questo case operi la selezione disegnando col mouse sull'immagine. puoi impostare la dimensione del
+        selettore. Per il resto la selezione può essere trattata come sopra. Puoi combinare i diversi
+        tipi di selezione.</li>
+  <li><b>Text. (Testo)</b> 
+    Per aggiungere del testo, clicca sull'immagine. Apparirà una finestra di dialogo in cui puoi
+        inserire il testo. Usa il simbolo # per andare a capo. Quando premi <B>OK</B> il testo
+        viene inserito nell'immagine, con una cornice attorno. Ora puoi muovere il testo
+        trascinandolo con il tasto sinistro del mouse. Clicca con il tasto destro per modificare il
+        testo. Puoi impostare il font (carattere) del testo e l'allineamento.</li>
+  <li><b>Fill. (Riempi)</b> 
+    Clicca su un pixel nell'immagine e tutti i pixel connessi con lo stesso colore diventeranno del
+        colore con cui stai disegnando. Puoi indicare la tolleranza per i colori simili. Spuntando
+        la casella Color Only (Solo Colore) i valori della trasparenza verranno ignorati. Nota che
+        se la Modalità Colore è impostata su Mescola (Blend), il colore di riempimento verrà mescolato
+        con quello esistente. Per sostituirlo, imposta la Modalità Colore su Sostituisci.</li>
+  <li><b>Change Color. (Cambia colore)</b> 
+    Clicca su un pixel nell'immagine e tutti i pixel con lo stesso colore (indipendentemente dalla
+        posizione) diventeranno del colore con cui stai disegnando. Puoi indicare la tolleranza
+        per i colori simili. Spuntando la casella Color Only (Solo Colore) i valori della trasparenza
+        verranno ignorati. Nota che se la Modalità Colore è impostata su Mescola (Blend), il colore
+        di riempimento verrà mescolato con quello esistente. Per sostituirlo, imposta la Modalità
+        Colore su Sostituisci.</li>
 </ul>
 
 
 <p>
-<h3>Menus</h3>
+<h3>Menu</h3>
 
-A number of further commands is available through the menus. For some of these there is a corresponding
-button on the tool bar.
+I menu contengono comandi più avanzati. Per alcuni di essi c'è il corrispondente pulsante nella barra
+degli strumenti.
 
-<h4>File menu</h4>
-
-<ul>
-  <li><b>New.</b>
-    Creates a new, empty image. You must indicate the size of the image. (When the image is part of
-	a sprite with multiple images you cannot set the size.) 
-	(Remember, all images in a sprite must have the same size.)</li>
-  <li><b>Open.</b> 
-    Open an image from a file. This menu item is not available when the image is part of
-	a sprite with multiple images.</li>
-  <li><b>Previous Image.</b> 
-    Only available when the image is part of
-	a sprite with multiple images. Saves the changes and opens the previous subimage.</li>
-  <li><b>Next Image.</b> 
-    Only available when the image is part of
-	a sprite with multiple images. Saves the changes and opens the next subimage.</li>
-  <li><b>Save as PNG File.</b> 
-    Saves the image as a PNG file. No other file formats are supported.</li>
-  <li><b>Close Saving Changes.</b> 
-    Closes the form, saving the changes made to the image. If you don't 
-	want to save the changes, click on the close button of the form.</li>
-</ul>
-
-<h4>Edit menu</h4>
-
-Here you find the usual commands to Undo the last change and Redo the last undo, to delete, cut, or
-copy the current selection to the clipboard, to paste the image on the clipboard as a selection
-in the image, and to select all. (Note that when using the clipboard, transparency information might
-be lost.) Two additional commands require a bit more explanation.
+<h4>Il menu File</h4>
 
 <ul>
-  <li><b>Erase to Left Color.</b>
-    This erases the image and replaces it by the left color (and opacity setting).</li>
-  <li><b>Paste from File.</b>
-    You can select an image from a file. This image is then pasted into the current image
-	as a selection. You can then move that selection to the appropriate place.</li>
+  <li><b>New. (Nuovo)</b>
+    Crea una nuova immagine vuota. devi indicarne la dimensione. (Se l'immagine è parte di uno sprite
+        con più immagini non puoi impostare la dimensione. Ricorda, tutte le immagini di uno sprite
+        devono essere grandi uguali.)</li>
+  <li><b>Open. (Apri)</b> 
+    Apre un'immagine da un file. Non è disponibile se l'immagine è parte di uno sprite con più immagini.</li>
+  <li><b>Previous Image. (Immagine precedente)</b> 
+    Disponibile solo se l'immagine è parte di uno sprite con più immagini. Salva le modifiche e apre
+        l'immagine precedente.</li>
+  <li><b>Next Image. (Immagine successiva)</b> 
+    Disponibile solo se l'immagine è parte di uno sprite con più immagini. Salva le modifiche e apre
+        l'immagine successiva.</li>
+  <li><b>Save as PNG File. (Salva come un file PNG)</b> 
+    Salva l'immagine come un file PNG. non sono supportati altri formati.</li>
+  <li><b>Close Saving Changes. (Salva e chiudi)</b> 
+    Chiude la finestra, salvando le modifiche apportate all'immagine. Se non vuoi salvare, clicca
+        sul pulsante chiudi della finestra.</li>
 </ul>
 
-<h4>View menu</h4>
+<h4>Il menu Edit (modifica)</h4>
+
+Qui trovi i soliti comandi per annullare e ripristinare i cambiamenti (Undo/Redo), cancellare (Delete),
+tagliare o copiare negli appunti (Cut/Copy), incollare dagli appunti come una selezione (Paste)
+e selezionare tutto (Select All). (Nota che se usi gli appunti le informazioni sulla trasparenza
+potrebbero andare perdute.) Due comandi necessitano di spiegazioni approfondite.
 
 <ul>
-  <li><b>Zoom Out.</b>
-    You can zoom out to see more of the image. You can also hold the &lt;Ctrl&gt; key
-	and move the mouse scroll wheel to zoom in or out.</li>
-  <li><b>No Zoom.</b>
-   Sets the image back to the normal size.</li>
-  <li><b>Zoom In.</b>
-    You can zoom in to more precisely draw in an area of the image.</li>
-  <li><b>Toggle Grid.</b> 
-    You can toggle the grid on or off. Note that the grid is only shown when you 
-	zoom in enough.</li>
- <li><b>Grid Options.</b> 
-    Here you can set the size of the grid and the color. You can indicate whether to use exclusive
-	or when drawing the grid (might make it more visible) and whether the drawing should be snapped
-	to the grid.</li>
- <li><b>Show Preview.</b> 
-    Show a preview of the image in the right bottom corner in the normal size. This is in particular
-	useful when you are zooming in a lot to make small changes. If the image is larger than the preview
-	are you can use the mouse to drag the part of the image you want to see. You can also double click
-	on the preview image to open a separate preview window in which you can see the complete image.</li>
-  <li><b>Set Tranparency Background.</b> 
-    Here you can indicate how the transparent area of the image should be shown in the
-	sprite editor. You can either use the (default) block pattern, or a color that you can change
-	by clicking on the color box.</li>
+  <li><b>Erase to Left Color. (Cancella al colore sinistro)</b>
+    Cancella l'intera immagine e la sostituisce completamente con il colore sinistro (opacità compresa).</li>
+  <li><b>Paste from File. (Incolla da file)</b>
+    Puoi selezionare un'immagine da un file. Quest'immagine viene incollata nell'immagine
+        corrente come una selezione. Puoi muovere la selezione al posto giusto.</li>
 </ul>
 
-<h4>Transform menu</h4>
+<h4>Il menu View (Visualizza)</h4>
 
-This menu contains the same transformation commands as in the sprite editor. You can read about
-their function there. Note that <b>Resize Canvas</b>, <b>Stretch</b>, and <b>Crop</b> are not
-available when the image is part of a sprite with multiple images, because in that case we
-cannot change the size of the image.
+<ul>
+  <li><b>Zoom Out. (Zoom indietro)</b>
+    Puoi zoomare indietro per vedere una porzione maggiore dell'immagine. Puoi anche
+        tenere premuto &lt;Ctrl&gt; e usare la rotellina per zoomare avanti e indietro.</li>
+  <li><b>No Zoom. (Annulla zoom)</b>
+   Riporta l'immagine alle sue dimensioni normali.</li>
+  <li><b>Zoom In. (Zoom avanti)</b>
+    Puoi zoomare avanti per disegnare più precisamente.</li>
+  <li><b>Toggle Grid. (Imposta griglia)</b> 
+    Scegli se visualizzare la griglia o no. Nota che la griglia viene mostrata solo
+        se hai zoomato abbastanza in avanti.</li>
+ <li><b>Grid Options. (Opzioni griglia)</b> 
+    Qui puoi impostare la dimensione e il colore della griglia. Puoi indicare se usare o esclusivo
+        (si chiama proprio "o esclusivo", è un connettivo logico) per disegnare la griglia (potrebbe
+        renderla più visibile) e se il disegno deve essere allineato con la griglia.</li>
+ <li><b>Show Preview. (Mostra anteprima)</b> 
+    Mostra un'anteprima dell'immagine nell'angolo in basso a destra nelle dimensioni normali. È
+        particolarmente utile se hai zoomato molto in avanti per fare piccoli cambiamenti. Se
+        l'immagine è più larga dell'anteprima puoi usare il mouse per spostare la visuale afferrando
+        e trascinando l'immagine col tasto sinistro. Puoi anche fare doppio click sull'anteprima per
+        aprirla in una finestra separata dove puoi vederla per intero.</li>
+  <li><b>Set Tranparency Background. (Imposta sfondo di trasparenza)</b> 
+    Qui puoi indicare come deve essere mostrata l'area trasparente dell'immagine nell'editor. Puoi
+        usare uno sfondo a blocchi (predefinito), o un colore che puoi cambiare cliccando sulla
+        casella del colore.</li>
+</ul>
 
-<h4>Image menu</h4>
+<h4>Il menu Transform (trasforma)</h4>
 
-This menu contains the same commands as in the sprite editor. You can read about
-their function there. Note that some commands are only available in the Standard Edition.
+Questo menu contiene gli stessi comandi di trasformazione dell'editor di sprite. Puoi informarti
+sul funzionamento dei comandi nella pagina dell'editor di sprite. Nota che <b>Resize Canvas</b>,
+<b>Stretch</b>, e <b>Crop</b> (Ridimansiona canvas, Allarga e Ritaglia) non sono disponibili
+se l'immagine è parte di uno sprite con più immagini, perché in quel caso non possiamo
+cambiare le dimensioni dell'immagine.
 
+<h4>Il menu Image (immagine)</h4>
+
+Questo menu contiene gli stessi comandi dell'editor di sprite. Puoi informarti sul funzionamento
+dei comandi nella pagina dell'editor di sprite. Nota che alcuni comandi sono disponibili solo nella
+Standard Edition.
 
 
 <!--END-->
@@ -245,4 +245,7 @@ their function there. Note that some commands are only available in the Standard
 image editor
 image transformations
 paint program
+editor di immagini
+trasformazioni di immagini
+programma di disegno
 --> 

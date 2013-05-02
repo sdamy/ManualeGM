@@ -2,32 +2,31 @@
 
 <html>
 <head>
-<title>Generating events</title>
+<title>Generare Eventi</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Generating events</h3>
+<h3>Generare Eventi</h3>
 
-As you know, <i>GameMaker</i> is completely event driven. All actions 
-happen as the result of events. There are a number of different events. 
-Creation and destroy events happen when an instance is created or 
-destroyed. In each step, the system first handles the begin step events.
-Next it handles the alarm events, keyboard and mouse events and next the step event. 
-After this the instances are set to their new positions after which 
-the collision event is handled. Finally the end step events are handled after
-which the draw event is used to 
-draw the instances (note that when there are multiple views the draw 
-event is called multiple times in each step). You can also apply an 
-event to the current instance from within a piece of code. The following 
-functions exist:
+Come sai, <i>GameMaker</i> è completamente guidato dagli eventi
+(event driven). Tutte le azioni avvengono come risultati di eventi.
+Ci sono diversi tipi di eventi. Gli eventi Create e Destroy si innescano
+rispettivamente quando un'istanza è creata o distrutta. In ogni step, il
+sistema gestisce per primi i Begin Step Event. Seguono gli Alarm Event,
+gli eventi Keyboard e Mouse e poi lo Step Event. Dopodiché le istanze sono
+piazzate alla loro nuova posizione e si verificano i Collision Event.
+Infine viene gestito l'End Step Event e poi il Draw Event viene usato
+per disegnare le istanze (nota che se hai più view il Draw Event viene
+chiamato più volte nello stesso step). Puoi anche innescare manualmente
+un evento in un'istanza dal codice. Esiste la seguente funzione:
 
 <p>
 <blockquote>
   <tt><b>event_perform(type,numb)</b></tt>
-    Performs event numb of the indicated type to the current instance. 
-	The following event types can be indicated:
+    Innesca l'evento numb del tipo type nell'istanza corrente.
+        Come type possono essere indicati i seguenti tipi di eventi:
     <p>
     <blockquote>
 	    <tt><b>ev_create</b></tt><br>
@@ -44,11 +43,11 @@ functions exist:
 		<tt><b>ev_trigger</b></tt><br>
     </blockquote>
 
-	When there are multiple events of the given type, numb can be used to specify 
-	the precise event. For the event type <tt>ev_alarm</tt> numb can range from 0 to 11. For the 
-	<tt>ev_keyboard</tt>, <tt>ev_keypress</tt>. and <tt>ev_keyrelease</tt> 
-	event types you have to use the keycode for the key. For <tt>ev_mouse</tt> events you 
-	can use for numb the following constants:
+        Quando ci sono più eventi del tipo dato, numb può essere usato per specificare l'evento preciso.
+        Per i tipi <tt>ev_create</tt>, <tt>ev_destroy</tt> ed <tt>ev_draw</tt>, che non necessitano
+        specificazioni, numb deve essere uguale a 0. Per il tipo <tt>ev_alarm</tt>, numb può
+        essere compreso tra 0 e 11. Per i tipi <tt>ev_keyboard</tt>, <tt>ev_keypress</tt> e <tt>ev_keyrelease</tt>
+        devi usare il codice del tasto. Per il tipo <tt>ev_mouse</tt> puoi usare le seguenti costanti:
 	<p>
 	<blockquote>
 	    <tt><b>ev_left_button</b></tt><br>
@@ -99,8 +98,8 @@ functions exist:
 	    <tt><b>ev_joystick2_button7</b></tt><br>
 	    <tt><b>ev_joystick2_button8</b></tt>  
     </blockquote>
-    For the collision event you give the index of the other object.  
-    For the event type <tt>ev_other</tt> you can use for numb the following constants:
+    Per il tipo <tt>ev_collision</tt> dai l'indice dell'altro object.
+    Per il tipo <tt>ev_other</tt> puoi usare la seguenti costanti:
     <p>
     <blockquote>
 	    <tt><b>ev_outside</b></tt><br>
@@ -131,40 +130,41 @@ functions exist:
 	    <tt><b>ev_user14</b></tt><br>
 	    <tt><b>ev_user15</b></tt><br>
     </blockquote>
-    For the <tt>ev_step</tt> event type you can use the following constants for numb:
+    Per il tipo <tt>ev_step</tt> puoi usare le seguenti costanti:
     <p>
     <blockquote>
       <tt><b>ev_step_normal</b></tt><br>
       <tt><b>ev_step_begin</b></tt><br>
       <tt><b>ev_step_end</b></tt><br>
     </blockquote>
-    Finally for the <tt>ev_trigger</tt> event type you should use the constants that you can
-	specify when defining these events.<br>
+    Infine per il tipo <tt>ev_trigger</tt> dovresti usare le costanti che puoi
+        specificare quando definisci questi eventi.<br>
   <tt><b>event_perform_object(obj,type,numb)</b></tt>
-    This functions works the same as the function above except that this time you can 
-	specify events in another object. Note that the actions in these events are applied 
-	to the current instance, not to instances of the given object!<br>
+    Funziona allo stesso modo della funzione qui sopra ma questa volta puoi specificare
+        un evento di un altro object. Nota che le azioni dell'evento selezionato si applicano7
+        all'istanza chiamante, NON alle istanze dell'object dato come argument!<br>
   <tt><b>event_user(numb)</b></tt>
-    In the other events you can also define 16 user events. These are only performed if 
-	you call this function. numb must lie in the range 0 to 15.<br>
+    Tra gli Other Events ci sono anche 16 User Defined Event. Questi eventi si innescano
+        solo se chiami questa funzione. numb deve essere compreso tra 0 e 15.<br>
   <tt><b>event_inherited()</b></tt>
-    Performs the inherited event. This only works if the instance has a parent object.<br>
+    Innesca l'evento ereditato dall'object "padre". Funziona solo se hai specificato un 
+        parent object per l'object a cui appartiene l'istanza chiamante.<br>
 </blockquote>
 
 <p>
-You can get information about the current event being executed using the 
-following read-only variables:
+Puoi ottenere informazioni sull'evento che sta venendo eseguito usando
+le seguenti variabili di sola lettura:
 
 <p>
 <blockquote>
   <tt><b>event_type*</b></tt>
-    Type of the current event begin executed.<br>
+    Tipo dell'evento che sta venendo eseguito.<br>
   <tt><b>event_number*</b></tt>
-    Number of the current event begin executed.<br>
+    Numero dell'evento che sta venendo eseguito.<br>
   <tt><b>event_object*</b></tt>
-    The object index for which the current event is being executed.<br>
+    L'indice dell'object per cui l'evento corrente sta venendo eseguito.<br>
   <tt><b>event_action*</b></tt>
-    The index of the action that is currently being executed (0 is the first in the event, etc.).<br>
+    L'indice dell'azione che sta venendo eseguita (0 è la prima nell'evento, 1 la seconda, ecc.).<br>
 </blockquote>
 
 <!--END-->

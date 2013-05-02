@@ -2,317 +2,321 @@
 
 <html>
 <head>
-<title>Editing your sprites</title>
+<title>Modificare i tuoi sprite</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Editing your sprites</h3>
+<h3>Modificare i tuoi sprite</h3>
 
 
-Up to now we loaded our sprites from files. It is though also possible to 
-create and in particular modify them within <i>GameMaker</i>. To do this, 
-open the sprite property window by double clicking on one of your sprites 
-(or by creating a new one). Now press the button labeled <b>Edit Sprite</b>. 
-A new form will appear showing all the subimages that make up the sprite.
+Finora abbiamo caricato i nostri sprite da dei file. È anche possibile
+crearli e modificarli internamente a <i>GameMaker</i>. Per farlo,
+apri la finestra di uno sprite facendo doppio clic su uno di essi
+(o creandone uno nuovo). Ora premi il pulsante <b>Edit Sprite</b> (modifica sprite).
+Apparirà una nuova finestra che mostra tutte le subimmagini che compogono lo sprite.
 
 <p>
-The sprite editor form will look as follows:
+L'editor di sprite ha quest'aspetto:
 
 <p>
 <img src="images/form_sprite_editor.jpg">
 
 <p>
-At the right you see the different images that make up the sprite. Note that 
-in <i>GameMaker</i> all subimages of a sprite must have the same size. At 
-the left an animation of the sprite plays. (If you don't see the animation, 
-check the box labeled <b>Show Preview</b>.) Below the preview you can change 
-the speed of the animation and the background color. Also you can select one
-of the backgrounds in your game and whether it must be streched. In this way you can 
-get an idea of what the animation will look like in the game. (Note that 
-this speed is only for preview. The speed of the animation during the 
-game depends on the room speed.)
+Sulla destra puoi vedere le diverse subimmagini che compongono lo sprite. Nota che
+in <i>GameMaker</i> tutte le subimmagini di uno sprite devono avere le stesse dimensioni.
+Sulla sinistra puoi vedere l'animazione delle sprite. (Se non la vedi, 
+clicca su <b>Show Preview</b> (mostra anteprima).) Sotto l'anteprima puoi cambiare
+la velocità dell'animazione e il colore di sfondo. Puoi anche scegliere uno dei
+background presenti nel gioco e decidere se allungarlo o meno. Così puoi
+farti un'idea di come uscirà l'animazione nel gioco. (Nota che questa velocità
+è solo un'anteprima. La velocità dell'animazione durante il gioco dipende dal
+parametro "room speed", che puoi impostare nella room.)
 
 <p>
-The sprite editor contains many commands to create and change the sprite. 
-These are all given through the menus. (For some there are buttons on the 
-toolbar.) Some commands work on individual images. They require that you 
-first select a subimage with the mouse.
+L'editor di sprite contiene tanti comandi per creare e cambiare lo sprite.
+Sono tutti accessibili dai menu. (Per alcuni ci sono pulsanti sulla barra
+degli strumenti.) Alcuni comandi lavorano su singole subimmagini. Richiedono
+che tu selezioni un'immagine col mouse prima.
 
 
-<H3>File menu</H3>
+<H3>Il menu File</H3>
 
 <p>
-The file menu contains a number of commands related to loading and saving sprites.
+Il menu File contiene dei comandi per caricare e salvare gli sprite.
 
 <ul>
-  <li><b>New.</b>
-    Creates a new, empty sprite. You must indicate the size of the sprite. 
-	(Remember, all images in a sprite must have the same size.)</li>
-  <li><b>Create from File.</b> 
-    Creates the sprite from a file. Many file types can be used. 
-	They all create a sprite consisting of a single image, except 
-	for animated GIF files that are split into the subimages and strips
-	that have an name ending with _stripXX. When selecting a file
-	you can indicate whether the image should be opaque, whether to
-	remove the background, and whether to smooth the edge. You can select 
-	multiple images which will then all be loaded. They should preferably 
-	have the same size, otherwise, their canvas sizes will be adapted.</li>
-  <li><b>Add from File.</b> 
-    Adds an image (or multiple images) from a file to the current sprite. If the 
-	images do not have the same size you can choose where to place them 
-	or to stretch them. You can select multiple images which will then 
-	all be loaded. They must preferably have the same size.</li>
-  <li><b>Save as PNG File.</b> 
-    Saves the sprite as a strip in a PNG file. When the sprite has multiple
-	subimages the text _stripXX with XX the number of subimages is automatically 
-	appended.</li>
-  <li><b>Create from Strip.</b> 
-    Allows you to create a sprite from a strip. See the next section for more information.</li>
-  <li><b>Add from Strip.</b> 
-    Use this to add images from a strip. See the next section.</li>
-  <li><b>Close Saving Changes.</b> 
-    Closes the form, saving the changes made to the sprite. If you don't 
-	want to save the changes, click on the close button of the form.</li>
+  <li><b>New. (Nuovo)</b>
+    Crea un nuovo sprite vuoto. Devi indicarne la dimensione.
+        (Ricorda, tutte le immagini di uno sprite devono avere la stessa dimensione.)</li>
+  <li><b>Create from File. (Crea da file)</b> 
+    Crea uno sprite da un file. Puoi usare molti tipi di file.
+        Verrà creato sempre uno sprite costituito da una singola subimmagine,
+        a parte i GIF animati che sono divisi in subimmagini e le strip
+        che hanno il nome che finisce con _stripXX. Mentre selezioni un file
+        puoi indicare se l'immagine dev'essere opaca, se rimuovere lo
+        sfondo o no, e se smussare gli angoli. Puoi  scegliere più
+        immagini che verranno caricate insieme. Dovrebbero avere le stesse
+        dimensioni, altrimenti le loro dimensioni canvas verranno adattate.</li>
+  <li><b>Add from File. (Aggiungi da file)</b> 
+    Aggiunge una o più immagini da un file allo sprite corrente. Se le immagini non
+        hanno la stessa dimensione puoi decidere dove posizionarle o se allungarle.
+        Puoi selezionare più immagini che verranno caricate insieme. Devono avere
+        la stessa dimensione.</li>
+  <li><b>Save as PNG File. (Salva come un PNG)</b> 
+    Salva lo sprite come una strip in un file PNG. Se lo sprite ha più subimmagini
+        il testo _stripXX dove XX è il numro di subimmagini viene aggiunto automaticamente.</li>
+  <li><b>Create from Strip. (Crea da strip)</b> 
+    Ti permette di creare uno sprite da una strip. Vedi la prossima sezione per maggiori informazioni.</li>
+  <li><b>Add from Strip. (Aggiungi da strip)</b> 
+    Aggiunge le immagini da una strip. Vedi la prossima sezione.</li>
+  <li><b>Close Saving Changes. (Chiudi salvando i cambiamenti)</b> 
+    Chiude la finestra, salvando le modifiche apportate. Se non vuoi
+        salvare, clicca sul pulsante "Chiudi" della finestra.</li>
 </ul>
 
 
-<H3>Edit menu</H3>
+<H3>Il menu Edit (modifica)</H3>
 
 <p>
-The edit menu contains the following commands:
+Il menu Edit contiene i segunti comandi:
 
 <ul>
-  <li><b>Undo.</b> 
-    Undo the last change. The last 16 changes can be undone.</li>
-  <li><b>Redo.</b> 
-    Redo the last undone change.</li>
-  <li><b>Cut.</b> 
-    Cut the currently selected subimage to the clipboard. You can edit or use the
-	subimage in a different program this way. However, the transparency information
-	might be lost.</li>
-  <li><b>Copy.</b> 
-    Copy the currently selected subimage to the clipboard.</li>
-  <li><b>Paste.</b> 
-    Paste the image on the clipboard as a new subimage. When it has not the correct
-	size you should indicate how to change this. When the image came from a different
-	program, transparency information might be lost.</li>
-  <li><b>Erase.</b> 
-    Erase the current, or all images to a particular color. A form open in which you can
-	select the color and the opacity (alpha) value. A preview of the result it shown. You
-	can indicate whether to erase all images or only the current one.</li>
-  <li><b>Delete.</b> 
-    Delete the currently selected subimage.</li>
-  <li><b>Move Left.</b> 
-    Move the currently selected subimage one position to the left in the sequence.</li>
-  <li><b>Move Right.</b> 
-    Move the currently selected subimage one position to the right in the sequence.</li>
-  <li><b>Add Empty.</b> 
-    Add a new empty subimage at the end of the sequence.</li>
-  <li><b>Insert Empty.</b> 
-    Insert a new empty subimage before the currently selected subimage.</li>
-  <li><b>Edit.</b> 
-    Edit the currently selected subimage using the built-in image editor.</li>
-  <li><b>Set Tranparency Background.</b> Here you can indicate how the transparent 
-      area of the sprites should be shown in the sprite editor. You can either use a 
-      customizable block pattern, or a color that you can change
-	by clicking on the color box.</li>
+  <li><b>Undo. (Annulla)</b> 
+    Annulla l'ultimo cambiamento. Puoi annullare le prime 16 modifiche.</li>
+  <li><b>Redo. (Ripeti)</b> 
+    Ripete l'ultimo cambiamento annullato.</li>
+  <li><b>Cut. (Taglia)</b> 
+    Taglia l'immagine selezionata e la salva negli appunti. Puoi modificare o usare la
+        subimmagine in un altro progrmma così. Tuttavia, le informazioni sulla trasparenza
+        potrebbero andare perdute.</li>
+  <li><b>Copy. (Copia)</b> 
+    Copia l'immagine selezionata e la salva negli appunti.</li>
+  <li><b>Paste. (Incolla)</b> 
+    Incolla l'immagine negli appunti come una nuova sibimmagine. Se non ha le dimensioni
+        corrette dovrai indicare come cambiarle. Se l'immagine viene da un altro programma,
+        le informazioni sulla trasparenza potrebbero andare perdute.</li>
+  <li><b>Erase. (Cancella)</b> 
+    Cancella una o tutte le subimmagini, riempiendole completamente con un colore.
+        Si apre una finestra in cui puoi scegliere il colore e la trasparenza (alpha).
+        Puoi vedere un'anteprima del risultato. Puoi scegliere se cancellare tutte le
+        subimagini o solo quella corrente.</li>
+  <li><b>Delete. (Elimina)</b> 
+    Elimina la subimmagine selezionata.</li>
+  <li><b>Move Left. (Muovi a sinistra)</b> 
+    Muove la subimmagine selezionata di una posizione a sinistra nella sequenza.</li>
+  <li><b>Move Right. (Mouvi a destra)</b> 
+    Muove la subimmagine selezionata di una posizione a destra nella sequenza.</li>
+  <li><b>Add Empty. (Aggiungi vuota)</b> 
+    Aggiunge una nuova subimmagine vouta alla fine della sequenza.</li>
+  <li><b>Insert Empty. (Inserisci vuota)</b> 
+    Aggiunge una nuova subimmagine vuota prima della subimmagine selezionata.</li>
+  <li><b>Edit. (Modifica)</b> 
+    Modifica la subimmagine selezionata nell'editor di immagini integrato.</li>
+  <li><b>Set Tranparency Background. (Imposta sfondo di trasparenza)</b> Qui puoi indicare 
+      come dev'essere mostrata la parte trasparente dello sprite all'interno dell'editor.
+      Puoi usare un motivo a blocchi personalizzabile, o un colore che puoi cambiare
+       cliccando sulla casella colorata.</li>
 </ul>
 
 
-<H3>Transform menu</H3>
+<H3>Il menu Transform (trasforma)</H3>
 
 <p>
-In the transform menu you can perform a number of transformations on the images. For most of them
-you can choose whether to apply them only to the current sub image or to all images.
+Nel menu Transform puoi applicare alcune trasformazioni alle subimmagini. Per la maggior parte 
+puoi scegliere se applicarle solo alla subimmagine corrente o a tutte le subimmagini.
 
 <ul>
-  <li><b>Shift.</b> 
-    Here you can shift the image(s) an indicated amount horizontally and vertically.</li>
-  <li><b>Mirror/Flip.</b> 
-    Mirror the image(s) horizontally and/or flip them vertically.</li>
-  <li><b>Rotate.</b> 
-    You can rotate the image(s) 90, 180 or 270 degrees, or an arbitrary 
-	amount.</li>
-  <li><b>Scale.</b> 
-    This command scales the image(s) (but not the image size!). You can indicate 
-	the scale factor and whether to scale horizontally and/or vertically.</li>
-  <li><b>Skew.</b> 
-    This command skews the image(s) horizontally and/or vertically with a given amount.</li>
-  <li><b>Resize Canvas.</b> 
-    Here you can change the size of the canvas. You can also indicate where the 
-	images are placed on the new canvas.</li>
-  <li><b>Stretch.</b> 
-    Here you can stretch the images into a new size. You can indicate 
-	the scale factor and the quality.</li>
-  <li><b>Crop.</b> 
-    This makes the images as small as possible. This is very useful because the 
-	larger the images, the more video memory <i>GameMaker</i> will use. 
-	You can indicate the size of a transparent border around the images.
-	If you provide a negative value, the outside of the images will be cut off.</li>
+  <li><b>Shift. (Sposta)</b> 
+    Qui puoi spostare la(le) subimmagine(i) di un numero di pixel dato in orizzontale e in verticale.</li>
+  <li><b>Mirror/Flip. (Immagine speculare/capovolta)</b> 
+    Specchia la(le) subimmagine(i) orizzontalmente e/o la(le) capovolge verticalmente.</li>
+  <li><b>Rotate. (Routa)</b> 
+    Puoi ruotare la(le) subimmagine(i) di 90, 180 o 270 gradi, o di un valore personalizzato.</li>
+  <li><b>Scale. (Ridimensiona)</b> 
+    Questo comando ingrandisce o rimpicciolisce la(le) subimmagine(i) (ma non ne cambia la dimensione!).
+        Puoi indicare il fattore di ridimensionamento e se applicarlo orizzontalmente e/o verticalmente.</li>
+  <li><b>Skew. (Distorci)</b> 
+    Questo comando distorce la(le) subimmagine(i) orizzontalmente e/o verticalmente di un valore dato.</li>
+  <li><b>Resize Canvas. (Ridimensiona canvas)</b> 
+    Qui puoi cambiare la dimensione del canvas (lo spazio trasparente su cui si può disegnare)
+        Puoi anche indicare dove le subimmagini verranno posizionate sul nuovo canvas.
+        (Questo comando cambia la dimensione delle subimmagini.)</li>
+  <li><b>Stretch. (Allarga)</b> 
+    Qui puoi allargare le subimmagini cambiandone la dimensione. Puoi indicare
+        il fattore di ridimensionamento e la qualità.</li>
+  <li><b>Crop. (Ritaglia)</b> 
+    Rende le subimmagini più piccole possibili riducendone le dimensioni.
+        È molto utile perché le immagini più grandi consumano una maggiore quantità di memoria video.
+        Puoi indicare la dimensione di un bordo trasparente attorno alle immagini.
+        Se fornisci un valore negativo, la parte esterna delle immagini verrà tagliata via.</li>
 </ul>
 
 
-<H3>Images menu</H3>
+<H3>Il menu Images (immagini)</H3>
 
 <p>
-In the images menu you can perform a number of operation on the images. Some of these
-are only available in the Standard Edition.
+Nel menu Images puoi eseguire alcune operazioni sulle immagini. Alcune sono disponibili
+solo nella Standard Edition.
 
 <ul>
-  <li><b>Cycle Left.</b> 
-    Cycles all images one place to the left. This effectively starts 
-	the animation at a different point.</li>
-  <li><b>Cycle Right.</b> 
-    Cycles all images one place to the right.</li>
-  <li><b>Black and White.</b> 
-    Makes the image(s) black and white (that is, grayscale).</li>
-  <li><b>Colorize.</b> 
-    Here you can change the color (hue) of the images. 
-	Use the slider to pick the new hue. When you indicate to shift the
-	hue the colors are shifted over the amount indicated giving rather interesting 
-	effects.</li>
-  <li><b>Colorize Partial.</b> 
-    Here you can change the color (hue) of part of the images. You can 
-	select the old hue and a tolerance around it and then indicate the new 
-	hue with which to replace this range of colors. This can be used 
-	for instance to change only the color of the shirts of players. You can pick the old
-	hue also by clicking in the left image. </li>
-  <li><b>Intensity.</b> 
-    Here you can change the intensity by providing values for the color 
-	saturation and the value of the new images.</li>
-  <li><b>Invert.</b> 
-    Inverts the colors in the images.</li>
-  <li><b>Make Opaque.</b> 
-    Remove all transparency information from the images, making them opaque.</li>
-  <li><b>Erase a Color.</b> 
-    You can select a color (either by clicking on the color box or by clicking in the left image.
-	Also you specify a tolerance. All pixels with a color close the the selected color will be
-	made transparent.</li>
-  <li><b>Smooth Edges.</b> 
-    Smooth the edges around the opaque part of the image(s) somewhat to make them look nicer. 
-	(A stronger effect can be created by using Blur but only blurring the transparency; see below.</li>
-  <li><b>Opacity.</b> 
-    Here you can change the opacity (transparency) for the whole image. You can either set it 
-	relative to the current opacity or absolute. (Fully transparent pixels always stay fully
-	transparent.)</li>
-  <li><b>Set Alpha from File.</b> 
-    You select an image. The lightness of the pixels of that image will be used as transparency value.
-	Black pixels will lead to completely transparent pixels, while white pixels will lead to opaque
-	pixels. When the image does not have the correct size it will be stretched.
-	<b><i>Only available in the Standard Edition.</i></b></li>
-  <li><b>Fade.</b> 
-    Here you specify a color and an amount. The pixels in the image(s) 
-	are now faded towards this color with the given amount.</li>
-  <li><b>Blur.</b> 
-    By blurring the images the colors are mixed a bit, making it more vague. You can select a
-	small, medium, or large blur. Also you can select whether to blur the color values and/or
-	the transparency values. Only blurring the transparency values is a nice way to smooth the
-	boundary of the images.</li>
-  <li><b>Sharpen.</b> 
-    This is sort of the reverse of blurring. The image will be made more sharp, enhancing the
-	edges. You can do a subtle sharpening or a strong sharpening. The special sharpening puts
-	additional empasis on the edges, leading to a funny effect. You can sharpen the color
-	values and/or the transparency values. </li>
-  <li><b>Outline.</b> 
-    Create an outline around the image. You are asked for the color and a thickness of the outline.
-	You can also indicate to place the outline inside the image. You can indicate whether to
-	remove the image itself, just keeping the outline, and whether to smooth the outline.
-	<b><i>Only available in the Standard Edition.</i></b></li>
-  <li><b>Shadow.</b> 
-    Create a shadow behind the image. (This will only work when the image is partially transparent.)
-	You indicate the color of the shadow and the opacity. Also you indicate the relative position
-	of the shadow. Finally you can indicate whether it should be a soft or a hard shadow.
-	<b><i>Only available in the Standard Edition.</i></b></li>  
-	<li><b>Glow.</b> 
-    Create a colored glow around the image.
-	You indicate the color of the glow, the opacity and the thickness. 
-	You can also indicate to place the glow inside the image.
-	<b><i>Only available in the Standard Edition.</i></b></li>
-	<li><b>Buttonize.</b> 
-    Turn the image(s) into a button. You specify the color of the button and the opacity. Also you
-	must indicate the thickness of the button boundary and whether it should be smooth or not.
-	<b><i>Only available in the Standard Edition.</i></b></li>
-	<li><b>Gradient Fill.</b> 
-    Adds a gradient fill to the image(s). You specify the two colors of the fill, the opacity,
-	and the kind of fill. Default the image is replace by the gradient although the transparency is
-	maintained. By unchecking the Replace box the gradient is blended onto the image. By checking
-	the Change Transparency box the alpha value of the original image is changed as well. You 
-	can create great effects. For example, make an image black-and-white and then blend a gradient
-	on it. <b><i>Only available in the Standard Edition.</i></b></li>
+  <li><b>Cycle Left. (Sposta tutto a sinistra)</b> 
+    Sposta tutte le subimmagini di un posto a sinistra. Di fatto fa
+        cominciare l'animazione da un punto diverso.</li>
+  <li><b>Cycle Right. (Sposta tutto a destra)</b> 
+    Sposta tutte le subimmagini di un posto a destra.</li>
+  <li><b>Black and White. (Bianco e nero)</b> 
+    Converte la(le) subimmagine(i) in bianco e nero (ovvero in scala di grigi).</li>
+  <li><b>Colorize. (Tingi)</b> 
+    Qui puoi cambiare il colore (tonalità) delle subimmagini.
+        Usa il cursore per prendere una nuova tonalità. Quando scegli di 
+        aggiungere tonalità (casella "Shift the hue") ogni colore è cambiato
+        separatamente in base alla posizione del cursore, dando effetti
+        piuttosto interessanti.</li>
+  <li><b>Colorize Partial. (Tingi parzialmente)</b> 
+    Qui puoi cambiare il colore (tonalità) di una parte dell'immagine. Puoi
+        selezionare la vecchia tonalità e il margine (tolerance) attorno a essa
+        (più è alto, più tonalità simili vengono cambiate oltre a quella scelta)
+        e poi indicare la nuova tonalità con cui rimpiazzare quell'insieme di colori.
+        Può essere usato, ad esempio, per cambiare solo il colore della maglietta dei
+        giocatori. Puoi selezionare la vecchia tonalità anche cliccando sull'immagine
+        a sinistra. </li>
+  <li><b>Intensity. (Intensità)</b> 
+    Qui puoi cambiare l'intensità fornendo il valore per la saturazione
+        dei colori e il valore delle nuove immagini.</li>
+  <li><b>Invert. (Inverti)</b> 
+    Inverte i colori delle immagini.</li>
+  <li><b>Make Opaque. (Rendi opaco)</b> 
+    Rimuove completamente la trasparenza dalle immagini, rendendole opache.</li>
+  <li><b>Erase a Color. (Cancella un colore)</b>
+    Puoi scegliere il colore cliccando sulla casella del colore o nell'immagine di sinistra
+        e il margine (vedi Colorize Partial). Tutti i pixel con un colore abbastanza vicino a
+        quello selezionato verranno resi completamente trasparenti.</li>
+  <li><b>Smooth Edges. (Smussa i bordi)</b> 
+    Smussa i bordi attorno alle parti opache della(delle) immagine(i) per renderle più belle a
+        vedersi. È possibile ottenere un effetto migliore usando Blur sfocando solo le trasparenze (vedi sotto).</li>
+  <li><b>Opacity. (Opacità)</b> 
+    Qui puoi cambiare l'opacità (trasparenza) di tutta l'immagine. Puoi impostarla relativa all'opacità
+        corrente o assoluta. (I pixel completamente trasparenti resteranno sempre tali.)</li>
+  <li><b>Set Alpha from File. (Imposta Alpha da un file)</b> 
+    Scegli un'immagine. La luminosità dei pixel di quell'immagine verrà usata come valore di trasparenza.
+        Pixel neri significano pixel completamente trasparenti, quelli bianchi significano pixel opachi.
+        Se l'immagine non ha la giusta dimensione viene allargata.
+        <b><i>Disponibile solo nella Standard Edition.</i></b></li>
+  <li><b>Fade. (Sbiadisci)</b> 
+    Specifica un colore e un numero. I pixel della(delle) immagine(i)
+        verranno sbiaditi verso questo colore dell'ammontare fornito.</li>
+  <li><b>Blur. (Sfoca)</b> 
+    Sfocando le immagini i colori sono mischiati un po', rendendoli più vaghi. Puoi selezionare
+        una sfocatura piccola, media o grande. Puoi anche scegliere se sfocare i colori e/o
+        le trasparenze. Sfocare solo le trasparenze è un buon modo per smussare i bordi delle
+        immagini.</li>
+  <li><b>Sharpen. (Affina)</b> 
+    È una specie di contrario di sfocare. L'immagine verrà resa più netta, enfatizzando i bordi.
+        Puoi applicare un effetto debole o forte. L'effetto speciale enfatizza ancora di più
+        i bordi, generando un effetto buffo. Puoi affinare i colori e/o le trasparenze.</li>
+  <li><b>Outline. (Cornice)</b> 
+    Crea una cornice attorno all'immagine. Ti viene chiesto il colore e lo spessore della cornice.
+        Puoi anche piazzarla dentro l'immagine. Puoi indicare se rimuovere l'immagine stessa, lasciando
+        solo la cornice, e se smussarla.
+        <b><i>Disponibile solo nella Standard Edition.</i></b></li>
+  <li><b>Shadow. (Ombra)</b> 
+    Crea un'ombra dietro all'immagine. (Funziona solo se l'immagine è parzialmente trasparente.)
+        Puoi indicare il colore e l'opacità dell'ombra. Puoi anche indicare la posizione relativa
+        dell'ombra. Infimne puoi indicare se deve essere un'ombra debole o forte.
+        <b><i>Disponibile solo nella Standard Edition.</i></b></li>  
+  <li><b>Glow. (Alone)</b> 
+    Crea un alone colorato attorno all'immagine.
+        Indica il colore, l'opacità e lo spessore dell'alone.
+        Puoi anche piazzarlo dentro l'immagine.
+        <b><i>Disponibile solo nella Standard Edition.</i></b></li> 
+  <li><b>Buttonize. (Effetto pulsante)</b> 
+    Trasforma la(le) immagine(i) in un pulsante. Specifica il colore e l'opacità del pulsante.
+        Devi anche indicare lo spessore del bordo del bottone e se deve essere smussato o no.
+        <b><i>Disponibile solo nella Standard Edition.</i></b></li> 
+  <li><b>Gradient Fill. (Gradiente)</b> 
+    Agguinge un gradiente alla(alle) immagine(i). Specifica i due colori del gradiente,
+        l'opacità e il tipo di gradiente. L'impostazione di default prevede che l'immagine
+        venga sostituita dal gradiente, nonostante la trasparenza venga mantenuta. Deselezionando
+        la casella Replace (Sostituisci) il gradiente è mescolato con l'immagine. Selezionando
+        la casella Change Transparency (Cambia trasparenza) l'Alpha dell'immagine originale verrà cambiata.
+        Puoi creare grandi effetti. Ad esempio, prova a convertire un'immagine in bianco e nero
+        e mescolarvi un gradiente.
+        <b><i>Disponibile solo nella Standard Edition.</i></b></li> 
 </ul>
 
 <p>
-You will have to experiment with these commands to get the sprites you want.
+Dovrai fare degli esperimenti con questi comandi per ottenere gli sprite che desideri.
 
 
-<H3>Animation menu</H3>
+<H3>Il menu Animation (animazione)</H3>
 
 <p>
-Under the animation menu you can create new animated sprites out of the current sprite. 
-There are many options and you should experiment a bit with them to create the effects 
-you want. Also don't forget that you can always save an animated sprite and later add it to 
-the current one. Also you can always add some empty images and delete unwanted ones. 
-We will briefly go through the different possibilities.
+Sotto il menu Animation puoi creare nuovi sprite animati partendo dallo sprite corrente.
+Ci sono molte opzioni e dovresti sperimentare un po' per ottenere gli effetti che vuoi.
+Inoltre non dimenticare che puoi sempre salvare uno sprite animato per poi aggiungerlo
+a quello corrente. Puoi anche agguingere delle immagini vuote e cancellare quelle inutili.
+Adesso esamineremo brevemente le diverse possibilità.
 
 <ul>
-  <li><b>Set Length.</b> 
-    Here you can change the length of your animation. The animation is 
-	repeated enough times to create the number of frames you indicate. 
-	(Normally you want this to be a multiple of the current number of frames.)</li>
-  <li><b>Stretch.</b> 
-    This command also changes the length of the animation. But this time, 
-	frames are duplicated or removed to get the right number. So if you 
-	increase the number of frames the animation goes slower and if you 
-	decrease the number it goes faster.</li>
-  <li><b>Reverse.</b> 
-    Well, as you could guess this reverses the animation. So it is played backwards.</li>
-  <li><b>Add Reverse.</b> 
-    This time the reverse sequence is added, doubling the number of frames. 
-	This is very useful for making an object go left and right, change color 
-	and return, etc. You sometimes might want to remove the double first 
-	and middle frame that occur.</li>
-  <li><b>Translation Sequence.</b> 
-    You can create an animation in which the image slightly translates in 
-	each step. You must provide the number of frames and the total amount 
-	to move horizontally and vertically.</li>
-  <li><b>Rotation Sequence.</b> 
-    Creates an animation in which the image rotates. You can either choose 
-	clockwise or counterclockwise rotation. Specify the number of frames and 
-	the total angle in degrees (360 is a complete turn). (You might need to 
-	resize the canvas first to make sure the total image remains visible 
-	during the rotation.)</li>
-  <li><b>Colorize.</b> 
-    Creates an animation that turns the image into a particular color.</li>
-  <li><b>Fade to color.</b> 
-    Creates an animation that fades the image to a particular color.</li>
-  <li><b>Disappear.</b> 
-    Makes the image disappear by making it more transparent in each step.</li>
-  <li><b>Shrink.</b> 
-    Shrinks the image to nothing. You can indicate the direction.</li>
-  <li><b>Grow.</b> 
-    Grows the image from nothing.</li>
-  <li><b>Flatten.</b> 
-    Flattens the image to nothing in a given direction.</li>
-  <li><b>Raise.</b> 
-    Raises the image from a given direction.</li>
-  <li><b>Overlay.</b> 
-    Overlays the animation with another sprite or image in a file. You indicate the file
-	and the image(s) from that file are then placed on top of the current animation.
-	When the image from the file has a different size it is stretched.</li>
-  <li><b>Morph.</b> 
-    Morphs the animation to an animation or image from a file. Note that 
-	morphing works best if the two animations cover the same area of the 
-	image. Otherwise, halfway certain pixels disappear and others suddenly appear.</li>
+  <li><b>Set Length. (Imposta lunghezza)</b> 
+    Qui puoi cambiare la lunghezza dell'animazione. La sequenza delle immagini
+        viene ripetuta abbastanza volte per creare il numero di immagini indicato.
+        (Di solito vorrai che sia un multiplo del numero corrente di immagini.)</li>
+  <li><b>Stretch. (Allunga)</b> 
+    Anche questo comando cambia la lunghezza dell'animazione. Ma stavolta
+        le immagini sono duplicate o rimosse per ottenere il giusto numero.
+        Quindi se aumenti il numero di immagini l'animazione andrà più lenta
+        e se lo diminuisci andrà più veloce.</li>
+  <li><b>Reverse. (Inverti)</b> 
+    Be', come potrai indovinare fa andare l'animazione al contrario.</li>
+  <li><b>Add Reverse. (Aggiungi invertito)</b> 
+    Questa volta la sequenza invertita viene aggiunta, raddoppiando il numero
+        di immagini. È molto utile per far andare un oggetto a destra e a sinistra,
+        Cambiare il colore e tornare indietro, ecc. A volte vorrai rimuovere le
+        doppie immagini ce compaiono agli estremi e a metà dell'animazione.</li>
+  <li><b>Translation Sequence. (Sequenza di traslazione)</b> 
+    Puoi creare un'animazione in cui l'immagine si sposta leggermente a ogni step.
+        Devi fornire il numero di immagini e lo spostamento finale sull'asse
+        orizzontale e su quello verticale.</li>
+  <li><b>Rotation Sequence. (Sequenza di rotazione)</b> 
+    Crea un'animazione in cui l'immagine ruota. Puoi scegliere la rotazione in
+        senso orario o antiorario. Specifica il numero di immagini e l'angolo
+        totale in gradi (360 è un giro completo). (Potresti aver bisogno di
+        ridimensionare il canvas prima, per essere sicuro che l'immagine
+        rimanga visibile durante la rotazione.)</li>
+  <li><b>Colorize. (Tingi)</b> 
+    Crea un'animazione in cui l'immagine cambia lentamente il colore,
+        da quello originale a quello originale a quello dato.</li>
+  <li><b>Fade to color. (Sbiadisci verso un colore)</b> 
+    Crea un'animazione in cui l'immagine sbiadisce lentamente verso il colore dato.</li>
+  <li><b>Disappear. (Sparisci)</b> 
+    Fa sparire l'immagine rendendola sempre più trasparente in ogni step.</li>
+  <li><b>Shrink. (Ritira)</b> 
+    Fa ritirare l'immagine verso il nulla. Puoi indicare la direzione.</li>
+  <li><b>Grow. (Cresci)</b> 
+    Fa crescere l'immagine dal nulla da una direzione data. (Di fatto, è il contrario di Shrink.)</li>
+  <li><b>Flatten. (Appiattisci)</b> 
+    Appiattisce l'immagine verso il nulla in una direzione data.</li>
+  <li><b>Raise. (Espandi)</b> 
+    Espande l'immagine dal nulla da una direzione data. (Di fatto, è il contrario di Flatten.)</li>
+  <li><b>Overlay. (Sovrapponi)</b> 
+    Sovrappone all'animazione un altro sprite o immagine in un file. Indica il file
+        e la(le) immagine(i) presenti nel file che verranno messe in cima all'animazione
+        corrente. Se l'immagine ha una dimansione diversa verrà ridimensionata.</li>
+  <li><b>Morph. (Trasforma)</b> 
+    Crea un'animazione in cui l'animazione corrente si trasforma in un'altra presa da un file.
+        Nota che la trasformazione viene meglio se le due animazioni coprono la stessa
+        area. Altrimenti, i pixel a metà potrebbero sparire e altri apparire improvvisamente.</li>
 </ul>
 
 <p>
-In particular the last two commands are very powerful. For example, to blow 
-up an object, add a number of copies and then a number of empty frames. 
-Then overlay it with an explosion animation. (Make sure the numbers of images 
-match.) Alternatively, morph it to the explosion. With some practice you 
-can make great sprites.
+In particolare questi ultimi due comandi sono molto potenti. Per esempio,
+per far esplodere un oggetto, aggiungi un po' di copie e poi un po' di
+immagini vuote. Poi sovrapponi un'animazione di un'esplosione. (Assicurati
+che il numero delle immagini corrisponda.) Oppure potresti trasformarlo
+nell'esplosione. Con un po' di pratica potrai creare grandi sprite.
 
 
 <!--END-->
@@ -328,4 +332,14 @@ GIF files
 PNG files
 animation
 transformations
+editor di sprite
+modificare gli sprite
+creare gli sprite
+anteprima, sprite
+file GIF
+file PNG
+GIF, file
+PNG, file
+animazione
+trasformazione
 --> 
