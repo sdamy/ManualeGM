@@ -8,74 +8,74 @@
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Moving around</h3>
+<h3>Muoversi attorno</h3>
 
-Obviously, an important aspect of games is the moving around of object instances. 
-Each instance has two built-in variables x and y that indicate the position of the 
-instance. (To be precise, they indicate the place where the origin of the sprite is 
-placed. Position (0,0) is the top-left corner of the room. You can change the 
-position of the instance by changing its x and y variables. If you want the 
-object to make complicated motions this is the way to go. You typically put 
-this code in the step event for the object.
-
-<p>
-If the object moves with constant speed and direction, there is an easier 
-way to do this. Each object instance has a horizontal speed (<tt>hspeed</tt>) 
-and a vertical speed (<tt>vspeed</tt>). Both are indicated in pixels per step. 
-A positive horizontal speed means a motion to the right, a negative horizontal 
-speed mean a motion to the left. Positive vertical speed is downwards and 
-negative vertical speed is upwards. So you have to set these variables only 
-once (for example in the creating event) to give the object instance a constant motion.
+Ovviamente, un aspetto importante dei giochi è il movimento delle istanze degli oggetti.
+Ogni istanza ha due variabili built-in, x e y, che indicano la posizione
+dell'istanza. (Per essere più precisi, indicano il punto in cui l'orgiine dello sprite
+si trova). La posizione (0,0) è l'angolo in alto a sinistra della room. Puoi cambiare
+la posizione di un'istanza cambiando le sue variabili x e y. Se vuoi
+far fare dei movimenti complicati all'oggetto questo è il modo per farlo. Di solito
+metti questo codice nell'evento Step.
 
 <p>
-There is quite a different way for specifying motion, using a direction 
-(in degrees 0-359), and a speed (should be non-negative). You can set 
-and read these variables to specify an arbitrary motion. (Internally this 
-is changed into values for <tt>hspeed</tt> and <tt>vspeed</tt>.) Also 
-there is the friction and the gravity and gravity direction. Finally, 
-there is the function <tt>motion_add(dir,speed)</tt> to add a motion to 
-the current one.
+Se l'oggetto si muove con velocità e direzione costante, c'è un modo più
+semplice per fare ciò. Ogni istanza ha una velocità orizzontale (<tt>hspeed</tt>)
+e una verticale (<tt>vspeed</tt>). Entrambe hanno come unità di misura il pixel per step.
+Una velocità orizzontale positiva indica un moto verso destra, una negativa
+verso sinistra. Una velocità verticale positiva indica un movimento verso il basso
+e una negativa verso l'alto. Quindi devi impostare queste variabili solo
+una volta (per esempio nell'evento Create) per dare all'istanza un movimento costante.
 
 <p>
-To be complete, each instance has the following variables and functions dealing with 
-its position and motion:
+C'è un altro modo un po' diverso per specificare il movimento, usando una
+direzione espressa in gradi, e una velocità non-negativa. Puoi impostare
+e leggere queste variabili per specificare un movimento arbitrario. (Internamente
+viene cambiato in valori per le variabili <tt>h/vspeed</tt>). Inoltre
+c'è la frizione, la gravità e la sua direzione. Infine, 
+c'è la funzione <tt>motion_add(dir,speed)</tt> per aggiungere un movimento
+all'istanza corrente.
+
+<p>
+Per essere più precisi, ogni istanza possiede le seguenti variabili e funzioni
+che trattano con la posizione e il movimento:
 
 <p>
 <blockquote>
   <tt><b>x</b></tt>
-    Its x-position.<br>
+	La sua ascissa.<br>
   <tt><b>y</b></tt>   
-    Its y-position.<br>
+	La sua ordinata.<br>
   <tt><b>xprevious</b></tt>   
-    Its previous x-position.<br>
+	L'ascissa precedente.<br>
   <tt><b>yprevious</b></tt>   
-    Its previous y-position.<br>
+	L'ordinata precedente.<br>
   <tt><b>xstart</b></tt>   
-    Its starting x-position in the room.<br>
+	L'ascissa iniziale nella room.<br>
   <tt><b>ystart</b></tt>   
-    Its starting y-position in the room.<br>
+	L'ordinata iniziale nella room.<br>
   <tt><b>hspeed</b></tt>   
-    Horizontal component of the speed.<br>
+	La componente orizzontale della velocità.<br>
   <tt><b>vspeed</b></tt>   
-    Vertical component of the speed.<br>
+	La componente verticale della velocità.<br>
   <tt><b>direction</b></tt>
-    Its current direction (0-360, counter-clockwise, 0 = to the right).<br>
+	La direzione (0-360, in senso antiorario, 0 = destra).<br>
   <tt><b>speed</b></tt>
-    Its current speed (pixels per step).<br>
+	La velocità corrente (pixel / step).<br>
   <tt><b>friction</b></tt>
-    Current friction (pixels per step).<br>
+	La frizione corrente (pixel / step).<br>
   <tt><b>gravity</b></tt>
-    Current amount of gravity (pixels per step).<br>
+	La quantità attuale di gravità (pixel / step).<br>
   <tt><b>gravity_direction</b></tt>
-    Direction of gravity (270 is downwards).<br>
+	Direzione della gravità (270 = verso sotto).<br>
   <tt><b>motion_set(dir,speed)</b></tt>
-    Sets the motion with the given speed in direction dir.<br>
+	Imposta il movimento con la velocità e la direzione data.<br>
   <tt><b>motion_add(dir,speed)</b></tt>
-    Adds the motion to the current motion (as a vector addition).<br>
+	Aggiunge il movimento a quello attuale (è una somma tra vettori).<br>
 </blockquote>
 
 <p>
-There are a large number of functions available that help you in defining your motions:
+Ci sono molte funzioni disponibili che ti permettono di definire i tuoi movimenti:
 
 <p>
 <blockquote>
