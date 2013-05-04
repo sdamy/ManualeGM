@@ -10,92 +10,91 @@
 
 <h3>Tempo</h3>
 
-Good games require careful timing of things happening. Fortunately 
-<i>GameMaker</i> does most of the timing for you. It makes sure things 
-happen at a constant rate. This rate is defined when defining the rooms. 
-But you can change it using the global variable room_speed. So for example,
-you can slowly increase the speed of the game, making it more difficult, 
-by adding a very small amount (like 0.001) to room_speed in every step. 
-If your machine is slow the game speed might not be achieved. This can be 
-checked using the variable fps that constantly monitors the actual number 
-of frames per second. Finally, for some advanced timing you can use the 
-variable current_time that gives the number of milliseconds since the 
-computer was started. Here is the total collection of variables available 
-(only the first one can be changed):
+I giochi buoni richiedono grande attenzione riguardo al tempo. Per
+fortuna <i>GameMaker</i> gestisce il grosso del tempo peer te. Si
+assicura che le cose avvengano con ritmo costante. Questo ritmo
+è definito quando definisci le room. Puoi cambiarlo usando la variabile
+globale room_speed. Quindi, per esempio, puoi incrementare lentamente
+la velocità del gioco, rendendolo più difficile, aggiungendo un valore
+molto piccolo (come 0.001) a room_speed ad ogni step. Se il dispositivo
+è lento, potrebbe non reggere alte velocità. Puoi controllare usando la
+variabile fps che monitora costantemente il numero attuale di frame al
+secondo. Infine, per fare qualcosa di più avanzato puoi usare la
+variabile current_time, che contiene il numero di millisecondi che
+sono passati dall'avvio del computer. Ecco una lista completa delle
+variabili disponibili (solo la prima può essere cambiata):
 
 <p>
 <blockquote>
   <tt><b>room_speed</b></tt>
-    Speed of the game in the current room (in steps per second).<br>
+    La velocità del gioco nella room corrente (in step al secondo).<br>
   <tt><b>fps*</b></tt>
-    Number of frames that are actually drawn per second.<br>
+    Numero di frame che stanno effettivamente venendo disegnate in un secondo.<br>
   <tt><b>current_time*</b></tt>
-    Number of milliseconds that have passed since the system was started.<br>
+    Numero di millisecondi che sono passati dall'avvio del computer.<br>
   <tt><b>current_year*</b></tt>
-    The current year.<br>
+    L'anno corrente.<br>
   <tt><b>current_month*</b></tt>
-    The current month.<br>
+    Il mese corrente.<br>
   <tt><b>current_day*</b></tt>
-    The current day.<br>
+    Il giorno corrente.<br>
   <tt><b>current_weekday*</b></tt>
-    The current day of the week (1=sunday, ..., 7=saturday).<br>
+    Il guiorno della settimana corrente (1=domenica, ..., 7=sabato).<br>
   <tt><b>current_hour*</b></tt>
-    The current hour.<br>
+    L'ora corrente.<br>
   <tt><b>current_minute*</b></tt>
-    The current minute.<br>
+    Il minuto corrente.
   <tt><b>current_second*</b></tt>
-    The current second.<br>
+    Il secondo corrente.<br>
 </blockquote>
 
 <p>
-Sometimes you might want to stop the game for a short while. For this, use the sleep function.
+A volte vorrai fermare il gioco per un breve periodo di tempo. Per farlo, usa la funzione sleep.
 
 <p>
 <blockquote>
   <tt><b>sleep(numb)</b></tt>
-    Sleeps numb milliseconds.<br>
+    Ferma il gioco per numb millisecondi.<br>
 </blockquote>
 
 <p>
-As you should know, every instance has 12 different alarm clocks that you can 
-set. To change the values (or get the values) of the different alarm clocks 
-use the following variable:
-
+Come saprai, ogni istanza ha 12 diversi alarm che puoi impostare. Per cambiarne
+(o ottenerne) i valori usa la seguente variabile array:
 <p>
 <blockquote>
   <tt><b>alarm[0..11]</b></tt>
-    Value of the indicated alarm clock. (Note that alarm clocks only get 
-	updated when the alarm event for the object contains actions!)<br>
+    Valore dell'alarm indicato. (Nota che gli alarm vengono aggiornati
+        solo se il rispettivo alarm event dell'istanza contiene azioni!)<br>
 </blockquote>
 
 <p>
-We have seen that for complex timing issues you can use the time line resource. 
-Each instance can have a time line resource associated with it. The following 
-variables deal with this:
+Abbiamo visto che per gestire tempi più complessi puoi usare la risorsa timeline.
+Ogni istanza può avere una timeline assegnata. Le seguenti funzioni lavorano
+sulle timeline:
 
 <p>
 <blockquote>
   <tt><b>timeline_index</b></tt>
-    Index of the time line associated with the instance. You can set this 
-	to a particular time line to use that one. Set it to -1 to stop using 
-	a time line for the instance. Note that this does not start the time
-	line. For this use the variable <tt>timeline_running</tt>.<br>
+    Indice della timeline assegnata all'istanza. Puoi impostarla su una timeline
+        particolare per usarla. Impostala su -1 per smettere di usare una timeline
+        per l'istanza. Nota che cambiare questa variabile non fa partire la timeline.
+        Per farlo usa la variabile <tt>timeline_running</tt>.<br>
   <tt><b>timeline_position</b></tt>
-    Current position within the time line. You can change this to skip certain 
-	parts or to repeat parts.<br>
+    La posizione corrente nella timeline. Puoi cambiarla per saltare certe parti
+        o ripeterne altre.<br>
   <tt><b>timeline_speed</b></tt>
-    Normally, in each step the position in the time line is increased by 1. 
-	You can change this amount by setting this variable to a different value. 
-	You can use real numbers like 0.5. If the value is larger than one, several 
-	moments can happen within the same time step. They will all be performed 
-	in the correct order, so no actions will be skipped. You can also use a negative
-	value to let the time line play backwards.<br>
+    Normalmente, in ogni step la posizione nella timeline è incrementata di 1.
+        Puoi cambiare le cose impostando questa variabile su un valore diverso.
+        Puoi usare numeri reali come 0.5. Se il valore è più grande di 1, più moment
+        avverranno nello stesso step. Verranno eseguiti nell'ordine corretto, quindi
+        nessun'azione verrà saltata. Puoi anche usare un valore negativo per far andare
+        la timeline all'indietro.<br>
   <tt><b>timeline_running</b></tt>
-    Indicates whether the time line is running (true) or paused or stopped (false).
-	You can change this variable to run or stop the time line.<br>
+    Indica se la timeline è in esecuzione (true) o se è ferma (false).
+        Puoi cambiare questa variabile per far partire o fermare la timeline.<br>
   <tt><b>timeline_looping</b></tt>
-    Indicated whether the time line is looping (true) or not (false). You can change
-	this variable to switch looping on or off.
+    Indica se la timeline si ripete (true) o no (false). Puoi cambiare questa variabile
+        per attivare o disattivare la ripetizione.
 </blockquote>
 
 
