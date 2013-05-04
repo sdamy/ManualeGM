@@ -16,50 +16,51 @@ ogni gioco. Esistono le seguenti funzioni:
 <p>
 <blockquote>
   <tt><b>highscore_show(numb)</b></tt> 
-    Shows the highscore table. numb is the new score. If this score is 
-	good enough to be added to the list, the player can input a name. 
-	Use -1 to simple display the current list.<br>
+    Mostra la lista dei punteggi. numb è il nuovo punteggio. Se il
+        punteggio è abbastanza buono da poter essere inserito nella lista,
+        il giocatore può inserire un nome. Usa -1 per mostrare semplicemente
+        la lista.<br>
   <tt><b>highscore_set_background(back)</b></tt> 
-    Sets the background image to use. <tt>back</tt> must be the index
-	of one of the background resources.<br>
-  <tt><b>highscore_set_border(show)</b></tt> 
-    Sets whether the highscore form must have a border or not.<br>
+    Imposta l'immagine da usare come sfondo. <tt>back</tt> deve essere
+        l'indice di una risorsa background.<br>
+  <tt><b>highscore_set_border(show)</b></tt>
+    Scegli se la finestra della lista deve avere un bordo (true) o no (false).<br>
   <tt><b>highscore_set_font(name,size,style)</b></tt> 
-    Sets the font used for the text in the table. (This is a normal
-	Windows font, not one of the font resources.) You specify the name,
-	size and style (0=normal, 1= bold, 2=italic, 3=bold-italic).<br>
+    Imposta il font per il testo della tabella. (Questo è un font normale
+        di Windows, NON una risorsa font.) Specifica il nome, la dimensione
+        e lo stile (0=normale, 1=grassetto, 2=corsivo, 3=grassetto corsivo).<br>
   <tt><b>highscore_set_colors(back,new,other)</b></tt>
-    Sets the colors used for the background, the new entry in the table,
-	and the other entries.<br>
+    Imposta il colore usato come sfondo, il nuovo punteggio nella lista,
+        e i punteggi precedenti.<br>
   <tt><b>highscore_set_strings(caption,nobody,escape)</b></tt>
-    Changes the different default strings used when showing the
-	highscore table. <tt>caption</tt> is the caption of the form.
-	<tt>nobody</tt> is the string used when there is nobody at
-	the particular rank. <tt>escape</tt> is the string at the
-	bottom indicating to press the escape key. You can in particular
-	use this when your game should use a different language.<br>
+    Cambia le diverse stringhe di default usate quando mostri la lista dei
+        punteggi. <tt>caption</tt> è la didascalia della finestra.
+        <tt>nobody</tt> è la stringa usata quando non c'è nessuno a una
+        particolare posizione. <tt>escape</tt> è la stringa in basso
+        che dice di premere Esc. È particolarmente utile se il gioco
+        è in una lingua diversa dall'inglese.<br>
   <tt><b>highscore_show_ext(numb,back,border,col1,col2,name,size)</b></tt> 
-    Shows the highscore table with a number of options (can also be
-	achieved by using a number of the previous functions).
-	numb is the new score. If this score is good 
-	enough to be added to the list, the player can input a name. Use -1 to 
-	simple display the current list. back is the background image to use, 
-	border indicates whether or not to show the border. col1 is the color for 
-	the new entry, col2 the color for the other entries. name is the name of 
-	the font to use, and size is the font size.<br>
+    Mostra la lista dei punteggi con delle funzioni in più (puoi farcela
+        tranquillamente usando le funzioni precedenti). numb è il nuovo
+        punteggio. Se è abbastanza buono da poter essere aggiunto alla
+        lista, il giocatore può inserire un nome. Usa -1 per mostrare
+        semplicemente la lista. back è il background da usare come sfondo,
+        border indica se mostrare o meno il bordo. col1 è il colore per
+        il nuovo punteggio, col2 è il colore per gli altri punteggi. name è
+        il nome del font da usare, e size è la sua dimensione.<br>
   <tt><b>highscore_clear()</b></tt> 
-    Clears the highscore list.<br>
+    Cancella la lista dei punteggi.<br>
   <tt><b>highscore_add(str,numb)</b></tt> 
-    Adds a player with name str and score numb to the list.<br>
+    Aggiunge il giocatore con nome str e punteggio numb alla lista.<br>
   <tt><b>highscore_add_current()</b></tt> 
-    Adds the current score to the highscore list. The player is asked to provide a name.<br>
+    Aggiunge il punteggio corrente alla lista. Il giocatore deve inserire un nome.<br>
   <tt><b>highscore_value(place)</b></tt> 
-    Returns the score of the person on the given place (1-10). This can be used 
-	to draw your own highscore list.<br>
+    Restituisce il punteggio della persona nella posizione data (1-10). Può essere
+        usato per disegnare la tua lista dei punteggi.<br>
   <tt><b>highscore_name(place)</b></tt> 
-    Returns the name of the person on the given place (1-10).<br>
+    Restituisce il nome della persona alla posizione data (1-10).<br>
   <tt><b>draw_highscore(x1,y1,x2,y2)</b></tt> 
-    Draws the highscore table in the room in the indicated box, using the current font.
+    Disegna la lista dei punteggi nella room nel rettangolo indicato, usando il font corrente.
 </blockquote>
 
 
@@ -71,6 +72,10 @@ ogni gioco. Esistono le seguenti funzioni:
 highscore list
 clearing highscores
 maintaining scores
+
+lista dei punteggi
+cancellare la lista dei punteggi
+mantenere i punteggi
 
 highscore_show_ext()
 highscore_show()
