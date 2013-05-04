@@ -80,64 +80,65 @@ Ci sono molte funzioni disponibili che ti permettono di definire i tuoi moviment
 <p>
 <blockquote>
   <tt><b>place_free(x,y)</b></tt>
-    Returns whether the instance placed at position(x,y) is collision-free. 
-	This is typically used as a check before actually moving to the new position.<br>
+	Restituisce true se l'istanza, piazzata alla posizione (x,y), sarebbe libera da collisioni.
+	Questo è usato tipicamento per fare un controllo prima di spostarla realmente in quella posizione.<br>
   <tt><b>place_empty(x,y)</b></tt>
-    Returns whether the instance placed at position (x,y) meets nobody. 
-	So this function takes also non-solid instances into account.<br>
+	Restituisce true se l'istanza, piazzata alla posizione (x,y), non incontra nessuno.
+	Quindi questa funzione considera anche gli oggetti non solid.<br>
   <tt><b>place_meeting(x,y,obj)</b></tt>
-    Returns whether the instance placed at position (x,y) meets obj. 
-	obj can be an object in which case the function returns true is some 
-	instance of that object is met. It can also be an instance id, the 
-	special word all meaning an instance of any object, or the special word other.<br>
+	Restituisce true se l'istanza, piazzata alla posizione (x,y), incontrerebbe l'oggetto obj.
+	obj può essere un oggetto nel caso in cui la funzione restituisce true
+	se un istanza di quell'oggetto viene incontrata. Può anche essere l'id di un'istanza, 
+	mentre "all" indica qualunque istanza di qualunque oggetto, oppure si può usare "other".<br>
   <tt><b>place_snapped(hsnap,vsnap)</b></tt>
     Returns whether the instance is aligned with the snapping values.<br>
+	Restituisce true se l'istanza è allineata con i valori dello snapping.<br>
   <tt><b>move_random(hsnap,vsnap)</b></tt>
-    Moves the instance to a free random, snapped position, like the corresponding action.<br>
+	Sposta l'istanza in una posizione casuale libera, come l'azione corrispondente.
   <tt><b>move_snap(hsnap,vsnap)</b></tt>
-    Snaps the instance, like the corresponding action.<br>
+	Allinea l'istanza, come l'azione corrispondente.<br>
   <tt><b>move_wrap(hor,vert,margin)</b></tt>
-    Wraps the instance when it has left the room to the other side. <tt>hor</tt>
-	indicates whether to wrap horizontaly and <tt>vert</tt> indicates whether
-	to wrap vertically. <tt>margin</tt> indicates how far the origin of the
-	instance must be outside the room before the wrap happens. So it is a
-	margin around the room. You typically use this function in the Outside
-	event.<br>
+	Teletrasporta l'istanza nel lato opposto quando esce dal limite della room. <tt>hor</tt>
+	indica se spostare orizzontalmente e <tt>vert</tt> verticalmente.
+	<tt>margin</tt> indica quando dev'essere lontana l'origine
+	dell'istanza affinché avvenga lo spostamento. Quindi è
+	il margine attorno alla room. Di solito si usa questa funzione nell'evento
+	Outside.<br>
   <tt><b>move_towards_point(x,y,sp)</b></tt>
-    Moves the instances with speed sp toward position (x,y).<br>
+	Muove l'istanza con la velocità "sp" verso la posizione (x,y).<br>
   <tt><b>move_bounce_solid(adv)</b></tt>
-    Bounces against solid instances, like the corresponding action. adv 
-	indicates whether to use advance bounce, that also takes slanted walls into account.<br>
+	Rimbalza contro le istanze solide, come fa l'azione corrispondente.
+	adv indica se bisogna utilizzare il rimbalzo avanzato, che tiene conto anche dei muri inclinati.<br>
   <tt><b>move_bounce_all(adv)</b></tt>
-    Bounces against all instances, instead of just the solid ones.<br>
+	Rimbalza contro tutte le istanze, anche con quelle non solide.<br>
   <tt><b>move_contact_solid(dir,maxdist)</b></tt>
-    Moves the instance in the direction until a contact position with a solid 
-	object is reached. If there is no collision at the current position, the 
-	instance is placed just before a collision occurs. If there already is a 
-	collision the instance is not moved. You can specify the maximal distance 
-	to move (use a negative number for an arbitrary distance).<br>
+	Muove l'istanza verso una direzione finché non entra in contatto con un solido.
+	Se non c'è collisione alla posizione corrente, 
+	l'istanza viene piazzata appena prima che la collisione avvenga. Se c'è già una collisione
+	l'istanza non viene spostata. Puoi specificare la distanza massima
+	da percorrere (usa un numero negativo per una distanza arbitraria).<br>
   <tt><b>move_contact_all(dir,maxdist)</b></tt>
-    Same as the previous function but this time you stop at a contact with 
-	any object, not just solid objects.<br>
+	Simile alla funzione precedente, ma si ferma a contatto con
+	qualunque oggetto, anche non solido.<br>
   <tt><b>move_outside_solid(dir,maxdist)</b></tt>
-    Moves the instance in the direction until it no longer lies within a solid object. 
-	If there is no collision at the current position the instance is not moved. 
-	You can specify the maximal distance to move (use a negative number for an 
-	arbitrary distance).<br>
+	Sposta l'istanza verso una direzione finché non giace più all'interno di un oggetto solido.
+	Se non c'è collisione alla posizione corrente l'istanza non viene spostata.
+	Puoi specificare la massima distanza da percorrere (negativa = distanza arbitraria).
+	<br>
   <tt><b>move_outside_all(dir,maxdist)</b></tt>
-    Same as the previous function but this time you move until outside any object, 
-	not just solid objects.<br>
+	Simile alla funzione precedente, ma considera anche gli oggetti non solidi.
+	<br>
   <tt><b>distance_to_point(x,y)</b></tt>
-    Returns the distance of the bounding box of the current instance to (x,y). (If the instance
-	does not have a sprite or mask, the result of the function is undefined.)<br>
+	Restituisce la distanza tra la bounding box dell'istanza corrente alla posizione (x,y). (Se l'istanza
+	non ha uno sprite o una mask, il risultato della funzione non è definito.)<br>
   <tt><b>distance_to_object(obj)</b></tt>
-    Returns the distance of the instance to the nearest instance of object obj. (If the instance
-	or object does not have a sprite or mask, the result of the function is undefined.)<br>
+	Restituisce la distanza dall'istanza verso l'istanza più vicina dell'oggetto obj. (Se l'istanza
+	o l'oggetto non hanno uno sprite o una mask, il risultato non è definito).<br>
   <tt><b>position_empty(x,y)</b></tt>
-    Returns whether there is nothing at position (x,y).<br>
+	Restituisce true se non c'è niente alla posizione (x,y).<br>
   <tt><b>position_meeting(x,y,obj)</b></tt>
-    Returns whether at position (x,y) there is an instance obj. obj can be an object, an instance 
-	id, or the keywords <tt>self</tt>, <tt>other</tt>, or <tt>all</tt>.<br>
+	Restituisce true se alla posizione (x,y) c'è l'istanza obj. obj può essere un oggetto, un'istanza
+	o le keywords <tt>self</tt>, <tt>other</tt>, o <tt>all</tt>.<br>
 </blockquote>
 
 
@@ -151,6 +152,12 @@ distance
 moving
 instance variables
 positions
+movimento
+moto
+distanza
+muoversi
+variabili d'istanza
+posizioni
 
 x
 y
@@ -161,10 +168,15 @@ ystart
 hspeed
 vspeed
 direction
+direzione
 speed
+velocità
 friction
+frizione
 gravity
+gravità
 gravity_direction
+direzione della gravità
 motion_set()
 motion_add()
 place_free()
