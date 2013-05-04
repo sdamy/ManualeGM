@@ -9,13 +9,7 @@ Traduzione del manuale di Game Maker 8.1 in italiano.
 Come collaborare
 =======
 
-Per modificare una pagina basta selezionare il file e premere il tasto edit in alto a destra del textbox. Questo creer&agrave; un commit, cio&egrave; un oggetto in cui sono contenute le modifiche.
-
-Se volete tradurre una pagina, prima di tutto cambiate il commento del commit (la textbox sotto, dove c'&egrave; scritto "Commit summary") alla vostra prima modifica per indicare che ci state lavorando (per esempio scrivendo IN TRADUZIONE) ed eventualmente note (su Extendend description") per farsi aiutare da altri o consigli semplici su come strutturare la pagina. (per altre discussioni usare gli Issues)
-Successivamente passate alla traduzione vera e propria.
-Quando avete finito, come commento mettete "TRADOTTO".
-
-Quando modificate una pagina vi pu&ograve; capitare un'errore che indica che mentre voi la modificavate qualcun'altro ha modificato un file, anche non necessariamente quello con cui state lavorando quindi &egrave; SEMPRE consigliabile copiare tutto sulla clipboard o su una copia di backup offline, guardare le modifiche fatte dall'altra persona (solo nel caso in cui quella persona ha modificato il vostro stesso file), e riuppare le vostre modifiche + le sue: se per esempio un file contiene "cat dog", tu stavi inviando "gatto dog", e il tizzio di turno stava inviando "cat cane", unisci le due traduzioni, inviando "gatto cane".
+Alla pagina https://github.com/ZioCrocifisso/ManualeGM è disponibile una lista di files, e a destra del nome c'è scritto lo stato. Ovviamente bisogna cliccare i files con scritto "DA TRADURRE". Una volta scelto il file (cliccandolo), apparirà il suo contenuto: in alto a destra ci sono vari bottoni. Per modificare il file bisogna cliccare il tasto Edit. Nella pagina che si aprirà, ci sarà il contenuto modificabile del file. C'è inoltre un campo da riempire, "Commit summary". Qui dovrà essere inserito lo stato: se non avete ancora finito, scrivete "IN TRADUZIONE" (esattamente così), se avete finito "TRADOTTO", se avete deciso di abbandonare la traduzione, "DA TRADURRE". Cliccate infine Commit Changes. Prima di fare ciò però, è meglio copiare il contenuto del file, poiché potrebbe accadere un errore se qualcun altro stava modificando nel frattempo un altro file. È consigliato inoltre mettere "IN TRADUZIONE" non appena si decide quale file tradurre, anche se non sono state fatte modifiche (in tal caso sarà necessaria comunque una piccola modifica, anche uno spazio in più), per evitare che qualcun altro scelga lo stesso file.
 
 Traduzione di alcuni termini
 =======
