@@ -10,53 +10,54 @@
 
 <h3>Istanze</h3>
 
-In the game, the basic units are the instances of the different objects. During 
-game play you can change a number of aspects of these instances. Also you can 
-create new instances and destroy instances. Besides the movement related 
-variables discussed above and the drawing related variables discussed below, 
-each instance has the following variables:
+Nel gioco, le unità basilari sono le istanze dei diversi object. Durante il gioco
+puoi cambiare molti aspetti di queste istanze. Puoi anche crearne di nuove e
+distruggerle. Oltre alle variabili relative al movimento discusse in una pagina
+precedente e quelle relative al disegno discusse in una pagina successiva,
+ogni istanza ha le seguenti variabili:
 
 <p>
 <blockquote>
   <tt><b>object_index*</b></tt>
-    Index of the object this is an instance of. This variable cannot be changed.<br>
+    L'indice dell'object dell'istanza corrente (di cui è istanza). Questa variabile non può
+        essere cambiata. (Per cambiarla indirettamente, vedi la funzione instance_change più in basso.)<br>
   <tt><b>id*</b></tt>
-    The unique identifier for the instance (&gt;= 100000). (Note that 
-	when defining rooms the id of the instance under the mouse is always indicated.)<br>
+    L'identificatore unico per l'istanza (&gt;= 100000). (Nota che nell'editor
+        di room viene sempre indicato l'id dell'istanza sotto il mouse.)<br>
   <tt><b>mask_index</b></tt>
-    Index of the sprite used as mask for collisions. Give this a value 
-	of -1 to make it the same as the sprite_index.<br>
+    Indice dello sprite usato come maschera per le collisioni. Dagli un
+        valore di -1 e coinciderà con sprite_index.<br>
   <tt><b>solid</b></tt>
-    Whether the instance is solid. This can be changed during the game.<br>
+    Indica se l'istanza è solid o no. Può essere cambiata durante il gioco.<br>
   <tt><b>persistent</b></tt>
-    Whether the instance is persistent and will reappear when moving 
-	to another room. You often want to switch persistence off at certain 
-	moments. (For example if you go back to the first room.)<br>
+    indica se l'istanza è persistente, in tal caso continua a esistere quando
+        passi a un'altra room. Vorrai disattivare la persistenza in certi momenti.
+        (Per esempio quando torni alla prima room.)<br>
 </blockquote>
 
 <p>
-There is one problem when dealing with instances. It is not so easy to identify 
-individual instances. They don't have a name. When there is only one instance 
-of a particular object you can use the object name but otherwise you need to 
-get the id of the instance. This is a unique identifier for the instance. you 
-can use it in <b>with</b> statements and as object identifier. Fortunately 
-there are a number of variables and routines that help you locate instance id's.
+C'è un problema nel lavorare con le istanze. Non è facile identificare le singole
+istanze. Non hanno un nome. Quando c'è solo un'istanza di un particolare object
+puoi usare il nome dell'object ma altrimenti devi ottenere l'id dell'istanza.
+Questo è un identificatore unico per l'istanza. Puoi usarlo nel costrutto <b>with</b>
+e come un identificatore di oject. Per fortuna ci sono alcune variabili e funzioni
+che ti aiutano a individuare gli id delle istanze.
 
 <p>
 <blockquote>
   <tt><b>instance_count*</b></tt>
-    Number of instances that currently exist in the room.<br>
+    Numero delle istanze correntemente esistenti nella room.<br>
   <tt><b>instance_id[0..n-1]*</b></tt>
-    The id of the particular instance. Here n is the number of instance.
+    L'id di un'istanza particolare. n è il numero dell'istanza.
 </blockquote>
 
 <p>
-Note that the assignment of the instances to the instance id's changes every 
-step so you cannot use values from previous steps. Also please note that instances
-that are deleted will remain in the list until the end of the step. So if you
-are also deleting instances you need to check whether the instance still exists.
-Let me give an example. Assume each unit in your game has a particular power 
-and you want to locate the strongest one, you could use the following code:
+Nota che l'assegnazione delle istanze ai numeri di instance_id cambia ogni step quindi non puoi
+usare i valori degli step precedenti. Nota anche che le istanze che sono cancellate
+rimangono in lista fino alla fine dello step. Quindi se stai anche cancellando
+istanze devi controllare se quell'istanza esiste ancora. Lascia che ti dia un esempio.
+Ipotizziamo che ogni unità (degli object chiamati unit) nel gioco abbia una particolare
+potenza e tu voglia trovare la più forte. Potresti usare il codice seguente:
 
 <p>
 <blockquote>
@@ -79,8 +80,8 @@ and you want to locate the strongest one, you could use the following code:
 </blockquote>
 
 <p>
-After the loop maxid will contain the id of the unit with largest power. Of course, for this particular
-situation the following code would be better:
+Alla fine del loop, maxid conterrà l'id dell'istanza con potenza maggiore. Ovviamente, in questa particolare
+situazione è meglio questo codice:
 
 <p>
 <blockquote>
@@ -101,55 +102,57 @@ situation the following code would be better:
 <p>
 <blockquote>
   <tt><b>instance_find(obj,n)</b></tt>
-    Returns the id of the (n+1)'th instance of type obj. obj can be an object 
-	or the keyword all. If it does not exist, the special object noone is 
-	returned. Note that the assignment of the instances to the instance id's 
-	changes every step so you cannot use values from previous steps.<br>
+    Restituisce l'id della (n+1)esima istanza di obj. obj può essere un object
+        o la parola chiave all. Se non esiste, viene restituito l'object speciale
+        noone. Nota che l'assegnazione delle istanze a questi numeri cambia
+        ogni step quindi non puoi usare i valori di step precedenti.<br>
   <tt><b>instance_exists(obj)</b></tt>
-    Returns whether an instance of type obj exists. obj can be an object, 
-	an instance id, or the keyword all.<br>
+    Restituisce true se esiste almeno un'istanza di obj, altrimenti restituisce false.
+        obj può essere un object, un id di un'istanza o la parola chiave all.<br>
   <tt><b>instance_number(obj)</b></tt>
-    Returns the number of instances of type obj. obj can be an object or 
-	the keyword all.<br>
+    Restituisce il numero di istanze di obj. obj può essere un object o la parola chiave all.<br>
   <tt><b>instance_position(x,y,obj)</b></tt>
-  	 Returns the id of the instance of type obj at position (x,y). When 
-	 multiple instances are at that position the first is returned. obj can 
-	 be an object or the keyword all. If it does not exist, the special object 
-	 noone is returned.<br>
+    Restituisce l'id dell'istanza di obj situata in (x,y). Se ci sono più istanze
+         in quella posizione viene restituita la prima. obj può essere un object o
+         la parola chiave all. Se non ce n'è nessuna, viene restituito l'object
+         speciale noone.<br>
   <tt><b>instance_nearest(x,y,obj)</b></tt>
-    Returns the id of the instance of type obj nearest to (x,y). obj can be an 
-	object or the keyword all.<br>
+    Restituisce l'id dell'istanza di obj più vicina a (x,y). obj può essere un object
+        o la parola chiave all.<br>
   <tt><b>instance_furthest(x,y,obj)</b></tt>
-    Returns the id of the instance of type obj furthest away from (x,y). obj can 
-	be an object or the keyword all.<br>
+    Restituisce l'id dell'istanza di obj più lontana da (x,y). obj può essere un object
+        o la parola chiave all.<br>
   <tt><b>instance_place(x,y,obj)</b></tt>
-    Returns the id of the instance of type obj met when the current instance is 
-	placed at position (x,y). obj can be an object or the keyword all. If it 
-	does not exist, the special object noone is returned.<br>
+    Restituisce l'id dell'istanza di obj con cui si verificherebbe una collisione se
+        l'istanza corrente venisse piazzata in (x,y). obj può essere un object o la
+        parola chiave all. Se non ce n'è nessuna, viene restituito l'object
+        speciale noone. (La differenza tra instance_place e instance_position
+        è simile a quella che c'è tra place_meeting e position_meeting, entrambe
+        esaminate qualche pagina prima di questa.)<br>
 </blockquote>
 
 <p>
-The following functions can be used for creating and destroying instances.
+Le seguenti funzioni possono essere usate per creare e distruggere istanze.
 
 <p>
 <blockquote>
   <tt><b>instance_create(x,y,obj)</b></tt>
-    Creates an instance of obj at position (x,y). The function returns 
-	the id of the new instance.<br>
+    Crea un'istanza di obj in posizione (x,y). La funzione restituisce
+        l'id della nouva istanza.<br>
   <tt><b>instance_copy(performevent)</b></tt>
-    Creates a copy of the current instance. The argument indicates whether 
-	the creation event must be executed for the copy. The function returns 
-	the id of the new copy.<br>
+    Crea una copia dell'istanza corrente. L'argument può essere true o false
+        e indica se il Create Event della nouva istanza deve essere eseguito.
+        La funzione restituisce l'id della copia.<br>
   <tt><b>instance_destroy()</b></tt>
-    Destroys the current instance.<br>
+    Distrugge l'istanza corrente.<br>
   <tt><b>instance_change(obj,perf)</b></tt>
-    Changes the instance into obj. perf indicates whether to perform the 
-	destroy and creation events.<br>
+    Cambia l'istanza in obj. perf può essere true o false e indica se
+        gli eventi Destroy e Create devono essere eseguiti o meno.<br>
   <tt><b>position_destroy(x,y)</b></tt>
-    Destroys all instances whose sprite contains position (x,y).<br>
+    Distrugge tutte le istanze il cui sprite contiene la posizione (x,y).<br>
   <tt><b>position_change(x,y,obj,perf)</b></tt>
-    Changes all instances at (x,y) into obj. perf indicates whether to
-	 perform the destroy and creation events.<br>
+    Cambia tutte le istanze situate in (x,y) in obj. Per l'uso di
+         perf vedi instance_change.<br>
 </blockquote>
 
 
