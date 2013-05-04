@@ -10,54 +10,54 @@
 
 <h3>Sfondi</h3>
 
-Each room can have up to 8 backgrounds. Also it has a background color. All aspects of
-these backgrounds you can change in a piece of code using the following variables (note
-that some are arrays that range from 0 to 7, indicating the different backgrounds):
+Ogni stanza può avere fino a 8 sfondi. Ha anche un colore di sfondo. Tutti gli aspetti
+di questi sfondi puoi cambiare in un pezzo di codice usando le seguenti variabili (nota
+che alcuni sono array con range da 0 a 7, indicando gli sfondi differenti):
 
 <p>
 <blockquote>
   <tt><b>background_color</b></tt> 
-  	Background color for the room.<br>
+  	Colore di sfondo della room<br>
   <tt><b>background_showcolor</b></tt> 
-  	Whether to clear the window in the background color.<br>
+  	Quando pulire la room con il colore di sfondo<br>
   <tt><b>background_visible[0..7]</b></tt> 
-  	Whether the particular background image is visible.<br>
+  	Quando l'immagine particolare è visibile.<br>
   <tt><b>background_foreground[0..7]</b></tt> 
-  	Whether the background is actually a foreground.<br>
+  	Quando lo sfondo è effettivamente un sfondo di primo piano.<br>
   <tt><b>background_index[0..7]</b></tt> 
-  	Background image index for the background.<br>
+  	Indice immagine dello sfondo per il background.<br>
   <tt><b>background_x[0..7]</b></tt> 
-  	X position of the background image.<br>
+  	Posizione X dell'immagine del background.<br>
   <tt><b>background_y[0...7]</b></tt> 
-  	Y position of the background image.<br>
+  	Posizione Y dell'immagine del background.<br>
   <tt><b>background_width[0...7]*</b></tt> 
-  	Width of the background image.<br>
+  	Larghezza dell'immagine del background.<br>
   <tt><b>background_height[0...7]*</b></tt> 
-  	Height of the background image.<br>
+  	Altezza dell'immagine del background.<br>
   <tt><b>background_htiled[0..7]</b></tt> 
-  	Whether horizontally tiled.<br>
+  	Quando piastrellato orizzontalmente.<br>
   <tt><b>background_vtiled[0..7]</b></tt> 
-  	Whether vertically tiled.<br>
+  	Quando piastrellato verticalmente.<br>
   <tt><b>background_xscale[0..7]</b></tt> 
-  	Horizontal scaling factor for the background. (This must be positive; you cannot
-	use a negative value to mirror the background.)<br>
+        Fattore di scalatura orizzontale per lo sfondo. (Deve essere positivo; non puoi
+        usare un valore negativo per specchiare lo sfondo.)<br>
   <tt><b>background_yscale[0..7]</b></tt> 
-  	Vertical scaling factor for the background. (This must be positive; you cannot
-	use a negative value to flip the background.)<br>
+  	Fattore di scalatura verticale per lo sfondo. (Deve essere positivo; non puoi
+        usare un valore negativo per capovolgere lo sfondo.)<br>
   <tt><b>background_hspeed[0..7]</b></tt> 
-  	Horizontal scrolling speed of the background
+  	Velocità di scorrimento orizzontale dello sfondo
     (pixels per step).<br>
   <tt><b>background_vspeed[0..7]</b></tt> 
-  	Vertical scrolling speed of the background
+  	Velocità di scorrimento verticale dello sfondo
     (pixels per step).<br>
   <tt><b>background_blend[0..7]</b></tt> 
-  	Blending color to use when drawing the background.
-  	A value of c_white is the default.
-	<b><i>Only available in the Standard Edition!</i></b><br>
+   	Colore di mescolatura da usare quando si disegna lo sfondo.
+   	Un valore di c_white è predefinito.
+	<b><i>Disponibile solo nell'edizione standard!</i></b><br>
   <tt><b>background_alpha[0..7]</b></tt> 
-  	Transparency (alpha) value to use when drawing
-	the background. A value of 1 is the normal setting; a value of 0 is completely
-	transparent.<br>
+  	Valore (alpha) di trasparenza da usare quando si disegna
+  	lo sfondo. Un valore di 1 è l'impostazione normale; un valore di 0 è completamente
+  	trasparente.<br>
 </blockquote>
 
 
@@ -68,6 +68,8 @@ that some are arrays that range from 0 to 7, indicating the different background
 <!-- KEYWORDS
 background settings
 background speed
+impostazioni sfondo
+velocità sfondo
 
 background_color 
 background_showcolor 
