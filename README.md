@@ -32,7 +32,19 @@ Alla fine di ogni pagina trovate le keywords: anche queste vanno tradotte, ma va
 Revisione
 =======
 
-TRADOTTO non significa che il file &egrave; completo, infatti di solito traduciamo velocemente, ma per considerare completo un file dev'essere prima revisionato: se vuoi fare ci&ograve;, rileggi tutto cercando e correggendo errori di grammatica e ortografia (errori comuni, che magari non conoscevate, li trovate qui: http://nonciclopedia.wikia.com/wiki/Aiuto:Manuale/Formattazione#Italiacano) e controlla la coerenza con altre pagine collegate (se l'indice chiama questa pagina "cacca", il titolo dev'essere anche qui "cacca"). Una volta fatta la revisione, committa usando come commento "REVISIONATO".
-Comunque la revisione va' fatta alla fine, quando la maggior parte delle pagine sono ormai tradotte, quindi spiegher&ograve; dopo le cose da fare in una revisione.
- 
-Se trovate COMPLETO in un file, significa che quel file &egrave; stato revisionato, e sono stati applicati degli script su di esso.
+La revisione è la fase finale della traduzione: in questa fase, tutti i file verranno riletti per vedere se contengono degli errori. La revisione va fatta solo dopo aver tradotto tutto e applicato gli script. Durante la revisione bisogna:
+- Controllare se ci sono errori grammaticali, sia tramite strumenti automatici che manualmente.
+- Controllare la coerenza con le altre traduzioni, per esempio nella traduzione di termini come "background". Per evitare di dover controllare tutte le pagine ogni volta, verrà creato un file 0_CONVENZIONI dove ognuno potrà dire come ha tradotto un certo termine, contestare le altre traduzioni, fare richiesta per un consiglio su come tradurre, e, ovviamente, sapere come hanno tradotto un certo termine gli altri.
+- Controllare nella pagina dei crediti se questi sono corretti per il file che state controllando.
+- Sostituire le frasi poco chiare.
+- Controllare se nell'anteprima il file viene visualizzato correttamente. (se non sapete come sistemare, segnalateli a ZioCrocifisso)
+- (questa lista potrebbe ingrandirsi)
+
+Riguardo al primo punto, è importante una buona conoscenza della lingua italiana. Se pensate di non poter correggere gli errori di grammatica ma di poter sistemare tutti gli altri punti, allora fatelo, ma mettete come stato "DA REVISIONARE" e scrivete all'inizio del file:
+<!-- Questo file è stato revisionato ma dev'essere controllata la grammatica -->
+O cose simili.
+
+È importante cominciare la revisione dagli indici, e procedere con i file di livello minore (es. indice globale -> indice sezione 1 -> introduzione -> ecc.).
+Se state revisionando un file importante come un indice, scrivete nel file 0_CONVENZIONI il modo in cui avete tradotto certi termini su cui potrebbero esserci dubbi, come "background", e fate richiesta se avete dubbi. Se invece state revisionando un file minore, dovete rispettare le traduzioni nel file 0_CONVENZIONI, a meno che non troviate termini nuovi dubbiosi.
+
+Per la revisione, si applicano gli stati "DA REVISIONARE" (significa che è stato scriptato), "IN REVISIONE", e "REVISIONATO".
