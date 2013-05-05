@@ -41,7 +41,7 @@ La revisione è la fase finale della traduzione: in questa fase, tutti i file ve
 - (questa lista potrebbe ingrandirsi)
 
 Riguardo al primo punto, è importante una buona conoscenza della lingua italiana. Se pensate di non poter correggere gli errori di grammatica ma di poter sistemare tutti gli altri punti, allora fatelo, ma mettete come stato "DA REVISIONARE" e scrivete all'inizio del file:
-<!-- Questo file è stato revisionato ma dev'essere controllata la grammatica -->
+&lt;!-- Questo file è stato revisionato ma dev'essere controllata la grammatica --&gt;
 O cose simili.
 
 È importante cominciare la revisione dagli indici, e procedere con i file di livello minore (es. indice globale -> indice sezione 1 -> introduzione -> ecc.).
