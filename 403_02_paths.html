@@ -10,53 +10,54 @@
 
 <h3>Paths</h3>
 
-In <i>GameMaker</i> you can define paths and order instances to follow such paths. 
-Although you can use actions for this, there are functions and variables that give 
-you more flexibility:
+In <i>GameMaker</i> puoi definire paths e ordine di istanze per segire dei percorsi.
+Nonostante puoi usare azioni pr questo, ci sono funzioni e variabili che ti danno
+più flessibilità:
 
 <p>
 <blockquote>
   <tt><b>path_start(path,speed,endaction,absolute)</b></tt>
-    Starts a path for the current instance. The <TT>path</TT> is the name of the path you
-    want to start. The <TT>speed</TT> is the speed with which the path must be followed. 
-	A negative speed means that the instance moves backwards along the path. The 
-	<TT>endaction</TT> indicates what should happen when the end of the path 
-	is reached. The following values can be used:
-	<p>
+    Inizia un percorso per l'istanza attuale. Il <TT>path</TT> è il nome del percorso che 
+    vuoi iniziare. Il <TT>speed</TT> è la velocità con cui il percorso deve essere seguito.
+    Una velocità negativa significa che l'istanza si muove indietro lungo il percorso. Il
+    <TT>endaction</TT> indica cosa dovrebbe succedere quando la fine del percorso
+    è raggiunta. I seguenti valore possono essere usati:
+    
+    <p>
 	<blockquote>
-	  0 : stop the path<br>
-	  1: continue from the start position (if the path is not closed we jump to the start position<br>
-	  2: continue from the current position<br>
-	  3: reverse the path, that is change the sign of the speed<br>
+	  0 : ferma il percorso<br>
+	  1: continua dalla posizione iniziale (se il percorso non è chiuso salta alla posizione iniziale)<br>
+	  2: continua dalla posizione attuale<br>
+	  3: inverte il percorso, che cambia il segno della velocità<br>
 	</blockquote>
-    The argument <TT>absolute</TT> should be true or false. When true the absolute 
-	coordinates of the path are used. When false the path is relative to the current 
-	position of the instance. To be more precise, if the speed is positive, the start 
-	point of the path will be placed on the current position and the path is followed 
-	from there. When the speed is negative the end point of the path will be placed 
-	on the current position and the path is followed backwards from there.<br>
+    L'argomento <TT>absolute</TT> dovrebbe essere true o false. Quando true le coordinate
+        assolute del percorso sono usate. Quando false il percorso è relativo all'attuale
+        posizione dell'istanza. Per essere più precisi, se la velocità è positiva, il punto
+        d'inizio del percorso sarà posizionato alla posizione attuale del percorso che è seguito
+        da lì. Quando la velocità è negativa il punto finale del percorso sarà posizionto
+        alla attuale posizione del percorso che è seguito indietro da lì.<br>
   <tt><b>path_end()</b></tt>
-    Ends the following of a path for the current instance.<br>
+    Termina l'inseguimento del percorso per l'istanza attuale.<br>
   <tt><b>path_index*</b></tt>
-    Index of the current path the instance follows. You cannot change this 
-	directly but must use the function above.<br>
+    L'indica del percorso attuale che l'istanza segue. Non puoi cambiare questo
+        direttamente ma devi usare la funzione di sopra.<br>
   <tt><b>path_position</b></tt>
-    Position in the current path. 0 is the beginning of the path. 1 is the end of 
-	the path. The value must lie between 0 and 1.<br>
+    La posizione del percorso attuale. 0 è l'inizio del percorso. 1 è la fine del
+        percorso. Il valore deve lievitare tra 0 e 1.<br>
   <tt><b>path_positionprevious</b></tt>
-    Previous position in the current path. This can be used e.g. in collision events 
-	to set the position on the path back to the previous position.<br>
+    La posizione precedente nel percorso attuale. Può essere usato e.g. negli eventi di collisione
+        per settare la posizione sul percorso indietro alla posizione precedente.<br>
   <tt><b>path_speed</b></tt>
-    Speed (in pixels per step) with which the path must be followed. Use a 
-	negative speed to move backwards.<br>
+    Velocità (in pixels per step) con cui il percorso deve essere seguito. Usa una
+        velocità negativa per spostare indietro.<br>
   <tt><b>path_orientation</b></tt>
-    Orientation (counter-clockwise) into which the path is performed. 0 is 
-	the normal orientation of the path.<br>
+    L'orientazione (anti-oraria) in cui il path è eseguito. 0 è 
+        la normale orientazione del percorso.<br>
   <tt><b>path_scale</b></tt>
-    Scale of the path. Increase to make the path larger. 1 is the default value.<br>
+    La scala del percorso. Incrementa per allargare il percorso. 1 è il valore attuale.<br>
   <tt><b>path_endaction</b></tt>
-    The action that must be performed at the end of the path. You 
-	can use the values indicated above.<br>
+    L'azione che deve essere eseguita alla fine del percorso. Puoi
+        usare i valori indicati sopra.<br>
 </blockquote>
 
 
@@ -67,7 +68,7 @@ you more flexibility:
 
 <!-- KEYWORDS
 path functions
-
+funzioni percorso
 path_start()
 path_end()
 path_index

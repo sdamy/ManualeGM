@@ -9,13 +9,7 @@ Traduzione del manuale di Game Maker 8.1 in italiano.
 Come collaborare
 =======
 
-Per modificare una pagina basta selezionare il file e premere il tasto edit in alto a destra del textbox. Questo creer&agrave; un commit, cio&egrave; un oggetto in cui sono contenute le modifiche.
-
-Se volete tradurre una pagina, prima di tutto cambiate il commento del commit (la textbox sotto, dove c'&egrave; scritto "Commit summary") alla vostra prima modifica per indicare che ci state lavorando (per esempio scrivendo IN TRADUZIONE) ed eventualmente note (su Extendend description") per farsi aiutare da altri o consigli semplici su come strutturare la pagina. (per altre discussioni usare gli Issues)
-Successivamente passate alla traduzione vera e propria.
-Quando avete finito, come commento mettete "TRADOTTO".
-
-Quando modificate una pagina vi pu&ograve; capitare un'errore che indica che mentre voi la modificavate qualcun'altro ha modificato un file, anche non necessariamente quello con cui state lavorando quindi &egrave; SEMPRE consigliabile copiare tutto sulla clipboard o su una copia di backup offline, guardare le modifiche fatte dall'altra persona (solo nel caso in cui quella persona ha modificato il vostro stesso file), e riuppare le vostre modifiche + le sue: se per esempio un file contiene "cat dog", tu stavi inviando "gatto dog", e il tizzio di turno stava inviando "cat cane", unisci le due traduzioni, inviando "gatto cane".
+Alla pagina https://github.com/ZioCrocifisso/ManualeGM è disponibile una lista di files, e a destra del nome c'è scritto lo stato. Ovviamente bisogna cliccare i files con scritto "DA TRADURRE". Una volta scelto il file (cliccandolo), apparirà il suo contenuto: in alto a destra ci sono vari bottoni. Per modificare il file bisogna cliccare il tasto Edit. Nella pagina che si aprirà, ci sarà il contenuto modificabile del file. C'è inoltre un campo da riempire, "Commit summary". Qui dovrà essere inserito lo stato: se non avete ancora finito, scrivete "IN TRADUZIONE" (esattamente così), se avete finito "TRADOTTO", se avete deciso di abbandonare la traduzione, "DA TRADURRE". Cliccate infine Commit Changes. Prima di fare ciò però, è meglio copiare il contenuto del file, poiché potrebbe accadere un errore se qualcun altro stava modificando nel frattempo un altro file. È consigliato inoltre mettere "IN TRADUZIONE" non appena si decide quale file tradurre, anche se non sono state fatte modifiche (in tal caso sarà necessaria comunque una piccola modifica, anche uno spazio in più), per evitare che qualcun altro scelga lo stesso file.
 
 Traduzione di alcuni termini
 =======
@@ -38,7 +32,19 @@ Alla fine di ogni pagina trovate le keywords: anche queste vanno tradotte, ma va
 Revisione
 =======
 
-TRADOTTO non significa che il file &egrave; completo, infatti di solito traduciamo velocemente, ma per considerare completo un file dev'essere prima revisionato: se vuoi fare ci&ograve;, rileggi tutto cercando e correggendo errori di grammatica e ortografia (errori comuni, che magari non conoscevate, li trovate qui: http://nonciclopedia.wikia.com/wiki/Aiuto:Manuale/Formattazione#Italiacano) e controlla la coerenza con altre pagine collegate (se l'indice chiama questa pagina "cacca", il titolo dev'essere anche qui "cacca"). Una volta fatta la revisione, committa usando come commento "REVISIONATO".
-Comunque la revisione va' fatta alla fine, quando la maggior parte delle pagine sono ormai tradotte, quindi spiegher&ograve; dopo le cose da fare in una revisione.
- 
-Se trovate COMPLETO in un file, significa che quel file &egrave; stato revisionato, e sono stati applicati degli script su di esso.
+La revisione è la fase finale della traduzione: in questa fase, tutti i file verranno riletti per vedere se contengono degli errori. La revisione va fatta solo dopo aver tradotto tutto e applicato gli script. Durante la revisione bisogna:
+- Controllare se ci sono errori grammaticali, sia tramite strumenti automatici che manualmente.
+- Controllare la coerenza con le altre traduzioni, per esempio nella traduzione di termini come "background". Per evitare di dover controllare tutte le pagine ogni volta, verrà creato un file 0_CONVENZIONI dove ognuno potrà dire come ha tradotto un certo termine, contestare le altre traduzioni, fare richiesta per un consiglio su come tradurre, e, ovviamente, sapere come hanno tradotto un certo termine gli altri.
+- Controllare nella pagina dei crediti se questi sono corretti per il file che state controllando.
+- Sostituire le frasi poco chiare.
+- Controllare se nell'anteprima il file viene visualizzato correttamente. (se non sapete come sistemare, segnalateli a ZioCrocifisso)
+- (questa lista potrebbe ingrandirsi)
+
+Riguardo al primo punto, è importante una buona conoscenza della lingua italiana. Se pensate di non poter correggere gli errori di grammatica ma di poter sistemare tutti gli altri punti, allora fatelo, ma mettete come stato "DA REVISIONARE" e scrivete all'inizio del file:
+&lt;!-- Questo file è stato revisionato ma dev'essere controllata la grammatica --&gt;
+O cose simili.
+
+È importante cominciare la revisione dagli indici, e procedere con i file di livello minore (es. indice globale -> indice sezione 1 -> introduzione -> ecc.).
+Se state revisionando un file importante come un indice, scrivete nel file 0_CONVENZIONI il modo in cui avete tradotto certi termini su cui potrebbero esserci dubbi, come "background", e fate richiesta se avete dubbi. Se invece state revisionando un file minore, dovete rispettare le traduzioni nel file 0_CONVENZIONI, a meno che non troviate termini nuovi dubbiosi.
+
+Per la revisione, si applicano gli stati "DA REVISIONARE" (significa che è stato scriptato), "IN REVISIONE", e "REVISIONATO".

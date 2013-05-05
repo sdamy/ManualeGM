@@ -1,3 +1,4 @@
+<!-- Tradotto in parte da Tizzio, traduzione abbandonata (e ripresa)-->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html><head>
@@ -6,11 +7,16 @@
 </head>
 <body background="images/back.gif">
 <!--START-->
+<<<<<<< HEAD
 <!--In traduzione da Tizzio-->
 
+=======
+<!--In traduzione da Tizzio (e anche da torchipeppo!)-->
+
+>>>>>>> master
 <h1>Eventi</h1>
 
-<i>GameMaker</i> usa un approcio orientato agli eventi e funziona nel seguente modo.
+<i>GameMaker</i> usa un approccio orientato agli eventi e funziona nel seguente modo.
 Ogni volta che accade qualcosa nel gioco, le instanze degli oggetti richiamano degli eventi (un tipo di messaggio che dice
 che qualcosa &egrave; accaduto). Le instanze possono quindi "reagire" a questo tipo di messaggi eseguendo delle azioni.
 Per ogni oggetto potrai utilizzare una serie di eventi nei quali dovrai inserire delle azioni.
@@ -21,8 +27,13 @@ dovrai quindi impostarlo tramite drag&drop per indicare l'azione.
 Nel Form delle propriet&agrave; dell'oggetto, c'&egrave; una lista di eventi ai quali l'oggetto dovr&agrave; reagire.
 Inizialmente &egrave; vuoto.
 Puoi aggiungere un evento premendo il bottone <b>Add Event</b>.
+<<<<<<< HEAD
 Apparir&agrave; un altro form in cui potrai scegliere tra diversi tipi di eventi.
-Qui potrai selezionare l'evento che vuoi aggiungere. A volte un menu apparir&agrave; per scegliere delle impostazioni extra.
+Qui potrai selezionare l'evento che vuoi aggiungere. A volta un menu apparir&agrave; per scegliere delle impostazioni extra.
+=======
+Apparirà un altro form in cui potrai scegliere tra diversi tipi di eventi.
+Qui potrai selezionare l'evento che vuoi aggiungere. A volte un menu apparirà per scegliere delle impostazioni extra.
+>>>>>>> master
 Per esempio, per gli eventi legati alla tastiera dovrai scegliere il pulsante a cui associare l'evento.
 In basso troverai una lista completa degli eventi, compresa la descrizione.
 Puoi cambiare un evento semplicemente cliccando su "change" e sceglierne un altro.
@@ -30,9 +41,15 @@ Nel prossimo capitolo troverai una descrizione delle azioni che possono eseguire
 (Queste azioni si trovano all'estrema destra dell'interfaccia e sono raggruppate in delle schede.
 Le azioni possono essere "inserite" in un evento semplicemente trascinando l'icona nel riquadro a 
 destra del riquadro eventi.
+<<<<<<< HEAD
 Puoi posizionare una o pi&ugrave; azioni nell'ordine che preferisci.
 Quando inserirai un azione, si aprir&agrave; una finestra in cui dovrai inserire dei parametri relativi
 a quell'azione oppure del codice gml(GameMaker Language).
+=======
+Puoi posizionare una o più azioni nell'ordine che preferisci.
+Quando inserirai un azione, si aprirà una finestra in cui dovrai inserire dei parametri relativi
+a quell'azione oppure del codice gml (GameMaker Language).
+>>>>>>> master
 La schermata dovrebbe apparire in questo modo
 
 <p>
@@ -58,9 +75,15 @@ Per cancellare l'azione selezionata clicca sul bottone <b>Delete</b> posizionato
 Se non ci sono azioni nell'evento, questo verr&agrave; cancellato alla chiusura.
 Ricorda: anche se hai assegnato delle azioni, ma vuoi cambiare l'evento 
 (per esempio se vuoi usare l'evento associato ad un altro tasto), puoi farlo tramite il bottone
+<<<<<<< HEAD
 <b>Change</b> situato in basso, potrai quindi scegliere un nuovo evento dalla finestra che si aprir&agrave;.
 Puoi anche duplicare un evento col tasto destro del mouse, apparir&agrave; una finestra, scegli l'evento che vuoi
 e veranno copiate le azioni dell'altro evento, nel nuovo.
+=======
+<b>Change</b> situato in basso, potrai quindi scegliere un nuovo evento dalla finestra che si aprirà.
+Puoi anche duplicare un evento col tasto destro del mouse, apparirà una finestra, scegli l'evento che vuoi
+e verranno copiate le azioni dell'altro evento, nel nuovo.
+>>>>>>> master
 
 <p>
 Come detto sopra, per aggiungere un evento premi il bottone <b>Add Event</b>.
@@ -75,8 +98,13 @@ Di seguito una descrizione dei vari eventi:
 
 <p>
 <b><img src="images/event_create.bmp"> Evento Create (creazione)</b><br>
+<<<<<<< HEAD
 Questo evento si attiva quando un instanza di un oggetto viene creata.
-&Egrave; normalmente usata per settare alcune variabili o azioni che avvengono solo una volta.
+&egrave; normalmente usata per settare alcune variabili o azioni che avvengono solo una volta.
+=======
+Questo evento si attiva quando un'instanza di un oggetto viene creata.
+È normalmente usata per settare alcune variabili o azioni che avvengono solo una volta.
+>>>>>>> master
 
 <p>
 <b><img src="images/event_destroy.bmp"> Evento Destroy (distruzione)</b><br>
@@ -112,11 +140,11 @@ Questo &egrave; tipicamente usato per cambiare Sprite in base alla nuova direzio
 
 <p>
 <b><img src="images/event_collision.bmp"> Evento Collision (collisione)</b><br>
-Ogni volta che 2 instanze collidono(i loo sprites si sovrappongono) si attiva l'evento collisione.
+Ogni volta che 2 instanze collidono(i loro sprites si sovrappongono) si attiva l'evento collisione.
 Per essere precisi, accadono 2 eventi collisione, uno per ogni instanza.
 L'instanza pu&ograve; reagire a questa collisione, con delle azioni.
 Per inserire delle azioni, sempre tramite il bottone Add Event puoi scegliere collision e infine decidere
-verso quale eggetto "reagire" in caso di collisione. Potrai quindi aggiungere delle azioni nell'apposito riquadro a destra.
+verso quale oggetto "reagire" in caso di collisione. Potrai quindi aggiungere delle azioni nell'apposito riquadro a destra.
 
 
 <p>
@@ -153,10 +181,32 @@ i tasti relativi al "numeric keypad" (tastierino numerico) vengono attivati SOLO
 
 <p>
 <b><img src="images/event_mouse.bmp"> Eventi Mouse</b><br>
+<<<<<<< HEAD
 Un evento mouse viene attivato per un instanza qando il mouse &egrave; posto all'interno del suo sprite che rappresenta
 l'instanza. In base a quale tasto premi possiamo avere "no button", "left button", "right button" o "middle button"
 (in ordine, nessun bottone, sinistro, destro, centrale).
 Gl eventi mouse sono generati ogni step finch&egrave; il player tiene il bottone del mouse premuto.
+L'evento press invece, viene attivato solo per lo step in cui il player preme, viceversa quello release, 
+quando viene rilasciato (nota che questo evento avviene SOLO se il mouse &egrave; sopra l'instanza).
+Se vuoi invece che gli eventi vengono attivati sempre anche se il mouse non &egrave; sopra il mouse, usa i "global mouse event"
+pu&ograve; essere trovato nel submenu.
+Ci sono 2 eventi mouse speciali: Mouse enter (che avviene qando l'instana entra nell'instanza
+
+that can be found in a submenu. There are
+two special mouse events. The mouse enter event happens when the mouse enters the
+instance. The mouse leave event happens when the mouse leaves the instance. These
+events are typically used to change the image or play some sound. 
+Mouse wheel up and mouse wheel down events happen when the user moves the mouse wheel.
+Finally there are a
+number of events related to the joystick. You can indicate actions for the four main
+directions of the joystick (in a diagonal direction both events happen). Also you can
+define actions for up to 8 joystick buttons. You can do this both for the primary
+joystick and the secondary joystick.
+=======
+Un evento mouse viene attivato per un instanza quando il mouse è posto all'interno del suo sprite che rappresenta
+l'instanza. In base a quale tasto premi possiamo avere "no button", "left button", "right button" o "middle button"
+(in ordine, nessun bottone, sinistro, destro, centrale).
+Gli eventi mouse sono generati ogni step finchè il player tiene il bottone del mouse premuto.
 L'evento press invece, viene attivato solo per lo step in cui il player preme, viceversa quello release, 
 quando viene rilasciato (nota che questo evento avviene SOLO se il mouse è sopra l'instanza).
 Se vuoi invece che gli eventi vengono attivati sempre anche se il mouse non è sopra il mouse, usa i "global mouse event"
@@ -169,6 +219,7 @@ mossa in giù. Infine ci sono gli eventi dedicati al joystick. Puoi indicare azi
 le quattro direzioni del joystick (in diagonale si verificano due eventi). Puoj anche
 definire fino a 8 pulsanti del joystick. Puoi impostare sia un joystick primario che
 uno secondario.
+>>>>>>> master
 
 <p>
 <b><img src="images/event_other.bmp"> Eventi Other (altri)</b><br>

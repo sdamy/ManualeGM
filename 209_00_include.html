@@ -8,9 +8,9 @@
 <!--START-->
 
 
-<h3>Including files in stand-alone games</h3>
+<h3>Includere file nei giochi indipendenti</h3>
 
-<b><i>This functionality is only available in the Standard Edition of GameMaker.</i></b>
+<b><i>Questa funzionalità è disponibile solo nella versione Standard Edition of GameMaker This functionality is only available in the Standard Edition of GameMaker.</i></b>
 
 <p>
 Come è stato indicato precedentemente, puoi creare versioni indipendenti (eseguibili) del tuo gioco.
@@ -90,31 +90,44 @@ files are normally not removed (unless they are in the temporary folder which is
 rimossa). Puoi cambiare questo selezionando <b>Remove at game end</b> (Rimuovi alla fine/termine del gioco).
 removed). You can change this by checking <b>Remove at game end</b>.
 
-<p>
-<b>Un'avvertenza. Se stai provando il tuo gioco, il percorso dei file utilizzato
+<b>Un'avvertenza. Se stai provando il tuo gioco, il percorso dei file (di lavoro) utilizzato
 <b>A word of warning is in place here. If you are testing your game, the working directory
-dal gioco è il percorso dove si trovi il file .gm81. Se i tuoi file d'inclusione si trovano
+dal gioco è il percorso dove si trovi il file .gm81. Se  anche i tuoi file d'inclusione si trovano
 of the game is the directory where the .gm81 file is stored. If your include files are also
-anch'essi nello stesso percorso e decidi di rimuoverli al termine del gioco potresti perderli 
+nello stesso percorso e tu scegli di rimuoverli al termine del gioco potresti perderli 
 stored here and you choose to remove them at the end of the game you might loose them
+tutti insieme! Così è meglio non posizionare questi file con il file .gm81 ma (e.g. ??) in una sottocartella!
 alltogether! So better not store these files with the .gm81 file but e.g. in a subfolder!</b>
  
 <p>
+Infine puoi indicare in quale cartella i file debbano essere esportati.
 Finally you can indicate to what folder the files are exported.
+Qui sono disponibili quattro opzioni. Nel
 There are four options here. In the
+caso predefinito i file sono esportati nella stessa cartella dove si trovi salvato 
 default situation the files are exported in the folder where the stand-alone game is
+il gioco indipendente (l'eseguibile). Questo è anche il percorso di lavoro per il gioco. Così il gioco può utilizzare già (soltanto)
 stored. This is also the working directory for the game. So the game can just use
+i nomi dei file per accedervi (non è necessario inserire tutto il percorso dei file)(non sono necessari i percorsi dei file). Questo lavora (andrà) bene se il gioco indipendente
 the file names to access them (no paths are required). This works well if the stand-alone
+si trovi (e.g. ??) sul disco rigido (hard disk) ma fallirà se è posizionato su di un dispositivo di sola lettura (e.g. ??), ad esempio su di un CD.
 is stored e.g. on the hard disk but will fail if it is stored on a read-only device,
 e.g. on a CD.
 
 <p>
+La seconda possibilità è indicare quali file debbano essere esportati nella cartella
 The second possibility is to indicate that the files must be exported into the temporary
+temporanea che viene creata durante l'avvio del gioco. Se selezioni questa opzione avrai
 folder that is created during the running of the game. If you select this option you will
+bisogno di fornire il percorso fino alla cartella temporanea quando utilizzi il nome del file durante il 
 need to provide the path to the temporary folder when you use the file name during the
+gioco. Questo percorso può essere
 game. This path can be
+ottenuto usando la variabile interna (built-in variable) <tt>temp_directory</tt>. Non dimenticare di
 obtained using the built-in variable <tt>temp_directory</tt>. Don't forget to
+aggiungere la contro-barra (barra invertita) ("\") in questo caso. Così per (e.g. ??) avviare la riproduzione di un file video dovresti inserire il
 add the backslash in this case. So to e.g. play a video file you might type in
+seguente codice:
 the following piece of code:
 
 <p>
@@ -127,20 +140,31 @@ the following piece of code:
 </blockquote>
 
 <p>
+Realizza (Renditi conto/Tieni a mente/Ricorda/Tieni presente) che questa cartella temporanea viene rimossa una volta che il
 Realize that this temporary folder is removed once the
+gioco sia terminato (l'esecuzione del gioco sia terminata). Così non puoi conservare partite salvate o particolari informazioni in questo caso.
 game is finished. So you e.g. cannot store save games or special information in this case.
+Scegli questa opzione solamente quando vuoi che il gioco venga avviato da un CD o quando non vuoi
 Only choose this option when you want the game to be run from a CD or when you do not
+scrivere alcun file al di fuori del tuo gioco.
 write any files from within your game.
 
 <p>
+La terza opzione è indicare tu stesso la cartella nella quale esportare il file.
 The third option is to indicate the folder to which the file must be exported yourself.
-If it does not exist it will be created. E.g. you could specify <tt>C:\MyGame</tt>. (Note 
+Se non dovesse già esistere verrebbe (verrà) creata. Ad esempio (E.g. = exempli gratia / exemple given) potresti specificare <tt>C:\MyGame</tt>. (Nota
+If it does not exist it will be created. E.g. you could specify <tt>C:\MyGame</tt>. (Note
+che devi fornire un percorso completo e che non dovresti includere una barra rovesciata ("\") alla fine.)
 that you need to provide a full patgh and that you should not include a backslash at the end.)
+Questa opzione è consentita soltanto quando il gioco non venisse eseguito in modalità protetta.
 This is only allowed when the game does not run in secure mode.
 
 <p>
+Infine, puoi indicare di non esportare il file automaticamente. In questo caso potresti
 Finally, you can indicate not the export the file automatically. In this case you should
+usare ad esempio la funzione <tt>export_include_file(fname)</tt> per esportarlo tu stesso (da te/manualmente) quando
 use e.g. the function <tt>export_include_file(fname)</tt> to export it yourself when
+richiesto.
 required.
 
 
@@ -154,4 +178,9 @@ exporting files
 export directory
 data files
 adding files
+includere file
+esportare file
+percorso d'esportazione
+file dati
+aggiungere file
 --> 
