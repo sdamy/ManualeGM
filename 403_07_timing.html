@@ -13,21 +13,21 @@
 I giochi buoni richiedono grande attenzione riguardo al tempo. Per
 fortuna <i>GameMaker</i> gestisce il grosso del tempo peer te. Si
 assicura che le cose avvengano con ritmo costante. Questo ritmo
-è definito quando definisci le room. Puoi cambiarlo usando la variabile
+&egrave; definito quando definisci le room. Puoi cambiarlo usando la variabile
 globale room_speed. Quindi, per esempio, puoi incrementare lentamente
-la velocità del gioco, rendendolo più difficile, aggiungendo un valore
+la velocit&agrave; del gioco, rendendolo pi&ugrave; difficile, aggiungendo un valore
 molto piccolo (come 0.001) a room_speed ad ogni step. Se il dispositivo
-è lento, potrebbe non reggere alte velocità. Puoi controllare usando la
+&egrave; lento, potrebbe non reggere alte velocit&agrave;. Puoi controllare usando la
 variabile fps che monitora costantemente il numero attuale di frame al
-secondo. Infine, per fare qualcosa di più avanzato puoi usare la
+secondo. Infine, per fare qualcosa di pi&ugrave; avanzato puoi usare la
 variabile current_time, che contiene il numero di millisecondi che
 sono passati dall'avvio del computer. Ecco una lista completa delle
-variabili disponibili (solo la prima può essere cambiata):
+variabili disponibili (solo la prima pu&ograve; essere cambiata):
 
 <p>
 <blockquote>
   <tt><b>room_speed</b></tt>
-    La velocità del gioco nella room corrente (in step al secondo).<br>
+    La velocit&agrave; del gioco nella room corrente (in step al secondo).<br>
   <tt><b>fps*</b></tt>
     Numero di frame che stanno effettivamente venendo disegnate in un secondo.<br>
   <tt><b>current_time*</b></tt>
@@ -68,8 +68,8 @@ Come saprai, ogni istanza ha 12 diversi alarm che puoi impostare. Per cambiarne
 </blockquote>
 
 <p>
-Abbiamo visto che per gestire tempi più complessi puoi usare la risorsa timeline.
-Ogni istanza può avere una timeline assegnata. Le seguenti funzioni lavorano
+Abbiamo visto che per gestire tempi pi&ugrave; complessi puoi usare la risorsa timeline.
+Ogni istanza pu&ograve; avere una timeline assegnata. Le seguenti funzioni lavorano
 sulle timeline:
 
 <p>
@@ -83,14 +83,14 @@ sulle timeline:
     La posizione corrente nella timeline. Puoi cambiarla per saltare certe parti
         o ripeterne altre.<br>
   <tt><b>timeline_speed</b></tt>
-    Normalmente, in ogni step la posizione nella timeline è incrementata di 1.
+    Normalmente, in ogni step la posizione nella timeline &egrave; incrementata di 1.
         Puoi cambiare le cose impostando questa variabile su un valore diverso.
-        Puoi usare numeri reali come 0.5. Se il valore è più grande di 1, più moment
+        Puoi usare numeri reali come 0.5. Se il valore &egrave; pi&ugrave; grande di 1, pi&ugrave; moment
         avverranno nello stesso step. Verranno eseguiti nell'ordine corretto, quindi
-        nessun'azione verrà saltata. Puoi anche usare un valore negativo per far andare
+        nessun'azione verr&agrave; saltata. Puoi anche usare un valore negativo per far andare
         la timeline all'indietro.<br>
   <tt><b>timeline_running</b></tt>
-    Indica se la timeline è in esecuzione (true) o se è ferma (false).
+    Indica se la timeline &egrave; in esecuzione (true) o se &egrave; ferma (false).
         Puoi cambiare questa variabile per far partire o fermare la timeline.<br>
   <tt><b>timeline_looping</b></tt>
     Indica se la timeline si ripete (true) o no (false). Puoi cambiare questa variabile
@@ -109,7 +109,7 @@ speed
 
 tempo
 frame al secondo
-velolcità
+velolcit&agrave;
 
 room_speed
 fps

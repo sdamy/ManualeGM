@@ -33,10 +33,10 @@ Per l'interazione con la tastiera, esistono le seguenti variabili e funzioni:
 <p>
 
 A volte tona utile abbinare un tasto a un altro. Per esempio vorrai permettere
-al giocatore di usare sia le frecce che il tastierino numerico. Anziché
+al giocatore di usare sia le frecce che il tastierino numerico. Anzich&eacute;
 copiare le azioni puoi abbinare i tasti del tastierino numerico ai tasti
 freccia. Vorrai anche implementare un meccanismo che permetta al giocatore di
-sceglieere i tasti da usare. Perciò esistono le seguenti funzioni:
+sceglieere i tasti da usare. Perci&ograve; esistono le seguenti funzioni:
 
 <p>
 <blockquote>
@@ -45,29 +45,29 @@ sceglieere i tasti da usare. Perciò esistono le seguenti funzioni:
   <tt><b>keyboard_get_map(key)</b></tt> 
         Restituisce l'abbinamento corrente per il tasto.<br>
   <tt><b>keyboard_unset_map()</b></tt> 
-        Reimposta tutti i tasti, abbinanboli a sé stessi.<br>
+        Reimposta tutti i tasti, abbinanboli a s&eacute; stessi.<br>
 </blockquote>
 
 <p>
 
-Per controllare se un tasto particolare della tastiera o del mouse è premuto, puoi usare
-le seguenti funzioni. Torna particolarmente utile se più tasti devono essere premuti simultaneamente.
+Per controllare se un tasto particolare della tastiera o del mouse &egrave; premuto, puoi usare
+le seguenti funzioni. Torna particolarmente utile se pi&ugrave; tasti devono essere premuti simultaneamente.
 
 <p>
 <blockquote>
   <tt><b>keyboard_check(key)</b></tt>
-    Restituisce se il tasto col codice dato è premuto al momento.<br>
+    Restituisce se il tasto col codice dato &egrave; premuto al momento.<br>
   <tt><b>keyboard_check_pressed(key)</b></tt>
-    Restituisce se il tasto col codice dato è stato premuto dall'ultimo step.<br>
+    Restituisce se il tasto col codice dato &egrave; stato premuto dall'ultimo step.<br>
   <tt><b>keyboard_check_released(key)</b></tt>
-    Restituisce se il tasto col codice dato è stato rilasciato dall'ultimo step.<br>
+    Restituisce se il tasto col codice dato &egrave; stato rilasciato dall'ultimo step.<br>
   <tt><b>keyboard_check_direct(key)</b></tt> 
-    Restituisce se il tasto col codice particolare è premuto
+    Restituisce se il tasto col codice particolare &egrave; premuto
         controllando direttamente l'hardware. Il risultato non dipende
-        da quale applicazione è in uso. Ciò permette qualche controllo
-        in più. In particolare, puoi usare i codici vk_lshift, vk_lcontrol,
+        da quale applicazione &egrave; in uso. Ci&ograve; permette qualche controllo
+        in pi&ugrave;. In particolare, puoi usare i codici vk_lshift, vk_lcontrol,
         vk_lalt, vk_rshift, vk_rcontrol e vk_ralt per controllare se
-        è premuto lo shift, il control o l'alt di sinistra o di destra.<br>
+        &egrave; premuto lo shift, il control o l'alt di sinistra o di destra.<br>
 </blockquote>
 
 <p>
@@ -77,7 +77,7 @@ Le seguenti funzioni possono essere usate per manipolare lo stato della tastiera
 <p>
 <blockquote>
   <tt><b>keyboard_get_numlock()</b></tt> 
-    Restituisce se Blocca Numeri è attivato.<br>
+    Restituisce se Blocca Numeri &egrave; attivato.<br>
   <tt><b>keyboard_set_numlock(on)</b></tt> 
     Attiva (true) o disattiva (false) Blocca Numeri.<br>
   <tt><b>keyboard_key_press(key)</b></tt> 
@@ -92,12 +92,12 @@ Esistono le seguenti costanti da usare come codici:
 
 <p>
 <blockquote>
-  <tt><b>vk_nokey</b></tt> significa che nessun tasto è premuto<br>
-  <tt><b>vk_anykey</b></tt> significa che è premuto un tasto qualsiasi<br>
+  <tt><b>vk_nokey</b></tt> significa che nessun tasto &egrave; premuto<br>
+  <tt><b>vk_anykey</b></tt> significa che &egrave; premuto un tasto qualsiasi<br>
   <tt><b>vk_left</b></tt> codice per la freccia sinistra<br>
   <tt><b>vk_right</b></tt> codice per la freccia destra<br>
   <tt><b>vk_up</b></tt> codice per la freccia su<br>
-  <tt><b>vk_down</b></tt> codice per la freccia giù<br>
+  <tt><b>vk_down</b></tt> codice per la freccia gi&ugrave;<br>
   <tt><b>vk_enter</b></tt> tasto Invio<br>
   <tt><b>vk_escape</b></tt> tasto Esc<br>
   <tt><b>vk_space</b></tt> tasto Spazio<br>
@@ -111,7 +111,7 @@ Esistono le seguenti costanti da usare come codici:
   <tt><b>vk_delete</b></tt> tasto Canc<br>
   <tt><b>vk_insert</b></tt> tasto Inserisci (Ins)<br>
   <tt><b>vk_pageup</b></tt> tasto Pagina Su<br>
-  <tt><b>vk_pagedown</b></tt> tasto Pagina Giù<br>
+  <tt><b>vk_pagedown</b></tt> tasto Pagina Gi&ugrave;<br>
   <tt><b>vk_pause</b></tt> tasto Pausa/Interr (pause/break in inglese)<br>
   <tt><b>vk_printscreen</b></tt> tasto Stamp/R Sist (printscreen/sysrq in inglese)<br>
   <tt><b>vk_f1 ... vk_f12</b></tt> codici per i tasti funzione (F1, F2, ..., F12)<br>
@@ -141,7 +141,7 @@ Le seguenti costanti possono essere usate solo in <tt>keyboard_check_direct</tt>
 
 <p>
 
-Per esempio, mettiamo che hai un object che l'utente può controllare con le
+Per esempio, mettiamo che hai un object che l'utente pu&ograve; controllare con le
 frecce, puoi mettere il seguente codice nello Step Event dell'object:
 
 <p>
@@ -158,7 +158,7 @@ frecce, puoi mettere il seguente codice nello Step Event dell'object:
 
 <p>
 
-Ovviamente è molto più semplice mettere i codici nei Keyboard Event.
+Ovviamente &egrave; molto pi&ugrave; semplice mettere i codici nei Keyboard Event.
 
 <p>
 Ci sono delle funzioni addizionali relative alla tastiera.
@@ -166,14 +166,14 @@ Ci sono delle funzioni addizionali relative alla tastiera.
 <p>
 <blockquote>
   <tt><b>keyboard_clear(key)</b></tt> 
-    Azzera lo stato del tasto. Significa che non genererà più
-        i Keyboard Event finché la pressione del tasto non viene ripetuta.<br>
+    Azzera lo stato del tasto. Significa che non generer&agrave; pi&ugrave;
+        i Keyboard Event finch&eacute; la pressione del tasto non viene ripetuta.<br>
   <tt><b>io_clear()</b></tt> 
     Cancella tutt gli stati della tastiera e del mouse.<br>
   <tt><b>io_handle()</b></tt> 
     Aggiorna gli stati della tastiera e del mouse.<br>
   <tt><b>keyboard_wait()</b></tt> 
-    Blocca il gioco finché non viene premuto un tasto sulla tastiera.<br>
+    Blocca il gioco finch&eacute; non viene premuto un tasto sulla tastiera.<br>
 </blockquote>
 
 <p>

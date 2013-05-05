@@ -10,12 +10,12 @@
 
 <h3>Rilevare le collisioni</h3>
 
-Quando pianifichi i movimenti o decidi di fare certe azioni, spesso è importante
+Quando pianifichi i movimenti o decidi di fare certe azioni, spesso &egrave; importante
 vedere se ci sono collisioni con altri object in certi posti. I seguenti comandi
 servono a questo scopo. Tutti hanno tre argument in comune: l'argument <TT>obj</TT>
-può essere un object, la parola chiave <TT><B>all</b></tt> o l'id di un'istanza.
+pu&ograve; essere un object, la parola chiave <TT><B>all</b></tt> o l'id di un'istanza.
 L'argument <TT>prec</TT>  indica se il controllo deve essere preciso o semplicemente
-basato sulla bounding box dell'istanza. Il controllo preciso può essere effettuato
+basato sulla bounding box dell'istanza. Il controllo preciso pu&ograve; essere effettuato
 solo se lo sprite dell'istanza ha il controllo preciso attivato. Se all'argument
 <TT>notme</TT> viene passato true, l'istanza chiamante non viene controllata.
 Tutte queste funzioni restituiscono l'id di una delle istanze che collidono
@@ -24,27 +24,27 @@ o un valore negativo se non ci sono collisioni.
 <p>
 <blockquote>
   <tt><b>collision_point(x,y,obj,prec,notme)</b></tt>
-    Questa funzione controlla se al punto (x,y) c'è una collisione
-        con una o più istanze dell'object obj. <br>
+    Questa funzione controlla se al punto (x,y) c'&egrave; una collisione
+        con una o pi&ugrave; istanze dell'object obj. <br>
   <tt><b>collision_rectangle(x1,y1,x2,y2,obj,prec,notme)</b></tt>
-    Questa funzione controlla se c'è una collisione tra il rettangolo
-        (riempito) con i vertici opposti indicati e una o più istanze
+    Questa funzione controlla se c'&egrave; una collisione tra il rettangolo
+        (riempito) con i vertici opposti indicati e una o pi&ugrave; istanze
         dell'object obj. Per esempio, puoi usarla per controllare se
-        un'area è libera da ostacoli.<br>
+        un'area &egrave; libera da ostacoli.<br>
   <tt><b>collision_circle(xc,yc,radius,obj,prec,notme)</b></tt>
-    Questa funzione controlla se c'è una collisione tra il cerchio
-        (riempito) centrato in (xc,yc) con raggio radius e una o più
+    Questa funzione controlla se c'&egrave; una collisione tra il cerchio
+        (riempito) centrato in (xc,yc) con raggio radius e una o pi&ugrave;
         istanze dell'object obj. Per esempio, puoi usarla per controllare
-        se c'è un object vicino a un luogo particolare.<br>
+        se c'&egrave; un object vicino a un luogo particolare.<br>
   <tt><b>collision_ellipse(x1,y1,x2,y2,obj,prec,notme)</b></tt>
-    Questa funzione controlla se c'è una collisione tra l'ellisse
-        (riempita) con gli angoli opposti indicati e una o più istanze
+    Questa funzione controlla se c'&egrave; una collisione tra l'ellisse
+        (riempita) con gli angoli opposti indicati e una o pi&ugrave; istanze
         dell'object obj. <br>
   <tt><b>collision_line(x1,y1,x2,y2,obj,prec,notme)</b></tt>
-    Questa funzione controlla se c'è una collisione tra il segmento con
-        estremi (x1,y1) e (x2,y2) e una o più istanze dell'object obj.
-        Questa funzione è molto potente. Puoi usarla, per esempio, per
-        controllare se un'istanza può vedere un'altra controllando se
+    Questa funzione controlla se c'&egrave; una collisione tra il segmento con
+        estremi (x1,y1) e (x2,y2) e una o pi&ugrave; istanze dell'object obj.
+        Questa funzione &egrave; molto potente. Puoi usarla, per esempio, per
+        controllare se un'istanza pu&ograve; vedere un'altra controllando se
         il segmento che le unisce interseca dei muri.<br>
 </blockquote>
 

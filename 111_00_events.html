@@ -158,14 +158,14 @@ l'instanza. In base a quale tasto premi possiamo avere "no button", "left button
 (in ordine, nessun bottone, sinistro, destro, centrale).
 Gl eventi mouse sono generati ogni step finch&egrave; il player tiene il bottone del mouse premuto.
 L'evento press invece, viene attivato solo per lo step in cui il player preme, viceversa quello release, 
-quando viene rilasciato (nota che questo evento avviene SOLO se il mouse è sopra l'instanza).
-Se vuoi invece che gli eventi vengono attivati sempre anche se il mouse non è sopra il mouse, usa i "global mouse event"
-può essere trovato nel submenu.
+quando viene rilasciato (nota che questo evento avviene SOLO se il mouse &egrave; sopra l'instanza).
+Se vuoi invece che gli eventi vengono attivati sempre anche se il mouse non &egrave; sopra il mouse, usa i "global mouse event"
+pu&ograve; essere trovato nel submenu.
 Ci sono 2 eventi mouse speciali: Mouse enter (che avviene quando il mouse entra nell'instanza)
 e Mouse leave (che avviene quando il mouse esce dell'istanza). Questi eventi di solito sono
 usati per cambiare l'immagine o emettere un suono. Mouse wheel up e Mouse wheel down sono
 collegati alla rotellina del mouse, rispettivamente quando viene mossa in su e quando viene
-mossa in giù. Infine ci sono gli eventi dedicati al joystick. Puoi indicare azioni per
+mossa in gi&ugrave;. Infine ci sono gli eventi dedicati al joystick. Puoi indicare azioni per
 le quattro direzioni del joystick (in diagonale si verificano due eventi). Puoj anche
 definire fino a 8 pulsanti del joystick. Puoi impostare sia un joystick primario che
 uno secondario.
@@ -175,17 +175,17 @@ uno secondario.
 Qui trovi altri eventi che sono utili in alcuni giochi. Ecco quali sono:
 
 <ul>
-  <li><b>Outside room</b>: Questo evento si innesca quando l'istanza è COMPLETAMENTE fuori
-        dalla room. Di solito è un buon momento per distruggerla.</li>
+  <li><b>Outside room</b>: Questo evento si innesca quando l'istanza &egrave; COMPLETAMENTE fuori
+        dalla room. Di solito &egrave; un buon momento per distruggerla.</li>
   <li><b>Intersect boundary</b>: Questo evento si innesca quando l'istanza interseca il bordo
         della room, vale a dire, quando si trova (almeno) parzialmente fuori dalla room.</li>
   <li><b>Views</b>: Qui puoi trovare degli eventi che tornano utili se usi le view. Questi eventi
         si innescano quando l'istanza esce completamente da una view specifica o ne interseca
         il bordo.</li>
   <li><b>Game start</b>: Questo evento si innesca in tutte le istanze nella prima room qiando parte
-        il gioco. Avviene prima del Room Start Event (più in basso) ma dopo i Create Event delle istanze
+        il gioco. Avviene prima del Room Start Event (pi&ugrave; in basso) ma dopo i Create Event delle istanze
         nella room. Di solito quest'evento si trova solo in un object che fa da &quot;controllore&quot;
-        ed è usato per far partire una musica di sottofondo, inizializzare qualche variabile o caricare
+        ed &egrave; usato per far partire una musica di sottofondo, inizializzare qualche variabile o caricare
         dei dati.</li>
   <li><b>Game end</b>: Quest'evento si innesca in tutte le istanze quando il gioco finisce.
         Di nuovo, solitamente solo un object ha quest'evento. Viene usato, per esempio, per
@@ -194,20 +194,20 @@ Qui trovi altri eventi che sono utili in alcuni giochi. Ecco quali sono:
         in una room quando la room parte. Avviene dopo i Create Event.</li>
   <li><b>Room end</b>: Quest'evento si innesca in tutte le istanze quando la room finisce.</li>
   <li><b>No more lives</b>: <i>GameMaker</i> ha un sistema integrato per gestire le vite
-        (la variabile lives nel codice). C'è un'azione per impostare e cambiare il numero
+        (la variabile lives nel codice). C'&egrave; un'azione per impostare e cambiare il numero
         delle vite. Quando questo numero scende a 0 o meno, si innesca quest'evento. Di solito
         si usa per far finire o ricominciare il gioco.</li>
   <li><b>No more health</b>: <i>GameMaker</i> ha un sistema integrato per gestire la salute
         (la variabile health nel codice). Quando la salute scende a 0 o meno, si innesca
         questo evento. Di solito si una per togliere una vita o ricominciare il gioco.</li>
-  <li><b>Animation end</b>: In una pagina precedente si è già detto che un'animazione
+  <li><b>Animation end</b>: In una pagina precedente si &egrave; gi&agrave; detto che un'animazione
         consiste in alcune immagini mostrate una dopo l'altra. Dopo che viene mostrata
         l'ultima si ricomincia con la prima. Quest'evento si innesca in questo esatto
         momento. Ad esempio, puoi usarlo per cambiare l'animazione o distruggere l'istanza.</li>
   <li><b>End of path</b>: Se l'istanza sta seguendo un path, quest'evento si innesca
         quando essa ne raggiunge la fine.</li>
   <li><b>Close button</b>: Quest'evento si innesca quando l'utente clicca sul pulsante Chiudi
-        della finestra, ma solo se in <b>Global Game Settings</b> è stata disattivata l'opzione che fa
+        della finestra, ma solo se in <b>Global Game Settings</b> &egrave; stata disattivata l'opzione che fa
         comportare il pulsante Chiudi come il tasto Esc.</li>
   <li><b>User defined</b>: Ce ne sono 16. Di solito non si innescano mai, a meno che tu non
         li chiami esplicitamente dal codice.</li>
@@ -218,26 +218,26 @@ Qui trovi altri eventi che sono utili in alcuni giochi. Ecco quali sono:
 Le istanze, quando sono visibili, disegnano il loro sprite ad ogni step sullo schermo.
 Quando inserisci delle azioni nel Draw Event, lo sprite non viene disegnato, ma
 <b>INVECE</b> vengono eseguite queste azioni. (Per disegnare ANCHE lo sprite, puoi
-usare draw_self nel codice.) Quest'evento può essere usato per disegnare qualcosa
+usare draw_self nel codice.) Quest'evento pu&ograve; essere usato per disegnare qualcosa
 oltre allo sprite, o per operare qualche cambiamento ai parametri dello sprite.
 Ci sono tante azioni di disegno fatte apposta per essere usate nel Draw Event.
-Nota che il Draw Event viene eseguito solo se l'object è visibile. Nota anche che,
+Nota che il Draw Event viene eseguito solo se l'object &egrave; visibile. Nota anche che,
 indipendentemente da quello che disegni, gli eventi Collision sono sempre basati
 sullo sprite associato all'istanza.
 
 <p>
 <b><img src="images/event_keypress.bmp"> Eventi Key Press (tasto premuto)</b><br>
-Quest'evento è simile al Keyboard Event, ma si verifica solo una volta, quando
+Quest'evento &egrave; simile al Keyboard Event, ma si verifica solo una volta, quando
 il tasto viene premuto, e non continuamente. Torna utile quando vuoi che un'azione
 venga eseguita una sola volta.
 
 <p>
 <b><img src="images/event_keyrelease.bmp"> Eventi Key Release (tasto rilasciato)</b><br>
-Quest'evento è simile al Keyboard Event, ma si verifica solo una volta, quando
+Quest'evento &egrave; simile al Keyboard Event, ma si verifica solo una volta, quando
 il tasto viene rilasciato, e non in continuazione.
 
 <p>
-In alcune situazioni è impotante capire in quale ordine <i>GameMaker</i>
+In alcune situazioni &egrave; impotante capire in quale ordine <i>GameMaker</i>
 esegue gli eventi. Ecco l'ordine degli eventi:
 
 <ul>
