@@ -11,56 +11,55 @@
 
 <h3>Views</h3>
 
-Finally, there is a tab labeled <b>views</b>. This gives a mechanism for
-drawing different parts of your room at different places on the screen.
-There are many uses for views. First of all, in a number of games you want
-to show only part of the room at any time. For example, in most platform
-games, the view follows the main character. In two-player games you often
-want a split-screen mode in which in one part of the screen you see one
-player and in another part you see the other player. A third use is in games
-in which part of the room should scroll (e.g. with the main character) while
-another part is fixed (for example some status panel). This can all be
-easily achieved in <i>GameMaker</i>.
+Infine, c'è un'etichetta chiamata <b>views</b>. Questa fornisce un meccanismo
+per disegnare delle parti della tua room in posti differenti dello schermo.
+Le views possono essere utilizzate per molti motivi. Intanto, in molti giochi
+hai bisogno di mostrare solo una parte della room in ogni momento. Per esempio, in gran parte dei platform
+la vista segue il personaggio principale. Nei giochi a due giocatori spesso
+hai bisogno di una vista tagliata a metà in cui in una parte vedi
+un giocatore e nell'altra vedi l'altro giocatore. Un altro possibile utilizzo è nei giochi
+in cui parte della room deve scorrere (col personaggio principale per esempio) mentre
+un'altra parte è fissa (per esempio un pannello che indica lo stato). Tutto ciò può essere
+fatto facilmente in <i>GameMaker</i>.
 
 <p>
-When you click the tab labeled <b>views</b> the following information will
-show:
+Quando clicchi nella tab <b>views</b> verranno mostrate le seguenti informazioni:
 
 <p>
 <img src="images/form_room_views.jpg">
 
 <p>
-At the top there is a box labeled <b>Enable the use of Views</b>. You must
-check this box to use views. Below this you see the list of at most eight
-views you can define. Below the list you can give information for the views.
-First of all you must indicate whether the view should be visible when the
-room starts. Make sure at least one view is visible. Visible views are shown
-in bold. 
+In alto c'è una casella chiamata <b>Enable the use of Views</b>. Devi
+selezionarla per usare le views. Sotto a questa vedrai la lista di almeno
+8 views che puoi definire. Sotto alla lista puoi dare delle informazioni per le views.
+Prima di tutto devi indicare se la view dev'essere visibile quando
+la room inizia. Assicurati che almeno una view sia visibile. Le view visibili vengono
+mostrate in grassetto.
 
 <p>
-A view is defined by a rectangular area in the room. This is the area that
-must be shown in the view. You specify the position of the top-left corner and
-the width and height of this area. Secondly, you must specify where this area is
-shown in the window on the screen. This is called the (view)port. 
-Again you specify the position of the top-left
-corner and the size. If you have a single view the position is typically (0,0).
-Note that the size of the port can be different from the size of the view. In this
-case the view will be scaled to fit in the port. (In code it is
-also possible to rotate a view.) The ports can overlap. In this
-case the are drawn in the indicated order on top of each other. 
+Una view è definita da un'area rettangolare nella room. Questa è l'area che
+dev'essere mostrata nella view. Puoi specificare la posizione dell'angolo in alto a sinistra
+e la larghezza e l'altezza di quest'area. Inoltre, devi specificare dove
+dev'essere mostrata nella finestra della schermo quest'area. Ciò è chiamato (view)port.
+Anche qui, devi specificare la posizione dell'angolo in alto a sinistra
+e la dimensione. Se hai una sola view la posizione è tipicamente (0,0).
+Nota che la dimensione del port può essere diversa da quella della view.
+In questo caso la view verrà ridimensionata per essere adattata al port. (Nel codice
+è anche possibile ruotare la view). Questi ports possono sovrapporsi. In questo
+case vengono disegnati nell'ordine indicato in cima all'altra.
 
 <p>
-As indicated above, you often want the view to follow a certain object. This
-object you can indicate at the bottom. If there are multiple instances of
-this object, only the first one is followed by the view. (In code you can
-also indicate that a particular instance must be followed.) Normally the
-character should be able to walk around a bit without the view changing.
-Only when the character gets close to the boundary of the view, should the
-view change. You can specify the size of the border that must remain visible
-around the object. Finally, you can restrict the speed with which the view
-changes. This might mean that the character can walk off the screen, but it
-gives a much smoother game play. Use -1 if you want the view to change
-instantaneously.
+Come indicato sopra, spesso vuoi che la view segua un certo oggetto. Questo
+oggetto lo puoi indicare in basso. Se ci sono più istanze dell'oggetto
+solo la prima verrà seguita dalla view. (Nel codice puoi
+indicare anche un'istanza specifica). Normalmente
+il personaggio dev'essere in grado di camminare un po' senza spostare la view.
+Solo quando il giocatore si avvicina al limite della view, 
+la view dovrebbe cambiare. Puoi specificare la dimensione del limite che deve rimanere visibile
+intorno all'oggetto. Infine, puoi limitare la velocità con cui la view
+si muove. Questo potrebbe significare che il personaggio può camminare fuori dallo schermo, ma
+in questo modo il movimento è più morbido. Usa -1 se vuoi che la view
+si sposti istantaneamente.
 
 <!--END-->
 </body>
@@ -73,4 +72,10 @@ view port
 following an object
 multiple views
 split-view
+
+abilitare views
+seguire un oggetto
+view multiple
+due viste
+vista
 --> 
