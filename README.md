@@ -48,3 +48,8 @@ O cose simili.
 Se state revisionando un file importante come un indice, scrivete nel file 0_CONVENZIONI il modo in cui avete tradotto certi termini su cui potrebbero esserci dubbi, come "background", e fate richiesta se avete dubbi. Se invece state revisionando un file minore, dovete rispettare le traduzioni nel file 0_CONVENZIONI, a meno che non troviate termini nuovi dubbiosi.
 
 Per la revisione, si applicano gli stati "DA REVISIONARE" (significa che è stato scriptato), "IN REVISIONE", e "REVISIONATO".
+
+Manuale originale
+=======
+
+Chi non avesse il manuale di GM8.1 e volesse vedere le pagine originali, vada qui: https://github.com/ZioCrocifisso/ManualeGM/tree/0378e0579560b5492c7b36416440c0bb52c2c0da
