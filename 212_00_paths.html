@@ -104,8 +104,7 @@ relativa a questa che stai fornendo adesso. C'è anche un'azione per cambiare la
 velocità di un path mentre è in esecuzione. Puoi usarla, per esempio, per farla
 accelerare o rallentare durante il percorso. Nota che la velocità normale dell'istanza
 viene ignorata (impostata a 0) durante l'esecuzione del path. Anche cose come
-gravità e attrito/frizione (ne parliamo nella revisione...) non influenzano
-il movimento lungo il path.
+gravità e attrito non influenzano il movimento lungo il path.
 
 <P>
 Puoi va specificato il comportamento alla fine, cioè cosa succede quando l'istanza
@@ -117,58 +116,54 @@ ma partendo dalla sua nuova posizione (è lo stesso se il path è chiuso); infin
 puoi scegliere di invertire il movimento, facendo andare l'istanza avanti e indietro
 sul path. Nota che alla fine di un path si verifica anche un evento; vedi a fine pagina.
 
-<!--SEGNAPOSTO-->
+<P>
+Infine puoi indicare se il path deve essere assoluto o relativo. Un path assoluto
+viene eseguito nel posto in cui è definito. L'istanza è piazzata nella posizione
+iniziale (finale se la velocità è negativa) e si muove da lì. Questo è utile, per
+esempio, quando hai un tracciato di gara su cui hai definito il path. Se invece
+è relativo le istanze cominciano l'esecuzione del path dalla loro posizione corrente.
+Torna utile quando un'istanza deve fare un movimento locale. Ad esempio, delle
+astronavi in un gioco a tema spaziale potrebbero fare una virata particolare
+partendo dalla loro posizione corrente.
 
 <P>
-Finally you can indicate whether the path must be absolute or relative. An
-absolute path is executed at the place where it is defined. The instance is
-placed at the start position and moved from there (end position when speed
-is negative). This is, for example, useful when you have a race track on
-which you have defined the path. When you choose relative the instances starts
-executing the path from its current position. This is useful when an
-instance should make a local motion. For example, space ships in a space
-invader game can make a particular turn from their current position.
+Quando vuoi piazzare un'istanza in un punto diverso lungo il path puoi usare
+l'azione per impostare la posizione del path. Il numero reale da inserire deve
+essere compreso tra 0 e 1, dove 0 è la posizione iniziale e 1 è la posizione
+finale. Nota che in ogni step la direzione (variabile direction) viene impostata
+automenticamente alla direzione corretta lungo il path. Puoi usare questa
+variabile per scegliere il giusto orientamento dello sprite.
 
 <P>
-When you want to place the instance at a different point along its path you
-can use the action to set the path position. A path position always lies
-between 0 and 1, 0 indicating the start position and 1 the end position on
-the path. Note that in each step the direction variable is automatically set
-to the correct direction along the path. You can use this variable to
-choose the correct orientation for the sprite.
+Quando usi gli script o il codice hai un maggiore controllo sul modo in cui
+il path viene eseguito. C'è una funzione (path_start) per far partire un path
+per l'istanza. La variabile <TT>path_position</TT> indica la posizione corrente
+all'interno del path (compresa tra 0 e 1, vedi sopra). La variabile <TT>path_speed</TT>
+indica la velocità nel path. <TT>path_scale</TT> può essere usata per rendere
+il path più grande o più piccolo. 1 è la dimensione originale. Un valore
+maggiore indrandisce il path; uno minore lo rimpicciolisce. La variabile
+<TT>path_orientation</TT> serve a ruotare il path (0=posizione originaria,
+misura in gradi, senso antiorario). Questo ti permette di orientare il path in
+direzioni diverse (ad esempio per muoversi su e giù anziché a sinistra e a destra).
+C'è anche una variabile per controllare il comportamento alla fine (path_endaction).
+Infine ci sono tantissime funzioni per ottenere le proprietà del path (ad esempio
+le coordinate x e y in determinate posizioni) e ci sono funzioni per creare path.
+Ci sono persino funzioni per creare dei percorsi liberi da collisioni in modo
+che un'istanza possa raggiungere un obiettivo. Vedi la sezione sul GML per
+maggiori dettagli.
 
 <P>
-When using scripts or pieces of code you have more control over the way the
-path is executed. There is a function to start a path for an instance. The
-variable <TT>path_position</TT> indicates the current position on the path
-(between 0 and 1 as indicated above). The variable <TT>path_speed</TT>
-indicates the speed along the path. A variable <TT>path_scale</TT> can be
-used to scale the path. A value of 1 is the original size. A larger value
-indicates that the path is made larger; a smaller value makes it smaller.
-The variable <TT>path_orientation</TT> indicates the orientation in which
-the path is executed (in degrees counter-clockwise). This enables you to
-execute the path in a different orientation (e.g. moving up and down rather
-than left and right). There is also a variable to control the end behavior.
-Finally there are lots of functions to ask for properties of paths (e.g. the
-x and y coordinate at a certain positions) and there are functions to create
-paths. There are even functions that create collision free paths for an
-instance to reach a certain goal. See the later sections on GML for details
-on this.
-
-<P>
-You might wonder what happens when the instance collides with another
-instance while it follows a path. Basically the same happens as when the
-instance moves with a speed. When there is a solid instance, the instance is
-placed back at its previous location. When both instances are not solid they are
-placed at their new positions Next the collision event(s) are executed and
-it is checked whether the collision has been resolved. If not and the other
-instance is solid the instance will stop, as it should (assuming there is a
-collision event defined). Also, the <TT>path_position</TT> variable is not
-increased. When the blocking instance disappears the instance will continue
-to follow its path. To handle collisions yourself the variable <TT>
-path_positionprevious</TT> can be useful. It holds the previous position for
-the path and you can set the path position to this variable to avoid
-advancing along the path.
+Ti chiederai cosa succede se l'istanza collide con un'altra mentre segue un path.
+Basilarmente succede la stessa cosa di quando si muove normalmente. Se c'è
+un'istanza solida, l'istanza è piazzata alla posizione precedente, se nessuna
+delle due lo è vengono piazzate alle nuove posizioni. Poi vengono eseguiti i
+Collision Event e si controlla se la collisione è stata risolta. Se non lo è
+e l'altra istanza è solida l'istanza si fermerà (tutto questo supponendo che
+sia stato impostato un Collision Event).Inoltre, la variabile <TT>path_position</TT>
+non viene incrementata. Per gestirti le collisioni da solo ti tornerà utile
+la variabile <TT>path_positionprevious</TT>. Contiene la posizione precedente nel path
+e puoi impostare la posizione nel path a questo valore per evitare di avanzare
+lungo il path.
 
 
 
