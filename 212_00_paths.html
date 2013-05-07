@@ -90,34 +90,34 @@ giusto. (Ha senso solo se usi la posizione assoluta, vedi sotto.)
 
 
 
-<h3>Assigning paths to objects</h3>
+<h3>Assegnare i path agli object</h3>
 
-To assign a path to an instance of an object, you can place the path action
-in some event, for example in the creation event. In this action you must
-specify the path from the drop down menu. There are some further values you
-can provide. 
-
-<P>
-You must indicate the path that must be followed and the speed in pixels per
-step. When the speed is positive the instance starts at the beginning of the
-path. If it is negative it starts at the end. Remember that when you defined
-the path you specify the actual speed relative to this indicated speed.
-There is also an action to change the speed with which the path is executed.
-You could, for example, use this to let an instance slow down or speed up along its
-path. Note that the normal speed of the instance is ignored (actually set to
-0) when executing a path. Also things like gravity and friction do not
-influence the motion along a path.
+Per assegnare un path a un'istanza di un object, puoi mettere l'azione pat
+in un evento, per esempio in quello Create. In quest'azione devi specificare
+il path dal menu a tendina. Ci sono anche altri valori che puoi fornire.
 
 <P>
-Next you specify the end behavior, that is, what should happen when the end
-of the path is reached. You can choose to stop the motion and end the path.
-You can also restart the path from the beginning, that is, the instance
-jumps back to the position where the path was started and executes the path
-again. A third option is to restart from the current position, that is, the
-instance follows the path again but now with this new starting position
-(this is the same when the path is closed). Finally you can choose to
-reverse the motion, making the instance go back and forth along the path.
-Note that also at the end of the path an event happens; see below.
+Devi indicare il path da seguire e la velocità in pixel per step. Se la velocità
+è positiva l'istanza comincia dall'inizio del path, altrimenti comincia dalla fine.
+Ricorda che quando hai definito il path hai specificato per ogni punto la velocità
+relativa a questa che stai fornendo adesso. C'è anche un'azione per cambiare la
+velocità di un path mentre è in esecuzione. Puoi usarla, per esempio, per farla
+accelerare o rallentare durante il percorso. Nota che la velocità normale dell'istanza
+viene ignorata (impostata a 0) durante l'esecuzione del path. Anche cose come
+gravità e attrito/frizione (ne parliamo nella revisione...) non influenzano
+il movimento lungo il path.
+
+<P>
+Puoi va specificato il comportamento alla fine, cioè cosa succede quando l'istanza
+raggiunge la fine del path. Puoi scegliere di fermare il movimento e terminare
+il path; o di ricominciare il path da capo, vale a dire, l'istanza salta alla
+posizione iniziale ed esegue il path dall'inizio. Una terza opzione consiste
+nel ricominciare dalla posizione corrente, cioè l'istanza segue il path di nuovo
+ma partendo dalla sua nuova posizione (è lo stesso se il path è chiuso); infine
+puoi scegliere di invertire il movimento, facendo andare l'istanza avanti e indietro
+sul path. Nota che alla fine di un path si verifica anche un evento; vedi a fine pagina.
+
+<!--SEGNAPOSTO-->
 
 <P>
 Finally you can indicate whether the path must be absolute or relative. An
