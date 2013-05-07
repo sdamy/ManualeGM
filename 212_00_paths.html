@@ -10,116 +10,114 @@
 
 <h1>Paths</h1>
 
-In more advanced games you often want to let instances follow certain paths.
-Even though you can indicate this by e.g. using timer events or code, this
-is rather complicated. Path resources are an easier mechanism for this. The
-idea is rather simple. You define a path by drawing it. Next you can place
-an action in the creation event of the object to tell the object to
-follow the particular path. This chapter will explain this in detail. 
+In giochi più avanzati spesso vorrai che le istanze seguano determinati percorsi.
+Anche se puoi indicarli ad esempio usando degli eventi Alarm o il codice, è
+piuttosto complesso. La risorsa Path (percorso) è un meccanismo più facile per
+fare ciò. L'idea è piuttosto semplice. Definisci un path disegnando un percorso.
+Poi puoi inserire un'azione nel Create Event di un object che gli dica di seguire
+quel path. Questo capitolo spiegherà tutto nel dettaglio.
 
 
 
-<h3>Defining paths</h3>
+<h3>Definire i path</h3>
 
-To create a path in your game, choose <b>Create Path</b> from the <b>Resources</b> menu.
-The following form will pop up (in the example we already added a little
-path).
+Per creare un path nel tuo gioco, scegli <b>Create Path</b> (Crea Path) dal menu <b>Resources</b>.
+Apparirà questa finestra (nell'esempio abbiamo già aggiunto un piccolo path).
 
 <p>
 <img src="images/form_path.jpg">
 
 <P>
-At the top left of the form you can set the name of the path, as usual.
-Below it you find the points that define the path. Each point has both a
-position and a speed (indicated with sp). Depending on how you use the path,
-the position is either absolute, that is, the instance for which you will
-later use the path will follow it at that particular place, or it is
-relative, that is, the instance will always start at the first position on
-the path and follow the path from there. The speed should be interpreted as
-follows. A value of 100 means the original speed given for the path when
-assigning it to the instance. A lower value reduces the speed, a higher
-value increases it (so it indicates the percentage of the actual speed).
-Speed will be interpolated between points, so the speed changes gradually. 
+In alto a destra puoi impostare il nome del path, come al solito. Sotto
+si trovano i punti che definiscono il path. Ogni punto ha una posizione
+e una velocità (sp). A seconda di come usi il path, la posizione può
+essere assoluta, cioè l'istanza andrà in quello specifico posto, o relativa,
+cioè l'istanza comincia alla prima posizione del path e lo segue dalla sua
+posizione corrente. La velocità va interpretata come segue. Il valore 100
+indica che viene usata la velocità del path quando viene assegnato all'istanza.
+un valore minore riduce la velocità, un valore maggiore la aumenta (in sintesi,
+indica la percentuale della velocità assegnata all'istanza), La velocità
+viene interpolata tra i pixel, quindi la velocità cambierà gradualmente.
 
 <P>
-To add a point press the button <B>Add</B>. A copy is made of the currently
-selected point. Now you can change the actual position and speed by changing
-the values in the edit boxes. Whenever you select a point in the list, you
-can also change its values. Press <B>Insert</B> to insert a new point before
-the current one, and <B>Delete</B> to delete the current point. 
+Per aggiungere un punto clicca su <B>Add</B> (agguingi). Viene fatta una copia
+del punto selezionato. Ora puoi modificare posizione e velocitàcambiando i
+valori nei campi di inserimento. Puoi cambiare i valori di qualsiasi punto
+della lista selezionandolo. Clicca su <B>Insert</B> (inserisci) Per inserire
+un nuovo punto prima di quello selezionato, e <B>Delete</B> (elimina) per
+cancellare il punto selezionato. 
 
 <P>
-At the right of the form you will see the actual path. The red dot indicates
-the currently selected control point. The blue dots are the other control
-points. The green square indicates the position where the path starts. You
-can also change the path using the mouse. Click anywhere on the image to add
-a point. Click on an existing point and drag it to change its position. When
-you hold &lt;Shift&gt; while clicking on a point, you insert a point.
-Finally, you can use the right mouse button to remove points. (Note that you
-cannot change the speed this way.) Normally the points will be aligned with
-a grid. You can change the grid settings at the top tool bar. Here you can
-also indicate whether the grid should be visible or not. If you want to
-precisely position a point, hold the &lt;Alt&gt; key while adding or moving
-it.
+Sulla destra puoi vedere il path. Il punto rosso indica il punto di controllo
+attualmente selezionato. I punti blu sono gli altri punti. Il quadratino verde
+indica il punto di partenza del path. Puoi cambiare il path anche col mouse.
+Clicca ovunque per aggiungere un punto. Clicca su un punto esistente e trascinalo
+per cambiarne la posizione. Se tieni premuto &lt;Shift&gt; mentre clicchi su
+un punto, puoi inserirne uno (prima di quello appena cliccato). Infine, puoi
+usare il tasto destro per rimuovere i punti. (Nota che non puoi cambiare la
+velocità in questo modo.) Normalmente i punti verranno allineati con una griglia.
+Puoi cambiare le impostazioni della griglia nella barra degli strumenti in alto.
+Qui puoi anche indicare se mostrare o meno la griglia. Se vuoi piazzare con
+precisione un punto, tieni premuto &lt;Alt&gt; mentre lo sposti per ignorare
+la griglia.
 
 <P>
-You can influence the shape of the path in two ways. Fist of all you can use
-the type of connection. You can either choose straight line connections or a
-smooth path. Secondly, you can indicate whether the path must be closed or
-not. 
+Puoi influenzare la forma del path in due modi. Primo, puoi scegliere il tipo
+di connessione. Puoi usare linee dritte o linee curve e smussate. Secondo,
+puoi indicare se il path deve essere chiuso o no.
 
 <P>
-On the toolbar there are a number of important controls. From left to right
-they have the following meaning. The first button indicates that you are
-ready and want to close the form, keeping the changes. (If you want to
-discard the changes, press the cross to close the window and indicate that
-you do not want to save the changes.) Next there is the button to undo the
-last change. 
+Nella barra degli strumenti si trovano dei comandi importanti. Eccone la
+descrizione da sinistra a destra. Il primo pulsante salva e chiude la finestra.
+(Se vuoi chiudere senza salvare, clicca sul pulsante Chiudi della finestra
+e indica di non voler salvare.) Accanto c'è il pulsante per annullare
+l'ultima azione.
+
+<p>
+Il set di comandi seguente ti permette di cancellare tutto, invertire il
+senso di marcia del path, spostarlo per intero, capovolgerlo orizzontalmente
+o verticalmente, ruotarlo, ingrandirlo/rimpicciolirlo. Accanto ci sono i
+pulsanti per spostare la visuale (e non il path stesso, l'area coperta dalla
+visuale è indicata dalla barra di stato in basso) e centrarla.&nbsp; Puoi anche
+usare il bottone centrale del mouse per fare una panoramica attorno al path.
 
 <P>
-The following set of toolbar buttons allows you the clear the path, reverse
-the order in which the path is traversed, shift the path, mirror it
-horizontally, flip it vertically, rotate it, and scale it. Next there are
-buttons to shift the view (not the path itself; the actual view area is
-indicated in the status bar at the bottom) and to center the view.&nbsp; You can 
-    also use the middle mouse button to PAN around the view around<P>
-As already indicated above you can next set the snap values and whether to
-show the grid. Finally there is a button to indicate that you want to see a
-particular room as background for the path. Using this you can easily put
-the path at a particular place in the room, for example on a race track,
-so that later the instances will follow the correct route. (This only
-makes sense when you use absolute paths; see below.)
+Come già indicato sopra puoi impostare la griglia e decidere se mostrarla o no.
+Infine c'è un pulsante che ti permette di impostare una room specifica come
+sfondo, così potrai mettere il path in un punto particolare della room, ad
+esempio su un circuito per le corse, in modo che le istanze seguano il percorso
+giusto. (Ha senso solo se usi la posizione assoluta, vedi sotto.)
 
 
 
-<h3>Assigning paths to objects</h3>
+<h3>Assegnare i path agli object</h3>
 
-To assign a path to an instance of an object, you can place the path action
-in some event, for example in the creation event. In this action you must
-specify the path from the drop down menu. There are some further values you
-can provide. 
+Per assegnare un path a un'istanza di un object, puoi mettere l'azione pat
+in un evento, per esempio in quello Create. In quest'azione devi specificare
+il path dal menu a tendina. Ci sono anche altri valori che puoi fornire.
 
 <P>
-You must indicate the path that must be followed and the speed in pixels per
-step. When the speed is positive the instance starts at the beginning of the
-path. If it is negative it starts at the end. Remember that when you defined
-the path you specify the actual speed relative to this indicated speed.
-There is also an action to change the speed with which the path is executed.
-You could, for example, use this to let an instance slow down or speed up along its
-path. Note that the normal speed of the instance is ignored (actually set to
-0) when executing a path. Also things like gravity and friction do not
-influence the motion along a path.
+Devi indicare il path da seguire e la velocità in pixel per step. Se la velocità
+è positiva l'istanza comincia dall'inizio del path, altrimenti comincia dalla fine.
+Ricorda che quando hai definito il path hai specificato per ogni punto la velocità
+relativa a questa che stai fornendo adesso. C'è anche un'azione per cambiare la
+velocità di un path mentre è in esecuzione. Puoi usarla, per esempio, per farla
+accelerare o rallentare durante il percorso. Nota che la velocità normale dell'istanza
+viene ignorata (impostata a 0) durante l'esecuzione del path. Anche cose come
+gravità e attrito/frizione (ne parliamo nella revisione...) non influenzano
+il movimento lungo il path.
 
 <P>
-Next you specify the end behavior, that is, what should happen when the end
-of the path is reached. You can choose to stop the motion and end the path.
-You can also restart the path from the beginning, that is, the instance
-jumps back to the position where the path was started and executes the path
-again. A third option is to restart from the current position, that is, the
-instance follows the path again but now with this new starting position
-(this is the same when the path is closed). Finally you can choose to
-reverse the motion, making the instance go back and forth along the path.
-Note that also at the end of the path an event happens; see below.
+Puoi va specificato il comportamento alla fine, cioè cosa succede quando l'istanza
+raggiunge la fine del path. Puoi scegliere di fermare il movimento e terminare
+il path; o di ricominciare il path da capo, vale a dire, l'istanza salta alla
+posizione iniziale ed esegue il path dall'inizio. Una terza opzione consiste
+nel ricominciare dalla posizione corrente, cioè l'istanza segue il path di nuovo
+ma partendo dalla sua nuova posizione (è lo stesso se il path è chiuso); infine
+puoi scegliere di invertire il movimento, facendo andare l'istanza avanti e indietro
+sul path. Nota che alla fine di un path si verifica anche un evento; vedi a fine pagina.
+
+<!--SEGNAPOSTO-->
 
 <P>
 Finally you can indicate whether the path must be absolute or relative. An
