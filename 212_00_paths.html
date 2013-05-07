@@ -19,34 +19,33 @@ quel path. Questo capitolo spiegherà tutto nel dettaglio.
 
 
 
-<h3>Defining paths</h3>
+<h3>Definire i path</h3>
 
-To create a path in your game, choose <b>Create Path</b> from the <b>Resources</b> menu.
-The following form will pop up (in the example we already added a little
-path).
+Per creare un path nel tuo gioco, scegli <b>Create Path</b> (Crea Path) dal menu <b>Resources</b>.
+Apparirà questa finestra (nell'esempio abbiamo già aggiunto un piccolo path).
 
 <p>
 <img src="images/form_path.jpg">
 
 <P>
-At the top left of the form you can set the name of the path, as usual.
-Below it you find the points that define the path. Each point has both a
-position and a speed (indicated with sp). Depending on how you use the path,
-the position is either absolute, that is, the instance for which you will
-later use the path will follow it at that particular place, or it is
-relative, that is, the instance will always start at the first position on
-the path and follow the path from there. The speed should be interpreted as
-follows. A value of 100 means the original speed given for the path when
-assigning it to the instance. A lower value reduces the speed, a higher
-value increases it (so it indicates the percentage of the actual speed).
-Speed will be interpolated between points, so the speed changes gradually. 
+In alto a destra puoi impostare il nome del path, come al solito. Sotto
+si trovano i punti che definiscono il path. Ogni punto ha una posizione
+e una velocità (sp). A seconda di come usi il path, la posizione può
+essere assoluta, cioè l'istanza andrà in quello specifico posto, o relativa,
+cioè l'istanza comincia alla prima posizione del path e lo segue dalla sua
+posizione corrente. La velocità va interpretata come segue. Il valore 100
+indica che viene usata la velocità del path quando viene assegnato all'istanza.
+un valore minore riduce la velocità, un valore maggiore la aumenta (in sintesi,
+indica la percentuale della velocità assegnata all'istanza), La velocità
+viene interpolata tra i pixel, quindi la velocità cambierà gradualmente.
 
 <P>
-To add a point press the button <B>Add</B>. A copy is made of the currently
-selected point. Now you can change the actual position and speed by changing
-the values in the edit boxes. Whenever you select a point in the list, you
-can also change its values. Press <B>Insert</B> to insert a new point before
-the current one, and <B>Delete</B> to delete the current point. 
+Per aggiungere un punto clicca su <B>Add</B> (agguingi). Viene fatta una copia
+del punto selezionato. Ora puoi modificare posizione e velocitàcambiando i
+valori nei campi di inserimento. Puoi cambiare i valori di qualsiasi punto
+della lista selezionandolo. Clicca su <B>Insert</B> (inserisci) Per inserire
+un nuovo punto prima di quello selezionato, e <B>Delete</B> (elimina) per
+cancellare il punto selezionato. 
 
 <P>
 At the right of the form you will see the actual path. The red dot indicates
