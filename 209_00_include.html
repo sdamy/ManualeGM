@@ -108,9 +108,9 @@ caso predefinito i file sono esportati nella stessa cartella dove si trovi salva
 default situation the files are exported in the folder where the stand-alone game is
 il gioco indipendente (l'eseguibile). Questo è anche il percorso di lavoro per il gioco. Così il gioco può utilizzare già (soltanto)
 stored. This is also the working directory for the game. So the game can just use
-i nomi dei file per accedervi (non è necessario inserire tutto il percorso dei file)(non sono necessari i percorsi dei file). Questo lavora (andrà) bene se il gioco indipendente
+i nomi dei file per accedervi (non è necessario inserire tutto il percorso dei file)(non sono necessari i percorsi dei file). Questo lavora (andrà) bene (funziona/funzionerà correttamente) se il gioco indipendente
 the file names to access them (no paths are required). This works well if the stand-alone
-si trovi (e.g. ??) sul disco rigido (hard disk) ma fallirà se è posizionato su di un dispositivo di sola lettura (e.g. ??), ad esempio su di un CD.
+si trovi ad esempio (e.g.) sul disco rigido (hard disk) ma fallirà (non funzionerà correttamente) se è posizionato su di un dispositivo di sola lettura (e.g. ??), ad esempio su di un CD.
 is stored e.g. on the hard disk but will fail if it is stored on a read-only device,
 e.g. on a CD.
 
@@ -125,7 +125,7 @@ gioco. Questo percorso può essere
 game. This path can be
 ottenuto usando la variabile interna (built-in variable) <tt>temp_directory</tt>. Non dimenticare di
 obtained using the built-in variable <tt>temp_directory</tt>. Don't forget to
-aggiungere la contro-barra (barra invertita) ("\") in questo caso. Così per (e.g. ??) avviare la riproduzione di un file video dovresti inserire il
+aggiungere la contro-barra (barra invertita) ("\") in questo caso. Così ad esempio (e.g.) per avviare la riproduzione di un file video dovresti inserire (battere) il
 add the backslash in this case. So to e.g. play a video file you might type in
 seguente codice:
 the following piece of code:
@@ -162,7 +162,7 @@ This is only allowed when the game does not run in secure mode.
 <p>
 Infine, puoi indicare di non esportare il file automaticamente. In questo caso potresti
 Finally, you can indicate not the export the file automatically. In this case you should
-usare ad esempio la funzione <tt>export_include_file(fname)</tt> per esportarlo tu stesso (da te/manualmente) quando
+usare ad esempio (e.g.) la funzione <tt>export_include_file(fname)</tt> per esportarlo tu stesso (da te/manualmente) quando
 use e.g. the function <tt>export_include_file(fname)</tt> to export it yourself when
 richiesto.
 required.
