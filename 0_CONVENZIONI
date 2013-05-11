@@ -1,11 +1,14 @@
-TRADUZIONI:
+TRADUZIONI DEI TERMINI:
 friction: attrito
 
 RICHIESTE:
 surface: ???
+	(ZioCrocifisso) Per me andrebbe lasciato così com'è, è un termine che si ritrova in GM.
 
-ALTRO:
+GRAMMATICA:
   I gerundi nei titoli andrebbero sostituiti con degli infiniti. Per capire di cosa parlo,
 vedete la pagina 100_index, il cui titolo originale è "Using GameMaker" ed è stato
 tradotto con "Usando GameMaker". In italiano però non ha molto senso, mentre "Usare GameMaker"
 potrebbe essere più adatto. (torchipeppo)
+
+ALTRO:
