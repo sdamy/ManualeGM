@@ -153,29 +153,28 @@ nuovamente la variabile la prossima volta che vuoi usare una transizione.
          Sbiadisci due volte: La room uscente passa in dissolvenza a uno schermo nero, poi la room entrante compare in dissolvenza.<br>
         </blockquote>
   <tt><b>transition_steps</b></tt> 
-    Indicates the number of steps in the transition. The more steps, the longer the
-	transition takes. Default is 80.<br>
+    Indica la durata della transizione in step. Più tempo ci mette, più è rallentata.
+        L'impostazione predefinita è 80.<br>
   <tt><b>transition_define(kind,name)</b></tt> 
-    You can actually create your own transitions. To this end you must define a script
-	(possibly in an extension package) to do the transition. With this function you can 
-	then add the transition to the system. <tt>kind</tt> is 
-	the index of the transition (either a new one or an existing transitions). <tt>name</tt> is the
-	name of the script. Note that the name of the script is a string! 
-	So there must be quotes around it.
-	Note that this is really advanced stuff. 
-	The script must take five arguments: a surface with the image
-	of the previous room, a surface with the image of the next room, the width of the
-	surfaces, the height of the surfaces, and the fraction
-	of the transition (between 0 and 1). It must then draw the image using the two
-	surfaces. <br>
+    Puoi anche creare le tue transizioni. A questo fine devi definire uno script
+        (possibilmente un pacchetto d'estensione) per fare la transizione. Con questa
+        Funzione potrai poi aggiungerla al gioco. <tt>kind</tt> è l'indice della nuova
+        transizione. (può essere uno nuovo o puoi sovrasciverne uno esistente). <tt>name</tt>
+        è il nome dello script. Nota che deve essere una stringa! Quindi devono esserci
+        le virgolette. Questa è una funzionalità molto avanzata. Lo script deve avere cinque
+        argument: una surface con l'immagine della room uscente, un'altra con l'immagine della
+        room entrante, La lunghezza delle surface, la loro altezza, e la frazione della
+        transizione (compresa tra 0 e 1). Poi dovrà disegnare l'immagine usando le due surface.
+        (Poiché richiede l'uso delle surface, <b>puoi definire le tue transizioni solo nella
+        Standard Edition di GameMaker.</b>) <br>
   <tt><b>transition_exists(kind)</b></tt> 
-    This function returns whether a transition of the indicated kind exists.
+    Restituisce true se esiste la transizione numerata con il numero indicato.
 </blockquote>
 
 <p>
-Please note that transitions do not work when using 3d graphics. Also, room transitions in general
-do not work correctly when the sizes of the rooms (or to be more precise of the region on the screen) 
-are not the same.
+Nota che le transizioni non funzionano correttamente quando usi la grafica 3d. Inoltre, in generale
+non lavorano correttamente se le dimensioni delle room (o meglio la regione dello schermo) non
+sono uguali.
 
 
 <!--END-->
@@ -187,7 +186,11 @@ room variables
 saving games
 loading games
 
-room
+variabili delle room
+salvare la partita
+caricare una partita
+
+room (variabile)
 room_first
 room_last
 room_width
@@ -207,6 +210,10 @@ game_save()
 
 transitions
 room transitions
+
+transizioni
+room, transizioni
+
 transition_kind
 transition_color
 transition_steps
