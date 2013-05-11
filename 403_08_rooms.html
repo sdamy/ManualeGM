@@ -104,44 +104,54 @@ non verrà salvata la precisa posizione della musica. Anche le risorse modificat
 salvate. Altri elementi che non vengono salvati sono le strutture dati, particelle, e impostazioni
 multiplayer.
 
-<h2>Transitions</h2>
+<h2>Transizioni</h2>
 
 <p>
-When you move from one room to another you can select a transition. 
-To set the transition to the next frame you must set the 
-variable called <tt>transition_kind</tt>. If you assign a value larger than 0 to it the 
-corresponding transition is used for the next room transition. It only affect the next
-transition. After this the value is reset to 0, which indicates no transition.
+Quando vai da una room a un'altra puoi impostare una transizione. Per impostare la transizione
+devi usare la variabile <tt>transition_kind</tt>. Se le assegni un valore maggiore di 0 la
+trnsizione corrispondente verrà usata per la prossima transizione. Nota che funziona solo
+una volta. Poi il valore verrà reimpostato a 0, cioè nessuna transizione, e dovrai impostare
+nuovamente la variabile la prossima volta che vuoi usare una transizione.
 
 <p>
 <blockquote>
   <tt><b>transition_kind</b></tt> 
-    Indicates the next room transition. You can use the following builtin values
+    Indica la prossima transizione tra room. Usa i seguenti valori integrati:
 	<p>
     <blockquote>
-	  0 = no effect<br>
-	  1 = Create from left<br>
-	  2 = Create from right<br>
-	  3 = Create from top<br>
-	  4 = Create from bottom<br>
-	  5 = Create from center<br>
-	  6 = Shift from left<br>
-	  7 = Shift from right<br>
-	  8 = Shift from top<br>
-	  9 = Shift from bottom<br>
-	 10 = Interlaced from left<br>
-	 11 = Interlaced from right<br>
-	 12 = Interlaced from top<br>
-	 13 = Interlaced from bottom<br>
-	 14 = Push from left<br>
-	 15 = Push from right<br>
-	 16 = Push from top<br>
-	 17 = Push from bottom<br>
-	 18 = Rotate to the left<br>
-	 19 = Rotate to the right<br>
-	 20 = Blend the rooms<br>
-	 21 = Fade out and in<br>
+	  0 = Nessun effetto<br>
+	  1 = Crea da sinistra<br>
+	  2 = Crea da destra<br>
+	  3 = Crea dall'alto<br>
+	  4 = Crea dal basso<br>
+	  5 = Crea dal centro<br>
+	  6 = Sposta da sinistra<br>
+	  7 = Sposta da destra<br>
+	  8 = Sposta dall'alto<br>
+	  9 = Sposta dal basso<br>
+	 10 = Interlacciato da sinistra<br>
+	 11 = Interlacciato da destra<br>
+	 12 = Interlacciato dall'alto<br>
+	 13 = Interlacciato dal basso<br>
+	 14 = Spingi da sinistra<br>
+	 15 = Spingi da destra<br>
+	 16 = Spingi dall'alto<br>
+	 17 = Spingi dal basso<br>
+	 18 = Ruota in senso antoorario<br>
+	 19 = Ruota in senso orario<br>
+	 20 = Dissolvenza<br>
+	 21 = Sbiadisci due volte<br>
 	</blockquote>
+  Ed ecco una descrizione di quello che fanno:
+     <blockquote>
+         Crea: Entrambe le room stanno ferme, semplicemente la room entrante viene disegnata nella direzione indicata.<br>
+         Sposta: La room entrante si muove, quella uscente è ferma (come se quella entrante "scivolasse" su quella uscente).<br>
+         Interlacciato: Vengono cambiate prima le righe (colonne) pari, poi quelle dispari.<br>
+         Spingi: Entrambe le room si muovono (come se quella entrante, appunto, "spingesse" quella uscente).<br>
+         Ruota: La room entrante si espande dal centro ruotando nel verso indicato.<br>
+         Dissolvenza: Si può intuire: è come se la room entrante crescesse di opacità fino al valore massimo.<br>
+         Sbiadisci due volte: La room uscente passa in dissolvenza a uno schermo nero, poi la room entrante compare in dissolvenza.<br>
+        </blockquote>
   <tt><b>transition_steps</b></tt> 
     Indicates the number of steps in the transition. The more steps, the longer the
 	transition takes. Default is 80.<br>
