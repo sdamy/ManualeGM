@@ -10,44 +10,43 @@
 
 <h3>Paths</h3>
 
-<!--In traduzione da torchipeppo-->
-
-The following functions will give you information about a path:
+Le seguenti funzioni ti daranno informazioni su un path:
 
 <p>
 <blockquote>
   <tt><b>path_exists(ind)</b></tt>
-	  Returns whether a path with the given index exists.<br>
+    Restituisce true se esiste un path con l'indice dato.<br>
   <tt><b>path_get_name(ind)</b></tt>
-	  Returns the name of the path with the given index.<br>
+    Restituisce il nome (in forma di stringa) del path con l'indice dato.<br>
   <tt><b>path_get_length(ind)</b></tt>
-	  Returns the length of the path with the given index.<br>
+    Restituisce la lunghezza del path con l'indice dato.<br>
   <tt><b>path_get_kind(ind)</b></tt>
-	  Returns the kind of connections of the path with the given index (0=straight, 1=smooth).<br>
+    Restituisce il tipo di linee usato nel path con indice dato
+        (0=linee dritte, 1=curve smussate).<br>
   <tt><b>path_get_closed(ind)</b></tt>
-    Returns whether the path is closed or not.<br>
-	<tt><b>path_get_precision(ind)</b></tt>
-	  Returns the precision used for creating smoothed paths.<br>
-	<tt><b>path_get_number(ind)</b></tt>
-	  Returns the number of defining points for the path.<br>
-	<tt><b>path_get_point_x(ind,n)</b></tt>
-		Returns the x-coordinate of the n'th defining point for
-    the path. 0 is the first point.<br>
+    Restituisce true se il path è chiuso e false se non lo è.<br>
+  <tt><b>path_get_precision(ind)</b></tt>
+    Restiruisce la precisione usata per creare path smussati.<br>
+  <tt><b>path_get_number(ind)</b></tt>
+    Restituisce il numero di punti utilizzati per definire il path.<br>
+  <tt><b>path_get_point_x(ind,n)</b></tt>
+    Restituisce l'ascissa dell'n-esimo punto che definisce il path.
+        0 è il primo punto.<br>
   <tt><b>path_get_point_y(ind,n)</b></tt>
-	  Returns the y-coordinate of the n'th defining point for
-    the path. 0 is the first point.<br>
+    Restituisce l'ordinata dell'n-esimo punto che definisce il path.
+        0 è il primo punto.<br>
   <tt><b>path_get_point_speed(ind,n)</b></tt>
-	  Returns the speed factor at the n'th defining point
-    for the path. 0 is the first point.<br>
+    Restituisce il fattore di velocità dell'n-esimo punto che definisce il path.
+        0 è il primo punto.<br>
   <tt><b>path_get_x(ind,pos)</b></tt>
-	  Returns the x-coordinate at position pos for the path. pos
-    must lie between 0 and 1.<br>
+    Restituisce l'ascissa alla posizione <tt>pos</tt> del path.
+        L'argument <tt>pos</tt> deve essere compreso tra 0 e 1.<br>
   <tt><b>path_get_y(ind,pos)</b></tt>
-	  Returns the y-coordinate at position pos for the path. pos
-    must lie between 0 and 1.<br>
+    Restituisce l'ordinata alla posizione <tt>pos</tt> del path.
+        L'argument <tt>pos</tt> deve essere compreso tra 0 e 1.<br>
   <tt><b>path_get_speed(ind,pos)</b></tt>
-	  Returns the speed factor at position pos for the path.
-    pos must lie between 0 and 1.<br>
+    Restituisce il fattore di velocità alla posizione <tt>pos</tt> del path.
+        L'argument <tt>pos</tt> deve essere compreso tra 0 e 1.<br>
 </blockquote>
 
 <p>
