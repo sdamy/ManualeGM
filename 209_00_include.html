@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html><head>
-<title>Including files in stand-alone games</title>
+<title>Includere file nei giochi indipendenti</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
@@ -10,7 +10,7 @@
 
 <h3>Includere file nei giochi indipendenti</h3>
 
-<b><i>Questa funzionalità è disponibile solo nella versione Standard Edition of GameMaker This functionality is only available in the Standard Edition of GameMaker.</i></b>
+<b><i>Questa funzionalità è disponibile solo nella versione Standard Edition of GameMaker.</i></b>
 
 <p>
 Come è stato indicato precedentemente, puoi creare versioni indipendenti (eseguibili) del tuo gioco.
@@ -22,113 +22,74 @@ cases you want to add DLLs or images and sounds that are loaded during the runni
 del gioco. Potresti fornire questi elementi (separatamente) insieme
 of the game. You can provide these together
 all'eseguibile ma è a volte più comodo includerli
-with the stand-alone executable but it is sometimes easier to include them
 nello stesso file. In questo modo è necessario distribuire un solo file. I file
-in the file. In this way only one file needs to be distributed. Included
 inclusi saranno per definizione esportati quando il gioco venga avviato.
-files will default be exported when the game starts.
 
 <p>
 Puoi indicare i file che desideri includere nell'eseguibile
-You can indicate the files you want to include in the executable in
 scegliendo <b>Included Files</b> (File Inclusi) dal menù <b>Resources</b> (Risorse). Ti verrà 
-by choosing <b>Included Files</b> from the <b>Resources</b> menu. The following
 mostrata la seguente finestra:
-form will be shown:
 
 <p>
 <img src="images/form_include.jpg">
 
 <p>
 Nella parte alta della finestra c'è una lista di file da includere.
-At the top of the form is a list of files to include.
 Usa <b>Add</b> (Aggiungi) per aggiungere un nuovo file alla lista, <b>Change</b> (Cambia) per cambiare
-Use <b>Add</b> to add a new file to the list, <b>Change</b> to change
 un file selezionato, <b>Delete</b> (Cancella) per eliminarlo, e <b>Clear</b> (Pulisci/Sgombra/Svuota/Libera)
-a selected file, <b>Delete</b> to delete the selected file, and <b>Clear</b>
 per cancellare l'intera lista. Quando aggiungi o cambi un elemento, ti apparirà la seguente finestra:
-to clear the complete list. When adding or changing an entry, the following form will pop up: 
 
 <p>
 <img src="images/form_datafile.jpg">
 
 <p>
 Qui puoi indicare alcune proprietà. Puoi selezionare il tasto <b>Load</b> (Carica) per indicare
-Here you can indicate a number of properties. You can press the <b>Load</b> button to indicate
+
 quale file debba essere incluso. Puoi cambiare il nome nel campo <b>File Name</b> (Nome del File) se desideri salvare il
-which file must be included. You can change the <b>File Name</b> if you want to save the
+
 file con un nome differente da quello originale.
-file under a different name than the original file name. 
+
 
 <p>
 C'è un certo numero di opzioni che è possibile selezionare. Quando selezioni <b>Store in the editable .gm81 file</b> (Immagazzina nel file modificabile .gm81) il
-There are a number of options you can set. When you check <b>Store in the editable .gm81 file</b> the
 file incluso verrà aggiunto non soltanto all'eseguibile ma anche alla versione modificabile del gioco.
-included file in not only added to the executable but also to the editable version of the game.
-Il vantaggio è che puoi ad esempio (e.g.) mandare la versione modificabile a qualcun'altro e puoi essere sicuro
-The advantage is that you can e.g. send the editable version to somebody else and can be sure
+Il vantaggio è che puoi ad esempio (e.g.) mandare la versione modificabile a qualcun'altro ed essere sicuro
 che anche il file sia presente lì (con esso). Inoltre se desideri puoi rimuovere il file originale una volta incluso o spostarlo altrove
-the file is still there. Also, you can remove the included file if you want or move it elsewhere
 senza problemi. Lo svantaggio è che la versione modificabile del gioco diventa così più grande e
-without problems. The disadvantage is that the editable version of the game becomes larger and
 prende più tempo nel caricamento.
-takes longer to load.
+
 
 <p>
 Selezionare l'opzione <b>Free memory after export</b> (Libera la memoria dopo l'esportazione) significa che dopo che il file sia stato esportato
-Checking the option <b>Free memory after export</b> means that after the file has been exported
 sarà rimosso dalla memoria. Se vuoi essere in grado di esportarlo nuovamente
-(when running the game) it will be removed from memory. If you want to be able to export it again
 in seguito dovrai deselezionare questa opzione.
-later you should uncheck this option.
 Se un file che venga esportato già esista normalmente non viene riscritto. Puoi cambiare questo
-If a file that is exported already exists it is normally not written. You can change this
 comportamento selezionando <b>Overwrite existing files</b> (Sovrascrivi i file esistenti). Inoltre, quando il gioco venga completato
-behavior by checking <b>Overwrite existing files</b>. Also, when the game is finished the
 i file non vengono normalmente rimossi (a meno chè essi non si trovino nella cartella temporanea che viene completamente
-files are normally not removed (unless they are in the temporary folder which is completely
 rimossa). Puoi cambiare questo selezionando <b>Remove at game end</b> (Rimuovi alla fine/termine del gioco).
-removed). You can change this by checking <b>Remove at game end</b>.
 
 <b>Un'avvertenza. Se stai provando il tuo gioco, il percorso dei file (di lavoro) utilizzato
-<b>A word of warning is in place here. If you are testing your game, the working directory
 dal gioco è il percorso dove si trovi il file .gm81. Se  anche i tuoi file d'inclusione si trovano
-of the game is the directory where the .gm81 file is stored. If your include files are also
 nello stesso percorso e tu scegli di rimuoverli al termine del gioco potresti perderli 
-stored here and you choose to remove them at the end of the game you might loose them
-tutti insieme! Così è meglio non posizionare questi file con il file .gm81 ma (e.g. ??) in una sottocartella!
-alltogether! So better not store these files with the .gm81 file but e.g. in a subfolder!</b>
+tutti insieme! Così è meglio non posizionare questi file con il file .gm81 ma (e.g.) in una sottocartella!
  
 <p>
 Infine puoi indicare in quale cartella i file debbano essere esportati.
-Finally you can indicate to what folder the files are exported.
 Qui sono disponibili quattro opzioni. Nel
-There are four options here. In the
 caso predefinito i file sono esportati nella stessa cartella dove si trovi salvato 
-default situation the files are exported in the folder where the stand-alone game is
 il gioco indipendente (l'eseguibile). Questo è anche il percorso di lavoro per il gioco. Così il gioco può utilizzare già (soltanto)
-stored. This is also the working directory for the game. So the game can just use
 i nomi dei file per accedervi (non è necessario inserire tutto il percorso dei file)(non sono necessari i percorsi dei file). Questo lavora (andrà) bene (funziona/funzionerà correttamente) se il gioco indipendente
-the file names to access them (no paths are required). This works well if the stand-alone
 si trovi ad esempio (e.g.) sul disco rigido (hard disk) ma fallirà (non funzionerà correttamente) se è posizionato su di un dispositivo di sola lettura (e.g. ??), ad esempio su di un CD.
-is stored e.g. on the hard disk but will fail if it is stored on a read-only device,
 e.g. on a CD.
 
 <p>
 La seconda possibilità è indicare quali file debbano essere esportati nella cartella
-The second possibility is to indicate that the files must be exported into the temporary
 temporanea che viene creata durante l'avvio del gioco. Se selezioni questa opzione avrai
-folder that is created during the running of the game. If you select this option you will
 bisogno di fornire il percorso fino alla cartella temporanea quando utilizzi il nome del file durante il 
-need to provide the path to the temporary folder when you use the file name during the
 gioco. Questo percorso può essere
-game. This path can be
 ottenuto usando la variabile interna (built-in variable) <tt>temp_directory</tt>. Non dimenticare di
-obtained using the built-in variable <tt>temp_directory</tt>. Don't forget to
 aggiungere la contro-barra (barra invertita) ("\") in questo caso. Così ad esempio (e.g.) per avviare la riproduzione di un file video dovresti inserire (battere) il
-add the backslash in this case. So to e.g. play a video file you might type in
 seguente codice:
-the following piece of code:
 
 <p>
 <blockquote>
@@ -141,31 +102,20 @@ the following piece of code:
 
 <p>
 Realizza (Renditi conto/Tieni a mente/Ricorda/Tieni presente) che questa cartella temporanea viene rimossa una volta che il
-Realize that this temporary folder is removed once the
 gioco sia terminato (l'esecuzione del gioco sia terminata). Così non puoi conservare partite salvate o particolari informazioni in questo caso.
-game is finished. So you e.g. cannot store save games or special information in this case.
 Scegli questa opzione solamente quando vuoi che il gioco venga avviato da un CD o quando non vuoi
-Only choose this option when you want the game to be run from a CD or when you do not
 scrivere alcun file al di fuori del tuo gioco.
-write any files from within your game.
 
 <p>
 La terza opzione è indicare tu stesso la cartella nella quale esportare il file.
-The third option is to indicate the folder to which the file must be exported yourself.
-Se non dovesse già esistere verrebbe (verrà) creata. Ad esempio (E.g. = exempli gratia / exemple given) potresti specificare <tt>C:\MyGame</tt>. (Nota
-If it does not exist it will be created. E.g. you could specify <tt>C:\MyGame</tt>. (Note
+Se non dovesse già esistere verrebbe (verrà) creata. Ad esempio (e.g.) potresti specificare <tt>C:\MyGame</tt>. (Nota
 che devi fornire un percorso completo e che non dovresti includere una barra rovesciata ("\") alla fine.)
-that you need to provide a full patgh and that you should not include a backslash at the end.)
 Questa opzione è consentita soltanto quando il gioco non venisse eseguito in modalità protetta.
-This is only allowed when the game does not run in secure mode.
 
 <p>
 Infine, puoi indicare di non esportare il file automaticamente. In questo caso potresti
-Finally, you can indicate not the export the file automatically. In this case you should
 usare ad esempio (e.g.) la funzione <tt>export_include_file(fname)</tt> per esportarlo tu stesso (da te/manualmente) quando
-use e.g. the function <tt>export_include_file(fname)</tt> to export it yourself when
 richiesto.
-required.
 
 
 <!--END-->
