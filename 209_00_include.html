@@ -33,7 +33,7 @@ mostrata la seguente finestra:
 <p>
 Nella parte alta della finestra c'è una lista di file da includere.
 Usa <b>Add</b> (Aggiungi) per aggiungere un nuovo file alla lista, <b>Change</b> (Cambia) per cambiare
-un file selezionato, <b>Delete</b> (Cancella) per eliminarlo, e <b>Clear</b> (Pulisci/Sgombra/Svuota/Libera)
+un file selezionato, <b>Delete</b> (Cancella) per eliminarlo, e <b>Clear</b> (Pulisci<!/Sgombra/Svuota/Libera>)
 per cancellare l'intera lista. Quando aggiungi o cambi un elemento, ti apparirà la seguente finestra:
 
 <p>
@@ -51,13 +51,13 @@ file incluso verrà aggiunto non soltanto all'eseguibile ma anche alla versione 
 Il vantaggio è che puoi ad esempio (e.g.) mandare la versione modificabile a qualcun'altro ed essere sicuro
 che anche il file sia presente lì (con esso). Inoltre se desideri puoi rimuovere il file originale una volta incluso o spostarlo altrove
 senza problemi. Lo svantaggio è che la versione modificabile del gioco diventa così più grande e
-prende più tempo nel caricamento.
+impiega più tempo nel caricamento.
 
 
 <p>
 Selezionare l'opzione <b>Free memory after export</b> (Libera la memoria dopo l'esportazione) significa che dopo che il file sia stato esportato
 sarà rimosso dalla memoria. Se vuoi essere in grado di esportarlo nuovamente
-in seguito dovrai deselezionare questa opzione.
+in seguito, dovrai deselezionare questa opzione.
 Se un file che venga esportato già esista normalmente non viene riscritto. Puoi cambiare questo
 comportamento selezionando <b>Overwrite existing files</b> (Sovrascrivi i file esistenti). Inoltre, quando il gioco venga completato
 i file non vengono normalmente rimossi (a meno chè essi non si trovino nella cartella temporanea che viene completamente
@@ -73,9 +73,8 @@ Infine puoi indicare in quale cartella i file debbano essere esportati.
 Qui sono disponibili quattro opzioni. Nel
 caso predefinito i file sono esportati nella stessa cartella dove si trovi salvato 
 il gioco indipendente (l'eseguibile). Questo è anche il percorso di lavoro per il gioco. Così il gioco può utilizzare già (soltanto)
-i nomi dei file per accedervi (non è necessario inserire tutto il percorso dei file)(non sono necessari i percorsi dei file). Questo lavora (andrà) bene (funziona/funzionerà correttamente) se il gioco indipendente
-si trovi ad esempio (e.g.) sul disco rigido (hard disk) ma fallirà (non funzionerà correttamente) se è posizionato su di un dispositivo di sola lettura (e.g. ??), ad esempio su di un CD.
-e.g. on a CD.
+i nomi dei file per accedervi (non è necessario inserire tutto il percorso dei file)(non sono necessari i percorsi dei file). Questo lavora <!(andrà) bene (funziona/>funzionerà correttamente<!)> se il gioco indipendente
+si trovi ad esempio (e.g.) sul disco rigido (hard disk) ma <!fallirà (>non funzionerà correttamente<!)> se è posizionato su di un dispositivo di sola lettura (e.g.), ad esempio su di un CD.
 
 <p>
 La seconda possibilità è indicare quali file debbano essere esportati nella cartella
@@ -83,7 +82,7 @@ temporanea che viene creata durante l'avvio del gioco. Se selezioni questa opzio
 bisogno di fornire il percorso fino alla cartella temporanea quando utilizzi il nome del file durante il 
 gioco. Questo percorso può essere
 ottenuto usando la variabile interna (built-in variable) <tt>temp_directory</tt>. Non dimenticare di
-aggiungere la barra rovesciata ("\") in questo caso. Così ad esempio (e.g.) per avviare la riproduzione di un file video dovresti inserire (battere) il
+aggiungere la barra rovesciata ("\") in questo caso. Così ad esempio (e.g.) per avviare la riproduzione di un file video dovresti inserire <!(battere)> il
 seguente codice:
 
 <p>
@@ -96,14 +95,14 @@ seguente codice:
 </blockquote>
 
 <p>
-Realizza (Renditi conto/Tieni a mente/Ricorda/Tieni presente) che questa cartella temporanea viene rimossa una volta che il
-gioco sia terminato (l'esecuzione del gioco sia terminata). Così non puoi conservare partite salvate o particolari informazioni in questo caso.
+<!Realizza (Renditi conto/Tieni a mente/>Ricorda<!/Tieni presente)> che questa cartella temporanea viene rimossa una volta che il
+gioco sia terminato <!(l'esecuzione del gioco sia terminata)>. Così non puoi conservare partite salvate o particolari informazioni in questo caso.
 Scegli questa opzione solamente quando vuoi che il gioco venga avviato da un CD o quando non vuoi
 scrivere alcun file al di fuori del tuo gioco.
 
 <p>
 La terza opzione è indicare tu stesso la cartella nella quale esportare il file.
-Se non dovesse già esistere verrebbe (verrà) creata. Ad esempio (e.g.) potresti specificare <tt>C:\MyGame</tt>. (Nota
+Se non dovesse già esistere verrebbe <!(verrà)> creata. Ad esempio (e.g.) potresti specificare <tt>C:\MyGame</tt>. (Nota
 che devi fornire un percorso completo e che non dovresti includere una barra rovesciata ("\") alla fine.)
 Questa opzione è consentita soltanto quando il gioco non venisse eseguito in modalità protetta.
 
