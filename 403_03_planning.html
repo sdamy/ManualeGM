@@ -10,22 +10,25 @@
 
 <h3>Motion planning</h3>
 
-Motion planning ti aiuta a muovere certe istanze da una data posizione
+La pianificazione del movimento (Motion Planning) ti aiuta a muovere certe istanze da una data posizione
 Motion planning helps you to move certain instances from a given location
 ad una differente evitando collisioni con certe altre istanze
 to a different location while avoiding collisions with certain other instances
-(e.g. muri). Motion planning rappresenta un problema. E' impossibile
+(e.g. muri). La pianificazione del movimento (Motion Planning) rappresenta un problema. E' impossibile
 (e.g. walls). Motion planning is a difficult problem. It is impossible to
 fornire funzioni generali che lavorino correttamente in tutte le circostanze. Inoltre,
 give general functions that will work properly in all situations. Also,
 calcolare movimenti liberi da collisioni è un'operazione che richiede tempo. Per questo devi
 computing collision free motions is a time-consuming operation. So you have
-prestare attenzione a come e quando lo applichi. Per favore
+prestare attenzione a come e quando la applichi. Per favore tieni a mente queste osservazioni quando
 be careful how and when you apply it. Please keep these remarks in mind when
+utilizzi una delle seguenti funzioni.
  you use any of the following functions. 
 
 <P>
-Different forms of motion planning are provided by <i>GameMaker</i>. 
+Vengono messe a disposizione differenti forme di pianificazione del movimento (Motion Planning) da <i>GameMaker</i>.
+Different forms of motion planning are provided by <i>GameMaker</i>.
+La più semplice
 The simplest form lets an instance take a step towards a particular goal 
 position, trying to go straight if possible but taking a different direction 
 if required. These functions should be used in the step event of an instance. 
