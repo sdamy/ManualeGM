@@ -102,27 +102,44 @@ They correspond to the motion planning actions that are also available:
 	this check leads to a collision it starts looking at directions more to
 	sinistra e più a destra della direzione migliore. Essa fa questo in passi di
 	the left and to the right of the best direction. It does this in steps of
-	dimensione <TT>rotstep</TT> (valore predefinito: 10).
-	size <TT>rotstep</TT> (default 10). Reducing this gives the instance more 
-	movement possibilities but will be slower. The parameter <TT>maxrot</TT> 
+	dimensione <TT>rotstep</TT> (valore predefinito: 10). Ridurre questo valore permette all'istanza più
+	size <TT>rotstep</TT> (default 10). Reducing this gives the instance more
+	possibilità di movimento ma sarà più lento. Il paramentro <TT>maxrot</TT>
+	movement possibilities but will be slower. The parameter <TT>maxrot</TT>
+	è un pò più difficile da spiegare. L'istanza ha una direzione corrente <!(attuale)>.
 	is a bit more difficult to explain. The instance has a current direction.
-    <TT>maxrot</TT> (default 30) indicates how much it is allowed to change its 
-	current direction in a step. So even if it can move e.g. straight to the goal 
-	it will only do so if it does not violate this maximal change of direction. 
-	If you make <TT>maxrot</TT> large the instance can change a lot in each step. 
-	This will make it easier to find a short path but the path will be uglier. 
-	If you make the value smaller the path will be smoother but it might take 
-	longer detours (and sometimes even fail to find the goal). When no step can 
-	be made the behavior depends on the value of the parameter <TT>onspot</TT>. 
-	If <TT>onspot</TT> is true (the default value), the instance will rotate on 
-	its spot by the amount indicated with <TT>maxrot</TT>. If it is false it 
-	will not move at all. Setting it to false is useful for e.g. cars but reduces 
+    <TT>maxrot</TT> (valore predefinito: 30) indica di quanto è possibile cambiare la sua	
+    <TT>maxrot</TT> (default 30) indicates how much it is allowed to change its
+    	attuale direzione in un passo (step). Così anche se essa potesse ad esempio muovere (e.g.) dritto verso la meta (obbiettivo)
+	current direction in a step. So even if it can move e.g. straight to the goal
+	lo farebbe soltanto se <!(facendolo)> non violasse questa massima variazione di direzione.
+	it will only do so if it does not violate this maximal change of direction.
+	Se renderai <TT>maxrot</TT> grande l'istanza potrà fare grandi variazioni <!(variarla di molto)> ad ogni passo (step).
+	If you make <TT>maxrot</TT> large the instance can change a lot in each step.
+	Questo renderà più facile trovare un percorso breve ma il percorso sarà più brutto <!(n.t. spigoloso)>.
+	This will make it easier to find a short path but the path will be uglier.
+	Se rendi il valore più piccolo il percorso sarà più morbido ma esso potrebbe seguire
+	If you make the value smaller the path will be smoother but it might take
+	deviazioni più lunghe (e a volte anche mancare di <!non riuscire a> trovare l'obbiettivo). Quando non può essere
+	longer detours (and sometimes even fail to find the goal). When no step can
+	fatto nessun passo il comportamento dipenderà dal valore del parametro <TT>onspot</TT>.
+	be made the behavior depends on the value of the parameter <TT>onspot</TT>.
+	Se <TT>onspot</TT> assume il valore di vero (true) (il valore predefinito), l'istanza ruoterà sul
+	If <TT>onspot</TT> is true (the default value), the instance will rotate on
+	posto dell'ammontare indicato <!(quantità indicata)> con <TT>maxrot</TT>. Se assume il valore di falso (false) essa 
+	its spot by the amount indicated with <TT>maxrot</TT>. If it is false it
+	non si muoverà affatto. Impostarla su falso (false) è utile ad esempio per (e.g.) le automobili ma riduce
+	will not move at all. Setting it to false is useful for e.g. cars but reduces
+	la possibilità di trovare un percorso.
 	the chance of finding a path.<br>
 </blockquote>
 
 <p>
-Please note that the potential approach uses only local information. So it will only 
-find a path if this local information is enough to determine the right direction of 
+Per favore nota che il potenziale approccio usa solo informazioni locali. Così esso troverà
+Please note that the potential approach uses only local information. So it will only
+un percorso se queste informazioni locali sono sufficienti a determinare la giusta direzione del
+find a path if this local information is enough to determine the right direction of
+movimento. Per esempio, non riuscirà a trovare un percorso di uscita di un labirinto (il più delle volte).
 motion. For example, it will fail to find a path out of a maze (most of the time).
 
 <P>
