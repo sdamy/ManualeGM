@@ -36,6 +36,7 @@ se necessario <!(richiesto)>. Queste funzioni dovrebbero essere usate nell'event
 if required. These functions should be used in the step event of an instance.
 Esse <!(queste)> sono le azioni di movimento pianificato (pianificazione del movimento) che sono inoltre disponibili:
 <!Corrispondono ad azioni di movimento pianificato (pianificazione del movimento) che sono anche disponibili:>
+<!Corrispondono ad azioni di movimento pianificato che anche sono disponibili:>
 They correspond to the motion planning actions that are also available:
 
 <p>
@@ -58,7 +59,7 @@ They correspond to the motion planning actions that are also available:
 	posizione meta (obbiettivo).<br>
 	was reached.<br>
   <tt><b>mp_linear_step_object(x,y,stepsize,obj)</b></tt>
-    Stesso della funzione precedente ma questa volta soltanto le istanze di <tt>obj</tt> sono
+    Stesso della funzione precedente <!(sopra)> ma questa volta soltanto le istanze di <tt>obj</tt> sono
     Same as the function above but this time only instances of <tt>obj</tt> are
     	considerate come ostacoli. <tt>obj</tt> può essere un oggetto o l'identificativo (id) di un'istanza.<br>
 	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>
@@ -78,17 +79,30 @@ They correspond to the motion planning actions that are also available:
 	se sia stata raggiunta o meno la meta <!(se l'obbiettivo sia stato raggiunto o meno)>'.<br>
 	whether or not the goal was reached.<br>
   <tt><b>mp_potential_step_object(x,y,stepsize,obj)</b></tt>
+    Stesso della funzione precedente <!(sopra)> ma questa volta soltanto le istanze di <tt>obj</tt> sono
     Same as the function above but this time only instances of <tt>obj</tt> are
+    	considerate come ostacoli. <tt>obj</tt> può essere un oggetto o l'identificativo (id) di un'istanza.<br>
 	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>
   <tt><b>mp_potential_settings(maxrot,rotstep,ahead,onspot)</b></tt>
+    La precedente funzione opera <!(svolge il suo compito / lavora)> usando un (certo) numero di parametri che possono
     The previous function does its work using a number of parameters that can
-	be changed using this function. Globally the method works as follows. It 
-	first tries to move straight towards the goal. It looks a number of steps 
-	ahead which can be set with the parameter <TT>ahead</TT> (default 3). 
-	Reducing this value means that the instance will start changing direction 
-	later. Increasing it means it will start changing direction earlier. If 
-	this check leads to a collision it starts looking at directions more to 
-	the left and to the right of the best direction. It does this in steps of 
+    	essere cambiati usando questa funzione. Globalmente il metodo opera come segue <!( con il quale lavora è il seguente)>. Esso 
+	be changed using this function. Globally the method works as follows. It
+	prima prova a muovere dritto verso la meta (obbiettivo). Esso guarda avanti <!(Guarda in avanti)> di un numero di passi
+	first tries to move straight towards the goal. It looks a number of steps
+	che può essere impostato attraverso <!(con)> il parametro <TT>ahead</TT> (avanti) (valore predefinito: 3).
+	ahead which can be set with the parameter <TT>ahead</TT> (default 3).
+	Ridurre questo valore comporterà che l'istanza inizi a cambiare direzione
+	Reducing this value means that the instance will start changing direction
+	più tardi. Incrementarlo....
+	(Riducendo questo valore l'istanza inizierà a cambiare direzione
+	dopo. Incrementandolo inizierà a cambiare direzione prima. Se )	
+	later. Increasing it means it will start changing direction earlier. If
+	questo controllo porta ad una collisione essa inizierà a guardare nelle direzioni più a
+	this check leads to a collision it starts looking at directions more to
+	sinistra e più a destra della direzione migliore. Essa fa questo in passi di
+	the left and to the right of the best direction. It does this in steps of
+	dimensione <TT>rotstep</TT> (valore predefinito: 10).
 	size <TT>rotstep</TT> (default 10). Reducing this gives the instance more 
 	movement possibilities but will be slower. The parameter <TT>maxrot</TT> 
 	is a bit more difficult to explain. The instance has a current direction.
