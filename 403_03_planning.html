@@ -143,17 +143,26 @@ movimento. Per esempio, non riuscirà a trovare un percorso di uscita di un labi
 motion. For example, it will fail to find a path out of a maze (most of the time).
 
 <P>
-The second kind of functions computes a collision-free path for the instance. 
-Once this path has been computed you can assign it to the instance to move 
-towards the goal. The computation of the path will take some time but after 
-that the execution of the path will be fast. Of course this is only valid if 
-the situation has not changed in the meantime. For example, if obstacles 
-change you possibly will need to recompute the path. Again notice that these functions 
+Il secondo tipo di funzioni calcola un percorso libero da collisioni per l'istanza.
+The second kind of functions computes a collision-free path for the instance.
+Ona volta che questo percorso è stato calcolato puoi assegnarlo all'istanza per muoverla
+Once this path has been computed you can assign it to the instance to move
+verso la meta. Il calcolo del percorso impiegherà del tempo ma dopo quello
+towards the goal. The computation of the path will take some time but after
+l'attuazione <!(esecuzione)> del percorso sarà veloce. Certamente ciò varrà soltanto se 
+that the execution of the path will be fast. Of course this is only valid if
+la situazione non è cambiata nel frattempo. Per esempio, se gli ostacoli
+the situation has not changed in the meantime. For example, if obstacles
+cambiano forse avrai bisogno di ricalcolare il percorso. Ancora una volta nota che queste funzioni 
+change you possibly will need to recompute the path. Again notice that these functions
+potrebbero non avere successo.
 might fail. 
 <B><I>These functions are only available in the Standard Edition of GameMaker.</I></B>
 
 <P>
-The first two functions use the linear motion and potential field approach that 
+Le prime due funzioni usano l'approccio del movimento lineare e quello del campo potenziale che
+The first two functions use the linear motion and potential field approach that
+venivano usati anche per le funzioni per passi (step).
 were also used for the step functions.
 
 <p>
