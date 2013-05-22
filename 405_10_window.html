@@ -106,59 +106,57 @@ il gioco. Per farlo esistono le seguenti funzioni:
 
 <p>
 
-The window has a position on the screen and a size. (When we talk about 
-position and size we always mean the client part of the window without 
-the borders.) You can change these although you hardly ever do from 
-within your game. Normally they are determined automatically or by 
-the player. The following functions can be used to change the window 
-position and size. Note that these functions deal with the windowed 
-mode. If the window is in full screen mode they can still be used 
-but will only have effect when switching full screen mode off.
+La finestra ha una posizione nello schermo e una dimensione. (Quando parliamo di posizione e
+dimensione intendiamo sempre la parte client della finestra, senza i bordi.) Puoi cambiarle
+anche se non lo farai quasi mai dal gioco. Di solito sono determinate automaticamente o scelte
+dal giocatore. Le seguenti funzioni possono essere usate per cambiare la posizione e la
+dimensione della finestra. Nota che queste funzioni lavorano con la modalità Finestra. Se la
+finestra è a schermo intero potrai ancora usarle ma avranno effetto solo quando disattiverai
+la visualizzazione a schermo intero.
 
 <p>
 <blockquote>
   <tt><b>window_set_position(x,y)</b></tt>
-    Sets the position of the (client part of the) window to the indicated position.<br>
+    Imposta la posizione della (parte client della) finestra alla posizione indicata.<br>
   <tt><b>window_set_size(w,h)</b></tt>
-    Sets the size of the (client part of the) window to the indicated size. 
-	Note that is the indicated size is too small to fit the drawing region 
-	it is kept large enough for the region to fit it.<br> 
+    Imposta la dimensione della (parte client della) finestra alla dimensione indicata.
+        Nota che se la regione indicata è troppo piccola per contenere la regione disegnata
+        viene tenuta abbastanza grande per contenere la regione.<br> 
   <tt><b>window_set_rectangle(x,y,w,h)</b></tt>
-    Sets the position and size of the window rectangle. 
-	(Does both previous routines in one step.)<br>
+    Imposta la posizione e la dimensione della finestra.
+        (Esegue tutte e due le funzione precedenti in una volta sola.)<br>
   <tt><b>window_center()</b></tt>
-    Centers the window on the screen.<br>
+    Centra la finestra nello schermo.<br>
   <tt><b>window_default()</b></tt>
-    Gives the window the default size and position (centered) on the screen.<br>
+    Riporta la finestra alla dimensione e alla posizione (centrata) predefinite.<br>
   <tt><b>window_get_x()</b></tt>
-    Returns the current x-coordinate of the window.<br>
+    Restituisce l'ascissa della posizione della finestra.<br>
   <tt><b>window_get_y()</b></tt>
-    Returns the current y-coordinate of the window.<br>
+    Restituisce l'ordinata della posizione della finestra.<br>
   <tt><b>window_get_width()</b></tt>
-    Returns the current width of the window.<br>
+    Restituisce la lunghezza (orizzontale) della finestra.<br>
   <tt><b>window_get_height()</b></tt>
-    Returns the current height of the window.<br>
+    Restituisce l'altezza (verticale) della finestra.<br>
 </blockquote>
 
 <p>
 
-Again, you probably never want to use any of the window positioning functions as 
-<i>GameMaker</i> takes care of these automatically.
+Di nuovo, probabilmente non userai mai una di queste funzioni di posizionamento della
+finestra perché <i>GameMaker</i> se ne occupa automaticamente.
 
 <P>
-In rare cases you might want to know the position of the mouse with 
-respect to the window. (Normally you always use the mouse position 
-with respect to the room or with respect to a view.) The following 
-functions exist for this.
+In rari casi vorrai sapere la posizione del mouse rispetto alla finestra. (Di solito
+usi sempre la posizone del mouse rispetto alla room o a una view.) Per farlo esistono
+le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>window_mouse_get_x()</b></tt>
-    Returns the x-coordinate of the mouse in the window.<br>
+    Restituisce l'ascissa del mouse nella finestra.<br>
   <tt><b>window_mouse_get_y()</b></tt>
-    Returns the y-coordinate of the mouse in the window.<br>
+    Restituisce l'ordinata del mouse nella finestra.<br>
   <tt><b>window_mouse_set(x,y)</b></tt>
-    Sets the position of the mouse in the window to the indicated values.<br>
+    Imposta la posizione del mouse nella finestra ai valori indicati.<br>
 </blockquote>
 
 <p>
@@ -178,6 +176,17 @@ drawing region
 region for drawing
 window position
 window size
+
+finestra
+finestra, proprietà della
+schermo intero
+cursore
+cursore, forma
+didiascalia
+regione di disegno
+disegno, regione
+finestra, posizione
+finestra, dimensione
 
 window_set_visible()
 window_get_visible()
