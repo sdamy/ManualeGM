@@ -45,7 +45,13 @@ for file in $(ls -1 | grep '\.html$')
 			echo "4) (Lascia così)"
 
 			choice="$1"
-			read choice
+
+			if [ "$1" = "NO" ]; then
+				choice="$ttitle"
+				echo Scelta automatica.
+			else
+				read choice
+			fi
 
 			if [ -z "$choice" ]; then
 				choice="$1"
@@ -64,6 +70,7 @@ for file in $(ls -1 | grep '\.html$')
 			fi
 
 			if [ -n "$newtitle" ]; then
+				newtitle=$(echo "$newtitle" | sed -e 's/[\/&]/\\&/g')
 				sed "s/$atitle/$newtitle/" < $file > _
 				mv _ $file
 				sed -e "s/$htitle/$newtitle/" -e "s/$ttitle/$newtitle/" < $file2 > _
@@ -79,6 +86,8 @@ for file in $(ls -1 | grep '\.html$')
 	mv _ $file
 done
 
+sed -f modifiche < traduttori > _
+mv _ traduttori
 sort traduttori > _
 mv _ traduttori
 
@@ -123,7 +132,7 @@ do
 	fi
 
 	if [ "$others" != "" ]; then
-		add="(con $others)"
+		add="(con parti tradotte da $others)"
 	else
 		add=""
 	fi
