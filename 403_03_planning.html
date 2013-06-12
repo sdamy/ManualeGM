@@ -180,29 +180,48 @@ were also used for the step functions.
 	later chapter on how to create and destroy paths.) The function will
 	ritornerà se un percorso sia stato trovato. La funzione si arresterà e riporterà insuccesso
 	return whether a path was found. The function will stop and report failure
-	se non esiste nessun percorso rettilineo tra il punto iniziale e la meta. 
+	se non esiste nessun percorso rettilineo tra il punto iniziale e la meta. Se essa fallisce
 	if no straight path exists between start and goal. If it fails a 
+	viene tuttavia creato un percorso che vada fino alla posizione dove l'istanza si era bloccata.<br>
 	path is still created that runs till the position where the instance was blocked.<br>
   <tt><b>mp_linear_path_object(path,xg,yg,stepsize,obj)</b></tt>
+    Come la funzione sopra ma questa volta soltanto istanze di <tt>obj</tt> sono
     Same as the function above but this time only instances of <tt>obj</tt> are
-	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>
+    	considerate ostacoli. <tt>obj</tt> può essere un oggetto o un <!l'>identificativo (id) di un oggetto.<br>
+	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>	
   <tt><b>mp_potential_path(path,xg,yg,stepsize,factor,checkall)</b></tt>
-    This function computes a path for the instance from its current position 
-	and orientation to the position (xg,yg) using the indicated step size 
-	trying to avoid collision with obstacles. It uses potential field steps, 
-	like in the function <TT>mp_potential_step()</TT> and also the parameters 
-	that can be set with <TT>mp_potential_settings()</TT>. The indicated path 
-	must already exist and will be overwritten by the new path. (See a later 
-	chapter on how to create and destroy paths.) The function will return 
-	whether a path was found. To avoid the function continuing to compute 
-	forever you need to provide a length factor larger than 1. The function 
+    Questa funzione computa un percorso per l'istanza dalla sua posizione corrente
+    This function computes a path for the instance from its current position
+ 	e dal suo orientamento alla posizione (xg,yg) usando la dimensione del passo (step) indicata
+	and orientation to the position (xg,yg) using the indicated step size
+	cercando di evitare collisioni con gli ostacoli. Essa usa i (potential field steps ???)<!possibili passaggi di campo>,
+	trying to avoid collision with obstacles. It uses potential field steps,
+	come nella funzione <TT>mp_potential_step()</TT> e anche i parametri
+	like in the function <TT>mp_potential_step()</TT> and also the parameters
+	che possono essere impostati con <TT>mp_potential_settings()</TT>. Il percorso indicato
+	that can be set with <TT>mp_potential_settings()</TT>. The indicated path
+	deve già esistere e sarà sovrascritto dal nuovo percorso. (Vedi in un
+	must already exist and will be overwritten by the new path. (See a later
+	capitolo successivo come creare e distruggere percorsi.) La funzione ritornerà
+	chapter on how to create and destroy paths.) The function will return
+	se un percorso sia stato trovato. Per evitare che la funzione continui a calcolare
+	whether a path was found. To avoid the function continuing to compute
+	all'infinito tu necessiti di provvedere un fattore di lunghezza (factor) maggiore di 1. La funzione 
+	forever you need to provide a length factor larger than 1. The function
+	si arresterà e riporterà insuccesso se essa non trova un percorso più breve di questo
 	will stop and report failure if it cannot find a path shorter than this 
+	fattore di volte la distanza tra il punto d'inizio e la meta. Un fattore del valore di 4 è solitamente
 	factor times the distance between start and goal. A factor of 4 is normally 
+	abbastanza buono ma se ti aspetti lunghe deviazioni potresti renderlo maggiore. Se 
 	good enough but if you expect long detours you might make it longer. If 
-	it fails a path is still created that runs in the direction of the goal 
+	esso fallisce verrà creato un percorso che vada in direzione della meta
+	it fails a path is still created that runs in the direction of the goal
+	ma esso non la raggiungerà.<br>
 	but it will not reach it.<br>
   <tt><b>mp_potential_path_object(path,xg,yg,stepsize,factor,obj)</b></tt>
+    Come la funzione sopra ma questa volta soltanto istanze di <tt>obj</tt> sono
     Same as the function above but this time only instances of <tt>obj</tt> are
+    	considerate ostacoli. <tt>obj</tt> può essere un oggetto o un <!l'>identificativo (id) di un oggetto.<br>
 	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>
 </blockquote>
 
