@@ -2,7 +2,7 @@
 
 <html>
 <head>
-<title>CD Music</title>
+<title>Musica CD</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
@@ -10,68 +10,67 @@
 <!--START-->
 
 
-<h3>CD music</h3>
+<h3>Musica CD</h3>
 
-<i><b>This functionality is only available in the Standard Edition of GameMaker.</b></i>
+<i><b>Queste funzionalità sono disponibili soltanto nella standard edition di GameMaker.</b></i>
 
 <p>
-There are also a number of functions dealing with playing music from a CD.
+Ci sono anche delle funzioni per avviare musica da CD.
 
 <p>
 <blockquote>
   <tt><b>cd_init()</b></tt> 
-    Must be called before using the other functions. Should also be called 
-	when a CD is changed (or simply from time to time).<br>
+    Deve essere chiamata prima di usare le altre funzioni. Deve essere chiamata anche
+	quanto è stato cambiato un CD(o anche semplicemente di volta in volta).<br>
   <tt><b>cd_present()</b></tt> 
-    Returns whether a CD is present in the default CD drive.<br>
+    Restituisce quando un CD è presente nel lettore CD di default.<br>
   <tt><b>cd_number()</b></tt> 
-    Returns the number of tracks on the CD.<br>
+    Restituisce il numero di tracce del CD.<br>
   <tt><b>cd_playing()</b></tt> 
-    Returns whether the CD is playing.<br>
+    Restituisce quando il CD è in esecuzione.<br>
   <tt><b>cd_paused()</b></tt> 
-    Returns whether the CD is paused or stopped.<br>
+    Restituisce quando il CD è pausato o inattivo.<br>
   <tt><b>cd_track()</b></tt> 
-    Returns the number of the current track (1=the first).<br>
+    Restituisce il numero della traccia corrente (1 = la prima).<br>
   <tt><b>cd_length()</b></tt> 
-    Returns the length of the total CD in milliseconds.<br>
+    Restituisce la durata totale del CD in millisecondi.<br>
   <tt><b>cd_track_length(n)</b></tt> 
-    Returns the length of track n of the CD in milliseconds.<br>
+    Restituisce la durata della traccia n del CD in millisecondi.<br>
   <tt><b>cd_position()</b></tt>
-    Returns the current position on the CD in milliseconds.<br>
+    Restituisce la corrente posizione nel CD in millisecondi.<br>
   <tt><b>cd_track_position()</b></tt> 
-    Returns the current position in the track being played in milliseconds.<br>
+    Restituisce la posizione corrente nella traccia in esecuzione in millisecondi.<br>
   <tt><b>cd_play(first,last)</b></tt> 
-    Tells the CD to play tracks first until last. If you want to play the 
-	full CD give 1 and 1000 as arguments.<br>
+    Indica al CD di eseguire le tracce da first a last. Per eseguire
+	tutto il CD inserite 1 e 1000 come argomenti.<br>
   <tt><b>cd_stop()</b></tt> 
-    Stops playing.<br>
+    Arresta l'esecuzione.<br>
   <tt><b>cd_pause()</b></tt> 
-    Pauses the playing.<br>
+    Pausa l'esecuzione.<br>
   <tt><b>cd_resume()</b></tt> 
-    Resumes the playing.<br>
+    Riprende l'esecuzione.<br>
   <tt><b>cd_set_position(pos)</b></tt> 
-    Sets the position on the CD in milliseconds.<br>
+    Imposta la posizione nel CD in millisecondi.<br>
   <tt><b>cd_set_track_position(pos)</b></tt> 
-    Sets the position in the current track in milliseconds.<br>
+    Imposta la posizione nella traccia corrente in millisecondi.<br>
   <tt><b>cd_open_door()</b></tt> 
-    Opens the door of the CD player.<br>
+    Apre lo sportello del lettore CD.<br>
   <tt><b>cd_close_door()</b></tt> 
-    Closes the door of the CD player.<br>
+    Chiude lo sportello del lettore CD.<br>
 </blockquote>
 
 <p>
-There is one very general function to access the multimedia functionality of windows.
+Cè una funzione molto generalizzata per accedere alle funzionalità multimediali di Windows.
 
 <p>
 <blockquote>
   <tt><b>MCI_command(str)</b></tt> 
-    This functions sends the command string to the Windows multimedia system 
-	using the Media Control Interface (MCI). It returns the return string. 
-	You can use this to control all sorts of multimedia devices. See the Windows 
-	documentation for information in how to use this command. For example 
-	<tt>MCI_command('play cdaudio from 1')</tt> plays a CD (after you have 
-	correctly initialized it using other commands). This function is only 
-	for advanced use!
+    Questa funzione invita una riga di comando al sistema multimediale di Windows
+	usando il Media Control Interface (MCI). Restituisce la stringa restituita dal comando. 
+	Puoi usare questa funzione per controllare ogni sorta di dispositivo multimediale. Guardate la 
+	documentazione di windows per informazioni su come usare questo comando. Per esempio
+	<tt>MCI_command('play cdaudio from 1')</tt> avvia un CD (dopo averlo
+	correttamente inizializzato usando altri comandi). Questa funzione è solo per uso avanzato!
 </blockquote>
 
 
