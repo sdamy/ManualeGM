@@ -9,59 +9,59 @@
 
 <!--START-->
 
-<h3>3D sound</h3>
+<h3>Suoni 3D</h3>
 
-<i><b>This functionality is only available in the Standard Edition of GameMaker.</b></i>
-
-<p>
-3D sounds refers to sound that has a position (and velocity) with respect to the listener.
-Although its most prominent use is in 3D games you can also effectively use it in 2D games.
-The idea is that a sound has a position in space. 
-In all functions the listener is assumed to be at position (0,0,0). The system
-calculates how the listener would hear the sound and adapt it accordingly. The effect is 
-especially good when you have a good speaker system but is already works on small speakers. 
+<i><b>Questa funzionalità è disponibile solo nella Standard Edition di GameMaker.</b></i>
 
 <p>
-Besides a position, the sound can also has a velocity. This leads to well-known
-doppler effects which are correctly modelled. Finally the sound can have an
-orientation and, again, the sound is adapted accordingly. 
+I suoni 3D sono i suoni che hanno una posizione (e velocità) rispetto all'ascoltatore.
+Anche se vengono utilizzati soprattutto nei giochi 3D puoi effettivamente usarli anche nei giochi 2D.
+L'idea è che un suono possiede una posizione nello spazio.
+In tutte le funzioni si assume che l'ascoltatore sia alla posizione (0,0,0). Il sistema
+calcola come l'ascoltatore sentirà il suono e dunque lo adatta. L'effetto è
+specialmente buono quando hai un buon sistema di altoparlanti, ma funziona anche in quelli piccoli.
 
 <p>
-<i>GameMaker</i> supports 3D sound options through the functions below. 
-They only work for sound resources that were indicated to be 3D. (The disadvantage is that
-3D sounds will be mono, not stereo.) 
+Oltre alla posizione, il suono ha la velocità. Questo porta
+al ben conosciuto effetto doppler, che verrà modellato correttamente. Infine il suono può avere
+un orientamento, e, di nuovo, il suono si adatterà a questo.
+
+<p>
+<i>GameMaker</i> supporta i suoni 3D con le funzioni descritte sotto.
+Funzionano solo per le risorse che sono state indicate come 3D. (Lo svantaggio è che
+i suoni 3D saranno mono, non stereo).
 
 <p>
 <blockquote>
   <tt><b>sound_3d_set_sound_position(snd,x,y,z)</b></tt> 
-    Sets the position of the indicated sound with respect to
-	the listener to the indicated position in space. 
-	Values on the x-axis increase from left to right, on the y-axis from down to up, 
-	and on the z-axis from near to far. The values are measured in meters. The volume
-	with which the sound is heard depends on this measure in the same way as in
-	the real world.<br>
+	Imposta la posizione del suono indicato
+	rispetto all'ascoltatore.
+	I valori nell'asse x aumentano da sinistra a destra, nell'asse y dal basso verso l'alto,
+	e nell'asse z da vicino a lontano. I valori vengono misurati in metri. Il volume
+	con cui il suono viene ascoltato dipende da questa misura, 
+	proprio come nel mondo reale.<br>
   <tt><b>sound_3d_set_sound_velocity(snd,x,y,z)</b></tt> 
-    Sets the velocity of the indicated sound to the indicated vector in space. 
-	Please note that setting the velocity does not mean that the position changes. 
-	The velocity is only used for calculating doppler effects. So if you want to move
-	the sound you must yourself change the position of the sound.<br>
+	Imposta la velocità del suono indicato al vettore indicato nello spazio.
+	Nota che impostare la velocità non significa cambiare la posizione.
+	La velocità viene usata solo per calcolare gli effetti Doppler. Quindi se vuoi muovere
+	il suono devi cambiare manualmente la posizione.<br>
   <tt><b>sound_3d_set_sound_distance(snd,mindist,maxdist)</b></tt> 
-    Sets the minimum distance at which the sound does no longer increase in
-	loudness and the maximum distance at which the sound can no longer be heard.
-	So when the distance lies between 0 and the minimum distance the sound
-	is at maximal amplitude. When between the minimal distance and the maximal
-	distance the amplitude slowly decreases until either the maximal distance
-	is reached or the sound is anyway no longer audible. Default the minimum
-	distance is 1 meter and the maximal distance is 1 billion meters.<br>
+	Imposta la distanza minima al quale il suono non aumenta in
+	intensità e la distanza massima alla quale il suono non può più essere sentito.
+	Quindi quando la distanza si trova tra 0 e la distanza minima il suono
+	è alla sua massima ampiezza. Quando si trova tra la minima distanza e quella massima
+	l'ampiezza diminuisce lentamente finché non raggiunge la massima distanza
+	o il suono non è più udibile. Normalmente
+	la distanza minima è 1 metro e la massima è 1 miliardo di metri.<br>
   <tt><b>sound_3d_set_sound_cone(snd,x,y,z,anglein,angleout,voloutside)</b></tt> 
-    Normally sound has the same amplitude at a given distance in all directions. 
-	You can set the sound cone to change this and make sound directional. x,y,z specify
-	the direction of the sound cone. <tt>anglein</tt> specifies the inside angle. If
-	the listener is inside this angle it hears the sound at its normal volume. <tt>angleout</tt>
-	specifies the outside angle. When the listener is outside this the volume is indicated
-	with <tt>voloutside</tt>. To be precise, <tt>voloutside</tt> is a negative number
-	that indicates the number of hundreds of decibel that must be subtracted from the
-	inside volume. Between the inside and outside angle the volume gradually decreases.<br>
+	Normalmente il suono ha la stezza ampiezza a una data distanza in tutte le direzioni.
+	Puoi però impostare un cono per cambiare ciò e rendere il suono direzionale. x,y,z specificano
+	la direzione del cono. <tt>anglein</tt> specifica l'angolo interno. Se
+	l'ascoltatore è dentro questo angolo sente il suono al suo normale volume. <tt>angleout</tt>
+	specifica l'angolo esterno. Quando l'ascoltatore è fuori da quest'angolo il volume è indicato
+	con <tt>voloutside</tt>. Per essere più precisi, <tt>voloutside</tt> è un numero negativo
+	che indica le centinaia di decibel da sottrarre dal
+	volume interno. Tra l'interno e l'esterno il vomue diminuisce gradualmente.<br>
 </blockquote>
 
 
@@ -77,6 +77,13 @@ sound distance
 sound direction
 directional sound
 doppler effect
+
+suoni 3d
+posizione dei suoni
+distanza dei suoni
+direzione dei suoni
+suoni direzionali
+effetto doppler
 
 
 sound_3d_set_sound_position()
