@@ -2,133 +2,134 @@
 
 <html>
 <head>
-<title>Drawing Surfaces</title>
+<title>Disegnare le surface</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
 
-<h3>Drawing Surfaces</h3>
+<h3>Disegnare le surface</h3>
 
-<i><b>This functionality is only available in the Standard Edition of GameMaker.</b></i>
-
-<p>
-In certain situations you might want to paint not directly on the screen but on a canvas that
-can then later be used to paint things on the screen. Such a canvas is called a surface.
-For example, you want to let the user draw on the screen. The paint should not 
-be drawn on the screen (because it will be removed each next
-step), but instead you want to draw it on a separate surface that is copied onto the
-screen in each step. Or you want to use a texture that changes over time.
+<i><b>Queste funzionalità sono disponibili solamente nella standard edition di GameMaker.</b></i>
 
 <p>
-Surfaces make this all possible. They are actually rather simple to use. You first create a
-surface. Next you indicate that further drawing should happen on this surface. From that moment
-on all drawing functions operate on the surface. Once you are done you reset the drawing target
-and further drawing happens on the screen again. You can draw the surface on the screen in 
-many different ways or use it as a texture. There are though a few things you must be aware
-of. See the remarks at the end.
+In alcuni casi vorreste poter raffigurare delle opere non direttamente sullo schermo ma su una “tela” che
+potrà essere usata successivamente per raffigurare altre cose sulla schermo. Questa “tela” viene chiamata Surface.
+Per esempio, farete  in modo che l’utente disegni qualcosa sullo schermo. La raffigurazione non verrà
+disegnata sullo schermo (perchè verrà rimossa ad ogni
+step), ma invece verrà disegnata su una tela separata che verrà copiata sullo
+schermo ad ogni step. Potete anche usarla come texture che cambia ad ogni frame.
 
 <p>
-The following functions exist to deal with surfaces
+Le surface rendono possibile ciò. Attualmente sono molto semplici da usare. Prima di tutto si crea una
+surface. Poi bisogna indicare che tutto ciò che disegnerete successivamente verrà disegnato su questa surface.
+Da quel momento in poi tutte le funzioni di disegno opereranno sulla superficie. Una volta finito basta resettare il target di disegno
+e tutto ciò che disegnerete successivamente agirà sullo schermo. Puoi disegnare le surface sullo schermo in
+molti modi differenti o usarle come texture. Ci sono alcune cose a cui bisogna stare attenti quando le usate.
+Controllate i commenti alla fine.
+
+<p>
+Esistono le seguenti funzioni per gestire le surface
 <p>
 <blockquote>
   <tt><b>surface_create(w,h)</b></tt> 
-  	Creates a surface of the indicated width and height. Returns the id
-	of the surface, which must be used in all further calls. Note that
-	the surface will not be cleared. This is the responsibility of the
-	user. (Set it as a target and call the appropriate clear function.)<br>
-	<b>Please Note</b>: Many older graphics cards require "Power of 2" textures/surfaces for use in 3D. That is, width and height sizes must be one of; 2,4,8,16,32,64,128,256,512 or 1024 pixels in size. 
-	While width and height don't have to be the same (i.e. square), you would be advised to try and keep them to these sizes for maximum compatability.<br><br>
+  	Crea una surface con larghezza ed altezza inticate. Restituisce l'id
+	della surface, il quale dovrà essere usato per tutte le altre funzioni. Notare che
+	la surface non verrà pulita. Questa è una vostra responsabilità.
+	(Impostatela come target di disegno ed usare le apposite funzioni di pulitura)<br>
+	<b>Nota</b>: Alcune vecchie schede video richiedono texture/surface con "Multipli di 2" comedimensioni per essere usate nel 3D.
+	Questo vuole dire che è preferibile che larghezza ed altezza siano di 2,4,8,16,32,64,128,256,512 o 1024 pixel.
+	Anche se larghezza ed altezza non devono necessariamente essere uguali(es. un quadrato), è caldamente consigliato mantenere queste dimensioni per la massima compatibilità.<br><br>
   <tt><b>surface_free(id)</b></tt> 
-  	Frees the memory used by the surface.<br>
+  	Elimina la surface.<br>
   <tt><b>surface_exists(id)</b></tt> 
-  	Returns whether the surface with the indicated id exists.<br>
+  	Restituisce se esiste la surface con l'id indicato.<br>
   <br>
   <tt><b>surface_get_width(id)</b></tt> 
-  	Returns the width of the surface.<br>
+  	Restituisce la larghezza della surface.<br>
   <tt><b>surface_get_height(id)</b></tt> 
-  	Returns the height of the surface.<br>
+  	Restituisce l'altezza della surface.<br>
   <tt><b>surface_get_texture(id)</b></tt> 
-  	Returns the texture corresponding to the surface. This can be used to 
-	draw textured objects with the image of the surface.<br>
+  	Restituisce l'id della texture corrispodente della surface. Questo può essere usato
+	per disegnare oggetti texturati con l'immagine della surface.<br>
   <br>
   <tt><b>surface_set_target(id)</b></tt> 
-  	Sets the indicated surface as the drawing target. All subsequent drawing
-	happens on this surface. It resets the projection to simply cover the surface.<br>
+  	Imposta la surface indicata come target di disegno. Tutte le chiamate a disegno successive
+	verranno svolte su questa surface. Reimposta automaticamente la proiezione per usare facilmente la surface.<br>
   <tt><b>surface_reset_target()</b></tt> 
-  	Resets the drawing target to the normal screen.<br>
+  	Reimposta lo schermo come normale target di disegno.<br>
   <br>
   <tt><b>surface_getpixel(id,x,y)</b></tt> 
-  	Returns the color of the pixel corresponding to position (x,y) in the surface. This is
-	not very fast, so use with care.<br> 
+  	Restituisce il colore del pixel alla posizione (x,y) nella surface. Questa
+	funzione non è molto veloce, quindi usatela con cautela.<br> 
   <tt><b>surface_save(id,fname)</b></tt> 
-    Saves a png image of the surface in the given 
-	filename. Useful for making screenshots.<br>
+    Salva la surface in un'immagine png con il nome del file indicato.
+	Utile per fare degli screenshot.<br>
   <tt><b>surface_save_part(id,fname,x,y,w,h)</b></tt> 
-  	Saves part of the surface in the given png filename.<br> 
+  	Salva una parte della surface nel file png indicato.<br> 
   <br>
   <tt><b>draw_surface(id,x,y)</b></tt> 
-  	Draws the surface at position (x,y).
-	(Without color blending and no alpha transparency.)<br>
+  	Disegna la surface alla posizione (x,y).
+	(Senza miscelamento di colori e/o trasparenza)<br>
   <tt><b>draw_surface_stretched(id,x,y,w,h)</b></tt>
-  	Draws the surface stretched to the indicated region.<br>
+  	Disegna la surface ingrandita alle dimensioni indicate.<br>
   <tt><b>draw_surface_tiled(id,x,y)</b></tt> 
-  	Draws the surface tiled so that it fills the entire room.<br>
+  	Disegna varie volte la surface in modo da riempire l'intera room.<br>
   <tt><b>draw_surface_part(id,left,top,width,height,x,y)</b></tt> 
-  	Draws the indicated part of the surface with its origin at position (x,y).<br>
+  	Disegna una parte della surface con l'origine alla posizione (x,y).<br>
   <tt><b>draw_surface_ext(id,x,y,xscale,yscale,rot,color,alpha)</b></tt> 
-  	Draws the surface scaled and rotated with blending color (use c_white for no blending)
-	and transparency alpha (0-1).<br>
+  	Disegna la surface scalata, ruotata, con un colore di miscelatura (usate c_white se non volete la miscelatura)
+	e la trasparenza nel range (0-1).<br>
   <tt><b>draw_surface_stretched_ext(id,x,y,w,h,color,alpha)</b></tt> 
-  	Draws the surface stretched to the indicated region. color is 
-	the blending color and alpha indicates the transparency setting.<br>
+  	Disegna la surface ingrandita alle dimensioni indicate. color è 
+	il colore di miscelatura e alpha indica la trasparenza.<br>
   <tt><b>draw_surface_tiled_ext(id,x,y,xscale,yscale,color,alpha)</b></tt> 
-  	Draws the surface tiled so that it fills the entire room but now 
-	with scale factors and a color and transparency setting.<br>
+  	Disegna varie volte la surface in modo da riempire l'intera room ma ora
+	con impostazioni di scala colore e trasparenza.<br>
   <tt><b>draw_surface_part_ext(id,left,top,width,height,x,y,xscale,yscale,color,alpha)</b></tt> 
-  	Draws the indicated part of the surface with its origin at position (x,y) but now 
-	with scale factors and a color and transparency setting.<br>
+  	Disegna una parte della surface con l'origine alla posizione (x,y) ma ora
+	con impostazioni di scala colore e trasparenza.<br>
   <tt><b>draw_surface_general(id,left,top,width,height,x,y,xscale,yscale,rot,c1,c2,c3,c4,alpha)</b></tt> 
-  	The most general drawing function. It draws the indicated part 
-	of the surface with its origin at position (x,y) but now with scale factors, a rotation angle,
-	a color for each of the four vertices (top-left, top-right, bottom-right, and bottom-left),
-	and an alpha transparency value.<br>
+  	La funzione di disegno più generalizzata. Disegna la parte indicata
+	della surface con l'origine alla posizione (x,y) ma ora con un fattore di scala, angolo di rotazione,
+	un colore per ognuno dei 4 vertici (su-sinistra, su-destra, giu-destra, e giu-sinistra),
+	e la trasparenza.<br>
   <br>
   <tt><b>surface_copy(destination,x,y,source)</b></tt> 
-  	Copies the source surface at position (x,y) in the destination surface.
-	(Without any form of blending.)<br>
+  	Copia la surface sorgente alla posizione (x,y) nella surface di destinazione.
+	(Senza alcuna forma di miscelamento)<br>
   <tt><b>surface_copy_part(destination,x,y,source,xs,ys,ws,hs)</b></tt> 
-  	Copies the indicated part of the source surface at position (x,y) in the destination surface.
-	(Without any form of blending.)<br>
+  	Copia la parte indicata della surface sorgente alla posizione (x,y) nella surface di destinazione.
+	(Senza alcuna forma di miscelamento)<br>
 </blockquote>
 
 <p>
-Note that there are no functions to copy part of the screen to a surface. (This is impossible due to
-possible format differences between the screen and the surfaces.) If this is required you must set
-a surface as render target and next draw the room. You can then use the surface copying routines to get
-parts of it.
+Notare che non ci sono funzioni per copiare una parte dello schermo su una surface. (Questo è impossibile a causa
+di differenze interne di formato tra lo schermo e le surface) Per fare ciò bisogna necessariamente impostare
+una surface come target di disegno e poi disegnare l'intera room. Potete poi usare le funzioni di copia delle surface
+per prendere parti di essa.
 
 <p>
-Note that you can also create sprites and backgrounds from surfaces. See the section on changing resources
-for more information.
+E' anche possibile creare sprite e background da una surface. Guardare la sezione "Modifica delle risorse"
+per più informazioni.
 
 <p>
-Some care must be taken when using these functions. In particular please notice the following:
+Queste funzioni vanno usate con molta cautela. In particolar modo i seguenti punti:
 
 <ul>
-  <li>Surfaces will be destroyed after <b>display_reset()</b> is called. 
-  	  You will have to manually recreate and draw them again after you've called <b>display_reset()</b></li>
-  <li>You should use <b>surface_exists()</b> to see if your surface has been destroyed before using it. 
-      If it has been destroyed, then you must recreated it before drawing it.
-  <li>You should never change the drawing target while you are actually drawing
-      on the screen, that is, never use it in drawing events. This will cause serious
-	  problems with the projection and viewport.</li>
-  <li>For reasons of speed, the surface is maintained in videomemory only. 
-      As a result, you might loose the surface when e.g. the screen resolution 
-	  changes, the screensaver pops up, or CTRL-ALT-Delete is pressed.</li>
-  <li>Surfaces will not be saved when saving a game. </li>
-</ul>
+  <li>Le surface vengono distrutte dopo aver invocato <b>display_reset()</b>. 
+  	  Bisognerà ricrearle manualmente e disegnarci nuovamente una volta usato <b>display_reset()</b></li>
+  <li>Dovresti usare <b>surface_exists()</b> per controllare se la surface è stata distrutta prima di usarla. 
+      Se è stata distrutta bisognerà rigrearla prima di disegnarci sopra.
+  <li>Non dovresti mai cambiare il target di disegno mentre si sta disegnando
+      sullo schermo, il che significa non usarle mai nell'evento di disegno (draw). Questo causerà seri
+	  problemi con la proiezione e la viewport.</li>
+  <li>Per questioni di prestazioni, le surface sono tenute sono nella memoria video. 
+      Il che significa che potrebbero distruggersi quando ad esempio si cambia la risoluzione
+	  dello schermo, si usa uno screen saver, o è stato premuto CTRL-ALT-Canc.</li>
+  <li>Le surface non verranno salvate quando salvate il gioco. </li>
+</ul> 
 
 <!--END-->
 </body>

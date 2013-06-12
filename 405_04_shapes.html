@@ -2,165 +2,163 @@
 
 <html>
 <head>
-<title>Drawing Shapes</title>
+<title>Disegnare delle Forme</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Drawing shapes</h3>
+<h3>Disegnare delle Forme</h3>
 
-There is a whole collection of functions available to draw different shapes. 
-Also there are functions to draw text (see next section). You can only use 
-these in the drawing event of an object; these functions in general don't 
-make any sense anywhere else in code. Realize that collisions between 
-instances are determined by their sprites (or masks) and not by what 
-you actually draw. The following drawing functions exist that can be 
-used to draw basic shapes. 
+C'è una grande collezione di funzioni disponibili per disegnare diverse forme.
+Ci sono anche funzioni per disegnare del testo (vedi prossima sezione). Puoi
+usare queste funzioni soltanto nel Draw Event di un object; generalmente non
+ha senso metterle da qualsiasi altra parte. Devi capire che le collisioni tra
+le istanze sono calcolate in base alle loro maschere di collisione e non da quello
+che disegni. Esistono le seguenti funzioni per disegnare forme basilari.
 
 <p>
 <blockquote>
   <tt><b>draw_clear(col)</b></tt> 
-  	Clears the entire room in the given color (no alpha blending).<br>
+    Riempie completamente la room con il colore dato (senza trasparenza).<br>
   <tt><b>draw_clear_alpha(col,alpha)</b></tt> 
-  	Clears the entire room in the given color and alpha value (in particular useful for surfaces).<br>
+    riempie completamente la room con il colore dato e la trasparenza alpha
+        fornita (è particolarmente utile con le surface).<br>
   <tt><b>draw_point(x,y)</b></tt> 
-  	Draws a point at (x,y) in the current color.<br>
+    Disegna un punto in (x,y) del colore corrente.<br>
   <tt><b>draw_line(x1,y1,x2,y2)</b></tt> 
-    Draws a line from (x1,y1) to (x2,y2).<br>
+    Disegna una linea che va da (x1,y1) a (x2,y2).<br>
   <tt><b>draw_line_width(x1,y1,x2,y2,w)</b></tt> 
-    Draws a line from (x1,y1) to (x2,y2) with width w.<br>
+    Disegna una linea che va da (x1,y1) a (x2,y2) con spessore w.<br>
   <tt><b>draw_rectangle(x1,y1,x2,y2,outline)</b></tt> 
-  	Draws a rectangle. <tt>outline</tt> indicates whether 
-	only the outline must be drawn (true) or it should be filled (false).<br>
+    Disegna un rettangolo. <tt>outline</tt> indica se bisogna disegnare solo il
+        bordo (true) o se dev'essere riempito (false).<br>
   <tt><b>draw_roundrect(x1,y1,x2,y2,outline)</b></tt> 
-  	Draws a rounded rectangle. <tt>outline</tt> indicates whether 
-	only the outline must be drawn (true) or it should be filled (false).<br>
+    Disegna un rettangolo arrotondato. <tt>outline</tt> indica se bisogna disegnare
+        solo il bordo (true) o se dev'essere riempito (false).<br>
   <tt><b>draw_triangle(x1,y1,x2,y2,x3,y3,outline)</b></tt> 
-  	Draws a triangle. <tt>outline</tt> indicates whether 
-	only the outline must be drawn (true) or it should be filled (false).<br>
+    Disegna un triangolo. <tt>outline</tt> indica se bisogna disegnare solo il
+        bordo (true) o se dev'essere riempito (false).<br>
   <tt><b>draw_circle(x,y,r,outline)</b></tt> 
-  	Draws a circle at (x,y) with radius r. <tt>outline</tt> indicates whether 
-	only the outline must be drawn (true) or it should be filled (false).<br>
+    Disegna un cerchio con centro in (x,y) e raggio r. <tt>outline</tt> indica se
+        bisogna disegnare solo il bordo (true) o se dev'essere riempito (false).<br>
   <tt><b>draw_ellipse(x1,y1,x2,y2,outline)</b></tt> 
-  	Draws an ellipse. <tt>outline</tt> indicates whether 
-	only the outline must be drawn (true) or it should be filled (false).<br>
+    Disegna un'ellisse. <tt>outline</tt> indica se bisogna disegnare solo il
+        bordo (true) o se dev'essere riempito (false).<br>
   <tt><b>draw_set_circle_precision(precision)</b></tt> 
-    Sets the precision with which circles are drawn, that is, the number
-	of segments they consist of. The precision must lie between 4 and 64
-	and must be dividable by 4. This is also used for drawing ellipses and
-	rounded rectangles.<br>
+    Imposta la precisione con cui vengono disegnati i cerchi, cioè il numero di segmenti
+        da cui sono formati. La precisione deve essere compresa tra 4 e 64 e deve essere
+        divisibile per 4. Viene usata anche per disegnare ellissi e rettangoli arrotondati.<br>
   <tt><b>draw_arrow(x1,y1,x2,y2,size)</b></tt> 
-  	Draws an arrow from (x1,y1) to (x2,y2). 
-	size indicates the size of the arrow in pixels.<br>
+    disegna una freccia che va da (x1,y1) a (x2,y2). size indica la dimensione della freccia in pixel.<br>
   <tt><b>draw_button(x1,y1,x2,y2,up)</b></tt> 
-  	Draws a button, <tt>up</tt> indicates whether up (1) or down (0).<br>
+    Disegna un pulsante. <tt>up</tt> indica se il pulsante è alzato (true) o è premuto (false).<br>
   <tt><b>draw_path(path,x,y,absolute)</b></tt> 
-  	With this function you can draw the indicated 
-	path in the room with its start at position (x,y). If absolute is true the path is drawn 
-	at the position where it was defined and the values of x and y are ignored.<br>
-<tt><b>draw_healthbar(x1,y1,x2,y2,amount,backcol,mincol,maxcol,direction,showback,showborder)</b></tt> 
-	With this function you can draw a healthbar (or any other bar that indicates some value, like 
-	e.g. the damage). The arguments x1, y1, x2 and y2 indicate the total area for the bar. 
-	amount indicates the percentage of the bar that must be filled (must lie between 0 and 
-	100). backcol is the color of the background for the bar. mincol and maxcol indicate the 
-	color when the amount is 0 and 100 respectively. For an amount in between the color is 
-	interpolated. So you can easily make a bar that goes e.g. from green to red. The direction 
-	is the direction in which the bar is drawn. 0 indicates that the bar is anchored at the 
-	left, 1 at the right, 2 at the top and 3 at the bottom. Finally showback indicates whether 
-	a background box must be shown and showborder indicated whether the box and bar should 
-	have a black border line.<br> 
+    Con questa funzione puoi disegnare il path indicato nella room con la sua posizione di partenza in
+        (x,y). Se absolute è true il path viene disegnato alla posizione in cui è stato definito e i
+        valori x e y sono ignorati.<br>
+  <tt><b>draw_healthbar(x1,y1,x2,y2,amount,backcol,mincol,maxcol,direction,showback,showborder)</b></tt> 
+    Con questa funzione puoi disegnare una barra della salute (o una barra per indicare qualsiasi altra
+        cosa, ad esempio il danno). Gli argument x1, y1, x2 e y2 indicano l'area titale della barra.
+        amount indica la percentuale della barra che deve essere riempita (compresa tra 0 e 100). backcol
+        è il colore di sfondo della barra. mincol e maxcol indicano il colore quando la barra è
+        rispettivamente a 0 e a 100. Per i valori in mezzo il colore è interpolato, quindi puoi creare
+        facilmente una barra che va dal verde al rosso, per esempio. direction è la direzione in cui va
+        la barra. 0 indica che il valore minimo è a sinistra (la barra cresce verso destra), 1 a destra
+        (cresce a sinistra), 2 in alto (cresce verso il basso), 3 in basso (cresce verso l'alto). Infine
+        showback indica se mostrare un rettangolo di sfondo o meno e showborder indica se la barra e
+        l'eventuale rettangolo di sfondo devono avere un bordo nero.<br> 
 </blockquote>
 
 <p>
 
-Most of the above functions use the color and alpha setting that
-can be changed with following functions.
+La maggior parte delle funzioni qui sopra usano delle impostazioni di colore e di trasparenza che possono
+essere cambiate con le funzioni seguenti.
 
 <p>
 <blockquote>
   <tt><b>draw_set_color(col)</b></tt> 
-    Sets the drawing color to be used from now on for drawing primitives.<br> 
+    Imposta il colore che verrà usato da ora per disegnare i primitivi (forme e testo).<br> 
   <tt><b>draw_set_alpha(alpha)</b></tt> 
-    Sets the alpha transparency value to be used from now on for drawing 
-    primitives. Should lie in the range 0-1. 0 is fully transparent, 1 is fully opaque.<br> 
+    Imposta il valore della trasparenza alpha che verrà usato da ora per disegnare i primitivi. Deve essere
+        compresa tra 0 e 1. 0 è completamente trasparente, 1 è completamente opaco.<br> 
   <tt><b>draw_get_color()</b></tt> 
-    Returns the drawing color used for drawing primitives.<br> 
+    Restituisce il colore usato per disegnare i primitivi.<br> 
   <tt><b>draw_get_alpha()</b></tt> 
-    Returns the alpha value used for drawing primitives.<br> 
+    Restituisce il valore della trasparenza alpha usato per disegnare i primitivi.<br> 
 </blockquote>
 
 <p>
 
-A whole range of predefined colors is available:
+È disponibile un insieme di colori predefiniti:
 
   <p>
 <blockquote>
-    <tt><b>c_aqua</b></tt><br>
-    <tt><b>c_black</b></tt><br>
-    <tt><b>c_blue</b></tt><br>
-    <tt><b>c_dkgray</b></tt><br>
-    <tt><b>c_fuchsia</b></tt><br>
-    <tt><b>c_gray</b></tt><br>
-    <tt><b>c_green</b></tt><br>
-    <tt><b>c_lime</b></tt><br>
-    <tt><b>c_ltgray</b></tt><br>
-    <tt><b>c_maroon</b></tt><br>
-    <tt><b>c_navy</b></tt><br>
-    <tt><b>c_olive</b></tt><br>
-    <tt><b>c_orange</b></tt><br>
-    <tt><b>c_purple</b></tt><br>
-    <tt><b>c_red</b></tt><br>
-    <tt><b>c_silver</b></tt><br>
-    <tt><b>c_teal</b></tt><br>
-    <tt><b>c_white</b></tt><br>
-    <tt><b>c_yellow</b></tt><br>
+    <tt><b>c_aqua</b></tt> (celeste)<br>
+    <tt><b>c_black</b></tt> (nero)<br>
+    <tt><b>c_blue</b></tt> (blu zaffiro o chiaro)<br>
+    <tt><b>c_dkgray</b></tt> (grigio scuro)<br>
+    <tt><b>c_fuchsia</b></tt> (fucsia o rosa)<br>
+    <tt><b>c_gray</b></tt> (grigio "a metà")<br>
+    <tt><b>c_green</b></tt> (verde campo o scuro)<br>
+    <tt><b>c_lime</b></tt> (verde chiaro)<br>
+    <tt><b>c_ltgray</b></tt> (grigio chiaro)<br>
+    <tt><b>c_maroon</b></tt> (rosso "bordò")<br>
+    <tt><b>c_navy</b></tt> (blu oltremare o scuro)<br>
+    <tt><b>c_olive</b></tt> (verde oliva)<br>
+    <tt><b>c_orange</b></tt> (arancione chiaro)<br>
+    <tt><b>c_purple</b></tt> (viola)<br>
+    <tt><b>c_red</b></tt> (rosso)<br>
+    <tt><b>c_silver</b></tt> (grigio argento, identico a c_ltgray)<br>
+    <tt><b>c_teal</b></tt> (verde-azzurro o verde acqua)<br>
+    <tt><b>c_white</b></tt> (bianco)<br>
+    <tt><b>c_yellow</b></tt> (giallo)<br>
   </blockquote>
 
 <p>
 
-The following functions can help you to create the colors you want.
+Le seguenti funzioni ti possono aiutare a creare i colori che vuoi.
 
 <p>
 <blockquote>  
   <tt><b>make_color_rgb(red,green,blue)</b></tt> 
-  	Returns a color with the indicated red, 
-	green, and blue components, where red, green and blue must be values between 0 and 255.<br>
+    Restituisce un colore con le componenti di rosso, verde e blu date. Gli argument red, green e blue
+        rappresentano queste componenti e devono essere valori compresi tra 0 e 255.<br>
   <tt><b>make_color_hsv(hue,saturation,value)</b></tt> 
-  	Returns a color with the 
-	indicated hue, saturation and value components (each between 0 and 255).<br>
+    Restituisce un colore con le componenti di tonalità, saturazione e luminosità date. Gli argument
+        hue, saturaturation e value rappresentano queste componenti e devono essere valori compresi tra 0 e 255.<br>
   <tt><b>color_get_red(col)</b></tt> 
-  	Returns the red component of the color.<br>
+    Restituisce la componente di rosso del colore.<br>
   <tt><b>color_get_green(col)</b></tt> 
-    Returns the green component of the color.<br>
+    Restituisce la componente di verde del colore.<br>
   <tt><b>color_get_blue(col)</b></tt> 
-    Returns the blue component of the color.<br>
+    Restituisce la componente di blu del colore.<br>
   <tt><b>color_get_hue(col)</b></tt> 
-    Returns the hue component of the color.<br>
+    Restituisce la componente luminosità del colore.<br>
   <tt><b>color_get_saturation(col)</b></tt> 
-    Returns the saturation component of the color.<br>
+    Restituisce la componente saturazione del colore.<br>
   <tt><b>color_get_value(col)</b></tt> 
-    Returns the value component of the color.<br>
+    Restituisce la componente luminosità del colore.<br>
   <tt><b>merge_color(col1,col2,amount)</b></tt> 
-    Returns a merged color of col1 and col2. 
-	The merging is determined by amount. A value of 0 corresponds to col1, a value of 1 to 
-	col2, and values in between to merged values.<br>
+    Restituisce un colore che sta tra col1 e col2. le quantità in cui vengono mescolati è determinata
+        da amount. Il valore 0 corrisponde a col1, 1 a col2, e i valori in mezzo alla percentuale
+        del col2 (quella del col1 sarà 1-amount).<br>
 </blockquote>
 
 <p>  
-  
-The following miscellaneous functions exist.
+
+Esistono anche queste funzioni varie.
 
 <p>
 <blockquote>
   <tt><b>draw_getpixel(x,y)</b></tt> 
-  	Returns the color of the pixel corresponding to position (x,y) in the room. This is
-	not very fast, so use with care.<br> 
+    Restituisce il colore del pixel situato in (x,y) all'interno della room. Non è molto veloce,
+        quindi usalo con cautela.<br> 
   <tt><b>screen_save(fname)</b></tt> 
-    Saves a png image of the screen in the given 
-	filename. Useful for making screenshots.<br>
+    Salva un'immagine PNG dello schermo con il nome dato. Utile per fare delle istantanee
+        (dette anche screenshot).<br>
   <tt><b>screen_save_part(fname,x,y,w,h)</b></tt> 
-  	Saves part of the screen in the given png filename.<br> 
+    Salva una parte dello schermo in un PNG col nome dato.<br> 
 </blockquote>
 
 <p>
@@ -188,6 +186,24 @@ hsv
 saving screen
 snapshot
 taking snapshots
+
+disegnare forme
+punti
+linee
+rettangoli
+triangoli
+cerchi
+barre della salute
+colore
+trasparenza
+creare colori
+colore, creare
+mischiare colori
+colore, mischiare
+istantanee
+screenshot
+catturare lo schermo
+salvare istantenee
 
 draw_clear() 
 draw_clear_alpha()

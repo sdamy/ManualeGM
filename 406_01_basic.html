@@ -2,82 +2,83 @@
 
 <html>
 <head>
-<title>Basic sound functions</title>
+<title>Funzioni basilari del Suono</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 
 <!--START-->
 
-<h3>Basic sound functions</h3>
+<h3>Funzioni basilari del Suono</h3>
 
 <p>
-There are five basic functions related to sounds, two to play a sound, 
-one to check whether a sound is playing, and two to stop sounds. Most take 
-the index of the sound as argument. The name of the sound represents its 
-index. But you can also store the index in a variable, and use that.
+Ci sono cinque funzioni basilari relativa al suono. Ce ne sono due per far
+partire un suono, una per controllare se un suono sta venendo riprodotto e
+due per fermare i suoni. La maggior parte prende come argument l'indice
+del suono.Il nome di un suono rappresenta il suo indice. Puoi anche salvare
+l'indice in una variabile e usare quella.
 
 <p>
 <blockquote>
   <tt><b>sound_play(index)</b></tt> 
-    Plays the indicates sound once. If the sound is background music the current
-	background music is stopped.<br>
+    Riproduce il suono indicato una volta. Se è una musica di sottofondo, quella
+        corrente viene fermata.<br>
   <tt><b>sound_loop(index)</b></tt> 
-    Plays the indicates sound, looping continuously. If the sound is background music the current
-	background music is stopped.<br>
+    Riproduce il suono indicato, ripetendolo all'infinito. È il cosiddetto <i>looping</i>. Se
+        il suono è una musica di sottofondo, quella corrente viene fermata.<br>
   <tt><b>sound_stop(index)</b></tt> 
-    Stops the indicates sound. If there are multiple sounds with this index playing 
-	simultaneously, all will be stopped.<br>
+    Ferma il suono indicato. Se ci sono più suoni con quest'indice in riproduzione, verranno
+        fermati tutti.<br>
   <tt><b>sound_stop_all()</b></tt> 
-    Stops all sounds.<br>
+    Ferma tutti i suoni.<br>
   <tt><b>sound_isplaying(index)</b></tt> 
-    Returns whether (a copy of) the indicated sound is playing. Note that this functions
-	returns true when the sound actually plays through the speakers. After you call the
-	function to play a sound it does not immediately reach the speakers so the function
-	might still return false for a while. Similar, when the sound is stopped you still hear
-	it for a while (e.g. because of echo) and the function will still return true.<br>
+    Restituisce true se (una copia di) il suono indicato è in riproduzione. Nota che questa
+        funzione ti dice se il suono sta venendo emesso degli altoparlanti. Il suono non
+        raggiunge gli altoparlanti subito dopo la chiamata della funzione per far partire un
+        suono, quindi la funzione potrebbe ancora restituire false per qualche istante.
+        Analogamente, quando fermi un suono lo senti ancora per un po' (ad esempio a causa
+        dell'eco) e la funzione restituirà true ancora per qualche istante.<br>
 </blockquote>
 
 <p>
-It is possible to use further sound effects. In particular you can
-change the volume and the pan, that is, whether the sound comes from the
-left or right speaker. In all these cases the volume can only be reduced.
-These functions do not work for files that play through the media player
-(like mp3 files).
+È possibile usare effetti sonori avanzati. In particolare puoi cambiare il volume e il "pan",
+cioè se il suono esce dall'altoparlante destro o sinistroe con quale intensità. In tutti
+qiesti casi il volume può solo essere ridotto. Queste funzioni non possono essere usate per
+i file che vengono riprodotti attraverso il media player (come gli mp3).
 
 <p>
 <blockquote>
   <tt><b>sound_volume(index,value)</b></tt> 
-    Changes the volume for the indicated sound (0 = low, 1 = high).<br>
+    Cambia il volume del suono indicato (0 = nullo, 1 = massimo).<br>
   <tt><b>sound_global_volume(value)</b></tt> 
-    Changes the global volume for all sounds (0 = low, 1 = high).<br>
+    Cambia il volume globale per tutti i suoni (0 = nullo, 1 = massimo).<br>
   <tt><b>sound_fade(index,value,time)</b></tt> 
-    Changes the volume for the indicated sound to the new value(0 = low, 1 = high)
-	during the indicated time (in milliseconds). This can be used to fade out or
-	fade in music.<br>
+    Cambia il volume del suono indicato nel nouvo valore (0 = nullo, 1 = massimo) modificandolo
+        progressivamente in modo che ci metta <tt>time</tt> millisecondi. Può essere usato per far
+        cominciare o terminare i suoni in maniera più elegante, facendoli sfumare cominciando o
+        finendo allo 0.<br>
   <tt><b>sound_pan(index,value)</b></tt> 
-    Changes the pan for the indicated sound (-1 = left, 0 = center, 1 = right).<br>
+    Cambia il "pan" per il suono indicato (-1 = tutto o sinistra, 0 = equilibrato, 1 = tutto a destra).<br>
   <tt><b>sound_background_tempo(factor)</b></tt> 
-    Changes the tempo of the background music (if it is a midi file). <tt>factor</tt>
-	indicates the factor with which to multiply the tempo. So a value of 1 corresponds
-	to the normal tempo. Larger values correspond to a faster tempo, smaller values
-	to a slower tempo. Must lie between 0.01 and 100.<br>
+    Cambia il tempo della musica di sottofondo (se è un file midi). <tt>factor</tt> indica il
+        fattore per cui va moltiplicato il tempo reale del suono. Quindi 1 corrisponde al tempo
+        reale, valori maggiori a un tempo più veloce e valori minori a un tempo più lento. Questo
+        fattore deve essere compreso tra 0.01 e 100.<br>
 </blockquote>
 
 <p>
-Besides midi and wave files (and mp3 file) there is actually a fourth type of file
-that can be played: direct music files. These have the extension .sgt. Such files 
-though often refer to other files describing e.g. band or style information. To
-find these files, the sound system must know where they are located. To this end
-you can use the following functions to set the search directory for files. Note though
-that you must add the files yourself. <i>GameMaker</i> does not automatically include
-such additional files.
+Oltre al file midi e "wave" (e agli mp3) c'è in verità un quarto tipo di file che può essere
+riprodoto: i file di musica diretta (file.sgt). Spesso questi file si riferiscono ad altri file
+che contengono informazioni riguardanti, ad esempio, l'artista o il genere. Per trovare questi
+file, il sistema deve sapere dove sono. A questo scopo puoi usare la seguente funzione per
+impostare la directory di ricerca per i file. Tuttavia, nota che dovrai aggiungere questi file
+da solo. <i>GameMaker</i> non include automaticamente questi file addizionali.
 
 <p>
 <blockquote>
   <tt><b>sound_set_search_directory(dir)</b></tt> 
-    Sets the directory in which direct music files are to be found. The dir string
-	should not incluce the final backslash.<br>
+    Imposta la directory in cui si trovano i file di musica diretta. La stringa <tt>dir</tt>
+        non deve includere il backslash (\) finale.<br>
 </blockquote>
 
 
@@ -95,6 +96,15 @@ panning sounds
 fading sounds
 volume
 direct music
+
+funzioni dei suoni
+riprodurre suoni
+musica
+fermare suoni
+pan dei suoni
+sfumare i suoni
+volume dei suoni
+musica diretta
 
 sound_play()
 sound_loop()

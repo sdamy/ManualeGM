@@ -2,80 +2,83 @@
 
 <html>
 <head>
-<title>The Display</title>
+<title>Il Display</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>The display</h3>
+<h3>Il Display</h3>
 
-The display represents the whole area on the monitor. It has a size 
-(typically 1024x768, or 1280x1024), a color depth, that is, the number 
-of bits that are used to represent a single pixel (typically 16 = High Color 
-or 32 = Full Color) and a refresh frequency, that is, the number of times 
-per second the display is refreshed (typically between 60 and 120). 
-These settings can normally be changed though the display properties. 
-For games though, in particular when they run in full-screen mode, 
-it is important to be able to change these settings. All these 
-settings can be initialized for the game in the <b>Game Settings</b>. 
-For use during game play the following functions exist. Note 
-though that changing the settings during game play will result 
-in a time delay as things has to be rebuilt. 
-<b><i>The functions to set the mode are only available in the Standard Edition.</i></b>
+<i>La terminologia usata in questa pagina è una traduzione letterale di quella inglese e potrebbe non corrispondere a quella
+realmente usata nel software Windows italiano.</i>
+
+<!--Se qualcuno conosce la terminologia così com'è mostrata nel software Windows italiano,
+modifichi la pagina tranquillamente.-->
+
+<p>
+Il display rappresenta tutta l'area sul monitor. Ha una dimensione (di solito 1024x768, o 1280x1024), una profondità di
+colore, cioè il numero di bit usati per rappresentare un singolo pixel (di solito 16 = Colore Elevato o 32 = Colore
+Completo) e una frequenza d'aggiornamento, cioè quante volte il display si aggiorna in un secondo (di solito tra 60 e 120).
+Queste impostazioni possono essere cambiate nelle proprietà del display. Tuttavia nei giochi, in particolare quando si usa
+la modalità schermo intero, è importante poter cambiare queste impostazioni. Possono essere tutte inizializzate nelle
+<b>Global Game Settings</b> (impostazioni globali del gioco). Per cambiarle durante il gioco esistono le seguenti funzioni.
+Nota che se lo fai il gioco risulterà rallentato perché tutto deve ricostruirsi.
+<b><i>Le funzioni per impostare la modalità (quelle che contengono "set") sono disponibili solo nella Standard Edition.</i></b>
 
 <p>
 <blockquote>
   <tt><b>display_get_width()</b></tt>
- 	Returns the width of the display in pixels.<br>
+    Restituisce la lunghezza (orizzontale) del display in pixel.<br>
   <tt><b>display_get_height()</b></tt>
- 	Returns the height of the display in pixels.<br>
+    Restituisce l'altezza (verticale) del display in pixel.<br>
   <tt><b>display_get_colordepth()</b></tt>
-    Returns the color depth in bits.<br>
+    Restituisce la profondità di colore in bit.<br>
   <tt><b>display_get_frequency()</b></tt>
-    Returns the refresh frequency of the display.<br>
+    Restituisce la frequenza di aggiornamento del display.<br>
   <tt><b>display_set_size(w,h)</b></tt>
-    Sets the width and height of the display in pixels. Returns whether 
-	this was successful. (Realize that only certain combinations are allowed.)<br>
+    Imposta la lunghezza w e l'altezza h del display in pixel. Restituisce true se ha avuto successo. (Renditi conto che
+        solo certe combinazioni sono permesse.)<br>
   <tt><b>display_set_colordepth(coldepth)</b></tt>
-    Sets the color depth. In general only 16 and 32 are allowed values. 
-	Returns whether successful.<br>
+    Imposta la profondità di colore. Generalmente i soli valori conentiti sono 16 e 32. Restituisce true se ha avuto
+        successo.<br>
   <tt><b>display_set_frequency(frequency)</b></tt>
-    Sets the refresh frequency for the display. Only few frequencies 
-	are allowed. Typically you could set this to 60 with a same 
-	room speed to get smooth 60 frames per second motion. 
-	Returns whether successful.<br>
+    Imposta la frequenza di aggiornamento del display. Solo pochi valori sono permessi. Di solito vorrai impostarla a 60
+        con un'identica room_speed così da ottenere proprio 60 frame al secondo in modo fluido. Restituisce true se ha
+        avuto successo.<br>
   <tt><b>display_set_all(w,h,frequency,coldepth)</b></tt>
-    Sets all at once. Use -1 for values you do not want to change. 
-	Returns whether successful.<br>
+    Imposta tutto in una volta sola. Usa -1 per i valori che non vuoi cambiare. Restituisce true se ha avuto successo. <br>
   <tt><b>display_test_all(w,h,frequency,coldepth)</b></tt>
-    Tests whether the indicated settings are allowed. 
-	It does not change the settings. Use -1 for values you do 
-	not want to change. Returns whether the settings are allowed.<br>
+    Controlla se le impostazioni indicate sono permesse. Non cambia tali impostazioni. Usa -1 per i valori che non vuoi
+        cambiare. Restituisce true se le impostazioni sono permesse.<br>
   <tt><b>display_reset(AA)</b></tt>
-    Resets the display settings to the ones when the program was started, and also allow you to change the current level of Full Screen Anti-Aliasing being used. 
-    Available levels are 0,2,4 and 8. GameMaker start up with 0.<br>
+    Reimposta le impostazioni del display e imposta quelle che c'erano quando il programma è stato lanciato, permettendoti
+        anche di impostare il livello di Anti-Aliasing dello Schermo Intero da usare. I livelli disponibili sono: 0, 2, 4
+        e 8. GameMaker comincia con 0.<br>
 	<blockquote>
-	<tt><b>display_aa</b></tt>
-	This read-only variable will report the various levels of AA that a users machine can display. It will do this by setting bits for the different levels, so
-	for only 2xAA, this will report 2, for 2x and 4x availablility it will report 6. For 8 and 4 it will report 12. For all 3 levels (2,4 and 8) it will report 14.
-	To allow a user to set AA, use something like the code shown below..
-	<pre>  if( display_aa&2 ) display_reset(2);	</pre>
+	  <tt><b>display_aa*</b></tt>
+            Questa variabile di sola lettura riporta i vari livelli di AA (l'Anti-Aliasing di prima) che il dispositivo
+                dell'utente può mostrare. Lo farà impostando dei bit per i singoli livelli, quindi solo per 2xAA restituirà
+                2, per la disponibilità di 2x e 4x restituirà 6. Per 4 e 8 restituirà 12. Per tutti e tre i livelli (2, 4 e
+                8) restituirà 14. Per permettere all'utente di impostare l'AA, puoi usare un codice simile a quello
+                mostrato qui sotto:
+	        <pre>  if( display_aa&2 ) display_reset(2);	</pre>
 	</blockquote>
 </blockquote>
 
 <p>
 
-Sometimes it is useful to get information about the position of the mouse on the display or to change this position. For this the following functions exist:
+A volte torna utila ottenere informazioni riguardo alla posizione del mouse nel display o cambiarne la posizione. Per farlo
+esistono le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>display_mouse_get_x()</b></tt>
-    Returns the x-coordinate of the mouse on the display.<br>
+    Restituisce l'ascissa del mouse sul display.<br>
   <tt><b>display_mouse_get_y()</b></tt>
-    Returns the y-coordinate of the mouse on the display.<br>
+    Restituisce l'ordinata del mouse sul display.<br>
   <tt><b>display_mouse_set(x,y)</b></tt>
-    Sets the position of the mouse on the display to the indicated values.<br>
+    Imposta la posizione del mouse sul display ai valori indicati.<br>
 </blockquote>
 
 <p>
@@ -93,6 +96,14 @@ display settings
 frequency
 color depth
 resolution
+
+schermo
+cambiare le impostazioni del display
+impostazioni del display
+display, impostazioni
+frequenza
+profondità colore
+risoluzione
 
 display_get_width()
 display_get_height()

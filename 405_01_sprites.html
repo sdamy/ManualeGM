@@ -2,108 +2,99 @@
 
 <html>
 <head>
-<title>Sprites and Images</title>
+<title>Sprite e Immagini</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Sprites and images</h3>
+<h3>Sprite e Immagini</h3>
 
-Each object has a sprite associated with it. This is either a single image or it consists
-of multiple images. For each instance of the object the program draws the corresponding
-image on the screen, with its origin (as defined in the sprite properties) at the position
-(x,y) of the instance. When there are multiple images, it cycles through the images to get
-an animation effect. There are a number of variables that affect the way the image is
-drawn. These can be used to change the effects. Each instance has the following variables:
+Ogni object ha uno sprite assegnato a esso. Questo può essere un'immagine singola o essere composto di più immagini.
+PEr ogni istanza dell'object il programma disegna l'immagine corrispondente sullo schermo, con la sua origine
+(definita nelle proprietà dello sprite) alla posizione (x,y) dell'istanza. Se ci sono più immagini, queste vengono
+ciclate per ottenere un'animazione. Ci sono delle variabili che influenzano il modo in cui le immagini vengono
+disegnate. Possono essere usate per cambiare gli effetti. Ogni istanza ha le seguenti variabili:
 
 <p>
 <blockquote>
   <tt><b>visible</b></tt> 
-  	If visible is true (1) the image is drawn, otherwise it is not
-	drawn. Invisible instances are still active and create collision events; only you don't
-	see them. Setting the visibility to false is useful for e.g. controller objects (make them
-	non-solid to avoid collision events) or hidden switches.<br>
+    Se è true (1) l'immagine viene disegnata, altrimenti no. Le istanze invisibili sono ancora attive e generano
+        eventi Collision; cambia solo il fatto che non le vedi. Impostare la visibilità a false è utile ad esempio
+        per gli object controllori (ricorda che non devono essere solid per evitare collisioni) o interruttori
+        nascosti.<br>
   <tt><b>sprite_index</b></tt> 
-  	This is the index of the current sprite for the instance.
-	You can change it to give the instance a different sprite. As value you can use the names
-	of the different sprites you defined. Changing the sprite does not change the index of the
-	currently visible subimage.<br>
+    L'indice dello sprite attualmente assegnato all'istanza. Puoi cambiarla per dare all'istanza uno sprite
+        differente. Usa i nomi degli sprite che hai definito come valori. Cambiare sprite non cambia l'immagine
+        correntemente visibile.<br>
   <tt><b>sprite_width*</b></tt> 
-  	Indicates the width of the sprite. This value cannot be
-	changed but you might want to use it.<br>
+    Indica la lunghezza (orizzontale) dello sprite. Questo valore non può essere cambiato ma potresti volerlo usare.<br>
   <tt><b>sprite_height*</b></tt> 
-  	Indicates the height of the sprite. This value cannot be
-	changed but you might want to use it.<br>
+    Indica l'altezza (verticale) dello sprite. Questo valore non può essere cambiato ma potresti volerlo usare.<br>
   <tt><b>sprite_xoffset*</b></tt> 
-  	Indicates the horizontal offset of the sprite as defined
-	in the sprite properties. This value cannot be changed but you might want to use it.<br>
+    Indica l'offset orizzontale dello sprite, così com'è definito nelle proprietà dello sprite.
+        Questo valore non può essere cambiato ma potresti volerlo usare.<br>
   <tt><b>sprite_yoffset*</b></tt> 
-  	Indicates the vertical offset of the sprite as defined
-	in the sprite properties. This value cannot be changed but you might want to use it.<br>
+    Indica l'offset verticale dello sprite, così com'è definito nelle proprietà dello sprite.
+        Questo valore non può essere cambiato ma potresti volerlo usare.<br>
   <tt><b>image_number*</b></tt> 
-  	The number of subimages for the current sprite for the
-	instance (cannot be changed).<br>
+    Il numero di subimmagini nello sprite attualmente assegnato all'istanza (non può essere cambiato).<br>
   <tt><b>image_index</b></tt> 
-  	When the image has multiple subimages the program cycles
-	through them. This variable indicates the currently drawn subimage (they are numbered
-	starting from 0). You can change the current image by changing this variable. The program
-	will continue cycling, starting at this new index. (The value can have a fractional part. 
-	In this case it is always rounded down to obtain the subimage that is drawn.)<br>
+    Quando uno sprite ha più subimmagini il programma cicla tra queste. Questa variabile indica l'immagine attualmente
+        disegnata (sono numerate a partire da 0). Puoj cambiare l'immagine corrente cambiando questa variabile. Il
+        programma continuerà a ciclare partendo dal nuovo indice. (Il valore può avere una parte decimale. In questo caso
+        viene sempre arrotondato per difetto per ottenere l'immagine da disegnare.)<br>
   <tt><b>image_speed</b></tt> 
-  	The speed with which we cycle through the subimages. A value of 1 indicates that each step we 
-	get the next image. Smaller values will switch subimages slower, drawing each subimage multiple 
-	times. Larger values will skip subimages to make the motion faster. Sometimes you want a 
-	particular subimage to be visible and don't want the program to cycle through all of them. 
-	This can be achieved by setting the speed to 0 and choosing the correct subimage. For example, 
-	assume you have an object that can rotate and you create a sprite that has subimages for a
-	number of orientations (counter-clockwise). Then, in the step event of the object you can set
+    La velocità con cui cicliamo tra le subimmagini. Il valore 1 indica che ad ogni step passiamo all'immagine successiva.
+        Valori più piccoli faranno cambiare le immagini più lentamente, disegnando la stessa subimmagine più volte.
+        Valori più grandi faranno saltare delle immagini per velocizzare l'animazione. A volte vorrai tenere fissa una
+        particolare subimmagine senza che il programma le cicli tutte in continuazione. Puoi farlo impostando questa
+        variabile a 0 e scegliendo l'<tt>image_index</tt> corretto. Ad esempio, ipotizziamo che hai un'object che può
+        ruotare e tu crei uno sprite che ha un certo numero di angolazioni (in senso antiorario). Poi, nello Step Event
+        dell'object puoi impostare:
         <blockquote>
-<pre>
-{
-  image_index = direction * image_number/360;
-  image_speed = 0;
-}
-</pre>
-		</blockquote>
+	<pre>
+	{
+	  image_index = direction * image_number/360;
+	  image_speed = 0;
+	}
+	</pre>
+	</blockquote>
   <tt><b>depth</b></tt> 
-  	Normally images are drawn in the order in which the instances are
-	created. You can change this by setting the image depth. The default value is 0, unless
-	you set it to a different value in the object properties. The higher the value the further
-	the instance is away. (You can also use negative values.) Instances with higher depth will
-	lie behind instances with a lower depth. Setting the depth will guarantee that the
-	instances are drawn in the order you want (e.g. the plane in front of the cloud).
-	Background instances should have a high (positive) depth, and foreground instances should
-	have a low (negative) depth.<br>
+    Normalmente le immagini sono disegnate nell'ordine di creazione delle istanze. Puoi cambiare questo fatto impostando
+        la depth (profondità) delle immagini. Il valore di default è 0, a meno che tu non abbia specificato diversamente
+        nelle proprietà dell'object. Più alto è il valore, più l'istanza sarà "lontana". (Puoi anche usare valori
+        negativi). Le istanze con una depth più alta verranno disegnate dietro a quelle con una depth più bassa.
+        Impostare la depth ti garantisce che le istanze vengano disegnate nell'ordine che desideri (ad esempio l'aereo
+        davanti alla nuvola). Le istanze in secondo piano dovrebbero avere una depth alta (positiva), e quelle in primo
+        piano dovrebbero averne una bassa (negativa).<br>
   <tt><b>image_xscale</b></tt> 
-  	A scale factor to make larger or smaller images. A value of 1 indicates the normal size. 
-	You must separately set the horizontal xscale and vertical yscale. Changing the scale 
-	also changes the values for the image width and height and influences collision events 
-	as you might expect. Changing the scale can be used to get a 3-D effect. You can use 
-	a value of -1 to mirror the sprite horizontally.<br>
+    Un fattore di scala per ingrandire o rimpicciolire le immagini. Il valore 1 indica la dimensione normale. Devi
+        impostare separatamente la scala orizzontale e verticale. Cambiare la scala influenza anche i valori di
+        lunghezza e altezza dell'immagine e influenza le collisioni, come potrai pensare. I fattori di scala possono
+        essere usati per creare un effetto 3D. Puoi usare il valore -1 per capovolgere lo sprite orizzontalmente.<br>
   <tt><b>image_yscale</b></tt> 
-  	The vertical yscale. 1 is no scaling. You can use a value of -1 
-	to flip the sprite vertically.<br>
+    Il fattore di scala verticale. 1 è la dimensione normale. Puoi usare il valore -1 per capovolgere lo sprite
+        verticalmente.<br>
   <tt><b>image_angle</b></tt> 
-    The angle with which the sprite is rotated. You specify this in degrees, 
-	counterclockwise. A value of 0 indicates no rotation. 
-	<br>
+    L'angolo con cui viene ruotato lo sprite. Specificalo in gradi e in verso antiorario. 0 indica la posizione
+        originale.<br>
   <tt><b>image_alpha</b></tt> 
-  	Transparency (alpha) value to use when drawing the image. 
-	A value of 1 is the normal opaque setting; a value of 0 is completely transparent.<br>
+    Valore di trasperenza (alpha) da usare per il disegno dell'immagine. 1 è il valore normale, completamente opaco,
+        0 è completamente trasparente.<br>
   <tt><b>image_blend</b></tt> 
-  	Blending color used when drawing the sprite. A value of c_white is the default. 
-	When you specify a different value the image is blended with this color. This 
-	can be used to colorize the sprite on the fly.
-	<b><i>This variable can not be set in the Lite Edition!</i></b><br>
+    Colore che viene mescolato con lo sprite in fase di disegno. Il valore di default è <tt>c_white</tt>. Quando
+        selezioni un valore diverso l'immagine viene mescolata con quel colore. Puoi usarlo per tingere lo sprite al
+        volo. <b><i>Questa variabile non può essere usata nella Lite Edition!</i></b><br>
   <tt><b>bbox_left*</b></tt> 
-  	Left side of the bounding box of the instance in the room, as defined by its image (taking scaling into account).<br>
+    Il lato sinistro della bounding box dell'istanza nella room, com'è definita nella sua immagine (considerando i
+        fattori di scala).<br>
   <tt><b>bbox_right*</b></tt> 
-  	Right side of the bounding box of the instance in the room.<br>
+    Lato destro della bounding box dell'istanza nella room.<br>
   <tt><b>bbox_top*</b></tt> 
-  	Top side of the bounding box of the instance in the room.<br>
+    Lato superiore della bounding box dell'istanza nella room.<br>
   <tt><b>bbox_bottom*</b></tt> 
-  	Bottom side of the bounding box of the instance in the room.<br>
+    Lato inferiore della bounding box dell'istanza nella room.<br>
 </blockquote>
 
 <p>
@@ -117,6 +108,11 @@ sprite settings
 image index
 image speed
 bounding box
+
+sprite, impostazioni
+impostazioni dello sprite
+indice dell'immagine
+velocità dell'immagine
 
 visible 
 sprite_index 

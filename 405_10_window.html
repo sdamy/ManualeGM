@@ -2,167 +2,161 @@
 
 <html>
 <head>
-<title>The Window</title>
+<title>La Finestra</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>The window</h3>
+<h3>La Finestra</h3>
 
-The actual game happens in a window. This window has a number of properties, 
-like whether it has a border, whether it is full screen, etc. Normally 
-these are set in the  <b>Game Settings</b>. But you can change then during 
-the game. The following functions exist for this:
+Il gioco vero e proprio avviene in una finestra. La finestra ha delle proprietà,
+ad esempio può avere un bordo o no, può essere a schermo intero o meno, ecc. Di solito
+possono essere impostate nelle <b>Global Game Settings</b>, ma puoi cambiarle anche durante
+il gioco. Per farlo esistono le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>window_set_visible(visible)</b></tt>
-    Sets whether the game window is visible. Clearly you normally
-	 want the window to remain visible during the whole game. The program
-	 will not receive keyboard events when the window is invisible.<br>
+    Imposta se la finestra del gioco è visibile (true) o no (false). Ovviamente di solito
+        vorrai che la finestra rimanga visibile per tutto il gioco. Il programma
+        non riceverà gli input da tastiera mentre la finestra è invisibile.<br>
   <tt><b>window_get_visible()</b></tt>
-    Returns whether the game window is visible.<br>
+    Restitiscetrue se la finestra di gioco è visibile.<br>
   <tt><b>window_set_fullscreen(full)</b></tt>
-    Sets whether the window is shown in full screen mode.<br>
+    Imposta se la finestra è mostrata a schermo intero (true) o no.<br>
   <tt><b>window_get_fullscreen()</b></tt>
-    Returns whether the window is shown in full screen mode.<br>
+    Restituisce true se la finestra è mostrata a schermo intero.<br>
   <tt><b>window_set_showborder(show)</b></tt>
-    Sets whether the border around the window is shown. 
-	(In full screen mode it is never shown.)<br>
+    Imposta se viene mostrato il bordo della finestra (true) o no.
+        (A schermo intero non viene mai mostrato.)<br>
   <tt><b>window_get_showborder()</b></tt>
-    Returns whether the border around the window is shown in windowed mode.<br>
+    Restituisce true se viene mostrato il bordo in modalità finestra.<br>
   <tt><b>window_set_showicons(show)</b></tt>
-    Sets whether the border icons (iconize, maximize, close) are shown. 
-	(In full screen mode these are never shown.)<br>
+    Imposta se le icone Riduci a icona, Ingrandisci e Chiudi sono mostrate (true) o no.
+        (A schermo intero non vengono mai mostrate.)<br>
   <tt><b>window_get_showicons()</b></tt>
-    Returns whether the border icons are shown in windowed mode.<br>
+    Restituisce true se sono mostrate le icone Riduci a icona, Ingrandisci e Chiudi.<br>
   <tt><b>window_set_stayontop(stay)</b></tt>
-    Sets whether the window must always stay on top of other windows.<br>
+    Imposta se la finestra deve essere sempre in cima (true) o no.<br>
   <tt><b>window_get_stayontop()</b></tt>
-    Returns whether the window always stays on top of other windows.<br>
+    Restituisce true se la finestra sta sempre in cima.<br>
   <tt><b>window_set_sizeable(sizeable)</b></tt>
-    Sets whether the window is sizeable by the player. (The player can 
-	only size it when the border is shown and the window is not in full screen mode.)<br>
+    Imposta se la finestra è dimensionabile dal giocatore (true) o no. (Il giocatore può
+        dimensionarla solo se viene mostrato il bordo e la finestra non è a schermo intero.)<br>
   <tt><b>window_get_sizeable()</b></tt>
-    Returns whether the window is sizeable by the player.<br>
+    Restituisce true se la finestra è dimensionable dal giocatore.<br>
   <tt><b>window_set_caption(caption)</b></tt>
-    Sets the caption string for the window. Normally you specify this 
-	when defining the room and it can be changed using the variable
-	room_caption. So this function is normally not useful, unless you
-	draw the room yourself rather than letting <i>GameMaker</i> do it.
-	The caption is only visible when the window has a border and 
-	when it is not in full screen mode.<br>
+    Imoosta la stringa che fa da didascalia della finestra. Di solito la specifichi mentre
+        definisci la room e la cambi con la variabile room_caption. Quindi di solito questa
+        funzione è inutile, a meno che tu non ti disegni la room da solo piuttosto che
+        lasciarlo fare a <i>GameMaker</i>. La didascalia è visibile solo se viene mostrato
+        il bordo e la finestra non è a schermo intero.<br>
   <tt><b>window_get_caption()</b></tt>
-    Returns the window caption.<br>
+    Restituisce la didascalia della finestra.<br>
   <tt><b>window_set_cursor(curs)</b></tt>
-    Sets the mouse cursor used in the window. You can use the following constant: 
+    Imposta il cursore usato nella finestra. Puoi usare le seguenti costanti:
+        (a volte sono stati usati dei simboli per rendere più efficacemente la forma dei cursori)
 	  <p>
 <blockquote>
-  		<tt><b>cr_default</b></tt><br>
-  		<tt><b>cr_none</b></tt><br>
-  		<tt><b>cr_arrow</b></tt><br>
-  		<tt><b>cr_cross</b></tt><br>
-  		<tt><b>cr_beam</b></tt><br>
-  		<tt><b>cr_size_nesw</b></tt><br>
-  		<tt><b>cr_size_ns</b></tt><br>
-  		<tt><b>cr_size_nwse</b></tt><br>
-  		<tt><b>cr_size_we</b></tt><br>
-  		<tt><b>cr_uparrow</b></tt><br>
-  		<tt><b>cr_hourglass</b></tt><br>
-  		<tt><b>cr_drag</b></tt><br>
-  		<tt><b>cr_nodrop</b></tt><br>
-  		<tt><b>cr_hsplit</b></tt><br>
-  		<tt><b>cr_vsplit</b></tt><br>
-  		<tt><b>cr_multidrag</b></tt><br>
-  		<tt><b>cr_sqlwait</b></tt><br>
-  		<tt><b>cr_no</b></tt><br>
-  		<tt><b>cr_appstart</b></tt><br>
-  		<tt><b>cr_help</b></tt><br>
-  		<tt><b>cr_handpoint</b></tt><br>
-  		<tt><b>cr_size_all</b></tt><br>
+  		<tt><b>cr_default</b></tt> (normale)<br>
+  		<tt><b>cr_none</b></tt> (nessuno)<br>
+  		<tt><b>cr_arrow</b></tt> (freccia)<br>
+  		<tt><b>cr_cross</b></tt> (+)<br>
+  		<tt><b>cr_beam</b></tt> (testo)<br>
+  		<tt><b>cr_size_nesw</b></tt> (/ con frecce alle estremità)<br>
+  		<tt><b>cr_size_ns</b></tt> (| con frecce)<br>
+  		<tt><b>cr_size_nwse</b></tt> (\ con frecce)<br>
+  		<tt><b>cr_size_we</b></tt> (- con frecce)<br>
+  		<tt><b>cr_uparrow</b></tt> (| con freccia solo in alto)<br>
+  		<tt><b>cr_hourglass</b></tt> (XP: clessidra; Vista/7: cerchio che gira)<br>
+  		<tt><b>cr_drag</b></tt> (freccia con quadratino sotto)<br>
+  		<tt><b>cr_nodrop</b></tt> (simbolo divieto)<br>
+  		<tt><b>cr_hsplit</b></tt> (| con frecce a sinistra e a destra)<br>
+  		<tt><b>cr_vsplit</b></tt> (- con frecce in alto e in basso)<br>
+  		<tt><b>cr_multidrag</b></tt> (freccia con tanti quadratini dietro)<br>
+  		<tt><b>cr_sqlwait</b></tt> (clessidra con scritta "SQL")<br>
+  		<tt><b>cr_no</b></tt> (simbolo divieto colorato)<br>
+  		<tt><b>cr_appstart</b> (XP: freccia e clessisra; Vista/7: freccia e cerchio che gira)</tt><br>
+  		<tt><b>cr_help</b></tt> (freccia con punto interrogativo)<br>
+  		<tt><b>cr_handpoint</b></tt> (manina con indice puntato)<br>
+  		<tt><b>cr_size_all</b></tt> (+ con frecce alle estremità)<br>
 	  </blockquote>
 
 <p>
-	In particular, to hide the mouse cursor, use <tt>cr_none</tt> as value.<br> 
+        In particolare, usa <tt>cr_none</tt> per nascondere il cursore.<br> 
   <tt><b>window_get_cursor()</b></tt>
-    Returns the cursor used in the window.<br>
+    Restituisce il cursore usato nella finestra.<br>
   <tt><b>window_set_color(color)</b></tt>
-    Sets the color of the part of the window that is not 
-	used for displaying the room.<br>
+    Imposta il colore di quella parte della finetra che non è usata per mostrare la room.<br>
   <tt><b>window_get_color()</b></tt>
-    Returns the window color.<br>
+    Restituisce il colore della finestra.<br>
   <tt><b>window_set_region_scale(scale,adaptwindow)</b></tt>
-    If the window is larger than the actual room normally the room 
-	is displayed in a region centered in the window. It is though 
-	possible to indicate that it must be scaled to fill the whole 
-	or part of the window. A value of 1 is no scaling. If you use 
-	a value of 0 the region will be scaled to fill the whole window. 
-	If you set it to a negative value it will be scaled to the 
-	maximal size inside the window while maintaining the aspect 
-	ratio (this is often what you want). <tt>adaptwindow</tt> 
-	indicates whether the window size must be adapted if the 
-	scaled room does not fit in. Adapting the window is only 
-	effective when the scale factor is positive.<br> 
+    Se la finestra è più grande della room, di solito questa viene mostrata al centro della
+        finestra. È tuttavia possibile indicare che deve essere scalata per riempire tutta
+        la finestra o una sua parte. Il valore 1 indica nessuna scala. Se usi il valore 0
+        la regione verrà scalata per coprire tutta la finestra. Se usi un valore negativo
+        verrà espansa al massimo nella finestra mantenendo i rapporti (spesso è quello che
+        vuoi). <tt>adaptwindow</tt> indica se la dimensione della finestra deve essere
+        adattata (true) se la room non c'entra o no (false). Ha effetto solo se usi
+        un fattore di scala positivo.<br> 
   <tt><b>window_get_region_scale()</b></tt>
-    Returns the scale factor for the drawing region.<br>
+    Restituisce il fattore di scala usato per disegnare la regione.<br>
 </blockquote>
 
 <p>
 
-The window has a position on the screen and a size. (When we talk about 
-position and size we always mean the client part of the window without 
-the borders.) You can change these although you hardly ever do from 
-within your game. Normally they are determined automatically or by 
-the player. The following functions can be used to change the window 
-position and size. Note that these functions deal with the windowed 
-mode. If the window is in full screen mode they can still be used 
-but will only have effect when switching full screen mode off.
+La finestra ha una posizione nello schermo e una dimensione. (Quando parliamo di posizione e
+dimensione intendiamo sempre la parte client della finestra, senza i bordi.) Puoi cambiarle
+anche se non lo farai quasi mai dal gioco. Di solito sono determinate automaticamente o scelte
+dal giocatore. Le seguenti funzioni possono essere usate per cambiare la posizione e la
+dimensione della finestra. Nota che queste funzioni lavorano con la modalità Finestra. Se la
+finestra è a schermo intero potrai ancora usarle ma avranno effetto solo quando disattiverai
+la visualizzazione a schermo intero.
 
 <p>
 <blockquote>
   <tt><b>window_set_position(x,y)</b></tt>
-    Sets the position of the (client part of the) window to the indicated position.<br>
+    Imposta la posizione della (parte client della) finestra alla posizione indicata.<br>
   <tt><b>window_set_size(w,h)</b></tt>
-    Sets the size of the (client part of the) window to the indicated size. 
-	Note that is the indicated size is too small to fit the drawing region 
-	it is kept large enough for the region to fit it.<br> 
+    Imposta la dimensione della (parte client della) finestra alla dimensione indicata.
+        Nota che se la regione indicata è troppo piccola per contenere la regione disegnata
+        viene tenuta abbastanza grande per contenere la regione.<br> 
   <tt><b>window_set_rectangle(x,y,w,h)</b></tt>
-    Sets the position and size of the window rectangle. 
-	(Does both previous routines in one step.)<br>
+    Imposta la posizione e la dimensione della finestra.
+        (Esegue tutte e due le funzione precedenti in una volta sola.)<br>
   <tt><b>window_center()</b></tt>
-    Centers the window on the screen.<br>
+    Centra la finestra nello schermo.<br>
   <tt><b>window_default()</b></tt>
-    Gives the window the default size and position (centered) on the screen.<br>
+    Riporta la finestra alla dimensione e alla posizione (centrata) predefinite.<br>
   <tt><b>window_get_x()</b></tt>
-    Returns the current x-coordinate of the window.<br>
+    Restituisce l'ascissa della posizione della finestra.<br>
   <tt><b>window_get_y()</b></tt>
-    Returns the current y-coordinate of the window.<br>
+    Restituisce l'ordinata della posizione della finestra.<br>
   <tt><b>window_get_width()</b></tt>
-    Returns the current width of the window.<br>
+    Restituisce la lunghezza (orizzontale) della finestra.<br>
   <tt><b>window_get_height()</b></tt>
-    Returns the current height of the window.<br>
+    Restituisce l'altezza (verticale) della finestra.<br>
 </blockquote>
 
 <p>
 
-Again, you probably never want to use any of the window positioning functions as 
-<i>GameMaker</i> takes care of these automatically.
+Di nuovo, probabilmente non userai mai una di queste funzioni di posizionamento della
+finestra perché <i>GameMaker</i> se ne occupa automaticamente.
 
 <P>
-In rare cases you might want to know the position of the mouse with 
-respect to the window. (Normally you always use the mouse position 
-with respect to the room or with respect to a view.) The following 
-functions exist for this.
+In rari casi vorrai sapere la posizione del mouse rispetto alla finestra. (Di solito
+usi sempre la posizone del mouse rispetto alla room o a una view.) Per farlo esistono
+le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>window_mouse_get_x()</b></tt>
-    Returns the x-coordinate of the mouse in the window.<br>
+    Restituisce l'ascissa del mouse nella finestra.<br>
   <tt><b>window_mouse_get_y()</b></tt>
-    Returns the y-coordinate of the mouse in the window.<br>
+    Restituisce l'ordinata del mouse nella finestra.<br>
   <tt><b>window_mouse_set(x,y)</b></tt>
-    Sets the position of the mouse in the window to the indicated values.<br>
+    Imposta la posizione del mouse nella finestra ai valori indicati.<br>
 </blockquote>
 
 <p>
@@ -182,6 +176,17 @@ drawing region
 region for drawing
 window position
 window size
+
+finestra
+finestra, proprietà della
+schermo intero
+cursore
+cursore, forma
+didiascalia
+regione di disegno
+disegno, regione
+finestra, posizione
+finestra, dimensione
 
 window_set_visible()
 window_get_visible()

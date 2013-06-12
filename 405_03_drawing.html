@@ -2,98 +2,93 @@
 
 <html>
 <head>
-<title>Drawing Sprites and Backgrounds</title>
+<title>Disegnare Sprite e Background</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Drawing sprites and backgrounds</h3>
+<h3>Disegnare Sprite e Background</h3>
 
-Objects normally have a sprite associated to it that is drawn. But you can use 
-the draw event to draw other things. This section and the next couple give you 
-information on what is possible. First of all, there are functions to draw 
-sprites and backgrounds in different ways. These give you more control over 
-the appearance of the sprite. Also you can draw (parts of) backgrounds.
+Gli object, di solito, hanno uno sprite abbinato che viene disegnato. Ma puoi usare il Draw Event per disegnare altre cose.
+Questa sezione e le prossime due ti daranno informazioni su cosa è possibile fare. Prima di tutto, ci sono funzioni per
+disegnare sprite e background in modi diversi. Queste ti danno più controllo sull'aspetto dello sprite. Puoi anche
+disegnare (parti di) background.
 
 <p>
 <blockquote>
   <tt><b>draw_sprite(sprite,subimg,x,y)</b></tt> 
-  	Draws subimage subimg (-1 = current) of 
-	the sprite with its origin at position (x,y).
-	(Without color blending and no alpha transparency.)<br>
+    Disegna l'immagine subimg (-1 = corrente) dello sprite dato con la sua origine in posizione (x,y). (Senza mescolare
+        colori né usare la trasparenza alpha.)<br>
   <tt><b>draw_sprite_stretched(sprite,subimg,x,y,w,h)</b></tt>
-    Draws the sprite stretched so that it fills the region with top-left 
-	corner (x,y) and width w and height h.<br>
+    Disegna lo sprite allargato in modo che copra la regione con l'angolo in alto a sinistra in (x,y), lunghezza w e
+        altezza h.<br>
   <tt><b>draw_sprite_tiled(sprite,subimg,x,y)</b></tt> 
-  	Draws the sprite tiled so that it fills the entire room. 
-	(x,y) is the place where one of the sprites is drawn.<br>
+    Disegna ripetutamente lo sprite in modo che copra l'intera room. (x,y) è il posto in cui viene disegnato uno degli
+        sprite.<br>
   <tt><b>draw_sprite_part(sprite,subimg,left,top,width,height,x,y)</b></tt> 
-  	Draws the indicated part of subimage subimg (-1 = current) of the sprite 
-	with the top-left corner of the part at position (x,y).<br>
+    Disegna la parte indicata dell'immagine subimg dello sprite dato con l'angolo in alto a sinistra in (x,y). Definisci la
+        parte in questo modo: l'angolo in alto a sinistra è nella posizione (left,top) dello sprite, la lunghezza
+        (orizzontale) della parte è width e l'altezza (verticale) è height.<br>
   <tt><b>draw_sprite_ext(sprite,subimg,x,y,xscale,yscale,rot,color,alpha)</b></tt> 
-    Draws the sprite scaled with factors xscale and yscale and 
-	rotated counterclockwise over rot degrees. color is the blending 
-	color (use c_white for no blending) and alpha indicates the transparency 
-	factor with which the images is merged with its background. A value 
-	of 0 makes the sprite completely transparent. A value of 1 makes it 
-	completely solid. This function can create great effect 
-	(for example partially transparent explosions).<br>
+    Disegna lo sprite usando i fattori di scala xscale e yscale e ruotato in senso antiorario di rot gradi. color è il
+        colore da mescolare (usa c_white per non mescolare niente) e alpha è il fattore di trasparenza. Il valore 0 rende
+        lo sprite completamente trasparente, 1 completamente opaco. Questa funzione può creare grandi effetti (per esempio
+        esplosioni parzialmente trasparenti).<br>
   <br>
   <tt><b>draw_background(back,x,y)</b></tt> 
-  	Draws the background at position (x,y).
-	(Without color blending and no alpha transparency.)<br>
+    Disegna il background dato in posizione (x,y). (Senza mescolare colori né usare la trasparenza alpha.)<br>
   <tt><b>draw_background_stretched(back,x,y,w,h)</b></tt>
-  	Draws the background stretched to the indicated region.<br>
+    Disegna il background allargato in modo che copra la regione indicata.<br>
   <tt><b>draw_background_tiled(back,x,y)</b></tt> 
-  	Draws the background tiled so that it fills the entire room.<br>
+    Disegna il background ripetutamente in modo che copra l'intera room.<br>
   <tt><b>draw_background_part(back,left,top,width,height,x,y)</b></tt> 
-  	Draws the indicated part of the background with the top-left corner of the part at position (x,y).<br>
+    Disegna la parte indicata del background con l'angolo in alto a sinistra della parte in (x,y).<br>
 </blockquote>
 
 <p>
-The following functions are extended functions of the ones indicated above. 
-<b><i>These extended versions can not be used in the Lite Edition!</i></b>
+Le seguenti funzioni sono estensioni di quelle indicate sopra.
+<b><i>Queste versioni estese non possono essere usate nella Lite Edition!</i></b>
 
 <p>
 <blockquote>
   <tt><b>draw_sprite_stretched_ext(sprite,subimg,x,y,w,h,color,alpha)</b></tt> 
-  	Draws the sprite stretched so that it fills the region with 
-	top-left corner (x,y) and width w and height h. color is the blending 
-	color and alpha indicates the transparency setting.<br>
+    Disegna lo sprite allungato in modo che copra la regione con l'angolo in alto a sinistra in (x,y), lunghezza w e
+        altezza h. color è il colore da mescolare e alpha indica la trasparenza.<br>
   <tt><b>draw_sprite_tiled_ext(sprite,subimg,x,y,xscale,yscale,color,alpha)</b></tt> 
-  	Draws the sprite tiled so that it fills the entire room but now with scale factors and a 
-	color and transparency setting.<br>
+    Disegna lo sprite ripetutamente in modo che copra l'intera room, ma stavolta con i fattori di scala, il colore da
+        mescolare e la trasparenza.<br>
   <tt><b>draw_sprite_part_ext(sprite,subimg,left,top,width,height,x,y,xscale,yscale,color,alpha)</b></tt> 
-  	Draws the indicated part of subimage subimg (-1 = current) of the sprite with 
-	the top-left corner of the part at position (x,y) but now with scale factors and a color and transparency setting.<br>
+    Disegna la parte indicata dell'immagine subimg (-1 = corrente) dello sprite dato con l'angolo in alto a sinistra
+        della parte in (x,y) ma ma stavolta con i fattori di scala, il colore da mescolare e la trasparenza.<br>
   <tt><b>draw_sprite_general(sprite,subimg,left,top,width,height,x,y,xscale,yscale,rot,c1,c2,c3,c4,alpha)</b></tt> 
-  	The most general drawing function. It draws the indicated part of subimage subimg (-1 = current) 
-	of the sprite with the top-left corner of the part at position (x,y) but now with scale factors, a rotation angle,
-	a color for each of the four vertices (top-left, top-right, bottom-right, and bottom-left),
-	and an alpha transparency value. Note that rotation takes place around the top-left corner of the part.<br />
-  <tt><b>draw_self()</b></tt> This command is exactly the same as
-  <tt><b>draw_sprite_ext()</b></tt> except it will use the instances own variables 
-    to draw itself (x,y, scale, angle etc.) This provides the same action as if the 
-    instance was draw without a script.<br>
+    La funzione di disegno più generalizzata. Disegna la parte indicata dell'immagine subimg dello sprite dato con 
+        l'angolo in alto a sinistra della parte in (x,y) ma stavolta con i fattori di scala, un angolo di rotazione, un
+        colore per ciascuno dei quattro vertici (nell'ordine: in alto a sinistra; in alto a destra; in basso a destra; in
+        basso a sinistra) e la trasparenza alpha. Nota che il centro della rotazione è l'angolo in alto a sinistra della
+        parte.<br />
+  <tt><b>draw_self()</b></tt>
+    Funziona esattamente come <tt><b>draw_sprite_ext()</b></tt> tranne che usa le variabili proprie dell'istanza come
+        argument (x, y, scala, angolo ecc) per disegnare sé stesso. Fa esattamente quello che succederebbe se il Draw
+        Event fosse vuoto.<br>
   <br>
   <tt><b>draw_background_ext(back,x,y,xscale,yscale,rot,color,alpha)</b></tt> 
-  	Draws the background scaled and rotated with blending color (use c_white for no blending)
-	and transparency alpha (0-1).<br>
+    Disegna il background usando i fattori di scala, rotazione, colore da mescolare (usa c_white per non mescolare niente)
+        e trasparenza alpha (compresa tra 0 e 1).<br>
   <tt><b>draw_background_stretched_ext(back,x,y,w,h,color,alpha)</b></tt> 
-  	Draws the background stretched to the indicated region. color is 
-	the blending color and alpha indicates the transparency setting.<br>
+    Disegna il background allungato fino alla regione data. color è il colore da mescolare e alpha indica la
+        trasparenza.<br>
   <tt><b>draw_background_tiled_ext(back,x,y,xscale,yscale,color,alpha)</b></tt> 
-  	Draws the background tiled so that it fills the entire room but now 
-	with scale factors and a color and transparency setting.<br>
+    Disegna il background ripetutamente per fargli coprire l'intera room ma stavolta con i fattori di scala, un colore e
+        la trasparenza.<br>
   <tt><b>draw_background_part_ext(back,left,top,width,height,x,y,xscale,yscale,color,alpha)</b></tt> 
-  	Draws the indicated part of the background with the top-left corner of the part at position (x,y) but now 
-	with scale factors and a color and transparency setting.<br>
+    disegna la parte indicata del background con l'angolo in alto a sinistra in (x,y) ma stavolta con i fattori di scala,
+        un colore e la trasparenza.<br>
   <tt><b>draw_background_general(back,left,top,width,height,x,y,xscale,yscale,rot,c1,c2,c3,c4,alpha)</b></tt> 
-  	The most general drawing function. It draws the indicated part 
-	of the background with the top-left corner of the part at position (x,y) but now with scale factors, a rotation angle,
-	a color for each of the four vertices (top-left, top-right, bottom-right, and bottom-left),
-	and an alpha transparency value. Note that rotation takes place around the top-left corner of the part.<br>
+    La funzione di disegno più generalizzata. Disegna la parte indicata del background con l'angolo in alto a sinistra
+        della parte in (x,y) ma ora con i fattori di scala, un angolo di rotazione, un colore per ciascuno dei quattro
+        vertici (nell'ordine: in alto a sinistra; in alto a destra; in basso a destra; in basso a sinistra) e la
+        trasparenza alpha. Nota che il centro della rotazione è l'angolo in alto a sinistra della parte.<br>
 </blockquote>
 
 
@@ -104,6 +99,9 @@ The following functions are extended functions of the ones indicated above.
 <!-- KEYWORDS
 drawing sprites
 drawing backgrounds
+
+disegnare sprite
+disegnare background
 
 draw_self()
 draw_sprite() 
