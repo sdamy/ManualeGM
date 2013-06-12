@@ -2,78 +2,77 @@
 
 <html>
 <head>
-<title>Deactivating instances</title>
+<title>Disattivare le istanze</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Deactivating instances</h3>
+<h3>Disattivare le istanze</h3>
 
-<b><i>Please be aware that deactivating and activating instances can sometimes lead to
-unexpected problems. So you are strongly advised not to use this feature except for
-very simple situation like the ones described below.
-The feature is mainly left in for backward compatibility.</i></b>
-
-<p>
-When you create large room, for example in platform games, with a small view, 
-many instances lie outside the view. Such instances though are still active 
-and will execute their events. Also when performing collision checks
-these instances are taken into account. This can cost a lot of time, which 
-is often not necessary. (For example, often it is not important whether 
-instances outside the view move.) To solve this problem <i>GameMaker</i> 
-contains some functions to deactivate and activate instances. Before using 
-them you must though clearly understand how they work.
+<b><i>Siete pregati di farea ttenzione quando disattivate ed attivate le istanze in quanto potrebbe
+portare a problemi inaspettati. Quindi è fortemente consigliato non usare queste funzionalità fatta eccezione
+per situazioni molto semplici come quella descritta qui sotto.
+Questa funzionalità è stata lasciata per compatibilità con il passato.</i></b>
 
 <p>
-When you deactivate instances they are in some sense removed from the game. 
-They are not visible anymore nor are any events executed for them. So for 
-all actions and functions they don't exist anymore. This saves a lot of time 
-but you have to be careful. For example, when you delete all instances of a 
-particular type, deactivated instances are not deleted (because they don't 
-exist). So don't think that a key a player picks up can unlock a deactivated door.
-Also persistent deactivated instances are <b>not</b> moved over to the next room (even
-though they are persistent). Also make sure that after you deactivate an instance that
-you no longer execute code for it. This can in particular happen when an instance
-deactivates itself. In general you better never have an instance deactivate itself.
+Quando create enormi room, per esempio nei giochi platform, con una piccola view, 
+molte istanze stanno al di fuori di quest'ultima. Tuttavia queste istanze sono attive
+ed eseguiranno i loro eventi. Anche le collisioni verranno calcolate
+per queste istanze. Questo può essere abbastanza pesante, e molto spesso
+non è necessario. (Per esempio sperro non è necessario far muovere le
+istanze fuori dalla visuale) Per risolvere questo problema <i>GameMaker</i> 
+contiene alcune funzioni per attivare e disattivare le istanze. Prima di usarle
+bisogna capire esattamente come funziona tutto ciò.
 
 <p>
-The most crucial mistake you can make is to deactivate the instance that is 
-responsible for the activation. To avoid this some of the routines below allow 
-you to insist that the calling instance should not be deactivated itself.
+Quando disattivi le istanze sono in un certo senso rimosse dal gioco. 
+Non sono più visibili ne verranno eseguiti i suoi eventi. Quindi
+tutte le azioni e funzioni non esistono più. Questo fa guadagnare tempo di calcolo
+ma bisogna stare attenti. Ad esempio, quando elimini tutte le istanze di un
+particolare tipo, le istanze disattivate non saranno calcellate (perchè non esistono).
+Quindi non è possibile che una chiave presa da un giocatore possa aprire una porta disattivata.
+Anche le istanze persistenti disattivate <b>non</b> vengono spostate in un'altra room.
+E' anche assicurato che dopo aver disattivato un'istanza non verrà più
+eseguito il codice di essa. Questo può accadere in particolar modo quando un'istanza
+si disattiva da sola. Generalmente sarebbe meglio che un'istanza non disattivi se stessa.
 
 <p>
-Here are the available routines:
+L'errore più grave che puoi fare è disattivare l'istanza responsabile
+della riattivazione. Per evitare ciò alcune delle funzioni sottostanti ti permettono 
+di impostare che l'istanza che le chiama non può disattivare se stessa.
+
+<p>
+Ci sono le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>instance_deactivate_all(notme)</b></tt>
-    Deactivates all instances in the room. If notme is true the calling instance 
-	is not deactivated (which is normally what you want).<br>
+    Disattiva tutte le istanze della room. Se notme è true l'istanza che chiama questa funzione
+	non verrà disattivata (che normalmente è ciò che si vuole).<br>
   <tt><b>instance_deactivate_object(obj)</b></tt>
-    Deactivates all instances in the room of the given object. You can also use all 
-	to indicate that all instances must be deactivated or the id of an instance to 
-	deactivate an individual instance.<br>
+    Disattiva tutte le istanze dell'oggetto indicato nella room. Puoi anche usare la keyword all
+	per indicare che tutte le istanze devono essere disattivate oppure l'id di un'istanza 
+	per disattivarne una specifica.<br>
   <tt><b>instance_deactivate_region(left,top,width,height,inside,notme)</b></tt>
-    Deactivates all instances in the indicated region (that is, those whose 
-	bounding box lies partially inside the region). If inside is false the 
-	instances completely outside the region are deactivated. If notme is 
-	true the calling instance is not deactivated (which is normally what you want).<br>
+    Disattiva tutte le istanze nella regione indicata (anche quelle il cui
+	bounding box risiede anche parzialmente all'interno di essa). Se inside è false
+	verranno disattivate le istanze che sono completamente fuori dalla regione. Se notme è
+	true non verrà disattivata l'istanza chiamante (che normalmente è ciò che si vuole).<br>
   <tt><b>instance_activate_all()</b></tt>
-    Activates all instances in the room.<br>
+    Attiva tutte le istanze nella room.<br>
   <tt><b>instance_activate_object(obj)</b></tt>
-    Activates all instances in the room of the given object. You can also 
-	use all to indicate that all instances must be activated or the id of 
-	an instance to activate an individual instance.<br>
+    Attiva tutte le istanze dell'oggetto indicato nella room. Puoi anche usare la keyword all
+	per indicare che tutte le istanze devono essere attivate oppure l'id di un'istanza 
+	per attivarne una specifica.<br>
   <tt><b>instance_activate_region(left,top,width,height,inside)</b></tt>
-    Activates all instances in the indicated region. If inside is false the 
-	instances completely outside the region are activated.<br>
+    Attiva tutte le istanze nella regione indicata. Se inside è false
+	verranno attivate le istanze che sono completamente fuori dalla regione.<br>
 </blockquote>
 
 <p>
-For example, to deactivate all instances outside the view and activate the ones 
-inside the view, you could place the following code in the step event of the moving 
-character:
+Per esempio per disattivare tutte le istanze fuori dalla visuale e attivare quelle
+all'interno, basterà usare il codice seguente nello step event del personaggio del gioco:
 
 <p>
 <blockquote>
@@ -87,7 +86,7 @@ character:
 </blockquote>
 
 <p>
-In practice you might want to use a region slightly larger than the view.
+Nella pratica di solito si usa una regione leggermente più grande della view.
 
 
 <!--END-->
