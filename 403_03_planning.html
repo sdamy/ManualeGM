@@ -168,12 +168,19 @@ were also used for the step functions.
 <p>
 <blockquote>
   <tt><b>mp_linear_path(path,xg,yg,stepsize,checkall)</b></tt>
-    This function computes a straight-line path for the instance from its 
-	current position to the position (xg,yg) using the indicated step size. 
-	It uses steps as in the function <TT>mp_linear_step()</TT>. The indicated 
-	path must already exist and will be overwritten by the new path. (See a 
-	later chapter on how to create and destroy paths.) The function will 
-	return whether a path was found. The function will stop and report failure 
+    Questa funzione computa per l'istanza un percorso rettilineo dalla sua
+    This function computes a straight-line path for the instance from its
+    	posizione corrente alla posizione (xg,yg) usando la dimensione per passo (step) indicata.
+	current position to the position (xg,yg) using the indicated step size.
+	Esso usa i passi (step) come nella funzione <TT>mp_linear_step()</TT>. Il percorso
+	It uses steps as in the function <TT>mp_linear_step()</TT>. The indicated
+	indicato deve già esistere e sarà sovrascritto dal nuovo percorso. (Vedi in un
+	path must already exist and will be overwritten by the new path. (See a
+	capitolo successivo come creare e distruggere percorsi.) La funzione
+	later chapter on how to create and destroy paths.) The function will
+	ritornerà se un percorso sia stato trovato. La funzione si arresterà e riporterà insuccesso
+	return whether a path was found. The function will stop and report failure
+	se non esiste nessun percorso rettilineo tra il punto iniziale e la meta. 
 	if no straight path exists between start and goal. If it fails a 
 	path is still created that runs till the position where the instance was blocked.<br>
   <tt><b>mp_linear_path_object(path,xg,yg,stepsize,obj)</b></tt>
