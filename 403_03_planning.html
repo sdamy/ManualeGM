@@ -18,7 +18,7 @@ to a different location while avoiding collisions with certain other instances
 (e.g. walls). Motion planning is a difficult problem. It is impossible to
 fornire funzioni generali che lavorino correttamente in tutte le circostanze. Inoltre,
 give general functions that will work properly in all situations. Also,
-calcolare movimenti liberi da collisioni è un'operazione che richiede tempo. Per questo devi
+calcolare movimenti liberi da collisioni &egrave; un'operazione che richiede tempo. Per questo devi
 computing collision free motions is a time-consuming operation. So you have
 prestare attenzione a come e quando la applichi. Per favore tieni a mente queste osservazioni quando
 be careful how and when you apply it. Please keep these remarks in mind when
@@ -28,7 +28,7 @@ utilizzi una delle seguenti funzioni.
 <P>
 Vengono messe a disposizione differenti forme di pianificazione del movimento (Motion Planning) da <i>GameMaker</i>.
 Different forms of motion planning are provided by <i>GameMaker</i>.
-La forma più semplice consente ad un'istanza di fare un passo verso una particolare posizione
+La forma pi&ugrave; semplice consente ad un'istanza di fare un passo verso una particolare posizione
 The simplest form lets an instance take a step towards a particular goal
 obbiettivo, cercando di andare dritto se possibile ma prendendo una direzione differente
 position, trying to go straight if possible but taking a different direction
@@ -44,24 +44,24 @@ They correspond to the motion planning actions that are also available:
   <tt><b>mp_linear_step(x,y,stepsize,checkall)</b></tt>
     Questa funzione consente all'istanza di fare un passo dritto verso la posizione
     This function lets the instance take a step straight towards the indicated
-    	indicata (x,y). La dimensione del passo (dello spostamento) è indicata da <TT>stepsize</TT> (dimensione del passo).
+    	indicata (x,y). La dimensione del passo (dello spostamento) &egrave; indicata da <TT>stepsize</TT> (dimensione del passo).
 	position (x,y). The size of the step is indicated by the <TT>stepsize</TT>.
-	Se l'istanza si trova già nella posizione non si sposterà uteriormente.
+	Se l'istanza si trova gi&agrave; nella posizione non si sposter&agrave; uteriormente.
 	If the instance is already at the position it will not move any further.
-	Se <TT>checkall</TT> (controllare tutto) assume il valore di vero (true) l'istanza si fermerà quando urti <!(incontri/trovi)> un'istanza
+	Se <TT>checkall</TT> (controllare tutto) assume il valore di vero (true) l'istanza si fermer&agrave; quando urti <!(incontri/trovi)> un'istanza
 	If <TT>checkall</TT> is true the instance will stop when it hits an instance
-	di qualunque oggetto. Se <!(essa)> assume il valore di falso (false) si fermerà soltanto quando stia urtando un istanza solida (di tipo: solid).
+	di qualunque oggetto. Se <!(essa)> assume il valore di falso (false) si fermer&agrave; soltanto quando stia urtando un istanza solida (di tipo: solid).
 	of any object. If it is false it only stops when hitting a solid instance.
 	Nota che questa funzione non prova a fare deviazioni se incontra un ostacolo.
 	Note that this function does not try to make detours if it meets an obstacle.
-	Essa semplicemente fallirà. La funzione restituisce se sia stata o meno raggiunta la
+	Essa semplicemente fallir&agrave;. La funzione restituisce se sia stata o meno raggiunta la
 	It simply fails in that case. The function returns whether or not the goal position
 	posizione meta (obbiettivo).<br>
 	was reached.<br>
   <tt><b>mp_linear_step_object(x,y,stepsize,obj)</b></tt>
     Stesso della funzione precedente <!(sopra)> ma questa volta soltanto le istanze di <tt>obj</tt> sono
     Same as the function above but this time only instances of <tt>obj</tt> are
-    	considerate come ostacoli. <tt>obj</tt> può essere un oggetto o l'identificativo (id) di un'istanza.<br>
+    	considerate come ostacoli. <tt>obj</tt> pu&ograve; essere un oggetto o l'identificativo (id) di un'istanza.<br>
 	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>
   <tt><b>mp_potential_step(x,y,stepsize,checkall)</b></tt>
     Come la precedente funzione, questa consente all'istanza di fare un passo verso
@@ -70,88 +70,88 @@ They correspond to the motion planning actions that are also available:
 	a particular position. But in this case it tries to avoid obstacles. When the
 	l'istanza incontrasse un'istanza solida (solid) (o qualunque istanza quando 'checkall' assumesse il valore 'true')
 	instance would run into a solid instance (or any instance when checkall is true)
-	essa cambierà la direzione del movimento per tentare di evitare l'istanza e
+	essa cambier&agrave; la direzione del movimento per tentare di evitare l'istanza e
 	it will change the direction of motion to try to avoid the instance and move
 	aggirarla. L'approccio non garantisce di funzionare <!(L'approccio non garantisce il successo)> ma in molti casi semplici esso
 	around it. The approach is not guaranteed to work but in most easy cases it
-	effettivamente muoverà l'istanza verso la meta (obbiettivo). La funzione restituisce
+	effettivamente muover&agrave; l'istanza verso la meta (obbiettivo). La funzione restituisce
 	will effectively move the instance towards the goal. The function returns
 	se sia stata raggiunta o meno la meta <!(se l'obbiettivo sia stato raggiunto o meno)>'.<br>
 	whether or not the goal was reached.<br>
   <tt><b>mp_potential_step_object(x,y,stepsize,obj)</b></tt>
     Stesso della funzione precedente <!(sopra)> ma questa volta soltanto le istanze di <tt>obj</tt> sono
     Same as the function above but this time only instances of <tt>obj</tt> are
-    	considerate come ostacoli. <tt>obj</tt> può essere un oggetto o l'identificativo (id) di un'istanza.<br>
+    	considerate come ostacoli. <tt>obj</tt> pu&ograve; essere un oggetto o l'identificativo (id) di un'istanza.<br>
 	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>
   <tt><b>mp_potential_settings(maxrot,rotstep,ahead,onspot)</b></tt>
     La precedente funzione opera <!(svolge il suo compito / lavora)> usando un (certo) numero di parametri che possono
     The previous function does its work using a number of parameters that can
-    	essere cambiati usando questa funzione. Globalmente il metodo opera come segue <!( con il quale lavora è il seguente)>. Esso 
+    	essere cambiati usando questa funzione. Globalmente il metodo opera come segue <!( con il quale lavora &egrave; il seguente)>. Esso 
 	be changed using this function. Globally the method works as follows. It
 	prima prova a muovere dritto verso la meta (obbiettivo). Esso guarda avanti <!(Guarda in avanti)> di un numero di passi
 	first tries to move straight towards the goal. It looks a number of steps
-	che può essere impostato attraverso <!(con)> il parametro <TT>ahead</TT> (avanti) (valore predefinito: 3).
+	che pu&ograve; essere impostato attraverso <!(con)> il parametro <TT>ahead</TT> (avanti) (valore predefinito: 3).
 	ahead which can be set with the parameter <TT>ahead</TT> (default 3).
-	Ridurre questo valore comporterà che l'istanza inizi a cambiare direzione
+	Ridurre questo valore comporter&agrave; che l'istanza inizi a cambiare direzione
 	Reducing this value means that the instance will start changing direction
-	più tardi. Incrementarlo....
-	(Riducendo questo valore l'istanza inizierà a cambiare direzione
-	dopo. Incrementandolo inizierà a cambiare direzione prima. Se )	
+	pi&ugrave; tardi. Incrementarlo....
+	(Riducendo questo valore l'istanza inizier&agrave; a cambiare direzione
+	dopo. Incrementandolo inizier&agrave; a cambiare direzione prima. Se )	
 	later. Increasing it means it will start changing direction earlier. If
-	questo controllo porta ad una collisione essa inizierà a guardare nelle direzioni più a
+	questo controllo porta ad una collisione essa inizier&agrave; a guardare nelle direzioni pi&ugrave; a
 	this check leads to a collision it starts looking at directions more to
-	sinistra e più a destra della direzione migliore. Essa fa questo in passi di
+	sinistra e pi&ugrave; a destra della direzione migliore. Essa fa questo in passi di
 	the left and to the right of the best direction. It does this in steps of
-	dimensione <TT>rotstep</TT> (valore predefinito: 10). Ridurre questo valore permette all'istanza più
+	dimensione <TT>rotstep</TT> (valore predefinito: 10). Ridurre questo valore permette all'istanza pi&ugrave;
 	size <TT>rotstep</TT> (default 10). Reducing this gives the instance more
-	possibilità di movimento ma sarà più lento. Il paramentro <TT>maxrot</TT>
+	possibilit&agrave; di movimento ma sar&agrave; pi&ugrave; lento. Il paramentro <TT>maxrot</TT>
 	movement possibilities but will be slower. The parameter <TT>maxrot</TT>
-	è un pò più difficile da spiegare. L'istanza ha una direzione corrente <!(attuale)>.
+	&egrave; un p&ograve; pi&ugrave; difficile da spiegare. L'istanza ha una direzione corrente <!(attuale)>.
 	is a bit more difficult to explain. The instance has a current direction.
-    <TT>maxrot</TT> (valore predefinito: 30) indica di quanto è possibile cambiare la sua	
+    <TT>maxrot</TT> (valore predefinito: 30) indica di quanto &egrave; possibile cambiare la sua	
     <TT>maxrot</TT> (default 30) indicates how much it is allowed to change its
-    	attuale direzione in un passo (step). Così anche se essa potesse ad esempio muovere (e.g.) dritto verso la meta (obbiettivo)
+    	attuale direzione in un passo (step). Cos&igrave; anche se essa potesse ad esempio muovere (e.g.) dritto verso la meta (obbiettivo)
 	current direction in a step. So even if it can move e.g. straight to the goal
 	lo farebbe soltanto se <!(facendolo)> non violasse questa massima variazione di direzione.
 	it will only do so if it does not violate this maximal change of direction.
-	Se renderai <TT>maxrot</TT> grande l'istanza potrà fare grandi variazioni <!(variarla di molto)> ad ogni passo (step).
+	Se renderai <TT>maxrot</TT> grande l'istanza potr&agrave; fare grandi variazioni <!(variarla di molto)> ad ogni passo (step).
 	If you make <TT>maxrot</TT> large the instance can change a lot in each step.
-	Questo renderà più facile trovare un percorso breve ma il percorso sarà più brutto <!(n.t. spigoloso)>.
+	Questo render&agrave; pi&ugrave; facile trovare un percorso breve ma il percorso sar&agrave; pi&ugrave; brutto <!(n.t. spigoloso)>.
 	This will make it easier to find a short path but the path will be uglier.
-	Se rendi il valore più piccolo il percorso sarà più morbido ma esso potrebbe seguire
+	Se rendi il valore pi&ugrave; piccolo il percorso sar&agrave; pi&ugrave; morbido ma esso potrebbe seguire
 	If you make the value smaller the path will be smoother but it might take
-	deviazioni più lunghe (e a volte anche mancare di <!non riuscire a> trovare l'obbiettivo). Quando non può essere
+	deviazioni pi&ugrave; lunghe (e a volte anche mancare di <!non riuscire a> trovare l'obbiettivo). Quando non pu&ograve; essere
 	longer detours (and sometimes even fail to find the goal). When no step can
-	fatto nessun passo il comportamento dipenderà dal valore del parametro <TT>onspot</TT>.
+	fatto nessun passo il comportamento dipender&agrave; dal valore del parametro <TT>onspot</TT>.
 	be made the behavior depends on the value of the parameter <TT>onspot</TT>.
-	Se <TT>onspot</TT> assume il valore di vero (true) (il valore predefinito), l'istanza ruoterà sul
+	Se <TT>onspot</TT> assume il valore di vero (true) (il valore predefinito), l'istanza ruoter&agrave; sul
 	If <TT>onspot</TT> is true (the default value), the instance will rotate on
-	posto dell'ammontare indicato <!(quantità indicata)> con <TT>maxrot</TT>. Se assume il valore di falso (false) essa 
+	posto dell'ammontare indicato <!(quantit&agrave; indicata)> con <TT>maxrot</TT>. Se assume il valore di falso (false) essa 
 	its spot by the amount indicated with <TT>maxrot</TT>. If it is false it
-	non si muoverà affatto. Impostarla su falso (false) è utile ad esempio per (e.g.) le automobili ma riduce
+	non si muover&agrave; affatto. Impostarla su falso (false) &egrave; utile ad esempio per (e.g.) le automobili ma riduce
 	will not move at all. Setting it to false is useful for e.g. cars but reduces
-	la possibilità di trovare un percorso.
+	la possibilit&agrave; di trovare un percorso.
 	the chance of finding a path.<br>
 </blockquote>
 
 <p>
-Per favore nota che il potenziale approccio usa solo informazioni locali. Così esso troverà
+Per favore nota che il potenziale approccio usa solo informazioni locali. Cos&igrave; esso trover&agrave;
 Please note that the potential approach uses only local information. So it will only
 un percorso se queste informazioni locali sono sufficienti a determinare la giusta direzione del
 find a path if this local information is enough to determine the right direction of
-movimento. Per esempio, non riuscirà a trovare un percorso di uscita di un labirinto (il più delle volte).
+movimento. Per esempio, non riuscir&agrave; a trovare un percorso di uscita di un labirinto (il pi&ugrave; delle volte).
 motion. For example, it will fail to find a path out of a maze (most of the time).
 
 <P>
 Il secondo tipo di funzioni calcola un percorso libero da collisioni per l'istanza.
 The second kind of functions computes a collision-free path for the instance.
-Ona volta che questo percorso è stato calcolato puoi assegnarlo all'istanza per muoverla
+Ona volta che questo percorso &egrave; stato calcolato puoi assegnarlo all'istanza per muoverla
 Once this path has been computed you can assign it to the instance to move
-verso la meta. Il calcolo del percorso impiegherà del tempo ma dopo quello
+verso la meta. Il calcolo del percorso impiegher&agrave; del tempo ma dopo quello
 towards the goal. The computation of the path will take some time but after
-l'attuazione <!(esecuzione)> del percorso sarà veloce. Certamente ciò varrà soltanto se 
+l'attuazione <!(esecuzione)> del percorso sar&agrave; veloce. Certamente ci&ograve; varr&agrave; soltanto se 
 that the execution of the path will be fast. Of course this is only valid if
-la situazione non è cambiata nel frattempo. Per esempio, se gli ostacoli
+la situazione non &egrave; cambiata nel frattempo. Per esempio, se gli ostacoli
 the situation has not changed in the meantime. For example, if obstacles
 cambiano forse avrai bisogno di ricalcolare il percorso. Ancora una volta nota che queste funzioni 
 change you possibly will need to recompute the path. Again notice that these functions

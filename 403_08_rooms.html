@@ -10,8 +10,8 @@
 
 <h3>Room</h3>
 
-I giochi si svolgono nelle room. Ogni room ha un indice, cioè il nome della room stessa.
-La roo, corrente è salvata nella variabile chiamata room. Non puoi presumere che le room
+I giochi si svolgono nelle room. Ogni room ha un indice, cio&egrave; il nome della room stessa.
+La roo, corrente &egrave; salvata nella variabile chiamata room. Non puoi presumere che le room
 siano numerate in sequenza. Quindi non eseguire MAI addizioni o sottrazioni sulla
 variabile room. Usa invece le funzioni indicate in basso. Un tipico codice che userai
 potrebbe essere:
@@ -38,7 +38,7 @@ Esistono le seguenti variabili e funzioni per lavorara con le room.
 <p>
 <blockquote>
   <tt><b>room</b></tt>
-    L'indice della room corrente; può essere cambiato per andare in una
+    L'indice della room corrente; pu&ograve; essere cambiato per andare in una
         room  diversa, ma farai meglio a usare le funzioni in basso.<br>
   <tt><b>room_first*</b></tt>
     L'indice della prima room del gioco.<br>
@@ -53,9 +53,9 @@ Esistono le seguenti variabili e funzioni per lavorara con le room.
   <tt><b>room_restart()</b></tt>
     Riavvia la room corrente.<br>
   <tt><b>room_previous(numb)</b></tt>
-    Restituisce l'indice della room che viene prima di quella indicata (-1 = non ce n'è nessuna) senza andarci.<br>
+    Restituisce l'indice della room che viene prima di quella indicata (-1 = non ce n'&egrave; nessuna) senza andarci.<br>
   <tt><b>room_next(numb)</b></tt>
-    Restituisce l'indice della room che viene dopo quella indicata (-1 = non ce n'è nessuna) senza andarci.<br>
+    Restituisce l'indice della room che viene dopo quella indicata (-1 = non ce n'&egrave; nessuna) senza andarci.<br>
   <tt><b>game_end()</b></tt>
     Termina il gioco.<br>
   <tt><b>game_restart()</b></tt>
@@ -64,13 +64,13 @@ Esistono le seguenti variabili e funzioni per lavorara con le room.
 
 <p>
 Quando chiamo una di queste funzioni per cambiare room o riavviare o terminare il gioco, devi capire che no
-succede in quel preciso momento. Avviene solo quando l'azione corrente è stata completamente eseguita.
-Quindi il resto dello script verrà comunque eseguito, e vale lo stesso per eventuali script chiamati.
-Tuttavia, non verranno eseguiti altri eventi. Poiché ciò può portare a errori inaspettati, sei fortemente
+succede in quel preciso momento. Avviene solo quando l'azione corrente &egrave; stata completamente eseguita.
+Quindi il resto dello script verr&agrave; comunque eseguito, e vale lo stesso per eventuali script chiamati.
+Tuttavia, non verranno eseguiti altri eventi. Poich&eacute; ci&ograve; pu&ograve; portare a errori inaspettati, sei fortemente
 raccomandato di non mettere altro codice dopo una di queste funzioni.
 
 <p>
-Le room hanno delle proprietà aggiuntive:
+Le room hanno delle propriet&agrave; aggiuntive:
 
 <p>
 <blockquote>
@@ -79,13 +79,13 @@ Le room hanno delle proprietà aggiuntive:
   <tt><b>room_height*</b></tt>
     L'altezza della room (verticale) in pixel<br>
   <tt><b>room_caption</b></tt>
-    La stringa che viene usata come didascalia della room, è mostrata al posto del nome della finestra.<br>
+    La stringa che viene usata come didascalia della room, &egrave; mostrata al posto del nome della finestra.<br>
   <tt><b>room_persistent</b></tt>
-    Un booleano che indica se la room è persistente.<br>
+    Un booleano che indica se la room &egrave; persistente.<br>
 </blockquote>
 
 <p>
-Molti giochi offrono al giocatore la possibilità di salvare e caricare partite. In <i>GameMaker</i>
+Molti giochi offrono al giocatore la possibilit&agrave; di salvare e caricare partite. In <i>GameMaker</i>
 Questo avviene automaticamente quando il giocatore preme &lt;F5&gt; per salvare e &lt;F6&gt; per
 caricare. Puoi anche salvare e caricare partite dal codice (ma nota che avviene solo alla fine
 dello step corrente).
@@ -99,8 +99,8 @@ dello step corrente).
 </blockquote>
 
 <p>
-Fa' attenzione perché solo i dati di base vengono salvati. Ad esempio, se fai partire una musica,
-non verrà salvata la precisa posizione della musica. Anche le risorse modificate non vengono
+Fa' attenzione perch&eacute; solo i dati di base vengono salvati. Ad esempio, se fai partire una musica,
+non verr&agrave; salvata la precisa posizione della musica. Anche le risorse modificate non vengono
 salvate. Altri elementi che non vengono salvati sono le strutture dati, particelle, e impostazioni
 multiplayer.
 
@@ -109,8 +109,8 @@ multiplayer.
 <p>
 Quando vai da una room a un'altra puoi impostare una transizione. Per impostare la transizione
 devi usare la variabile <tt>transition_kind</tt>. Se le assegni un valore maggiore di 0 la
-trnsizione corrispondente verrà usata per la prossima transizione. Nota che funziona solo
-una volta. Poi il valore verrà reimpostato a 0, cioè nessuna transizione, e dovrai impostare
+trnsizione corrispondente verr&agrave; usata per la prossima transizione. Nota che funziona solo
+una volta. Poi il valore verr&agrave; reimpostato a 0, cio&egrave; nessuna transizione, e dovrai impostare
 nuovamente la variabile la prossima volta che vuoi usare una transizione.
 
 <p>
@@ -145,27 +145,27 @@ nuovamente la variabile la prossima volta che vuoi usare una transizione.
   Ed ecco una descrizione di quello che fanno:
      <blockquote>
          Crea: Entrambe le room stanno ferme, semplicemente la room entrante viene disegnata nella direzione indicata.<br>
-         Sposta: La room entrante si muove, quella uscente è ferma (come se quella entrante "scivolasse" su quella uscente).<br>
+         Sposta: La room entrante si muove, quella uscente &egrave; ferma (come se quella entrante "scivolasse" su quella uscente).<br>
          Interlacciato: Vengono cambiate prima le righe (colonne) pari, poi quelle dispari.<br>
          Spingi: Entrambe le room si muovono (come se quella entrante, appunto, "spingesse" quella uscente).<br>
          Ruota: La room entrante si espande dal centro ruotando nel verso indicato.<br>
-         Dissolvenza: Si può intuire: è come se la room entrante crescesse di opacità fino al valore massimo.<br>
+         Dissolvenza: Si pu&ograve; intuire: &egrave; come se la room entrante crescesse di opacit&agrave; fino al valore massimo.<br>
          Sbiadisci due volte: La room uscente passa in dissolvenza a uno schermo nero, poi la room entrante compare in dissolvenza.<br>
         </blockquote>
   <tt><b>transition_steps</b></tt> 
-    Indica la durata della transizione in step. Più tempo ci mette, più è rallentata.
-        L'impostazione predefinita è 80.<br>
+    Indica la durata della transizione in step. Pi&ugrave; tempo ci mette, pi&ugrave; &egrave; rallentata.
+        L'impostazione predefinita &egrave; 80.<br>
   <tt><b>transition_define(kind,name)</b></tt> 
     Puoi anche creare le tue transizioni. A questo fine devi definire uno script
         (possibilmente un pacchetto d'estensione) per fare la transizione. Con questa
-        Funzione potrai poi aggiungerla al gioco. <tt>kind</tt> è l'indice della nuova
-        transizione. (può essere uno nuovo o puoi sovrasciverne uno esistente). <tt>name</tt>
-        è il nome dello script. Nota che deve essere una stringa! Quindi devono esserci
-        le virgolette. Questa è una funzionalità molto avanzata. Lo script deve avere cinque
+        Funzione potrai poi aggiungerla al gioco. <tt>kind</tt> &egrave; l'indice della nuova
+        transizione. (pu&ograve; essere uno nuovo o puoi sovrasciverne uno esistente). <tt>name</tt>
+        &egrave; il nome dello script. Nota che deve essere una stringa! Quindi devono esserci
+        le virgolette. Questa &egrave; una funzionalit&agrave; molto avanzata. Lo script deve avere cinque
         argument: una surface con l'immagine della room uscente, un'altra con l'immagine della
         room entrante, La lunghezza delle surface, la loro altezza, e la frazione della
-        transizione (compresa tra 0 e 1). Poi dovrà disegnare l'immagine usando le due surface.
-        (Poiché richiede l'uso delle surface, <b>puoi definire le tue transizioni solo nella
+        transizione (compresa tra 0 e 1). Poi dovr&agrave; disegnare l'immagine usando le due surface.
+        (Poich&eacute; richiede l'uso delle surface, <b>puoi definire le tue transizioni solo nella
         Standard Edition di GameMaker.</b>) <br>
   <tt><b>transition_exists(kind)</b></tt> 
     Restituisce true se esiste la transizione numerata con il numero indicato.

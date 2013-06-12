@@ -10,21 +10,21 @@
 
 <h3>Il Display</h3>
 
-<i>La terminologia usata in questa pagina è una traduzione letterale di quella inglese e potrebbe non corrispondere a quella
+<i>La terminologia usata in questa pagina &egrave; una traduzione letterale di quella inglese e potrebbe non corrispondere a quella
 realmente usata nel software Windows italiano.</i>
 
-<!--Se qualcuno conosce la terminologia così com'è mostrata nel software Windows italiano,
+<!--Se qualcuno conosce la terminologia cos&igrave; com'&egrave; mostrata nel software Windows italiano,
 modifichi la pagina tranquillamente.-->
 
 <p>
-Il display rappresenta tutta l'area sul monitor. Ha una dimensione (di solito 1024x768, o 1280x1024), una profondità di
-colore, cioè il numero di bit usati per rappresentare un singolo pixel (di solito 16 = Colore Elevato o 32 = Colore
-Completo) e una frequenza d'aggiornamento, cioè quante volte il display si aggiorna in un secondo (di solito tra 60 e 120).
-Queste impostazioni possono essere cambiate nelle proprietà del display. Tuttavia nei giochi, in particolare quando si usa
-la modalità schermo intero, è importante poter cambiare queste impostazioni. Possono essere tutte inizializzate nelle
+Il display rappresenta tutta l'area sul monitor. Ha una dimensione (di solito 1024x768, o 1280x1024), una profondit&agrave; di
+colore, cio&egrave; il numero di bit usati per rappresentare un singolo pixel (di solito 16 = Colore Elevato o 32 = Colore
+Completo) e una frequenza d'aggiornamento, cio&egrave; quante volte il display si aggiorna in un secondo (di solito tra 60 e 120).
+Queste impostazioni possono essere cambiate nelle propriet&agrave; del display. Tuttavia nei giochi, in particolare quando si usa
+la modalit&agrave; schermo intero, &egrave; importante poter cambiare queste impostazioni. Possono essere tutte inizializzate nelle
 <b>Global Game Settings</b> (impostazioni globali del gioco). Per cambiarle durante il gioco esistono le seguenti funzioni.
-Nota che se lo fai il gioco risulterà rallentato perché tutto deve ricostruirsi.
-<b><i>Le funzioni per impostare la modalità (quelle che contengono "set") sono disponibili solo nella Standard Edition.</i></b>
+Nota che se lo fai il gioco risulter&agrave; rallentato perch&eacute; tutto deve ricostruirsi.
+<b><i>Le funzioni per impostare la modalit&agrave; (quelle che contengono "set") sono disponibili solo nella Standard Edition.</i></b>
 
 <p>
 <blockquote>
@@ -33,18 +33,18 @@ Nota che se lo fai il gioco risulterà rallentato perché tutto deve ricostruirs
   <tt><b>display_get_height()</b></tt>
     Restituisce l'altezza (verticale) del display in pixel.<br>
   <tt><b>display_get_colordepth()</b></tt>
-    Restituisce la profondità di colore in bit.<br>
+    Restituisce la profondit&agrave; di colore in bit.<br>
   <tt><b>display_get_frequency()</b></tt>
     Restituisce la frequenza di aggiornamento del display.<br>
   <tt><b>display_set_size(w,h)</b></tt>
     Imposta la lunghezza w e l'altezza h del display in pixel. Restituisce true se ha avuto successo. (Renditi conto che
         solo certe combinazioni sono permesse.)<br>
   <tt><b>display_set_colordepth(coldepth)</b></tt>
-    Imposta la profondità di colore. Generalmente i soli valori conentiti sono 16 e 32. Restituisce true se ha avuto
+    Imposta la profondit&agrave; di colore. Generalmente i soli valori conentiti sono 16 e 32. Restituisce true se ha avuto
         successo.<br>
   <tt><b>display_set_frequency(frequency)</b></tt>
     Imposta la frequenza di aggiornamento del display. Solo pochi valori sono permessi. Di solito vorrai impostarla a 60
-        con un'identica room_speed così da ottenere proprio 60 frame al secondo in modo fluido. Restituisce true se ha
+        con un'identica room_speed cos&igrave; da ottenere proprio 60 frame al secondo in modo fluido. Restituisce true se ha
         avuto successo.<br>
   <tt><b>display_set_all(w,h,frequency,coldepth)</b></tt>
     Imposta tutto in una volta sola. Usa -1 per i valori che non vuoi cambiare. Restituisce true se ha avuto successo. <br>
@@ -52,15 +52,15 @@ Nota che se lo fai il gioco risulterà rallentato perché tutto deve ricostruirs
     Controlla se le impostazioni indicate sono permesse. Non cambia tali impostazioni. Usa -1 per i valori che non vuoi
         cambiare. Restituisce true se le impostazioni sono permesse.<br>
   <tt><b>display_reset(AA)</b></tt>
-    Reimposta le impostazioni del display e imposta quelle che c'erano quando il programma è stato lanciato, permettendoti
+    Reimposta le impostazioni del display e imposta quelle che c'erano quando il programma &egrave; stato lanciato, permettendoti
         anche di impostare il livello di Anti-Aliasing dello Schermo Intero da usare. I livelli disponibili sono: 0, 2, 4
         e 8. GameMaker comincia con 0.<br>
 	<blockquote>
 	  <tt><b>display_aa*</b></tt>
             Questa variabile di sola lettura riporta i vari livelli di AA (l'Anti-Aliasing di prima) che il dispositivo
-                dell'utente può mostrare. Lo farà impostando dei bit per i singoli livelli, quindi solo per 2xAA restituirà
-                2, per la disponibilità di 2x e 4x restituirà 6. Per 4 e 8 restituirà 12. Per tutti e tre i livelli (2, 4 e
-                8) restituirà 14. Per permettere all'utente di impostare l'AA, puoi usare un codice simile a quello
+                dell'utente pu&ograve; mostrare. Lo far&agrave; impostando dei bit per i singoli livelli, quindi solo per 2xAA restituir&agrave;
+                2, per la disponibilit&agrave; di 2x e 4x restituir&agrave; 6. Per 4 e 8 restituir&agrave; 12. Per tutti e tre i livelli (2, 4 e
+                8) restituir&agrave; 14. Per permettere all'utente di impostare l'AA, puoi usare un codice simile a quello
                 mostrato qui sotto:
 	        <pre>  if( display_aa&2 ) display_reset(2);	</pre>
 	</blockquote>
@@ -102,7 +102,7 @@ cambiare le impostazioni del display
 impostazioni del display
 display, impostazioni
 frequenza
-profondità colore
+profondit&agrave; colore
 risoluzione
 
 display_get_width()

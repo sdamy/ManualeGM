@@ -11,15 +11,15 @@
 
 <h3>Views</h3>
 
-Infine, c'è un'etichetta chiamata <b>views</b>. Questa fornisce un meccanismo
+Infine, c'&egrave; un'etichetta chiamata <b>views</b>. Questa fornisce un meccanismo
 per disegnare delle parti della tua room in posti differenti dello schermo.
 Le views possono essere utilizzate per molti motivi. Intanto, in molti giochi
 hai bisogno di mostrare solo una parte della room in ogni momento. Per esempio, in gran parte dei platform
 la vista segue il personaggio principale. Nei giochi a due giocatori spesso
-hai bisogno di una vista tagliata a metà in cui in una parte vedi
-un giocatore e nell'altra vedi l'altro giocatore. Un altro possibile utilizzo è nei giochi
+hai bisogno di una vista tagliata a met&agrave; in cui in una parte vedi
+un giocatore e nell'altra vedi l'altro giocatore. Un altro possibile utilizzo &egrave; nei giochi
 in cui parte della room deve scorrere (col personaggio principale per esempio) mentre
-un'altra parte è fissa (per esempio un pannello che indica lo stato). Tutto ciò può essere
+un'altra parte &egrave; fissa (per esempio un pannello che indica lo stato). Tutto ci&ograve; pu&ograve; essere
 fatto facilmente in <i>GameMaker</i>.
 
 <p>
@@ -29,7 +29,7 @@ Quando clicchi nella tab <b>views</b> verranno mostrate le seguenti informazioni
 <img src="images/form_room_views.jpg">
 
 <p>
-In alto c'è una casella chiamata <b>Enable the use of Views</b>. Devi
+In alto c'&egrave; una casella chiamata <b>Enable the use of Views</b>. Devi
 selezionarla per usare le views. Sotto a questa vedrai la lista di almeno
 8 views che puoi definire. Sotto alla lista puoi dare delle informazioni per le views.
 Prima di tutto devi indicare se la view dev'essere visibile quando
@@ -37,28 +37,28 @@ la room inizia. Assicurati che almeno una view sia visibile. Le view visibili ve
 mostrate in grassetto.
 
 <p>
-Una view è definita da un'area rettangolare nella room. Questa è l'area che
+Una view &egrave; definita da un'area rettangolare nella room. Questa &egrave; l'area che
 dev'essere mostrata nella view. Puoi specificare la posizione dell'angolo in alto a sinistra
 e la larghezza e l'altezza di quest'area. Inoltre, devi specificare dove
-dev'essere mostrata nella finestra della schermo quest'area. Ciò è chiamato (view)port.
+dev'essere mostrata nella finestra della schermo quest'area. Ci&ograve; &egrave; chiamato (view)port.
 Anche qui, devi specificare la posizione dell'angolo in alto a sinistra
-e la dimensione. Se hai una sola view la posizione è tipicamente (0,0).
-Nota che la dimensione del port può essere diversa da quella della view.
-In questo caso la view verrà ridimensionata per essere adattata al port. (Nel codice
-è anche possibile ruotare la view). Questi ports possono sovrapporsi. In questo
+e la dimensione. Se hai una sola view la posizione &egrave; tipicamente (0,0).
+Nota che la dimensione del port pu&ograve; essere diversa da quella della view.
+In questo caso la view verr&agrave; ridimensionata per essere adattata al port. (Nel codice
+&egrave; anche possibile ruotare la view). Questi ports possono sovrapporsi. In questo
 case vengono disegnati nell'ordine indicato in cima all'altra.
 
 <p>
 Come indicato sopra, spesso vuoi che la view segua un certo oggetto. Questo
-oggetto lo puoi indicare in basso. Se ci sono più istanze dell'oggetto
-solo la prima verrà seguita dalla view. (Nel codice puoi
+oggetto lo puoi indicare in basso. Se ci sono pi&ugrave; istanze dell'oggetto
+solo la prima verr&agrave; seguita dalla view. (Nel codice puoi
 indicare anche un'istanza specifica). Normalmente
 il personaggio dev'essere in grado di camminare un po' senza spostare la view.
 Solo quando il giocatore si avvicina al limite della view, 
 la view dovrebbe cambiare. Puoi specificare la dimensione del limite che deve rimanere visibile
-intorno all'oggetto. Infine, puoi limitare la velocità con cui la view
-si muove. Questo potrebbe significare che il personaggio può camminare fuori dallo schermo, ma
-in questo modo il movimento è più morbido. Usa -1 se vuoi che la view
+intorno all'oggetto. Infine, puoi limitare la velocit&agrave; con cui la view
+si muove. Questo potrebbe significare che il personaggio pu&ograve; camminare fuori dallo schermo, ma
+in questo modo il movimento &egrave; pi&ugrave; morbido. Usa -1 se vuoi che la view
 si sposti istantaneamente.
 
 <!--END-->

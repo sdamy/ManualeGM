@@ -11,21 +11,21 @@
 
 <h3>Disegnare le surface</h3>
 
-<i><b>Queste funzionalità sono disponibili solamente nella standard edition di GameMaker.</b></i>
+<i><b>Queste funzionalit&agrave; sono disponibili solamente nella standard edition di GameMaker.</b></i>
 
 <p>
 In alcuni casi vorreste poter raffigurare delle opere non direttamente sullo schermo ma su una “tela” che
-potrà essere usata successivamente per raffigurare altre cose sulla schermo. Questa “tela” viene chiamata Surface.
-Per esempio, farete  in modo che l’utente disegni qualcosa sullo schermo. La raffigurazione non verrà
-disegnata sullo schermo (perchè verrà rimossa ad ogni
-step), ma invece verrà disegnata su una tela separata che verrà copiata sullo
+potr&agrave; essere usata successivamente per raffigurare altre cose sulla schermo. Questa “tela” viene chiamata Surface.
+Per esempio, farete  in modo che l'utente disegni qualcosa sullo schermo. La raffigurazione non verr&agrave;
+disegnata sullo schermo (perch&egrave; verr&agrave; rimossa ad ogni
+step), ma invece verr&agrave; disegnata su una tela separata che verr&agrave; copiata sullo
 schermo ad ogni step. Potete anche usarla come texture che cambia ad ogni frame.
 
 <p>
-Le surface rendono possibile ciò. Attualmente sono molto semplici da usare. Prima di tutto si crea una
-surface. Poi bisogna indicare che tutto ciò che disegnerete successivamente verrà disegnato su questa surface.
+Le surface rendono possibile ci&ograve;. Attualmente sono molto semplici da usare. Prima di tutto si crea una
+surface. Poi bisogna indicare che tutto ci&ograve; che disegnerete successivamente verr&agrave; disegnato su questa surface.
 Da quel momento in poi tutte le funzioni di disegno opereranno sulla superficie. Una volta finito basta resettare il target di disegno
-e tutto ciò che disegnerete successivamente agirà sullo schermo. Puoi disegnare le surface sullo schermo in
+e tutto ci&ograve; che disegnerete successivamente agir&agrave; sullo schermo. Puoi disegnare le surface sullo schermo in
 molti modi differenti o usarle come texture. Ci sono alcune cose a cui bisogna stare attenti quando le usate.
 Controllate i commenti alla fine.
 
@@ -35,12 +35,12 @@ Esistono le seguenti funzioni per gestire le surface
 <blockquote>
   <tt><b>surface_create(w,h)</b></tt> 
   	Crea una surface con larghezza ed altezza inticate. Restituisce l'id
-	della surface, il quale dovrà essere usato per tutte le altre funzioni. Notare che
-	la surface non verrà pulita. Questa è una vostra responsabilità.
+	della surface, il quale dovr&agrave; essere usato per tutte le altre funzioni. Notare che
+	la surface non verr&agrave; pulita. Questa &egrave; una vostra responsabilit&agrave;.
 	(Impostatela come target di disegno ed usare le apposite funzioni di pulitura)<br>
 	<b>Nota</b>: Alcune vecchie schede video richiedono texture/surface con "Multipli di 2" comedimensioni per essere usate nel 3D.
-	Questo vuole dire che è preferibile che larghezza ed altezza siano di 2,4,8,16,32,64,128,256,512 o 1024 pixel.
-	Anche se larghezza ed altezza non devono necessariamente essere uguali(es. un quadrato), è caldamente consigliato mantenere queste dimensioni per la massima compatibilità.<br><br>
+	Questo vuole dire che &egrave; preferibile che larghezza ed altezza siano di 2,4,8,16,32,64,128,256,512 o 1024 pixel.
+	Anche se larghezza ed altezza non devono necessariamente essere uguali(es. un quadrato), &egrave; caldamente consigliato mantenere queste dimensioni per la massima compatibilit&agrave;.<br><br>
   <tt><b>surface_free(id)</b></tt> 
   	Elimina la surface.<br>
   <tt><b>surface_exists(id)</b></tt> 
@@ -51,7 +51,7 @@ Esistono le seguenti funzioni per gestire le surface
   <tt><b>surface_get_height(id)</b></tt> 
   	Restituisce l'altezza della surface.<br>
   <tt><b>surface_get_texture(id)</b></tt> 
-  	Restituisce l'id della texture corrispodente della surface. Questo può essere usato
+  	Restituisce l'id della texture corrispodente della surface. Questo pu&ograve; essere usato
 	per disegnare oggetti texturati con l'immagine della surface.<br>
   <br>
   <tt><b>surface_set_target(id)</b></tt> 
@@ -62,7 +62,7 @@ Esistono le seguenti funzioni per gestire le surface
   <br>
   <tt><b>surface_getpixel(id,x,y)</b></tt> 
   	Restituisce il colore del pixel alla posizione (x,y) nella surface. Questa
-	funzione non è molto veloce, quindi usatela con cautela.<br> 
+	funzione non &egrave; molto veloce, quindi usatela con cautela.<br> 
   <tt><b>surface_save(id,fname)</b></tt> 
     Salva la surface in un'immagine png con il nome del file indicato.
 	Utile per fare degli screenshot.<br>
@@ -82,7 +82,7 @@ Esistono le seguenti funzioni per gestire le surface
   	Disegna la surface scalata, ruotata, con un colore di miscelatura (usate c_white se non volete la miscelatura)
 	e la trasparenza nel range (0-1).<br>
   <tt><b>draw_surface_stretched_ext(id,x,y,w,h,color,alpha)</b></tt> 
-  	Disegna la surface ingrandita alle dimensioni indicate. color è 
+  	Disegna la surface ingrandita alle dimensioni indicate. color &egrave; 
 	il colore di miscelatura e alpha indica la trasparenza.<br>
   <tt><b>draw_surface_tiled_ext(id,x,y,xscale,yscale,color,alpha)</b></tt> 
   	Disegna varie volte la surface in modo da riempire l'intera room ma ora
@@ -91,7 +91,7 @@ Esistono le seguenti funzioni per gestire le surface
   	Disegna una parte della surface con l'origine alla posizione (x,y) ma ora
 	con impostazioni di scala colore e trasparenza.<br>
   <tt><b>draw_surface_general(id,left,top,width,height,x,y,xscale,yscale,rot,c1,c2,c3,c4,alpha)</b></tt> 
-  	La funzione di disegno più generalizzata. Disegna la parte indicata
+  	La funzione di disegno pi&ugrave; generalizzata. Disegna la parte indicata
 	della surface con l'origine alla posizione (x,y) ma ora con un fattore di scala, angolo di rotazione,
 	un colore per ognuno dei 4 vertici (su-sinistra, su-destra, giu-destra, e giu-sinistra),
 	e la trasparenza.<br>
@@ -105,29 +105,29 @@ Esistono le seguenti funzioni per gestire le surface
 </blockquote>
 
 <p>
-Notare che non ci sono funzioni per copiare una parte dello schermo su una surface. (Questo è impossibile a causa
-di differenze interne di formato tra lo schermo e le surface) Per fare ciò bisogna necessariamente impostare
+Notare che non ci sono funzioni per copiare una parte dello schermo su una surface. (Questo &egrave; impossibile a causa
+di differenze interne di formato tra lo schermo e le surface) Per fare ci&ograve; bisogna necessariamente impostare
 una surface come target di disegno e poi disegnare l'intera room. Potete poi usare le funzioni di copia delle surface
 per prendere parti di essa.
 
 <p>
 E' anche possibile creare sprite e background da una surface. Guardare la sezione "Modifica delle risorse"
-per più informazioni.
+per pi&ugrave; informazioni.
 
 <p>
 Queste funzioni vanno usate con molta cautela. In particolar modo i seguenti punti:
 
 <ul>
   <li>Le surface vengono distrutte dopo aver invocato <b>display_reset()</b>. 
-  	  Bisognerà ricrearle manualmente e disegnarci nuovamente una volta usato <b>display_reset()</b></li>
-  <li>Dovresti usare <b>surface_exists()</b> per controllare se la surface è stata distrutta prima di usarla. 
-      Se è stata distrutta bisognerà rigrearla prima di disegnarci sopra.
+  	  Bisogner&agrave; ricrearle manualmente e disegnarci nuovamente una volta usato <b>display_reset()</b></li>
+  <li>Dovresti usare <b>surface_exists()</b> per controllare se la surface &egrave; stata distrutta prima di usarla. 
+      Se &egrave; stata distrutta bisogner&agrave; rigrearla prima di disegnarci sopra.
   <li>Non dovresti mai cambiare il target di disegno mentre si sta disegnando
-      sullo schermo, il che significa non usarle mai nell'evento di disegno (draw). Questo causerà seri
+      sullo schermo, il che significa non usarle mai nell'evento di disegno (draw). Questo causer&agrave; seri
 	  problemi con la proiezione e la viewport.</li>
   <li>Per questioni di prestazioni, le surface sono tenute sono nella memoria video. 
       Il che significa che potrebbero distruggersi quando ad esempio si cambia la risoluzione
-	  dello schermo, si usa uno screen saver, o è stato premuto CTRL-ALT-Canc.</li>
+	  dello schermo, si usa uno screen saver, o &egrave; stato premuto CTRL-ALT-Canc.</li>
   <li>Le surface non verranno salvate quando salvate il gioco. </li>
 </ul> 
 

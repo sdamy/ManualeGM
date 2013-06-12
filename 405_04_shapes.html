@@ -10,7 +10,7 @@
 
 <h3>Disegnare delle Forme</h3>
 
-C'è una grande collezione di funzioni disponibili per disegnare diverse forme.
+C'&egrave; una grande collezione di funzioni disponibili per disegnare diverse forme.
 Ci sono anche funzioni per disegnare del testo (vedi prossima sezione). Puoi
 usare queste funzioni soltanto nel Draw Event di un object; generalmente non
 ha senso metterle da qualsiasi altra parte. Devi capire che le collisioni tra
@@ -23,7 +23,7 @@ che disegni. Esistono le seguenti funzioni per disegnare forme basilari.
     Riempie completamente la room con il colore dato (senza trasparenza).<br>
   <tt><b>draw_clear_alpha(col,alpha)</b></tt> 
     riempie completamente la room con il colore dato e la trasparenza alpha
-        fornita (è particolarmente utile con le surface).<br>
+        fornita (&egrave; particolarmente utile con le surface).<br>
   <tt><b>draw_point(x,y)</b></tt> 
     Disegna un punto in (x,y) del colore corrente.<br>
   <tt><b>draw_line(x1,y1,x2,y2)</b></tt> 
@@ -46,25 +46,25 @@ che disegni. Esistono le seguenti funzioni per disegnare forme basilari.
     Disegna un'ellisse. <tt>outline</tt> indica se bisogna disegnare solo il
         bordo (true) o se dev'essere riempito (false).<br>
   <tt><b>draw_set_circle_precision(precision)</b></tt> 
-    Imposta la precisione con cui vengono disegnati i cerchi, cioè il numero di segmenti
+    Imposta la precisione con cui vengono disegnati i cerchi, cio&egrave; il numero di segmenti
         da cui sono formati. La precisione deve essere compresa tra 4 e 64 e deve essere
         divisibile per 4. Viene usata anche per disegnare ellissi e rettangoli arrotondati.<br>
   <tt><b>draw_arrow(x1,y1,x2,y2,size)</b></tt> 
     disegna una freccia che va da (x1,y1) a (x2,y2). size indica la dimensione della freccia in pixel.<br>
   <tt><b>draw_button(x1,y1,x2,y2,up)</b></tt> 
-    Disegna un pulsante. <tt>up</tt> indica se il pulsante è alzato (true) o è premuto (false).<br>
+    Disegna un pulsante. <tt>up</tt> indica se il pulsante &egrave; alzato (true) o &egrave; premuto (false).<br>
   <tt><b>draw_path(path,x,y,absolute)</b></tt> 
     Con questa funzione puoi disegnare il path indicato nella room con la sua posizione di partenza in
-        (x,y). Se absolute è true il path viene disegnato alla posizione in cui è stato definito e i
+        (x,y). Se absolute &egrave; true il path viene disegnato alla posizione in cui &egrave; stato definito e i
         valori x e y sono ignorati.<br>
   <tt><b>draw_healthbar(x1,y1,x2,y2,amount,backcol,mincol,maxcol,direction,showback,showborder)</b></tt> 
     Con questa funzione puoi disegnare una barra della salute (o una barra per indicare qualsiasi altra
         cosa, ad esempio il danno). Gli argument x1, y1, x2 e y2 indicano l'area titale della barra.
         amount indica la percentuale della barra che deve essere riempita (compresa tra 0 e 100). backcol
-        è il colore di sfondo della barra. mincol e maxcol indicano il colore quando la barra è
-        rispettivamente a 0 e a 100. Per i valori in mezzo il colore è interpolato, quindi puoi creare
-        facilmente una barra che va dal verde al rosso, per esempio. direction è la direzione in cui va
-        la barra. 0 indica che il valore minimo è a sinistra (la barra cresce verso destra), 1 a destra
+        &egrave; il colore di sfondo della barra. mincol e maxcol indicano il colore quando la barra &egrave;
+        rispettivamente a 0 e a 100. Per i valori in mezzo il colore &egrave; interpolato, quindi puoi creare
+        facilmente una barra che va dal verde al rosso, per esempio. direction &egrave; la direzione in cui va
+        la barra. 0 indica che il valore minimo &egrave; a sinistra (la barra cresce verso destra), 1 a destra
         (cresce a sinistra), 2 in alto (cresce verso il basso), 3 in basso (cresce verso l'alto). Infine
         showback indica se mostrare un rettangolo di sfondo o meno e showborder indica se la barra e
         l'eventuale rettangolo di sfondo devono avere un bordo nero.<br> 
@@ -78,10 +78,10 @@ essere cambiate con le funzioni seguenti.
 <p>
 <blockquote>
   <tt><b>draw_set_color(col)</b></tt> 
-    Imposta il colore che verrà usato da ora per disegnare i primitivi (forme e testo).<br> 
+    Imposta il colore che verr&agrave; usato da ora per disegnare i primitivi (forme e testo).<br> 
   <tt><b>draw_set_alpha(alpha)</b></tt> 
-    Imposta il valore della trasparenza alpha che verrà usato da ora per disegnare i primitivi. Deve essere
-        compresa tra 0 e 1. 0 è completamente trasparente, 1 è completamente opaco.<br> 
+    Imposta il valore della trasparenza alpha che verr&agrave; usato da ora per disegnare i primitivi. Deve essere
+        compresa tra 0 e 1. 0 &egrave; completamente trasparente, 1 &egrave; completamente opaco.<br> 
   <tt><b>draw_get_color()</b></tt> 
     Restituisce il colore usato per disegnare i primitivi.<br> 
   <tt><b>draw_get_alpha()</b></tt> 
@@ -90,7 +90,7 @@ essere cambiate con le funzioni seguenti.
 
 <p>
 
-È disponibile un insieme di colori predefiniti:
+&Egrave; disponibile un insieme di colori predefiniti:
 
   <p>
 <blockquote>
@@ -99,11 +99,11 @@ essere cambiate con le funzioni seguenti.
     <tt><b>c_blue</b></tt> (blu zaffiro o chiaro)<br>
     <tt><b>c_dkgray</b></tt> (grigio scuro)<br>
     <tt><b>c_fuchsia</b></tt> (fucsia o rosa)<br>
-    <tt><b>c_gray</b></tt> (grigio "a metà")<br>
+    <tt><b>c_gray</b></tt> (grigio "a met&agrave;")<br>
     <tt><b>c_green</b></tt> (verde campo o scuro)<br>
     <tt><b>c_lime</b></tt> (verde chiaro)<br>
     <tt><b>c_ltgray</b></tt> (grigio chiaro)<br>
-    <tt><b>c_maroon</b></tt> (rosso "bordò")<br>
+    <tt><b>c_maroon</b></tt> (rosso "bord&ograve;")<br>
     <tt><b>c_navy</b></tt> (blu oltremare o scuro)<br>
     <tt><b>c_olive</b></tt> (verde oliva)<br>
     <tt><b>c_orange</b></tt> (arancione chiaro)<br>
@@ -125,7 +125,7 @@ Le seguenti funzioni ti possono aiutare a creare i colori che vuoi.
     Restituisce un colore con le componenti di rosso, verde e blu date. Gli argument red, green e blue
         rappresentano queste componenti e devono essere valori compresi tra 0 e 255.<br>
   <tt><b>make_color_hsv(hue,saturation,value)</b></tt> 
-    Restituisce un colore con le componenti di tonalità, saturazione e luminosità date. Gli argument
+    Restituisce un colore con le componenti di tonalit&agrave;, saturazione e luminosit&agrave; date. Gli argument
         hue, saturaturation e value rappresentano queste componenti e devono essere valori compresi tra 0 e 255.<br>
   <tt><b>color_get_red(col)</b></tt> 
     Restituisce la componente di rosso del colore.<br>
@@ -134,15 +134,15 @@ Le seguenti funzioni ti possono aiutare a creare i colori che vuoi.
   <tt><b>color_get_blue(col)</b></tt> 
     Restituisce la componente di blu del colore.<br>
   <tt><b>color_get_hue(col)</b></tt> 
-    Restituisce la componente luminosità del colore.<br>
+    Restituisce la componente luminosit&agrave; del colore.<br>
   <tt><b>color_get_saturation(col)</b></tt> 
     Restituisce la componente saturazione del colore.<br>
   <tt><b>color_get_value(col)</b></tt> 
-    Restituisce la componente luminosità del colore.<br>
+    Restituisce la componente luminosit&agrave; del colore.<br>
   <tt><b>merge_color(col1,col2,amount)</b></tt> 
-    Restituisce un colore che sta tra col1 e col2. le quantità in cui vengono mescolati è determinata
+    Restituisce un colore che sta tra col1 e col2. le quantit&agrave; in cui vengono mescolati &egrave; determinata
         da amount. Il valore 0 corrisponde a col1, 1 a col2, e i valori in mezzo alla percentuale
-        del col2 (quella del col1 sarà 1-amount).<br>
+        del col2 (quella del col1 sar&agrave; 1-amount).<br>
 </blockquote>
 
 <p>  
@@ -152,7 +152,7 @@ Esistono anche queste funzioni varie.
 <p>
 <blockquote>
   <tt><b>draw_getpixel(x,y)</b></tt> 
-    Restituisce il colore del pixel situato in (x,y) all'interno della room. Non è molto veloce,
+    Restituisce il colore del pixel situato in (x,y) all'interno della room. Non &egrave; molto veloce,
         quindi usalo con cautela.<br> 
   <tt><b>screen_save(fname)</b></tt> 
     Salva un'immagine PNG dello schermo con il nome dato. Utile per fare delle istantanee

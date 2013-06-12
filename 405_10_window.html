@@ -10,28 +10,28 @@
 
 <h3>La Finestra</h3>
 
-Il gioco vero e proprio avviene in una finestra. La finestra ha delle proprietà,
-ad esempio può avere un bordo o no, può essere a schermo intero o meno, ecc. Di solito
+Il gioco vero e proprio avviene in una finestra. La finestra ha delle propriet&agrave;,
+ad esempio pu&ograve; avere un bordo o no, pu&ograve; essere a schermo intero o meno, ecc. Di solito
 possono essere impostate nelle <b>Global Game Settings</b>, ma puoi cambiarle anche durante
 il gioco. Per farlo esistono le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>window_set_visible(visible)</b></tt>
-    Imposta se la finestra del gioco è visibile (true) o no (false). Ovviamente di solito
+    Imposta se la finestra del gioco &egrave; visibile (true) o no (false). Ovviamente di solito
         vorrai che la finestra rimanga visibile per tutto il gioco. Il programma
-        non riceverà gli input da tastiera mentre la finestra è invisibile.<br>
+        non ricever&agrave; gli input da tastiera mentre la finestra &egrave; invisibile.<br>
   <tt><b>window_get_visible()</b></tt>
-    Restitiscetrue se la finestra di gioco è visibile.<br>
+    Restitiscetrue se la finestra di gioco &egrave; visibile.<br>
   <tt><b>window_set_fullscreen(full)</b></tt>
-    Imposta se la finestra è mostrata a schermo intero (true) o no.<br>
+    Imposta se la finestra &egrave; mostrata a schermo intero (true) o no.<br>
   <tt><b>window_get_fullscreen()</b></tt>
-    Restituisce true se la finestra è mostrata a schermo intero.<br>
+    Restituisce true se la finestra &egrave; mostrata a schermo intero.<br>
   <tt><b>window_set_showborder(show)</b></tt>
     Imposta se viene mostrato il bordo della finestra (true) o no.
         (A schermo intero non viene mai mostrato.)<br>
   <tt><b>window_get_showborder()</b></tt>
-    Restituisce true se viene mostrato il bordo in modalità finestra.<br>
+    Restituisce true se viene mostrato il bordo in modalit&agrave; finestra.<br>
   <tt><b>window_set_showicons(show)</b></tt>
     Imposta se le icone Riduci a icona, Ingrandisci e Chiudi sono mostrate (true) o no.
         (A schermo intero non vengono mai mostrate.)<br>
@@ -42,21 +42,21 @@ il gioco. Per farlo esistono le seguenti funzioni:
   <tt><b>window_get_stayontop()</b></tt>
     Restituisce true se la finestra sta sempre in cima.<br>
   <tt><b>window_set_sizeable(sizeable)</b></tt>
-    Imposta se la finestra è dimensionabile dal giocatore (true) o no. (Il giocatore può
-        dimensionarla solo se viene mostrato il bordo e la finestra non è a schermo intero.)<br>
+    Imposta se la finestra &egrave; dimensionabile dal giocatore (true) o no. (Il giocatore pu&ograve;
+        dimensionarla solo se viene mostrato il bordo e la finestra non &egrave; a schermo intero.)<br>
   <tt><b>window_get_sizeable()</b></tt>
-    Restituisce true se la finestra è dimensionable dal giocatore.<br>
+    Restituisce true se la finestra &egrave; dimensionable dal giocatore.<br>
   <tt><b>window_set_caption(caption)</b></tt>
     Imoosta la stringa che fa da didascalia della finestra. Di solito la specifichi mentre
         definisci la room e la cambi con la variabile room_caption. Quindi di solito questa
-        funzione è inutile, a meno che tu non ti disegni la room da solo piuttosto che
-        lasciarlo fare a <i>GameMaker</i>. La didascalia è visibile solo se viene mostrato
-        il bordo e la finestra non è a schermo intero.<br>
+        funzione &egrave; inutile, a meno che tu non ti disegni la room da solo piuttosto che
+        lasciarlo fare a <i>GameMaker</i>. La didascalia &egrave; visibile solo se viene mostrato
+        il bordo e la finestra non &egrave; a schermo intero.<br>
   <tt><b>window_get_caption()</b></tt>
     Restituisce la didascalia della finestra.<br>
   <tt><b>window_set_cursor(curs)</b></tt>
     Imposta il cursore usato nella finestra. Puoi usare le seguenti costanti:
-        (a volte sono stati usati dei simboli per rendere più efficacemente la forma dei cursori)
+        (a volte sono stati usati dei simboli per rendere pi&ugrave; efficacemente la forma dei cursori)
 	  <p>
 <blockquote>
   		<tt><b>cr_default</b></tt> (normale)<br>
@@ -64,7 +64,7 @@ il gioco. Per farlo esistono le seguenti funzioni:
   		<tt><b>cr_arrow</b></tt> (freccia)<br>
   		<tt><b>cr_cross</b></tt> (+)<br>
   		<tt><b>cr_beam</b></tt> (testo)<br>
-  		<tt><b>cr_size_nesw</b></tt> (/ con frecce alle estremità)<br>
+  		<tt><b>cr_size_nesw</b></tt> (/ con frecce alle estremit&agrave;)<br>
   		<tt><b>cr_size_ns</b></tt> (| con frecce)<br>
   		<tt><b>cr_size_nwse</b></tt> (\ con frecce)<br>
   		<tt><b>cr_size_we</b></tt> (- con frecce)<br>
@@ -80,7 +80,7 @@ il gioco. Per farlo esistono le seguenti funzioni:
   		<tt><b>cr_appstart</b> (XP: freccia e clessisra; Vista/7: freccia e cerchio che gira)</tt><br>
   		<tt><b>cr_help</b></tt> (freccia con punto interrogativo)<br>
   		<tt><b>cr_handpoint</b></tt> (manina con indice puntato)<br>
-  		<tt><b>cr_size_all</b></tt> (+ con frecce alle estremità)<br>
+  		<tt><b>cr_size_all</b></tt> (+ con frecce alle estremit&agrave;)<br>
 	  </blockquote>
 
 <p>
@@ -88,15 +88,15 @@ il gioco. Per farlo esistono le seguenti funzioni:
   <tt><b>window_get_cursor()</b></tt>
     Restituisce il cursore usato nella finestra.<br>
   <tt><b>window_set_color(color)</b></tt>
-    Imposta il colore di quella parte della finetra che non è usata per mostrare la room.<br>
+    Imposta il colore di quella parte della finetra che non &egrave; usata per mostrare la room.<br>
   <tt><b>window_get_color()</b></tt>
     Restituisce il colore della finestra.<br>
   <tt><b>window_set_region_scale(scale,adaptwindow)</b></tt>
-    Se la finestra è più grande della room, di solito questa viene mostrata al centro della
-        finestra. È tuttavia possibile indicare che deve essere scalata per riempire tutta
+    Se la finestra &egrave; pi&ugrave; grande della room, di solito questa viene mostrata al centro della
+        finestra. &Egrave; tuttavia possibile indicare che deve essere scalata per riempire tutta
         la finestra o una sua parte. Il valore 1 indica nessuna scala. Se usi il valore 0
-        la regione verrà scalata per coprire tutta la finestra. Se usi un valore negativo
-        verrà espansa al massimo nella finestra mantenendo i rapporti (spesso è quello che
+        la regione verr&agrave; scalata per coprire tutta la finestra. Se usi un valore negativo
+        verr&agrave; espansa al massimo nella finestra mantenendo i rapporti (spesso &egrave; quello che
         vuoi). <tt>adaptwindow</tt> indica se la dimensione della finestra deve essere
         adattata (true) se la room non c'entra o no (false). Ha effetto solo se usi
         un fattore di scala positivo.<br> 
@@ -110,8 +110,8 @@ La finestra ha una posizione nello schermo e una dimensione. (Quando parliamo di
 dimensione intendiamo sempre la parte client della finestra, senza i bordi.) Puoi cambiarle
 anche se non lo farai quasi mai dal gioco. Di solito sono determinate automaticamente o scelte
 dal giocatore. Le seguenti funzioni possono essere usate per cambiare la posizione e la
-dimensione della finestra. Nota che queste funzioni lavorano con la modalità Finestra. Se la
-finestra è a schermo intero potrai ancora usarle ma avranno effetto solo quando disattiverai
+dimensione della finestra. Nota che queste funzioni lavorano con la modalit&agrave; Finestra. Se la
+finestra &egrave; a schermo intero potrai ancora usarle ma avranno effetto solo quando disattiverai
 la visualizzazione a schermo intero.
 
 <p>
@@ -120,7 +120,7 @@ la visualizzazione a schermo intero.
     Imposta la posizione della (parte client della) finestra alla posizione indicata.<br>
   <tt><b>window_set_size(w,h)</b></tt>
     Imposta la dimensione della (parte client della) finestra alla dimensione indicata.
-        Nota che se la regione indicata è troppo piccola per contenere la regione disegnata
+        Nota che se la regione indicata &egrave; troppo piccola per contenere la regione disegnata
         viene tenuta abbastanza grande per contenere la regione.<br> 
   <tt><b>window_set_rectangle(x,y,w,h)</b></tt>
     Imposta la posizione e la dimensione della finestra.
@@ -142,7 +142,7 @@ la visualizzazione a schermo intero.
 <p>
 
 Di nuovo, probabilmente non userai mai una di queste funzioni di posizionamento della
-finestra perché <i>GameMaker</i> se ne occupa automaticamente.
+finestra perch&eacute; <i>GameMaker</i> se ne occupa automaticamente.
 
 <P>
 In rari casi vorrai sapere la posizione del mouse rispetto alla finestra. (Di solito
@@ -178,7 +178,7 @@ window position
 window size
 
 finestra
-finestra, proprietà della
+finestra, propriet&agrave; della
 schermo intero
 cursore
 cursore, forma
