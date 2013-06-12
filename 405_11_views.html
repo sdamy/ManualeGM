@@ -10,28 +10,23 @@
 
 <h3>Views</h3>
 
-<!--In traduzione da torchipeppo-->
-
-As you should know you can define up to eight different views when designing rooms. 
-A view is defined by its view area in the room and its viewport on the screen 
-(or to be precise in the drawing region within the window). Using views you can 
-show different parts of the room at different places on the screen. 
-Also, you can make sure that a particular object always stays visible. 
+Come dovresti sapere, puoi definire fino a 8 view diverse quando progetti le room.
+Una view è definita dalla sua area nella room e dal suo (view)port sullo schermo
+(precisamente nella regione di disegno della finestra). Utilizzando le view puoi
+mostrare parti diverse della room in posti diversi sullo schermo. Inoltre, puoi
+assicurarti che un object particolare sia sempre visibile.
 
 <P>
-You can control the views from within code. You can make views 
-visible and invisible and change the place or size of the views
-in the drawing region or the position and size of the view in  
-the room (which is in particular useful when you indicate no object 
-to be visible). You can change the size of the horizontal and vertical 
-border around the visible object, and you can indicate which object 
-must remain visible in the views. The latter is very important when 
-the important object changes during the game. For example, you might 
-change the main character object based on its current status. 
-Unfortunately, this does mean that it is no longer the object 
-that must remain visible. This can be remedied by one line of 
-code in the creation event of all the possible main objects 
-(assuming this must happen in the first view):
+Puoi controllare le view dal codice. Puoi rendere le view visibili o invisibili,
+cambiare il posto o la dimensione delle view della regione di disegno o la posizione
+e la dimensione della view nella room (torna particolarmente utile quando non indichi
+un object da tenere visibile). Puoi indicare l'object da tenere visibile e la dimensione
+del bordo orizzontale e verticale attorno a esso. Cambiare l'object è molto importante
+quando l'object da tenere visibile cambia durante il gioco. Ad esempio, vorrai cambiare
+l'object del personaggio principale in base al suo stato. Purtroppo, questo significa che
+quello non è più l'object da tenere visibile. Puoi rimediare con una riga di codice
+da inserire nel Create Event di tutti gli object principali possibili (se lavori con una view
+diversa dalla view0 basta sostituire lo 0 col numero della view che ti interessa):
 
 <p>
 <blockquote>
@@ -44,98 +39,95 @@ code in the creation event of all the possible main objects
 
 <p>
 
-The following variables exist that influence the view. All, except the first two are 
-arrays ranging from 0 (the first view) to 7 (the last view).
+Esistono le seguenti variabili che influenzano le view. Tutte, tranne le prime due, sono array
+che vanno da 0 (prima view) a 7 (ultima view).
 
 <p>
 <blockquote>
   <tt><b>view_enabled</b></tt> 
-    Whether views are enabled or not.<br>
+    Impostala su true per attivare la view, impostala su false per disattivarle.<br>
   <tt><b>view_current*</b></tt> 
-    The currently drawn view (0-7). Use this only in the 
-	drawing event. You can for example check this variable to draw certain things in only one 
-	view. Variable cannot be changed.<br>
+    La view che sta venendo disegnata correntemente (da 0 a 7). Usala solo nel Draw Event. Puoi
+        controllare questa variabile per disegnare certe cose solo in una view, per esempio. Questa
+        variabile non può essere modificata.<br>
   <tt><b>view_visible[0..7]</b></tt> 
-    Whether the particular view is visible on the screen.<p>
+    Ogni view ha un'impostazione diversa. Imposta a true per rendere la view scelta visibile,
+        imposta a false per renderla invisibile.<br>
   <tt><b>view_xview[0..7]</b></tt> 
-  	X position of the view in the room.<br>
+    Ascissa della view nella room.<br>
   <tt><b>view_yview[0..7]</b></tt> 
-  	Y position of the view in the room.<br>
+    Ordinata della view nella room.<br>
   <tt><b>view_wview[0..7]</b></tt> 
-  	Width of the view in the room.<br>
+    Lunghezza (orizzontale) della view nella room.<br>
   <tt><b>view_hview[0..7]</b></tt> 
-  	Height of the view in the room.<br>
+    Altezza (verticale) della view nella room.<br>
   <tt><b>view_xport[0..7]</b></tt> 
-  	X-position of the viewport in the drawing region.<br>
+    Ascissa del port della view nella regione di disegno.<br>
   <tt><b>view_yport[0..7]</b></tt> 
-  	Y-position of the viewport in the drawing region.<br>
+    Ordinata del port della view nella regione di disegno.<br>
   <tt><b>view_wport[0..7]</b></tt> 
-  	Width of the viewport in the drawing region.<br>
+    Lunghezza (orizzontale) del port della view nella regione di disegno.<br>
   <tt><b>view_hport[0..7]</b></tt> 
-  	Height of the viewport in the drawing region.<br>
+    Altezza (verticale) del port della view nella regione di disegno.<br>
   <tt><b>view_angle[0..7]</b></tt> 
-  	Rotation angle used for the view in the room (counter-clockwise in degrees).<br>
+    Angolo di rotazione usato per la view nella room (senso antiorario, misura in gradi).<br>
   <tt><b>view_hborder[0..7]</b></tt> 
-  	Size of horizontal border around the visible object (in pixels).<br>
+    Dimensione del bordo orizzontale attorno all'object da tenere visibile (in pixel).<br>
   <tt><b>view_vborder[0..7]</b></tt> 
-  	Size of vertical border around visible object (in pixels).<br>
+    Dimensione del bordo verticale attorno all'object da tenere visibile (in pixel).<br>
   <tt><b>view_hspeed[0..7]</b></tt> 
-  	Maximal horizontal speed of the view.<br>
+    Massima velocità orizzontale della view.<br>
   <tt><b>view_vspeed[0..7]</b></tt> 
-  	Maximal vertical speed of the view.<br>
+    Massima velocità verticale della view.<br>
   <tt><b>view_object[0..7]</b></tt> 
-  	Object whose instance must remain visible in the view. 
-	If there are multiple instances of this object only the first one is followed. You can 
-	also assign an instance id to this variable. In that case the particular instance is 
-	followed.<br>
+    L'object la cui istanza deve rimanere visibile nella view. Se ci sono più istanze viene
+        seguita solo la prima. Puoi assegnare anche un id di un'istanza a questa variabile.
+        Se lo fai, verrà seguita quell'istanza particolare.<br>
 </blockquote>
 
 <p>
 
-Note that the size of the image on the screen is decided based on the visible views at the 
-beginning of the room. If you change views during the game, they might no longer fit on 
-the screen. The screen size though is not adapted automatically. So if you need this you 
-have to do it yourself, using the following functions:
+Nota che la dimensione dell'immagine che vedi sullo schermo è basata sulle view visibili
+all'inizio della room. Se cambi le view durante il gioco, potrebbero non entrare più. Tuttavia
+la dimensione dello schermo non verrà adattata automaticamente, quindi se ne avrai bisogno dovrai
+fartelo da solo usando le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>window_set_region_size(w,h,adaptwindow)</b></tt> 
-  	Set the width and height of the drawing region in the window. 
-	<tt>adaptwindow</tt> indicates whether the window size must be adapted 
-	if the region does not fit in. The window size will always be
-	adapted if you use fixed scaling. (See the function
-	<tt>window_set_region_scale()</tt>.)<br>
+    Imposta lunghezza e altezza della regione di disegno della finestra. <tt>adaptwindow</tt> indica
+        se la dimensione della finestra deve essere adattata se la regione non c'entra (metti true
+        per farglielo fare). La dimensione della finestra verrà sempre adattata se usi la scala fissa.
+        (Vedi la funzione <tt>window_set_region_scale()</tt>: se hai impostato un numero negativo
+        vuol dire che usi la scala fissa.)<br>
   <tt><b>window_get_region_width()</b></tt> 
-  	Returns the current width of the drawing region.<br>
+    Restituisce la lunghezza attuale della regione di disegno.<br>
   <tt><b>window_get_region_height()</b></tt> 
-  	Returns the current height of the drawing region.<br>
+    Restituisce l'altezza attuale della regione di disegno.<br>
 </blockquote>
 
 <p>
 
-In a game you often need the position of the mouse cursor. Normally you use 
-for this the variables <tt>mouse_x</tt> and <tt>mouse_y</tt>. When there are multiple views, 
-these variables give the mouse position with respect to the view the mouse 
-is in. Sometimes though, you might need the mouse position with respect to 
-a particular view, also when it is outside that view. For this the 
-following functions exist.
+In un gioco hai spesso bisogno di sapere la posizione del cursore del mouse. Di solito usi le variabili
+<tt>mouse_x</tt> e <tt>mouse_y</tt> a questo scopo. Quando usi più view, queste variabili ti danno la
+posizione delmouse rispetto alla view in cui si trova. Tuttavia, a volte potresti voler sapere la
+posizione del mouse rispetto a una view particolare, anche quando è fuori da quella view. Per farlo
+esistono le seguenti funzioni (dove l'id della view è il suo numero, compreso tra 0 e 7).
 
 <p>
 <blockquote>
   <tt><b>window_view_mouse_get_x(id)</b></tt> 
-	Returns the x-coordinate of the mouse with respect to the view with index id.<br>
+    Restituisce l'ascissa del mouse rispetto alla view con indice id.<br>
   <tt><b>window_view_mouse_get_y(id)</b></tt> 
-   Returns the y-coordinate of the mouse with respect to the view with index id.<br>
+    Restituisce l'ordinata del mouse rispetto alla view con indice id.<br>
   <tt><b>window_view_mouse_set(id,x,y)</b></tt>
-   Sets the position of the mouse with respect to the view with index id.<br>
+    Imposta la posizione del mouse rispetto alla view con indice id.<br>
   <tt><b>window_views_mouse_get_x()</b></tt> 
-    Returns the x-coordinate of the mouse with respect to the view it is in 
-	(same as <tt>mouse_x</tt>).<br>
+    Restituisce l'ascissa del mouse rispetto alla view in cui si trova (uguale a <tt>mouse_x</tt>).<br>
   <tt><b>window_views_mouse_get_y()</b></tt> 
-   Returns the y-coordinate of the mouse with respect to the view it is in 
-   (same as <tt>mouse_y</tt>).<br>
+    Restituisce l'ordinata del mouse rispetto alla view in cui si trova (uguale a <tt>mouse_y</tt>).<br>
   <tt><b>window_views_mouse_set(x,y)</b></tt> 
-   Sets the position of the mouse with respect to the first view that is visible.
+    Imposta la posizione del mouse rispetto alla prima view visibile.
 </blockquote>
 
 <p>
@@ -150,6 +142,11 @@ views
 view variables
 view orientation
 rotated views
+
+view
+view, variabili
+orientamento delle view
+view ruotate
 
 view_enabled
 view_current
