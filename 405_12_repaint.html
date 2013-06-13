@@ -11,19 +11,18 @@
 
 <h3>Ridisegnare la Schermata</h3>
 
-Normally at the end of each step the room is repainted on the screen. But in rare 
-circumstances you need to repaint the room at other moments. This happens when your 
-program takes over the control. For example, before sleeping a long time a repaint might 
-be wanted. Also, when your code displays a message and wants to wait for the player to 
-press a key, you need a repaint in between. There are two different routines to do this.
+Normalmente alla fine di ogni step la room viene ridisegnata sullo schermo. Tuttavia in rare
+occasioni avrai bisogno di ridisegnare la room in altri momenti. Questo serve quando il tuo
+programma prende il controllo. Ad esempio, prima di fermare il gioco per un lungo tempo vorrai
+ridisegnare la room. Ne hai bisogno anche quando il tuo codice mostra un messaggio al giocatore.
+Ci sono due funzioni per farlo.
 
 <p>
 <blockquote>
   <tt><b>screen_redraw()</b></tt> 
-  	Redraws the room by calling all draw events.<br>
+    Ridisegna la room chiamando tutti i Draw Event.<br>
   <tt><b>screen_refresh()</b></tt> 
-  	Refreshes the screen using the current room image (not 
-	performing drawing events).<br>
+    ridisegna la room usando l'immagine corrente (senza eseguire i Draw Event).<br>
 </blockquote>
 
 <!--Non so quanto bene potrò tradurre i prossimi due paragrafi, magari durante la revisione
