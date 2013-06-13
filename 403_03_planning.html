@@ -46,7 +46,7 @@ They correspond to the motion planning actions that are also available:
     This function lets the instance take a step straight towards the indicated
     	indicata (x,y). La dimensione del passo (dello spostamento) è indicata da <TT>stepsize</TT> (dimensione del passo).
 	position (x,y). The size of the step is indicated by the <TT>stepsize</TT>.
-	Se l'istanza si trova già nella posizione non si sposterà uteriormente.
+	Se l'istanza si trova già nella posizione non si sposterà ulteriormente.
 	If the instance is already at the position it will not move any further.
 	Se <TT>checkall</TT> (controllare tutto) assume il valore di vero (true) l'istanza si fermerà quando urti <!(incontri/trovi)> un'istanza
 	If <TT>checkall</TT> is true the instance will stop when it hits an instance
@@ -194,7 +194,7 @@ were also used for the step functions.
     This function computes a path for the instance from its current position
  	e dal suo orientamento alla posizione (xg,yg) usando la dimensione del passo (step) indicata
 	and orientation to the position (xg,yg) using the indicated step size
-	cercando di evitare collisioni con gli ostacoli. Essa usa i (potential field steps ???)<!possibili passaggi di campo>,
+	cercando di evitare collisioni con gli ostacoli. Essa usa i (possibili passi nel campo d'azione???) <!potential field steps???>,
 	trying to avoid collision with obstacles. It uses potential field steps,
 	come nella funzione <TT>mp_potential_step()</TT> e anche i parametri
 	like in the function <TT>mp_potential_step()</TT> and also the parameters
@@ -226,41 +226,71 @@ were also used for the step functions.
 </blockquote>
 
 <p>
-The other functions use a much more complex mechanism using a grid-based 
-approach (sometimes called an A* algorithm). It will be more successful 
-in finding paths (although it still might fail) and will find shorter paths 
-but it required more work on your side. The global idea is as follows. 
-First of all we put a grid on (the relevant part of) the room. You can 
-choose to use a fine grid (which will be slower) or a coarse grid. Next, 
-for all relevant objects we determine the grid cells they overlap (either 
+Le altre funzioni utilizzano un meccanismo un pò più complesso usando un approccio
+The other functions use a much more complex mechanism using a grid-based
+basato su griglia (a volte chiamato un algoritmo A*). Esso avrà più successo
+approach (sometimes called an A* algorithm). It will be more successful
+nel trovare percorsi (anche se ancora potrebbe fallire) e troverà percorsi più corti
+in finding paths (although it still might fail) and will find shorter paths
+ma esso richiede più lavoro da parte tua. L'idea globale è quella che segue.
+but it required more work on your side. The global idea is as follows.
+Prima di tutto noi mettiamo una griglia sulla (parte rilevante della) stanza (room). Puoi 
+First of all we put a grid on (the relevant part of) the room. You can
+scegliere di usare una griglia fine (che sarà più lenta) o una griglia grossolana. Poi, 
+choose to use a fine grid (which will be slower) or a coarse grid. Next,
+per tutti gli oggetti rilevanti determiniamo le celle della griglia che essi occupino (o 
+for all relevant objects we determine the grid cells they overlap (either
+utilizzando i riquadri <!bounding box> oppure il cotrollo preciso <!precise checking>) e contrassegnamo queste celle come
 using bounding boxes or precise checking) and mark these cells as being 
-forbidden. So a cell will be marked totally forbidden, even if it only 
-partially overlaps with an obstacle. Finally we specify a start and a goal 
-position (which must lie in free cells) and the function computes the 
+vietate. Così una cella sarà segnata come completamente vietata, anche se si sovrappone 
+forbidden. So a cell will be marked totally forbidden, even if it only
+solo parzialmente ad un ostacolo. Infine specifichiamo un punto d'inizio e una posizione
+partially overlaps with an obstacle. Finally we specify a start and a goal
+meta (che deve trovarsi in celle libere) e la funzione computa il 
+position (which must lie in free cells) and the function computes the
+percorso più breve (effettivamente vicino al più corto) tra questi. Il percorso
 shortest path (actually close to the shortest) between these. The path 
+andrà tra i centri delle celle libere. Così se le celle sono grandi abbastanza
 will run between centers of free cells. So if the cells are large enough 
+da fare in modo che l'istanza posizionata nel loro centro andrà completamente all'interno
 so that the instance placed at its center will lie completely inside 
-it this will be successful. This path you can now give to an instance 
+questo avrà successo. Questo percorso adesso puoi fornirlo da seguire ad
+it this will be successful. This path you can now give to an instance
+ad un'istanza.
 to follow.
 
 <P>
-The grid-based approach is very powerful (and is used in many professional 
-games) but it requires that you do some careful thinking. You must determine 
+L'approccio basato su griglia è molto potente (ed è usato in molti giochi
+The grid-based approach is very powerful (and is used in many professional
+professionali) ma esso richiede che tu faccia alcune attente riflessioni. Devi determinare
+games) but it requires that you do some careful thinking. You must determine
+quale area e quale dimensione delle celle siano abbastanza buone per risolvere il gioco. Inoltre devi
 which area and cell size are good enough for solving the game. Also you must 
+determinare quali oggetti debbano essere evitati e se il controllo preciso (precise checking) sia
 determine which objects must be avoided and whether precise checking is 
+importante. Tutti questi parametri influenzano fortemente l'efficienza dell'approccio.
 important. All these parameters strongly influence the efficiency of the approach. 
 
 <P>
-In particular the size of the cells is crucial. Remember that the cells 
+In particolare la dimensione delle celle è cruciale. Ricorda che le celle
+In particular the size of the cells is crucial. Remember that the cells
+devono essere larghe abbastanza da fare in modo che l'oggetto in movimento posizionato con l'origine
 must be large enough so that the moving object placed with its origin 
+al centro della cella vada completamente all'interno della cella stessa. (Fai attenzione 
 on the center of a cell must lie completely inside the cell. (Be careful 
+alla posizione dell'origine dell'oggetto. Inoltre ricorda che puoi 
 about the position of the origin of the object. Also realize that you can 
+spostare il percorso se l'origine dell'oggetto non si trova nel suo centro!) D'altra parte,
 shift the path if the origin of the object is not in its center!) On the 
+più piccole le celle più possibili percorsi esistono. Se 
 other hand, the smaller the cells the more possible paths exist. If you 
-make cells too large, openings between obstacles may get closed because 
+rendi le celle troppo grandi, aperture tra gli ostacoli potrebbero rimanere chiuse perchè
+make cells too large, openings between obstacles may get closed because
+tutte le celle intersecano un ostacolo.
 all cells intersect an obstacle.
 
 <p>
+Le attuali funzioni per l'approccio basato sulla griglia sono le seguenti:
 The actual functions for the grid-based approach are as follows:
 
 <p>
