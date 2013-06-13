@@ -280,7 +280,7 @@ al centro della cella vada completamente all'interno della cella stessa. (Fai at
 on the center of a cell must lie completely inside the cell. (Be careful 
 alla posizione dell'origine dell'oggetto. Inoltre ricorda che puoi 
 about the position of the origin of the object. Also realize that you can 
-spostare il percorso se l'origine dell'oggetto non si trova nel suo centro!) D'altra parte,
+spostare il percorso se l'origine dell'oggetto non si trova nel <!al> suo centro!) D'altra parte,
 shift the path if the origin of the object is not in its center!) On the 
 più piccole le celle più possibili percorsi esistono. Se 
 other hand, the smaller the cells the more possible paths exist. If you 
@@ -296,41 +296,68 @@ The actual functions for the grid-based approach are as follows:
 <p>
 <blockquote>
   <tt><b>mp_grid_create(left,top,hcells,vcells,cellwidth,cellheight)</b></tt>
+    Questa funzione crea la griglia. Essa restituisce un indice che deve essere usato in 
     This function creates the grid. It returns an index that must be used in 
+    	tutte le altre chiamate. Puoi creare e mantenere più strutture di griglia allo
 	all other calls. You can create and maintain multiple grid structures at 
+	stesso tempo. left (sinistra) e top (sopra) indicano la posizione dell'angolo in alto a sinistra
 	the same moment. left and top indicate the position of the top-left corner 
+	della griglia. hcells e vcells indicano il numero delle celle orizzontali e 
 	of the grid. hcells and vcells indicate the number of horizontal and vertical 
+	verticali. Infine cellwidth (larghezza della cella) e cellheight (altezza della cella) indicano la dimensione delle celle.<br>
 	cells. Finally cellwidth and cellheight indicate the size of the cells.<br>
   <tt><b>mp_grid_destroy(id)</b></tt>
+    Distrugge la struttura di griglia e libera la memoria che occupava. Non dimenticarti
     Destroys the indicated grid structure and frees its memory. Don't forget to 
+    	di chiamarla se non necessiti più della struttura.<br>
 	call this if you don't need the structure anymore.<br>
   <tt><b>mp_grid_clear_all(id)</b></tt>
+    Segna tutte le celle della griglia come libere.<br>
     Mark all cells in the grid to be free.<br>
   <tt><b>mp_grid_clear_cell(id,h,v)</b></tt>
+    Libera la cella indicata. La cella 0,0 è la cella in alto a sinistra.<br>
     Clears the indicated cell. Cell 0,0 is the top left cell.<br>
   <tt><b>mp_grid_clear_rectangle(id,left,top,right,bottom)</b></tt>
+    Libera tutte le celle che intersecano il rettangolo indicato (in coordinate della stanza (room)).<br>
     Clears all cells that intersect the indicated rectangle (in room coordinates).<br>
   <tt><b>mp_grid_add_cell(id,h,v)</b></tt>
+    Segna la cella indicata come vietata. La cella 0,0 è la cella in alto a sinistra.<br>
     Marks the indicated cell as being forbidden. Cell 0,0 is the top left cell.<br>
   <tt><b>mp_grid_add_rectangle(id,left,top,right,bottom)</b></tt>
+    Segna tutte le celle che intersecano il rettangolo indicato come vietate.<br>
     Marks all cells that intersect the indicated rectangle as being forbidden.<br>
-  <tt><b>mp_grid_add_instances(id,obj,prec)</b></tt> 
+  <tt><b>mp_grid_add_instances(id,obj,prec)</b></tt>
+    Segna tutte le celle che intersecano un istanza dell'oggetto indicato come
     Marks all cells that intersect an instance of the indicated object as 
-	being forbidden. You can also use an individual instance by making obj 
+    	vietate. Puoi anche usare un istanza individuale rendendo obj
+	being forbidden. You can also use an individual instance by making obj
+	l'identificativo (id) dell'istanza. Inoltre puoi usare la parola chiave <TT><B>all</b></tt>
 	the id of the instance. Also you can use the keyword <TT><B>all</b></tt>
+    per indicare tutte le istanze di tutti gli oggetti. prec indica se debba essere
     to indicate all instances of all objects. prec indicates whether precise 
+    usato il controllo preciso (precise checking) (funzionerà soltanto se il controllo preciso 
     collision checking must be used (will only work if precise checking is 
+    è abilitato per lo sprite usato dall'istanza).<br>
     enabled for the sprite used by the instance).<br>
   <tt><b>mp_grid_path(id,path,xstart,ystart,xgoal,ygoal,allowdiag)</b></tt>
+    Computa un percorso attraverso la griglia. path (percorso) deve indicare un percorso esistente che
     Computes a path through the grid. path must indicate an existing path that 
+    	verrà sostituito dal percorso computato. xstart e ystart indicano il punto d'inizio
 	will be replaced by the computer path. xstart and ystart indicate the start 
+	del percorso e xgoal e ygoal la meta. allowdiag indica se
 	of the path and xgoal and ygoal the goal. allowdiag indicates whether 
+	sono consentiti movimenti diagonali invece dei soli orizzontali o verticali. La
 	diagonal moves are allowed instead of just horizontal or vertical. The 
+	funzione restituisce se è riuscita a trovare un percorso. (Nota che il 
 	function returns whether it succeeded in finding a path. (Note that the 
+	percorso è indipendente dalla corrente istanza; Esso è un percorso attraverso la 
 	path is independent of the current instance; It is a path through the g
+	griglia, non un percorso per una specifica istanza.) <br>
 	rid, not a path for a specific instance.) <br>
   <tt><b>mp_grid_draw(id)</b></tt>
+    Questa funzione disegna la griglia con le celle libere verdi e le celle vietate  
     This function draws the grid with green cells being free and red cells being
+    	rosse. Questa funzione è lenta ed è fornita solo come strumento per rilevare errori (debug).<br>
 	forbidden. This function is  slow and only provided as a debug tool.<br>
 </blockquote>
 
@@ -365,4 +392,11 @@ mp_grid_add_instances()
 mp_grid_path()
 mp_grid_draw()
 
+
+movimento pianificato
+
+<!moto pianificato>
+
+algoritmo di A*
+ricerca dei percorsi
 --> 
