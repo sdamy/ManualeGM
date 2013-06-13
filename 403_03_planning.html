@@ -59,7 +59,7 @@ They correspond to the motion planning actions that are also available:
 	posizione meta (obbiettivo).<br>
 	was reached.<br>
   <tt><b>mp_linear_step_object(x,y,stepsize,obj)</b></tt>
-    Stesso della funzione precedente <!(sopra)> ma questa volta soltanto le istanze di <tt>obj</tt> sono
+    Come la funzione sopra ma questa volta soltanto le istanze di <tt>obj</tt> sono
     Same as the function above but this time only instances of <tt>obj</tt> are
     	considerate come ostacoli. <tt>obj</tt> può essere un oggetto o l'identificativo (id) di un'istanza.<br>
 	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>
@@ -79,7 +79,7 @@ They correspond to the motion planning actions that are also available:
 	se sia stata raggiunta o meno la meta <!(se l'obbiettivo sia stato raggiunto o meno)>'.<br>
 	whether or not the goal was reached.<br>
   <tt><b>mp_potential_step_object(x,y,stepsize,obj)</b></tt>
-    Stesso della funzione precedente <!(sopra)> ma questa volta soltanto le istanze di <tt>obj</tt> sono
+    Come la funzione sopra ma questa volta soltanto le istanze di <tt>obj</tt> sono
     Same as the function above but this time only instances of <tt>obj</tt> are
     	considerate come ostacoli. <tt>obj</tt> può essere un oggetto o l'identificativo (id) di un'istanza.<br>
 	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>
@@ -355,9 +355,9 @@ The actual functions for the grid-based approach are as follows:
 	griglia, non un percorso per una specifica istanza.) <br>
 	rid, not a path for a specific instance.) <br>
   <tt><b>mp_grid_draw(id)</b></tt>
-    Questa funzione disegna la griglia con le celle libere verdi e le celle vietate  
+    Questa funzione disegna la griglia con le celle libere di colore verde e le celle vietate di colore 
     This function draws the grid with green cells being free and red cells being
-    	rosse. Questa funzione è lenta ed è fornita solo come strumento per rilevare errori (debug).<br>
+    	rosso. Questa funzione è lenta ed è fornita solo come strumento per rilevare errori (debug).<br>
 	forbidden. This function is  slow and only provided as a debug tool.<br>
 </blockquote>
 
