@@ -16,20 +16,20 @@
 <p>
 Gli effetti sonori possono essere utilizzati per cambiare il mondo in cui i suoni e le musiche di sfondo suonano.
 Sappi che gli effetti sonori si applicano solo ai file wave e midi, non agli mp3. Questa sezione descrive
-the functions that exist for using and changing sound effects. Realize that to use these 
-functions you need to have a good understanding of how sound and synthesizers work. No explanation
-of the different parameters is given here. Search the web or books for further informations.
+le funzioni che esistono per usare e per cambiare gli effetti sonori. Sappi che per usare queste funzioni
+hai bisogno di conoscere bene il modo in cui il suono e i sintetizzatori funzionano.
+Non verrà data nessuna spiegazione dei vari parametri. Cerca su Internet o sui libri per altre informazioni.
 
 
 <p>
-To apply a sound effect to a particular sound you can either indicate this when defining the
-sound resource or you can use the following function
+Per applicare un effetto sonoro a un particolare suono puoi indicarlo quando definisci
+la risorsa del suono, oppure puoi usare le seguenti funzioni
 
 <p>
 <blockquote>
   <tt><b>sound_effect_set(snd,effect)</b></tt> 
-    Sets a (combination of) sound effect(s) for the indicated sound. <tt>effect</tt> can
-	be any of the following values: 
+	Imposta un effetto sonoro (o una combinazione di questi) per il suono indicato. <tt>effect</tt> può
+	essere qualunque fra questi valori:
 	<blockquote>
       <tt><b>se_none</b></tt><br> 
       <tt><b>se_chorus</b></tt><br> 
@@ -40,109 +40,109 @@ sound resource or you can use the following function
       <tt><b>se_compressor</b></tt><br> 
       <tt><b>se_equalizer</b></tt><br> 
 	</blockquote>
-	You can set a combination of effects by adding up the values. So e.g. you can use 
+	Puoi impostare una combinazione di effetti aggiungendo i valori. Quindi, per esempio, puoi usare
 <p>
 <pre>
 sound_effect_set(snd,se_echo+se_reverb);
 </pre>
 	<p>
-	to get a combination of echo and reverb effects.<br>
+	per ottenere una combinazione degli effetti echo e reverb.<br>
 </blockquote>
 
 <p>
-All effects have some default settings. You can change these settings once an effect has been applied
-to a sound. The order here is crucial. You first apply the effect to the sound and next set the
-parameters for it. Once you reapply effects to the sound, the settings are gone and you have to
-set them again. Note that all parameters must lie in a particular range, which is indicated
-below. The following functions exist for changing effect parameters:
+Tutti gli effetti possiedono un'impostazione predefinito. Puoi cambiare queste impostazioni una volte che l'effetto è stato applicato
+a un suono. L'ordine qui è cruciale. Prima applichi l'effetto al suono e in seguito 
+imposti i suoi parametri. Una volta riapplicati gli effetti al suono, le impostazioni vengono perse e devi
+reimpostarle. Nota che tutti i parametri devono essere compresi in un certo intervallo, che è indicato
+sotto. Le seguenti funzioni esistono per cambiare i parametri degli effetti:
 
 <p>
 <blockquote>
   <tt><b>sound_effect_chorus(snd,wetdry,depth,feedback,frequency,wave,delay,phase)</b></tt> 
-    Sets the parameters for the chorus effect for the indicated sound. The following
-	parameters can be set: 
+	Imposta i parametri per l'effetto chorus del suono indicato. I seguenti
+	parametri possono essere impostati:
 		<blockquote>
-		<tt>wetdry</tt> Ratio of wet (processed) signal to dry (unprocessed) signal. 
-		  (range: 0 to 100, default 50)<br>
-		<tt>depth</tt> Percentage by which the delay time is modulated by the low-frequency oscillator, 
-		  in hundredths of a percentage point. (range: 0 to 100, default 25)<br>
-		<tt>feedback</tt> Percentage of output signal to feed back into the effect's input.
-		  (range: -99 to 99, default 0)<br>
-		<tt>frequency</tt> Frequency of the LFO. (range: 0 to 10, default 0)<br>
-		<tt>wave</tt> Waveform of the LFO. (0 = triangle, 1 = wave, default 1)<br>
-		<tt>delay</tt> Number of milliseconds the input is delayed before it is played back.
-		  (range: 0 to 20, default 0)<br>
-		<tt>phase</tt> Phase differential between left and right LFOs.
-		  (range: 0 to 4, default 2)<br>
+		<tt>wetdry</tt> Rapporto tra il segnale wet (processato) e quello dry (non processato).
+		(intervallo: da 0 a 100, predefinito 50)<br>
+		<tt>depth</tt> Percentuale con cui il tempo di ritardo è modulato dall'oscillatore a bassa frequenza,
+		in centesimi di un punto di percentuale. (intervallo: da 0 a 100, predefinito 25)<br>
+		<tt>feedback</tt> Percentuale della quantità di segnale in uscita da confluire all'entrata dell'effetto.
+		(intervallo: da -99 a 99, predefinito 0)<br>
+		<tt>frequency</tt> Frequenza dell'LFO. (intervallo: da 0 a 10, predefinito 0)<br>
+		<tt>wave</tt> Forma d'onda dell'LFO. (0 = triangolo, 1 = onda, predefinito 1)<br>
+		<tt>delay</tt> Numero di millisecondi da aspettare prima che l'input venga riascoltato.
+		(intervallo: da 0 a 20, predefinito 0)<br>
+		<tt>phase</tt> Fase differenziale tra l'LFO sinistro e destro.
+		(da 0 a 4, predefinito 2)<br>
 		</blockquote> 
   <tt><b>sound_effect_echo(snd,wetdry,feedback,leftdelay,rightdelay,pandelay)</b></tt> 
-    Sets the parameters for the echo effect for the indicated sound. The following
-	parameters can be set: 
+	Imposta i parmaetri per l'effetto echo per il suono indicato. I seguenti
+	parametri possono essere impostati:
 		<blockquote>
-		<tt>wetdry</tt> Ratio of wet (processed) signal to dry (unprocessed) signal. 
-		  (range: 0 to 100, default 50)<br>
-		<tt>feedback</tt> Percentage fed back into input (range: 0 to 100, default 0)<br>
-		<tt>leftdelay</tt> Delay for left channel, in milliseconds. (range: 1 to 2000, default 333)<br>
-		<tt>rightdelay</tt> Delay for right channel, in milliseconds. (range: 1 to 2000, default 333)<br>
-		<tt>pandelay</tt> Whether to swap left and right delays with each successive echo. 
-		  (0 = don't swap, 1 = swap, default 0)<br>
+		<tt>wetdry</tt> Rapporto tra il segnale wet (processato) e il segnale dry (non processato).
+		(da 0 a 100, predefinito 50)<br>
+		<tt>feedback</tt> Percentuale da confluire all'input (da 0 a 100, predefinito 0)<br>
+		<tt>leftdelay</tt> Ritardo per il canale sinistro, in millisecondi (da 1 a 2000, predefinito 333)<br>
+		<tt>rightdelay</tt> Ritardo per il canale destro, in millisecondi. (da 1 a 2000, predefinito 333)<br>
+		<tt>pandelay</tt> Se invertire i ritardi sinistro e destro per ogni effetto echo successivo.
+		(0 = non invertire, 1 = invertire, predefinito 0)<br>
 		</blockquote> 
   <tt><b>sound_effect_flanger(snd,wetdry,depth,feedback,frequency,wave,delay,phase)</b></tt> 
-    Sets the parameters for the flanger effect for the indicated sound. The following
-	parameters can be set: 
+	Imposta i parametri per l'effetto flanger del suono indicato. Possono essere impostati
+	i seguenti parametri:
 		<blockquote>
-		<tt>wetdry</tt> Ratio of wet (processed) signal to dry (unprocessed) signal. 
-		  (range: 0 to 100, default 50)<br>
-		<tt>depth</tt> Percentage by which the delay time is modulated by the low-frequency oscillator, 
-		  in hundredths of a percentage point. (range: 0 to 100, default 25)<br>
-		<tt>feedback</tt> Percentage of output signal to feed back into the effect's input.
-		  (range: -99 to 99, default 0)<br>
-		<tt>frequency</tt> Frequency of the LFO. (range: 0 to 10, default 0)<br>
-		<tt>wave</tt> Waveform of the LFO. (0 = triangle, 1 = wave, default 1)<br>
-		<tt>delay</tt> Number of milliseconds the input is delayed before it is played back.
-		  (range: 0 to 20, default 0)<br>
-		<tt>phase</tt> Phase differential between left and right LFOs.
-		  (range: 0 to 4, default 2)<br>
+		<tt>wetdry</tt> Rapporto tra il segnale wet (processato) e il segnale dry (non processato).
+		(da 0 a 100, predefinito 50)<br>
+		<tt>depth</tt> Percentuale con cui il tempo di ritardo è modulato dall'oscillatore a bassa frequenza,
+		  in centinesimi per punto di percentuale. (intervallo: da 0 a 100, predefinito 25)<br>
+		<tt>feedback</tt> Percentuale della quantità di segnale in uscita da confluire al segnale in entrata.
+		(intevallo: da -99 a 99, predefinito 0)<br>
+		<tt>frequency</tt> Frequenza dell'LFO. (da 0 a 10, predefinito 0)<br>
+		<tt>wave</tt> Forma d'onda dell'LFO. (0 = triangolo, 1 = onda, predefinito 1)<br>
+		<tt>delay</tt> Numero di millisecondi da aspettare prima che l'input venga riascoltato.
+		(intervallo: da 0 a 20, predefinito 0)<br>
+		<tt>phase</tt> Fase differenziale tra l'LFO sinistro e destro.
+		(intervallo: da 0 a 4, predefinito 2)<br>
 		</blockquote> 
   <tt><b>sound_effect_gargle(snd,rate,wave)</b></tt> 
-    Sets the parameters for the gargle effect for the indicated sound. The following
-	parameters can be set: 
+	Imposta i parametri per l'effetto gargle del suono indicato. Possono essere impostati
+	i seguenti parametri:
 		<blockquote>
-		<tt>rate</tt> Rate of modulation, in Hertz. 
-		  (range: 1 to 1000, default 1)<br>
-		<tt>wave</tt> Shape of the modulation wave. (0 = triangle, 1 = square, default 0)<br>
+		<tt>rate</tt> Tasso di modulazione, in Hertz.
+		(da 1 a 1000, predefinito 1)<br>
+		<tt>wave</tt> Forma dell'onda di modulazione. (0 = triangolo, 1 = quadrato, predefinito 0)<br>
 		</blockquote> 
   <tt><b>sound_effect_reverb(snd,gain,mix,time,ratio)</b></tt> 
-    Sets the parameters for the reverb effect for the indicated sound. The following
-	parameters can be set: 
+	Imposta i parametri per l'effetto reverb per il suono indicato. Possono essere impostati
+	i seguenti parametri:
 		<blockquote>
-		<tt>gain</tt> Input gain of signal, in decibels (dB). (range: -96 to 0, default 0)<br>
-		<tt>mix</tt> Reverb mix, in dB. (range: -96 to 0, default 0)<br>
-		<tt>time</tt> Reverb time, in milliseconds. (range: 0.001 to 3000, default 1000)<br>
-		<tt>ratio</tt> Frequency ratio. (range: 0.001 to 0.999, default 0.001)<br>
+		<tt>gain</tt> Aumento in input del segnale, in decibel (dB). (da -96 a 0, predefinito 0)<br>
+		<tt>mix</tt> Mescolamento del reverb, in dB. (da -96 a 0, predefinito 0)<br>
+		<tt>time</tt> Tempo di reverb, in millisecondi. (da 0.001 a 3000, predefinito 1000)<br>
+		<tt>ratio</tt> Rapporto della frequenza. (da 0.001 a 0.999, predefinito 0.001)<br>
 		</blockquote> 
   <tt><b>sound_effect_compressor(snd,gain,attack,release,threshold,ratio,delay)</b></tt> 
-    Sets the parameters for the compressor effect for the indicated sound. The following
-	parameters can be set: 
+Imposta i parametri per l'effetto compressor del suono indicato. Possono essere impostati
+	i seguenti parametri:
 		<blockquote>
-		<tt>gain</tt> Output gain of signal after compression. (range: -60 to 60, default 0)<br>
-		<tt>attack</tt> Time before compression reaches its full value. 
-		  (range: 0.01 to 500, default 0.01)<br>
-		<tt>release</tt> Speed at which compression is stopped after input drops below threshold. 
-		  (range: 50 to 3000, default 50)<br>
-		<tt>threshold</tt> Point at which compression begins, in decibels. 
-		  (range: -60 to 0, default -10)<br>
-		<tt>ratio</tt> Compression ratio. (range: 1 to 100, default 10)<br>
-		<tt>delay</tt> Time after threshold is reached before attack phase is started, 
-		  in milliseconds. (range: 0 to 4, default 0)<br>
+		<tt>gain</tt> Aumento in output del segnale dopo la compressione. (da -60 a 60, predefinito 0)<br>
+		<tt>attack</tt> Tempo prima che la compressione raggiunga il suo valore massimo.
+		(da 0.01 a 500, predefinito 0.01)<br>
+		<tt>release</tt> Velocità con la quale la compressione viene interrotta dopo che l'input scenda sotto al limite.
+		(intervallo: da 50 a 3000, predefinito 50)<br>
+		<tt>threshold</tt> Punto al quale la compressione inizia, in decibel.
+		(da -60 a 0, predefinito -10)<br>
+		<tt>ratio</tt> Rapporto di compressione (da 1 a 100, predefinito 10)<br>
+		<tt>delay</tt> Tempo dopo il quale il limite è raggiunto prima che l'attack phase inizi,
+		in millisecondi. (da 0 a 4, predefinito 0)<br>
 		</blockquote> 
   <tt><b>sound_effect_equalizer(snd,center,bandwidth,gain)</b></tt> 
-    Sets the parameters for the equalizer effect for the indicated sound. The following
-	parameters can be set: 
+	Imposta i parametri per l'effetto equalizer per il suono indicato. Possono essere impostati
+	i seguenti parametri:
 		<blockquote>
-		<tt>center</tt> Center frequency, in hertz. (range: 80 to 16000)<br>		
-		<tt>bandwidth</tt> Bandwidth, in semitones. (range: 1 to 36)<br>
-		<tt>gain</tt> Gain. (range: -15 to 15)<br>
+		<tt>center</tt> Frequenza centrale, in Hertz. (da 80 a 16000)<br>
+		<tt>bandwidth</tt> Ampiezza di banda, in semitoni. (da 1 a 36)<br>
+		<tt>gain</tt> Aumento. (intervallo: -15 a 15)<br>
 		</blockquote> 
 </blockquote>
   
@@ -160,6 +160,8 @@ gargle
 reverb
 compressor
 equalizer
+
+effetti sonori
 
 se_none
 se_chorus
