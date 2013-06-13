@@ -22,34 +22,34 @@ Ci sono due funzioni per farlo.
   <tt><b>screen_redraw()</b></tt> 
     Ridisegna la room chiamando tutti i Draw Event.<br>
   <tt><b>screen_refresh()</b></tt> 
-    ridisegna la room usando l'immagine corrente (senza eseguire i Draw Event).<br>
+    Ridisegna la room usando l'immagine corrente (senza eseguire i Draw Event).<br>
 </blockquote>
 
-<!--Non so quanto bene potrò tradurre i prossimi due paragrafi, magari durante la revisione
+<!--Non so quanto bene ho tradotto i prossimi due paragrafi, magari durante la revisione
 un esperto può suggerire una terminologia migliore.-->
 
 <p>
-To understand the second function, you will need to understand more fully how drawing 
-works internally. There is internally an image on which all drawing happens. This image is 
-not visible on the screen. Only at the end of a step, after all drawing has taken place, 
-is the screen image replaced by this internal image. (This is called double buffering.) 
-The first function redraws the internal image and then refreshes the screen image. The 
-second function only refreshes the image on the screen.
+Per poter comprendere la seconda funzione, devi capire completamente come funziona il disegno
+internamente. C'è un'immagine interna dove avviene tutto il disegno. Quest'immagine non è
+visibile sullo schermo. Solo alla fine di uno step, dopo che si è risolto tutto il disegno,
+quest'immagine interna viene mostrata a schermo. Questo si chiama "doppio buffer" (double
+buffering in inglese). La prima funzione ridisegna l'immagine interna <b>E</b> aggiorna lo
+schermo. La seconda invece aggiorna <b>SOLO</b> lo schermo.
 
 <P>
-Now you should also realize why you cannot use drawing actions or functions in other 
-events than drawing events. They will draw things on the internal image but these won't be 
-visible on the screen. And when the drawing events are performed, first the room 
-background is drawn, erasing all you drew on the internal image. But when you use <tt>
-screen_refresh()</tt> after your drawing, the updated image will become visible on the 
-screen. So, for example, a script can draw some text on the screen, call the refresh 
-function and then wait for the player to press a key, like in the following piece of code.
+Ora devi anche capire perché non puoi usare le azioni o le funzioni di disegno in eventi diversi
+dal Draw. Se lo fai, disegnerà quello che hai chiesto sull'immagine interna ma non lo renderà
+visibile sullo schermo. E quando verranno eseguiti i Draw Event, per prima cosa verrà ridisegnato
+lo sfondo della room, cancellando tutto quello che avevi disegnato nell'immagine interna. Ma se
+usi <tt>screen_refresh()</tt> subito dopo il tuo disegno, l'immagine aggiornata diventerà visibile
+sullo schermo. Quindi, per esempio, uno script può disegnare del testo a schermo, chiamare la
+funzione di aggiornamento e aspettare che il giocatore prema un tasto, come nel codice seguente.
 
 <p>
 <blockquote>
 <pre>
 {
-  draw_text(room_width/2,100,'Press any key to continue.');
+  draw_text(room_width/2,100,'Press any key to continue. - Premi un tasto qualsiasi per continuare.');
   screen_refresh();
   keyboard_wait();
 }
@@ -58,40 +58,42 @@ function and then wait for the player to press a key, like in the following piec
 
 <p>
 
-Please realize that, when you draw in another event than the drawing event, you draw 
-simply on the image, not in a view! So the coordinates you use are the same as if there 
-are no views.
-Be careful when using this technique. Make sure you understand it first and realize that 
-refreshing the screen takes some time.
+Capisci che, quando disegni in eventi diversi dal Draw, disegni semplicemente nell'immagine,
+non in una view! Quindi le coordinate vanno usate come se non ci fosse nessuna view.
+Fa' attenzione quando usi questa tecnica. Assicurati di capire prima come funziona e ricorda
+che ridisegnare lo schermo è un'operazione che ha bisogno di molto tempo.
 
 <p>
-When you are drawing the room yourself it can be useful to NOT let it be drawn automatic
-at all. For example, you might want to draw the room only every 5 steps. You can use the
-following functions for this:
+Quando ti disegni la room da solo può tornare utile EVITARE che venga ridisegnata automaticamente
+ad ogni step. Per esempio, vorrai ridisegnarla ogni 5 step. Per farlo puoi usare la seguente funzione:
 
 <p>
 <blockquote>
   <tt><b>set_automatic_draw(value)</b></tt> 
-  	Indicates whether to automatically redraw the room (true, default) or not (false).<br>
+    Imposta a true (predefinito) per attivare il disegno automatico della room, imposta a false per
+        disattivarlo.<br>
 </blockquote>
 
 <p>
-Finally there is a function with which you can set whether to synchronize the drawing with
-the refresh frequency of the monitor:
+Infine c'è una funzione con cui puoi decidere se sincronizzare il disegno con la frequenza d'aggiornamento
+del monitor o no:
 
 <p>
 <blockquote>
   <tt><b>set_synchronization(value)</b></tt> 
-  	Indicates whether to synchronize the drawing with the refresh frequency of the monitor.<br>
+     Imposta a true per sincronizzare il disegno con la frequenza d'aggiornamento del monitor,
+        imposta a false per far andare il disegno per conto suo.<br>
 </blockquote>
 
 <p>
-You can also force a wait for the next vertical synchronization using the following function:
+Puoi anche forzare un'attesa fino alla successiva sincronizzazione certicale del monitor con la
+seguente funzione:
 
 <p>
 <blockquote>
   <tt><b>screen_wait_vsync()</b></tt> 
-  	Waits for the next vertical synchronization of the monitor.<br>
+    Aspetta (bloccando il gioco <!--(o almeno così presumo)-->) fino alla prossima sincronizzazione
+        verticale del monitor.<br>
 </blockquote>
 
 <!--END-->
@@ -103,6 +105,11 @@ redrawing the screen
 refreshing the screen
 automatic drawing
 synchronization
+
+ridisegnare lo schermo
+aggiornare lo schermo
+disegno automatico
+sincronizzazione
 
 screen_redraw() 
 screen_refresh() 
