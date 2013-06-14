@@ -11,79 +11,49 @@
 <h3>Motion planning</h3>
 
 La pianificazione del movimento (Motion Planning) ti aiuta a muovere certe istanze da una data posizione
-Motion planning helps you to move certain instances from a given location
 ad una differente evitando collisioni con certe altre istanze
-to a different location while avoiding collisions with certain other instances
-(e.g. muri). La pianificazione del movimento (Motion Planning) rappresenta un problema. E' impossibile
-(e.g. walls). Motion planning is a difficult problem. It is impossible to
+(es. muri). La pianificazione del movimento (Motion Planning) rappresenta un problema. E' impossibile
 fornire funzioni generali che lavorino correttamente in tutte le circostanze. Inoltre,
-give general functions that will work properly in all situations. Also,
 calcolare movimenti liberi da collisioni è un'operazione che richiede tempo. Per questo devi
-computing collision free motions is a time-consuming operation. So you have
 prestare attenzione a come e quando la applichi. Per favore tieni a mente queste osservazioni quando
-be careful how and when you apply it. Please keep these remarks in mind when
 utilizzi una delle seguenti funzioni.
- you use any of the following functions. 
 
 <P>
 Vengono messe a disposizione differenti forme di pianificazione del movimento (Motion Planning) da <i>GameMaker</i>.
-Different forms of motion planning are provided by <i>GameMaker</i>.
 La forma più semplice consente ad un'istanza di fare un passo verso una particolare posizione
-The simplest form lets an instance take a step towards a particular goal
 obbiettivo, cercando di andare dritto se possibile ma prendendo una direzione differente
-position, trying to go straight if possible but taking a different direction
 se necessario <!(richiesto)>. Queste funzioni dovrebbero essere usate nell'evento passo (step) di un'istanza.
-if required. These functions should be used in the step event of an instance.
-<!Esse <!(queste)> sono le azioni di movimento pianificato (pianificazione del movimento) che sono inoltre disponibili:>
-<!Corrispondono ad azioni di movimento pianificato (pianificazione del movimento) che sono anche disponibili:>
-<!Corrispondono ad azioni di movimento pianificato che anche sono disponibili:>
-Corrispondono ad azioni di movimeto pianificato che sono inoltre disponibili:
-They correspond to the motion planning actions that are also available:
+Ecco la serie di funzioni disponibili per il motion planning:
 
 <p>
 <blockquote>
   <tt><b>mp_linear_step(x,y,stepsize,checkall)</b></tt>
     Questa funzione consente all'istanza di fare un passo dritto verso la posizione
-    This function lets the instance take a step straight towards the indicated
-    	indicata (x,y). La dimensione del passo (dello spostamento) è indicata da <TT>stepsize</TT> (dimensione del passo).
-	position (x,y). The size of the step is indicated by the <TT>stepsize</TT>.
+    indicata (x,y). La dimensione del passo (dello spostamento) è indicata da <TT>stepsize</TT> (dimensione del passo).
 	Se l'istanza si trova già nella posizione non si sposterà ulteriormente.
-	If the instance is already at the position it will not move any further.
 	Se <TT>checkall</TT> (controllare tutto) assume il valore di vero (true) l'istanza si fermerà quando urti <!(incontri/trovi)> un'istanza
-	If <TT>checkall</TT> is true the instance will stop when it hits an instance
 	di qualunque oggetto. Se <!(essa)> assume il valore di falso (false) si fermerà soltanto quando stia urtando un istanza solida (di tipo: solid).
-	of any object. If it is false it only stops when hitting a solid instance.
 	Nota che questa funzione non prova a fare deviazioni se incontra un ostacolo.
-	Note that this function does not try to make detours if it meets an obstacle.
 	Essa semplicemente fallirà. La funzione restituisce se sia stata o meno raggiunta la
-	It simply fails in that case. The function returns whether or not the goal position
 	posizione meta (obbiettivo).<br>
-	was reached.<br>
+	
   <tt><b>mp_linear_step_object(x,y,stepsize,obj)</b></tt>
-    Come la funzione sopra ma questa volta soltanto le istanze di <tt>obj</tt> sono
-    Same as the function above but this time only instances of <tt>obj</tt> are
+    Come la funzione sopra ma questa volta soltanto le istanze di <tt>obj</tt> sonoù
     	considerate come ostacoli. <tt>obj</tt> può essere un oggetto o l'identificativo (id) di un'istanza.<br>
-	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>
+		
   <tt><b>mp_potential_step(x,y,stepsize,checkall)</b></tt>
     Come la precedente funzione, questa consente all'istanza di fare un passo verso
-    Like the previous function, this function lets the instance take a step towards
     	una particolare posizione. Ma in questo caso essa prova ad evitare gli ostacoli. Quando 
-	a particular position. But in this case it tries to avoid obstacles. When the
 	l'istanza incontrasse un'istanza solida (solid) (o qualunque istanza quando 'checkall' assumesse il valore 'true')
-	instance would run into a solid instance (or any instance when checkall is true)
 	essa cambierà la direzione del movimento per tentare di evitare l'istanza e
-	it will change the direction of motion to try to avoid the instance and move
 	aggirarla. L'approccio non garantisce di funzionare <!(L'approccio non garantisce il successo)> ma in molti casi semplici esso
-	around it. The approach is not guaranteed to work but in most easy cases it
 	effettivamente muoverà l'istanza verso la meta (obbiettivo). La funzione restituisce
-	will effectively move the instance towards the goal. The function returns
 	se sia stata raggiunta o meno la meta <!(se l'obbiettivo sia stato raggiunto o meno)>'.<br>
-	whether or not the goal was reached.<br>
+	
   <tt><b>mp_potential_step_object(x,y,stepsize,obj)</b></tt>
     Come la funzione sopra ma questa volta soltanto le istanze di <tt>obj</tt> sono
-    Same as the function above but this time only instances of <tt>obj</tt> are
     	considerate come ostacoli. <tt>obj</tt> può essere un oggetto o l'identificativo (id) di un'istanza.<br>
-	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>
+		
   <tt><b>mp_potential_settings(maxrot,rotstep,ahead,onspot)</b></tt>
     La precedente funzione opera <!(svolge il suo compito / lavora)> usando un (certo) numero di parametri che possono
     The previous function does its work using a number of parameters that can
@@ -391,11 +361,12 @@ mp_grid_add_instances()
 mp_grid_path()
 mp_grid_draw()
 
-
+path finding
 movimento pianificato
 
 <!moto pianificato>
 
-algoritmo di A*
+algoritmo A*
+A star
 ricerca dei percorsi
 --> 
