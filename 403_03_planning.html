@@ -14,325 +14,233 @@ La pianificazione del movimento (Motion Planning) ti aiuta a muovere certe istan
 ad una differente evitando collisioni con certe altre istanze
 (es. muri). La pianificazione del movimento (Motion Planning) rappresenta un problema. E' impossibile
 fornire funzioni generali che lavorino correttamente in tutte le circostanze. Inoltre,
-calcolare movimenti liberi da collisioni &egrave; un'operazione che richiede tempo. Per questo devi
+calcolare movimenti liberi da collisioni è un'operazione che richiede tempo. Per questo devi
 prestare attenzione a come e quando la applichi. Per favore tieni a mente queste osservazioni quando
 utilizzi una delle seguenti funzioni.
 
 <P>
 Vengono messe a disposizione differenti forme di pianificazione del movimento (Motion Planning) da <i>GameMaker</i>.
-La forma pi&ugrave; semplice consente ad un'istanza di fare un passo verso una particolare posizione
+La forma più semplice consente ad un'istanza di fare un passo verso una particolare posizione
 obbiettivo, cercando di andare dritto se possibile ma prendendo una direzione differente
-se necessario <!(richiesto)>. Queste funzioni dovrebbero essere usate nell'evento passo (step) di un'istanza.
+se necessario. Queste funzioni dovrebbero essere usate nell'evento passo (step) di un'istanza.
 Ecco la serie di funzioni disponibili per il motion planning:
 
 <p>
 <blockquote>
   <tt><b>mp_linear_step(x,y,stepsize,checkall)</b></tt>
     Questa funzione consente all'istanza di fare un passo dritto verso la posizione
-    This function lets the instance take a step straight towards the indicated
-    	indicata (x,y). La dimensione del passo (dello spostamento) &egrave; indicata da <TT>stepsize</TT> (dimensione del passo).
-	position (x,y). The size of the step is indicated by the <TT>stepsize</TT>.
-	Se l'istanza si trova gi&agrave; nella posizione non si sposter&agrave; uteriormente.
-	If the instance is already at the position it will not move any further.
-	Se <TT>checkall</TT> (controllare tutto) assume il valore di vero (true) l'istanza si fermer&agrave; quando urti <!(incontri/trovi)> un'istanza
-	di qualunque oggetto. Se <!(essa)> assume il valore di falso (false) si fermer&agrave; soltanto quando stia urtando un istanza solida (di tipo: solid).
+    indicata (x,y). La dimensione del passo (dello spostamento) è indicata da <TT>stepsize</TT> (dimensione del passo).
+	Se l'istanza si trova già nella posizione non si sposterà ulteriormente.
+	Se <TT>checkall</TT> (controllare tutto) assume il valore di vero (true) l'istanza si fermerà quando urti <!(incontri/trovi)> un'istanza
+	di qualunque oggetto. Se <!(essa)> assume il valore di falso (false) si fermerà soltanto quando stia urtando un istanza solida (di tipo: solid).
 	Nota che questa funzione non prova a fare deviazioni se incontra un ostacolo.
-	Essa semplicemente fallir&agrave;. La funzione restituisce se sia stata o meno raggiunta la
+	Essa semplicemente fallirà. La funzione restituisce se sia stata o meno raggiunta la
 	posizione meta (obbiettivo).<br>
 	
   <tt><b>mp_linear_step_object(x,y,stepsize,obj)</b></tt>
-    Come la funzione sopra ma questa volta soltanto le istanze di <tt>obj</tt> sono&ugrave;
-    	considerate come ostacoli. <tt>obj</tt> pu&ograve; essere un oggetto o l'identificativo (id) di un'istanza.<br>
+    Come la funzione sopra ma questa volta soltanto le istanze di <tt>obj</tt> sonoù
+    	considerate come ostacoli. <tt>obj</tt> può essere un oggetto o l'identificativo (id) di un'istanza.<br>
 		
   <tt><b>mp_potential_step(x,y,stepsize,checkall)</b></tt>
     Come la precedente funzione, questa consente all'istanza di fare un passo verso
-    	una particolare posizione. Ma in questo caso essa prova ad evitare gli ostacoli. Quando 
+    una particolare posizione. Ma in questo caso essa prova ad evitare gli ostacoli. Quando 
 	l'istanza incontrasse un'istanza solida (solid) (o qualunque istanza quando 'checkall' assumesse il valore 'true')
-	essa cambier&agrave; la direzione del movimento per tentare di evitare l'istanza e
-	aggirarla. L'approccio non garantisce di funzionare <!(L'approccio non garantisce il successo)> ma in molti casi semplici esso
-	effettivamente muover&agrave; l'istanza verso la meta (obbiettivo). La funzione restituisce
-	se sia stata raggiunta o meno la meta <!(se l'obbiettivo sia stato raggiunto o meno)>'.<br>
+	essa cambierà la direzione del movimento per tentare di evitare l'istanza e
+	aggirarla. L'approccio non garantisce di funzionare ma in molti casi semplici esso
+	effettivamente muoverà l'istanza verso la meta (obbiettivo). La funzione restituisce
+	se sia stata raggiunta o meno la meta.<br>
 	
   <tt><b>mp_potential_step_object(x,y,stepsize,obj)</b></tt>
     Come la funzione sopra ma questa volta soltanto le istanze di <tt>obj</tt> sono
-    	considerate come ostacoli. <tt>obj</tt> pu&ograve; essere un oggetto o l'identificativo (id) di un'istanza.<br>
+    	considerate come ostacoli. <tt>obj</tt> può essere un oggetto o l'identificativo (id) di un'istanza.<br>
 		
   <tt><b>mp_potential_settings(maxrot,rotstep,ahead,onspot)</b></tt>
     La precedente funzione opera <!(svolge il suo compito / lavora)> usando un (certo) numero di parametri che possono
     The previous function does its work using a number of parameters that can
-    	essere cambiati usando questa funzione. Globalmente il metodo opera come segue <!( con il quale lavora &egrave; il seguente)>. Esso 
+    	essere cambiati usando questa funzione. Globalmente il metodo opera come segue <!( con il quale lavora è il seguente)>. Esso 
 	be changed using this function. Globally the method works as follows. It
 	prima prova a muovere dritto verso la meta (obbiettivo). Esso guarda avanti <!(Guarda in avanti)> di un numero di passi
 	first tries to move straight towards the goal. It looks a number of steps
-	che pu&ograve; essere impostato attraverso <!(con)> il parametro <TT>ahead</TT> (avanti) (valore predefinito: 3).
+	che può essere impostato attraverso <!(con)> il parametro <TT>ahead</TT> (avanti) (valore predefinito: 3).
 	ahead which can be set with the parameter <TT>ahead</TT> (default 3).
-	Ridurre questo valore comporter&agrave; che l'istanza inizi a cambiare direzione
-	Reducing this value means that the instance will start changing direction
-	pi&ugrave; tardi. Incrementarlo....
-	(Riducendo questo valore l'istanza inizier&agrave; a cambiare direzione
-	dopo. Incrementandolo inizier&agrave; a cambiare direzione prima. Se )	
-	later. Increasing it means it will start changing direction earlier. If
-	questo controllo porta ad una collisione essa inizier&agrave; a guardare nelle direzioni pi&ugrave; a
-	this check leads to a collision it starts looking at directions more to
-	sinistra e pi&ugrave; a destra della direzione migliore. Essa fa questo in passi di
-	the left and to the right of the best direction. It does this in steps of
-	dimensione <TT>rotstep</TT> (valore predefinito: 10). Ridurre questo valore permette all'istanza pi&ugrave;
-	size <TT>rotstep</TT> (default 10). Reducing this gives the instance more
-	possibilit&agrave; di movimento ma sar&agrave; pi&ugrave; lento. Il paramentro <TT>maxrot</TT>
+	Ridurre questo valore comporterà che l'istanza inizi a cambiare direzione
+	con più ritardo. Incrementarlo comporterà che l'istanza inizi a cambiare direzione prima. Se
+	questo controllo porta ad una collisione essa inizierà a guardare nelle direzioni più a
+	sinistra e più a destra della direzione migliore. Essa fa questo in passi di
+	dimensione <TT>rotstep</TT> (valore predefinito: 10). Ridurre questo valore permette all'istanza più
+	possibilità di movimento ma sarà più lento. Il paramentro <TT>maxrot</TT>
 	movement possibilities but will be slower. The parameter <TT>maxrot</TT>
-	&egrave; un p&ograve; pi&ugrave; difficile da spiegare. L'istanza ha una direzione corrente <!(attuale)>.
+	è un pò più difficile da spiegare. L'istanza ha una direzione corrente <!(attuale)>.
 	is a bit more difficult to explain. The instance has a current direction.
-    <TT>maxrot</TT> (valore predefinito: 30) indica di quanto &egrave; possibile cambiare la sua	
+    <TT>maxrot</TT> (valore predefinito: 30) indica di quanto è possibile cambiare la sua	
     <TT>maxrot</TT> (default 30) indicates how much it is allowed to change its
-    	attuale direzione in un passo (step). Cos&igrave; anche se essa potesse ad esempio muovere (e.g.) dritto verso la meta (obbiettivo)
+    	attuale direzione in un passo (step). Così anche se essa potesse ad esempio muovere (e.g.) dritto verso la meta (obbiettivo)
 	current direction in a step. So even if it can move e.g. straight to the goal
 	lo farebbe soltanto se <!(facendolo)> non violasse questa massima variazione di direzione.
 	it will only do so if it does not violate this maximal change of direction.
-	Se renderai <TT>maxrot</TT> grande l'istanza potr&agrave; fare grandi variazioni <!(variarla di molto)> ad ogni passo (step).
+	Se renderai <TT>maxrot</TT> grande l'istanza potrà fare grandi variazioni <!(variarla di molto)> ad ogni passo (step).
 	If you make <TT>maxrot</TT> large the instance can change a lot in each step.
-	Questo render&agrave; pi&ugrave; facile trovare un percorso breve ma il percorso sar&agrave; pi&ugrave; brutto <!(n.t. spigoloso)>.
+	Questo renderà più facile trovare un percorso breve ma il percorso sarà più brutto <!(n.t. spigoloso)>.
 	This will make it easier to find a short path but the path will be uglier.
-	Se rendi il valore pi&ugrave; piccolo il percorso sar&agrave; pi&ugrave; morbido ma esso potrebbe seguire
+	Se rendi il valore più piccolo il percorso sarà più morbido ma esso potrebbe seguire
 	If you make the value smaller the path will be smoother but it might take
-	deviazioni pi&ugrave; lunghe (e a volte anche mancare di <!non riuscire a> trovare l'obbiettivo). Quando non pu&ograve; essere
+	deviazioni più lunghe (e a volte anche mancare di <!non riuscire a> trovare l'obbiettivo). Quando non può essere
 	longer detours (and sometimes even fail to find the goal). When no step can
-	fatto nessun passo il comportamento dipender&agrave; dal valore del parametro <TT>onspot</TT>.
-	be made the behavior depends on the value of the parameter <TT>onspot</TT>.
-	Se <TT>onspot</TT> assume il valore di vero (true) (il valore predefinito), l'istanza ruoter&agrave; sul
+	fatto nessun passo il comportamento dipenderà dal valore del parametro <TT>onspot</TT>.
+	Se <TT>onspot</TT> assume il valore di vero (true) (il valore predefinito), l'istanza ruoterà sul
 	If <TT>onspot</TT> is true (the default value), the instance will rotate on
-	posto dell'ammontare indicato <!(quantit&agrave; indicata)> con <TT>maxrot</TT>. Se assume il valore di falso (false) essa 
+	posto dell'ammontare indicato <!(quantità indicata)> con <TT>maxrot</TT>. Se assume il valore di falso (false) essa 
 	its spot by the amount indicated with <TT>maxrot</TT>. If it is false it
-	non si muover&agrave; affatto. Impostarla su falso (false) &egrave; utile ad esempio per (e.g.) le automobili ma riduce
+	non si muoverà affatto. Impostarla su falso (false) è utile ad esempio per (e.g.) le automobili ma riduce
 	will not move at all. Setting it to false is useful for e.g. cars but reduces
-	la possibilit&agrave; di trovare un percorso.
+	la possibilità di trovare un percorso.
 	the chance of finding a path.<br>
 </blockquote>
 
 <p>
-Per favore nota che il potenziale approccio usa solo informazioni locali. Cos&igrave; esso trover&agrave;
-Please note that the potential approach uses only local information. So it will only
+Per favore nota che il potenziale approccio usa solo informazioni locali. Così esso troverà
 un percorso se queste informazioni locali sono sufficienti a determinare la giusta direzione del
-find a path if this local information is enough to determine the right direction of
-movimento. Per esempio, non riuscir&agrave; a trovare un percorso di uscita di un labirinto (il pi&ugrave; delle volte).
-motion. For example, it will fail to find a path out of a maze (most of the time).
+movimento. Per esempio, non riuscirà a trovare un percorso di uscita di un labirinto (il più delle volte).
 
 <P>
 Il secondo tipo di funzioni calcola un percorso libero da collisioni per l'istanza.
-The second kind of functions computes a collision-free path for the instance.
-Ona volta che questo percorso &egrave; stato calcolato puoi assegnarlo all'istanza per muoverla
-Once this path has been computed you can assign it to the instance to move
-verso la meta. Il calcolo del percorso impiegher&agrave; del tempo ma dopo quello
+Ona volta che questo percorso è stato calcolato puoi assegnarlo all'istanza per muoverla
+verso la meta. Il calcolo del percorso impiegherà del tempo ma dopo quello
 towards the goal. The computation of the path will take some time but after
-l'attuazione <!(esecuzione)> del percorso sar&agrave; veloce. Certamente ci&ograve; varr&agrave; soltanto se 
+l'attuazione <!(esecuzione)> del percorso sarà veloce. Certamente ciò varrà soltanto se 
 that the execution of the path will be fast. Of course this is only valid if
-la situazione non &egrave; cambiata nel frattempo. Per esempio, se gli ostacoli
-the situation has not changed in the meantime. For example, if obstacles
+la situazione non è cambiata nel frattempo. Per esempio, se gli ostacoli
 cambiano forse avrai bisogno di ricalcolare il percorso. Ancora una volta nota che queste funzioni 
-change you possibly will need to recompute the path. Again notice that these functions
 potrebbero non avere successo.
-might fail. 
 <B><I>These functions are only available in the Standard Edition of GameMaker.</I></B>
 
 <P>
 Le prime due funzioni usano l'approccio del movimento lineare e quello del campo potenziale che
-The first two functions use the linear motion and potential field approach that
 venivano usati anche per le funzioni per passi (step).
-were also used for the step functions.
 
 <p>
 <blockquote>
   <tt><b>mp_linear_path(path,xg,yg,stepsize,checkall)</b></tt>
     Questa funzione computa per l'istanza un percorso rettilineo dalla sua
-    This function computes a straight-line path for the instance from its
     	posizione corrente alla posizione (xg,yg) usando la dimensione per passo (step) indicata.
-	current position to the position (xg,yg) using the indicated step size.
 	Esso usa i passi (step) come nella funzione <TT>mp_linear_step()</TT>. Il percorso
-	It uses steps as in the function <TT>mp_linear_step()</TT>. The indicated
-	indicato deve gi&agrave; esistere e sar&agrave; sovrascritto dal nuovo percorso. (Vedi in un
-	path must already exist and will be overwritten by the new path. (See a
+	indicato deve già esistere e sarà sovrascritto dal nuovo percorso. (Vedi in un
 	capitolo successivo come creare e distruggere percorsi.) La funzione
-	later chapter on how to create and destroy paths.) The function will
-	ritorner&agrave; se un percorso sia stato trovato. La funzione si arrester&agrave; e riporter&agrave; insuccesso
-	return whether a path was found. The function will stop and report failure
+	ritornerà se un percorso sia stato trovato. La funzione si arresterà e riporterà insuccesso
 	se non esiste nessun percorso rettilineo tra il punto iniziale e la meta. Se essa fallisce
-	if no straight path exists between start and goal. If it fails a 
 	viene tuttavia creato un percorso che vada fino alla posizione dove l'istanza si era bloccata.<br>
-	path is still created that runs till the position where the instance was blocked.<br>
   <tt><b>mp_linear_path_object(path,xg,yg,stepsize,obj)</b></tt>
     Come la funzione sopra ma questa volta soltanto istanze di <tt>obj</tt> sono
     Same as the function above but this time only instances of <tt>obj</tt> are
-    	considerate ostacoli. <tt>obj</tt> pu&ograve; essere un oggetto o un <!l'>identificativo (id) di un oggetto.<br>
+    	considerate ostacoli. <tt>obj</tt> può essere un oggetto o un <!l'>identificativo (id) di un oggetto.<br>
 	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>	
   <tt><b>mp_potential_path(path,xg,yg,stepsize,factor,checkall)</b></tt>
     Questa funzione computa un percorso per l'istanza dalla sua posizione corrente
-    This function computes a path for the instance from its current position
  	e dal suo orientamento alla posizione (xg,yg) usando la dimensione del passo (step) indicata
-	and orientation to the position (xg,yg) using the indicated step size
-	cercando di evitare collisioni con gli ostacoli. Essa usa i (possibili passi nel campo d'azione???) <!potential field steps???>,
-	trying to avoid collision with obstacles. It uses potential field steps,
+	cercando di evitare collisioni con gli ostacoli. Essa usa i (possibili passi nel campo d'azione???),
 	come nella funzione <TT>mp_potential_step()</TT> e anche i parametri
-	like in the function <TT>mp_potential_step()</TT> and also the parameters
 	che possono essere impostati con <TT>mp_potential_settings()</TT>. Il percorso indicato
-	that can be set with <TT>mp_potential_settings()</TT>. The indicated path
-	deve gi&agrave; esistere e sar&agrave; sovrascritto dal nuovo percorso. (Vedi in un
-	must already exist and will be overwritten by the new path. (See a later
-	capitolo successivo come creare e distruggere percorsi.) La funzione ritorner&agrave;
-	chapter on how to create and destroy paths.) The function will return
+	deve già esistere e sarà sovrascritto dal nuovo percorso. (Vedi in un
+	capitolo successivo come creare e distruggere percorsi.) La funzione ritornerà
 	se un percorso sia stato trovato. Per evitare che la funzione continui a calcolare
-	whether a path was found. To avoid the function continuing to compute
-	all'infinito tu necessiti di provvedere un fattore di lunghezza (factor) maggiore di 1. La funzione 
-	forever you need to provide a length factor larger than 1. The function
-	si arrester&agrave; e riporter&agrave; insuccesso se essa non trova un percorso pi&ugrave; breve di questo
-	will stop and report failure if it cannot find a path shorter than this 
-	fattore di volte la distanza tra il punto d'inizio e la meta. Un fattore del valore di 4 &egrave; solitamente
-	factor times the distance between start and goal. A factor of 4 is normally 
-	abbastanza buono ma se ti aspetti lunghe deviazioni potresti renderlo maggiore. Se 
-	good enough but if you expect long detours you might make it longer. If 
-	essa fallisce verr&agrave; tuttavia creato un percorso che vada in direzione della meta
-	it fails a path is still created that runs in the direction of the goal
-	ma esso non la raggiunger&agrave;.<br>
-	but it will not reach it.<br>
+	all'infinito tu necessiti di provvedere un fattore di lunghezza (factor) maggiore di 1. La funzione
+	si arresterà e riporterà insuccesso se essa non trova un percorso più breve di questo
+	fattore di volte la distanza tra il punto d'inizio e la meta. Un fattore del valore di 4 è solitamente
+	abbastanza buono ma se ti aspetti lunghe deviazioni potresti renderlo maggiore. Se
+	essa fallisce verrà tuttavia creato un percorso che vada in direzione della meta
+	ma esso non la raggiungerà.<br>
   <tt><b>mp_potential_path_object(path,xg,yg,stepsize,factor,obj)</b></tt>
     Come la funzione sopra ma questa volta soltanto istanze di <tt>obj</tt> sono
     Same as the function above but this time only instances of <tt>obj</tt> are
-    	considerate ostacoli. <tt>obj</tt> pu&ograve; essere un oggetto o un <!l'>identificativo (id) di un oggetto.<br>
+    	considerate ostacoli. <tt>obj</tt> può essere un oggetto o un <!l'>identificativo (id) di un oggetto.<br>
 	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>
 </blockquote>
 
 <p>
-Le altre funzioni utilizzano un meccanismo un p&ograve; pi&ugrave; complesso usando un approccio
-The other functions use a much more complex mechanism using a grid-based
-basato su griglia (a volte chiamato un algoritmo A*). Esso avr&agrave; pi&ugrave; successo
-approach (sometimes called an A* algorithm). It will be more successful
-nel trovare percorsi (anche se ancora potrebbe fallire) e trover&agrave; percorsi pi&ugrave; corti
-in finding paths (although it still might fail) and will find shorter paths
-ma esso richiede pi&ugrave; lavoro da parte tua. L'idea globale &egrave; quella che segue.
+Le altre funzioni utilizzano un meccanismo un pò più complesso usando un approccio
+basato su griglia (a volte chiamato un algoritmo A*). Esso avrà più successo
+nel trovare percorsi (anche se ancora potrebbe fallire) e troverà percorsi più corti
+ma esso richiede più lavoro da parte tua. L'idea globale è quella che segue.
 but it required more work on your side. The global idea is as follows.
 Prima di tutto noi mettiamo una griglia sulla (parte rilevante della) stanza (room). Puoi 
 First of all we put a grid on (the relevant part of) the room. You can
-scegliere di usare una griglia fine (che sar&agrave; pi&ugrave; lenta) o una griglia grossolana. Poi, 
+scegliere di usare una griglia fine (che sarà più lenta) o una griglia grossolana. Poi, 
 choose to use a fine grid (which will be slower) or a coarse grid. Next,
 per tutti gli oggetti rilevanti determiniamo le celle della griglia che essi occupino (o 
 for all relevant objects we determine the grid cells they overlap (either
 utilizzando i riquadri <!bounding box> oppure il controllo preciso <!precise checking>) e contrassegnamo queste celle come
 using bounding boxes or precise checking) and mark these cells as being 
-vietate. Cos&igrave; una cella sar&agrave; segnata come completamente vietata, anche se si sovrappone 
+vietate. Così una cella sarà segnata come completamente vietata, anche se si sovrappone 
 forbidden. So a cell will be marked totally forbidden, even if it only
 solo parzialmente ad un ostacolo. Infine specifichiamo un punto d'inizio e una posizione
-partially overlaps with an obstacle. Finally we specify a start and a goal
 meta (che deve trovarsi in celle libere) e la funzione computa il 
-position (which must lie in free cells) and the function computes the
-percorso pi&ugrave; breve (effettivamente vicino al pi&ugrave; corto) tra questi. Il percorso
-shortest path (actually close to the shortest) between these. The path 
-andr&agrave; tra i centri delle celle libere. Cos&igrave; se le celle sono grandi abbastanza
-will run between centers of free cells. So if the cells are large enough 
-da fare in modo che l'istanza posizionata nel loro centro andr&agrave; completamente all'interno
-so that the instance placed at its center will lie completely inside 
-questo avr&agrave; successo. Questo percorso adesso puoi fornirlo da seguire ad
-it this will be successful. This path you can now give to an instance
+percorso più breve (effettivamente vicino al più corto) tra questi. Il percorso
+andrà tra i centri delle celle libere. Così se le celle sono grandi abbastanza
+da fare in modo che l'istanza posizionata nel loro centro andrà completamente all'interno
+questo avrà successo. Questo percorso adesso puoi fornirlo da seguire ad
 ad un'istanza.
-to follow.
 
 <P>
-L'approccio basato su griglia &egrave; molto potente (ed &egrave; usato in molti giochi
-The grid-based approach is very powerful (and is used in many professional
+L'approccio basato su griglia è molto potente (ed è usato in molti giochi
 professionali) ma esso richiede che tu faccia alcune attente riflessioni. Devi determinare
-games) but it requires that you do some careful thinking. You must determine
 quale area e quale dimensione delle celle siano abbastanza buone per risolvere il gioco. Inoltre devi
-which area and cell size are good enough for solving the game. Also you must 
 determinare quali oggetti debbano essere evitati e se il controllo preciso (precise checking) sia
-determine which objects must be avoided and whether precise checking is 
 importante. Tutti questi parametri influenzano fortemente l'efficienza dell'approccio.
-important. All these parameters strongly influence the efficiency of the approach. 
 
 <P>
-In particolare la dimensione delle celle &egrave; cruciale. Ricorda che le celle
-In particular the size of the cells is crucial. Remember that the cells
+In particolare la dimensione delle celle è cruciale. Ricorda che le celle
 devono essere larghe abbastanza da fare in modo che l'oggetto in movimento posizionato con la sua origine
-must be large enough so that the moving object placed with its origin 
-al centro della cella vada completamente all'interno della cella stessa. (Fai attenzione 
-on the center of a cell must lie completely inside the cell. (Be careful 
-alla posizione dell'origine dell'oggetto. Inoltre ricorda che puoi 
-about the position of the origin of the object. Also realize that you can 
-spostare il percorso se l'origine dell'oggetto non si trova nel <!al> suo centro!) D'altra parte,
-shift the path if the origin of the object is not in its center!) On the 
-pi&ugrave; piccole le celle pi&ugrave; possibili percorsi esistono. Se 
-other hand, the smaller the cells the more possible paths exist. If you 
-rendi le celle troppo grandi, aperture tra gli ostacoli potrebbero rimanere chiuse perch&egrave;
-make cells too large, openings between obstacles may get closed because
+al centro della cella vada completamente all'interno della cella stessa. (Fai attenzione
+alla posizione dell'origine dell'oggetto. Inoltre ricorda che puoi
+spostare il percorso se l'origine dell'oggetto non si trova nel suo centro!) D'altra parte,
+più piccole le celle più possibili percorsi esistono. Se 
+rendi le celle troppo grandi, aperture tra gli ostacoli potrebbero rimanere chiuse perchè
 tutte le celle intersecano un ostacolo.
-all cells intersect an obstacle.
 
 <p>
 Le attuali funzioni per l'approccio basato sulla griglia sono le seguenti:
-The actual functions for the grid-based approach are as follows:
 
 <p>
 <blockquote>
   <tt><b>mp_grid_create(left,top,hcells,vcells,cellwidth,cellheight)</b></tt>
-    Questa funzione crea la griglia. Essa restituisce un indice che deve essere usato in 
-    This function creates the grid. It returns an index that must be used in 
-    	tutte le altre chiamate. Puoi creare e mantenere pi&ugrave; strutture di griglia allo
-	all other calls. You can create and maintain multiple grid structures at 
+    Questa funzione crea la griglia. Essa restituisce un indice che deve essere usato in
+    	tutte le altre chiamate. Puoi creare e mantenere più strutture di griglia allo
 	stesso tempo. left (sinistra) e top (sopra) indicano la posizione dell'angolo in alto a sinistra
-	the same moment. left and top indicate the position of the top-left corner 
-	della griglia. hcells e vcells indicano il numero delle celle orizzontali e 
-	of the grid. hcells and vcells indicate the number of horizontal and vertical 
+	della griglia. hcells e vcells indicano il numero delle celle orizzontali e
 	verticali. Infine cellwidth (larghezza della cella) e cellheight (altezza della cella) indicano la dimensione delle celle.<br>
-	cells. Finally cellwidth and cellheight indicate the size of the cells.<br>
   <tt><b>mp_grid_destroy(id)</b></tt>
     Distrugge la struttura di griglia e libera la memoria che occupava. Non dimenticarti
-    Destroys the indicated grid structure and frees its memory. Don't forget to 
-    	di chiamarla se non necessiti pi&ugrave; della struttura.<br>
-	call this if you don't need the structure anymore.<br>
+    	di chiamarla se non necessiti più della struttura.<br>
   <tt><b>mp_grid_clear_all(id)</b></tt>
     Segna tutte le celle della griglia come libere.<br>
-    Mark all cells in the grid to be free.<br>
   <tt><b>mp_grid_clear_cell(id,h,v)</b></tt>
-    Libera la cella indicata. La cella 0,0 &egrave; la cella in alto a sinistra.<br>
-    Clears the indicated cell. Cell 0,0 is the top left cell.<br>
+    Libera la cella indicata. La cella 0,0 è la cella in alto a sinistra.<br>
   <tt><b>mp_grid_clear_rectangle(id,left,top,right,bottom)</b></tt>
     Libera tutte le celle che intersecano il rettangolo indicato (in coordinate della stanza (room)).<br>
-    Clears all cells that intersect the indicated rectangle (in room coordinates).<br>
   <tt><b>mp_grid_add_cell(id,h,v)</b></tt>
-    Segna la cella indicata come vietata. La cella 0,0 &egrave; la cella in alto a sinistra.<br>
-    Marks the indicated cell as being forbidden. Cell 0,0 is the top left cell.<br>
+    Segna la cella indicata come vietata. La cella 0,0 è la cella in alto a sinistra.<br>
   <tt><b>mp_grid_add_rectangle(id,left,top,right,bottom)</b></tt>
     Segna tutte le celle che intersecano il rettangolo indicato come vietate.<br>
-    Marks all cells that intersect the indicated rectangle as being forbidden.<br>
   <tt><b>mp_grid_add_instances(id,obj,prec)</b></tt>
     Segna tutte le celle che intersecano un istanza dell'oggetto indicato come
-    Marks all cells that intersect an instance of the indicated object as 
     	vietate. Puoi anche usare un istanza individuale rendendo obj
-	being forbidden. You can also use an individual instance by making obj
 	l'identificativo (id) dell'istanza. Inoltre puoi usare la parola chiave <TT><B>all</b></tt>
-	the id of the instance. Also you can use the keyword <TT><B>all</b></tt>
     per indicare tutte le istanze di tutti gli oggetti. prec indica se debba essere
-    to indicate all instances of all objects. prec indicates whether precise 
-    usato il controllo preciso (precise checking) (funzioner&agrave; soltanto se il controllo preciso 
-    collision checking must be used (will only work if precise checking is 
-    &egrave; abilitato per lo sprite usato dall'istanza).<br>
-    enabled for the sprite used by the instance).<br>
+    usato il controllo preciso (precise checking) (funzionerà soltanto se il controllo preciso 
+    è abilitato per lo sprite usato dall'istanza).<br>
   <tt><b>mp_grid_path(id,path,xstart,ystart,xgoal,ygoal,allowdiag)</b></tt>
     Computa un percorso attraverso la griglia. path (percorso) deve indicare un percorso esistente che
-    Computes a path through the grid. path must indicate an existing path that 
-    	verr&agrave; sostituito dal percorso computato. xstart e ystart indicano il punto d'inizio
-	will be replaced by the computer path. xstart and ystart indicate the start 
+    	verrà sostituito dal percorso computato. xstart e ystart indicano il punto d'inizio
 	del percorso e xgoal e ygoal la meta. allowdiag indica se
-	of the path and xgoal and ygoal the goal. allowdiag indicates whether 
 	sono consentiti movimenti diagonali invece dei soli orizzontali o verticali. La
-	diagonal moves are allowed instead of just horizontal or vertical. The 
-	funzione restituisce se &egrave; riuscita a trovare un percorso. (Nota che il 
+	funzione restituisce se è riuscita a trovare un percorso. (Nota che il 
 	function returns whether it succeeded in finding a path. (Note that the 
-	percorso &egrave; indipendente dalla corrente istanza; Esso &egrave; un percorso attraverso la 
+	percorso è indipendente dalla corrente istanza; Esso è un percorso attraverso la 
 	path is independent of the current instance; It is a path through the g
 	griglia, non un percorso per una specifica istanza.) <br>
-	rid, not a path for a specific instance.) <br>
   <tt><b>mp_grid_draw(id)</b></tt>
-    Questa funzione disegna la griglia con le celle libere di colore verde e le celle vietate di colore 
-    This function draws the grid with green cells being free and red cells being
-    	rosso. Questa funzione &egrave; lenta ed &egrave; fornita solo come strumento per rilevare errori (debug).<br>
-	forbidden. This function is  slow and only provided as a debug tool.<br>
+    Questa funzione disegna la griglia con le celle libere di colore verde e le celle vietate di colore
+    	rosso. Questa funzione è lenta ed è fornita solo come strumento per rilevare errori (debug).<br>
 </blockquote>
 
 
@@ -368,8 +276,6 @@ mp_grid_draw()
 
 path finding
 movimento pianificato
-
-<!moto pianificato>
 
 algoritmo A*
 A star
