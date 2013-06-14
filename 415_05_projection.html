@@ -2,37 +2,37 @@
 
 <html>
 <head>
-<title>Viewing the world</title>
+<title>Guardare il mondo</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 
 <!--START-->
 
-<h3>Viewing the world</h3>
+<h3>Guardare il mondo</h3>
 
-Default you look along the negative z-axis toward the middle of the room. Often in 3D games
-you want to change how you look at the world. For example, in a first person shooter you probably
-want to have the camera look from a position a bit above the xy-plane along the xy-plane. In
-graphics terms you are setting the correct projection. To change
-the way you look the following two functions exist.
+Di default guardi lungo l'asse z negativo verso il centro della room. Spesso nei giochi 3D
+si vuole cambiare il modo di guardare il mondo. Per esempio, in uno sparatutto in prima persona probabilmente
+vuoi che la telecamera guarda da una posizione un po sopraelevata al piano xy.
+In termini grafici stai impostando la corretta proiezione. Per cambiare
+il modo di guardare il mondo tridimensionale esistono le due seguenti funzioni.
 
 <p>
 <blockquote>
   <tt><b>d3d_set_projection(xfrom,yfrom,zfrom,xto,yto,zto,xup,yup,zup)</b></tt>
-	  Defines how to look in the world. You specify the point to
-	  look from, the point to look to and the up vector.<br>
+	  Descrive come gaurdare il mondo. Devi specificare il punto da dove guardare, il punto verso il
+	  quale si guarda ed il vettore per descrivere l'inclinazione.<br>
 </blockquote>
 
 <p>
-This function requires some explanation. To set the projection you first need the
-position you look from. This is indicated by the parameters <tt>(xfrom,yfrom,zfrom)</tt>.
-Next you must specify the direction you look in. This is done by giving a second point
-to look towards. This is the point <tt>(xto,yto,zto)</tt>. Finally, you can still rotate
-the camera around the line from the viewpoint to the looking point. To specify this we
-must give an up vector, that is, the direction that is upwards in the camera. This
-is given by the last three parameters <tt>(xup,yup,zup)</tt>. Let me given an example.
-To look along the xy-plane as in a first person shooter you can use
+Questa funzione richiede un po di spiegazioni. Per impostare la proiezione prima di tutto hai bisogno
+della porizione da dove guardare. Questa è indicata dai parametri <tt>(xfrom,yfrom,zfrom)</tt>.
+Poi bisogna indicare la direzione verso la quale si guarda. Questa è generata descrivendo il punto
+dove stai guardando. Questo punto si indica con <tt>(xto,yto,zto)</tt>. Infine, puoi ruotare
+la camera seguendo la direzione dello sguardo. Per specificare questa rotazione
+bisogna indicare un vettore, che indicherà la direzione verso la parte superiore della telecamera.
+Questo è indicato dagli ultimi tre parametri <tt>(xup,yup,zup)</tt>. Per esempio,
+per guardare lungo il piano xy in uno sparatutto in prima persona puoi usare
 
 <p>
 <blockquote>
@@ -43,11 +43,10 @@ To look along the xy-plane as in a first person shooter you can use
 </pre>
 </blockquote>
 
-So you look from point (100,100) and 10 above the plane in the direction of (200,100). The up vector
-points is the z-direction as required. To make this slightly more complicated, assume you have an
-instance in your room that specifies the position of the camera. It will have a current (x,y) position
-and a direction (and maybe even a speed). You can now specify this as your camera by using the
-following code:
+Quindi guardi dal punto (100,100) e 10 sopra il piano guardando verso il punto (200,100). Il vettore di altezza
+della telecamera è lungo l'asse z come richiesto. Per rendere questo leggermente più complicato, immaginiamo di avere
+un'istanza nella room che specifica la posizione della telecamera. Questa avrà la posizione corrente (x,y)
+e una direzione (e forse anche una velocità). Ora puoi impostare ciò sulla tua telecamera usando il codice seguente:
 
 <p>
 <blockquote>
@@ -62,59 +61,59 @@ following code:
 </blockquote>
 
 <p>
-This might look a bit complicated. We look from the camera position (x,y), 10 above the ground.
-To determine a point in the correct direction we need to do a little arithmetic. This point
-is indicated by the next three parameters. Finally we use the up vector as above.
+Questo può sembrare un po complicato. Guardiamo dalla posizione della telecamera (x,y), 10 sopra il suolo.
+Per determinare il punto nella direzione corretta abbiamo bisogno di un po di aritmetica. Questo punto
+è indicato dai successivi tre parametri. Infine usiamo il vettore di altezza come sopra.
 
 <p>
-One important remark! When <i>GameMaker</i> starts drawing a room it will set the view point
-back to the default position. So the first thing you must do when drawing the scene is set
-is to the projection you want. This must be done in a drawing event!
+Una nota importante! Quando <i>GameMaker</i> inizia a disegnare una room imposta il punto di visuale
+alla posizione di default. Quindi la prima cosa che bisogna fare quando si disegna una scena è
+di impostare la proiezione desiderata. Questo deve essere fatto nell'evento draw!
 
 <p>
-There is also an extended version of the function above:
+Cè anche una versione estesa della funzione qui sopra:
 
 <p>
 <blockquote>
   <tt><b>d3d_set_projection_ext(xfrom,yfrom,zfrom,xto,yto,zto,xup,yup,zup,angle,aspect,znear,zfar)</b></tt>
-	  An extended version of this function in which you also specify the
-	  angle defining the field of view, the aspect ratio between horizontal
-	  and vertical size of the view, and the near and far clipping planes.<br>
+	  Una versione estesa di questa funzione dove specifichi l'angolo di visuale
+	  (field of view), la proporzione tra larghezza ed altezza
+	  della view, e la distanza minima e massima.<br>
 </blockquote>
 
 <p>
-The additional parameters work as follows. If you specified the camera position, point to look at,
-and up vector, you can still change how wide the lens of the camera is. This is called the
-field of view. A reasonable value is somewhere between 40 and 45 degrees. But you can
-change this if you like. Next you can specify the aspect ratio between the horizontal and vertical
-projection. Normally you want to use the same as the aspect ration of the room or view, e.g. 640/480.
-Finally you can indicate the clipping planes. Objects that are closer than <tt>znear</tt> to the
-camera are not drawn. Similar for objects further than <tt>zfar</tt>. It can be important to
-set these parameters to reasonable values because they also influence the precision of the
-z-comparisons. If you make the range too large the precision gets worse. Default we use 1 and 32000.
-<tt>znear</tt> must be larger than 0!
+I parametri addizionali funzionano come di seguito. Se hai specificato la posizione della telecameta, il punto dove guardare
+ed il vettore di altezza, puoi indicare quando è ampia la lente della telecamera, questo è chiamato
+field of view. Un valore ragionevole è qualcosa tra 40 e 45 gradi ma puoi cambiarlo a piacimento.
+Poi è possibile specificare la proporzione tra la proiezione orizzontale e verticale.
+Di solito si usa la stessa proporzione della room o della view, es. 640/480.
+Infine puoi indicare i piani di ritaglio. Gli oggetti che saranno più vicini alla telecamera di <tt>znear</tt>
+non verranno disegnati. Stessa cosa per gli oggetti più lontani di <tt>zfar</tt>. E' importante impostarli
+su valori ragionevoli per via dell'influenza della precisione nella calcolo della profondità.
+Se imposti un range troppo grande la precisione diminuirà. I valori di default sono 1 e 32000.
+<tt>znear</tt> deve essere più grande di 0!
 
 
 <p>
-Sometimes you temporarily need a normal orthographic projection as is used when there is no
-3D. Or you want to return to the default perspective projection.
-For this you can use the following functions:
+A volte puoi avere bisogno temporaneamente della classica proiezione ortogonale quando non si è in presenza di oggetti 3D.
+Oppure si vuole ritornare alla proiezione prospettica di default.
+Per fare ciò ci sono le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>d3d_set_projection_ortho(x,y,w,h,angle)</b></tt>
-	  Sets a normal orthographic projection of the indicated area in the
-	  room, rotated over the indicated angle.<br>
+	  Imposta una normale proiezione ortogonale dell'area indicata nella
+	  room con l'angolo di rotazione indicato.<br>
   <tt><b>d3d_set_projection_perspective(x,y,w,h,angle)</b></tt>
-	  Sets a normal perspective projection of the indicated area in the
-	  room, rotated over the indicated angle.<br>
+	  Importa una normale proiezione prospettica dell'area indicata nella
+	  room con l'angolo di rotazione indicato.<br>
 </blockquote>
 
 <p>
-A standard use for this is to draw an overlay to e.g. show the score or other aspects. To
-do so we set an orthographic projection. We also must temporarily switch off hidden surface
-removal cause we want the information to be drawn regardless of the current depth value. The
-following example shows how to create an overlay with the score.
+Un'utilizzo comune di queste funzioni è per disegnare un HUD ad esempio mostrare il punteggio o altre cose.
+Per fare ciò basta impostare la proiezione ortogonale. Bisogna anche disattivare temporaneamente la rimozione
+delle superfici nascoste perchè si vuole disegnare queste informazioni indipendentemente dal loro valore di profondità.
+L'esempio seguente mostra come creare un HUD con il punteggio.
 
 <p>
 <blockquote>

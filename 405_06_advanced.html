@@ -8,78 +8,76 @@
 <body background="images/back.gif">
 <!--START-->
 
-<H3>Advanced drawing functions</H3>
+<H3>Funzioni di disegno avanzato</H3>
 
-<i><b>This functionality is only available in the Standard Edition of GameMaker.</b></i>
+<i><b>Questa funzionalitÃ  Ã¨ disponibile solo nella versione Standard di GameMaker.</b></i>
 
 <p>
-Above, a number of basic drawing functions have been described. Here you find a number of additional 
-functions that offer you a lot more possibilities. First of all there are functions to draw shapes 
-with gradient colors. Secondly there are functions to draw more general polygons, and finally there 
-is the possibility to draw texture mapped polygons.
+Sopra, un numero di funzioni di disegno di base sono state descritte. Qui puoi trovare un numero di funzioni addizionali
+che offrono molte altre possibilitÃ . Prima di tutto ci sono funzioni per disegnare forme
+con colore a gradiente. Ci sono funzione per disegnare poligoni generali, e la possibilita di disegnare poligoni
+con texture mappate.
 
 <P>
-The following extended versions of the basic drawing functions exist. each of them gets extra color 
-parameters that are used the determine the color at different vertices. The standard drawing color is 
-not used in these functions.
+Le seguenti funzioni sono delle estenzioni di quelle basilari. Ognuna di loro ha come parametro extra il colore
+che Ã¨ usato per determinare il colore dei differenti vertici. Il colore di disegno standard
+non Ã¨ usato in queste funzioni.
 
 <p>
 <blockquote>
   <tt><b>draw_point_color(x,y,col1)</b></tt>
-    Draws a point at (x,y) in the given color.<br>
+    Disegna un punto con il colore indicato alle coordinate (x,y).<br>
   <tt><b>draw_line_color(x1,y1,x2,y2,col1,col2)</b></tt>
-	  Draws a line from (x1,y1) to (x2,y2), interpolating the color
-		between col1 and col2.<br>
+	  Disegna una linea da (x1,y1) a (x2,y2), interpolando il colore
+	        da col1 a col2.<br>
   <tt><b>draw_line_width_color(x1,y1,x2,y2,w,col1,col2)</b></tt> 
-    Draws a line from (x1,y1) to (x2,y2) with width w interpolating the color
-		between col1 and col2.<br>
+    Disegna una linea da (x1,y1) a (x2,y2), con larghezza w interpolando il colore
+	        da col1 a col2.<br>
   <tt><b>draw_rectangle_color(x1,y1,x2,y2,col1,col2,col3,col4,outline)</b></tt>
-	  Draws a rectangle. The four colors
-		indicated the colors at the top-left, top-right, bottom-right, and bottom-left vertex. outline
-		indicates whether only the outline must be drawn (true) or it should be filled (false).<br>
+	  Disegna un rettangolo. I quatro colori
+		Indicano i colori dei vertici rispettivamente in alto a sinistra, in alto a destra, in basso a destra e in basso a sinistra. outline
+		indica se deve essere disegnato solo il perimetro (true) o se deve essere riempito (false).<br>
 	<tt><b>draw_roundrect_color(x1,y1,x2,y2,col1,col2,outline)</b></tt>
-	  Draws a rounded rectangle. col1 is the color in the
-		middle and col2 the color at the boundary. outline indicates whether only the outline must be drawn
-		(true) or it should be filled (false).<br>
+	  disegna un rettangolo arrotondato. col1 Ã¨ il colore al centro
+		e col2 Ã¨ il colore al margine. outline indica se deve essere disegnato solo il perimetro (true) 
+		o se deve essere riempito (false).<br>
   <tt><b>draw_triangle_color(x1,y1,x2,y2,x3,y3,col1,col2,col3,outline)</b></tt>
-	  Draws a triangle. The three colors are
-		the colors of the three vertices which is interpolated over the triangle. outline indicates whether
-		only the outline must be drawn (true) or it should be filled (false).<br>
+	  Disegna un triangolo. I tre colori sono i colori
+		dei tre vertici che saranno interpolati sul triangolo. outline indica se deve essere disegnato solo il perimetro (true) 
+		o se deve essere riempito (false).<br>
   <tt><b>draw_circle_color(x,y,r,col1,col2,outline)</b></tt>
-	  Draws a circle at (x,y) with radius r. col1 is the color in
-		the middle and col2 the color at the boundary. outline indicates whether only the outline must be
-		drawn (true) or it should be filled (false).<br>
+	  Disegna un cerchio alle cordinate (x,y) con raggio r. col1 Ã¨ il colore al centro
+		e col2 Ã¨ il colore al margine. outline indica se deve essere disegnato solo il perimetro (true)
+		o se deve essere riempito (false).<br>
   <tt><b>draw_ellipse_color(x1,y1,x2,y2,col1,col2,outline)</b></tt>
-	  Draws an ellipse. col1 is the color in the middle and
-		col2 the color at the boundary. outline indicates whether only the outline must be drawn (true) or it
-		should be filled (false).<br>
+	  Disegna un ellisse. col1 Ã¨ il colore al centro e
+		col2 Ã¨ il colore al margine. outline indica se deve essere disegnato solo il perimetro (true) 
+		o se deve essere riempito (false).<br>
 </blockquote>
 
 <p>
-
-You can also draw larger primitives. This works slightly different. You begin by specifying the 
-primitive you want to draw. Next you specify the vertices for it, and finally you end the primitive, 
-at which moment it is drawn. There are six types of primitives:
+Puoi anche disegnare primitive. Questi funziona un po' diversamente. Si inizia specificando il
+primitivo che vuoi disegnare. Poi si specificano i suoi vertici, e infine si finisce il primitivo,
+al momento che viene disegnato. Ci sono 6 tipi di primitivi:
 
 <p>
 <blockquote>
   <tt><b>pr_pointlist</b></tt>
-	  The vertices are a set of points.<br>
+	  I vertici sono un set di punti.<br>
   <tt><b>pr_linelist</b></tt>
-	  The vertices are a set of line segments. Each pair of vertices forms a line segment. So
-		there must be an even set of vertices.<br>
+	  I vertici sono un set di segmenti. Ogni paio di vertici forna un segmenti. cosÃ¬ ci devono essere 
+	        almeno un paio di vertici.<br>
   <tt><b>pr_linestrip</b></tt>
-	  The vertices form a polyline with the first connected to the second, the second to the
-		third, etc. The last one is not connected to the first one. You have to specify an extra copy of the
-		first vertex for this.<br>
+	  I vertici formano una polilinea con il primo conneso al secondo, il secondo al terzo, etc. L'ultimo non Ã¨ connesso al primo. Si deve specificare 
+	        un segmento extra per questo.<br>
   <tt><b>pr_trianglelist</b></tt>
-	  The vertices are a set of triangles. Each triple of vertices forms a triangle. So the
-		number of vertices must be a multiple of 3.<br>
+	  I vertici sono un set di triangoli. Ogni trio di vertici forma un triangolo. CosÃ¬ il
+		Numero di vertici deve eseere un multiplo di 3.<br>
   <tt><b>pr_trianglestrip</b></tt>
-	  The vertices again form triangles but this time it works slightly different. The
-		first three form the first triangle. The last two of these vertices, together with the next vertex,
-		form the second triangle, etc. So each new vertex specifies a new triangle, connected to the previous
-		one.<br>
+	  I vertici di nuovo formano triangoli ma stavolta Ã¨ un po' differente.
+		I primi 3 formano il primo triangolo. Gli ultimi due di questi, insieme al prossimo vertice,
+		formano il secondo triangolo, etc. CosÃ¬ ogni nuovo vertice specifica un nuovo triangolo, connesso
+		al precedente.<br>
   <tt><b>pr_trianglefan</b></tt>
 	  Similar to a triangle list but this time the first vertex is part of all the
 		triangles. Again, each new vertex specifies a new triangle, connected to the previous vertex and the
@@ -229,14 +227,14 @@ can be used to create e.g. interesting explosion or halo effects.
 	  <li>bm_zero: Blend factor is (0, 0, 0, 0). 
 	  <li>bm_one: Blend factor is (1, 1, 1, 1). 
 	  <li>bm_src_color: Blend factor is (Rs, Gs, Bs, As). 
-	  <li>bm_inv_src_color: Blend factor is (1–Rs, 1–Gs, 1–Bs, 1–As). 
+	  <li>bm_inv_src_color: Blend factor is (1ï¿½Rs, 1ï¿½Gs, 1ï¿½Bs, 1ï¿½As). 
 	  <li>bm_src_alpha: Blend factor is (As, As, As, As). 
-	  <li>bm_inv_src_alpha: Blend factor is (1–As, 1–As, 1–As, 1–As). 
+	  <li>bm_inv_src_alpha: Blend factor is (1ï¿½As, 1ï¿½As, 1ï¿½As, 1ï¿½As). 
 	  <li>bm_dest_alpha: Blend factor is (Ad, Ad, Ad, Ad). 
-	  <li>bm_inv_dest_alpha: Blend factor is (1–Ad, 1–Ad, 1–Ad, 1–Ad). 
+	  <li>bm_inv_dest_alpha: Blend factor is (1ï¿½Ad, 1ï¿½Ad, 1ï¿½Ad, 1ï¿½Ad). 
 	  <li>bm_dest_color: Blend factor is (Rd, Gd, Bd, Ad). 
-	  <li>bm_inv_dest_color: Blend factor is (1–Rd, 1–Gd, 1–Bd, 1–Ad). 
-	  <li>bm_src_alpha_sat: Blend factor is (f, f, f, 1); f = min(As, 1–Ad). 
+	  <li>bm_inv_dest_color: Blend factor is (1ï¿½Rd, 1ï¿½Gd, 1ï¿½Bd, 1ï¿½Ad). 
+	  <li>bm_src_alpha_sat: Blend factor is (f, f, f, 1); f = min(As, 1ï¿½Ad). 
 	  </ul>
 	  For example, the normal blending mode sets the source blending to bm_src_alpha and
 	  the destination blending to bm_inv_src_alpha. Don't forget to reset the 

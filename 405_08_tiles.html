@@ -10,124 +10,117 @@
 
 <h3>Tiles</h3>
 
-As you should know you can add tiles to rooms. A tile is a part of a background resource. 
-Tiles are just visible images. They do not react to events and they do not generate 
-collisions. As a result, tiles are handled a lot faster than objects. Anything that does 
-not need events or collisions can best be done through tiles. Also, often one better uses 
-a tile for the nice graphics while a simple object is used to generate the collision 
-events.
+Come dovresti sapere puoi aggiungere delle tiles alle room. Una tile è una parte di una risorsa
+background. Le tiles sono semplicemente immagini. Non reagiscono agli eventi e non generano collisioni.
+Ne risulta che le tiles sono gestite molto più velocemente degli object. Qualunque cosa che non necessiti
+eventi o collisioni può essere fatta tramite le tiles. Inoltre, spesso si usano le tiles per fare belle
+grafiche e un object semplice per gli eventi di collisione.
 
 <P>
-You actually have more control over tiles than you might think. You can add them when 
-designing the room but you can also add them during the running of the game. You can 
-change their position, and even scale them or make them partially transparent. A tile has 
-the following properties:
+In verità hai molto più controllo sulle tiles di quanto pensi. Puoi aggiungerle mentre definisci le room
+ma puoi anche aggiungerle durante l'esecuzione del gioco. Puoi cambiarne la posizione, persino scalarle o
+renderle parzialmente trasparenti. Una tile ha le seguenti proprietà:
 
 <ul>
-  <li><tt><b>background</b></tt>. The background resource from which the tile is taken.</li>
-  <li><tt><b>left, top, width, height</b></tt>. The part of the background that is used.</li>
-  <li><tt><b>x,y</b></tt>. The position of the top left corner of the tile in the room.</li>
-  <li><tt><b>depth</b></tt>. The depth of the tile. You can choose any depth you like, 
-      making tiles appear between object instances.</li>
-  <li><tt><b>visible</b></tt>. Whether the tile is visible.</li>
-  <li><tt><b>xscale, yscale</b></tt>. Each tile can be drawn scaled (default is 1).</li>
-  <li><tt><b>blend</b></tt>. A blending color used when drawing the tile.</li>
-  <li><tt><b>alpha</b></tt>. An alpha value indicating tile transparency. 1 = not 
-      transparent, 0 = fully transparent.</li>
+  <li><tt><b>background</b></tt>. La risorsa background da cui viene pres la tile.</li>
+  <li><tt><b>left, top, width, height</b></tt>. La parte del background che viene usata.</li>
+  <li><tt><b>x,y</b></tt>. La posizione dell'angolo in alto a sinistra della tile nella room.</li>
+  <li><tt><b>depth</b></tt>. La depth  (profondità) della tile. Puoi scegliere la depth che vuoi,
+      facendo in modo che le tiles appaiano in mezzo alle istanze degli object.</li>
+  <li><tt><b>visible</b></tt>. Indica se la tile è visibile (true) o no (false).</li>
+  <li><tt><b>xscale, yscale</b></tt>. Ogni tile può essere scalata (1 è il valore predefinito).</li>
+  <li><tt><b>blend</b></tt>. Un colore da mescolare quando disegni la tile.</li>
+  <li><tt><b>alpha</b></tt>. Un valore alpha che indica la trasparenza. 1 = completamente opaco,
+      0 = completamente trasparente.</li>
 </ul>
 
-To change the properties of a particular tile you need to know its id. When you add tiles 
-when creating rooms the id is shown in the information bar at the bottom. There is also a 
-function to find the id of a tile at a particular position.
+Per cambiare le proprietà di una singola tile devi conoscere il suo id. Quando aggiungi le tiles durante
+la definizione della room l'id della tile che punti col mouse viene mostrato nella barra delle informazioni
+in basso. C'è anche una funzione per trovare l'id di una tile che si trova in una data posizione.
 
 <P>
-The following functions exist that deal with tiles:
+Esistono le seguenti funzioni per lavorare con le tiles:
 
 <p>
 <blockquote>
   <tt><b>tile_add(background,left,top,width,height,x,y,depth)</b></tt> 
-    Adds a new tile to the room with the indicated values 
-	(see above for their meaning). The function returns the 
-	id of the tile that can be used later on.<br>
+    Aggiunge una nuova tile nella room con i valori indicati (vedine il significato sopra). La funzione
+        restituisce l'id della tile che può essere usato in seguito.<br>
   <tt><b>tile_delete(id)</b></tt> 
-  	Deletes the tile with the given id.<br>
+    Cancella la tile con l'id dato.<br>
   <tt><b>tile_exists(id)</b></tt> 
-  	Returns whether a tile with the given id exists.<br>
+    Restituisce true se esiste una tile con l'id dato, false se non esiste.<br>
   <br>
   <tt><b>tile_get_x(id)</b></tt> 
-  	Returns the x-position of the tile with the given id.<br>
+    Restituisce l'ascissa della tile con l'id dato.<br>
   <tt><b>tile_get_y(id)</b></tt> 
-  	Returns the y-position of the tile with the given id.<br>
+    Restituisce l'ordinata della tile con l'id dato.<br>
   <tt><b>tile_get_left(id)</b></tt> 
-  	Returns the left value of the tile with the given id.<br>
+    Restituisce il valore <tt>left</tt> (vedi spora) della tile con l'id dato <br>
   <tt><b>tile_get_top(id)</b></tt> 
-  	Returns the top value of the tile with the given id.<br>
+    Restituisce il valore <tt>top</tt> (vedi sopra) della tile con l'id dato.<br>
   <tt><b>tile_get_width(id)</b></tt> 
-  	Returns the width of the tile with the given id.<br>
+    Restituisce la lunghezza (orizzontale) della tile con l'id dato.<br>
   <tt><b>tile_get_height(id)</b></tt> 
-  	Returns the height of the tile with the given id.<br>
+    Restituisce l'altezza (verticale) della tile con l'id dato.<br>
   <tt><b>tile_get_depth(id)</b></tt> 
-  	Returns the depth of the tile with the given id.<br>
+    Restituisce la depth della tile con l'id dato.<br>
   <tt><b>tile_get_visible(id)</b></tt> 
-  	Returns whether the tile with the given id is visible.<br>
+    Restituisce la visibilità della tile con l'id dato (vedi sopra).<br>
   <tt><b>tile_get_xscale(id)</b></tt> 
-  	Returns the xscale of the tile with the given id.<br>
+    Restituisce il fattore di scala orizzontale della tile con l'id dato.<br>
   <tt><b>tile_get_yscale(id)</b></tt> 
-  	Returns the yscale of the tile with the given id.<br>
+    Restituisce il fattore di scala verticale della tile con l'id dato.<br>
   <tt><b>tile_get_background(id)</b></tt> 
-  	Returns the background of the tile with the given id.<br>
+    Restituisce il background della tile con l'id dato.<br>
   <tt><b>tile_get_blend(id)</b></tt> 
-  	Returns the blending color of the tile with the given id.<br>
+    Restituisce il colore mescolato alla tile con l'id dato.<br>
   <tt><b>tile_get_alpha(id)</b></tt> 
-  	Returns the alpha value of the tile with the given id.<br>
+    Restituisce il valore alpha della tile con l'id dato.<br>
   <br>
   <tt><b>tile_set_position(id,x,y)</b></tt> 
-  	Sets the position of the tile with the given id.<br>
+    Imposta la posizionbe della tile con l'id dato.<br>
   <tt><b>tile_set_region(id,left,top,width,height)</b></tt> 
-  	Sets the region of the tile with the given id in its background.<br>
+    Imposta la regione della tile con l'id dato nel suo background.<br>
   <tt><b>tile_set_background(id,background)</b></tt> 
-  	Sets the background for the tile with the given id.<br>
+    Imposta il background della tile con l'id dato.<br>
   <tt><b>tile_set_visible(id,visible)</b></tt> 
-  	Sets whether the tile with the given id is visible.<br>
-  <tt><b>tile_set_depth(id,depth)</b></tt> 
-  	Sets the depth of the tile with the given id.<br>
+    Imposta la visibilità della tile con l'id dato.<br>
+  <tt><b>tile_set_depth(id,depth)</b></tt>
+    Imposta la depth della tile con l'id dato.<br>
   <tt><b>tile_set_scale(id,xscale,yscale)</b></tt> 
-  	Sets the scaling of the tile with the given id.<br>
+    Imposta la scala della tile con l'id dato.<br>
   <tt><b>tile_set_blend(id,color)</b></tt> 
-  	Sets the blending color of the tile with the given id.
-	<b><i>Only available in the Standard Edition!</i></b><br>
+    Imposta il colore da mescolare alla tile con l'id dato.
+	<b><i>Disponibile solo nella Standard Edition!</i></b><br>
   <tt><b>tile_set_alpha(id,alpha)</b></tt> 
-  	Sets the alpha value of the tile with the given id.<br>
+    Imposta il valore alpha della tile con l'id dato.<br>
 </blockquote>
 
 <p>
 
-The following functions deal with layers of tiles, that is, collections of tiles at the 
-same depth.
+Le seguenti funzioni lavorano con livelli (layers) di tile, cioè insiemi di tile con la stessa depth.
 
 <p>
 <blockquote>
   <tt><b>tile_layer_hide(depth)</b></tt> 
-  	Hides all tiles at the indicated depth layer.<br>
+    Nasconde tutte le tiles del livello con la depth indicata.<br>
   <tt><b>tile_layer_show(depth)</b></tt> 
-  	Shows all tiles at the indicated depth layer.<br>
+    Mostra tutte le tiles del livello con la depth indicata.<br>
   <tt><b>tile_layer_delete(depth)</b></tt> 
-  	Deletes all tiles at the indicated depth layer.<br>
+    Cancella tutte le tiles del livello con la depth indicata.<br>
   <tt><b>tile_layer_shift(depth,x,y)</b></tt> 
-  	Shifts all tiles at the indicated depth layer 
-	over the vector x,y. Can be used to create scrolling layers of tiles.<br>
+    Sposta tutte le tiles del livello con la depth indicata lungo il vettore x,y. Può essere
+        usato per spostare interi livelli di tiles.<br>
   <tt><b>tile_layer_find(depth,x,y)</b></tt> 
-  	Returns the id of the tile with the given depth at position (x,y). 
-	When no tile exists at the position -1 is returned. When multiple 
-	tiles with the given depth exist at the position the first one is returned.<br>
+    Restiruisce l'id della tile con la depth data e situata in posizione (x,y). Se non ce n'è
+        nessuna viene restituito -1. Se ce n'è più di una viene restituita solo la prima.<br>
   <tt><b>tile_layer_delete_at(depth,x,y)</b></tt> 
-    Deletes the tile with the given depth at position (x,y). 
-    When multiple tiles with the given depth exist at the position they are 
-	all deleted.<br>
+    Elimina la tile con la depth data e situata in posizione (x,y). Se ce ne sono di più verranno
+        cancellate tutte.<br>
   <tt><b>tile_layer_depth(depth,newdepth)</b></tt> 
-  	Changes the depth of all tiles at the indicated depth to the 
-	new depth. With this function you can move whole tile layers to a 
-	new depth.<br>
+    Imposta la depth di tutte le tiles del livello con la depth indicata a <tt>newdepth</tt>.
+        Con questa funzione puoi spostare (in termini di profondità) interi livelli di tiles.<br>
 </blockquote>
 
 <p>
@@ -143,6 +136,13 @@ tile layers
 adding tiles
 tile id
 tile functions
+
+tiles
+depth delle tiles
+tiles, livelli
+aggiungere tiles
+tile, id
+tiles, funzioni
 
 tile_add() 
 tile_delete() 

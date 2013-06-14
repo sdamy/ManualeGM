@@ -15,147 +15,137 @@ Una serie di azioni inerenti alle particelle sono disponibili nella scheda <b>Ex
 <b><i>Queste azioni sono disponibili solo nella versione Pro di <i>GameMaker</i></i></b>.
 
 <p>
-Il sistema particellare &egrave; stato pensato per la creazione di effetti speciali.
+Il sistema particellare è stato pensato per la creazione di effetti speciali.
 Le particelle sono piccoli elementi (rappresentati da un pixel o da una piccola forma). 
 Tali particelle si muovono intorno alla scena secondo regole predefinite e possono 
 cambiare colore mentre si muovono. Molti insiemi di particelle possono generare ad 
-esempio fuochi d'artificio, fiamme,pioggia,neve,campi stellari,detriti volanti, ecc.
+esempio fuochi d’artificio, fiamme,pioggia,neve,campi stellari,detriti volanti, ecc.
 
 <p>
 <img src="images/particles.jpg" width="155" height="172">
 
 <p>
-<i>GameMaker</i> contiene un ampio sistema particellare al quale si pu&ograve; accedere 
-attraverso varie funzioni. Attraverso le azioni descritte di seguito vi si pu&ograve; accedere 
-pi&ugrave; limitatamente.
+<i>GameMaker</i> contiene un ampio sistema particellare al quale si può accedere 
+attraverso varie funzioni. Attraverso le azioni descritte di seguito vi si può accedere 
+più limitatamente.
 
 <p>
-Un sistema particellare &egrave; in grado di gestire particelle di diverso tipo. Dopo aver creato il
-sistema particellare, la prima cosa da fare &egrave; specificare i tipi di particelle. Utilizzando
-le azioni qui di seguito &egrave; possibile specificare fino a 16 tipi di particelle. Ogni tipo ha una forma,
+Un sistema particellare è in grado di gestire particelle di diverso tipo. Dopo aver creato il
+sistema particellare, la prima cosa da fare è specificare i tipi di particelle. Utilizzando
+le azioni qui di seguito è possibile specificare fino a 16 tipi di particelle. Ogni tipo ha una forma,
 una dimensione, un colore iniziale e uno finale. Il colore cambia lentamente dal colore iniziale
 a quello finale. Le particelle hanno un tempo di vita limitato. Potete specificare nella tipologia
-la loro durata minima e massima. Le particelle hanno anche una velocit&agrave; e una
-direzione. Infine, possono essere applicate su di esse la gravit&agrave; e la frizione (attrito).
+la loro durata minima e massima. Le particelle hanno anche una velocità e una
+direzione. Infine, possono essere applicate su di esse la gravità e la frizione (attrito).
 
 <p>
-Dopo aver specificato i tipi di particelle &egrave; necessario crearli e sistemarli
-nella room. &Egrave; possibile far esplodere un numero di un determinato tipo di particelle
-da un punto specifico della room oppure &egrave; possibile creare un flusso costante di apparizione.
-Le particelle appaiono ad emittenza. Il sistema particellare pu&ograve; avere fino a 8 emettitori
-che lavorando contemporaneamente. Cos&igrave;, dopo aver creato i tipi di particelle, &egrave; necessario
+Dopo aver specificato i tipi di particelle è necessario crearli e sistemarli
+nella room. È possibile far esplodere un numero di un determinato tipo di particelle
+da un punto specifico della room oppure è possibile creare un flusso costante di apparizione.
+Le particelle appaiono ad emittenza. Il sistema particellare può avere fino a 8 emettitori
+che lavorando contemporaneamente. Così, dopo aver creato i tipi di particelle, è necessario
 creare gli emettitori e dire loro di generare un'esplosione o un flusso di particelle.
 
 <p>
-Ecco set completo delle azioni. Sperimentate pi&ugrave; che potete per ottenre effetti sempre migliori.
+Ecco il set completo delle azioni. Sperimentate più che potete per ottenere effetti sempre migliori.
 
 
 <p>
 <b><img src="images/action_partsystcreate.bmp"> Creare il sistema particellare</b><br>
 Questa azione crea il sistema particellare. Deve essere chiamato prima di qualsiasi altra azione
-per essere utilizzato. Bisogna chiamarlo solo per una volta. &Egrave; possibile specificare la profondit&agrave; alla quale
-le particelle verranno disegnate. Se si utilizza una profondit&agrave; ampiamente positiva le particelle appaiono dietro
-le istanze. Se si utilizza una profondit&agrave; ampiamente negativa appaiono davanti alle istanze.
+per essere utilizzato. Bisogna chiamarlo solo per una volta. È possibile specificare la profondità alla quale
+le particelle verranno disegnate. Se si utilizza una profondità ampiamente positiva le particelle appaiono dietro
+le istanze. Se si utilizza una profondità ampiamente negativa appaiono davanti alle istanze.
 
 
 <p>
 <b><img src="images/action_partsystdestroy.bmp"> Distruggere il sistema particellare</b><br> 
 Questa azione distrugge il sistema particellare, liberando tutta la memoria da esso precedentemente occupata.
-Non dimenticate di chiamare questa azione (ad esempio, quando ci si sposta in un'altra room) perch&eacute; i sistemi
-particellari utilizzano una grande quantit&agrave; di memoria.
- 
+Non dimenticate di chiamare questa azione (ad esempio, quando ci si sposta in un'altra room) perché i sistemi
+particellari utilizzano una grande quantità di memoria.
+
 <p>
 <b><img src="images/action_partsystclear.bmp"> Cancellare le particelle (visibili in quell'istante)</b><br>
-Questa azione rimuove tutte le particelle attualmente visibili. Non ferma per&ograve; gli emettitori,
-cos&igrave; delle nuove particelle potrebbero essere create nuovamente se sono presenti degli emettitori di 
+Questa azione rimuove tutte le particelle attualmente visibili. Non ferma però gli emettitori,
+così delle nuove particelle potrebbero essere create nuovamente se sono presenti degli emettitori di 
 flusso (vedi sotto).
 
 <p>
 <b><img src="images/action_parttypecreate.bmp"> Creare una particella</b><br>
-Con questa azione si crea un tipo di particella. &Egrave; possibile scegliere uno dei
-16 tipi di particelle disponibili. Per il tipo di particella &egrave; possibile specificare
-la sua forma o lo sprite da usare. Se specificate uno sprite, lo sprite verr&agrave; utilizzato.
-Se impostate su No sprite, verr&agrave; utilizzata la forma. C'&egrave; un numero interessante di 
+Con questa azione si crea un tipo di particella. È possibile scegliere uno dei
+16 tipi di particelle disponibili. Per il tipo di particella è possibile specificare
+la sua forma o lo sprite da usare. Se specificate uno sprite, lo sprite verrà utilizzato.
+Se impostate su No sprite, verrà utilizzata la forma. C'è un numero interessante di 
 forme incorporate.Potete indicare la loro dimensione minima e massima (quando la 
-particella apparir&agrave; verr&agrave; utilizzato un valore casuale tra questi limiti). Infine 
-bisogna specificare  l'aumento delle dimensioni per ogni passaggio.  Per decrescere,
+particella apparirà verrà utilizzato un valore casuale tra questi limiti). Infine 
+bisogna specificare l'aumento delle dimensioni per ogni passaggio. Per decrescere,
 usate un valore negativo. Si noti che viene creato solo il tipo di particella, 
 non un sistema. Per creare il sistema avete bisogno delle emettitori (Vedi sotto). 
 
 <p>
-<b><img src="images/action_parttypecolor.bmp"> Particle Color</b><br>
-A particle can have a color (default the color is white). With this action you can
-set the color to be used for a particular type. You must indicate the particle type
-the color is defined for. Next you specify how a color is applied. Either a random
-color is choosen between two given colors, or the color starts with the first color
-and than gradually over the lifetime of the particle, it changes to the second color.
-Both colors must be given. Finally you can indicate the alpha transparency. You specify
-the transparency at the moment the particle is created and when it dies. The transparency
-slowly changes between these values. It is normally nice to decrease the alpha value over the
-lifetime of a particle.
+<b><img src="images/action_parttypecolor.bmp"> Colore delle particelle</b><br>
+Una particella può avere un colore (quello default è bianco). Con questa azione puoi
+impostare il colore che verrà usato per un particle type. Devi indicare il particle type su cui applicare il colore.
+
+Dopo specificare come dev'essere applicato il colore. Può essere un colore casuale scelto da due colori dati, o un colore
+che andrà gradualmente verso un altro, durante la vita "life" della particella.
+E' necessario passare entrambi gli argument relativi al colore.
+Infine definisci la trasparenza (alpha) dal momento in cui viene creata al momento in cui viene distrutta la particella.
+La trasparenza, come il colore, cambia dal primo al secondo valore.
+Ad esempio puoi creare una particella che da alpha 1 ( visibile) cambia lentamente, diminuendo la trasparenza fino a sparire.
 
 <p>
-<b><img src="images/action_parttypelife.bmp"> Particle Life</b><br>
-A particle lives for a limited number of steps. After this is disappears. With this 
-action you set the life time for a particle type. You give two limiting values and the actual 
-life time is chosen randomly between them.
+<b><img src="images/action_parttypelife.bmp"> Vita particelle (life)</b><br>
+Una particella vive per un numero limitato di step, per poi essere distrutta.
+Con questa azione, imposti la vita di un particle type. Devi passare come argument della funzione 2 valori,
+e verrà scelto uno casuale tra questi 2.
 
 <p>
-<b><img src="images/action_parttypespeed.bmp"> Particle Speed</b><br>
-With this action you can set the speed and direction of motion for a particle type. 
-Again you give two limits and the actual value is chosen randomly between them. For 
-example, to make the particle move in a random direction, give 0 and 360 for the 
-limits for the direction. You can also specify a friction. This amount is subtracted 
-from the speed in each step until it becomes 0. (You can make a particle speed up 
-by using a negative friction.)
+<b><img src="images/action_parttypespeed.bmp"> Velocità particelle (speed)</b><br>
+Con quesa azione puoi impostare la velocità e la direzione di moviumento di un particle tipe.
+Devi impostare 2 limiti (inferiore e superiore) e verrà scelto un valore casuale tra questi 2.
+Per esempio se imposti come direzione 0 e 360, verrà scelto casualmente un valore tra 0 e 360.
+Puoi specificare la friction (attrito) : Questo valore è sottratto dalla velocità ogni step finchè non viene azzerata.
+Puoi incrementare la velocità di una particella usando un valore friction negativo.
 
 <p>
-<b><img src="images/action_parttypegravity.bmp"> Particle Gravity</b><br>
-With this action you set the amount of gravity and direction of gravity for a 
-particular particle type. 270 is downwards.
+<b><img src="images/action_parttypegravity.bmp"> Gravità particelle</b><br>
+Con questa azione puoi impostare il valore di gravità e direzione di gravità per un particle type.
+0 è verso destra, 90 è verso l'alto, 180 è verso sinistra e 270 è verso il basso.
 
 <p>
-<b><img src="images/action_parttypesecondary.bmp"> Particle Secondary</b><br>
-This is a bit more complicated. Particles can create other particles during their 
-life time and when they die. With this action you can specify this. You can define 
-the type and number of particles that must be created at each step during the life 
-time and you can specify the type and number of particles that must be created when 
-the particle dies. Be very careful here. You can easily create huge numbers of 
-particles in this way, slowing down the system considerably. For the numbers you 
-can also use a negative value. A negative value x means that in each step a 
-particle is created with chance -1/x. So for example, if you want to generate a 
-secondary particle about every 4 steps, use a value of -4. Secondary particles 
-are great for creating effects like tails of particles or exploding particles.
+<b><img src="images/action_parttypesecondary.bmp"> Particelle secondarie</b><br>
+Le particelle possono creare altre particelle durante la loro vita, o quando vengono distrutte.
+Con questa azione puoi definire ciò.
+Devi definire il particle type e il numero di particelle che verranno create ogni step durante la vita della particella
+e il numero di particelle da creare alla distruzione.
+Fai molta attenzione a questa funzione. Un numero elevato di particelle rallenterà notevolmente il gioco
+Puoi usare anche numeri negativi. Una valore x negativo, significa che ongi step una particella è creata
+con una possibilità -1/x. Per esempio se vuoi generare una particella secondaria ogni 4 step, usa -4.
+Un possibile utilizzo di questa funzione potrebbe essere la creazionee di un esplosione complessa.
 
 <p>
-<b><img src="images/action_partemitcreate.bmp"> Create Emitter</b><br>
-This action creates a particle emitter. Particles are generated by emitters. 
-You can have up to eight emitters. Choose the emitter and specify the shape of 
-it and its size and position (in the form of a bounding box).
+<b><img src="images/action_partemitcreate.bmp"> Creare emettitore (emitter)</b><br>
+Questa azione crea un emettitore che genera particelle.
+Puoi avere fino a 8 emettitori. Scegli un emettitore e specifica la forma, dimensioni e posizione di esso.
+
 
 <p>
-<b><img src="images/action_partemitdestroy.bmp"> Destroy Emitter</b><br>
-This action destroys the indicated emitter. Note that existing particles that 
-came from this emitter are not removed.
+<b><img src="images/action_partemitdestroy.bmp"> Distruggi emettitore</b><br>
+Distrugge l'emettitore scelto, ma NON distrugge le particelle generate da esso.
 
 <p>
-<b><img src="images/action_partemitburst.bmp"> Burst from Emitter</b><br>
-Even if you defined a particle type and an emitter there are still no particles. 
-You still have to tell the emitter to generate the particles. With this action you 
-tell a particular emitter to generate a given number of particles of a given type. 
-All these particles are generated at once. For the number you can also use a negative 
-value. A negative value x means that a particle is created with chance -1/x. So for 
-example, if you want to generate a particle with a chance of 25 percent, use a value of -4.
+<b><img src="images/action_partemitburst.bmp"> Esplosione da emettitore (Burst)</b><br>
+Quando definisci un emettitore e un particle type, non ci sono ancora particelle.
+Devi dire all'emitter di generare particelle.
+Con questa azione dici a un emettitore di generare un numero di particelle di un certo tipo (particle type)
+Tutte le particelle sono generate nello stesso istante. Puoi impostare anche valori negativi, ad esempio puoi impostare una
+possibilità di creazione di -1/x. Per esempio se vuoi generare particelle con un 25% di possibilità usa un valore di -4
+Vengono generate particelle 1 volta sola, quando si chiama la funzione
 
 <p>
 <b><img src="images/action_partemitstream.bmp"> Stream from Emitter</b><br>
-With this action you tell a particular emitter to stream a given number of particles 
-of a given type. In each step this number of particles is generated, leading to a 
-continuous stream of particles. The emitter will continue streaming particles until 
-you destroy it or tell it to stream 0 particles. For the number you can also use a 
-negative value. A negative value x means that in each step a particle is created 
-with chance -1/x. So for example, if you want to generate a particle about every 
-4 steps, use a value of -4.
+Funziona come Particle Burst descritto sopra, con la differenza che vengono emesse particelle ogni step.
 
 
 <!--END-->
@@ -163,6 +153,7 @@ with chance -1/x. So for example, if you want to generate a particle about every
 </html>
 
 <!-- KEYWORDS
+sistemi particellari
 particle actions
 particle systems
---> 
+-->
