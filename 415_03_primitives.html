@@ -20,15 +20,15 @@ di disegno avanzate:
 <p>
 <blockquote>
   <tt><b>d3d_primitive_begin(kind)</b></tt>
-    Comincia un primitivo 3D del tipo indicato: <tt>pr_pointlist, pr_linelist, pr_linestrip, pr_trianglelist,
+    Comincia un primitiva 3D del tipo indicato: <tt>pr_pointlist, pr_linelist, pr_linestrip, pr_trianglelist,
         pr_trianglestrip</tt> o <tt>pr_trianglefan</tt>. sono descritti in una pagina precedente.<br>
   <tt><b>d3d_vertex(x,y,z)</b></tt>
-    Aggiunge il vertice (x,y,z) al primitivo, usando il colore e l'alpha impostati precedentemente.<br>
+    Aggiunge il vertice (x,y,z) al primitiva, usando il colore e l'alpha impostati precedentemente.<br>
   <tt><b>d3d_vertex_color(x,y,z,col,alpha)</b></tt>
-    Aggiunge il vertice (x,y,z) al primitivo, con colore ed alpha propri. Questo ti consente di creare primitivi
+    Aggiunge il vertice (x,y,z) al primitiva, con colore ed alpha propri. Questo ti consente di creare primitive
         cambiando leggermente il colore e l'alpha.<br>
   <tt><b>d3d_primitive_end()</b></tt>
-    Termina la descrizione del primitivo. Questa è la funzione che lo disegna realmente.<br>
+    Termina la descrizione del primitiva. Questa è la funzione che lo disegna realmente.<br>
 </blockquote>
 
 <p>
@@ -77,13 +77,13 @@ caso potresti dover capovolgere la texture verticalmente.
   <tt><b>d3d_primitive_begin_texture(kind,texid)</b></tt>
     Comincia un primitovo 3D di tipo <tt>kind</tt> con la texture <tt>texid</tt>.<br>
   <tt><b>d3d_vertex_texture(x,y,z,xtex,ytex)</b></tt>
-    Aggiunge il vertice (x,y,z) al primitivo con la posizione (xtex,ytex) nella texture, mescolandovi il colore e
+    Aggiunge il vertice (x,y,z) al primitiva con la posizione (xtex,ytex) nella texture, mescolandovi il colore e
         l'alpha impostati precedentemente.<br>
   <tt><b>d3d_vertex_texture_color(x,y,z,xtex,ytex,col,alpha)</b></tt>
     Aggiunge il vertice (x,y,z) al primitovo con la posizione (xtex,ytex) nella texture, mescolandovi colore e
         alpha propri.<br>
   <tt><b>d3d_primitive_end()</b></tt>
-    Termina la descrizione del primitivo. Questa è la funzione che lo disegna realmente.<br>
+    Termina la descrizione del primitiva. Questa è la funzione che lo disegna realmente.<br>
 </blockquote>
 
 <p>
@@ -131,7 +131,7 @@ giusto (ricorda, devi fornire i vertici in senso antiorario). Puoi usare la segu
 culling
 backface culling
 
-primitivi 3D
+primitive 3D
 eliminazione delle facce posteriori
 facce posteriori, eliminazione
 
