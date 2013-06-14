@@ -11,7 +11,7 @@
 <h3>Splash Screens</h3>
 
 
-<b><i>Questa funzionalità è disponibile solo nella Standard Edition di GameMaker.</i></b>
+<b><i>Questa funzionalit&agrave; &egrave; disponibile solo nella Standard Edition di GameMaker.</i></b>
 
 <p>
 Molti giochi hanno i cosiddetti "splash screen". Sono delle schermate che mostrano un video,
@@ -21,9 +21,9 @@ questi splash screen con testo, immagini o video possono essere mostrati in ogni
 gioco.
 
 <p>
-L'impostazione predefinita fa comparire gli splash screen nella finestra del gioco, ma è anche possibile
+L'impostazione predefinita fa comparire gli splash screen nella finestra del gioco, ma &egrave; anche possibile
 mostrarli in una finestra separata. Il gioco viene interrotto mentre viene mostrato lo splash screen. Il
-giocatore può tornare al gioco premendo Esc o cliccando col mouse sulla finestra. (Puoi cambiare tutte
+giocatore pu&ograve; tornare al gioco premendo Esc o cliccando col mouse sulla finestra. (Puoi cambiare tutte
 queste impostazioni, vedi sotto.)
 
 <p>
@@ -32,26 +32,26 @@ Le seguenti funzioni possono essere usate per mostrare gli splash screen:
 <p>
 <blockquote>
   <tt><b>splash_show_video(fname,loop)</b></tt>
-    Mostra un video in uno splash screen. fname è il nome del file video. Un file specifico può essere
+    Mostra un video in uno splash screen. fname &egrave; il nome del file video. Un file specifico pu&ograve; essere
         supportato o no a seconda dei driver installati sul computer. Di solito puoi usare i file .avi,
         .mpg e .wmv ma evita codifiche speciali. Farai bene a mettere tu stesso quel file nella cartella
-        del gioco o in una sottocartella. loop può essere true o false e indica se il video deve essere
-        ripetuto ciclicamente o no. In qquest'ultimo caso lo splash screen si chiuderà automaticamente alla
-        fine del video. <!--O almeno così presumo, non avendo la Pro non posso verificare.--> <br>
+        del gioco o in una sottocartella. loop pu&ograve; essere true o false e indica se il video deve essere
+        ripetuto ciclicamente o no. In qquest'ultimo caso lo splash screen si chiuder&agrave; automaticamente alla
+        fine del video. <!--O almeno cos&igrave; presumo, non avendo la Pro non posso verificare.--> <br>
   <tt><b>splash_show_text(fname,delay)</b></tt>
-    Mostra del testo in uno splash screen. fname è il nome del file di testo. Puoi mostrare file di testo
+    Mostra del testo in uno splash screen. fname &egrave; il nome del file di testo. Puoi mostrare file di testo
         semplici (.txt) o file di testo arricchito (.rtf). Solo parte del testo arricchito viene presa in
         considerazione. Ad esempio non verranno mostrate immagini o altri oggetti incorporati. delay indica
         il numero di millisecondi che devono passare prima di tornare automaticamente al gioco.
         Usa 0 o un valore negativo per visualizzare lo splash screen per un tempo indefinito (il giocatore
-        dovrà premere Esc o cliccare sulla finestra per tornare al gioco). Nota che non ci sarà modo di
+        dovr&agrave; premere Esc o cliccare sulla finestra per tornare al gioco). Nota che non ci sar&agrave; modo di
         scorrere il testo, quindi devi farlo entrare nella finestra.<br>
   <tt><b>splash_show_image(fname,delay)</b></tt>
-    Mostra un'immagine in uno splash screen. fname è il nome del file immagine. Sono supportati molti tipi
+    Mostra un'immagine in uno splash screen. fname &egrave; il nome del file immagine. Sono supportati molti tipi
         di immagine (ad esempio .bmp, .jpg, .tif e .wmf) ma non puoi usare immagini animate. delay indica
         il numero di millisecondi che devono passare prima di tornare automaticamente al gioco.<br>
   <tt><b>splash_show_web(url,delay)</b></tt>
-    Mostra una pagina web in uno splash screen. url è l'url della pagina (comincia con <tt>http://</tt>)
+    Mostra una pagina web in uno splash screen. url &egrave; l'url della pagina (comincia con <tt>http://</tt>)
         oppure il nome di un file html salvato localmente. Nota che devi fornire il persorso completo per
         farlo funzionare. Quindi farai bene a usare qualcosa come <tt>working_directory + "\index.html"</tt>.
         delay indica il numero di millisecondi che devono passare prima di tornare automaticamente al gioco.<br>
@@ -70,31 +70,31 @@ Puoi cambiare il modo in cui gli splash screen vengono visualizzati usando la fu
         il fattore di scala viene scelto in modo da riempire la finestra (predefinito).<br>
   <tt><b>splash_set_cursor(vis)</b></tt>
     Imposta a true per mostrare il cursore nello splash screen (predefinito), imposta a false per nasconderlo.
-        <u>NON</u> <!--lo sottolinea, vero?--> puoi nasconderlo se nello splash screen c'è un video.<br>
+        <u>NON</u> <!--lo sottolinea, vero?--> puoi nasconderlo se nello splash screen c'&egrave; un video.<br>
   <tt><b>splash_set_color(col)</b></tt>
     Imposta il colore dell'area che circonda l'immagine o il video.<br>
   <tt><b>splash_set_caption(cap)</b></tt>
     Imposta la didascalia della finestra dello splash screen. Ha effetto solo se stai usando una finestra separata per
-        lo splash screen. L'impostazione predefinita è la stringa vuota.<br>
+        lo splash screen. L'impostazione predefinita &egrave; la stringa vuota.<br>
   <tt><b>splash_set_fullscreen(full)</b></tt>
-    Indica se la finestra dello splash screen è a schermo intero (true) o no (false, predefinito). Ha effetto solo se
+    Indica se la finestra dello splash screen &egrave; a schermo intero (true) o no (false, predefinito). Ha effetto solo se
         stai usando una finestra separata per lo splash screen.<br>
   <tt><b>splash_set_border(border)</b></tt>
     Indica se la finestra dello splash screen ha un bordo (true, predefinito) o no (false). Ha effetto solo se stai
-        usando una finestra separata per lo splash screen e quella finestra non è a schermo intero.<br>
+        usando una finestra separata per lo splash screen e quella finestra non &egrave; a schermo intero.<br>
   <tt><b>splash_set_size(w,h)</b></tt>
     Imposta la dimensione della finestra dello splash screen. Ha effetto solo se stai usando una finestra separata per
-        lo splash screen e quella finestra non è a schermo intero. L'impostazione predefinita è 640x480.<br>
+        lo splash screen e quella finestra non &egrave; a schermo intero. L'impostazione predefinita &egrave; 640x480.<br>
   <tt><b>splash_set_position(x,y)</b></tt>
     Imposta la posizione della finestra dello splash screen. Ha effetto solo se stai usando una finestra separata per
-        lo splash screen e quella finestra non è a schermo intero. Windows determina la posizione predefinita.<br>
+        lo splash screen e quella finestra non &egrave; a schermo intero. Windows determina la posizione predefinita.<br>
   <tt><b>splash_set_adapt(adapt)</b></tt>
     Indica se la dimensione della finestra deve essere adattata a immagini e video scalati (true, predefinito) o no
         (false). Ha effetto solo se stai usando una finestra separata per lo splash screen e quella finestra non
-        è a schermo intero.<br>
+        &egrave; a schermo intero.<br>
   <tt><b>splash_set_top(top)</b></tt>
     Indica se la finestra dello splash screen deve stare sempre sopra tutte le altre (true, predefinito) o no (false).
-        Ha effetto solo se stai usando una finestra separata per lo splash screen e quella finestra non è a schermo
+        Ha effetto solo se stai usando una finestra separata per lo splash screen e quella finestra non &egrave; a schermo
         intero.<br>
   <tt><b>splash_set_interrupt(interrupt)</b></tt>
     Indica se il gioco deve fermarsi mentre viene mostrata la finestra dello splash screen (true, predefinito) o no
@@ -106,15 +106,15 @@ Puoi cambiare il modo in cui gli splash screen vengono visualizzati usando la fu
         o no (false).<br>
   <tt><b>splash_set_close_button(show)</b></tt>
     Indica se bisogna mostrare un pulsante di chiusura nell'angolo in alto a destra dello splash screen (true, predefinito)
-        o no (fase). Torna utile se lo splash screen è a schermo intero o senza bordo.<br>
+        o no (fase). Torna utile se lo splash screen &egrave; a schermo intero o senza bordo.<br>
 </blockquote>
 
 <p>
-C'è un tipo particolare di splash screen, ovvero le informazioni sul gioco che l'utente può inserire in <i>GameMaker</i>.
-Puoi mostrarle usando la funzione che si trova più in basso. Puoi anche caricare un file separato. Visualizzare le
-informazioni è come mostrare del testo in uno splash screen ma le impostazioni della visualizzazione vanno regolate mentre
+C'&egrave; un tipo particolare di splash screen, ovvero le informazioni sul gioco che l'utente pu&ograve; inserire in <i>GameMaker</i>.
+Puoi mostrarle usando la funzione che si trova pi&ugrave; in basso. Puoi anche caricare un file separato. Visualizzare le
+informazioni &egrave; come mostrare del testo in uno splash screen ma le impostazioni della visualizzazione vanno regolate mentre
 definisci le informazioni (Ctrl+O o secondo pulsante della barra degli strumenti dell'editor delle informazioni) e non
-puoi cambiarle usando le funzioni qui sopra. Se scegli di mostrarle in un'altra finestra, sappi che non è la stessa degli
+puoi cambiarle usando le funzioni qui sopra. Se scegli di mostrarle in un'altra finestra, sappi che non &egrave; la stessa degli
 splash screen, quindi puoi mostrare le informazioni e uno splash screen contemporaneamente. Queste funzioni possono essere
 usate anche nella Lite Edition.
 
@@ -125,7 +125,7 @@ usate anche nella Lite Edition.
   <tt><b>load_info(fname)</b></tt> 
     Carica le informazioni del gioco dal file chiamato fname. Dovrebbe essere un file di testo arricchito (.rtf). Con questa
         funzione puoi mostrare diverse informazioni in diversi momenti. Nota che, al contrario degli splash screen, questo
-        file rtf non può contenere immagini.
+        file rtf non pu&ograve; contenere immagini.
 </blockquote>
 
 

@@ -10,33 +10,33 @@
 
 <h3>Tiles</h3>
 
-Come dovresti sapere puoi aggiungere delle tiles alle room. Una tile è una parte di una risorsa
+Come dovresti sapere puoi aggiungere delle tiles alle room. Una tile &egrave; una parte di una risorsa
 background. Le tiles sono semplicemente immagini. Non reagiscono agli eventi e non generano collisioni.
-Ne risulta che le tiles sono gestite molto più velocemente degli object. Qualunque cosa che non necessiti
-eventi o collisioni può essere fatta tramite le tiles. Inoltre, spesso si usano le tiles per fare belle
+Ne risulta che le tiles sono gestite molto pi&ugrave; velocemente degli object. Qualunque cosa che non necessiti
+eventi o collisioni pu&ograve; essere fatta tramite le tiles. Inoltre, spesso si usano le tiles per fare belle
 grafiche e un object semplice per gli eventi di collisione.
 
 <P>
-In verità hai molto più controllo sulle tiles di quanto pensi. Puoi aggiungerle mentre definisci le room
+In verit&agrave; hai molto pi&ugrave; controllo sulle tiles di quanto pensi. Puoi aggiungerle mentre definisci le room
 ma puoi anche aggiungerle durante l'esecuzione del gioco. Puoi cambiarne la posizione, persino scalarle o
-renderle parzialmente trasparenti. Una tile ha le seguenti proprietà:
+renderle parzialmente trasparenti. Una tile ha le seguenti propriet&agrave;:
 
 <ul>
   <li><tt><b>background</b></tt>. La risorsa background da cui viene pres la tile.</li>
   <li><tt><b>left, top, width, height</b></tt>. La parte del background che viene usata.</li>
   <li><tt><b>x,y</b></tt>. La posizione dell'angolo in alto a sinistra della tile nella room.</li>
-  <li><tt><b>depth</b></tt>. La depth  (profondità) della tile. Puoi scegliere la depth che vuoi,
+  <li><tt><b>depth</b></tt>. La depth  (profondit&agrave;) della tile. Puoi scegliere la depth che vuoi,
       facendo in modo che le tiles appaiano in mezzo alle istanze degli object.</li>
-  <li><tt><b>visible</b></tt>. Indica se la tile è visibile (true) o no (false).</li>
-  <li><tt><b>xscale, yscale</b></tt>. Ogni tile può essere scalata (1 è il valore predefinito).</li>
+  <li><tt><b>visible</b></tt>. Indica se la tile &egrave; visibile (true) o no (false).</li>
+  <li><tt><b>xscale, yscale</b></tt>. Ogni tile pu&ograve; essere scalata (1 &egrave; il valore predefinito).</li>
   <li><tt><b>blend</b></tt>. Un colore da mescolare quando disegni la tile.</li>
   <li><tt><b>alpha</b></tt>. Un valore alpha che indica la trasparenza. 1 = completamente opaco,
       0 = completamente trasparente.</li>
 </ul>
 
-Per cambiare le proprietà di una singola tile devi conoscere il suo id. Quando aggiungi le tiles durante
+Per cambiare le propriet&agrave; di una singola tile devi conoscere il suo id. Quando aggiungi le tiles durante
 la definizione della room l'id della tile che punti col mouse viene mostrato nella barra delle informazioni
-in basso. C'è anche una funzione per trovare l'id di una tile che si trova in una data posizione.
+in basso. C'&egrave; anche una funzione per trovare l'id di una tile che si trova in una data posizione.
 
 <P>
 Esistono le seguenti funzioni per lavorare con le tiles:
@@ -45,7 +45,7 @@ Esistono le seguenti funzioni per lavorare con le tiles:
 <blockquote>
   <tt><b>tile_add(background,left,top,width,height,x,y,depth)</b></tt> 
     Aggiunge una nuova tile nella room con i valori indicati (vedine il significato sopra). La funzione
-        restituisce l'id della tile che può essere usato in seguito.<br>
+        restituisce l'id della tile che pu&ograve; essere usato in seguito.<br>
   <tt><b>tile_delete(id)</b></tt> 
     Cancella la tile con l'id dato.<br>
   <tt><b>tile_exists(id)</b></tt> 
@@ -66,7 +66,7 @@ Esistono le seguenti funzioni per lavorare con le tiles:
   <tt><b>tile_get_depth(id)</b></tt> 
     Restituisce la depth della tile con l'id dato.<br>
   <tt><b>tile_get_visible(id)</b></tt> 
-    Restituisce la visibilità della tile con l'id dato (vedi sopra).<br>
+    Restituisce la visibilit&agrave; della tile con l'id dato (vedi sopra).<br>
   <tt><b>tile_get_xscale(id)</b></tt> 
     Restituisce il fattore di scala orizzontale della tile con l'id dato.<br>
   <tt><b>tile_get_yscale(id)</b></tt> 
@@ -85,7 +85,7 @@ Esistono le seguenti funzioni per lavorare con le tiles:
   <tt><b>tile_set_background(id,background)</b></tt> 
     Imposta il background della tile con l'id dato.<br>
   <tt><b>tile_set_visible(id,visible)</b></tt> 
-    Imposta la visibilità della tile con l'id dato.<br>
+    Imposta la visibilit&agrave; della tile con l'id dato.<br>
   <tt><b>tile_set_depth(id,depth)</b></tt>
     Imposta la depth della tile con l'id dato.<br>
   <tt><b>tile_set_scale(id,xscale,yscale)</b></tt> 
@@ -99,7 +99,7 @@ Esistono le seguenti funzioni per lavorare con le tiles:
 
 <p>
 
-Le seguenti funzioni lavorano con livelli (layers) di tile, cioè insiemi di tile con la stessa depth.
+Le seguenti funzioni lavorano con livelli (layers) di tile, cio&egrave; insiemi di tile con la stessa depth.
 
 <p>
 <blockquote>
@@ -110,17 +110,17 @@ Le seguenti funzioni lavorano con livelli (layers) di tile, cioè insiemi di til
   <tt><b>tile_layer_delete(depth)</b></tt> 
     Cancella tutte le tiles del livello con la depth indicata.<br>
   <tt><b>tile_layer_shift(depth,x,y)</b></tt> 
-    Sposta tutte le tiles del livello con la depth indicata lungo il vettore x,y. Può essere
+    Sposta tutte le tiles del livello con la depth indicata lungo il vettore x,y. Pu&ograve; essere
         usato per spostare interi livelli di tiles.<br>
   <tt><b>tile_layer_find(depth,x,y)</b></tt> 
-    Restiruisce l'id della tile con la depth data e situata in posizione (x,y). Se non ce n'è
-        nessuna viene restituito -1. Se ce n'è più di una viene restituita solo la prima.<br>
+    Restiruisce l'id della tile con la depth data e situata in posizione (x,y). Se non ce n'&egrave;
+        nessuna viene restituito -1. Se ce n'&egrave; pi&ugrave; di una viene restituita solo la prima.<br>
   <tt><b>tile_layer_delete_at(depth,x,y)</b></tt> 
-    Elimina la tile con la depth data e situata in posizione (x,y). Se ce ne sono di più verranno
+    Elimina la tile con la depth data e situata in posizione (x,y). Se ce ne sono di pi&ugrave; verranno
         cancellate tutte.<br>
   <tt><b>tile_layer_depth(depth,newdepth)</b></tt> 
     Imposta la depth di tutte le tiles del livello con la depth indicata a <tt>newdepth</tt>.
-        Con questa funzione puoi spostare (in termini di profondità) interi livelli di tiles.<br>
+        Con questa funzione puoi spostare (in termini di profondit&agrave;) interi livelli di tiles.<br>
 </blockquote>
 
 <p>

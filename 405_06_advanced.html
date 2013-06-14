@@ -10,18 +10,18 @@
 
 <H3>Funzioni di disegno avanzato</H3>
 
-<i><b>Questa funzionalità è disponibile solo nella versione Standard di GameMaker.</b></i>
+<i><b>Questa funzionalit&agrave; &egrave; disponibile solo nella versione Standard di GameMaker.</b></i>
 
 <p>
 Sopra, un numero di funzioni di disegno di base sono state descritte. Qui puoi trovare un numero di funzioni addizionali
-che offrono molte altre possibilità. Prima di tutto ci sono funzioni per disegnare forme
+che offrono molte altre possibilit&agrave;. Prima di tutto ci sono funzioni per disegnare forme
 con colore a gradiente. Ci sono funzione per disegnare poligoni generali, e la possibilita di disegnare poligoni
 con texture mappate.
 
 <P>
 Le seguenti funzioni sono delle estenzioni di quelle basilari. Ognuna di loro ha come parametro extra il colore
-che è usato per determinare il colore dei differenti vertici. Il colore di disegno standard
-non è usato in queste funzioni.
+che &egrave; usato per determinare il colore dei differenti vertici. Il colore di disegno standard
+non &egrave; usato in queste funzioni.
 
 <p>
 <blockquote>
@@ -38,20 +38,20 @@ non è usato in queste funzioni.
 		Indicano i colori dei vertici rispettivamente in alto a sinistra, in alto a destra, in basso a destra e in basso a sinistra. outline
 		indica se deve essere disegnato solo il perimetro (true) o se deve essere riempito (false).<br>
 	<tt><b>draw_roundrect_color(x1,y1,x2,y2,col1,col2,outline)</b></tt>
-	  disegna un rettangolo arrotondato. col1 è il colore al centro
-		e col2 è il colore al margine. outline indica se deve essere disegnato solo il perimetro (true) 
+	  disegna un rettangolo arrotondato. col1 &egrave; il colore al centro
+		e col2 &egrave; il colore al margine. outline indica se deve essere disegnato solo il perimetro (true) 
 		o se deve essere riempito (false).<br>
   <tt><b>draw_triangle_color(x1,y1,x2,y2,x3,y3,col1,col2,col3,outline)</b></tt>
 	  Disegna un triangolo. I tre colori sono i colori
 		dei tre vertici che saranno interpolati sul triangolo. outline indica se deve essere disegnato solo il perimetro (true) 
 		o se deve essere riempito (false).<br>
   <tt><b>draw_circle_color(x,y,r,col1,col2,outline)</b></tt>
-	  Disegna un cerchio alle cordinate (x,y) con raggio r. col1 è il colore al centro
-		e col2 è il colore al margine. outline indica se deve essere disegnato solo il perimetro (true)
+	  Disegna un cerchio alle cordinate (x,y) con raggio r. col1 &egrave; il colore al centro
+		e col2 &egrave; il colore al margine. outline indica se deve essere disegnato solo il perimetro (true)
 		o se deve essere riempito (false).<br>
   <tt><b>draw_ellipse_color(x1,y1,x2,y2,col1,col2,outline)</b></tt>
-	  Disegna un ellisse. col1 è il colore al centro e
-		col2 è il colore al margine. outline indica se deve essere disegnato solo il perimetro (true) 
+	  Disegna un ellisse. col1 &egrave; il colore al centro e
+		col2 &egrave; il colore al margine. outline indica se deve essere disegnato solo il perimetro (true) 
 		o se deve essere riempito (false).<br>
 </blockquote>
 
@@ -65,18 +65,18 @@ al momento che viene disegnato. Ci sono 6 tipi di primitivi:
   <tt><b>pr_pointlist</b></tt>
 	  I vertici sono un set di punti.<br>
   <tt><b>pr_linelist</b></tt>
-	  I vertici sono un set di segmenti. Ogni paio di vertici forna un segmenti. così ci devono essere 
+	  I vertici sono un set di segmenti. Ogni paio di vertici forna un segmenti. cos&igrave; ci devono essere 
 	        almeno un paio di vertici.<br>
   <tt><b>pr_linestrip</b></tt>
-	  I vertici formano una polilinea con il primo conneso al secondo, il secondo al terzo, etc. L'ultimo non è connesso al primo. Si deve specificare 
+	  I vertici formano una polilinea con il primo conneso al secondo, il secondo al terzo, etc. L'ultimo non &egrave; connesso al primo. Si deve specificare 
 	        un segmento extra per questo.<br>
   <tt><b>pr_trianglelist</b></tt>
-	  I vertici sono un set di triangoli. Ogni trio di vertici forma un triangolo. Così il
+	  I vertici sono un set di triangoli. Ogni trio di vertici forma un triangolo. Cos&igrave; il
 		Numero di vertici deve eseere un multiplo di 3.<br>
   <tt><b>pr_trianglestrip</b></tt>
-	  I vertici di nuovo formano triangoli ma stavolta è un po' differente.
+	  I vertici di nuovo formano triangoli ma stavolta &egrave; un po' differente.
 		I primi 3 formano il primo triangolo. Gli ultimi due di questi, insieme al prossimo vertice,
-		formano il secondo triangolo, etc. Così ogni nuovo vertice specifica un nuovo triangolo, connesso
+		formano il secondo triangolo, etc. Cos&igrave; ogni nuovo vertice specifica un nuovo triangolo, connesso
 		al precedente.<br>
   <tt><b>pr_trianglefan</b></tt>
 	  Similar to a triangle list but this time the first vertex is part of all the
