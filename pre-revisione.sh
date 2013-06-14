@@ -11,9 +11,7 @@ for file in $(ls -1 | grep '\.html$')
 
 	IFS="
 "
-	git checkout master
-	authors=$(git log -E --grep='(TRADOTTO|REVISIONATO)' $file | grep -o 'Author: [^ ]*' | sed 's/Author: //' | uniq)
-	git checkout gh-pages
+	authors=$(git log -E --grep='(TRADOTTO|REVISIONATO)' master -- $file | grep -o 'Author: [^ ]*' | sed 's/Author: //' | uniq)
 	trcount=$(echo "$authors" | wc -l)
 
 	if [ $trcount -ne 1 ]; then
