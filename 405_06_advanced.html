@@ -192,56 +192,56 @@ Ci sono tre funzione che inflienzano come le texture sono disegnate:
 </blockquote>
 
 <p>
-There are two more function that are not only useful for drawing textures. Normally primitives are
-blended with the background using the alpha value. You can actually indicate how this must happen.
-Besides the normal mode it is possible to indicate that the new color must be added to the 
-existing color or subtracted from the existing color. This can be used to create e.g. spot
-lights or shadows. Also it is possible to sort of take the maximum of the new and existing color.
-This can avoid certain saturation effects that you can get with adding. 
-Note that both subtracting and maximum do not take the alpha value fully into
-account. (DirectX does not allow this.) So you better make sure the outside area is black. 
-There are two functions. The first one only gives you the four options described
-above. The second function gives you a lot more possibilities. You should
-experiment a bit with the settings. If used effectively they
-can be used to create e.g. interesting explosion or halo effects.
+Ci sono altre due funzioni che non sono solo utili per disegnare texture. Normalmente i primitivi
+sono miscelati con lo sfondo usando il valore di trasparenza. Si può indicare come questo avviene.
+Oltre alla modalità normale è possibile indicare se il nuovo colre deve essere aggiunto a quello
+esistente o sottratto al colore esistente. Questo puo essere usati per creare per esempio un riflettore o 
+delle ombre. E' anche possibile prendere il colore massimo tra il nuovo colore e quello esistente.
+Questo evita certi effetti di saturazione che si ottengono con la modalità addizione.
+Si noti che sia la modalità sottrazione che la modalità massima non prendono in considerazione il valore di
+trasparenza. (DirectX non lo permette.) Così è meglio se l'area esterna sia nera.
+Ci sono due funzioni. La prima usa le quattro opzioni descritte sopra. la seconda
+funzione dà molte possibilità in più. Si dovrebbe fare qualchè esperimento con le opzioni.
+Se si usano efficentemente si possono creare per esempio interessanti esplosioni o aloni.
 
 <p>
 <blockquote>
   <tt><b>draw_set_blend_mode(mode)</b></tt>
-	  Indicates what blend mode to use. The following values are possible: <tt>bm_normal</tt>,
-	  <tt>bm_add</tt>, <tt>bm_subtract</tt>, and <tt>bm_max</tt>. Don't forget to reset the 
-	  mode to normal after use because otherwise also other sprites and even the backgrounds
-	  are drawn with the new blend mode.<br>
+	  Indica quale modalità di mmiscelatura usare. Sono disponibili i seguenti valori: <tt>bm_normal</tt>,
+	  <tt>bm_add</tt>, <tt>bm_subtract</tt>, and <tt>bm_max</tt>. E' importante non dimenticare di
+	  resettare la modalità su normal perchè anchè gli sprite e i background sono disegnati usando
+	  le modalità di miscelatura.<br>
   <tt><b>draw_set_blend_mode_ext(src,dest)</b></tt>
-	  Indicates what blend mode to use for both the source and destination color. The new color
-	  is some factor times the source and another factor times the destination. These factors
-	  are set with this function. To understand this, the source and destination both have
-	  a red, green, blue, and alpha component. So the source is (Rs, Gs, Bs, As) and
-	  the destination is (Rd, Gd, Bd, Ad). All are considered to lie between 0 and 1. The blend
-	  factors you can choose for source and destination are:  
+	  Indica quale modalità di miscelatura usare sia per il colore sorgente sia per il colore di destinazione. 
+	  Il nuovo colore 
+	  Il nuovo colore è a volte il fattore altre volte il fattore di origine e di destinazione. 
+	  Questi fattori sono settati con questa funzione. Per capire questo, Il sorgente e la destinazione
+	  hanno tutti e due i componenti rosso, verde, blu e la trasparenza. Così la sorgente è (Rs, Gs, Bs, As)
+	  e la destinazione è (Rd, Gd, Bd, Ad). Tutti sono compresi tra 0 e 1. I fattori di miscelatura che
+	  si possono scegliere sono:  
 	  <ul>
-	  <li>bm_zero: Blend factor is (0, 0, 0, 0). 
-	  <li>bm_one: Blend factor is (1, 1, 1, 1). 
-	  <li>bm_src_color: Blend factor is (Rs, Gs, Bs, As). 
-	  <li>bm_inv_src_color: Blend factor is (1�Rs, 1�Gs, 1�Bs, 1�As). 
-	  <li>bm_src_alpha: Blend factor is (As, As, As, As). 
-	  <li>bm_inv_src_alpha: Blend factor is (1�As, 1�As, 1�As, 1�As). 
-	  <li>bm_dest_alpha: Blend factor is (Ad, Ad, Ad, Ad). 
-	  <li>bm_inv_dest_alpha: Blend factor is (1�Ad, 1�Ad, 1�Ad, 1�Ad). 
-	  <li>bm_dest_color: Blend factor is (Rd, Gd, Bd, Ad). 
-	  <li>bm_inv_dest_color: Blend factor is (1�Rd, 1�Gd, 1�Bd, 1�Ad). 
-	  <li>bm_src_alpha_sat: Blend factor is (f, f, f, 1); f = min(As, 1�Ad). 
+	  <li>bm_zero: I fattori di miscelatura sono (0, 0, 0, 0). 
+	  <li>bm_one: I fattori di miscelatura sono (1, 1, 1, 1). 
+	  <li>bm_src_color: I fattori di miscelatura sono (Rs, Gs, Bs, As). 
+	  <li>bm_inv_src_color: I fattori di miscelatura sono (1�Rs, 1�Gs, 1�Bs, 1�As). 
+	  <li>bm_src_alpha: I fattori di miscelatura sono (As, As, As, As). 
+	  <li>bm_inv_src_alpha: I fattori di miscelatura sono (1�As, 1�As, 1�As, 1�As). 
+	  <li>bm_dest_alpha: I fattori di miscelatura sono (Ad, Ad, Ad, Ad). 
+	  <li>bm_inv_dest_alpha: I fattori di miscelatura sono (1�Ad, 1�Ad, 1�Ad, 1�Ad). 
+	  <li>bm_dest_color: I fattori di miscelatura sono (Rd, Gd, Bd, Ad). 
+	  <li>bm_inv_dest_color: I fattori di miscelatura sono (1�Rd, 1�Gd, 1�Bd, 1�Ad). 
+	  <li>bm_src_alpha_sat: I fattori di miscelatura sono (f, f, f, 1); f = min(As, 1�Ad). 
 	  </ul>
-	  For example, the normal blending mode sets the source blending to bm_src_alpha and
-	  the destination blending to bm_inv_src_alpha. Don't forget to reset the 
-	  mode to normal after use because otherwise also other sprites and even the backgrounds
-	  are drawn with the new blend mode.<br>
+	  Per esempio, La modalità di miscelatura normale setta i fattori di sorgente a bm_src_alpha
+	  e i valori di destinazione bm_inv_src_alpha. 
+	  E' importante non dimenticare di resettare la modalità su normal perchè anchè 
+	  gli sprite e i background sono disegnati usando le modalità di miscelatura.<br>
 </blockquote>
 
 
 <p>
-Drawing texture primitives is a bit of work but can lead to great results. You can even use it to 
-make fake 3D games.
+Con un po' di lavoro i primitivi texturizzati possono portare a grandi risultati.
+Si possono anche creare giochi in falso 3D.
 
 
 <!--END-->
@@ -256,6 +256,12 @@ drawing primitives
 texture blending
 gradient colors
 blend mode
+disegno avanzato
+texture
+poligoni texturizzati
+disegno dei primitivi
+colori a gradiente
+modalità di miscelatura
 
 draw_point_color()
 draw_line_color()
