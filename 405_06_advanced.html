@@ -79,120 +79,116 @@ al momento che viene disegnato. Ci sono 6 tipi di primitivi:
 		formano il secondo triangolo, etc. Così ogni nuovo vertice specifica un nuovo triangolo, connesso
 		al precedente.<br>
   <tt><b>pr_trianglefan</b></tt>
-	  Similar to a triangle list but this time the first vertex is part of all the
-		triangles. Again, each new vertex specifies a new triangle, connected to the previous vertex and the
-		first vertex.<br>
+	  Similer a una lista di triangoli ma questa volta il primo vertice è parte di tutti i triangoli.
+	  	Ogni nuovo vertice specifica un nuovo triangolo, connesso al precedente e al primo..<br>
 </blockquote>
 
 <p>
-
-The following functions exist for drawing primitives
+Esistono le seguenti funzioni per disegnare i primitivi
 
 <p>
 <blockquote>
   <tt><b>draw_primitive_begin(kind)</b></tt>
-	  Start a primitive of the indicated kind.<br>
+	  Inizia la costruzione di un primitivo del tipo indicato.<br>
   <tt><b>draw_vertex(x,y)</b></tt>
-	  Add vertex (x,y) to the primitive, using the color and alpha value set before.<br>
+	  Aggiunge un vertice (x,y) al primitivo, usando il colore e la trasparenza settate precedentemente.<br>
   <tt><b>draw_vertex_color(x,y,col,alpha)</b></tt>
-	  Add vertex (x,y) to the primitive, with its own color and alpha
-		value. This allows you to create primitives with smoothly changing color and alpha values.<br>
+	  Aggiunge un vertice (x,y) al primitivo, con il proprio colore e trasparenza.
+	  	Questo permette di creare primitivi con cambiamenti di colore e trasparenza..<br>
   <tt><b>draw_primitive_end()</b></tt>
-	  End the description of the primitive. This function actually draws it.<br>
+	  Termina la costruzione del primitivo. Questa funzione attualmente lo disegna.<br>
 </blockquote>
 
 <p>
-
-Finally, it is possible to draw primitives using sprites or backgrounds as textures. When using a 
-texture the image is placed on the primitive, reshaping it to fit the primitive. Textures are used to 
-add detail to primitives, e.g. a brick wall. To use textures you first must obtain the id of the 
-texture you want to use. For this the following functions exist:
+Infine, è possibile disegnare i primitivi usando sprite o background come texture. Quando si usa
+una texture l'immagine è posizionate sul primitivo, deformandolo per coprire il primitivo. Le texture sono usate
+per aggiungere dei dettagli ai primitivi, es: un muro di mattoni. Per usare le texture si deve prima ottenere
+l'id della texture che si vuole usare. Per questo esistono le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>sprite_get_texture(spr,subimg)</b></tt>
-	  Returns the id of the texture corresponding to subimage subimg of the
-		indicated sprite.<br>
+	  Ritorna l'id della texture corrispondente alla sottoimmagine dello sprite indicato.<br>
   <tt><b>background_get_texture(back)</b></tt>
-	  Returns the id of the texture corresponding to the indicated background.<br>
+	  Ritorna l'id della texture corispondente al background indicato.<br>
 </blockquote>
 
 <p>
-
-A selected texture might not yet be in video memory. The system will put it there once you need it 
-but sometimes you want to decide this yourself. For this the following two functions exist:
+la texture selezionata potrebbe non essere ancora in memoria video. Il sistema la mettera lì solo se ne ha il bisogno
+ma avvolte questo si vuole decidere da se. Per questo esistono le due seguenti  funzioni:
 
 <p>
 <blockquote>
   <tt><b>texture_preload(texid)</b></tt>
-	  Puts the texture immediately into video memory.<br>
+	  Mette immediatamente in memoria video la texture.<br>
   <tt><b>texture_set_priority(texid,prio)</b></tt>
-	  When there is too little video memory some will be removed
-		temporarily to make room for others that are needed. The ones with lowest priority are removed first.
-		Default, all have priority 0 but you can change the priority here. (Use positive values!)<br>
+	  Quando c'è poca memoria video alcune texture sono rimosse temporaneamente per fare spazio ad altre
+	  	Quelle con poca priorità sono rimosse per prima. 
+	  	Di default, hanno tutte priorità 0. (usa un valore positivo!)
+<br>
 </blockquote>
 
 <p>
-
-To add textures to primitives you must specify which parts of the textures must be put where on the 
-primitive. Positions in the texture are indicated with values between 0 and 1 but there is a problem 
-here. Sizes of textures must be powers of 2 (so e.g. 32x32 or 64x64). If you want to use sprites or 
-background as textures you better make sure they have such a size. If not, the test will be blank. To 
-find out which part of the texture is actually used you can use the following two functions. They 
-return a value between 0 and 1 that indicates the width or height of the actual part of the texture 
-being used. Specifying this value as texture coordinate will indicate the right or bottom side of the 
-texture.
+Per assegnare texture al primitivo si deve specificare quale parte della texture e dove deve essere posizionata 
+sul primitivo. Le posizioni sono indicate con valori tra 0 e 1 ma qui c'è un problema.
+Le dimensioni delle texture devono essere potenze di 2 (es: 32x32 o 64x64 ecc). Se vuoi usare uno sprite o
+un background come texture è meglio usare queste dimensioni. Se no, il resto sarà vuoto. Per
+sapere quale parte della texture e attualmente in uso si possono unare le seguenti funzioni. Ritornano
+una valore tra 0 e 1 che indica la larghezza o l'altezza della parte attuale della texture che sta per essere
+utilizzata. Specificando questi valori come coordinate di texture idicherà rispettivamente la parte destra o
+la parte bassa della texture.
 
 <p>
 <blockquote>
   <tt><b>texture_get_width(texid)</b></tt>
-	  Returns the width of the texture with the given id. The width lies in the
-		range 0-1.<br>
+	  Ritorma la larghezza della texture con il dato id. La larghezza è compresa tra 0 e 1.<br>
   <tt><b>texture_get_height(texid)</b></tt>
-	  Returns the height of the texture with the given id. The height lies in the
-		range 0-1.<br>
+	  Ritorma l'altezza della texture con il dato id. L'altezza è compresa tra 0 e 1.<br>
 </blockquote>
 
 <p>
 
-To draw textured primitives you use the following functions:
+Per disegnare primitivi texturizzati si possono usare le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>draw_primitive_begin_texture(kind,texid)</b></tt>
-	  Start a primitive of the indicated kind with the given texture.<br>
+	  Inizia la descrizione di un primitivo con il tipo indicato e la texture indicata.<br>
   <tt><b>draw_vertex_texture(x,y,xtex,ytex)</b></tt>
-	  Add vertex (x,y) to the primitive with position (xtex,ytex) in the
-		texture, blending with the color and alpha value set before. xtex and ytex
-		should normally lie between 0 and 1 but also larger values can be used,
+	  Aggiunge un vertice (x,y) al primitivo con posizione (xtex,ytex) nella texture, 
+	        miscelandola con il colore e la trasparenza settate prima. xtex e ytex
+   		dovrebbe essere compresa tra 0 e 1 ma si possono usare anche valori più grandi, che
+   		portano ad una ripetizione della texture (vedi in basso).
 		leading to a repetition of the texture (see below).<br>
   <tt><b>draw_vertex_texture_color(x,y,xtex,ytex,col,alpha)</b></tt>
-	  Add vertex (x,y) to the primitive with position
-		(xtex,ytex) in the texture, blending with its own color and alpha value.<br>
+	  Aggiunge un vertice (x,y) al primitivo con posizione (xtex,ytex) nella texture,
+	  	miscelandola con il colore e la trasparenza data.<br>
   <tt><b>draw_primitive_end()</b></tt>
-	  End the description of the primitive. This function actually draws it.<br>
+	  Termina la descrizione del primitivo, qursta funzione attualmente lo disegna.<br>
 </blockquote>
 
 <p>
-There are three functions that influence how textures are drawn:
+Ci sono tre funzione che inflienzano come le texture sono disegnate:
 
 <p>
 <blockquote>
   <tt><b>texture_set_interpolation(linear)</b></tt>
-	  Indicates whether to use linear interpolation (true) or pick the
-		nearest pixel (false). Linear interpolation gives smoother textures but can also be a bit blurry and
-		sometimes costs extra time. This setting also influence the drawing of sprites and background.
-		Default is false. (This can also be changed in the global game settings.)<br>
+	  Indica se usare l'interpolazzione lineare (true) o se prendere il pixel più vicino (false).
+		L'interpolazione lineare rende le texture morbide ma le può rendere anche sfocate e
+		avvolte costa tempo di elaborazione extra. Quest'impostazione influenza anche il disegno
+		degli sprite e dei background.
+		Di default è settato a false. (Può essere cambiato nel menù "global game settings.".)<br>
   <tt><b>texture_set_blending(blend)</b></tt>
-	  Indicates whether to use blending with colors and alpha values. Switching
-		this off might be faster on old hardware. This setting also influence the drawing of sprites and
-		background. Default is true.<br>
+	  Indica se miscelare le texture con il colore e la trasparenza indicati i precedenza. 
+	  	Settandola su false potrebbe essere più velocè su vecchi hardware.
+	  	Quest'impostazione influenza anche il disegno degli sprite e dei background.
+		Di default è settato a true.<br>
   <tt><b>texture_set_repeat(repeat)</b></tt>
-	  Indicates whether to use repeat the texture. This works as follows. As
-		indicated above texture coordinates lie in the range 0-1. If you specify a value larger than 1,
-		default the rest is not drawn. By setting repeat to true the texture is repeated. Note that sprites
-		and backgrounds are always drawn without repeating. So once you draw a sprite of background this
-		value is reset to false. Default is false.<br>
+	  Indica se ripetere le texture. Questo lavora come segue. Come indicato sopra le coordinate di texture
+	  	usano valori compresi tra 0 e 1. Se si specifica un valore più grande di 1, di default il resto non
+	  	viene disegnato. Settandola a true la texture viene ripetuta. Si noti che sprite e background
+	  	sono sempre disegnati senza repetizioni. Una volta disegnato un sprite o un backround questo valore
+	  	viene resettato a false. Di default è false.<br>
 </blockquote>
 
 <p>
