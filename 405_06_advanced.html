@@ -56,16 +56,16 @@ non è usato in queste funzioni.
 </blockquote>
 
 <p>
-Puoi anche disegnare primitive. Questi funziona un po' diversamente. Si inizia specificando il
-primitivo che vuoi disegnare. Poi si specificano i suoi vertici, e infine si finisce il primitivo,
-al momento che viene disegnato. Ci sono 6 tipi di primitivi:
+Puoi anche disegnare delle primitive. Queste funzionano un po' diversamente. Si inizia specificando la
+primitiva che vuoi disegnare. Poi si specificano i suoi vertici, e infine si finisce la primitiva,
+al momento che viene disegnata. Ci sono 6 tipi di primitive:
 
 <p>
 <blockquote>
   <tt><b>pr_pointlist</b></tt>
 	  I vertici sono un set di punti.<br>
   <tt><b>pr_linelist</b></tt>
-	  I vertici sono un set di segmenti. Ogni paio di vertici forna un segmenti. così ci devono essere 
+	  I vertici sono un set di segmenti. Ogni paio di vertici forma un segmento. Così ci devono essere 
 	        almeno un paio di vertici.<br>
   <tt><b>pr_linestrip</b></tt>
 	  I vertici formano una polilinea con il primo conneso al secondo, il secondo al terzo, etc. L'ultimo non è connesso al primo. Si deve specificare 
@@ -79,7 +79,7 @@ al momento che viene disegnato. Ci sono 6 tipi di primitivi:
 		formano il secondo triangolo, etc. Così ogni nuovo vertice specifica un nuovo triangolo, connesso
 		al precedente.<br>
   <tt><b>pr_trianglefan</b></tt>
-	  Similer a una lista di triangoli ma questa volta il primo vertice è parte di tutti i triangoli.
+	  Simile a una lista di triangoli ma questa volta il primo vertice è parte di tutti i triangoli.
 	  	Ogni nuovo vertice specifica un nuovo triangolo, connesso al precedente e al primo..<br>
 </blockquote>
 
@@ -89,20 +89,20 @@ Esistono le seguenti funzioni per disegnare i primitivi
 <p>
 <blockquote>
   <tt><b>draw_primitive_begin(kind)</b></tt>
-	  Inizia la costruzione di un primitivo del tipo indicato.<br>
+	  Inizia la costruzione di una primitiva del tipo indicato.<br>
   <tt><b>draw_vertex(x,y)</b></tt>
-	  Aggiunge un vertice (x,y) al primitivo, usando il colore e la trasparenza settate precedentemente.<br>
+	  Aggiunge un vertice (x,y) alla primitiva, usando il colore e la trasparenza settate precedentemente.<br>
   <tt><b>draw_vertex_color(x,y,col,alpha)</b></tt>
-	  Aggiunge un vertice (x,y) al primitivo, con il proprio colore e trasparenza.
-	  	Questo permette di creare primitivi con cambiamenti di colore e trasparenza..<br>
+	  Aggiunge un vertice (x,y) alla primitiva, con il proprio colore e trasparenza.
+	  	Questo permette di creare primitive con cambiamenti di colore e trasparenza..<br>
   <tt><b>draw_primitive_end()</b></tt>
-	  Termina la costruzione del primitivo. Questa funzione attualmente lo disegna.<br>
+	  Termina la costruzione della primitiva. Questa funzione attualmente la disegna.<br>
 </blockquote>
 
 <p>
-Infine, è possibile disegnare i primitivi usando sprite o background come texture. Quando si usa
-una texture l'immagine è posizionate sul primitivo, deformandolo per coprire il primitivo. Le texture sono usate
-per aggiungere dei dettagli ai primitivi, es: un muro di mattoni. Per usare le texture si deve prima ottenere
+Infine, è possibile disegnare le primitive usando sprite o background come texture. Quando si usa
+una texture l'immagine è posizionate sulla primitiva, deformandola per coprire la primitiva. Le texture sono usate
+per aggiungere dei dettagli alle primitive, es: un muro di mattoni. Per usare le texture si deve prima ottenere
 l'id della texture che si vuole usare. Per questo esistono le seguenti funzioni:
 
 <p>
@@ -114,8 +114,8 @@ l'id della texture che si vuole usare. Per questo esistono le seguenti funzioni:
 </blockquote>
 
 <p>
-la texture selezionata potrebbe non essere ancora in memoria video. Il sistema la mettera lì solo se ne ha il bisogno
-ma avvolte questo si vuole decidere da se. Per questo esistono le due seguenti  funzioni:
+La texture selezionata potrebbe non essere ancora in memoria video. Il sistema la mettera lì solo se ne hai il bisogno
+ma avvolte questo si vuole decidere da sé. Per questo esistono le due seguenti funzioni:
 
 <p>
 <blockquote>
@@ -129,13 +129,13 @@ ma avvolte questo si vuole decidere da se. Per questo esistono le due seguenti  
 </blockquote>
 
 <p>
-Per assegnare texture al primitivo si deve specificare quale parte della texture e dove deve essere posizionata 
-sul primitivo. Le posizioni sono indicate con valori tra 0 e 1 ma qui c'è un problema.
+Per assegnare texture alla primitiva si deve specificare quale parte della texture e dove deve essere posizionata 
+sulla primitiva. Le posizioni sono indicate con valori tra 0 e 1 ma qui c'è un problema.
 Le dimensioni delle texture devono essere potenze di 2 (es: 32x32 o 64x64 ecc). Se vuoi usare uno sprite o
 un background come texture è meglio usare queste dimensioni. Se no, il resto sarà vuoto. Per
-sapere quale parte della texture e attualmente in uso si possono unare le seguenti funzioni. Ritornano
+sapere quale parte della texture e attualmente in uso si possono usare le seguenti funzioni. Ritornano
 una valore tra 0 e 1 che indica la larghezza o l'altezza della parte attuale della texture che sta per essere
-utilizzata. Specificando questi valori come coordinate di texture idicherà rispettivamente la parte destra o
+utilizzata. Specificando questi valori come coordinate di texture indicherà rispettivamente la parte destra o
 la parte bassa della texture.
 
 <p>
@@ -148,34 +148,33 @@ la parte bassa della texture.
 
 <p>
 
-Per disegnare primitivi texturizzati si possono usare le seguenti funzioni:
+Per disegnare primitive texturizzate si possono usare le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>draw_primitive_begin_texture(kind,texid)</b></tt>
-	  Inizia la descrizione di un primitivo con il tipo indicato e la texture indicata.<br>
+	  Inizia la descrizione di una primitiva con il tipo indicato e la texture indicata.<br>
   <tt><b>draw_vertex_texture(x,y,xtex,ytex)</b></tt>
-	  Aggiunge un vertice (x,y) al primitivo con posizione (xtex,ytex) nella texture, 
+	  Aggiunge un vertice (x,y) alla primitiva con posizione (xtex,ytex) nella texture, 
 	        miscelandola con il colore e la trasparenza settate prima. xtex e ytex
    		dovrebbe essere compresa tra 0 e 1 ma si possono usare anche valori più grandi, che
-   		portano ad una ripetizione della texture (vedi in basso).
-		leading to a repetition of the texture (see below).<br>
+   		portano ad una ripetizione della texture (vedi in basso).<br>
   <tt><b>draw_vertex_texture_color(x,y,xtex,ytex,col,alpha)</b></tt>
-	  Aggiunge un vertice (x,y) al primitivo con posizione (xtex,ytex) nella texture,
+	  Aggiunge un vertice (x,y) alla primitiva con posizione (xtex,ytex) nella texture,
 	  	miscelandola con il colore e la trasparenza data.<br>
   <tt><b>draw_primitive_end()</b></tt>
-	  Termina la descrizione del primitivo, qursta funzione attualmente lo disegna.<br>
+	  Termina la descrizione della primitiva, qursta funzione attualmente la disegna.<br>
 </blockquote>
 
 <p>
-Ci sono tre funzione che inflienzano come le texture sono disegnate:
+Ci sono tre funzione che influenzano come le texture sono disegnate:
 
 <p>
 <blockquote>
   <tt><b>texture_set_interpolation(linear)</b></tt>
 	  Indica se usare l'interpolazzione lineare (true) o se prendere il pixel più vicino (false).
 		L'interpolazione lineare rende le texture morbide ma le può rendere anche sfocate e
-		avvolte costa tempo di elaborazione extra. Quest'impostazione influenza anche il disegno
+		a volte costa tempo di elaborazione extra. Quest'impostazione influenza anche il disegno
 		degli sprite e dei background.
 		Di default è settato a false. (Può essere cambiato nel menù "global game settings.".)<br>
   <tt><b>texture_set_blending(blend)</b></tt>
@@ -192,10 +191,10 @@ Ci sono tre funzione che inflienzano come le texture sono disegnate:
 </blockquote>
 
 <p>
-Ci sono altre due funzioni che non sono solo utili per disegnare texture. Normalmente i primitivi
-sono miscelati con lo sfondo usando il valore di trasparenza. Si può indicare come questo avviene.
+Ci sono altre due funzioni che non sono solo utili per disegnare texture. Normalmente le primitive
+sono miscelate con lo sfondo usando il valore di trasparenza. Si può indicare come questo avviene.
 Oltre alla modalità normale è possibile indicare se il nuovo colre deve essere aggiunto a quello
-esistente o sottratto al colore esistente. Questo puo essere usati per creare per esempio un riflettore o 
+esistente o sottratto al colore esistente. Questo puo essere usato per creare per esempio un riflettore o 
 delle ombre. E' anche possibile prendere il colore massimo tra il nuovo colore e quello esistente.
 Questo evita certi effetti di saturazione che si ottengono con la modalità addizione.
 Si noti che sia la modalità sottrazione che la modalità massima non prendono in considerazione il valore di
@@ -207,13 +206,12 @@ Se si usano efficentemente si possono creare per esempio interessanti esplosioni
 <p>
 <blockquote>
   <tt><b>draw_set_blend_mode(mode)</b></tt>
-	  Indica quale modalità di mmiscelatura usare. Sono disponibili i seguenti valori: <tt>bm_normal</tt>,
-	  <tt>bm_add</tt>, <tt>bm_subtract</tt>, and <tt>bm_max</tt>. E' importante non dimenticare di
-	  resettare la modalità su normal perchè anchè gli sprite e i background sono disegnati usando
+	  Indica quale modalità di miscelatura usare. Sono disponibili i seguenti valori: <tt>bm_normal</tt>,
+	  <tt>bm_add</tt>, <tt>bm_subtract</tt>, and <tt>bm_max</tt>. È importante non dimenticare di
+	  resettare la modalità su normal perché anche gli sprite e i background sono disegnati usando
 	  le modalità di miscelatura.<br>
   <tt><b>draw_set_blend_mode_ext(src,dest)</b></tt>
 	  Indica quale modalità di miscelatura usare sia per il colore sorgente sia per il colore di destinazione. 
-	  Il nuovo colore 
 	  Il nuovo colore è a volte il fattore altre volte il fattore di origine e di destinazione. 
 	  Questi fattori sono settati con questa funzione. Per capire questo, Il sorgente e la destinazione
 	  hanno tutti e due i componenti rosso, verde, blu e la trasparenza. Così la sorgente è (Rs, Gs, Bs, As)
