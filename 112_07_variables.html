@@ -2,64 +2,64 @@
 
 <html>
 <head>
-<title>Usando le espressioni e le variabili</title>
+<title>Usare le Variabili e le Espressioni</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Using expressions and variables</h3>
+<h3>Usare le Variabili e le Espressioni</h3>
 
 In molte azioni avete bisogno di fornire valori e parametri. Oltre che 
-digitare solo un numero, potete anche digitare un formula, per esempio 32*12. Ma in realtà
-potete digitare espressioni più complicate. Per esempio, se volete raddoppiare la velocità 
-orizzontale, potrete settarla a <tt>2*hspeed</tt>. Qui <tt>hspeed</tt> è una 
-variabile che indica la velocità attuale dell'istanza.  
+digitare solo un numero, potete anche digitare un formula, per esempio 32*12. Ma in realt&agrave;
+potete digitare espressioni pi&ugrave; complicate. Per esempio, se volete raddoppiare la velocit&agrave; 
+orizzontale, potrete settarla a <tt>2*hspeed</tt>. Qui <tt>hspeed</tt> &egrave; una 
+variabile che indica la velocit&agrave; attuale dell'istanza.  
 Ci sono molte altre variabili che potete usare.
-Alcune dellepiù importanti sono elencate qui in basso:
+Alcune dellepi&ugrave; importanti sono elencate qui in basso:
 
 <p>
 <blockquote>
-	<b>x</b> la coordinata-x dell’istanza<br>
-	<b>y</b> la coordinata-y dell’istanza<br>
-	<b>hspeed</b> la velocità orizzontale (in pixels per passo)<br>
-	<b>vspeed</b> la velocità verticale (in pixels per passo)<br>
+	<b>x</b> la coordinata-x dell'istanza<br>
+	<b>y</b> la coordinata-y dell'istanza<br>
+	<b>hspeed</b> la velocit&agrave; orizzontale (in pixels per passo)<br>
+	<b>vspeed</b> la velocit&agrave; verticale (in pixels per passo)<br>
 	<b>direction</b> la direzione attuale del movimento espressa in gradi (0-360)<br>
-	<b>speed</b> la velocità attuale in questa direzione<br>
-	<b>visible</b> se l’oggetto è visibile (1) o invisibile (0)<br>
-	<b>image_index</b> questa variabile indica quale sottoimmagine nello sprite attuale è in 
-	realtà mostrata. Se volete cambiarla e settare la velocità a 0 (vedere sotto) dovete mostrare 
+	<b>speed</b> la velocit&agrave; attuale in questa direzione<br>
+	<b>visible</b> se l'oggetto &egrave; visibile (1) o invisibile (0)<br>
+	<b>image_index</b> questa variabile indica quale sottoimmagine nello sprite attuale &egrave; in 
+	realt&agrave; mostrata. Se volete cambiarla e settare la velocit&agrave; a 0 (vedere sotto) dovete mostrare 
 	una sottoimmagine fissa..<br>
-	<b>image_speed</b> questa variabile indica la velocità con la quale sono mostrate le 
-	sottoimmagini. Il valore di default è 1. Se volete incrementare questo valore più di 1 
-	alcune sottoimmagini saranno saltate per rendere l’animazione più veloce. Se volete 
-	renderlo inferiore ad 1 l’animazione diventerà più lenta ripetendo le sottoimmagini.<br>
+	<b>image_speed</b> questa variabile indica la velocit&agrave; con la quale sono mostrate le 
+	sottoimmagini. Il valore di default &egrave; 1. Se volete incrementare questo valore pi&ugrave; di 1 
+	alcune sottoimmagini saranno saltate per rendere l'animazione pi&ugrave; veloce. Se volete 
+	renderlo inferiore ad 1 l'animazione diventer&agrave; pi&ugrave; lenta ripetendo le sottoimmagini.<br>
 	<b>score</b> il valore attuale del punteggio<br>
 	<b>lives</b> le vite disponibili<br>
-	<b>health</b> l’energia disponibile (0-100)<br>
+	<b>health</b> l'energia disponibile (0-100)<br>
 	<b>mouse_x</b> la posizione-x del mouse<br>
 	<b>mouse_y</b> la posizione-y del Mouse<br>
 </blockquote>
 
-Potete cambiare molte di queste variabili usando l’azione di impostazione. Potete anche definire le 
-vostre variabili personali settandole con un valore. (Non usate relative, perchè ancora non esiste). 
+Potete cambiare molte di queste variabili usando l'azione di impostazione. Potete anche definire le 
+vostre variabili personali settandole con un valore. (Non usate relative, perch&egrave; ancora non esiste). 
 Successivamente potete usare queste variabili in espressioni.
-Le variabili da voi create sono locali all’istanza corrente. 
-Cioè, ogni oggetto ha la sua copia personale delle stesse. Per creare una variabile globale, 
+Le variabili da voi create sono locali all'istanza corrente. 
+Cio&egrave;, ogni oggetto ha la sua copia personale delle stesse. Per creare una variabile globale, 
 inserite la parola global e un punto davanti ad essa.
 
 <p>
 Potete anche riferirvi ai valori delle variabili di altro oggetti mettendo il nome dell' oggetto
-e un punto di fronte a loro. Così, per esempio, se vuoi che una palla si muova nel poso dove
+e un punto di fronte a loro. Cos&igrave;, per esempio, se vuoi che una palla si muova nel poso dove
 sta la moneta, potete settare la posizione su (<tt>coin.x</tt> , <tt>coin.y</tt>). In questo modo 
 nel caso di un evento di collisione potete far riferimento alla coordinata dell' altro oggetto come
 <tt>other.x</tt>. Nelle condizioni potete fare confronti come 
-<tt><</tt>(più piccolo di); <tt>></tt> (più grande di); etc.
+<tt><</tt>(pi&ugrave; piccolo di); <tt>></tt> (pi&ugrave; grande di); etc.
 
 <p>
 Potete anche usare le funzioni nelle vostre espressioni. Per esempio, la funzione 
-<tt>random(10)</tt> restituisce un numero reale casuale sotto al 10. In questo caso è possibile 
-settare per esempio la velocità o la direzione di un movimento ad un valore a caso. 
+<tt>random(10)</tt> restituisce un numero reale casuale sotto al 10. In questo caso &egrave; possibile 
+settare per esempio la velocit&agrave; o la direzione di un movimento ad un valore a caso. 
 Esistono molte altre funzioni e sono descritte nella <A HREF="400_index.html">Parte 4</A> della
 documentazione.
 

@@ -10,18 +10,18 @@
 
 <H3>Funzioni di disegno avanzato</H3>
 
-<i><b>Questa funzionalità è disponibile solo nella versione Standard di GameMaker.</b></i>
+<i><b>Questa funzionalit&agrave; &egrave; disponibile solo nella versione Standard di GameMaker.</b></i>
 
 <p>
 Sopra, un numero di funzioni di disegno di base sono state descritte. Qui puoi trovare un numero di funzioni addizionali
-che offrono molte altre possibilità. Prima di tutto ci sono funzioni per disegnare forme
+che offrono molte altre possibilit&agrave;. Prima di tutto ci sono funzioni per disegnare forme
 con colore a gradiente. Ci sono funzione per disegnare poligoni generali, e la possibilita di disegnare poligoni
 con texture mappate.
 
 <P>
 Le seguenti funzioni sono delle estenzioni di quelle basilari. Ognuna di loro ha come parametro extra il colore
-che è usato per determinare il colore dei differenti vertici. Il colore di disegno standard
-non è usato in queste funzioni.
+che &egrave; usato per determinare il colore dei differenti vertici. Il colore di disegno standard
+non &egrave; usato in queste funzioni.
 
 <p>
 <blockquote>
@@ -38,20 +38,20 @@ non è usato in queste funzioni.
 		Indicano i colori dei vertici rispettivamente in alto a sinistra, in alto a destra, in basso a destra e in basso a sinistra. outline
 		indica se deve essere disegnato solo il perimetro (true) o se deve essere riempito (false).<br>
 	<tt><b>draw_roundrect_color(x1,y1,x2,y2,col1,col2,outline)</b></tt>
-	  disegna un rettangolo arrotondato. col1 è il colore al centro
-		e col2 è il colore al margine. outline indica se deve essere disegnato solo il perimetro (true) 
+	  disegna un rettangolo arrotondato. col1 &egrave; il colore al centro
+		e col2 &egrave; il colore al margine. outline indica se deve essere disegnato solo il perimetro (true) 
 		o se deve essere riempito (false).<br>
   <tt><b>draw_triangle_color(x1,y1,x2,y2,x3,y3,col1,col2,col3,outline)</b></tt>
 	  Disegna un triangolo. I tre colori sono i colori
 		dei tre vertici che saranno interpolati sul triangolo. outline indica se deve essere disegnato solo il perimetro (true) 
 		o se deve essere riempito (false).<br>
   <tt><b>draw_circle_color(x,y,r,col1,col2,outline)</b></tt>
-	  Disegna un cerchio alle cordinate (x,y) con raggio r. col1 è il colore al centro
-		e col2 è il colore al margine. outline indica se deve essere disegnato solo il perimetro (true)
+	  Disegna un cerchio alle cordinate (x,y) con raggio r. col1 &egrave; il colore al centro
+		e col2 &egrave; il colore al margine. outline indica se deve essere disegnato solo il perimetro (true)
 		o se deve essere riempito (false).<br>
   <tt><b>draw_ellipse_color(x1,y1,x2,y2,col1,col2,outline)</b></tt>
-	  Disegna un ellisse. col1 è il colore al centro e
-		col2 è il colore al margine. outline indica se deve essere disegnato solo il perimetro (true) 
+	  Disegna un ellisse. col1 &egrave; il colore al centro e
+		col2 &egrave; il colore al margine. outline indica se deve essere disegnato solo il perimetro (true) 
 		o se deve essere riempito (false).<br>
 </blockquote>
 
@@ -65,21 +65,21 @@ al momento che viene disegnata. Ci sono 6 tipi di primitive:
   <tt><b>pr_pointlist</b></tt>
 	  I vertici sono un set di punti.<br>
   <tt><b>pr_linelist</b></tt>
-	  I vertici sono un set di segmenti. Ogni paio di vertici forma un segmento. Così ci devono essere 
+	  I vertici sono un set di segmenti. Ogni paio di vertici forma un segmento. Cos&igrave; ci devono essere 
 	        almeno un paio di vertici.<br>
   <tt><b>pr_linestrip</b></tt>
-	  I vertici formano una polilinea con il primo conneso al secondo, il secondo al terzo, etc. L'ultimo non è connesso al primo. Si deve specificare 
+	  I vertici formano una polilinea con il primo conneso al secondo, il secondo al terzo, etc. L'ultimo non &egrave; connesso al primo. Si deve specificare 
 	        un segmento extra per questo.<br>
   <tt><b>pr_trianglelist</b></tt>
-	  I vertici sono un set di triangoli. Ogni trio di vertici forma un triangolo. Così il
+	  I vertici sono un set di triangoli. Ogni trio di vertici forma un triangolo. Cos&igrave; il
 		Numero di vertici deve eseere un multiplo di 3.<br>
   <tt><b>pr_trianglestrip</b></tt>
-	  I vertici di nuovo formano triangoli ma stavolta è un po' differente.
+	  I vertici di nuovo formano triangoli ma stavolta &egrave; un po' differente.
 		I primi 3 formano il primo triangolo. Gli ultimi due di questi, insieme al prossimo vertice,
-		formano il secondo triangolo, etc. Così ogni nuovo vertice specifica un nuovo triangolo, connesso
+		formano il secondo triangolo, etc. Cos&igrave; ogni nuovo vertice specifica un nuovo triangolo, connesso
 		al precedente.<br>
   <tt><b>pr_trianglefan</b></tt>
-	  Simile a una lista di triangoli ma questa volta il primo vertice è parte di tutti i triangoli.
+	  Simile a una lista di triangoli ma questa volta il primo vertice &egrave; parte di tutti i triangoli.
 	  	Ogni nuovo vertice specifica un nuovo triangolo, connesso al precedente e al primo..<br>
 </blockquote>
 
@@ -100,8 +100,8 @@ Esistono le seguenti funzioni per disegnare i primitivi
 </blockquote>
 
 <p>
-Infine, è possibile disegnare le primitive usando sprite o background come texture. Quando si usa
-una texture l'immagine è posizionate sulla primitiva, deformandola per coprire la primitiva. Le texture sono usate
+Infine, &egrave; possibile disegnare le primitive usando sprite o background come texture. Quando si usa
+una texture l'immagine &egrave; posizionate sulla primitiva, deformandola per coprire la primitiva. Le texture sono usate
 per aggiungere dei dettagli alle primitive, es: un muro di mattoni. Per usare le texture si deve prima ottenere
 l'id della texture che si vuole usare. Per questo esistono le seguenti funzioni:
 
@@ -114,36 +114,36 @@ l'id della texture che si vuole usare. Per questo esistono le seguenti funzioni:
 </blockquote>
 
 <p>
-La texture selezionata potrebbe non essere ancora in memoria video. Il sistema la mettera lì solo se ne hai il bisogno
-ma avvolte questo si vuole decidere da sé. Per questo esistono le due seguenti funzioni:
+La texture selezionata potrebbe non essere ancora in memoria video. Il sistema la mettera l&igrave; solo se ne hai il bisogno
+ma avvolte questo si vuole decidere da s&eacute;. Per questo esistono le due seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>texture_preload(texid)</b></tt>
 	  Mette immediatamente in memoria video la texture.<br>
   <tt><b>texture_set_priority(texid,prio)</b></tt>
-	  Quando c'è poca memoria video alcune texture sono rimosse temporaneamente per fare spazio ad altre
-	  	Quelle con poca priorità sono rimosse per prima. 
-	  	Di default, hanno tutte priorità 0. (usa un valore positivo!)
+	  Quando c'&egrave; poca memoria video alcune texture sono rimosse temporaneamente per fare spazio ad altre
+	  	Quelle con poca priorit&agrave; sono rimosse per prima. 
+	  	Di default, hanno tutte priorit&agrave; 0. (usa un valore positivo!)
 <br>
 </blockquote>
 
 <p>
 Per assegnare texture alla primitiva si deve specificare quale parte della texture e dove deve essere posizionata 
-sulla primitiva. Le posizioni sono indicate con valori tra 0 e 1 ma qui c'è un problema.
+sulla primitiva. Le posizioni sono indicate con valori tra 0 e 1 ma qui c'&egrave; un problema.
 Le dimensioni delle texture devono essere potenze di 2 (es: 32x32 o 64x64 ecc). Se vuoi usare uno sprite o
-un background come texture è meglio usare queste dimensioni. Se no, il resto sarà vuoto. Per
+un background come texture &egrave; meglio usare queste dimensioni. Se no, il resto sar&agrave; vuoto. Per
 sapere quale parte della texture e attualmente in uso si possono usare le seguenti funzioni. Ritornano
 una valore tra 0 e 1 che indica la larghezza o l'altezza della parte attuale della texture che sta per essere
-utilizzata. Specificando questi valori come coordinate di texture indicherà rispettivamente la parte destra o
+utilizzata. Specificando questi valori come coordinate di texture indicher&agrave; rispettivamente la parte destra o
 la parte bassa della texture.
 
 <p>
 <blockquote>
   <tt><b>texture_get_width(texid)</b></tt>
-	  Ritorma la larghezza della texture con il dato id. La larghezza è compresa tra 0 e 1.<br>
+	  Ritorma la larghezza della texture con il dato id. La larghezza &egrave; compresa tra 0 e 1.<br>
   <tt><b>texture_get_height(texid)</b></tt>
-	  Ritorma l'altezza della texture con il dato id. L'altezza è compresa tra 0 e 1.<br>
+	  Ritorma l'altezza della texture con il dato id. L'altezza &egrave; compresa tra 0 e 1.<br>
 </blockquote>
 
 <p>
@@ -157,7 +157,7 @@ Per disegnare primitive texturizzate si possono usare le seguenti funzioni:
   <tt><b>draw_vertex_texture(x,y,xtex,ytex)</b></tt>
 	  Aggiunge un vertice (x,y) alla primitiva con posizione (xtex,ytex) nella texture, 
 	        miscelandola con il colore e la trasparenza settate prima. xtex e ytex
-   		dovrebbe essere compresa tra 0 e 1 ma si possono usare anche valori più grandi, che
+   		dovrebbe essere compresa tra 0 e 1 ma si possono usare anche valori pi&ugrave; grandi, che
    		portano ad una ripetizione della texture (vedi in basso).<br>
   <tt><b>draw_vertex_texture_color(x,y,xtex,ytex,col,alpha)</b></tt>
 	  Aggiunge un vertice (x,y) alla primitiva con posizione (xtex,ytex) nella texture,
@@ -172,50 +172,50 @@ Ci sono tre funzione che influenzano come le texture sono disegnate:
 <p>
 <blockquote>
   <tt><b>texture_set_interpolation(linear)</b></tt>
-	  Indica se usare l'interpolazzione lineare (true) o se prendere il pixel più vicino (false).
-		L'interpolazione lineare rende le texture morbide ma le può rendere anche sfocate e
+	  Indica se usare l'interpolazzione lineare (true) o se prendere il pixel pi&ugrave; vicino (false).
+		L'interpolazione lineare rende le texture morbide ma le pu&ograve; rendere anche sfocate e
 		a volte costa tempo di elaborazione extra. Quest'impostazione influenza anche il disegno
 		degli sprite e dei background.
-		Di default è settato a false. (Può essere cambiato nel menù "global game settings.".)<br>
+		Di default &egrave; settato a false. (Pu&ograve; essere cambiato nel men&ugrave; "global game settings.".)<br>
   <tt><b>texture_set_blending(blend)</b></tt>
 	  Indica se miscelare le texture con il colore e la trasparenza indicati i precedenza. 
-	  	Settandola su false potrebbe essere più velocè su vecchi hardware.
+	  	Settandola su false potrebbe essere pi&ugrave; veloc&egrave; su vecchi hardware.
 	  	Quest'impostazione influenza anche il disegno degli sprite e dei background.
-		Di default è settato a true.<br>
+		Di default &egrave; settato a true.<br>
   <tt><b>texture_set_repeat(repeat)</b></tt>
 	  Indica se ripetere le texture. Questo lavora come segue. Come indicato sopra le coordinate di texture
-	  	usano valori compresi tra 0 e 1. Se si specifica un valore più grande di 1, di default il resto non
+	  	usano valori compresi tra 0 e 1. Se si specifica un valore pi&ugrave; grande di 1, di default il resto non
 	  	viene disegnato. Settandola a true la texture viene ripetuta. Si noti che sprite e background
 	  	sono sempre disegnati senza repetizioni. Una volta disegnato un sprite o un backround questo valore
-	  	viene resettato a false. Di default è false.<br>
+	  	viene resettato a false. Di default &egrave; false.<br>
 </blockquote>
 
 <p>
 Ci sono altre due funzioni che non sono solo utili per disegnare texture. Normalmente le primitive
-sono miscelate con lo sfondo usando il valore di trasparenza. Si può indicare come questo avviene.
-Oltre alla modalità normale è possibile indicare se il nuovo colre deve essere aggiunto a quello
+sono miscelate con lo sfondo usando il valore di trasparenza. Si pu&ograve; indicare come questo avviene.
+Oltre alla modalit&agrave; normale &egrave; possibile indicare se il nuovo colre deve essere aggiunto a quello
 esistente o sottratto al colore esistente. Questo puo essere usato per creare per esempio un riflettore o 
 delle ombre. E' anche possibile prendere il colore massimo tra il nuovo colore e quello esistente.
-Questo evita certi effetti di saturazione che si ottengono con la modalità addizione.
-Si noti che sia la modalità sottrazione che la modalità massima non prendono in considerazione il valore di
-trasparenza. (DirectX non lo permette.) Così è meglio se l'area esterna sia nera.
+Questo evita certi effetti di saturazione che si ottengono con la modalit&agrave; addizione.
+Si noti che sia la modalit&agrave; sottrazione che la modalit&agrave; massima non prendono in considerazione il valore di
+trasparenza. (DirectX non lo permette.) Cos&igrave; &egrave; meglio se l'area esterna sia nera.
 Ci sono due funzioni. La prima usa le quattro opzioni descritte sopra. la seconda
-funzione dà molte possibilità in più. Si dovrebbe fare qualchè esperimento con le opzioni.
+funzione d&agrave; molte possibilit&agrave; in pi&ugrave;. Si dovrebbe fare qualch&egrave; esperimento con le opzioni.
 Se si usano efficentemente si possono creare per esempio interessanti esplosioni o aloni.
 
 <p>
 <blockquote>
   <tt><b>draw_set_blend_mode(mode)</b></tt>
-	  Indica quale modalità di miscelatura usare. Sono disponibili i seguenti valori: <tt>bm_normal</tt>,
-	  <tt>bm_add</tt>, <tt>bm_subtract</tt>, and <tt>bm_max</tt>. È importante non dimenticare di
-	  resettare la modalità su normal perché anche gli sprite e i background sono disegnati usando
-	  le modalità di miscelatura.<br>
+	  Indica quale modalit&agrave; di miscelatura usare. Sono disponibili i seguenti valori: <tt>bm_normal</tt>,
+	  <tt>bm_add</tt>, <tt>bm_subtract</tt>, and <tt>bm_max</tt>. &Egrave; importante non dimenticare di
+	  resettare la modalit&agrave; su normal perch&eacute; anche gli sprite e i background sono disegnati usando
+	  le modalit&agrave; di miscelatura.<br>
   <tt><b>draw_set_blend_mode_ext(src,dest)</b></tt>
-	  Indica quale modalità di miscelatura usare sia per il colore sorgente sia per il colore di destinazione. 
-	  Il nuovo colore è a volte il fattore altre volte il fattore di origine e di destinazione. 
+	  Indica quale modalit&agrave; di miscelatura usare sia per il colore sorgente sia per il colore di destinazione. 
+	  Il nuovo colore &egrave; a volte il fattore altre volte il fattore di origine e di destinazione. 
 	  Questi fattori sono settati con questa funzione. Per capire questo, Il sorgente e la destinazione
-	  hanno tutti e due i componenti rosso, verde, blu e la trasparenza. Così la sorgente è (Rs, Gs, Bs, As)
-	  e la destinazione è (Rd, Gd, Bd, Ad). Tutti sono compresi tra 0 e 1. I fattori di miscelatura che
+	  hanno tutti e due i componenti rosso, verde, blu e la trasparenza. Cos&igrave; la sorgente &egrave; (Rs, Gs, Bs, As)
+	  e la destinazione &egrave; (Rd, Gd, Bd, Ad). Tutti sono compresi tra 0 e 1. I fattori di miscelatura che
 	  si possono scegliere sono:  
 	  <ul>
 	  <li>bm_zero: I fattori di miscelatura sono (0, 0, 0, 0). 
@@ -230,10 +230,10 @@ Se si usano efficentemente si possono creare per esempio interessanti esplosioni
 	  <li>bm_inv_dest_color: I fattori di miscelatura sono (1�Rd, 1�Gd, 1�Bd, 1�Ad). 
 	  <li>bm_src_alpha_sat: I fattori di miscelatura sono (f, f, f, 1); f = min(As, 1�Ad). 
 	  </ul>
-	  Per esempio, La modalità di miscelatura normale setta i fattori di sorgente a bm_src_alpha
+	  Per esempio, La modalit&agrave; di miscelatura normale setta i fattori di sorgente a bm_src_alpha
 	  e i valori di destinazione bm_inv_src_alpha. 
-	  E' importante non dimenticare di resettare la modalità su normal perchè anchè 
-	  gli sprite e i background sono disegnati usando le modalità di miscelatura.<br>
+	  E' importante non dimenticare di resettare la modalit&agrave; su normal perch&egrave; anch&egrave; 
+	  gli sprite e i background sono disegnati usando le modalit&agrave; di miscelatura.<br>
 </blockquote>
 
 
@@ -259,7 +259,7 @@ texture
 poligoni texturizzati
 disegno dei primitivi
 colori a gradiente
-modalità di miscelatura
+modalit&agrave; di miscelatura
 
 draw_point_color()
 draw_line_color()

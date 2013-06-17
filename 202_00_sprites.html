@@ -1,49 +1,49 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html><head>
-<title>Di più sugli sprites</title>
+<title>Di pi&ugrave; sugli Sprite</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h1>Di più sugli sprites</h1>
+<h1>Di pi&ugrave; sugli Sprite</h1>
 
 Mentre esegui <i>Game Maker</i> nell' Advanced Mode
-esiste un certo numero di opzioni avanzate. Quando apri la finestra "sprite" essa apparirà coma segue:
+esiste un certo numero di opzioni avanzate. Quando apri la finestra "sprite" essa apparir&agrave; coma segue:
 
 <p>
 <img src="images/form_sprite_advanced.jpg">
 
 <p>
-Un nuovo pulsante <b>"Save Sprite"</b> (salva sprite) è comparso. Con questo pulsante puoi salvare lo sprite
-in un formato proprio. Questo formato non solo conserverà l'immagine o le immagini dello sprite
-ma anche altre impostazioni, come le impostazioni di collisione e l'origine. Il file avrà
-l'estensione .gmspr. <i>Game Maker</i> può caricare questi file ma anche i giochi possono
+Un nuovo pulsante <b>"Save Sprite"</b> (salva sprite) &egrave; comparso. Con questo pulsante puoi salvare lo sprite
+in un formato proprio. Questo formato non solo conserver&agrave; l'immagine o le immagini dello sprite
+ma anche altre impostazioni, come le impostazioni di collisione e l'origine. Il file avr&agrave;
+l'estensione .gmspr. <i>Game Maker</i> pu&ograve; caricare questi file ma anche i giochi possono
 caricarli.
 
 <p>
-In basso a sinistra, puoi indicare l'origine dello sprite. Quello è il punto nello
+In basso a sinistra, puoi indicare l'origine dello sprite. Quello &egrave; il punto nello
 sprite che corrisponde con la sua posizione nella room. Quando imposti un'istanza in una
-particolare posizione, l'origine dello sprite è posizionata lì. L'impostazione di default
-è l'angolo in alto a sinistra dello sprite ma a volte è più conveniente
+particolare posizione, l'origine dello sprite &egrave; posizionata l&igrave;. L'impostazione di default
+&egrave; l'angolo in alto a sinistra dello sprite ma a volte &egrave; pi&ugrave; conveniente
 usare il centro (cliccando sul pulsante <b>Center</b> (centro))
 o in qualche altro punto importante. Puoi persino scegliere
 un'origine fuori dallo sprite. Puoi anche scegliere l'origine cliccando
-nell'immagine dello sprite. L'origine verrà mostrata con una croce.
+nell'immagine dello sprite. L'origine verr&agrave; mostrata con una croce.
 
 <p>
-Le più importanti sono le opzioni relative al controllo della collisione. Ogni volta che due istanze
+Le pi&ugrave; importanti sono le opzioni relative al controllo della collisione. Ogni volta che due istanze
 si incontrano viene generato un evento collision. Le collisioni sono controllate nel seguente modo.
 Ogni sprite ha una maschera (collision mask). Per l'impostazione di default corrisponde a tutti i pixel che non sono completamente trasparenti.
 Quando due pixel nelle maschere dei due sprite si sovrappongono, avviene una collisione.
 
 <p>
 A volte potresti non voler precisare il controllo delle collisioni. In questo caso, NON spuntare la
-casella <b>Precise collision checking</b> (precisa il controllo delle collisioni). Ora la bounding box è usata come maschera.
+casella <b>Precise collision checking</b> (precisa il controllo delle collisioni). Ora la bounding box &egrave; usata come maschera.
 
 <p>
-Quando gli sprite hanno più subimmagini, per l'impostazione di default c'è una singola maschera che
+Quando gli sprite hanno pi&ugrave; subimmagini, per l'impostazione di default c'&egrave; una singola maschera che
 combina le maschere di tutte le subimmagini. Normalmente tu vuoi fare in questo modo ma in alcuni
 casi potresti volere che ogni subimmagine abbia una sua maschera. In questo caso spunta
 la casella <b>Separate collision masks</b> (separa le maschere di collisione).
@@ -53,7 +53,7 @@ la casella <b>Separate collision masks</b> (separa le maschere di collisione).
 <p>
 Se vuoi controllare ancora meglio
 le maschere di collisione, premi il pulsante <b>Modify Mask</b> (modifica maschera). La finestra seguente
-verrà mostrata:
+verr&agrave; mostrata:
 
 <p>
 <img src="images/form_mask.jpg">
@@ -61,8 +61,8 @@ verrà mostrata:
 <p>
 In alto a sinistra ci sono di nuovo le informazioni riguardo all'immagine dello sprite. Puoi
 mostrare le diverse subimmagini. Puoi indicare qui anche se mostrare la
-maschera di collisione (l'impostazione di default è "attivo"). In questo caso, nelle immagini sulla destra la maschera
-è mostrata in scuro. Puoi anche ingrandire o rimpicciolire per vedere meglio.
+maschera di collisione (l'impostazione di default &egrave; "attivo"). In questo caso, nelle immagini sulla destra la maschera
+&egrave; mostrata in scuro. Puoi anche ingrandire o rimpicciolire per vedere meglio.
 </p>
 
 <p>
@@ -76,34 +76,34 @@ mentre disegni viene mostrata la maschera, non la bounding box!)
 </p>
 
 <p>
-In basso puoi indicare la forma della maschera. L'impostazione di default è "Precise" (precisa), ovvero un controllo di collisione
+In basso puoi indicare la forma della maschera. L'impostazione di default &egrave; "Precise" (precisa), ovvero un controllo di collisione
 che riguarda i pixel, ma puoi anche scegliere "Rectangle","Disk" o "Diamond" (ovvero rettangolo/quadrato, cerchio/ellisse
 o quadrato ruotato di 45°/rombo). Rettangoli ed ellissi sono nella maggioranza dei casi migliori
-rappresentazioni della forma. (Nota che la scelta non ha effetto sulla velocità!)
+rappresentazioni della forma. (Nota che la scelta non ha effetto sulla velocit&agrave;!)
 </p>
 
 <p>
 Infine, in basso a sinista puoi (di nuovo) indicare se separare o no
 le maschere di collisione per tutte le subimmagini. (Nota che se hai impostato la bounding box "Manual",
-la singola bounding box verrà usata per tutte le subimmagini, indipendentemente da questa impostazione.)
+la singola bounding box verr&agrave; usata per tutte le subimmagini, indipendentemente da questa impostazione.)
 Puoi anche indicare la tolleranza ("Tolerance") rispetto alla trasparenza. Con
-una tolleranza più alta anche i pixel che sono parzialmente trasparenti non verranno considerati
-nella maschera. Questo influenza sia la bounding box (quando non è impostata su "Manual") che la
+una tolleranza pi&ugrave; alta anche i pixel che sono parzialmente trasparenti non verranno considerati
+nella maschera. Questo influenza sia la bounding box (quando non &egrave; impostata su "Manual") che la
 maschera per il controllo di collisione preciso.
 </p>
 
 <p>
-È importante decidere con attenzione la maschera di collisione da usare per i tuoi sprite.
-Sebbene il controllo di collisione preciso potrebbe sembrare la scelta più logica, in molti
+&Egrave; importante decidere con attenzione la maschera di collisione da usare per i tuoi sprite.
+Sebbene il controllo di collisione preciso potrebbe sembrare la scelta pi&ugrave; logica, in molti
 casi il game play migliora usando  rettangoli o ellissi come bounding box, o maschere che sono un
-po' più piccole rispetto agli sprite. Se vuoi un controllo ancora maggiore sulla maschera,
+po' pi&ugrave; piccole rispetto agli sprite. Se vuoi un controllo ancora maggiore sulla maschera,
 nota che per gli object puoi specificare uno sprite diverso da usare come maschera. In questo modo
 puoi rendere la maschera di collisione completamente indipendente dall'immagine.
 </p>
 
 <p>
-Quando hai finito, premi <b>OK</b>. Se la maschera è stata modificata, la parola <b>Modified</b> (modificato)
-apparirà nella finestra dello sprite per ricordarti che hai cambiato alcune impostazioni qui.</p>
+Quando hai finito, premi <b>OK</b>. Se la maschera &egrave; stata modificata, la parola <b>Modified</b> (modificato)
+apparir&agrave; nella finestra dello sprite per ricordarti che hai cambiato alcune impostazioni qui.</p>
 
 
 
@@ -112,13 +112,13 @@ apparirà nella finestra dello sprite per ricordarti che hai cambiato alcune imp
 <h3>Modificare gli sprite</h3>
 
 <P>
-<i>GameMaker</i> ha ampie possibilità per creare e modificare i tuoi sprite.
+<i>GameMaker</i> ha ampie possibilit&agrave; per creare e modificare i tuoi sprite.
 Puoi trovare informazioni a riguardo nelle seguenti pagine:
 
 <P>
 <blockquote>
    <a href="202_01_editing.html">Modificare i tuoi sprite</a><br>
-   <a href="202_02_strips.html">Strips (sprite animati)</a><br>
+   <a href="202_02_strips.html">Le Strip</a><br>
    <a href="202_03_individual.html">Modificare le singole subimmagini</a><br>
 
 </blockquote>

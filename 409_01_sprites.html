@@ -10,7 +10,7 @@
 
 <h3>Sprites</h3>
 
-Sono disponibili le seguenti funzioni per cambiare le proprietà degli sprite:
+Sono disponibili le seguenti funzioni per cambiare le propriet&agrave; degli sprite:
 
 <p>
 <blockquote>
@@ -26,7 +26,7 @@ Le seguenti funzioni possono essere utilizzate per creare nuovi sprite e per rim
 <blockquote>
   <tt><b>sprite_duplicate(ind)</b></tt> 
 	Crea una copia dello sprite con l'indice dato
-	e restituisce l'indice del nuovo sprite. Quando c'è un errore, restituisce -1.<br>
+	e restituisce l'indice del nuovo sprite. Quando c'&egrave; un errore, restituisce -1.<br>
   <tt><b>sprite_assign(ind,spr)</b></tt> 
 	Assegna lo sprite indicato allo sprite ind. Quindi
 	questo crea una copia dello sprite. In questo modo puoi facilmente impostare uno sprite esistente
@@ -34,11 +34,11 @@ Le seguenti funzioni possono essere utilizzate per creare nuovi sprite e per rim
   <tt><b>sprite_merge(ind1,ind2)</b></tt> 
 	Unisce le immagini dallo sprite ind2 allo sprite ind1,
 	aggiungendole alla fine. Se la dimensione non combacia gli sprite vengono ridimensionati.
-	Lo sprite ind2 non verrà cancellato!<br>
+	Lo sprite ind2 non verr&agrave; cancellato!<br>
   <tt><b>sprite_add(fname,imgnumb,removeback,smooth,xorig,yorig)</b></tt> 
 	Aggiunge l'immagine memorizzata nel file fname al set di risorse degli sprite.
-	Possono essere trattati molti tipi di file differenti. Quando l'immagine non è una gif animata
-	può essere uno strip contenente un certo numero di sottoimmagini una dopo l'altra. Usa imgnumb per
+	Possono essere trattati molti tipi di file differenti. Quando l'immagine non &egrave; una gif animata
+	pu&ograve; essere uno strip contenente un certo numero di sottoimmagini una dopo l'altra. Usa imgnumb per
 	indicare quante sono (1 per una sola immagine). Per le gif animate, questo argomento
 	non viene usato; viene usato il numero di immagini nella gif invece. <tt>removeback</tt> indica se
 	tutti i pixel con il colore dello sfondo (il pixel in alto a sinistra) devono essere resi trasparenti.
@@ -52,7 +52,7 @@ Le seguenti funzioni possono essere utilizzate per creare nuovi sprite e per rim
 	non ci sono stati errori.<br>
   <tt><b>sprite_add_sprite(fname)</b></tt> 
 	Aggiunge lo sprite memorizzato nel file fname al set di risorse. Il file dev'essere
-	un file .gmspr che viene salvato nella finestra delle proprietà degli sprite di <i>GameMaker</i>.
+	un file .gmspr che viene salvato nella finestra delle propriet&agrave; degli sprite di <i>GameMaker</i>.
 	Visto che il file contiene tutte le impostazioni dello sprite, non sono necessari altri argomenti.
 	La funzione restituisce l'indice 
 	del nuovo sprite che puoi in seguito usare per disegnarlo o per assegnarlo alla variabile sprite_index.
@@ -66,11 +66,11 @@ Le seguenti funzioni possono essere utilizzate per creare nuovi sprite e per rim
 	devono essere resi trasparenti i pixel col colore dello sfondo (pixel in alto a sinistra).
 	<tt>smooth</tt> indica se smussare i bordi. Questo rende possibile creare
 	tutti gli sprite che vuoi. Disegna l'immagine nello schermo usando le funzioni apposite e crea uno sprite
-	da esso. (Se non fai ciò nell'evento Draw puoi anche farlo in modo che
+	da esso. (Se non fai ci&ograve; nell'evento Draw puoi anche farlo in modo che
 	non sia visibile nello schermo senza aggiornarlo). Gli altri parametri sono simili a quelli sopra.
-	La funzione restituisce l'indice del nuovo sprite. È richiesta una certa attenzione qui. Anche
-	se parliamo di schermo, in realtà è soltanto la parte in cui si disegna.
-	Il fatto che c'è una finestra nello schermo e che l'immagine potrebbe essere ridimensionata non è rilevante.
+	La funzione restituisce l'indice del nuovo sprite. &Egrave; richiesta una certa attenzione qui. Anche
+	se parliamo di schermo, in realt&agrave; &egrave; soltanto la parte in cui si disegna.
+	Il fatto che c'&egrave; una finestra nello schermo e che l'immagine potrebbe essere ridimensionata non &egrave; rilevante.
 	<br>
   <tt><b>sprite_add_from_screen(ind,x,y,w,h,removeback,smooth)</b></tt> 
 	Aggiunge un'area dello schermo come prossima subimage allo sprite con l'indice ind. <br>
@@ -96,14 +96,14 @@ Queste funzioni esistono per cambiare l'aspetto dello sprite.
 <blockquote>
   <tt><b>sprite_set_alpha_from_sprite(ind,spr)</b></tt> 
 	Cambia i valori alpha (la trasparenza) nello sprite con l'indice
-	<tt>ind</tt> usando i valori di intensità nello sprite <tt>spr</tt>.
-	Questo non può essere annullato.<br>
+	<tt>ind</tt> usando i valori di intensit&agrave; nello sprite <tt>spr</tt>.
+	Questo non pu&ograve; essere annullato.<br>
 </blockquote>
 
 <p>
 Infine, puoi cambiare la maschera per le collisioni con le seguenti funzioni.
 Per favore sappi che questo non funziona correttamente quando un'istanza con quello sprite
-è già presente nella room.
+&egrave; gi&agrave; presente nella room.
 
 <p>
 <blockquote>
@@ -111,10 +111,10 @@ Per favore sappi che questo non funziona correttamente quando un'istanza con que
 	Cambia la maschera delle collisioni per lo sprite con indice
 	<tt>ind</tt>. <tt>sepmasks</tt> indica se ci devono essere delle maschere separate
 	per ogni sottoimmagine.
-	<tt>bboxmode</tt> è la modalità per la bounding box (0=automatica, 1=piena immagine,
+	<tt>bboxmode</tt> &egrave; la modalit&agrave; per la bounding box (0=automatica, 1=piena immagine,
 	2=definita dall'utente). <tt>bbleft, bbright, bbtop, bbbottom</tt>  indicano la bounding box
-	nel caso in cui sia stata scelta la modalità 2. Puoi usare 0 per tutte le altre modalità.
-	<tt>kind</tt> è il tipo di maschera (0=precisa, 1=bounding box, 
+	nel caso in cui sia stata scelta la modalit&agrave; 2. Puoi usare 0 per tutte le altre modalit&agrave;.
+	<tt>kind</tt> &egrave; il tipo di maschera (0=precisa, 1=bounding box, 
 	2=disco, 3=diamante). <tt>tolerance</tt> indica la tolleranza nella trasparenza. (0=nessuna tolleranza, 
 	255=totale tolleranza). <br>
 </blockquote>

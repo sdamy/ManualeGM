@@ -2,59 +2,59 @@
 
 <html>
 <head>
-<title>Paths</title>
+<title>Path</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Paths</h3>
+<h3>Path</h3>
 
 In <i>GameMaker</i> puoi definire paths e ordine di istanze per segire dei percorsi.
 Nonostante puoi usare azioni pr questo, ci sono funzioni e variabili che ti danno
-più flessibilità:
+pi&ugrave; flessibilit&agrave;:
 
 <p>
 <blockquote>
   <tt><b>path_start(path,speed,endaction,absolute)</b></tt>
-    Inizia un percorso per l'istanza attuale. Il <TT>path</TT> è il nome del percorso che 
-    vuoi iniziare. Il <TT>speed</TT> è la velocità con cui il percorso deve essere seguito.
-    Una velocità negativa significa che l'istanza si muove indietro lungo il percorso. Il
+    Inizia un percorso per l'istanza attuale. Il <TT>path</TT> &egrave; il nome del percorso che 
+    vuoi iniziare. Il <TT>speed</TT> &egrave; la velocit&agrave; con cui il percorso deve essere seguito.
+    Una velocit&agrave; negativa significa che l'istanza si muove indietro lungo il percorso. Il
     <TT>endaction</TT> indica cosa dovrebbe succedere quando la fine del percorso
-    è raggiunta. I seguenti valore possono essere usati:
+    &egrave; raggiunta. I seguenti valore possono essere usati:
     
     <p>
 	<blockquote>
 	  0 : ferma il percorso<br>
-	  1: continua dalla posizione iniziale (se il percorso non è chiuso salta alla posizione iniziale)<br>
+	  1: continua dalla posizione iniziale (se il percorso non &egrave; chiuso salta alla posizione iniziale)<br>
 	  2: continua dalla posizione attuale<br>
-	  3: inverte il percorso, che cambia il segno della velocità<br>
+	  3: inverte il percorso, che cambia il segno della velocit&agrave;<br>
 	</blockquote>
     L'argomento <TT>absolute</TT> dovrebbe essere true o false. Quando true le coordinate
-        assolute del percorso sono usate. Quando false il percorso è relativo all'attuale
-        posizione dell'istanza. Per essere più precisi, se la velocità è positiva, il punto
-        d'inizio del percorso sarà posizionato alla posizione attuale del percorso che è seguito
-        da lì. Quando la velocità è negativa il punto finale del percorso sarà posizionto
-        alla attuale posizione del percorso che è seguito indietro da lì.<br>
+        assolute del percorso sono usate. Quando false il percorso &egrave; relativo all'attuale
+        posizione dell'istanza. Per essere pi&ugrave; precisi, se la velocit&agrave; &egrave; positiva, il punto
+        d'inizio del percorso sar&agrave; posizionato alla posizione attuale del percorso che &egrave; seguito
+        da l&igrave;. Quando la velocit&agrave; &egrave; negativa il punto finale del percorso sar&agrave; posizionto
+        alla attuale posizione del percorso che &egrave; seguito indietro da l&igrave;.<br>
   <tt><b>path_end()</b></tt>
     Termina l'inseguimento del percorso per l'istanza attuale.<br>
   <tt><b>path_index*</b></tt>
     L'indica del percorso attuale che l'istanza segue. Non puoi cambiare questo
         direttamente ma devi usare la funzione di sopra.<br>
   <tt><b>path_position</b></tt>
-    La posizione del percorso attuale. 0 è l'inizio del percorso. 1 è la fine del
+    La posizione del percorso attuale. 0 &egrave; l'inizio del percorso. 1 &egrave; la fine del
         percorso. Il valore deve lievitare tra 0 e 1.<br>
   <tt><b>path_positionprevious</b></tt>
-    La posizione precedente nel percorso attuale. Può essere usato e.g. negli eventi di collisione
+    La posizione precedente nel percorso attuale. Pu&ograve; essere usato e.g. negli eventi di collisione
         per settare la posizione sul percorso indietro alla posizione precedente.<br>
   <tt><b>path_speed</b></tt>
-    Velocità (in pixels per step) con cui il percorso deve essere seguito. Usa una
-        velocità negativa per spostare indietro.<br>
+    Velocit&agrave; (in pixels per step) con cui il percorso deve essere seguito. Usa una
+        velocit&agrave; negativa per spostare indietro.<br>
   <tt><b>path_orientation</b></tt>
-    L'orientazione (anti-oraria) in cui il path è eseguito. 0 è 
+    L'orientazione (anti-oraria) in cui il path &egrave; eseguito. 0 &egrave; 
         la normale orientazione del percorso.<br>
   <tt><b>path_scale</b></tt>
-    La scala del percorso. Incrementa per allargare il percorso. 1 è il valore attuale.<br>
+    La scala del percorso. Incrementa per allargare il percorso. 1 &egrave; il valore attuale.<br>
   <tt><b>path_endaction</b></tt>
     L'azione che deve essere eseguita alla fine del percorso. Puoi
         usare i valori indicati sopra.<br>

@@ -15,9 +15,9 @@ Per l'interazione del mouse, esistono le seguenti variabili e funzioni:
 <p>
 <blockquote>
   <tt><b>mouse_x*</b></tt> 
-    Ascissa del mouse nella room. Non può essere cambiata.<br>
+    Ascissa del mouse nella room. Non pu&ograve; essere cambiata.<br>
   <tt><b>mouse_y*</b></tt> 
-    Ordinata del mouse nella room. Non può essere cambiata.<br>
+    Ordinata del mouse nella room. Non pu&ograve; essere cambiata.<br>
   <tt><b>mouse_button</b></tt> 
     Pulsante premuto correntemente. Come valori usa <tt>mb_none</tt>,
         <tt>mb_any</tt>, <tt>mb_left</tt>, <tt>mb_middle</tt>, o <tt>mb_right</tt>.<br>
@@ -27,29 +27,29 @@ Per l'interazione del mouse, esistono le seguenti variabili e funzioni:
 
 <p>
 
-Per controllare se un bottone particolare del mouse è premuto puoi usare le seguenti
-funzioni. Sono molto utili se più tasti sono premuti simultaneamente.
+Per controllare se un bottone particolare del mouse &egrave; premuto puoi usare le seguenti
+funzioni. Sono molto utili se pi&ugrave; tasti sono premuti simultaneamente.
 
 <p>
 <blockquote>
   <tt><b>mouse_check_button(numb)</b></tt>
-    Restituisce true se il pulsante del mouse indicato è correntemente premuto
+    Restituisce true se il pulsante del mouse indicato &egrave; correntemente premuto
         (usa <tt>mb_none</tt>, <tt>mb_left</tt>, <tt>mb_middle</tt>, o <tt>mb_right</tt>).<br>
   <tt><b>mouse_check_button_pressed(numb)</b></tt>
-    Restituisce true se il pulsante del mouse indicato è stato premuto nell'ultimo step.<br>
+    Restituisce true se il pulsante del mouse indicato &egrave; stato premuto nell'ultimo step.<br>
   <tt><b>mouse_check_button_released(numb)</b></tt>
-    Restituisce true se il pulsante del mouse indicato è stato rilasciato nell'ultimo step.<br>
+    Restituisce true se il pulsante del mouse indicato &egrave; stato rilasciato nell'ultimo step.<br>
 </blockquote>
 <p>
 
-Le seguenti funzioni controllano se è stata usata la rotellina del mouse.
+Le seguenti funzioni controllano se &egrave; stata usata la rotellina del mouse.
 
 <p>
 <blockquote>
   <tt><b>mouse_wheel_up()</b></tt>
-    Restituisce true se la rotellina è stata mossa verso l'alto nell'ultimo step.<br>
+    Restituisce true se la rotellina &egrave; stata mossa verso l'alto nell'ultimo step.<br>
   <tt><b>mouse_wheel_down()</b></tt>
-    Restituisce true se la rotellina è stata mossa verso il basso nell'ultimo step.<br>
+    Restituisce true se la rotellina &egrave; stata mossa verso il basso nell'ultimo step.<br>
 </blockquote>
 
 <p>
@@ -59,14 +59,14 @@ Ci sono delle funzioni addizionali legate all'interazione del mouse.
 <p>
 <blockquote>
   <tt><b>mouse_clear(button)</b></tt> 
-    Cancella lo stato del pulsante del mouse. Significa che non innescherà più eventi
-        finché il giocatore non lo rilascia e lo preme di nuovo.<br>
+    Cancella lo stato del pulsante del mouse. Significa che non innescher&agrave; pi&ugrave; eventi
+        finch&eacute; il giocatore non lo rilascia e lo preme di nuovo.<br>
   <tt><b>io_clear()</b></tt> 
     Cancella tutti gli stati della tastiera e del mouse.<br>
   <tt><b>io_handle()</b></tt> 
     Gestisce l'input/output dell'utente, aggiornando gli stati della tastiera e del mouse.<br>
   <tt><b>mouse_wait()</b></tt> 
-    Blocca il gioco finché l'utente non preme un tasto del mouse.<br>
+    Blocca il gioco finch&eacute; l'utente non preme un tasto del mouse.<br>
 </blockquote>
 
 <p>
@@ -76,10 +76,10 @@ Per farlo usa la seguente variabile:
 <p>
 <blockquote>
   <tt><b>cursor_sprite</b></tt> 
-    Indica lo sprite usato per rappresentare il cursore (l'impostazione predefinita, cioè
-        nessuno sprite, è -1). Assegna uno sprite a questa variabile è questo verrà
+    Indica lo sprite usato per rappresentare il cursore (l'impostazione predefinita, cio&egrave;
+        nessuno sprite, &egrave; -1). Assegna uno sprite a questa variabile &egrave; questo verr&agrave;
         automaticamente disegnato alla posizione del cursore. (Non causa la scomparsa del
-        puntatore di Windows. Per fare ciò, vai nelle <b>Global Game Settings</b>.)<br>
+        puntatore di Windows. Per fare ci&ograve;, vai nelle <b>Global Game Settings</b>.)<br>
 </blockquote>
 
 <!--END-->

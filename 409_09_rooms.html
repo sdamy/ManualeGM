@@ -2,22 +2,22 @@
 
 <html>
 <head>
-<title>Rooms</title>
+<title>Room</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Rooms</h3>
+<h3>Room</h3>
 
-Manipolare le rooms in tempo reale è una cosa pericolosa. Dovreste
+Manipolare le rooms in tempo reale &egrave; una cosa pericolosa. Dovreste
 capire che le rooms cambiano tutte le volte in relazione a cosa
-accade nel gioco. Ciò normalmente coinvolge esclusivamente la room
+accade nel gioco. Ci&ograve; normalmente coinvolge esclusivamente la room
 attiva in quel momento. Ci sono molte routines descritte nelle precedenti
 sezioni per manipolare le istanze, le immagini di sfondo e i tiles
 nella room attiva. Tuttavia i cambiamenti nella room attiva dureranno
-se la room è persistente. Quindi non dovrete mai manipolare aspetti
-della room in corso o di qualsiasi altra room persistente già visitata
+se la room &egrave; persistente. Quindi non dovrete mai manipolare aspetti
+della room in corso o di qualsiasi altra room persistente gi&agrave; visitata
 prima. Tali cambiamenti di solito non danno avvisi e conducono a
 volte a degli errori inaspettati. In relazione al fatto che le rooms
 sono collegate fra loro in modo complesso non ci sono routine che le cancellano.
@@ -29,57 +29,57 @@ Sono disponibili le seguenti funzioni:
 
 <blockquote></b>
   <tt><b>room_set_width(ind,w)</b></tt> 
-  	Imposta la larghezza per la room con l’indice indicato.<br>
+  	Imposta la larghezza per la room con l'indice indicato.<br>
   <tt><b>room_set_height(ind,h)</b></tt> 
-  	Imposta l’altezza per la room con l’indice indicato.<br>
+  	Imposta l'altezza per la room con l'indice indicato.<br>
   <tt><b>room_set_caption(ind,str)</b></tt> 
-  	Imposta la didascalia per la room con l’indice indicato.<br>
+  	Imposta la didascalia per la room con l'indice indicato.<br>
   <tt><b>room_set_persistent(ind,val)</b></tt> 
-  	Imposta la room con l’indice indicato
-	se essa è persistente o no.<br>
+  	Imposta la room con l'indice indicato
+	se essa &egrave; persistente o no.<br>
   <tt><b>room_set_code(ind,str)</b></tt> 
   	Imposta la stringa di codice di inizializzazione
-	per la room con l’indice indicato.<br>
+	per la room con l'indice indicato.<br>
   <tt><b>room_set_background_color(ind,col,show)</b></tt> 
-  	Imposta le proprietà del colore della room con l’indice indicato
+  	Imposta le propriet&agrave; del colore della room con l'indice indicato
 	se non ha un colore di sfondo. Il parametro col indica il colore
 	e il parametro show indica se il colore deve essere mostrato o no.<br>
   <tt><b>room_set_background(ind,bind,vis,fore,back,x,y,htiled,vtiled,hspeed,vspeed,alpha)</b></tt> 
-	Imposta lo sfondo con l’indice vincolato (0-7) per la room con l’indice indicato.
-	Il parametro vis indica se lo sfondo è visibile e il parametro fore se è di fatto
-	l’immagine in primo piano. Il parametro back è l’indice dell’immagine di sfondo.
-	x,y indicano la posizione dell’immagine e htiled e vtiled indicano se l’immagine
-	deve essere fatta con il tiles. I parametri hspeed e vspeed indicano la velocità
+	Imposta lo sfondo con l'indice vincolato (0-7) per la room con l'indice indicato.
+	Il parametro vis indica se lo sfondo &egrave; visibile e il parametro fore se &egrave; di fatto
+	l'immagine in primo piano. Il parametro back &egrave; l'indice dell'immagine di sfondo.
+	x,y indicano la posizione dell'immagine e htiled e vtiled indicano se l'immagine
+	deve essere fatta con il tiles. I parametri hspeed e vspeed indicano la velocit&agrave;
 	con la quale si sposta lo sfondo e alpha indica un valore di trasparenza alpha (1= solido e veloce). <br>
   <tt><b>room_set_view(ind,vind,vis,xview,yview,wview,hview,xport,yport,wport,hport,hborder,vborder,hspeed,vspeed,obj)</b></tt> 
-	Imposta la view con indice vincolato (0-7) per la room con l’indice indicato.
-	Il parametro vis indica se la view è visibile. I parametri xview, yview, wview,
+	Imposta la view con indice vincolato (0-7) per la room con l'indice indicato.
+	Il parametro vis indica se la view &egrave; visibile. I parametri xview, yview, wview,
 	e hview indicano la posizione della vista nella room. I parametri xport, yport,
 	wport, e hport indicano la posizione sullo schermo. Quando una view deve seguire
 	un oggetto, hborder e vborder indicano il bordo minimo visibile che deve essere
-	tenuto intorno all’oggetto. hspeed e vspeed indicano la velocità massima con la
-	quale la view si può spostare. Il parametro obj è l’indice dell’oggetto o l’indice dell’istanza.<br>
+	tenuto intorno all'oggetto. hspeed e vspeed indicano la velocit&agrave; massima con la
+	quale la view si pu&ograve; spostare. Il parametro obj &egrave; l'indice dell'oggetto o l'indice dell'istanza.<br>
   <tt><b>room_set_view_enabled(ind,val)</b></tt> 
-  	Impostase le view devono essere abilitate per la room con l’indice indicato.<br>
+  	Impostase le view devono essere abilitate per la room con l'indice indicato.<br>
   <tt><b>room_add()</b></tt> 
-  	Aggiunge una nuova room. Restituisce l’indice della room. Notate che la room
-	non avrà assetto. Ovvero la nuova room non ha una room precedente o successiva.
-	Se volete spostarvi ad una room aggiunta dovete fornire l’indice di questa.<br>
+  	Aggiunge una nuova room. Restituisce l'indice della room. Notate che la room
+	non avr&agrave; assetto. Ovvero la nuova room non ha una room precedente o successiva.
+	Se volete spostarvi ad una room aggiunta dovete fornire l'indice di questa.<br>
   <tt><b>room_duplicate(ind)</b></tt> 
-  	Aggiunge una copia della room con il dato indice. Restituisce l’indice della room.<br>
+  	Aggiunge una copia della room con il dato indice. Restituisce l'indice della room.<br>
   <tt><b>room_assign(ind,room)</b></tt> 
-	Assegna la room indicate all’ind della room. Si crea di fatto una copia di essa.<br> 
+	Assegna la room indicate all'ind della room. Si crea di fatto una copia di essa.<br> 
   <tt><b>room_instance_add(ind,x,y,obj)</b></tt> 
-  	Aggiunge una nuova istanza dell’oggetto obj alla room, posizionandolo
-	alla posizione indicata. Restituisce l’indice dell’istanza.<br>
+  	Aggiunge una nuova istanza dell'oggetto obj alla room, posizionandolo
+	alla posizione indicata. Restituisce l'indice dell'istanza.<br>
   <tt><b>room_instance_clear(ind)</b></tt> 
   	Rimuove tutte le istanze dalla room indicata.<br>
   <tt><b>room_tile_add(ind,back,left,top,width,height,x,y,depth)</b></tt> 
   	Aggiunge un nuovo tile alla room nella posizione indicata.
-	Restituisce l’indice del tile. Il parametro back è lo sfondo
+	Restituisce l'indice del tile. Il parametro back &egrave; lo sfondo
 	dal quale viene preso il tile. I parametri left, top, width e
 	height indicano la parte dello sfondo che formano il tile.
-	x,y indicano la posizione del tile nella room e depth la profondità del tile.<br>
+	x,y indicano la posizione del tile nella room e depth la profondit&agrave; del tile.<br>
   <tt><b>room_tile_add_ext(ind,back,left,top,width,height,x,y,depth,xscale,yscale,alpha)</b></tt>
  	Come la precedente routine ma questa volta potete anche specificare un
 	fattore di scala nella direzione x e y ed un canale alpha per il tile.<br>

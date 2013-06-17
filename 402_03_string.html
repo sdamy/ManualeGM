@@ -17,22 +17,22 @@ Le seguenti funzioni lavorano con caratteri e stringhe.
   <tt><b>chr(val)</b></tt>
     Restituisce una stringa che contiene il carattere con codice val per stamparlo/mostrarlo,
         basandosi sul font corrente.<br>
-        Se non è impostato nessun font, verrà usato il font di default del dispositivo.<br>
+        Se non &egrave; impostato nessun font, verr&agrave; usato il font di default del dispositivo.<br>
     <b>NOTA:</b> Questo cambia da un dispositivo all'altro. Se ti serve un carattere particolare,
         assicurati di IMPOSTARE un font all'inizio del gioco.<br>
-        Se il font è uno sprite font, non verrà fatta alcuna traduzione.<br><br>
+        Se il font &egrave; uno sprite font, non verr&agrave; fatta alcuna traduzione.<br><br>
   <tt><b>ansi_char(val)</b></tt>
     Restituisce una stringa contenente il carattere con il puro valore BYTE.<br>
-    NOTA: Questo non verrà, né dovrebbe essere mostrato, ma verrà salvato correttamente
+    NOTA: Questo non verr&agrave;, n&eacute; dovrebbe essere mostrato, ma verr&agrave; salvato correttamente
         su disco per la codifica.<br><br>
   <tt><b>ord(str)</b></tt>
     Restituisce il codice ascii del primo carattere in str.<br>
   <tt><b>real(str)</b></tt>
-    Converte str in un numero reale. str può contenere un segno meno, un
+    Converte str in un numero reale. str pu&ograve; contenere un segno meno, un
         punto decimale e anche una parte esponenziale.<br>
   <tt><b>string(val)</b></tt>
     Converte il valore reale in una stringa usando il formato standard (nessuna
-        cifra decimale se è un intero, due cifre decimali negli altri casi).<br>
+        cifra decimale se &egrave; un intero, due cifre decimali negli altri casi).<br>
   <tt><b>string_format(val,tot,dec)</b></tt>
     Converte val in una stringa usando il tuo formato: tot indica il numero
         totale delle cifre e dec indica il numero di cifre decimali.<br>
@@ -42,7 +42,7 @@ Le seguenti funzioni lavorano con caratteri e stringhe.
 
   <tt><b>string_byte_length(str)</b></tt>
     Restituisce il numero di BYTE nella stringa. Dal momento che le stringhe sono tenute come UTF8,
-        significa che la lunghezza della stringa non è più uguale alla sua grandezza un BYTE.<br>
+        significa che la lunghezza della stringa non &egrave; pi&ugrave; uguale alla sua grandezza un BYTE.<br>
 
   <tt><b>string_pos(substr,str)</b></tt>
     Restituisce la posizione di substr in str (0=nessuna apparizione).<br>
@@ -55,7 +55,7 @@ Le seguenti funzioni lavorano con caratteri e stringhe.
     Restituisce il puro valore byte come un REALE alla posizione BYTE <i>index.</i><br>
 
   <tt><b>string_delete(str,index,count)</b></tt>
-    Restituisce una copia di str a cui è stata rimossa la parte che comincia alla posizione
+    Restituisce una copia di str a cui &egrave; stata rimossa la parte che comincia alla posizione
         index e ha lunghezza count.<br>
   <tt><b>string_insert(substr,str,index)</b></tt>
     Restituisce una copia di str che ha substr aggiunta alla posizione index.<br>
@@ -85,7 +85,7 @@ Le seguenti funzioni lavorano con gli appunti per conservare il testo.
 <p>
 <blockquote>
   <tt><b>clipboard_has_text()</b></tt>
-    Restituisce se c'è del testo negli appunti.<br>
+    Restituisce se c'&egrave; del testo negli appunti.<br>
   <tt><b>clipboard_get_text()</b></tt>
     Restituisce il testo presente negli appunti.<br>
   <tt><b>clipboard_set_text(str)</b></tt>

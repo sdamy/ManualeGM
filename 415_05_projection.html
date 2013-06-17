@@ -26,12 +26,12 @@ il modo di guardare il mondo tridimensionale esistono le due seguenti funzioni.
 
 <p>
 Questa funzione richiede un po di spiegazioni. Per impostare la proiezione prima di tutto hai bisogno
-della porizione da dove guardare. Questa è indicata dai parametri <tt>(xfrom,yfrom,zfrom)</tt>.
-Poi bisogna indicare la direzione verso la quale si guarda. Questa è generata descrivendo il punto
+della porizione da dove guardare. Questa &egrave; indicata dai parametri <tt>(xfrom,yfrom,zfrom)</tt>.
+Poi bisogna indicare la direzione verso la quale si guarda. Questa &egrave; generata descrivendo il punto
 dove stai guardando. Questo punto si indica con <tt>(xto,yto,zto)</tt>. Infine, puoi ruotare
 la camera seguendo la direzione dello sguardo. Per specificare questa rotazione
-bisogna indicare un vettore, che indicherà la direzione verso la parte superiore della telecamera.
-Questo è indicato dagli ultimi tre parametri <tt>(xup,yup,zup)</tt>. Per esempio,
+bisogna indicare un vettore, che indicher&agrave; la direzione verso la parte superiore della telecamera.
+Questo &egrave; indicato dagli ultimi tre parametri <tt>(xup,yup,zup)</tt>. Per esempio,
 per guardare lungo il piano xy in uno sparatutto in prima persona puoi usare
 
 <p>
@@ -44,9 +44,9 @@ per guardare lungo il piano xy in uno sparatutto in prima persona puoi usare
 </blockquote>
 
 Quindi guardi dal punto (100,100) e 10 sopra il piano guardando verso il punto (200,100). Il vettore di altezza
-della telecamera è lungo l'asse z come richiesto. Per rendere questo leggermente più complicato, immaginiamo di avere
-un'istanza nella room che specifica la posizione della telecamera. Questa avrà la posizione corrente (x,y)
-e una direzione (e forse anche una velocità). Ora puoi impostare ciò sulla tua telecamera usando il codice seguente:
+della telecamera &egrave; lungo l'asse z come richiesto. Per rendere questo leggermente pi&ugrave; complicato, immaginiamo di avere
+un'istanza nella room che specifica la posizione della telecamera. Questa avr&agrave; la posizione corrente (x,y)
+e una direzione (e forse anche una velocit&agrave;). Ora puoi impostare ci&ograve; sulla tua telecamera usando il codice seguente:
 
 <p>
 <blockquote>
@@ -61,17 +61,17 @@ e una direzione (e forse anche una velocità). Ora puoi impostare ciò sulla tua
 </blockquote>
 
 <p>
-Questo può sembrare un po complicato. Guardiamo dalla posizione della telecamera (x,y), 10 sopra il suolo.
+Questo pu&ograve; sembrare un po complicato. Guardiamo dalla posizione della telecamera (x,y), 10 sopra il suolo.
 Per determinare il punto nella direzione corretta abbiamo bisogno di un po di aritmetica. Questo punto
-è indicato dai successivi tre parametri. Infine usiamo il vettore di altezza come sopra.
+&egrave; indicato dai successivi tre parametri. Infine usiamo il vettore di altezza come sopra.
 
 <p>
 Una nota importante! Quando <i>GameMaker</i> inizia a disegnare una room imposta il punto di visuale
-alla posizione di default. Quindi la prima cosa che bisogna fare quando si disegna una scena è
+alla posizione di default. Quindi la prima cosa che bisogna fare quando si disegna una scena &egrave;
 di impostare la proiezione desiderata. Questo deve essere fatto nell'evento draw!
 
 <p>
-Cè anche una versione estesa della funzione qui sopra:
+C&egrave; anche una versione estesa della funzione qui sopra:
 
 <p>
 <blockquote>
@@ -83,21 +83,21 @@ Cè anche una versione estesa della funzione qui sopra:
 
 <p>
 I parametri addizionali funzionano come di seguito. Se hai specificato la posizione della telecameta, il punto dove guardare
-ed il vettore di altezza, puoi indicare quando è ampia la lente della telecamera, questo è chiamato
-field of view. Un valore ragionevole è qualcosa tra 40 e 45 gradi ma puoi cambiarlo a piacimento.
-Poi è possibile specificare la proporzione tra la proiezione orizzontale e verticale.
+ed il vettore di altezza, puoi indicare quando &egrave; ampia la lente della telecamera, questo &egrave; chiamato
+field of view. Un valore ragionevole &egrave; qualcosa tra 40 e 45 gradi ma puoi cambiarlo a piacimento.
+Poi &egrave; possibile specificare la proporzione tra la proiezione orizzontale e verticale.
 Di solito si usa la stessa proporzione della room o della view, es. 640/480.
-Infine puoi indicare i piani di ritaglio. Gli oggetti che saranno più vicini alla telecamera di <tt>znear</tt>
-non verranno disegnati. Stessa cosa per gli oggetti più lontani di <tt>zfar</tt>. E' importante impostarli
-su valori ragionevoli per via dell'influenza della precisione nella calcolo della profondità.
-Se imposti un range troppo grande la precisione diminuirà. I valori di default sono 1 e 32000.
-<tt>znear</tt> deve essere più grande di 0!
+Infine puoi indicare i piani di ritaglio. Gli oggetti che saranno pi&ugrave; vicini alla telecamera di <tt>znear</tt>
+non verranno disegnati. Stessa cosa per gli oggetti pi&ugrave; lontani di <tt>zfar</tt>. E' importante impostarli
+su valori ragionevoli per via dell'influenza della precisione nella calcolo della profondit&agrave;.
+Se imposti un range troppo grande la precisione diminuir&agrave;. I valori di default sono 1 e 32000.
+<tt>znear</tt> deve essere pi&ugrave; grande di 0!
 
 
 <p>
-A volte puoi avere bisogno temporaneamente della classica proiezione ortogonale quando non si è in presenza di oggetti 3D.
+A volte puoi avere bisogno temporaneamente della classica proiezione ortogonale quando non si &egrave; in presenza di oggetti 3D.
 Oppure si vuole ritornare alla proiezione prospettica di default.
-Per fare ciò ci sono le seguenti funzioni:
+Per fare ci&ograve; ci sono le seguenti funzioni:
 
 <p>
 <blockquote>
@@ -110,9 +110,9 @@ Per fare ciò ci sono le seguenti funzioni:
 </blockquote>
 
 <p>
-Un'utilizzo comune di queste funzioni è per disegnare un HUD ad esempio mostrare il punteggio o altre cose.
-Per fare ciò basta impostare la proiezione ortogonale. Bisogna anche disattivare temporaneamente la rimozione
-delle superfici nascoste perchè si vuole disegnare queste informazioni indipendentemente dal loro valore di profondità.
+Un'utilizzo comune di queste funzioni &egrave; per disegnare un HUD ad esempio mostrare il punteggio o altre cose.
+Per fare ci&ograve; basta impostare la proiezione ortogonale. Bisogna anche disattivare temporaneamente la rimozione
+delle superfici nascoste perch&egrave; si vuole disegnare queste informazioni indipendentemente dal loro valore di profondit&agrave;.
 L'esempio seguente mostra come creare un HUD con il punteggio.
 
 <p>

@@ -21,29 +21,29 @@ l'indice in una variabile e usare quella.
 <p>
 <blockquote>
   <tt><b>sound_play(index)</b></tt> 
-    Riproduce il suono indicato una volta. Se è una musica di sottofondo, quella
+    Riproduce il suono indicato una volta. Se &egrave; una musica di sottofondo, quella
         corrente viene fermata.<br>
   <tt><b>sound_loop(index)</b></tt> 
-    Riproduce il suono indicato, ripetendolo all'infinito. È il cosiddetto <i>looping</i>. Se
-        il suono è una musica di sottofondo, quella corrente viene fermata.<br>
+    Riproduce il suono indicato, ripetendolo all'infinito. &Egrave; il cosiddetto <i>looping</i>. Se
+        il suono &egrave; una musica di sottofondo, quella corrente viene fermata.<br>
   <tt><b>sound_stop(index)</b></tt> 
-    Ferma il suono indicato. Se ci sono più suoni con quest'indice in riproduzione, verranno
+    Ferma il suono indicato. Se ci sono pi&ugrave; suoni con quest'indice in riproduzione, verranno
         fermati tutti.<br>
   <tt><b>sound_stop_all()</b></tt> 
     Ferma tutti i suoni.<br>
   <tt><b>sound_isplaying(index)</b></tt> 
-    Restituisce true se (una copia di) il suono indicato è in riproduzione. Nota che questa
+    Restituisce true se (una copia di) il suono indicato &egrave; in riproduzione. Nota che questa
         funzione ti dice se il suono sta venendo emesso degli altoparlanti. Il suono non
         raggiunge gli altoparlanti subito dopo la chiamata della funzione per far partire un
         suono, quindi la funzione potrebbe ancora restituire false per qualche istante.
         Analogamente, quando fermi un suono lo senti ancora per un po' (ad esempio a causa
-        dell'eco) e la funzione restituirà true ancora per qualche istante.<br>
+        dell'eco) e la funzione restituir&agrave; true ancora per qualche istante.<br>
 </blockquote>
 
 <p>
-È possibile usare effetti sonori avanzati. In particolare puoi cambiare il volume e il "pan",
-cioè se il suono esce dall'altoparlante destro o sinistroe con quale intensità. In tutti
-qiesti casi il volume può solo essere ridotto. Queste funzioni non possono essere usate per
+&Egrave; possibile usare effetti sonori avanzati. In particolare puoi cambiare il volume e il "pan",
+cio&egrave; se il suono esce dall'altoparlante destro o sinistroe con quale intensit&agrave;. In tutti
+qiesti casi il volume pu&ograve; solo essere ridotto. Queste funzioni non possono essere usate per
 i file che vengono riprodotti attraverso il media player (come gli mp3).
 
 <p>
@@ -54,20 +54,20 @@ i file che vengono riprodotti attraverso il media player (come gli mp3).
     Cambia il volume globale per tutti i suoni (0 = nullo, 1 = massimo).<br>
   <tt><b>sound_fade(index,value,time)</b></tt> 
     Cambia il volume del suono indicato nel nouvo valore (0 = nullo, 1 = massimo) modificandolo
-        progressivamente in modo che ci metta <tt>time</tt> millisecondi. Può essere usato per far
-        cominciare o terminare i suoni in maniera più elegante, facendoli sfumare cominciando o
+        progressivamente in modo che ci metta <tt>time</tt> millisecondi. Pu&ograve; essere usato per far
+        cominciare o terminare i suoni in maniera pi&ugrave; elegante, facendoli sfumare cominciando o
         finendo allo 0.<br>
   <tt><b>sound_pan(index,value)</b></tt> 
     Cambia il "pan" per il suono indicato (-1 = tutto o sinistra, 0 = equilibrato, 1 = tutto a destra).<br>
   <tt><b>sound_background_tempo(factor)</b></tt> 
-    Cambia il tempo della musica di sottofondo (se è un file midi). <tt>factor</tt> indica il
+    Cambia il tempo della musica di sottofondo (se &egrave; un file midi). <tt>factor</tt> indica il
         fattore per cui va moltiplicato il tempo reale del suono. Quindi 1 corrisponde al tempo
-        reale, valori maggiori a un tempo più veloce e valori minori a un tempo più lento. Questo
+        reale, valori maggiori a un tempo pi&ugrave; veloce e valori minori a un tempo pi&ugrave; lento. Questo
         fattore deve essere compreso tra 0.01 e 100.<br>
 </blockquote>
 
 <p>
-Oltre al file midi e "wave" (e agli mp3) c'è in verità un quarto tipo di file che può essere
+Oltre al file midi e "wave" (e agli mp3) c'&egrave; in verit&agrave; un quarto tipo di file che pu&ograve; essere
 riprodoto: i file di musica diretta (file.sgt). Spesso questi file si riferiscono ad altri file
 che contengono informazioni riguardanti, ad esempio, l'artista o il genere. Per trovare questi
 file, il sistema deve sapere dove sono. A questo scopo puoi usare la seguente funzione per

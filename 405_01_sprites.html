@@ -10,17 +10,17 @@
 
 <h3>Sprite e Immagini</h3>
 
-Ogni object ha uno sprite assegnato a esso. Questo può essere un'immagine singola o essere composto di più immagini.
+Ogni object ha uno sprite assegnato a esso. Questo pu&ograve; essere un'immagine singola o essere composto di pi&ugrave; immagini.
 PEr ogni istanza dell'object il programma disegna l'immagine corrispondente sullo schermo, con la sua origine
-(definita nelle proprietà dello sprite) alla posizione (x,y) dell'istanza. Se ci sono più immagini, queste vengono
+(definita nelle propriet&agrave; dello sprite) alla posizione (x,y) dell'istanza. Se ci sono pi&ugrave; immagini, queste vengono
 ciclate per ottenere un'animazione. Ci sono delle variabili che influenzano il modo in cui le immagini vengono
 disegnate. Possono essere usate per cambiare gli effetti. Ogni istanza ha le seguenti variabili:
 
 <p>
 <blockquote>
   <tt><b>visible</b></tt> 
-    Se è true (1) l'immagine viene disegnata, altrimenti no. Le istanze invisibili sono ancora attive e generano
-        eventi Collision; cambia solo il fatto che non le vedi. Impostare la visibilità a false è utile ad esempio
+    Se &egrave; true (1) l'immagine viene disegnata, altrimenti no. Le istanze invisibili sono ancora attive e generano
+        eventi Collision; cambia solo il fatto che non le vedi. Impostare la visibilit&agrave; a false &egrave; utile ad esempio
         per gli object controllori (ricorda che non devono essere solid per evitare collisioni) o interruttori
         nascosti.<br>
   <tt><b>sprite_index</b></tt> 
@@ -28,28 +28,28 @@ disegnate. Possono essere usate per cambiare gli effetti. Ogni istanza ha le seg
         differente. Usa i nomi degli sprite che hai definito come valori. Cambiare sprite non cambia l'immagine
         correntemente visibile.<br>
   <tt><b>sprite_width*</b></tt> 
-    Indica la lunghezza (orizzontale) dello sprite. Questo valore non può essere cambiato ma potresti volerlo usare.<br>
+    Indica la lunghezza (orizzontale) dello sprite. Questo valore non pu&ograve; essere cambiato ma potresti volerlo usare.<br>
   <tt><b>sprite_height*</b></tt> 
-    Indica l'altezza (verticale) dello sprite. Questo valore non può essere cambiato ma potresti volerlo usare.<br>
+    Indica l'altezza (verticale) dello sprite. Questo valore non pu&ograve; essere cambiato ma potresti volerlo usare.<br>
   <tt><b>sprite_xoffset*</b></tt> 
-    Indica l'offset orizzontale dello sprite, così com'è definito nelle proprietà dello sprite.
-        Questo valore non può essere cambiato ma potresti volerlo usare.<br>
+    Indica l'offset orizzontale dello sprite, cos&igrave; com'&egrave; definito nelle propriet&agrave; dello sprite.
+        Questo valore non pu&ograve; essere cambiato ma potresti volerlo usare.<br>
   <tt><b>sprite_yoffset*</b></tt> 
-    Indica l'offset verticale dello sprite, così com'è definito nelle proprietà dello sprite.
-        Questo valore non può essere cambiato ma potresti volerlo usare.<br>
+    Indica l'offset verticale dello sprite, cos&igrave; com'&egrave; definito nelle propriet&agrave; dello sprite.
+        Questo valore non pu&ograve; essere cambiato ma potresti volerlo usare.<br>
   <tt><b>image_number*</b></tt> 
-    Il numero di subimmagini nello sprite attualmente assegnato all'istanza (non può essere cambiato).<br>
+    Il numero di subimmagini nello sprite attualmente assegnato all'istanza (non pu&ograve; essere cambiato).<br>
   <tt><b>image_index</b></tt> 
-    Quando uno sprite ha più subimmagini il programma cicla tra queste. Questa variabile indica l'immagine attualmente
+    Quando uno sprite ha pi&ugrave; subimmagini il programma cicla tra queste. Questa variabile indica l'immagine attualmente
         disegnata (sono numerate a partire da 0). Puoj cambiare l'immagine corrente cambiando questa variabile. Il
-        programma continuerà a ciclare partendo dal nuovo indice. (Il valore può avere una parte decimale. In questo caso
+        programma continuer&agrave; a ciclare partendo dal nuovo indice. (Il valore pu&ograve; avere una parte decimale. In questo caso
         viene sempre arrotondato per difetto per ottenere l'immagine da disegnare.)<br>
   <tt><b>image_speed</b></tt> 
-    La velocità con cui cicliamo tra le subimmagini. Il valore 1 indica che ad ogni step passiamo all'immagine successiva.
-        Valori più piccoli faranno cambiare le immagini più lentamente, disegnando la stessa subimmagine più volte.
-        Valori più grandi faranno saltare delle immagini per velocizzare l'animazione. A volte vorrai tenere fissa una
+    La velocit&agrave; con cui cicliamo tra le subimmagini. Il valore 1 indica che ad ogni step passiamo all'immagine successiva.
+        Valori pi&ugrave; piccoli faranno cambiare le immagini pi&ugrave; lentamente, disegnando la stessa subimmagine pi&ugrave; volte.
+        Valori pi&ugrave; grandi faranno saltare delle immagini per velocizzare l'animazione. A volte vorrai tenere fissa una
         particolare subimmagine senza che il programma le cicli tutte in continuazione. Puoi farlo impostando questa
-        variabile a 0 e scegliendo l'<tt>image_index</tt> corretto. Ad esempio, ipotizziamo che hai un'object che può
+        variabile a 0 e scegliendo l'<tt>image_index</tt> corretto. Ad esempio, ipotizziamo che hai un'object che pu&ograve;
         ruotare e tu crei uno sprite che ha un certo numero di angolazioni (in senso antiorario). Poi, nello Step Event
         dell'object puoi impostare:
         <blockquote>
@@ -62,9 +62,9 @@ disegnate. Possono essere usate per cambiare gli effetti. Ogni istanza ha le seg
 	</blockquote>
   <tt><b>depth</b></tt> 
     Normalmente le immagini sono disegnate nell'ordine di creazione delle istanze. Puoi cambiare questo fatto impostando
-        la depth (profondità) delle immagini. Il valore di default è 0, a meno che tu non abbia specificato diversamente
-        nelle proprietà dell'object. Più alto è il valore, più l'istanza sarà "lontana". (Puoi anche usare valori
-        negativi). Le istanze con una depth più alta verranno disegnate dietro a quelle con una depth più bassa.
+        la depth (profondit&agrave;) delle immagini. Il valore di default &egrave; 0, a meno che tu non abbia specificato diversamente
+        nelle propriet&agrave; dell'object. Pi&ugrave; alto &egrave; il valore, pi&ugrave; l'istanza sar&agrave; "lontana". (Puoi anche usare valori
+        negativi). Le istanze con una depth pi&ugrave; alta verranno disegnate dietro a quelle con una depth pi&ugrave; bassa.
         Impostare la depth ti garantisce che le istanze vengano disegnate nell'ordine che desideri (ad esempio l'aereo
         davanti alla nuvola). Le istanze in secondo piano dovrebbero avere una depth alta (positiva), e quelle in primo
         piano dovrebbero averne una bassa (negativa).<br>
@@ -74,20 +74,20 @@ disegnate. Possono essere usate per cambiare gli effetti. Ogni istanza ha le seg
         lunghezza e altezza dell'immagine e influenza le collisioni, come potrai pensare. I fattori di scala possono
         essere usati per creare un effetto 3D. Puoi usare il valore -1 per capovolgere lo sprite orizzontalmente.<br>
   <tt><b>image_yscale</b></tt> 
-    Il fattore di scala verticale. 1 è la dimensione normale. Puoi usare il valore -1 per capovolgere lo sprite
+    Il fattore di scala verticale. 1 &egrave; la dimensione normale. Puoi usare il valore -1 per capovolgere lo sprite
         verticalmente.<br>
   <tt><b>image_angle</b></tt> 
     L'angolo con cui viene ruotato lo sprite. Specificalo in gradi e in verso antiorario. 0 indica la posizione
         originale.<br>
   <tt><b>image_alpha</b></tt> 
-    Valore di trasperenza (alpha) da usare per il disegno dell'immagine. 1 è il valore normale, completamente opaco,
-        0 è completamente trasparente.<br>
+    Valore di trasperenza (alpha) da usare per il disegno dell'immagine. 1 &egrave; il valore normale, completamente opaco,
+        0 &egrave; completamente trasparente.<br>
   <tt><b>image_blend</b></tt> 
-    Colore che viene mescolato con lo sprite in fase di disegno. Il valore di default è <tt>c_white</tt>. Quando
+    Colore che viene mescolato con lo sprite in fase di disegno. Il valore di default &egrave; <tt>c_white</tt>. Quando
         selezioni un valore diverso l'immagine viene mescolata con quel colore. Puoi usarlo per tingere lo sprite al
-        volo. <b><i>Questa variabile non può essere usata nella Lite Edition!</i></b><br>
+        volo. <b><i>Questa variabile non pu&ograve; essere usata nella Lite Edition!</i></b><br>
   <tt><b>bbox_left*</b></tt> 
-    Il lato sinistro della bounding box dell'istanza nella room, com'è definita nella sua immagine (considerando i
+    Il lato sinistro della bounding box dell'istanza nella room, com'&egrave; definita nella sua immagine (considerando i
         fattori di scala).<br>
   <tt><b>bbox_right*</b></tt> 
     Lato destro della bounding box dell'istanza nella room.<br>
@@ -112,7 +112,7 @@ bounding box
 sprite, impostazioni
 impostazioni dello sprite
 indice dell'immagine
-velocità dell'immagine
+velocit&agrave; dell'immagine
 
 visible 
 sprite_index 

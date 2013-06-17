@@ -11,21 +11,21 @@
 
 <h3>Altre azioni di movimento</h3>
 
-Alcune opzioni di movimento aggiuntive sono disponibile nella modalità avanzata. TQueste sono le azioni aggiunte:
+Alcune opzioni di movimento aggiuntive sono disponibile nella modalit&agrave; avanzata. TQueste sono le azioni aggiunte:
 
 <p>
 <b><img src="images/action_path.bmp"> Imposta percorso</b><br>
 Con quest'azione puoi far si che un'instanza segua un determinato percorso(path). 
-Devi indicare il percorso che dovrà essere eseguito e la velocità. 
-Quando la velocità è positiva l'instanza comincia a muoversi dall'inizio del percorso. 
-Se è negativa comincia dalla fine. Dopo dovrai specificar eil comportamento alla fine, 
-cioè cosa dovrà succedere quando sarà raggiunta la fine del percorso. Puoi 
+Devi indicare il percorso che dovr&agrave; essere eseguito e la velocit&agrave;. 
+Quando la velocit&agrave; &egrave; positiva l'instanza comincia a muoversi dall'inizio del percorso. 
+Se &egrave; negativa comincia dalla fine. Dopo dovrai specificar eil comportamento alla fine, 
+cio&egrave; cosa dovr&agrave; succedere quando sar&agrave; raggiunta la fine del percorso. Puoi 
 scegliere di fermare il movimento, farlo ripartire dall'inizio, farlo ricominciare dalla posizione 
-corrente(che è la stessa se il percorso è chiuso), o invertire il movimento. 
-Infine si può indicare che il percorso deve essere visto come assoluta, cioè la 
-posizione sarà quella indicata nel percorso(questo è utile quando si ha progettato il
+corrente(che &egrave; la stessa se il percorso &egrave; chiuso), o invertire il movimento. 
+Infine si pu&ograve; indicare che il percorso deve essere visto come assoluta, cio&egrave; la 
+posizione sar&agrave; quella indicata nel percorso(questo &egrave; utile quando si ha progettato il
 percorso in un posto particolare nella stanza) o relativo, in questo caso il punto d'inizio
-del percorso sarà piazzato alla corrente posizione dell'instanza (il punto finale se la velocità fosse
+del percorso sar&agrave; piazzato alla corrente posizione dell'instanza (il punto finale se la velocit&agrave; fosse
 negativa). Vedi il capitolo sui percorsi per maggiorni informazioni.
 
 <p>
@@ -38,30 +38,30 @@ Con quest'azione puoi modificare la corrente posizone nel percorso.
 Deve essere un valore tra 0 e 1 (0=inizio, 1=fine). 
 
 <p>
-<b><img src="images/action_pathspeed.bmp"> Velocità del percorso</b><br>
-Con quest'azione puoi cambiare la velocità del movimento durante il percorso. 
+<b><img src="images/action_pathspeed.bmp"> Velocit&agrave; del percorso</b><br>
+Con quest'azione puoi cambiare la velocit&agrave; del movimento durante il percorso. 
 Un valore negativo allontana l'instanza dalla fine del percorso. Impostalo a 0 per
 fermare il movimento sul percorso. 
 
 <p>
 <b><img src="images/action_steplinear.bmp" > Passo verso</b><br>
 Quest'azione deve essere messa nello step event per far si che l'instanza si muova 
-verso una posizione particolare. Quando l'instanza è già alla posizione indicata 
-smetterà di muoversi. Devi specificare la posizione verso cui muoversi, la velocità 
-con cui muoversi,cioè la dimensione del passo, e se il movimento deve interrompersi
+verso una posizione particolare. Quando l'instanza &egrave; gi&agrave; alla posizione indicata 
+smetter&agrave; di muoversi. Devi specificare la posizione verso cui muoversi, la velocit&agrave; 
+con cui muoversi,cio&egrave; la dimensione del passo, e se il movimento deve interrompersi
 quando colpisce un'istanza solida o quando colpisce una qualsiasi istanza. 
 
 <p>
 <b><img src="images/action_steppotential.bmp"> Passo evitando</b><br>
-Questa è un'azione di movimento molto potente. Deve essere messo nello step event. 
+Questa &egrave; un'azione di movimento molto potente. Deve essere messo nello step event. 
 Come l'azione precendente permette di muovere un'instanza verso una particolare posizione.
-Ma in questo caso essa proverà ad evitare gli ostacoli. Quando l'istanza starebbe per collidere
-con un'istanza solida (o qualsiasi istanza) essa cambierà direzione di movimento
-Per provare ad evitare quell'instanza girandogli intorno. Non è garantito che l'approccio 
+Ma in questo caso essa prover&agrave; ad evitare gli ostacoli. Quando l'istanza starebbe per collidere
+con un'istanza solida (o qualsiasi istanza) essa cambier&agrave; direzione di movimento
+Per provare ad evitare quell'instanza girandogli intorno. Non &egrave; garantito che l'approccio 
 funzioni ma in molti casi semplici esso muove con successo l'instanza verso l'obbiettivo.
-Per casi più complicati, ci sono funzioni di pianificazione del movimento. 
-Devi specificare la posizione verso cui spostarsi, la velocità con cui spostarsi, cioè
-la dimensione del passo, e se durante il movimento dovrà evitare solo le instanze solide o tutte le instanze. 
+Per casi pi&ugrave; complicati, ci sono funzioni di pianificazione del movimento. 
+Devi specificare la posizione verso cui spostarsi, la velocit&agrave; con cui spostarsi, cio&egrave;
+la dimensione del passo, e se durante il movimento dovr&agrave; evitare solo le instanze solide o tutte le instanze. 
 
 
 <!--END-->

@@ -10,37 +10,37 @@
 
 <h3>Indirizzamento di variabili in altre istanze</h3>
 
-Come descritto in precedenza, è possibile impostare variabili nell’istanza 
+Come descritto in precedenza, &egrave; possibile impostare variabili nell'istanza 
 corrente dichiarandole come segue:
 
 <p>
 <blockquote><pre>x = 3;</pre></blockquote>
 
 <p>
-In altri casi, tuttavia, può essere necessario indirizzare variabili di altre istanze. 
+In altri casi, tuttavia, pu&ograve; essere necessario indirizzare variabili di altre istanze. 
 Ad esempio, si potrebbe desiderare di fermare il movimento di tutte le palle, o spostare
 il personaggio principale in una posizione particolare, o, nel caso di una collisione, si
-potrebbe desiderare di cambiare lo sprite dell'altra istanza coinvolta. Ciò può essere 
-ottenuto facendo precedere al nome della variabile il nome dell’oggetto (a cui appartiene)
-ed un punto. Così, per esempio, è possibile scrivere
+potrebbe desiderare di cambiare lo sprite dell'altra istanza coinvolta. Ci&ograve; pu&ograve; essere 
+ottenuto facendo precedere al nome della variabile il nome dell'oggetto (a cui appartiene)
+ed un punto. Cos&igrave;, per esempio, &egrave; possibile scrivere
 
 <p>
 <blockquote><pre><tt>ball</tt>.speed = 0;</pre></blockquote>
 
 <p>
-Questo cambierà la velocità di tutte le istanze dell’oggetto palla. 
+Questo cambier&agrave; la velocit&agrave; di tutte le istanze dell'oggetto palla. 
 Esiste un certo numero di oggetti "speciali": &quot;objects&quot;.
 
 <ul>
-  <li><tt>self</tt>: L'istanza corrente per la quale si sta eseguendo l’azione</li>
+  <li><tt>self</tt>: L'istanza corrente per la quale si sta eseguendo l'azione</li>
   <li><tt>other</tt>: L'altra istanza coinvolta in un evento di collisione
 </li>
   <li><tt>all</tt>: Tutte le istanze</li>
-  <li><tt>noone</tt>: Nessuna istanza (sembra strano, ma tornerà utile come vedremo in seguito)</li>
+  <li><tt>noone</tt>: Nessuna istanza (sembra strano, ma torner&agrave; utile come vedremo in seguito)</li>
   <li><tt>global</tt>: Nessuna istanza, ma un contenitore che memorizza le variabili globali</li>
 </ul>
 
-Così, per esempio, è possibile utilizzare i seguenti tipi di istruzioni:
+Cos&igrave;, per esempio, &egrave; possibile utilizzare i seguenti tipi di istruzioni:
 
 <p>
 <blockquote>
@@ -53,25 +53,25 @@ global.x = ball.x;
 </blockquote>
 
 <p>
-Ora ci si potrebbe chiedere che cosa fa l’ultima assegnazione quando ci sono più istanze dell’oggetto
-palla. Ebbene, è stato preso il primo e il suo valore x è stato assegnato ad un valore globale.
+Ora ci si potrebbe chiedere che cosa fa l'ultima assegnazione quando ci sono pi&ugrave; istanze dell'oggetto
+palla. Ebbene, &egrave; stato preso il primo e il suo valore x &egrave; stato assegnato ad un valore globale.
 
 <p>
-Ma cosa succede se si desidera impostare la velocità di una palla particolare, piuttosto che 
-tutte le palle? Questo è leggermente più difficile. Ogni istanza ha un ID univoco. Quando si
+Ma cosa succede se si desidera impostare la velocit&agrave; di una palla particolare, piuttosto che 
+tutte le palle? Questo &egrave; leggermente pi&ugrave; difficile. Ogni istanza ha un ID univoco. Quando si
 mettono le istanze in una room nella finestra di progettazione, questo ID viene visualizzato 
-quando si posiziona il mouse sulla istanza. Questi sono numeri maggiori o uguali a 100000. È 
+quando si posiziona il mouse sulla istanza. Questi sono numeri maggiori o uguali a 100000. &Egrave; 
 anche possibile utilizzare questo numero come il lato sinistro di una assegnazione, prima del
 punto. Ma attenzione: il punto potrebbe essere interpretato come il punto che separa le cifre 
-intere da quelle decimali del numero. Per evitare questo, occorre mettere le parentesi. Così, 
-per esempio, supponendo che l'id della palla è 100032, si può scrivere:
+intere da quelle decimali del numero. Per evitare questo, occorre mettere le parentesi. Cos&igrave;, 
+per esempio, supponendo che l'id della palla &egrave; 100032, si pu&ograve; scrivere:
 
 <p>
 <blockquote><pre>(100032).speed = 0;</pre></blockquote>
 
 <p>
 Quando si crea un'istanza nel programma, la chiamata restituisce l'id. 
-Quindi il seguente pezzo di codice è valido:
+Quindi il seguente pezzo di codice &egrave; valido:
 
 <p>
 <blockquote>
@@ -84,13 +84,13 @@ Quindi il seguente pezzo di codice è valido:
 </blockquote>
 
 <p>
-Questo crea una palla e imposta la sua velocità. Si noti che l'ID della istanza è stato assegnato
-ad una variabile ed è stata usata questa variabile come indicazione prima del punto. Questo codice
-è del tutto valido. Cerchiamo di renderlo più preciso. Il punto è in realtà un operatore. Esso
+Questo crea una palla e imposta la sua velocit&agrave;. Si noti che l'ID della istanza &egrave; stato assegnato
+ad una variabile ed &egrave; stata usata questa variabile come indicazione prima del punto. Questo codice
+&egrave; del tutto valido. Cerchiamo di renderlo pi&ugrave; preciso. Il punto &egrave; in realt&agrave; un operatore. Esso
 prende un valore come operando di sinistra e una variabile (indirizzo) come operando di destra, e 
-restituisce l'indirizzo di questa particolare variabile nell'oggetto o nell’istanza indicata. Tutti 
+restituisce l'indirizzo di questa particolare variabile nell'oggetto o nell'istanza indicata. Tutti 
 i nomi degli oggetti, e gli oggetti speciali indicati sopra, rappresentano semplicemente dei valori
-e questi valori possono essere trattati come qualsiasi altro valore. Ad esempio, il seguente programma è valido:
+e questi valori possono essere trattati come qualsiasi altro valore. Ad esempio, il seguente programma &egrave; valido:
 
 <p>
 <blockquote>
@@ -105,12 +105,12 @@ e questi valori possono essere trattati come qualsiasi altro valore. Ad esempio,
 </blockquote>
 
 <p>
-L'ultima istruzione deve essere letta come segue. Si prende l'id del primo flag. Per l’istanza con quel id viene 
+L'ultima istruzione deve essere letta come segue. Si prende l'id del primo flag. Per l'istanza con quel id viene 
 impostato il valore della coordinata x a 12.
 
 <p>
 I nomi degli oggetti, gli oggetti speciali, e gli id delle istanze possono anche essere utilizzati in un certo
-numero di funzioni. Essi sono in realtà considerati come costanti nei programmi.
+numero di funzioni. Essi sono in realt&agrave; considerati come costanti nei programmi.
 
 <!--END-->
 </body>

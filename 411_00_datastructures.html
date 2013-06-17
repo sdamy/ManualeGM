@@ -14,51 +14,51 @@
 <i><b>Queste funzioni sono disponibili solo nella versione Standard di GameMaker.</b></i>
 
 <p>
-Nei giochi c’è spesso la necessità di memorizzare informazioni. 
-Ad esempio può essere necessario memorizzare elenchi di elementi 
+Nei giochi c'&egrave; spesso la necessit&agrave; di memorizzare informazioni. 
+Ad esempio pu&ograve; essere necessario memorizzare elenchi di elementi 
 che un giocatore conserva oppure memorizzare luoghi che devono 
 ancora essere visitati. Si possono utilizzare le matrici per 
-fare questo. Ma se si vogliono fare operazioni più complesse, come 
-l'ordinamento dei dati o la ricerca di un elemento particolare, è 
-necessario scrivere lunghi codici in GML che possono rallentare l’esecuzione.
+fare questo. Ma se si vogliono fare operazioni pi&ugrave; complesse, come 
+l'ordinamento dei dati o la ricerca di un elemento particolare, &egrave; 
+necessario scrivere lunghi codici in GML che possono rallentare l'esecuzione.
 
 <p>
 Per rimediare a questo, <i>GameMaker</i> ha numerose strutture dati precostruite 
 che possono essere accessibili tramite funzioni. Al momento ci sono sei 
 diversi tipi di strutture dati disponibili: pile, code, liste, mappe, 
-code di priorità, e griglie. Ciascuna di queste strutture dati è 
+code di priorit&agrave;, e griglie. Ciascuna di queste strutture dati &egrave; 
 specializzata per fini diversi (vedi sotto).
 
 <p>
 Tutte le strutture dati funzionano globalmente nello stesso modo. 
-È possibile creare una struttura dati con una funzione che restituisce 
-un ID per essa. È possibile utilizzare questo ID per eseguire operazioni 
+&Egrave; possibile creare una struttura dati con una funzione che restituisce 
+un ID per essa. &Egrave; possibile utilizzare questo ID per eseguire operazioni 
 sulle strutture dati. Una volta terminate le operazioni occorre distruggere 
-la struttura dati per liberare memoria. È possibile utilizzare più strutture 
+la struttura dati per liberare memoria. &Egrave; possibile utilizzare pi&ugrave; strutture 
 nello stesso momento. Tutte le strutture sono in grado di memorizzare stringhe e valori reali.
 
 <p>
 Si noti che le strutture dati e il loro contenuto non vengono salvate quando 
 si salva il gioco utilizzando le apposite funzioni. Se si utilizzano strutture 
-dati e si desidera salvarle è necessario creare un proprio meccanismo per fare questo.
+dati e si desidera salvarle &egrave; necessario creare un proprio meccanismo per fare questo.
 
 <p>
 Quando si confrontano valori, ad esempio quando si cerca in una mappa o si ordina una lista, 
 <i>GameMaker</i> deve decidere se due valori sono uguali. Per le stringhe e valori interi 
-questo è facile, ma per i numeri reali, a causa di errori di arrotondamento, numeri uguali
-possono facilmente diventare diseguali. Per esempio (5/3) * 3 non è uguale a 5. Per evitare 
-questo, viene usato un numero di precisione: quando la differenza tra due numeri è minore di 
-tale precisione, essi sono considerati uguali. La precisione predefinita è di 0.0000001. 
-È possibile modificare questa precisione utilizzando la seguente funzione:
+questo &egrave; facile, ma per i numeri reali, a causa di errori di arrotondamento, numeri uguali
+possono facilmente diventare diseguali. Per esempio (5/3) * 3 non &egrave; uguale a 5. Per evitare 
+questo, viene usato un numero di precisione: quando la differenza tra due numeri &egrave; minore di 
+tale precisione, essi sono considerati uguali. La precisione predefinita &egrave; di 0.0000001. 
+&Egrave; possibile modificare questa precisione utilizzando la seguente funzione:
 
 <p>
 <blockquote>
   <tt><b>ds_set_precision(prec)</b></tt> 
-   Imposta la precisione che verrà utilizzata per confronti di numeri reali.<br>
+   Imposta la precisione che verr&agrave; utilizzata per confronti di numeri reali.<br>
 </blockquote>
 
 <p>
-Questa precisione è utilizzata in tutte le strutture dati, ma non in altri confronti in GML!
+Questa precisione &egrave; utilizzata in tutte le strutture dati, ma non in altri confronti in GML!
 
 
 <!--HELPONLY-->
@@ -73,7 +73,7 @@ Informazioni sulle strutture dati si possono trovare nelle pagine seguenti:
     <a href="411_02_queues.html">Code</a><br>
     <a href="411_03_lists.html">Liste</a><br>
     <a href="411_04_maps.html">Mappe</a><br>
-    <a href="411_05_priority.html">Code di priorità</a><br>
+    <a href="411_05_priority.html">Code di priorit&agrave;</a><br>
     <a href="411_06_grid.html">Griglie</a><br>
 </blockquote>
 

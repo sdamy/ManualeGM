@@ -11,14 +11,14 @@
 <h3>Modificatori</h3>
 
 I modificatori cambiano alcune particelle quando entrano nella loro regione.
-Un sistema particellare può avere un numero arbitrario di modificatori. 
-Un modificatore ha le seguenti proprietà:
+Un sistema particellare pu&ograve; avere un numero arbitrario di modificatori. 
+Un modificatore ha le seguenti propriet&agrave;:
 
 <ul>
   <li><tt><b>xmin, xmax, ymin, ymax</b></tt> 
     indicano la dimensione della zona in cui le particelle vengono modificate.</li>
   <li><tt><b>shape</b></tt> 
-    indica la forma della regione. Esso può avere i seguenti valori:</li>
+    indica la forma della regione. Esso pu&ograve; avere i seguenti valori:</li>
   <ul>
     <li><tt>ps_shape_rectangle</tt></li>
     <li><tt>ps_shape_ellipse</tt></li>
@@ -29,14 +29,14 @@ Un modificatore ha le seguenti proprietà:
   <li><tt><b>parttype2</b></tt> 
     indica il tipo di particella in cui viene cambiata.</li>
   <li><tt><b>kind</b></tt> 
-    indica il tipo di cambio. Esso può avere i seguenti valori:</li>
+    indica il tipo di cambio. Esso pu&ograve; avere i seguenti valori:</li>
   <ul>
     <li><tt>ps_change_motion</tt> 
 	  cambia solo i parametri di movimento della particella, non il colore e la forma o il tempo di vita.</li>
     <li><tt>ps_change_shape</tt> 
 	  cambia solo i parametri di forma come la dimensione, il colore e la forma.</li>
     <li><tt>ps_change_all</tt> 
-	  cambia tutti i parametri, ciò significa che la particella viene distrutta 
+	  cambia tutti i parametri, ci&ograve; significa che la particella viene distrutta 
 	  e una nuova di un nuovo tipo viene creata.</li>
   </ul>
 </ul>
@@ -49,10 +49,10 @@ come primo parametro l'indice del sistema particellare al quale appartiene.
 <blockquote>
   <tt><b>part_changer_create(ps)</b></tt> 
     Crea un nuovo modificatore nel dato sistema particellare. Restituisce l'indice del modificatore. 
-    Questo indice deve essere usato in tutte le funzioni di seguito per impostare le proprietà del modificatore.<br>
+    Questo indice deve essere usato in tutte le funzioni di seguito per impostare le propriet&agrave; del modificatore.<br>
   <tt><b>part_changer_destroy(ps,ind)</b></tt> 
     Distrugge il modificatore ind nel sistema particellare. 
-    Chiamare questa funzione se non serve più, per risparmiare spazio.<br>
+    Chiamare questa funzione se non serve pi&ugrave;, per risparmiare spazio.<br>
   <tt><b>part_changer_destroy_all(ps)</b></tt> 
     Distrugge tutti i modificatori che sono stati creati nel sistema di particelle.<br>
   <tt><b>part_changer_exists(ps,ind)</b></tt> 

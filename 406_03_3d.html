@@ -11,24 +11,24 @@
 
 <h3>Suoni 3D</h3>
 
-<i><b>Questa funzionalità è disponibile solo nella Standard Edition di GameMaker.</b></i>
+<i><b>Questa funzionalit&agrave; &egrave; disponibile solo nella Standard Edition di GameMaker.</b></i>
 
 <p>
-I suoni 3D sono i suoni che hanno una posizione (e velocità) rispetto all'ascoltatore.
+I suoni 3D sono i suoni che hanno una posizione (e velocit&agrave;) rispetto all'ascoltatore.
 Anche se vengono utilizzati soprattutto nei giochi 3D puoi effettivamente usarli anche nei giochi 2D.
-L'idea è che un suono possiede una posizione nello spazio.
+L'idea &egrave; che un suono possiede una posizione nello spazio.
 In tutte le funzioni si assume che l'ascoltatore sia alla posizione (0,0,0). Il sistema
-calcola come l'ascoltatore sentirà il suono e dunque lo adatta. L'effetto è
+calcola come l'ascoltatore sentir&agrave; il suono e dunque lo adatta. L'effetto &egrave;
 specialmente buono quando hai un buon sistema di altoparlanti, ma funziona anche in quelli piccoli.
 
 <p>
-Oltre alla posizione, il suono ha la velocità. Questo porta
-al ben conosciuto effetto doppler, che verrà modellato correttamente. Infine il suono può avere
-un orientamento, e, di nuovo, il suono si adatterà a questo.
+Oltre alla posizione, il suono ha la velocit&agrave;. Questo porta
+al ben conosciuto effetto doppler, che verr&agrave; modellato correttamente. Infine il suono pu&ograve; avere
+un orientamento, e, di nuovo, il suono si adatter&agrave; a questo.
 
 <p>
 <i>GameMaker</i> supporta i suoni 3D con le funzioni descritte sotto.
-Funzionano solo per le risorse che sono state indicate come 3D. (Lo svantaggio è che
+Funzionano solo per le risorse che sono state indicate come 3D. (Lo svantaggio &egrave; che
 i suoni 3D saranno mono, non stereo).
 
 <p>
@@ -41,25 +41,25 @@ i suoni 3D saranno mono, non stereo).
 	con cui il suono viene ascoltato dipende da questa misura, 
 	proprio come nel mondo reale.<br>
   <tt><b>sound_3d_set_sound_velocity(snd,x,y,z)</b></tt> 
-	Imposta la velocità del suono indicato al vettore indicato nello spazio.
-	Nota che impostare la velocità non significa cambiare la posizione.
-	La velocità viene usata solo per calcolare gli effetti Doppler. Quindi se vuoi muovere
+	Imposta la velocit&agrave; del suono indicato al vettore indicato nello spazio.
+	Nota che impostare la velocit&agrave; non significa cambiare la posizione.
+	La velocit&agrave; viene usata solo per calcolare gli effetti Doppler. Quindi se vuoi muovere
 	il suono devi cambiare manualmente la posizione.<br>
   <tt><b>sound_3d_set_sound_distance(snd,mindist,maxdist)</b></tt> 
 	Imposta la distanza minima al quale il suono non aumenta in
-	intensità e la distanza massima alla quale il suono non può più essere sentito.
+	intensit&agrave; e la distanza massima alla quale il suono non pu&ograve; pi&ugrave; essere sentito.
 	Quindi quando la distanza si trova tra 0 e la distanza minima il suono
-	è alla sua massima ampiezza. Quando si trova tra la minima distanza e quella massima
-	l'ampiezza diminuisce lentamente finché non raggiunge la massima distanza
-	o il suono non è più udibile. Normalmente
-	la distanza minima è 1 metro e la massima è 1 miliardo di metri.<br>
+	&egrave; alla sua massima ampiezza. Quando si trova tra la minima distanza e quella massima
+	l'ampiezza diminuisce lentamente finch&eacute; non raggiunge la massima distanza
+	o il suono non &egrave; pi&ugrave; udibile. Normalmente
+	la distanza minima &egrave; 1 metro e la massima &egrave; 1 miliardo di metri.<br>
   <tt><b>sound_3d_set_sound_cone(snd,x,y,z,anglein,angleout,voloutside)</b></tt> 
 	Normalmente il suono ha la stezza ampiezza a una data distanza in tutte le direzioni.
-	Puoi però impostare un cono per cambiare ciò e rendere il suono direzionale. x,y,z specificano
+	Puoi per&ograve; impostare un cono per cambiare ci&ograve; e rendere il suono direzionale. x,y,z specificano
 	la direzione del cono. <tt>anglein</tt> specifica l'angolo interno. Se
-	l'ascoltatore è dentro questo angolo sente il suono al suo normale volume. <tt>angleout</tt>
-	specifica l'angolo esterno. Quando l'ascoltatore è fuori da quest'angolo il volume è indicato
-	con <tt>voloutside</tt>. Per essere più precisi, <tt>voloutside</tt> è un numero negativo
+	l'ascoltatore &egrave; dentro questo angolo sente il suono al suo normale volume. <tt>angleout</tt>
+	specifica l'angolo esterno. Quando l'ascoltatore &egrave; fuori da quest'angolo il volume &egrave; indicato
+	con <tt>voloutside</tt>. Per essere pi&ugrave; precisi, <tt>voloutside</tt> &egrave; un numero negativo
 	che indica le centinaia di decibel da sottrarre dal
 	volume interno. Tra l'interno e l'esterno il vomue diminuisce gradualmente.<br>
 </blockquote>

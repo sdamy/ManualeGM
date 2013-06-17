@@ -2,36 +2,36 @@
 
 <html>
 <head>
-<title>Aggiungere tiles</title>
+<title>Aggiungere Tile</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Aggiungere tiles</h3>
+<h3>Aggiungere Tile</h3>
 
 Puoi anche creare i cosiddetti tiled background.
 In molti giochi vorresti avere dei bei sfondi.
 Per esempio, in un labirinto, i muri del labirinto dovrebbero abbinarsi correttamente
 e in un platform vorresti vedere delle piattaforme, degli alberi, ecc. disegnati bene.
 Puoi fare questo su <i>GameMaker</i> definendo molti oggetti differenti
-e componendo le tue room con questi oggetti. Il problema tuttavia è che
-ci vuole molto per fare ciò, servono molte risorse, e rende il gioco
+e componendo le tue room con questi oggetti. Il problema tuttavia &egrave; che
+ci vuole molto per fare ci&ograve;, servono molte risorse, e rende il gioco
 lento per i molti oggetti. Per esempio, per creare
 dei muri in un labirinto dovrai creare 15 oggetti di forma differente per i muri.
 
-<!-- Non è molto chiaro, ma non era chiaro neanche nella versione inglese... magari si può usare una traduzione meno letterale -->
+<!-- Non &egrave; molto chiaro, ma non era chiaro neanche nella versione inglese... magari si pu&ograve; usare una traduzione meno letterale -->
 
 <p>
-Il modo più semplice, usato in molti giochi, è che i muri e gli altri elementi statici
+Il modo pi&ugrave; semplice, usato in molti giochi, &egrave; che i muri e gli altri elementi statici
 vengono disegnati soltanto nello sfondo. Ma, potresti chiedere, come
-sa il gioco se un oggetto colpisce un muro, visto che è disegnato nello sfondo?
-Il trucco è il seguente: crei solamente un oggetto muro nel tuo gioco.
+sa il gioco se un oggetto colpisce un muro, visto che &egrave; disegnato nello sfondo?
+Il trucco &egrave; il seguente: crei solamente un oggetto muro nel tuo gioco.
 Deve avere la dimensione esatta ma non deve essere necessariamente bello. Quando
-crei la room, piazza questo oggetto in tutti i posti in cui c'è un muro. E, qui
+crei la room, piazza questo oggetto in tutti i posti in cui c'&egrave; un muro. E, qui
 viene il trucco: rendi questo oggetto invisibile. Quindi quando apri il gioco
 non vedi gli oggetti muro. Vedi lo sfondo invece. Ma
-gli oggetti solidi del muro sono comunque lì e le istanze nel gioco reagiranno
+gli oggetti solidi del muro sono comunque l&igrave; e le istanze nel gioco reagiranno
 con esso.
 
 <p>
@@ -43,18 +43,18 @@ nell'erba, negli alberi, ecc.
 
 <p>
 Per aggiungere le tiles nella tua room hai bisogno inizialmente di aggiungere un background che contiene le tiles.
-Se vuoi che siano parzialmente trasparenti, assicurati che il background sia caricato come trasparente. Quando aggiungi la risorsa background indica che dev'essere usata come tileset. Poi indica la dimensione di ogni tile e se c'è dello spazio tra le tiles, come indicato nel capitolo delle risorse background.
+Se vuoi che siano parzialmente trasparenti, assicurati che il background sia caricato come trasparente. Quando aggiungi la risorsa background indica che dev'essere usata come tileset. Poi indica la dimensione di ogni tile e se c'&egrave; dello spazio tra le tiles, come indicato nel capitolo delle risorse background.
 
 <p>
 Adesso, quando definisci la tua room, clicca nella tab 
-<b>tiles</b>. Verrà mostrata la finestra seguente (effettivamente, abbiamo già
+<b>tiles</b>. Verr&agrave; mostrata la finestra seguente (effettivamente, abbiamo gi&agrave;
 aggiunto delle tiles in questa room e disattivato la griglia).
 
 <p>
 <img src="images/form_room_tiles.jpg">
 
 <p>
-In alto a sinitra c'è il set corrente di tiles usate. Per selezionare il set,
+In alto a sinitra c'&egrave; il set corrente di tiles usate. Per selezionare il set,
 clicca nel bottone del menu sotto e seleziona il background appropriato.
 
 <p>
@@ -62,9 +62,9 @@ Adesso puoi aggiungere le tiles selezionando la tile che vuoi in alto a sinistra
 e cliccando nella posizione appropriata della room a destra. Questo funziona
 esattamente nello stesso modo con cui si aggiungono le istanze. Le tiles sottostanti vengono
 rimosse, a meno che non deselezioni la casella <b>Delete underlying</b>. Puoi usare
-il tasto destro per cancellare le tiles. Tieni premuto il tasto &lt;Shift&gt; per aggiungere più
+il tasto destro per cancellare le tiles. Tieni premuto il tasto &lt;Shift&gt; per aggiungere pi&ugrave;
 tiles. E tieni premuto &lt;Ctrl&gt; per spostarle.
-Il tasto &lt;Alt&gt; eviterà di allinearle alla griglia. Inoltre c'è
+Il tasto &lt;Alt&gt; eviter&agrave; di allinearle alla griglia. Inoltre c'&egrave;
 un menu pop-up che appare quando tieni premuto &lt;Ctrl&gt; e cliccli su una tile
 col tasto destro del mouse. I bottoni nella toolbar cancelleranno tutte le tiles,
 le sposteranno, le ordineranno o le bloccherano/sbloccheranno. (Effettivamente
@@ -72,31 +72,31 @@ operano sul livello corrente; vedi sotto.)
 
 <p>
 In alcune situazioni potresti voler mettere una parte del background nella
-room che non è esattamente della dimensione di una tile o consiste in delle tiles multiple.
-Questo può essere fatto premendo il tasto sinistro del mouse nella parte in alto a sinistra dell'immagine
-premendo nel frattempo il tasto &lt;Alt&gt;. Così potrai delineare un'area che puoi
-piazzare nella room nello stesso modo con cui piazzi le tiles. Per selezionare più tiles, tieni premuto
-il tasto &lt;Shift&gt;. Nota che questo funziona correttamente quando non c'è separazione
+room che non &egrave; esattamente della dimensione di una tile o consiste in delle tiles multiple.
+Questo pu&ograve; essere fatto premendo il tasto sinistro del mouse nella parte in alto a sinistra dell'immagine
+premendo nel frattempo il tasto &lt;Alt&gt;. Cos&igrave; potrai delineare un'area che puoi
+piazzare nella room nello stesso modo con cui piazzi le tiles. Per selezionare pi&ugrave; tiles, tieni premuto
+il tasto &lt;Shift&gt;. Nota che questo funziona correttamente quando non c'&egrave; separazione
 tra le tiles. Se vuoi selezionare un'area multipla
 della dimensione della griglia della room, tieni premuto il tasto &lt;Ctrl&gt; piuttosto che il tasto &lt;Shift&gt;.
 (Nota che puoi cambiare il tasto mentre delinei l'area. Questo
 potrebbe essere utile a volte).
 
 <p>
-Le tiles possono essere piazzate in livelli di diverse profondità. In basso puoi vedere
-la profondità corrente. Normalmente è 1000000 che di solito è dietro
+Le tiles possono essere piazzate in livelli di diverse profondit&agrave;. In basso puoi vedere
+la profondit&agrave; corrente. Normalmente &egrave; 1000000 che di solito &egrave; dietro
 a tutte le istanze. Quindi le istanze si muovono sopra le tiles. Puoi usare
-il tasto <b>Add</b> per aggiungere un nuovo livello di tiles, con una differente profondità.
+il tasto <b>Add</b> per aggiungere un nuovo livello di tiles, con una differente profondit&agrave;.
 Si possono usare anche depth negative per mettere sopra alle istanze. Puoi anche
-dare agli oggetti delle profondità differenti per metterle in mezzo a diversi livelli
+dare agli oggetti delle profondit&agrave; differenti per metterle in mezzo a diversi livelli
 di tiles. Se premi il bottone <b>Delete</b> cancelli un livello di tile insieme a tutte
 le sue tiles. (Dev'esserci sempre almeno un livello). Se premi il bottone <b>Change
-</b> puoi cambiare la profondità di un livello. Se gli dai la stessa profondità
+</b> puoi cambiare la profondit&agrave; di un livello. Se gli dai la stessa profondit&agrave;
 di un altro livello, i due livelli verranno fusi.
 
 <p>
-L'uso delle tiles è una funzionalità potente che dev'essere usata il più possibile.
-È molto più veloce dell'uso degli oggetti e le immagini delle tiles vengono memorizzate
+L'uso delle tiles &egrave; una funzionalit&agrave; potente che dev'essere usata il pi&ugrave; possibile.
+&Egrave; molto pi&ugrave; veloce dell'uso degli oggetti e le immagini delle tiles vengono memorizzate
 solo una volta. Quindi puoi usare delle grandi rooms con tile usando poca memoria.
 
 <!--END-->
@@ -116,5 +116,5 @@ tiles
 aggiungere tiles
 piazzare tiles
 livelli di tile
-profondità delle tile
+profondit&agrave; delle tile
 --> 

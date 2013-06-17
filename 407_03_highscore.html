@@ -2,23 +2,23 @@
 
 <html>
 <head>
-<title>Highscore list</title>
+<title>Highscore List</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Highscore list</h3>
+<h3>Highscore List</h3>
 
-Un popup speciale è la lista dei 10 punteggi migliori che viene tenuta per
+Un popup speciale &egrave; la lista dei 10 punteggi migliori che viene tenuta per
 ogni gioco. Esistono le seguenti funzioni:
 
 <p>
 <blockquote>
   <tt><b>highscore_show(numb)</b></tt> 
-    Mostra la lista dei punteggi. numb è il nuovo punteggio. Se il
-        punteggio è abbastanza buono da poter essere inserito nella lista,
-        il giocatore può inserire un nome. Usa -1 per mostrare semplicemente
+    Mostra la lista dei punteggi. numb &egrave; il nuovo punteggio. Se il
+        punteggio &egrave; abbastanza buono da poter essere inserito nella lista,
+        il giocatore pu&ograve; inserire un nome. Usa -1 per mostrare semplicemente
         la lista.<br>
   <tt><b>highscore_set_background(back)</b></tt> 
     Imposta l'immagine da usare come sfondo. <tt>back</tt> deve essere
@@ -26,7 +26,7 @@ ogni gioco. Esistono le seguenti funzioni:
   <tt><b>highscore_set_border(show)</b></tt>
     Scegli se la finestra della lista deve avere un bordo (true) o no (false).<br>
   <tt><b>highscore_set_font(name,size,style)</b></tt> 
-    Imposta il font per il testo della tabella. (Questo è un font normale
+    Imposta il font per il testo della tabella. (Questo &egrave; un font normale
         di Windows, NON una risorsa font.) Specifica il nome, la dimensione
         e lo stile (0=normale, 1=grassetto, 2=corsivo, 3=grassetto corsivo).<br>
   <tt><b>highscore_set_colors(back,new,other)</b></tt>
@@ -34,20 +34,20 @@ ogni gioco. Esistono le seguenti funzioni:
         e i punteggi precedenti.<br>
   <tt><b>highscore_set_strings(caption,nobody,escape)</b></tt>
     Cambia le diverse stringhe di default usate quando mostri la lista dei
-        punteggi. <tt>caption</tt> è la didascalia della finestra.
-        <tt>nobody</tt> è la stringa usata quando non c'è nessuno a una
-        particolare posizione. <tt>escape</tt> è la stringa in basso
-        che dice di premere Esc. È particolarmente utile se il gioco
-        è in una lingua diversa dall'inglese.<br>
+        punteggi. <tt>caption</tt> &egrave; la didascalia della finestra.
+        <tt>nobody</tt> &egrave; la stringa usata quando non c'&egrave; nessuno a una
+        particolare posizione. <tt>escape</tt> &egrave; la stringa in basso
+        che dice di premere Esc. &Egrave; particolarmente utile se il gioco
+        &egrave; in una lingua diversa dall'inglese.<br>
   <tt><b>highscore_show_ext(numb,back,border,col1,col2,name,size)</b></tt> 
-    Mostra la lista dei punteggi con delle funzioni in più (puoi farcela
-        tranquillamente usando le funzioni precedenti). numb è il nuovo
-        punteggio. Se è abbastanza buono da poter essere aggiunto alla
-        lista, il giocatore può inserire un nome. Usa -1 per mostrare
-        semplicemente la lista. back è il background da usare come sfondo,
-        border indica se mostrare o meno il bordo. col1 è il colore per
-        il nuovo punteggio, col2 è il colore per gli altri punteggi. name è
-        il nome del font da usare, e size è la sua dimensione.<br>
+    Mostra la lista dei punteggi con delle funzioni in pi&ugrave; (puoi farcela
+        tranquillamente usando le funzioni precedenti). numb &egrave; il nuovo
+        punteggio. Se &egrave; abbastanza buono da poter essere aggiunto alla
+        lista, il giocatore pu&ograve; inserire un nome. Usa -1 per mostrare
+        semplicemente la lista. back &egrave; il background da usare come sfondo,
+        border indica se mostrare o meno il bordo. col1 &egrave; il colore per
+        il nuovo punteggio, col2 &egrave; il colore per gli altri punteggi. name &egrave;
+        il nome del font da usare, e size &egrave; la sua dimensione.<br>
   <tt><b>highscore_clear()</b></tt> 
     Cancella la lista dei punteggi.<br>
   <tt><b>highscore_add(str,numb)</b></tt> 
@@ -55,7 +55,7 @@ ogni gioco. Esistono le seguenti funzioni:
   <tt><b>highscore_add_current()</b></tt> 
     Aggiunge il punteggio corrente alla lista. Il giocatore deve inserire un nome.<br>
   <tt><b>highscore_value(place)</b></tt> 
-    Restituisce il punteggio della persona nella posizione data (1-10). Può essere
+    Restituisce il punteggio della persona nella posizione data (1-10). Pu&ograve; essere
         usato per disegnare la tua lista dei punteggi.<br>
   <tt><b>highscore_name(place)</b></tt> 
     Restituisce il nome della persona alla posizione data (1-10).<br>

@@ -12,10 +12,10 @@
 <h3>Trasformazioni</h3>
 
 Una trasformazione vi consente di cambiare il luogo in cui vengono tracciati gli elementi 
-nel mondo tridimensionale. Per esempio, la funzione per disegnare dei blocchi può raffigurare
+nel mondo tridimensionale. Per esempio, la funzione per disegnare dei blocchi pu&ograve; raffigurare
 esclusivamente blocchi ad ascisse parallelo. Impostando una 
 trasformazione a rotazione potete creare blocchi rotanti. Anche gli sprite vengono sempre 
-disegnati parallelamente al piano xy. Impostando una trasformazione potete cambiare tutto ciò. 
+disegnati parallelamente al piano xy. Impostando una trasformazione potete cambiare tutto ci&ograve;. 
 Esistono due tipi di funzioni: funzioni che impostando la trasformazione e funzioni che 
 aggiungono trasformazioni.
 
@@ -28,39 +28,39 @@ aggiungono trasformazioni.
   <tt><b>d3d_transform_set_scaling(xs,ys,zs)</b></tt>
 	  Imposta la trasformazione per scalare con il valore indicato.<br>
   <tt><b>d3d_transform_set_rotation_x(angle)</b></tt>
-	  Imposta la trasformazione ad una rotazione intorno all’ascisse-x con l’ammontare indicato.<br>
+	  Imposta la trasformazione ad una rotazione intorno all'ascisse-x con l'ammontare indicato.<br>
   <tt><b>d3d_transform_set_rotation_y(angle)</b></tt>
-	  Imposta la trasformazione per una rotazione intorno all’ascisse-y con l’ammontare indicato.<br>
+	  Imposta la trasformazione per una rotazione intorno all'ascisse-y con l'ammontare indicato.<br>
   <tt><b>d3d_transform_set_rotation_z(angle)</b></tt>
-	  Imposta la trasformazione ad una rotazione intorno all’ascisse-z con l’ammontare indicato.<br>
+	  Imposta la trasformazione ad una rotazione intorno all'ascisse-z con l'ammontare indicato.<br>
   <tt><b>d3d_transform_set_rotation_axis(xa,ya,za,angle)</b></tt>
-	  Imposta la trasformazione ad una rotazione intorno all’ascisse indicato dalla rotta 
-	  con l’ammontare indicato..<br>
+	  Imposta la trasformazione ad una rotazione intorno all'ascisse indicato dalla rotta 
+	  con l'ammontare indicato..<br>
   <tt><b>d3d_transform_add_translation(xt,yt,zt)</b></tt>
 	  Imposta una trasformazione sopra la rotta indicata.<br>
   <tt><b>d3d_transform_add_scaling(xs,ys,zs)</b></tt>
-	  Aggiunge una scalatura con l’ammontare indicato.<br>
+	  Aggiunge una scalatura con l'ammontare indicato.<br>
   <tt><b>d3d_transform_add_rotation_x(angle)</b></tt>
-	  Aggiunge una rotazione intorno all’ascisse-x con il valore indicato.<br>
+	  Aggiunge una rotazione intorno all'ascisse-x con il valore indicato.<br>
   <tt><b>d3d_transform_add_rotation_y(angle)</b></tt>
-	  Aggiunge una rotazione intorno all’ascisse-y con l’ammontare indicato.<br>
+	  Aggiunge una rotazione intorno all'ascisse-y con l'ammontare indicato.<br>
   <tt><b>d3d_transform_add_rotation_z(angle)</b></tt>
-	  Aggiunge una rotazione intorno all’ascisse-z con il valore indicato.<br>
+	  Aggiunge una rotazione intorno all'ascisse-z con il valore indicato.<br>
   <tt><b>d3d_transform_add_rotation_axis(xa,ya,za,angle)</b></tt>
-	  Aggiunge una rotazione intorno all’ascisse indicato dal vettore 
-	  con l’ammontare indicato.<br>
+	  Aggiunge una rotazione intorno all'ascisse indicato dal vettore 
+	  con l'ammontare indicato.<br>
 </blockquote>
 
 Osservate che la rotazione e lo scaling vengono effettuati in relazione al punto di intersezione del mondo 3D,
-e non in relazione all’oggetto che è stato raffigurato. Se l’oggetto non è nel punto di intersezione, sarà 
-spostato in un punto diverso, che è quello che non volete. Quindi, per esempio per ruotare un oggetto sopra 
+e non in relazione all'oggetto che &egrave; stato raffigurato. Se l'oggetto non &egrave; nel punto di intersezione, sar&agrave; 
+spostato in un punto diverso, che &egrave; quello che non volete. Quindi, per esempio per ruotare un oggetto sopra 
 il suo ascisse-x, dobbiamo prima portarlo nel punto di intersezione, ruotarlo, e infine riportarlo nella sua 
-posizione. Questo è quello che le funzioni fanno per aggiungere delle trasformazioni.
+posizione. Questo &egrave; quello che le funzioni fanno per aggiungere delle trasformazioni.
 
 <p>
 
 Gli esempi che seguono possono spiegare meglio questo concetto. Supponiamo di avere uno sprite <tt>spr</tt> che 
-vogliamo disegnare alla posizione (100,100,10). Possiamo usare il seguente codice per fare ciò
+vogliamo disegnare alla posizione (100,100,10). Possiamo usare il seguente codice per fare ci&ograve;
 
 <p>
 <blockquote>
@@ -76,10 +76,10 @@ vogliamo disegnare alla posizione (100,100,10). Possiamo usare il seguente codic
 <p>
 
 Si noti che dato il nostro uso di una traslazione dovremmo disegnare lo sprite alla posizione (0,0). (Questo 
-assume che l’istanza corrente ha una profondità 0! Se non siete sicuri, impostate prima la profondità). Se 
-vogliamo usare il suddetto nel nostro fps non vedremo lo sprite. La ragione è che lo sprite è parallelo 
-al piano-xy. Vogliamo ruotarlo sopra 90 gradi e lungo l’ascisse-x o y. In questo caso abbiamo
-bisogno di aggiungere una rotazione. Ricordate l’ordine: dobbiamo prima ruotare lo sprite e poi traslarlo. 
+assume che l'istanza corrente ha una profondit&agrave; 0! Se non siete sicuri, impostate prima la profondit&agrave;). Se 
+vogliamo usare il suddetto nel nostro fps non vedremo lo sprite. La ragione &egrave; che lo sprite &egrave; parallelo 
+al piano-xy. Vogliamo ruotarlo sopra 90 gradi e lungo l'ascisse-x o y. In questo caso abbiamo
+bisogno di aggiungere una rotazione. Ricordate l'ordine: dobbiamo prima ruotare lo sprite e poi traslarlo. 
 Potete usare cosi il codice seguente:
 
 <p>
@@ -97,7 +97,7 @@ Potete usare cosi il codice seguente:
 
 <p>
 
-A volte volete salvare temporaneamente l’attuale trasformazione, per esempio questo 
+A volte volete salvare temporaneamente l'attuale trasformazione, per esempio questo 
 per aggiungere una trasformazione aggiuntiva e poi riusare quella precedente (questo accade
 spesso quando tracciamo modelli gerarchici). A questo punto potete inserire la corrente 
 trasformazione in uno stack e poi riprenderla da li per rifare la trasformazione. 
@@ -108,13 +108,13 @@ Esistono le seguenti funzioni:
   <tt><b>d3d_transform_stack_clear()</b></tt>
 	  Azzera lo stack delle trasformazioni.<br>
   <tt><b>d3d_transform_stack_empty()</b></tt>
-	  Da un risultato se lo stack della trasformazione è vuoto.<br>
+	  Da un risultato se lo stack della trasformazione &egrave; vuoto.<br>
   <tt><b>d3d_transform_stack_push()</b></tt>
 	  Invia la trasformazione attuale nello stack. Restituisce un risultato se 
 	  esiste spazio nello stack per poterla inviare (se dimenticate di riprendere 
-	  la trasformazione in alcuni momenti uscirà fuori dallo spazio sullo stack).<br>
+	  la trasformazione in alcuni momenti uscir&agrave; fuori dallo spazio sullo stack).<br>
   <tt><b>d3d_transform_stack_pop()</b></tt>
-	  Prende (fa fuoriuscire) dallo stack la prima trasformazione in ordine di priorità
+	  Prende (fa fuoriuscire) dallo stack la prima trasformazione in ordine di priorit&agrave;
 	  e la rende quella corrente. La funzione si attiva se esiste una trasformazione nello stack <br>
   <tt><b>d3d_transform_stack_top()</b></tt>
 	  Rende corrente la prima trasformazione disponibile, ma non la toglie dallo stack. 
@@ -125,8 +125,8 @@ Esistono le seguenti funzioni:
 </blockquote>
 
 <p>
-Usare la trasformazione è un meccanismo potente. Fate quindi attenzione e reimpostate sempre la 
-trasformazione alla sua identità una volta svolto il compito.
+Usare la trasformazione &egrave; un meccanismo potente. Fate quindi attenzione e reimpostate sempre la 
+trasformazione alla sua identit&agrave; una volta svolto il compito.
 
 <!--END-->
 

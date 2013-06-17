@@ -11,9 +11,9 @@
 
 <h3>Disegnare poligoni in 3D</h3>
 
-Il problema di disegnare alla vecchia maniare è che uno sprite o un poligono resta sempre sul piano x-y,
-cioè tutti i punti hanno la stessa profondità. Per poter fare veramente il 3D vorrai poter avere i vertici
-a diverse profondità. Da questo momento parleremo di coordinata z piuttosto che di profondità. Quindi
+Il problema di disegnare alla vecchia maniare &egrave; che uno sprite o un poligono resta sempre sul piano x-y,
+cio&egrave; tutti i punti hanno la stessa profondit&agrave;. Per poter fare veramente il 3D vorrai poter avere i vertici
+a diverse profondit&agrave;. Da questo momento parleremo di coordinata z piuttosto che di profondit&agrave;. Quindi
 vogliamo specificare le coordinate come triplette (x,y,z). Per farlo ci sono versioni speciali delle funzioni
 di disegno avanzate:
 
@@ -28,7 +28,7 @@ di disegno avanzate:
     Aggiunge il vertice (x,y,z) alla primitiva, con colore ed alpha propri. Questo ti consente di creare primitive
         cambiando leggermente il colore e l'alpha.<br>
   <tt><b>d3d_primitive_end()</b></tt>
-    Termina la descrizione della primitiva. Questa è la funzione che la disegna realmente.<br>
+    Termina la descrizione della primitiva. Questa &egrave; la funzione che la disegna realmente.<br>
 </blockquote>
 
 <p>
@@ -58,7 +58,7 @@ z=200, puoi usare il seguente codice:
 </blockquote>
 
 <p>
-Ora, se usassi questo codice, molto probabilmente vedresti solo un triangolo sullo schermo perché la cima del
+Ora, se usassi questo codice, molto probabilmente vedresti solo un triangolo sullo schermo perch&eacute; la cima del
 tetraedro sarebbe dietro la base rispetto al punto di vista. Inoltre, usando solo un colore, sarebbe difficile
 distinguere le varie facce. Nelle pagine successive vedremo come cambiare il punto di vista. Invece per assegnare
 i colori basta chiamare la funzione <tt>draw_set_color(col)</tt> tra i vertici.
@@ -66,7 +66,7 @@ i colori basta chiamare la funzione <tt>draw_set_color(col)</tt> tra i vertici.
 <p>
 Puoi anche disegnare i poligoni 3D con texture. Funziona esattamente come le funzioni di disegno avanzato descritte
 in questo manuale. Ma stavolta ti servono le corrispondenti varianti 3D. devi capire una cosa. In una texture la
-posizione (0,0) è l'angolo in alto a sinistra (y cresce verso il basso). Ma spesso, quando usi le proiezioni (vedi
+posizione (0,0) &egrave; l'angolo in alto a sinistra (y cresce verso il basso). Ma spesso, quando usi le proiezioni (vedi
 una pagina successiva), la posizione (0,0) si trova invece in basso a sinistra (y cresce verso l'alto). In questo
 caso potresti dover capovolgere la texture verticalmente.
 
@@ -83,7 +83,7 @@ caso potresti dover capovolgere la texture verticalmente.
     Aggiunge il vertice (x,y,z) alla primitiva con la posizione (xtex,ytex) nella texture, mescolandovi colore e
         alpha propri.<br>
   <tt><b>d3d_primitive_end()</b></tt>
-    Termina la descrizione della primitiva. Questa è la funzione che la disegna realmente.<br>
+    Termina la descrizione della primitiva. Questa &egrave; la funzione che la disegna realmente.<br>
 </blockquote>
 
 <p>
@@ -107,10 +107,10 @@ con la distanza:
 </blockquote>
 
 <p>
-Un triangolo ha una faccia anteriore e una posteriore. La faccia anteriore è quella dove i vertici sono ordinati
-in senso antiorario. Normalmente vengono disegnati entrambi i lati. Ma se fai una figura chiusa è uno spreco
-perché le facce posteriori dei triangoli non verranno mai viste. In questo caso puoi attivare il cosiddetto
-"backface culling" (eliminazione delle facce posteriori). Ciò risparmia metà del tempo di disegno perché le
+Un triangolo ha una faccia anteriore e una posteriore. La faccia anteriore &egrave; quella dove i vertici sono ordinati
+in senso antiorario. Normalmente vengono disegnati entrambi i lati. Ma se fai una figura chiusa &egrave; uno spreco
+perch&eacute; le facce posteriori dei triangoli non verranno mai viste. In questo caso puoi attivare il cosiddetto
+"backface culling" (eliminazione delle facce posteriori). Ci&ograve; risparmia met&agrave; del tempo di disegno perch&eacute; le
 facce posteriori dei triangoli non vengono disegnate, ma ti lascia il compito di definire i poligoni nel modo
 giusto (ricorda, devi fornire i vertici in senso antiorario). Puoi usare la seguente funzione:
 

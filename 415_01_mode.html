@@ -2,52 +2,52 @@
 
 <html>
 <head>
-<title>Andare in modalità 3D</title>
+<title>Andare in modalit&agrave; 3D</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 
 <!--START-->
 
-<h3>Andare in modalità 3D</h3>
+<h3>Andare in modalit&agrave; 3D</h3>
 
-Se si desidera utilizzare la modalità 3D è necessario innanzitutto impostare <i>GameMaker</i> in modalità 3D. 
-Successivamente sarà possibile tornare alla modalità 2D, se lo si desidera. Le seguenti due funzioni 
+Se si desidera utilizzare la modalit&agrave; 3D &egrave; necessario innanzitutto impostare <i>GameMaker</i> in modalit&agrave; 3D. 
+Successivamente sar&agrave; possibile tornare alla modalit&agrave; 2D, se lo si desidera. Le seguenti due funzioni 
 esistono per questo.
 
 <p>
 <blockquote>
   <tt><b>d3d_start()</b></tt>
-    Inizia la modalità 3D. Ritorna se ha avuto successo.<br>
+    Inizia la modalit&agrave; 3D. Ritorna se ha avuto successo.<br>
   <tt><b>d3d_end()</b></tt>
-    Termina la modalità 3D. Ritorna se ha avuto successo.<br>
+    Termina la modalit&agrave; 3D. Ritorna se ha avuto successo.<br>
 </blockquote>
 
 <p>
-Notare che tutte le funzioni che riguardano la modalità 3D cominciano con <tt>d3d_</tt>. 
+Notare che tutte le funzioni che riguardano la modalit&agrave; 3D cominciano con <tt>d3d_</tt>. 
 
 <p>
-L’avvio della modalità 3D comporterà le seguenti modifiche. Innanzitutto il depth testing (test 
-della profondità, noto anche come z-buffer) è attivato (usando un 24-bit z-buffer). Ciò significa
-che per ogni pixel sullo schermo solo quelli col più piccolo valore z (profondità = valore) verranno 
-disegnati. Se delle istanze hanno la stessa profondità allora si otterrà ciò che è noto come z-fighting. 
-Questo accade quando si tenta di disegnare due istanze allo stesso livello, e l’imprecisione nel 
+L'avvio della modalit&agrave; 3D comporter&agrave; le seguenti modifiche. Innanzitutto il depth testing (test 
+della profondit&agrave;, noto anche come z-buffer) &egrave; attivato (usando un 24-bit z-buffer). Ci&ograve; significa
+che per ogni pixel sullo schermo solo quelli col pi&ugrave; piccolo valore z (profondit&agrave; = valore) verranno 
+disegnati. Se delle istanze hanno la stessa profondit&agrave; allora si otterr&agrave; ci&ograve; che &egrave; noto come z-fighting. 
+Questo accade quando si tenta di disegnare due istanze allo stesso livello, e l'imprecisione nel 
 rendering, dovuta a vicinissimi valori z, causa brutti effetti. Per evitare questo, assicurarsi sempre 
-che due istanze non abbiano lo stesso valore di profondità!
+che due istanze non abbiano lo stesso valore di profondit&agrave;!
 
 <p>
-In secondo luogo, la normale proiezione ortogonale è sostituita da una prospettica. Ciò significa 
-quanto segue. Normalmente la dimensione delle istanze sullo schermo non dipende dalla loro profondità. 
-Con una proiezione prospettica istanze che hanno grandi valori di profondità appariranno più piccole. 
-Quando la profondità è 0, è uguale alla vecchia dimensione (senza che si cambi proiezione). Il punto 
-di vista della telecamera è posto ad una certa distanza sopra la room. (Questa distanza è uguale alla larghezza 
-della room, che dà una proiezione ragionevole di default.) Solo le istanze di fronte alla telecamera sono 
-disegnate. Quindi non utilizzare istanze con una profondità minore di 0 (o almeno non minore di w, dove w 
-è la larghezza della room o della view).
+In secondo luogo, la normale proiezione ortogonale &egrave; sostituita da una prospettica. Ci&ograve; significa 
+quanto segue. Normalmente la dimensione delle istanze sullo schermo non dipende dalla loro profondit&agrave;. 
+Con una proiezione prospettica istanze che hanno grandi valori di profondit&agrave; appariranno pi&ugrave; piccole. 
+Quando la profondit&agrave; &egrave; 0, &egrave; uguale alla vecchia dimensione (senza che si cambi proiezione). Il punto 
+di vista della telecamera &egrave; posto ad una certa distanza sopra la room. (Questa distanza &egrave; uguale alla larghezza 
+della room, che d&agrave; una proiezione ragionevole di default.) Solo le istanze di fronte alla telecamera sono 
+disegnate. Quindi non utilizzare istanze con una profondit&agrave; minore di 0 (o almeno non minore di w, dove w 
+&egrave; la larghezza della room o della view).
 
 <p>
-In terzo luogo, la coordinata verticale y è invertita. Mentre normalmente la posizione (0,0) è in alto a 
-sinistra della vista, in modalità 3D la posizione (0,0) è in basso a sinistra, come è nelle normali 
+In terzo luogo, la coordinata verticale y &egrave; invertita. Mentre normalmente la posizione (0,0) &egrave; in alto a 
+sinistra della vista, in modalit&agrave; 3D la posizione (0,0) &egrave; in basso a sinistra, come &egrave; nelle normali 
 viste tridimensionali.
 
 <p>

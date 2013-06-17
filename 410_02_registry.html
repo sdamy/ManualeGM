@@ -2,17 +2,17 @@
 
 <html>
 <head>
-<title>Registro (Registry)</title>
+<title>Registro (Registro)</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Registry</h3>
+<h3>Registro</h3>
 
-Se si desidera salvare una piccola quantità di informazioni durante l’esecuzione del gioco,
-esiste un semplice meccanismo rispetto all’uso del file. Potete usare il Registro.
-Il registro è un ampio database che Windows conserva per tenere traccia di tutte le 
+Se si desidera salvare una piccola quantit&agrave; di informazioni durante l'esecuzione del gioco,
+esiste un semplice meccanismo rispetto all'uso del file. Potete usare il Registro.
+Il registro &egrave; un ampio database che Windows conserva per tenere traccia di tutte le 
 impostazioni dei programmi. Una voce (entry) ha un nome e un valore. Potete usare entrambi, 
 stringhe e valori reali. Esistono le seguenti funzioni:
 
@@ -34,13 +34,13 @@ stringhe e valori reali. Esistono le seguenti funzioni:
 
 <p>
 
-In realtà, i valori nel Registro sono raggruppati in chiavi. Le routine 
+In realt&agrave;, i valori nel Registro sono raggruppati in chiavi. Le routine 
 sopra funzionano tutte su valori dentro la key che viene creata appositamente 
-per il vostro gioco. Il programma può utilizzare questo meccanismo per ottenere 
-alcune informazioni sul sistema sul quale il gioco è in esecuzione.
-È anche possibile leggere i valori in altre chiavi. È anche possibile scriverle, 
+per il vostro gioco. Il programma pu&ograve; utilizzare questo meccanismo per ottenere 
+alcune informazioni sul sistema sul quale il gioco &egrave; in esecuzione.
+&Egrave; anche possibile leggere i valori in altre chiavi. &Egrave; anche possibile scriverle, 
 ma siate molto attenti. In questo modo POTETE FACILMENTE DISTRUGGERE IL VOSTRO 
-SISTEMA.  (La scrittura ""Write" non è consentita in modalità sicura.) Notate 
+SISTEMA.  (La scrittura ""Write" non &egrave; consentita in modalit&agrave; sicura.) Notate 
 che le chiavi sono ancora sistemate in gruppi. Le seguenti routines lavorano predefinite 
 nel gruppo HKEY_CURRENT_USER. Ma potete cambiare il gruppo principale (root). 
 Per esempio, se volete trovare la directory temporanea attuale usate
@@ -70,7 +70,7 @@ Esistono le seguenti funzioni:
   <tt><b>registry_exists_ext(key,name)</b></tt> 
     Restituisce un valore se esiste il nome dato nella data chiave..<br>
   <tt><b>registry_set_root(root)</b></tt>
-    Setta l’origine (root) per le altre routines. Usate i seguenti valori:<br>
+    Setta l'origine (root) per le altre routines. Usate i seguenti valori:<br>
 	<blockquote>
 	  <b>0</b> = HKEY_CURRENT_USER<br>
 	  <b>1</b> = HKEY_LOCAL_MACHINE<br>

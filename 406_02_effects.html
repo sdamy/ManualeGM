@@ -9,16 +9,16 @@
 
 <!--START-->
 
-<h3>Effetti sonori</h3>
+<h3>Effetti Sonori</h3>
 
-<i><b>Questa funzionalità è disponibile sono nella Standard Edition di Game Maker.</b></i>
+<i><b>Questa funzionalit&agrave; &egrave; disponibile sono nella Standard Edition di Game Maker.</b></i>
 
 <p>
 Gli effetti sonori possono essere utilizzati per cambiare il mondo in cui i suoni e le musiche di sfondo suonano.
 Sappi che gli effetti sonori si applicano solo ai file wave e midi, non agli mp3. Questa sezione descrive
 le funzioni che esistono per usare e per cambiare gli effetti sonori. Sappi che per usare queste funzioni
 hai bisogno di conoscere bene il modo in cui il suono e i sintetizzatori funzionano.
-Non verrà data nessuna spiegazione dei vari parametri. Cerca su Internet o sui libri per altre informazioni.
+Non verr&agrave; data nessuna spiegazione dei vari parametri. Cerca su Internet o sui libri per altre informazioni.
 
 
 <p>
@@ -28,7 +28,7 @@ la risorsa del suono, oppure puoi usare le seguenti funzioni
 <p>
 <blockquote>
   <tt><b>sound_effect_set(snd,effect)</b></tt> 
-	Imposta un effetto sonoro (o una combinazione di questi) per il suono indicato. <tt>effect</tt> può
+	Imposta un effetto sonoro (o una combinazione di questi) per il suono indicato. <tt>effect</tt> pu&ograve;
 	essere qualunque fra questi valori:
 	<blockquote>
       <tt><b>se_none</b></tt><br> 
@@ -50,10 +50,10 @@ sound_effect_set(snd,se_echo+se_reverb);
 </blockquote>
 
 <p>
-Tutti gli effetti possiedono un'impostazione predefinito. Puoi cambiare queste impostazioni una volte che l'effetto è stato applicato
-a un suono. L'ordine qui è cruciale. Prima applichi l'effetto al suono e in seguito 
+Tutti gli effetti possiedono un'impostazione predefinito. Puoi cambiare queste impostazioni una volte che l'effetto &egrave; stato applicato
+a un suono. L'ordine qui &egrave; cruciale. Prima applichi l'effetto al suono e in seguito 
 imposti i suoi parametri. Una volta riapplicati gli effetti al suono, le impostazioni vengono perse e devi
-reimpostarle. Nota che tutti i parametri devono essere compresi in un certo intervallo, che è indicato
+reimpostarle. Nota che tutti i parametri devono essere compresi in un certo intervallo, che &egrave; indicato
 sotto. Le seguenti funzioni esistono per cambiare i parametri degli effetti:
 
 <p>
@@ -64,9 +64,9 @@ sotto. Le seguenti funzioni esistono per cambiare i parametri degli effetti:
 		<blockquote>
 		<tt>wetdry</tt> Rapporto tra il segnale wet (processato) e quello dry (non processato).
 		(intervallo: da 0 a 100, predefinito 50)<br>
-		<tt>depth</tt> Percentuale con cui il tempo di ritardo è modulato dall'oscillatore a bassa frequenza,
+		<tt>depth</tt> Percentuale con cui il tempo di ritardo &egrave; modulato dall'oscillatore a bassa frequenza,
 		in centesimi di un punto di percentuale. (intervallo: da 0 a 100, predefinito 25)<br>
-		<tt>feedback</tt> Percentuale della quantità di segnale in uscita da confluire all'entrata dell'effetto.
+		<tt>feedback</tt> Percentuale della quantit&agrave; di segnale in uscita da confluire all'entrata dell'effetto.
 		(intervallo: da -99 a 99, predefinito 0)<br>
 		<tt>frequency</tt> Frequenza dell'LFO. (intervallo: da 0 a 10, predefinito 0)<br>
 		<tt>wave</tt> Forma d'onda dell'LFO. (0 = triangolo, 1 = onda, predefinito 1)<br>
@@ -93,9 +93,9 @@ sotto. Le seguenti funzioni esistono per cambiare i parametri degli effetti:
 		<blockquote>
 		<tt>wetdry</tt> Rapporto tra il segnale wet (processato) e il segnale dry (non processato).
 		(da 0 a 100, predefinito 50)<br>
-		<tt>depth</tt> Percentuale con cui il tempo di ritardo è modulato dall'oscillatore a bassa frequenza,
+		<tt>depth</tt> Percentuale con cui il tempo di ritardo &egrave; modulato dall'oscillatore a bassa frequenza,
 		  in centinesimi per punto di percentuale. (intervallo: da 0 a 100, predefinito 25)<br>
-		<tt>feedback</tt> Percentuale della quantità di segnale in uscita da confluire al segnale in entrata.
+		<tt>feedback</tt> Percentuale della quantit&agrave; di segnale in uscita da confluire al segnale in entrata.
 		(intevallo: da -99 a 99, predefinito 0)<br>
 		<tt>frequency</tt> Frequenza dell'LFO. (da 0 a 10, predefinito 0)<br>
 		<tt>wave</tt> Forma d'onda dell'LFO. (0 = triangolo, 1 = onda, predefinito 1)<br>
@@ -128,12 +128,12 @@ Imposta i parametri per l'effetto compressor del suono indicato. Possono essere 
 		<tt>gain</tt> Aumento in output del segnale dopo la compressione. (da -60 a 60, predefinito 0)<br>
 		<tt>attack</tt> Tempo prima che la compressione raggiunga il suo valore massimo.
 		(da 0.01 a 500, predefinito 0.01)<br>
-		<tt>release</tt> Velocità con la quale la compressione viene interrotta dopo che l'input scenda sotto al limite.
+		<tt>release</tt> Velocit&agrave; con la quale la compressione viene interrotta dopo che l'input scenda sotto al limite.
 		(intervallo: da 50 a 3000, predefinito 50)<br>
 		<tt>threshold</tt> Punto al quale la compressione inizia, in decibel.
 		(da -60 a 0, predefinito -10)<br>
 		<tt>ratio</tt> Rapporto di compressione (da 1 a 100, predefinito 10)<br>
-		<tt>delay</tt> Tempo dopo il quale il limite è raggiunto prima che l'attack phase inizi,
+		<tt>delay</tt> Tempo dopo il quale il limite &egrave; raggiunto prima che l'attack phase inizi,
 		in millisecondi. (da 0 a 4, predefinito 0)<br>
 		</blockquote> 
   <tt><b>sound_effect_equalizer(snd,center,bandwidth,gain)</b></tt> 

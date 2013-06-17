@@ -2,13 +2,13 @@
 
 <html>
 <head>
-<title>Movimenti</title>
+<title>Azioni di Movimento</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Movimenti</h3>
+<h3>Azioni di Movimento</h3>
 
 Il primo set di azioni consiste ad azioni riguardanti il movimento degli oggetti(objects).
 Le azioni esistenti sono le seguenti:
@@ -19,76 +19,76 @@ Le azioni esistenti sono le seguenti:
 Usa questa azione per far iniziare a muovere un'istanza in una direzione specifica.
 Puoi indicare la direzione usando i tasti con le freccie.
 Usa il tasto centrale per fermare il movimento.Puoi anche decidere di modificare
-la velocità del movimento.Questa velocità è indicata in pixel per frazione di secondo(step). 
-Possibilmente evita di usare velocità negative.
-Puoi anche scegliere più direzioni contemporaneamente,in questo caso ne viene scelta casualmente una.
+la velocit&agrave; del movimento.Questa velocit&agrave; &egrave; indicata in pixel per frazione di secondo(step). 
+Possibilmente evita di usare velocit&agrave; negative.
+Puoi anche scegliere pi&ugrave; direzioni contemporaneamente,in questo caso ne viene scelta casualmente una.
 In questo modo puoi far si che un mostro si muova o verso destra o verso sinistra.
 
 <p>
 <b><img src="images/action_move2.bmp"> Movimento Libero</b><br>
-Questo è il secondo modo per far muovere un'istanza.Qui puoi indicare una direzione precisa. 
-Questo è un angolo tra 0 e 360 gradi. 0 indica la destra. 
-La direzione è in senso antiorario. Quindi per esempio 90 indica 
+Questo &egrave; il secondo modo per far muovere un'istanza.Qui puoi indicare una direzione precisa. 
+Questo &egrave; un angolo tra 0 e 360 gradi. 0 indica la destra. 
+La direzione &egrave; in senso antiorario. Quindi per esempio 90 indica 
 verso l'alto. Se vuoi una direzione casuale, devi scrivere 
 <tt>random(360)</tt>. Come puoi vedere la funzione <tt>random</tt> da 
-un numero casuale minore del valore indicato. Come puoi notare c'è' 
+un numero casuale minore del valore indicato. Come puoi notare c'&egrave;' 
 una casella <b>Relative</b>. Se la spunti, il nuovo movimento viene aggiunto 
 a quello precedente.Per esempio, se l'istanza si sta muovendo sopra di te e 
-aggiungi un movimento a sinistra, il nuovo movimento sarà verso l'alto a sinistra.
+aggiungi un movimento a sinistra, il nuovo movimento sar&agrave; verso l'alto a sinistra.
 
 <p>
 <b><img src="images/action_movepoint.bmp"> Movimento verso direzione</b><br>
-Questa azione è il terzo modo per inserire un movimento.Indicando una posizione e 
-una velocità,l'istanza comincerà a muoversi con quella velocità verso quella posizione. 
-(Non si fermerà a quella posizione!) Per esempio, se vuoi che un proiettile voli 
+Questa azione &egrave; il terzo modo per inserire un movimento.Indicando una posizione e 
+una velocit&agrave;,l'istanza comincer&agrave; a muoversi con quella velocit&agrave; verso quella posizione. 
+(Non si fermer&agrave; a quella posizione!) Per esempio, se vuoi che un proiettile voli 
 verso la posizione dell'astronave, devi usare come posizione <tt>astronave.x, astronave.y</tt>. 
-(Imparerai altro riguardo l'uso di variabili come questa più avanti.) 
+(Imparerai altro riguardo l'uso di variabili come questa pi&ugrave; avanti.) 
 Se spunti la casella <b>Relative</b> specifichi la direzione relativa 
-alla posizione corrente dell'instanza. (La velocità non viene sommata!)
+alla posizione corrente dell'instanza. (La velocit&agrave; non viene sommata!)
 
 <p>
-<b><img src="images/action_hspeed.bmp"> Velocità Orizzontale</b><br>
-La velocità di un'instanza consiste in velocità orizzontale e veritcale(horizontal e vertical). 
-Con questa azione puoi modificare la velocità orizzontale(horizontal). una velocità orizzontale 
+<b><img src="images/action_hspeed.bmp"> Velocit&agrave; Orizzontale</b><br>
+La velocit&agrave; di un'instanza consiste in velocit&agrave; orizzontale e veritcale(horizontal e vertical). 
+Con questa azione puoi modificare la velocit&agrave; orizzontale(horizontal). una velocit&agrave; orizzontale 
 positiva indica un movimento verso destra.Una negativa indica un movimento verso sistra. 
-La velocità verticale resterà invariata.Usa la casella <b>Relative</b> per sommare la velocità a quella attuale 
+La velocit&agrave; verticale rester&agrave; invariata.Usa la casella <b>Relative</b> per sommare la velocit&agrave; a quella attuale 
 (o diminuirla inserendo un numero negativo).
 
 <p>
-<b><img src="images/action_vspeed.bmp"> Velocità Verticale</b><br>
-In modo simile, con questa azione puoi modificare la velocità verticale(vertical)di un'instanza.
+<b><img src="images/action_vspeed.bmp"> Velocit&agrave; Verticale</b><br>
+In modo simile, con questa azione puoi modificare la velocit&agrave; verticale(vertical)di un'instanza.
 
 <p>
-<b><img src="images/action_gravity.bmp"> Aggiungi la Gravità</b><br>
-Con questa azione puoi inserire la gravità per un'instanza. 
-Scegliendo una direzione(un angolo tra 0 e 360 gradi) e una velocità, 
-e ad ogni frazione di secondo(step) questo valore della velocità viene aggiunto 
+<b><img src="images/action_gravity.bmp"> Aggiungi la Gravit&agrave;</b><br>
+Con questa azione puoi inserire la gravit&agrave; per un'instanza. 
+Scegliendo una direzione(un angolo tra 0 e 360 gradi) e una velocit&agrave;, 
+e ad ogni frazione di secondo(step) questo valore della velocit&agrave; viene aggiunto 
 al movimento corrente verso la direzione indicata di quell'instanza dell'oggetto.Normalmente hai bisogno di 
-un incremento molto piccolo della velocità (come 0.01).Solitamente ti serve un movimento verso il basso 
+un incremento molto piccolo della velocit&agrave; (come 0.01).Solitamente ti serve un movimento verso il basso 
 (270 gradi). Se spunti la casella <b>Relative</b> aumenti la 
-velocià della gravità e la direzione.Nota che, contrariamente alla vita vera, 
-oggetti differenti oggetti possono avere la gravità verso direzioni differenti.
+veloci&agrave; della gravit&agrave; e la direzione.Nota che, contrariamente alla vita vera, 
+oggetti differenti oggetti possono avere la gravit&agrave; verso direzioni differenti.
 
 <p>
 <b><img src="images/action_hreverse.bmp"> Inverti Orizzontalmente</b><br>
 Con quest'azione puoi invertire la direzione orizzontale del movimento dell'instanza. 
-Questo per esempio può essere usato quando un'instanza collide con un muro verticale.
+Questo per esempio pu&ograve; essere usato quando un'instanza collide con un muro verticale.
 
 <p>
 <b><img src="images/action_vreverse.bmp"> Inverti Verticalmente</b><br>
 Con quest'azione puoi invertire la direzione verticale del movimento dell'instanza. 
-Questo per esempio può essere usato quando un'instanza collide con un muro orizzontale.
+Questo per esempio pu&ograve; essere usato quando un'instanza collide con un muro orizzontale.
 
 <p>
 <b><img src="images/action_friction.bmp"> Aggiungi Frizione</b><br>
 La frizione(Friction)rallenta il movimento delle instanza mentre si muovono.Specificando il valore 
-della frizione,in ogni frazione di secondo questo valore è sottratto dalla velocità attuale 
-finchè essa non arriva a 0.Normalmente ti serve un valore molto basso (come 0.01).
+della frizione,in ogni frazione di secondo questo valore &egrave; sottratto dalla velocit&agrave; attuale 
+finch&egrave; essa non arriva a 0.Normalmente ti serve un valore molto basso (come 0.01).
 
 <p>
 <b><img src="images/action_jumpposition.bmp"> Salta alla Posizione</b><br>
 Usando questa azione puoi spostare un'instanza in una particolare posizione. 
-Devi semplicemente indicare le coordinate di x- e y-, e l'instanza è posizionata 
+Devi semplicemente indicare le coordinate di x- e y-, e l'instanza &egrave; posizionata 
 nel punto cui le coordinate fanno riferimento. Se spunti la casella <b>Relative</b> , 
 la posizione diventa relativa alla corrente posizione dell'instanza. 
 Quest'azione viene usata spesso per muovere continuamente un'instanza.
@@ -96,12 +96,12 @@ Ad ogni frazione di secondo la posizione aumenta di un po'.
 
 <p>
 <b><img src="images/action_jumpstart.bmp"> Salta alla posizione iniziale</b><br>
-Questa azione sposta l'instanza al punto in cui è stata creata
+Questa azione sposta l'instanza al punto in cui &egrave; stata creata
 
 <p>
 <b><img src="images/action_jumprandom.bmp"> Salta Casualmente</b><br>
 Quest'azione sposta l'instanza in un punto casuale del livello(room). 
-Vengono scelti solo punti dovelìinstanza non collide
+Vengono scelti solo punti dovel&igrave;instanza non collide
 con altre instanze solide(solid). Puoi anche scegliere il distacco utilizzato. Se inserisci 
 valori positivi, le coordinate scelte vengono integrate con multipli dei
 valori indicati. Questo potrebbe per esempio per mantenere l'instanza 
@@ -112,26 +112,26 @@ lo stacco orizzontale da quello vericale.
 <b><img src="images/action_grid.bmp"> Allinea alla Griglia</b><br>
 COn quest'azione puoi allineare la posizione di un'instanza alla griglia. 
 Puoi indicare contemporaneamente lo stacco sia orizzontale ce verticale
-(che corrisponde alla grandezza delle caselle della griglia). Questo può essere davvero utile per far si che 
+(che corrisponde alla grandezza delle caselle della griglia). Questo pu&ograve; essere davvero utile per far si che 
 quell'instanza rimanga sulla griglia.
 
 <p>
 <b><img src="images/action_wrap.bmp"> Rovesciare Schermo</b><br>
-Con quest'azione puoi rovesciare la posizione di un'instanza, cioè quando
+Con quest'azione puoi rovesciare la posizione di un'instanza, cio&egrave; quando
 se ne va da un lato del livello esso riappare dall'altro lato. Questa
-azione è normalmente usata nell'evento <b>Outside</b> Nota che l'instanza
-deve avere una velocità per far funzionare il rovesciamento, perchè la direzione
-del rovesciamento è basata sulla direzione del movimento. puoi indicare
+azione &egrave; normalmente usata nell'evento <b>Outside</b> Nota che l'instanza
+deve avere una velocit&agrave; per far funzionare il rovesciamento, perch&egrave; la direzione
+del rovesciamento &egrave; basata sulla direzione del movimento. puoi indicare
 se rovesciare la posizione solo in orizzontle, solo in verticale, o in entrambe le direzioni.
 
 <p>
 <b><img src="images/action_contact.bmp"> Muovi fino al contatto</b><br>
 Con quest'azione puoi muovere un'instanza in una direzione fino a che l'instanza
-non entra in contatto con un altro oggetto. Se c'è già una collisione
+non entra in contatto con un altro oggetto. Se c'&egrave; gi&agrave; una collisione
 l'instanza non viene mossa. Altrimenti l'instanza 
 si ferma giusto prima che avvenga la collisione. Puoi specificare la direzione ma 
 entro una massima distanza. Per esempio, mentre l'instanza sta cadendo 
-puoi muoverla finchè non incontra un altor oggetto. Puoi anche 
+puoi muoverla finch&egrave; non incontra un altor oggetto. Puoi anche 
 indicare se considerare solo oggetti olidi o tutti gli oggetti.Di solito 
 devi mettere quest'azione nell'evento di collisione(collision event)
 per far si che l'instanza si fermi al contatto con l'altra instanza coinvolta nella collisione.
@@ -143,9 +143,9 @@ rimbalza indietro in modo naturale. Se configuri il parametro "precisley"
 come "false", solo i muri orizzontali o verticali vengono trattati correttamente. Quando configuri 
 il parametro "precise" come "true" anche i muri spigolosi (e anche smussati) vengono trattati correttamente. 
 Puoi anche indicare se rimbalzare solo contro oggetti solidi 
-o contro tutti. Per favore renditi conto che il rimbalzo non è sempre 
-accurato perché dipende da varie proprietà. Ma in alcune situazioni
-l'effetto è comunque buono.
+o contro tutti. Per favore renditi conto che il rimbalzo non &egrave; sempre 
+accurato perch&eacute; dipende da varie propriet&agrave;. Ma in alcune situazioni
+l'effetto &egrave; comunque buono.
 
 
 <!--END-->
@@ -155,7 +155,7 @@ l'effetto è comunque buono.
 <!-- KEYWORDS
 moving actions azioni di movimento
 bouncing rimbalzo
-gravity gravità
+gravity gravit&agrave;
 friction frizione
 wrap rovesciamento
 align to grid allineamento alla griglia

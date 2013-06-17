@@ -25,15 +25,15 @@ Per questo tu puoi usare le seguenti routine:
 <p>
 <blockquote>
   <tt><b>mplay_session_create(sesname,playnumb,playername)</b></tt> 
-    crea una nuova sessione sulla connessione corrente. sesname è una stringa
-    	indicante il nome della sessione. playnumb è il numero che indica
+    crea una nuova sessione sulla connessione corrente. sesname &egrave; una stringa
+    	indicante il nome della sessione. playnumb &egrave; il numero che indica
     	il numero di giocatori massimi accettti in questo gioco (usa 0 per un numero
-    	arbitrario). playname è il tuo nome come giocatore. Ritorna quando ha successo.<br>
+    	arbitrario). playname &egrave; il tuo nome come giocatore. Ritorna quando ha successo.<br>
 </blockquote>
 
 <p>
 Un'istanza del gioco deve creare la sessione. L'altra istanza(e)
-del tuo gioco dovrebbero entrare in questa sessione. Questo è leggermente più complicato.
+del tuo gioco dovrebbero entrare in questa sessione. Questo &egrave; leggermente pi&ugrave; complicato.
 Prima chiedi di vedere quali sessioni sono disponibili e poi scegli una da entrare.
 Ci sono tre importanti ruotines per questo:
 
@@ -43,15 +43,15 @@ Ci sono tre importanti ruotines per questo:
     cerca per tutte le sessioni che accettano ancora giocatori e ritorna
     	il numero di sessioni trovate.<br>
   <tt><b>mplay_session_name(numb)</b></tt>
-    ritorna il nome della sessione numero numb (0 è la prima sessione).
-    	Questa routine può essere chiamata solo dove aver chiamato la precedente routine.<br>
+    ritorna il nome della sessione numero numb (0 &egrave; la prima sessione).
+    	Questa routine pu&ograve; essere chiamata solo dove aver chiamato la precedente routine.<br>
   <tt><b>mplay_session_join(numb,playername)</b></tt> 
-    Ti fa' entrare nella sessione numero numb (0 è la prima sessione).
-    	playername è il tuo nome come giocatore. Ritorna quando ha successo.<br>
+    Ti fa' entrare nella sessione numero numb (0 &egrave; la prima sessione).
+    	playername &egrave; il tuo nome come giocatore. Ritorna quando ha successo.<br>
 </blockquote>
 
 <p>
-C'è un'altra routine che può cambiare la modalità della sessione.
+C'&egrave; un'altra routine che pu&ograve; cambiare la modalit&agrave; della sessione.
 Dovrebbe esssere chiamata prima di creare una sessione:
 
 <p>
@@ -72,7 +72,7 @@ Per controllare lo stato della sessione attuale puoi usare le seguenti funzioni
 </blockquote>
 
 <p>
-Un giocatore può fermare una sessione usando la seguente routine:
+Un giocatore pu&ograve; fermare una sessione usando la seguente routine:
 
 <p>
 <blockquote>

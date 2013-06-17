@@ -10,34 +10,34 @@
 
 <h3>Muoversi attorno</h3>
 
-Ovviamente, un aspetto importante dei giochi è il movimento delle istanze degli oggetti.
+Ovviamente, un aspetto importante dei giochi &egrave; il movimento delle istanze degli oggetti.
 Ogni istanza ha due variabili built-in, x e y, che indicano la posizione
-dell'istanza. (Per essere più precisi, indicano il punto in cui l'orgiine dello sprite
-si trova). La posizione (0,0) è l'angolo in alto a sinistra della room. Puoi cambiare
+dell'istanza. (Per essere pi&ugrave; precisi, indicano il punto in cui l'orgiine dello sprite
+si trova). La posizione (0,0) &egrave; l'angolo in alto a sinistra della room. Puoi cambiare
 la posizione di un'istanza cambiando le sue variabili x e y. Se vuoi
-far fare dei movimenti complicati all'oggetto questo è il modo per farlo. Di solito
+far fare dei movimenti complicati all'oggetto questo &egrave; il modo per farlo. Di solito
 metti questo codice nell'evento Step.
 
 <p>
-Se l'oggetto si muove con velocità e direzione costante, c'è un modo più
-semplice per fare ciò. Ogni istanza ha una velocità orizzontale (<tt>hspeed</tt>)
-e una verticale (<tt>vspeed</tt>). Entrambe hanno come unità di misura il pixel per step.
-Una velocità orizzontale positiva indica un moto verso destra, una negativa
-verso sinistra. Una velocità verticale positiva indica un movimento verso il basso
+Se l'oggetto si muove con velocit&agrave; e direzione costante, c'&egrave; un modo pi&ugrave;
+semplice per fare ci&ograve;. Ogni istanza ha una velocit&agrave; orizzontale (<tt>hspeed</tt>)
+e una verticale (<tt>vspeed</tt>). Entrambe hanno come unit&agrave; di misura il pixel per step.
+Una velocit&agrave; orizzontale positiva indica un moto verso destra, una negativa
+verso sinistra. Una velocit&agrave; verticale positiva indica un movimento verso il basso
 e una negativa verso l'alto. Quindi devi impostare queste variabili solo
 una volta (per esempio nell'evento Create) per dare all'istanza un movimento costante.
 
 <p>
-C'è un altro modo un po' diverso per specificare il movimento, usando una
-direzione espressa in gradi, e una velocità non-negativa. Puoi impostare
+C'&egrave; un altro modo un po' diverso per specificare il movimento, usando una
+direzione espressa in gradi, e una velocit&agrave; non-negativa. Puoi impostare
 e leggere queste variabili per specificare un movimento arbitrario. (Internamente
 viene cambiato in valori per le variabili <tt>h/vspeed</tt>). Inoltre
-c'è la frizione, la gravità e la sua direzione. Infine, 
-c'è la funzione <tt>motion_add(dir,speed)</tt> per aggiungere un movimento
+c'&egrave; la frizione, la gravit&agrave; e la sua direzione. Infine, 
+c'&egrave; la funzione <tt>motion_add(dir,speed)</tt> per aggiungere un movimento
 all'istanza corrente.
 
 <p>
-Per essere più precisi, ogni istanza possiede le seguenti variabili e funzioni
+Per essere pi&ugrave; precisi, ogni istanza possiede le seguenti variabili e funzioni
 che trattano con la posizione e il movimento:
 
 <p>
@@ -55,23 +55,23 @@ che trattano con la posizione e il movimento:
   <tt><b>ystart</b></tt>   
 	L'ordinata iniziale nella room.<br>
   <tt><b>hspeed</b></tt>   
-	La componente orizzontale della velocità.<br>
+	La componente orizzontale della velocit&agrave;.<br>
   <tt><b>vspeed</b></tt>   
-	La componente verticale della velocità.<br>
+	La componente verticale della velocit&agrave;.<br>
   <tt><b>direction</b></tt>
 	La direzione (0-360, in senso antiorario, 0 = destra).<br>
   <tt><b>speed</b></tt>
-	La velocità corrente (pixel / step).<br>
+	La velocit&agrave; corrente (pixel / step).<br>
   <tt><b>friction</b></tt>
 	La frizione corrente (pixel / step).<br>
   <tt><b>gravity</b></tt>
-	La quantità attuale di gravità (pixel / step).<br>
+	La quantit&agrave; attuale di gravit&agrave; (pixel / step).<br>
   <tt><b>gravity_direction</b></tt>
-	Direzione della gravità (270 = verso sotto).<br>
+	Direzione della gravit&agrave; (270 = verso sotto).<br>
   <tt><b>motion_set(dir,speed)</b></tt>
-	Imposta il movimento con la velocità e la direzione data.<br>
+	Imposta il movimento con la velocit&agrave; e la direzione data.<br>
   <tt><b>motion_add(dir,speed)</b></tt>
-	Aggiunge il movimento a quello attuale (è una somma tra vettori).<br>
+	Aggiunge il movimento a quello attuale (&egrave; una somma tra vettori).<br>
 </blockquote>
 
 <p>
@@ -81,18 +81,18 @@ Ci sono molte funzioni disponibili che ti permettono di definire i tuoi moviment
 <blockquote>
   <tt><b>place_free(x,y)</b></tt>
 	Restituisce true se l'istanza, piazzata alla posizione (x,y), sarebbe libera da collisioni.
-	Questo è usato tipicamento per fare un controllo prima di spostarla realmente in quella posizione.<br>
+	Questo &egrave; usato tipicamento per fare un controllo prima di spostarla realmente in quella posizione.<br>
   <tt><b>place_empty(x,y)</b></tt>
 	Restituisce true se l'istanza, piazzata alla posizione (x,y), non incontra nessuno.
 	Quindi questa funzione considera anche gli oggetti non solid.<br>
   <tt><b>place_meeting(x,y,obj)</b></tt>
 	Restituisce true se l'istanza, piazzata alla posizione (x,y), incontrerebbe l'oggetto obj.
-	obj può essere un oggetto nel caso in cui la funzione restituisce true
-	se un istanza di quell'oggetto viene incontrata. Può anche essere l'id di un'istanza, 
-	mentre "all" indica qualunque istanza di qualunque oggetto, oppure si può usare "other".<br>
+	obj pu&ograve; essere un oggetto nel caso in cui la funzione restituisce true
+	se un istanza di quell'oggetto viene incontrata. Pu&ograve; anche essere l'id di un'istanza, 
+	mentre "all" indica qualunque istanza di qualunque oggetto, oppure si pu&ograve; usare "other".<br>
   <tt><b>place_snapped(hsnap,vsnap)</b></tt>
     Returns whether the instance is aligned with the snapping values.<br>
-	Restituisce true se l'istanza è allineata con i valori dello snapping.<br>
+	Restituisce true se l'istanza &egrave; allineata con i valori dello snapping.<br>
   <tt><b>move_random(hsnap,vsnap)</b></tt>
 	Sposta l'istanza in una posizione casuale libera, come l'azione corrispondente.
   <tt><b>move_snap(hsnap,vsnap)</b></tt>
@@ -101,28 +101,28 @@ Ci sono molte funzioni disponibili che ti permettono di definire i tuoi moviment
 	Teletrasporta l'istanza nel lato opposto quando esce dal limite della room. <tt>hor</tt>
 	indica se spostare orizzontalmente e <tt>vert</tt> verticalmente.
 	<tt>margin</tt> indica quando dev'essere lontana l'origine
-	dell'istanza affinché avvenga lo spostamento. Quindi è
+	dell'istanza affinch&eacute; avvenga lo spostamento. Quindi &egrave;
 	il margine attorno alla room. Di solito si usa questa funzione nell'evento
 	Outside.<br>
   <tt><b>move_towards_point(x,y,sp)</b></tt>
-	Muove l'istanza con la velocità "sp" verso la posizione (x,y).<br>
+	Muove l'istanza con la velocit&agrave; "sp" verso la posizione (x,y).<br>
   <tt><b>move_bounce_solid(adv)</b></tt>
 	Rimbalza contro le istanze solide, come fa l'azione corrispondente.
 	adv indica se bisogna utilizzare il rimbalzo avanzato, che tiene conto anche dei muri inclinati.<br>
   <tt><b>move_bounce_all(adv)</b></tt>
 	Rimbalza contro tutte le istanze, anche con quelle non solide.<br>
   <tt><b>move_contact_solid(dir,maxdist)</b></tt>
-	Muove l'istanza verso una direzione finché non entra in contatto con un solido.
-	Se non c'è collisione alla posizione corrente, 
-	l'istanza viene piazzata appena prima che la collisione avvenga. Se c'è già una collisione
+	Muove l'istanza verso una direzione finch&eacute; non entra in contatto con un solido.
+	Se non c'&egrave; collisione alla posizione corrente, 
+	l'istanza viene piazzata appena prima che la collisione avvenga. Se c'&egrave; gi&agrave; una collisione
 	l'istanza non viene spostata. Puoi specificare la distanza massima
 	da percorrere (usa un numero negativo per una distanza arbitraria).<br>
   <tt><b>move_contact_all(dir,maxdist)</b></tt>
 	Simile alla funzione precedente, ma si ferma a contatto con
 	qualunque oggetto, anche non solido.<br>
   <tt><b>move_outside_solid(dir,maxdist)</b></tt>
-	Sposta l'istanza verso una direzione finché non giace più all'interno di un oggetto solido.
-	Se non c'è collisione alla posizione corrente l'istanza non viene spostata.
+	Sposta l'istanza verso una direzione finch&eacute; non giace pi&ugrave; all'interno di un oggetto solido.
+	Se non c'&egrave; collisione alla posizione corrente l'istanza non viene spostata.
 	Puoi specificare la massima distanza da percorrere (negativa = distanza arbitraria).
 	<br>
   <tt><b>move_outside_all(dir,maxdist)</b></tt>
@@ -130,14 +130,14 @@ Ci sono molte funzioni disponibili che ti permettono di definire i tuoi moviment
 	<br>
   <tt><b>distance_to_point(x,y)</b></tt>
 	Restituisce la distanza tra la bounding box dell'istanza corrente alla posizione (x,y). (Se l'istanza
-	non ha uno sprite o una mask, il risultato della funzione non è definito.)<br>
+	non ha uno sprite o una mask, il risultato della funzione non &egrave; definito.)<br>
   <tt><b>distance_to_object(obj)</b></tt>
-	Restituisce la distanza dall'istanza verso l'istanza più vicina dell'oggetto obj. (Se l'istanza
-	o l'oggetto non hanno uno sprite o una mask, il risultato non è definito).<br>
+	Restituisce la distanza dall'istanza verso l'istanza pi&ugrave; vicina dell'oggetto obj. (Se l'istanza
+	o l'oggetto non hanno uno sprite o una mask, il risultato non &egrave; definito).<br>
   <tt><b>position_empty(x,y)</b></tt>
-	Restituisce true se non c'è niente alla posizione (x,y).<br>
+	Restituisce true se non c'&egrave; niente alla posizione (x,y).<br>
   <tt><b>position_meeting(x,y,obj)</b></tt>
-	Restituisce true se alla posizione (x,y) c'è l'istanza obj. obj può essere un oggetto, un'istanza
+	Restituisce true se alla posizione (x,y) c'&egrave; l'istanza obj. obj pu&ograve; essere un oggetto, un'istanza
 	o le keywords <tt>self</tt>, <tt>other</tt>, o <tt>all</tt>.<br>
 </blockquote>
 
@@ -170,13 +170,13 @@ vspeed
 direction
 direzione
 speed
-velocità
+velocit&agrave;
 friction
 frizione
 gravity
-gravità
+gravit&agrave;
 gravity_direction
-direzione della gravità
+direzione della gravit&agrave;
 motion_set()
 motion_add()
 place_free()

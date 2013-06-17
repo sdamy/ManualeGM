@@ -10,16 +10,16 @@
 
 <h3>Generare Eventi</h3>
 
-Come sai, <i>GameMaker</i> è completamente guidato dagli eventi
+Come sai, <i>GameMaker</i> &egrave; completamente guidato dagli eventi
 (event driven). Tutte le azioni avvengono come risultati di eventi.
 Ci sono diversi tipi di eventi. Gli eventi Create e Destroy si innescano
-rispettivamente quando un'istanza è creata o distrutta. In ogni step, il
+rispettivamente quando un'istanza &egrave; creata o distrutta. In ogni step, il
 sistema gestisce per primi i Begin Step Event. Seguono gli Alarm Event,
-gli eventi Keyboard e Mouse e poi lo Step Event. Dopodiché le istanze sono
+gli eventi Keyboard e Mouse e poi lo Step Event. Dopodich&eacute; le istanze sono
 piazzate alla loro nuova posizione e si verificano i Collision Event.
 Infine viene gestito l'End Step Event e poi il Draw Event viene usato
-per disegnare le istanze (nota che se hai più view il Draw Event viene
-chiamato più volte nello stesso step). Puoi anche innescare manualmente
+per disegnare le istanze (nota che se hai pi&ugrave; view il Draw Event viene
+chiamato pi&ugrave; volte nello stesso step). Puoi anche innescare manualmente
 un evento in un'istanza dal codice. Esiste la seguente funzione:
 
 <p>
@@ -43,9 +43,9 @@ un evento in un'istanza dal codice. Esiste la seguente funzione:
 		<tt><b>ev_trigger</b></tt><br>
     </blockquote>
 
-        Quando ci sono più eventi del tipo dato, numb può essere usato per specificare l'evento preciso.
+        Quando ci sono pi&ugrave; eventi del tipo dato, numb pu&ograve; essere usato per specificare l'evento preciso.
         Per i tipi <tt>ev_create</tt>, <tt>ev_destroy</tt> ed <tt>ev_draw</tt>, che non necessitano
-        specificazioni, numb deve essere uguale a 0. Per il tipo <tt>ev_alarm</tt>, numb può
+        specificazioni, numb deve essere uguale a 0. Per il tipo <tt>ev_alarm</tt>, numb pu&ograve;
         essere compreso tra 0 e 11. Per i tipi <tt>ev_keyboard</tt>, <tt>ev_keypress</tt> e <tt>ev_keyrelease</tt>
         devi usare il codice del tasto. Per il tipo <tt>ev_mouse</tt> puoi usare le seguenti costanti:
 	<p>
@@ -164,7 +164,7 @@ le seguenti variabili di sola lettura:
   <tt><b>event_object*</b></tt>
     L'indice dell'object per cui l'evento corrente sta venendo eseguito.<br>
   <tt><b>event_action*</b></tt>
-    L'indice dell'azione che sta venendo eseguita (0 è la prima nell'evento, 1 la seconda, ecc.).<br>
+    L'indice dell'azione che sta venendo eseguita (0 &egrave; la prima nell'evento, 1 la seconda, ecc.).<br>
 </blockquote>
 
 <!--END-->

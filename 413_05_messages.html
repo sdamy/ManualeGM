@@ -10,35 +10,35 @@
 
 <h3>Messaggi</h3>
 
-Il secondo meccanismo di comunicazione che supporta <i>GameMaker</i> è l'invio e la 
-ricezione di messaggi. Un giocatore può inviare messaggi ad uno o a tutti gli 
+Il secondo meccanismo di comunicazione che supporta <i>GameMaker</i> &egrave; l'invio e la 
+ricezione di messaggi. Un giocatore pu&ograve; inviare messaggi ad uno o a tutti gli 
 altri giocatori. I giocatori possono vedere se i messaggi sono arrivati e agire 
 di conseguenza. I messaggi possono essere inviati tramite una guaranteed mode 
-(modalità con garanzia) che da la certezza che il messaggio arrivi (ma può essere 
-più lenta), o in una non-guaranteed mode (modalità senza garanzia), che è più veloce.
+(modalit&agrave; con garanzia) che da la certezza che il messaggio arrivi (ma pu&ograve; essere 
+pi&ugrave; lenta), o in una non-guaranteed mode (modalit&agrave; senza garanzia), che &egrave; pi&ugrave; veloce.
 
 <p>
-Sono disponibili le seguenti funzioni per gestire l’invio dei messaggi:
+Sono disponibili le seguenti funzioni per gestire l'invio dei messaggi:
 
 <p>
 <blockquote>
   <tt><b>mplay_message_send(player,id,val)</b></tt> 
     invia un messaggio al giocatore indicato (un identificatore o un nome, 
-    usare 0 per inviare il messaggio a tutti i giocatori). id è un numero 
-    intero che identifica il messaggio e val è il valore (numero reale o 
-    una stringa). Il messaggio viene inviato nella modalità senza garanzia. 
-    Se val contiene una stringa la lunghezza massima consentita è di 30000 caratteri.<br>
+    usare 0 per inviare il messaggio a tutti i giocatori). id &egrave; un numero 
+    intero che identifica il messaggio e val &egrave; il valore (numero reale o 
+    una stringa). Il messaggio viene inviato nella modalit&agrave; senza garanzia. 
+    Se val contiene una stringa la lunghezza massima consentita &egrave; di 30000 caratteri.<br>
   <tt><b>mplay_message_send_guaranteed(player,id,val)</b></tt> 
     invia un messaggio al giocatore indicato (un identificatore o un nome, usare 
-    0 per inviare il messaggio a tutti i giocatori). id è un numero intero che 
-    identifica il messaggio e val è il valore (numero reale o una stringa). 
-    Il messaggio viene inviato nella modalità con garanzia. Se val contiene una 
-    stringa la lunghezza massima consentita è di 30000 caratteri.<br>
+    0 per inviare il messaggio a tutti i giocatori). id &egrave; un numero intero che 
+    identifica il messaggio e val &egrave; il valore (numero reale o una stringa). 
+    Il messaggio viene inviato nella modalit&agrave; con garanzia. Se val contiene una 
+    stringa la lunghezza massima consentita &egrave; di 30000 caratteri.<br>
   <tt><b>mplay_message_receive(player)</b></tt> 
     riceve il messaggio successivo dalla coda dei messaggi che proviene dal giocatore
     indicato (un identificatore o un nome). Utilizzare 0 per i messaggi di un qualsiasi 
-    giocatore. La routine restituisce un valore se c’è davvero un nuovo messaggio da ricevere.
-    In tal caso è possibile utilizzare le seguenti routine per ottenere il suo contenuto:<br>
+    giocatore. La routine restituisce un valore se c'&egrave; davvero un nuovo messaggio da ricevere.
+    In tal caso &egrave; possibile utilizzare le seguenti routine per ottenere il suo contenuto:<br>
   <tt><b>mplay_message_id()</b></tt> 
     Restituisce l'identificatore del messaggio ricevuto.<br>
   <tt><b>mplay_message_value()</b></tt> 
@@ -56,17 +56,17 @@ Sono disponibili le seguenti funzioni per gestire l’invio dei messaggi:
 
 <p>
 Alcune osservazioni sono pertinenti. Prima di tutto, se si desidera inviare un messaggio 
-a solo un determinato giocatore, è necessario conoscere l'ID univoco del giocatore. 
-Come indicato in precedenza, è possibile ottenere questo ID con la funzione <tt>mplay_player_id ()</tt>.
+a solo un determinato giocatore, &egrave; necessario conoscere l'ID univoco del giocatore. 
+Come indicato in precedenza, &egrave; possibile ottenere questo ID con la funzione <tt>mplay_player_id ()</tt>.
 Questo identificatore del giocatore viene utilizzato anche per ricevere messaggi da un particolare 
-giocatore. In alternativa, si può dare il nome del giocatore sotto forma di stringa. 
-Se più giocatori hanno lo stesso nome, solo il primo otterrà il messaggio.
+giocatore. In alternativa, si pu&ograve; dare il nome del giocatore sotto forma di stringa. 
+Se pi&ugrave; giocatori hanno lo stesso nome, solo il primo otterr&agrave; il messaggio.
 
 <p>
-In secondo luogo, ci si potrebbe chiedere perché ogni messaggio ha un numero intero 
-come identificatore. Il motivo è che questo numero aiuta la vostra applicazione ad 
-inviare diversi tipi di messaggi. Il ricevitore può controllare il tipo di messaggio 
-utilizzando l'ID e intraprendere le azioni appropriate. (Poiché non è garantito che i
+In secondo luogo, ci si potrebbe chiedere perch&eacute; ogni messaggio ha un numero intero 
+come identificatore. Il motivo &egrave; che questo numero aiuta la vostra applicazione ad 
+inviare diversi tipi di messaggi. Il ricevitore pu&ograve; controllare il tipo di messaggio 
+utilizzando l'ID e intraprendere le azioni appropriate. (Poich&eacute; non &egrave; garantito che i
 messaggi arrivino, l'invio di id e valore in diversi messaggi potrebbe causare seri problemi).
 
 <!--END-->

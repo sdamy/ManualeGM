@@ -2,7 +2,7 @@
 
 <html>
 <head>
-<title>Fog</title>
+<title>Nebbia</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
@@ -11,7 +11,7 @@
 
 <h3>Nebbia</h3>
 
-La nebbia può essere usata nei giochi 3D per rendere gli oggetti sfocati o che svaniscono
+La nebbia pu&ograve; essere usata nei giochi 3D per rendere gli oggetti sfocati o che svaniscono
 a distanza. Queste informazioni aiutano a creare una atmosfera e rendono possibile non
 tracciare degli oggetti che sono molto lontani. Per abilitare o disabilitare
 la nebbia usate la seguente funzione:
@@ -19,21 +19,21 @@ la nebbia usate la seguente funzione:
 <p>
 <blockquote>
   <tt><b>d3d_set_fog(enable,color,start,end)</b></tt>
-	  Abilita o disabilita l’uso della nebbia. <tt>color</tt> indica il colore della nebbia.
+	  Abilita o disabilita l'uso della nebbia. <tt>color</tt> indica il colore della nebbia.
 	  <tt>start</tt> indica la distanza alla quale deve partire la nebbia. <tt>end</tt>
-	  indica la distanza alla quale la nebbia è al massimo dell’intensità e non è più possibile vedere nulla.<br>
+	  indica la distanza alla quale la nebbia &egrave; al massimo dell'intensit&agrave; e non &egrave; pi&ugrave; possibile vedere nulla.<br>
 </blockquote>
 
 <p>
 Per capire meglio cosa succede, ci sono di fatto due tipi di nebbia, la nebbia ordinaria
 e quella basata sul vertice. Il primo tipo calcola i valori della nebbia basandosi sul pixel.
 La seconda calcola il valore della nebbia per ogni vertice e poi li interpola.
-Il primo tipo è migliore ma non sempre supportato. <i>GameMaker</i> prova ad usare
+Il primo tipo &egrave; migliore ma non sempre supportato. <i>GameMaker</i> prova ad usare
 la nebbia ordinaria quando supportata o altrimenti usa quella basata sui vertici
 ( a meno che non sia supportata la nebbia). Si noti che certe schede grafiche indicano
-il loro supporto alla nebbia ordinaria (table based), ma offrono all’utente
-la possibilità di disabilitarla in modalità avanzata di settaggio di visualizzazione.
-In questo caso il risultato potrà essere uno schermo nero!
+il loro supporto alla nebbia ordinaria (table based), ma offrono all'utente
+la possibilit&agrave; di disabilitarla in modalit&agrave; avanzata di settaggio di visualizzazione.
+In questo caso il risultato potr&agrave; essere uno schermo nero!
 
 
 <!--END-->

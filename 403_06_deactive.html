@@ -2,45 +2,45 @@
 
 <html>
 <head>
-<title>Disattivare le istanze</title>
+<title>Disattivare le Istanze</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h3>Disattivare le istanze</h3>
+<h3>Disattivare le Istanze</h3>
 
 <b><i>Siete pregati di farea ttenzione quando disattivate ed attivate le istanze in quanto potrebbe
-portare a problemi inaspettati. Quindi è fortemente consigliato non usare queste funzionalità fatta eccezione
+portare a problemi inaspettati. Quindi &egrave; fortemente consigliato non usare queste funzionalit&agrave; fatta eccezione
 per situazioni molto semplici come quella descritta qui sotto.
-Questa funzionalità è stata lasciata per compatibilità con il passato.</i></b>
+Questa funzionalit&agrave; &egrave; stata lasciata per compatibilit&agrave; con il passato.</i></b>
 
 <p>
 Quando create enormi room, per esempio nei giochi platform, con una piccola view, 
 molte istanze stanno al di fuori di quest'ultima. Tuttavia queste istanze sono attive
 ed eseguiranno i loro eventi. Anche le collisioni verranno calcolate
-per queste istanze. Questo può essere abbastanza pesante, e molto spesso
-non è necessario. (Per esempio sperro non è necessario far muovere le
+per queste istanze. Questo pu&ograve; essere abbastanza pesante, e molto spesso
+non &egrave; necessario. (Per esempio sperro non &egrave; necessario far muovere le
 istanze fuori dalla visuale) Per risolvere questo problema <i>GameMaker</i> 
 contiene alcune funzioni per attivare e disattivare le istanze. Prima di usarle
-bisogna capire esattamente come funziona tutto ciò.
+bisogna capire esattamente come funziona tutto ci&ograve;.
 
 <p>
 Quando disattivi le istanze sono in un certo senso rimosse dal gioco. 
-Non sono più visibili ne verranno eseguiti i suoi eventi. Quindi
-tutte le azioni e funzioni non esistono più. Questo fa guadagnare tempo di calcolo
+Non sono pi&ugrave; visibili ne verranno eseguiti i suoi eventi. Quindi
+tutte le azioni e funzioni non esistono pi&ugrave;. Questo fa guadagnare tempo di calcolo
 ma bisogna stare attenti. Ad esempio, quando elimini tutte le istanze di un
-particolare tipo, le istanze disattivate non saranno calcellate (perchè non esistono).
-Quindi non è possibile che una chiave presa da un giocatore possa aprire una porta disattivata.
+particolare tipo, le istanze disattivate non saranno calcellate (perch&egrave; non esistono).
+Quindi non &egrave; possibile che una chiave presa da un giocatore possa aprire una porta disattivata.
 Anche le istanze persistenti disattivate <b>non</b> vengono spostate in un'altra room.
-E' anche assicurato che dopo aver disattivato un'istanza non verrà più
-eseguito il codice di essa. Questo può accadere in particolar modo quando un'istanza
+E' anche assicurato che dopo aver disattivato un'istanza non verr&agrave; pi&ugrave;
+eseguito il codice di essa. Questo pu&ograve; accadere in particolar modo quando un'istanza
 si disattiva da sola. Generalmente sarebbe meglio che un'istanza non disattivi se stessa.
 
 <p>
-L'errore più grave che puoi fare è disattivare l'istanza responsabile
-della riattivazione. Per evitare ciò alcune delle funzioni sottostanti ti permettono 
-di impostare che l'istanza che le chiama non può disattivare se stessa.
+L'errore pi&ugrave; grave che puoi fare &egrave; disattivare l'istanza responsabile
+della riattivazione. Per evitare ci&ograve; alcune delle funzioni sottostanti ti permettono 
+di impostare che l'istanza che le chiama non pu&ograve; disattivare se stessa.
 
 <p>
 Ci sono le seguenti funzioni:
@@ -48,17 +48,17 @@ Ci sono le seguenti funzioni:
 <p>
 <blockquote>
   <tt><b>instance_deactivate_all(notme)</b></tt>
-    Disattiva tutte le istanze della room. Se notme è true l'istanza che chiama questa funzione
-	non verrà disattivata (che normalmente è ciò che si vuole).<br>
+    Disattiva tutte le istanze della room. Se notme &egrave; true l'istanza che chiama questa funzione
+	non verr&agrave; disattivata (che normalmente &egrave; ci&ograve; che si vuole).<br>
   <tt><b>instance_deactivate_object(obj)</b></tt>
     Disattiva tutte le istanze dell'oggetto indicato nella room. Puoi anche usare la keyword all
 	per indicare che tutte le istanze devono essere disattivate oppure l'id di un'istanza 
 	per disattivarne una specifica.<br>
   <tt><b>instance_deactivate_region(left,top,width,height,inside,notme)</b></tt>
     Disattiva tutte le istanze nella regione indicata (anche quelle il cui
-	bounding box risiede anche parzialmente all'interno di essa). Se inside è false
-	verranno disattivate le istanze che sono completamente fuori dalla regione. Se notme è
-	true non verrà disattivata l'istanza chiamante (che normalmente è ciò che si vuole).<br>
+	bounding box risiede anche parzialmente all'interno di essa). Se inside &egrave; false
+	verranno disattivate le istanze che sono completamente fuori dalla regione. Se notme &egrave;
+	true non verr&agrave; disattivata l'istanza chiamante (che normalmente &egrave; ci&ograve; che si vuole).<br>
   <tt><b>instance_activate_all()</b></tt>
     Attiva tutte le istanze nella room.<br>
   <tt><b>instance_activate_object(obj)</b></tt>
@@ -66,13 +66,13 @@ Ci sono le seguenti funzioni:
 	per indicare che tutte le istanze devono essere attivate oppure l'id di un'istanza 
 	per attivarne una specifica.<br>
   <tt><b>instance_activate_region(left,top,width,height,inside)</b></tt>
-    Attiva tutte le istanze nella regione indicata. Se inside è false
+    Attiva tutte le istanze nella regione indicata. Se inside &egrave; false
 	verranno attivate le istanze che sono completamente fuori dalla regione.<br>
 </blockquote>
 
 <p>
 Per esempio per disattivare tutte le istanze fuori dalla visuale e attivare quelle
-all'interno, basterà usare il codice seguente nello step event del personaggio del gioco:
+all'interno, baster&agrave; usare il codice seguente nello step event del personaggio del gioco:
 
 <p>
 <blockquote>
@@ -86,7 +86,7 @@ all'interno, basterà usare il codice seguente nello step event del personaggio 
 </blockquote>
 
 <p>
-Nella pratica di solito si usa una regione leggermente più grande della view.
+Nella pratica di solito si usa una regione leggermente pi&ugrave; grande della view.
 
 
 <!--END-->

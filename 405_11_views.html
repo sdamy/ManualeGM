@@ -11,7 +11,7 @@
 <h3>Views</h3>
 
 Come dovresti sapere, puoi definire fino a 8 view diverse quando progetti le room.
-Una view è definita dalla sua area nella room e dal suo (view)port sullo schermo
+Una view &egrave; definita dalla sua area nella room e dal suo (view)port sullo schermo
 (precisamente nella regione di disegno della finestra). Utilizzando le view puoi
 mostrare parti diverse della room in posti diversi sullo schermo. Inoltre, puoi
 assicurarti che un object particolare sia sempre visibile.
@@ -21,10 +21,10 @@ Puoi controllare le view dal codice. Puoi rendere le view visibili o invisibili,
 cambiare il posto o la dimensione delle view della regione di disegno o la posizione
 e la dimensione della view nella room (torna particolarmente utile quando non indichi
 un object da tenere visibile). Puoi indicare l'object da tenere visibile e la dimensione
-del bordo orizzontale e verticale attorno a esso. Cambiare l'object è molto importante
+del bordo orizzontale e verticale attorno a esso. Cambiare l'object &egrave; molto importante
 quando l'object da tenere visibile cambia durante il gioco. Ad esempio, vorrai cambiare
 l'object del personaggio principale in base al suo stato. Purtroppo, questo significa che
-quello non è più l'object da tenere visibile. Puoi rimediare con una riga di codice
+quello non &egrave; pi&ugrave; l'object da tenere visibile. Puoi rimediare con una riga di codice
 da inserire nel Create Event di tutti gli object principali possibili (se lavori con una view
 diversa dalla view0 basta sostituire lo 0 col numero della view che ti interessa):
 
@@ -49,7 +49,7 @@ che vanno da 0 (prima view) a 7 (ultima view).
   <tt><b>view_current*</b></tt> 
     La view che sta venendo disegnata correntemente (da 0 a 7). Usala solo nel Draw Event. Puoi
         controllare questa variabile per disegnare certe cose solo in una view, per esempio. Questa
-        variabile non può essere modificata.<br>
+        variabile non pu&ograve; essere modificata.<br>
   <tt><b>view_visible[0..7]</b></tt> 
     Ogni view ha un'impostazione diversa. Imposta a true per rendere la view scelta visibile,
         imposta a false per renderla invisibile.<br>
@@ -76,20 +76,20 @@ che vanno da 0 (prima view) a 7 (ultima view).
   <tt><b>view_vborder[0..7]</b></tt> 
     Dimensione del bordo verticale attorno all'object da tenere visibile (in pixel).<br>
   <tt><b>view_hspeed[0..7]</b></tt> 
-    Massima velocità orizzontale della view.<br>
+    Massima velocit&agrave; orizzontale della view.<br>
   <tt><b>view_vspeed[0..7]</b></tt> 
-    Massima velocità verticale della view.<br>
+    Massima velocit&agrave; verticale della view.<br>
   <tt><b>view_object[0..7]</b></tt> 
-    L'object la cui istanza deve rimanere visibile nella view. Se ci sono più istanze viene
+    L'object la cui istanza deve rimanere visibile nella view. Se ci sono pi&ugrave; istanze viene
         seguita solo la prima. Puoi assegnare anche un id di un'istanza a questa variabile.
-        Se lo fai, verrà seguita quell'istanza particolare.<br>
+        Se lo fai, verr&agrave; seguita quell'istanza particolare.<br>
 </blockquote>
 
 <p>
 
-Nota che la dimensione dell'immagine che vedi sullo schermo è basata sulle view visibili
-all'inizio della room. Se cambi le view durante il gioco, potrebbero non entrare più. Tuttavia
-la dimensione dello schermo non verrà adattata automaticamente, quindi se ne avrai bisogno dovrai
+Nota che la dimensione dell'immagine che vedi sullo schermo &egrave; basata sulle view visibili
+all'inizio della room. Se cambi le view durante il gioco, potrebbero non entrare pi&ugrave;. Tuttavia
+la dimensione dello schermo non verr&agrave; adattata automaticamente, quindi se ne avrai bisogno dovrai
 fartelo da solo usando le seguenti funzioni:
 
 <p>
@@ -97,7 +97,7 @@ fartelo da solo usando le seguenti funzioni:
   <tt><b>window_set_region_size(w,h,adaptwindow)</b></tt> 
     Imposta lunghezza e altezza della regione di disegno della finestra. <tt>adaptwindow</tt> indica
         se la dimensione della finestra deve essere adattata se la regione non c'entra (metti true
-        per farglielo fare). La dimensione della finestra verrà sempre adattata se usi la scala fissa.
+        per farglielo fare). La dimensione della finestra verr&agrave; sempre adattata se usi la scala fissa.
         (Vedi la funzione <tt>window_set_region_scale()</tt>: se hai impostato un numero negativo
         vuol dire che usi la scala fissa.)<br>
   <tt><b>window_get_region_width()</b></tt> 
@@ -109,10 +109,10 @@ fartelo da solo usando le seguenti funzioni:
 <p>
 
 In un gioco hai spesso bisogno di sapere la posizione del cursore del mouse. Di solito usi le variabili
-<tt>mouse_x</tt> e <tt>mouse_y</tt> a questo scopo. Quando usi più view, queste variabili ti danno la
+<tt>mouse_x</tt> e <tt>mouse_y</tt> a questo scopo. Quando usi pi&ugrave; view, queste variabili ti danno la
 posizione delmouse rispetto alla view in cui si trova. Tuttavia, a volte potresti voler sapere la
-posizione del mouse rispetto a una view particolare, anche quando è fuori da quella view. Per farlo
-esistono le seguenti funzioni (dove l'id della view è il suo numero, compreso tra 0 e 7).
+posizione del mouse rispetto a una view particolare, anche quando &egrave; fuori da quella view. Per farlo
+esistono le seguenti funzioni (dove l'id della view &egrave; il suo numero, compreso tra 0 e 7).
 
 <p>
 <blockquote>

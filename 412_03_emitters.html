@@ -12,13 +12,13 @@
 
 Gli emettitori creano particelle. Possono creare un flusso continuo di particelle 
 oppure un blocco di particelle quando si utilizza la funzione appropriata. Un sistema 
-particellare può avere un numero arbitrario di emettitori. Un emettitore ha le seguenti proprietà:
+particellare pu&ograve; avere un numero arbitrario di emettitori. Un emettitore ha le seguenti propriet&agrave;:
 
 <ul>
   <li><tt><b>xmin, xmax, ymin, ymax</b></tt> 
     indicano l'ampiezza della regione di spazio in cui sono generate le particelle.</li>
   <li><tt><b>shape</b></tt> 
-    indica la forma della regione. Può avere i seguenti valori:</li>
+    indica la forma della regione. Pu&ograve; avere i seguenti valori:</li>
   <ul>
     <li><tt>ps_shape_rectangle</tt></li>
     <li><tt>ps_shape_ellipse</tt></li>
@@ -26,39 +26,39 @@ particellare può avere un numero arbitrario di emettitori. Un emettitore ha le 
     <li><tt>ps_shape_line</tt></li>
   </ul>
   <li><tt><b>distribution</b></tt> 
-    indica la distribuzione usata per generare le particelle. Può avere i seguenti valori:</li>
+    indica la distribuzione usata per generare le particelle. Pu&ograve; avere i seguenti valori:</li>
   <ul>
     <li><tt>ps_distr_linear</tt> 
-	  indica una distribuzione lineare, in ogni parte della regione di spazio c’è la stessa probabilità</li>
+	  indica una distribuzione lineare, in ogni parte della regione di spazio c'&egrave; la stessa probabilit&agrave;</li>
     <li><tt>ps_distr_gaussian</tt> 
-	  indica una distribuzione gaussiana in cui si generano più particelle nel centro rispetto 
+	  indica una distribuzione gaussiana in cui si generano pi&ugrave; particelle nel centro rispetto 
 	  ai lati della regione</li>   
 	<li><tt>ps_distr_invgaussian</tt> 
-	  indica una distribuzione gaussiana inversa in cui si generano più particelle ai lati della
+	  indica una distribuzione gaussiana inversa in cui si generano pi&ugrave; particelle ai lati della
 	  regione rispetto al centro</li>
   </ul>
   <li><tt><b>particle type</b></tt> 
     indica il tipo di particelle che viene generato</li>
   <li><tt><b>number</b></tt> 
     indica il numero di particelle generate ad ogni passo. Se minore di 0, in ciascuna fase, una 
-    particella viene generata con un numero -1/number di possibilità. Così, per esempio, con 
+    particella viene generata con un numero -1/number di possibilit&agrave;. Cos&igrave;, per esempio, con 
     un valore di -5 una particella viene generata in media una volta ogni 5 passi.</li>
 </ul>
 
 <p>
 Le seguenti funzioni sono disponibili per impostare gli emettitori e per far creare particelle. 
-Si noti che ciascuno delle funzioni accetta come primo parametro l’indice del sistema particellare 
-al quale deve appartenere l’emettitore.
+Si noti che ciascuno delle funzioni accetta come primo parametro l'indice del sistema particellare 
+al quale deve appartenere l'emettitore.
 
 <p>
 <blockquote>
   <tt><b>part_emitter_create(ps)</b></tt> 
-    Crea un nuovo emettitore nel sistema particellare dato. Restituisce l'indice dell’emettitore. 
+    Crea un nuovo emettitore nel sistema particellare dato. Restituisce l'indice dell'emettitore. 
     Questo indice deve essere usato in tutte le funzioni sottostanti per impostare 
-    le proprietà di un emettitore.<br>
+    le propriet&agrave; di un emettitore.<br>
   <tt><b>part_emitter_destroy(ps,ind)</b></tt> 
-    Distrugge l’emettitore ind del sistema particellare (ps). 
-    Chiamare questa funzione se non serve più, per risparmiare spazio.<br>
+    Distrugge l'emettitore ind del sistema particellare (ps). 
+    Chiamare questa funzione se non serve pi&ugrave;, per risparmiare spazio.<br>
   <tt><b>part_emitter_destroy_all(ps)</b></tt> 
     Distrugge tutti gli emettitori del sistema di particelle che sono state creati.<br>
   <tt><b>part_emitter_exists(ps,ind)</b></tt> 
@@ -68,11 +68,11 @@ al quale deve appartenere l’emettitore.
   <tt><b>part_emitter_region(ps,ind,xmin,xmax,ymin,ymax,shape,distribution)</b></tt> 
     Imposta la regione e la distribuzione per l'emettitore.<br>
   <tt><b>part_emitter_burst(ps,ind,parttype,number)</b></tt> 
-    Emette in blocco un numero (number) di particelle del tipo indicato dall’emettitore.<br>
+    Emette in blocco un numero (number) di particelle del tipo indicato dall'emettitore.<br>
   <tt><b>part_emitter_stream(ps,ind,parttype,number)</b></tt>
     Da questo momento in poi viene creato un numero di particelle del tipo indicato ad ogni passo. 
     Se si indica un numero minore di 0, ad ogni passo una particella viene generata con una 
-    probabilità di -1/number. Così, per esempio, con un valore di -5 una particella viene 
+    probabilit&agrave; di -1/number. Cos&igrave;, per esempio, con un valore di -5 una particella viene 
     generata in media una volta ogni 5 passi.<br>
 </blockquote>
 

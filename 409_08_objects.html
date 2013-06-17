@@ -12,15 +12,15 @@
 
 Anche gli oggetti possono essere manipolati durante la partita.
 NON cambiate o cancellate MAI un oggetto per il quale ci sono delle istanze.
-Questo può portate ad effetti inaspettati come certe proprietà dell’oggetto
-memorizzate con l’istanza e via dicendo, cambiandole
-nell’oggetto non si otterrà l’effetto desiderato. 
+Questo pu&ograve; portate ad effetti inaspettati come certe propriet&agrave; dell'oggetto
+memorizzate con l'istanza e via dicendo, cambiandole
+nell'oggetto non si otterr&agrave; l'effetto desiderato. 
 
 <p>
 <blockquote>
   <tt><b>object_set_sprite(ind,spr)</b></tt> 
-  	Imposta lo sprite dell’oggetto con il dato indice.
-	Usate -1 per rimuovere lo sprite attuale dall’oggetto.<br>
+  	Imposta lo sprite dell'oggetto con il dato indice.
+	Usate -1 per rimuovere lo sprite attuale dall'oggetto.<br>
   <tt><b>object_set_solid(ind,solid)</b></tt> 
   	Imposta se le istanze create dell'oggetto devono
 	essere solide di default (true o false)<br>
@@ -34,7 +34,7 @@ nell’oggetto non si otterrà l’effetto desiderato.
 	essere persistenti di default (true o false).<br>
   <tt><b>object_set_mask(ind,spr)</b></tt> 
   	Imposta la maschera dello sprite del'oggetto con il dato indice.
-	Usate -1 per impostare che la mascherà sarà lo sprite dell'oggetto.<br>
+	Usate -1 per impostare che la mascher&agrave; sar&agrave; lo sprite dell'oggetto.<br>
   <tt><b>object_set_parent(ind,obj)</b></tt> 
   	Imposta il parent dell'oggetto. Usate -1 per non avere parent.
 	Cambiare il parent cambia il comportamento delle istanze dell'oggetto.<br>
@@ -50,27 +50,27 @@ funzioni per cambiare le risorse state attenti a non creare nuovi oggetti ogni v
   <tt><b>object_add()</b></tt> 
   	Crea un nuovo oggetto e ne restituisce l'indice.
 	Potete usare questo indice nelle funzioni qui sotto per impostare determinate
-	proprietà dello'oggetto e per creare delle istanze.<br>
+	propriet&agrave; dello'oggetto e per creare delle istanze.<br>
   <tt><b>object_delete(ind)</b></tt> 
   	Elimina l'oggetto con il dato indice. Assicuratevi di
 	non avere istanze di questo oggetto attualmente esistenti.<br>
   <tt><b>object_event_add(ind,evtype,evnumb,codestr)</b></tt> 
   	Per cambiare il comportamento dell'oggetto bisogna definire degli eventi. A questi eventi
-	si può aggiungere solo ed esclusivamente del codice.
+	si pu&ograve; aggiungere solo ed esclusivamente del codice.
 	E' necessario specificare l'oggetto, il tipo di evento, il numero dell'evento(usate le costanti
 	descritte prima della funzione event_perform()) ed infine la stringa contenente il codice
-	che deve essere eseguito. Potete aggiungere più pezzi di codice per ogni evento.<br>
+	che deve essere eseguito. Potete aggiungere pi&ugrave; pezzi di codice per ogni evento.<br>
   <tt><b>object_event_clear(ind,evtype,evnumb)</b></tt> 
   	Usate questa funzione per eliminare tutte le azioni di un particolare evento.<br>
 </blockquote>
 
 <p>
 
-Creare oggetti è particolarmente utile quando state progettando degli script o delle librerie di azioni.
-Per esempio, uno script di inizializzazione può creare un oggetto che mostri del testo e
-un’altro script può aggiungerlo ad un oggetto con un testo specifico. In questo modo
+Creare oggetti &egrave; particolarmente utile quando state progettando degli script o delle librerie di azioni.
+Per esempio, uno script di inizializzazione pu&ograve; creare un oggetto che mostri del testo e
+un'altro script pu&ograve; aggiungerlo ad un oggetto con un testo specifico. In questo modo
 avete un facile meccanismo per mostrare testi senza necessariamente create oggetti
-che usino l’interfaccia standard.
+che usino l'interfaccia standard.
 
 
 <!--END-->

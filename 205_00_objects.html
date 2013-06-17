@@ -1,21 +1,21 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html><head>
-<title>Di più sugli object</title>
+<title>Di pi&ugrave; sugli Object</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
 
-<h1>Di più sugli object</h1>
+<h1>Di pi&ugrave; sugli Object</h1>
 
 Quando crei un object in Advanced Mode, puoi cambiare qualche
 opzione avanzata addizionale.
 
-<h3>Depth (profondità)</h3>
+<h3>Depth (profondit&agrave;)</h3>
 
-Per prima cosa, puoi impostare la <b>Depth</b> (profondità) delle istanze dell' object.
+Per prima cosa, puoi impostare la <b>Depth</b> (profondit&agrave;) delle istanze dell' object.
 Quando le istanze sono disegnate sullo schermo sono disegnate secondo la loro depth.
 Le istanze con depth maggiore sono disegnate per prime (quindi stanno dietro). Le istanze con la
 depth minore sono disegnate per ultime (quindi stanno davanti). quando delle istanze hanno uguale
@@ -29,29 +29,29 @@ variabile chiamata "depth".
 
 
 In secondo luogo, puoi far diventare un object persistente (persistent). Un object persistente
-continuerà a esistere quando ti sposti da una room a un'altra.
+continuer&agrave; a esistere quando ti sposti da una room a un'altra.
 Scompare solo se lo distruggi esplicitamente. Devi solo mettere
-un'istanza di quell'object nella prima room e poi rimarrà disponibile
-in tutte le room. È molto utile quando, per esempio, hai un personaggio principale che si muove
-da una room all'altra. L'uso object persistenti è un meccanismo potente ma
-può portare facilmente a errori.
+un'istanza di quell'object nella prima room e poi rimarr&agrave; disponibile
+in tutte le room. &Egrave; molto utile quando, per esempio, hai un personaggio principale che si muove
+da una room all'altra. L'uso object persistenti &egrave; un meccanismo potente ma
+pu&ograve; portare facilmente a errori.
 
 <h3>Parents (Object "genitori" e "figli")</h3>
 
-Ogni object può avere un object che è il suo parent ("genitore"). Quando un object ha un parent,
-eredita il comportamento del parent. Detto diversamente, l'object è una specie
+Ogni object pu&ograve; avere un object che &egrave; il suo parent ("genitore"). Quando un object ha un parent,
+eredita il comportamento del parent. Detto diversamente, l'object &egrave; una specie
 di caso speciale del suo parent. Per esempio, se hai 4 diverse
 palle, chiamate ball1, ball2, ball3 e ball4, che si comportano tutte allo stesso modo ma
 hanno diversi sprite, puoi impostare ball1 come parent degli altri tre.
 Ora devi solo specificare gli eventi per ball1. Gli altri erediteranno gli
 event e si comporteranno esattamente allo stesso modo. Inoltre, quando ti riferisci alle
-istanze di un object che è parent, ti riferisci contemporaneamente anche ai "figli".
+istanze di un object che &egrave; parent, ti riferisci contemporaneamente anche ai "figli".
 Quindi, per esempio, se distruggi tutte le istanze di ball1, anche le istanze di
 ball2, ball3 e ball4 verranno distrutte. Questo ti fa risparmiare un bel po' di lavoro.
 
 <p>
 Spesso, gli object dovrebbero comportarsi in modo praticamente identico ma
-con qualche piccola differenza. Per esempio, un mostro potrebbe doversi mouvere su e giù e
+con qualche piccola differenza. Per esempio, un mostro potrebbe doversi mouvere su e gi&ugrave; e
 l'altro a sinistra e destra. Per il resto hanno esattamente lo stesso comportamento.
 In questo caso quasi tutti gli event dovrebbero avere le stesse azioni ma uno o due
 dovrebbero essere diversi. Di nuovo possiamo impostare un object come parent dell'altro.
@@ -62,16 +62,16 @@ del parent. Se vuoi eseguire anche l'event del parent puoi richiamare il
 cosiddetto "&quot;inherited event&quot;" (event ereditato) usando l'apposita azione.
 
 <p>
-In alcuni casi può essere una buona cosa creare un object di base.
+In alcuni casi pu&ograve; essere una buona cosa creare un object di base.
 Quest'object contiene tutti i comportamenti di base
 ma non viene mai usato nel gioco. Tutti gli object hanno quest'object di base come parent.
-Gli object impostati come parent possono avere un parent, e così via. (ovviamente non
-puoi creare cicli. (Ad esempio: non puoi dire che obj1 è parent di obj2 E CONTEMPORANEAMENTE che obj2 è parent di obj1.))
-Così puoi creare una gerarchia di object. È molto utile per tenere ben strutturato il tuo gioco
+Gli object impostati come parent possono avere un parent, e cos&igrave; via. (ovviamente non
+puoi creare cicli. (Ad esempio: non puoi dire che obj1 &egrave; parent di obj2 E CONTEMPORANEAMENTE che obj2 &egrave; parent di obj1.))
+Cos&igrave; puoi creare una gerarchia di object. &Egrave; molto utile per tenere ben strutturato il tuo gioco
 e ti consiglio vivamente di imparare a usare questo meccanismo.
 
 <p>
-C'è anche un secondo utilizzo dei parent. Il "figlio" eredita anche il
+C'&egrave; anche un secondo utilizzo dei parent. Il "figlio" eredita anche il
 comportamento del "padre" quando collide con altri object. Lascia che ti spieghi con un esempio.
 Mettiamo che hai quattro object pavimento differenti. Quando una palla colpisce il pavimento
 deve cambiare direzione. Questo va specificato nel collision event della
@@ -79,14 +79,14 @@ palla col pavimento. Visto che hai quattro diversi pavimenti dobbiamo
 mettere lo stesso codice in quattro diversi collision event nella palla. Ma se 
 crei un object "pavimento di base" e lo rendi parent dei quattro 
 object pavimento, dovrai solo specificare la collisione con questo
-"pavimento di base". Le altre collisioni avvieranno lo stesso evento. Di nuovo, ciò ti fa risparmiare
+"pavimento di base". Le altre collisioni avvieranno lo stesso evento. Di nuovo, ci&ograve; ti fa risparmiare
 molto lavoro di copiatura.
 
 <p>
 Come indicato, ovunque usi un object, usi anche i suoi "discendenti".
-Ciò accade quando, in un'azione, indichi che quell'azione deve essere
+Ci&ograve; accade quando, in un'azione, indichi che quell'azione deve essere
 applicata alle istanze di un determinato object. accade anche quando usi
-l'istruzione <tt>with()</tt> nel codice (vedi più in basso). E funziona quando chiami
+l'istruzione <tt>with()</tt> nel codice (vedi pi&ugrave; in basso). E funziona quando chiami
 funzioni come <tt>instance_position</tt>, <tt>instance_number</tt>, ecc.
 Infine, funziona quando ti riferisci a variabili in altri oggetti.
 Nell'esempio qui sopra quando imposti <tt>ball1</tt>.speed a 10 si applica anche a
@@ -95,17 +95,17 @@ ball2, ball3 e ball4.
 <h3>Maschere di Collisione (Collision Masks)</h3>
 
 Quando due istanze collidono, si verifica un Collision Event. Per decidere se due
-istanze si intersecano, sono usati gli sprite. È così in molti casi, ma a volte
+istanze si intersecano, sono usati gli sprite. &Egrave; cos&igrave; in molti casi, ma a volte
 vorrai far basare le collisioni su una forma differente. Per esempio, se
 vuoi creare un gioco isometrico, gli object hanno solitamente un'altezza (per dar loro una
 visuale 3D). Ma per le collisioni vorrai usare solo la parte in basso dello
-sprite. Puoi farcela creando uno sprite separato che è usato come
+sprite. Puoi farcela creando uno sprite separato che &egrave; usato come
 maschera di collisione per l'object.
 
 <h3>Informazioni</h3>
 
-Il pulsante <b>Show Information</b> (mostra informazioni) ti dà una panoramica di tutte le informazioni
-dell'object, che possono anche essere stampate. È particolarmente utile quando
+Il pulsante <b>Show Information</b> (mostra informazioni) ti d&agrave; una panoramica di tutte le informazioni
+dell'object, che possono anche essere stampate. &Egrave; particolarmente utile quando
 vuoi vedere una panoramica di tutte le tue azioni ed eventi.
 
 <!--END-->
@@ -120,10 +120,10 @@ parent object
 inheritance
 masks
 object information
-profondità
+profondit&agrave;
 object persistenti
 persistenza, object
 parent object
-eredità
+eredit&agrave;
 maschere
 --> 

@@ -1,59 +1,59 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html><head>
-<title>Creare le rooms</title>
+<title>Creare le Room</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body background="images/back.gif">
 <!--START-->
 
-<h1>Creare le rooms (stanze)</h1>
+<h1>Creare le Room</h1>
 
-Ora che sono stati definiti gli oggetti con i loro comportamenti in forma di eventi ed azioni, è il tempo di creare rooms (stanze) o livelli nella quale il gioco avrà luogo. Ogni gioco richiede minimo una room (stanza). In queste room metteremo le istanze dei vari oggetti.
+Ora che sono stati definiti gli oggetti con i loro comportamenti in forma di eventi ed azioni, &egrave; il tempo di creare rooms (stanze) o livelli nella quale il gioco avr&agrave; luogo. Ogni gioco richiede minimo una room (stanza). In queste room metteremo le istanze dei vari oggetti.
 Una volta che il gioco parte, la prima stanza viene visualizzata e le istanze prendono vita in base alle azioni presenti nell'evento "create".
 
 <p>
-Ci sono un gran numero di possibilità quando le room vengono create. Oltre ad impostare un certo numero di proprietà aggiungendo le istanze degli objects (oggetti), puoi aggiungere backgrounds (sfondi), definire le views (viste), e aggiungere tiles. Molte di queste impostazioni sono discusse successivamente.
+Ci sono un gran numero di possibilit&agrave; quando le room vengono create. Oltre ad impostare un certo numero di propriet&agrave; aggiungendo le istanze degli objects (oggetti), puoi aggiungere backgrounds (sfondi), definire le views (viste), e aggiungere tiles. Molte di queste impostazioni sono discusse successivamente.
 In questo capitolo parleremo soltanto delle impostazioni di base, dell'aggiunta delle istanze degli objects (oggetti) e dei settaggi dell'immagine di background (sfondo)
 
 <p>
 Per creare una stanza, scegli <b>Create Room</b> (crea una stanza) dal menu <b>Resources</b> (risorse).
-Apparirà il seguente modulo:
+Apparir&agrave; il seguente modulo:
 
 <p>
 <img src="images/form_room.jpg">
 
 <p>
-Nella parte alta del modulo c'è una barra degli strumenti. Su di questa puoi indicare la grandezza delle celle della griglia utilizzate per l'allineamento degli oggetti. Puoi anche indicare se mostrare o meno la griglia oppure lo sfondo etc... Qualche volta è importnante nascondere temporaneamente certi aspetti della room. Comunque quando aggiungi le istanze degli objects (oggetti), quasti saranno sempre visibili, indipendentemente dalle impostazioni scelte.
-Ci sono, anche, dei pulsanti che permettono di cancellare tutte le istanze nella room e che permettono di spostare tutte le istanze di un certo numero di pixel. Utilizza numeri negativi per spostarli verso sinistra o verso l'alto. Questo è molto utile quando decidi di ingrandire la room. (Puoi anche decidere di inserire oggetti al di fuori della stanza. Può essere utile qualche volta).
+Nella parte alta del modulo c'&egrave; una barra degli strumenti. Su di questa puoi indicare la grandezza delle celle della griglia utilizzate per l'allineamento degli oggetti. Puoi anche indicare se mostrare o meno la griglia oppure lo sfondo etc... Qualche volta &egrave; importnante nascondere temporaneamente certi aspetti della room. Comunque quando aggiungi le istanze degli objects (oggetti), quasti saranno sempre visibili, indipendentemente dalle impostazioni scelte.
+Ci sono, anche, dei pulsanti che permettono di cancellare tutte le istanze nella room e che permettono di spostare tutte le istanze di un certo numero di pixel. Utilizza numeri negativi per spostarli verso sinistra o verso l'alto. Questo &egrave; molto utile quando decidi di ingrandire la room. (Puoi anche decidere di inserire oggetti al di fuori della stanza. Pu&ograve; essere utile qualche volta).
 Ci sono anche il pulsante <b>undo</b> (annulla) per annullare l'ultimo cambiamento effettuato nella room, e il pulsante <b>OK</b> per salvare i cambiamenti. (clicca sulla "X" in alto a destra per uscire dal modulo senza salvare i cambiamenti.)<p>
     In fine le tre icone alla fine, ti permettono di zoomare (ingrandire o rimpicciolire) la stanza.
 L'icona centrale serve per far tornare lo zoom al livello normale. Gli elementi nella stanza torneranno ad essere visti in scala 1:1.
-Potrai trovare utile l'utilizzo della rotellina del mouse. Ruotandola avanti o dietro, sarà possibile zoomare dinamicamente la stanza per poi, così, mouversi velocemente in tutte le parti della stanza.
-Tramite il tasto centrale del mouse è possibile muoversi nel livello. Questo metodo è piu veloce rispetto all'utilizzo delle scrollbar, permettendoti di esplorare il livello utilizzando un solo pulsante.<p>
-A sinistra vedrai tre pagine tabs (cinque nella modalità avanzata). L'Object tab'
-è dove aggiungi instanze degli oggetti alla room. Nel tab <b></b>preferenze</b>, tu
+Potrai trovare utile l'utilizzo della rotellina del mouse. Ruotandola avanti o dietro, sar&agrave; possibile zoomare dinamicamente la stanza per poi, cos&igrave;, mouversi velocemente in tutte le parti della stanza.
+Tramite il tasto centrale del mouse &egrave; possibile muoversi nel livello. Questo metodo &egrave; piu veloce rispetto all'utilizzo delle scrollbar, permettendoti di esplorare il livello utilizzando un solo pulsante.<p>
+A sinistra vedrai tre pagine tabs (cinque nella modalit&agrave; avanzata). L'Object tab'
+&egrave; dove aggiungi instanze degli oggetti alla room. Nel tab <b></b>preferenze</b>, tu
 puoi indicare un unumero di preferenze per la room. Nel tab <b>backgrounds</b> puoi
 impostare immagini sfondo per la room.
 
 
 <h3>Aggiungendo instanze</h3>
 
-A destra nel modulo di disegno room vedi la room. All'inizio è vuoto, con
+A destra nel modulo di disegno room vedi la room. All'inizio &egrave; vuoto, con
 uno sfondo grigio.
 
 <p>
 <img src="images/form_room_objects.jpg">
 
 <p>
-Per aggiungere instanze alla room, prima seleziona il tab <b>object</b> se questo non è
-già visibile. Poi seleziona l'oggetto che vuoi aggiungere cliccando sul pulsante con
+Per aggiungere instanze alla room, prima seleziona il tab <b>object</b> se questo non &egrave;
+gi&agrave; visibile. Poi seleziona l'oggetto che vuoi aggiungere cliccando sul pulsante con
 il menu icona (o cliccando nell'area immagine alla sinistra). L'immagine dell'oggetto
 appare sulla sinistra. (Nota che quando hai cambiato l'origine dello sprite, 
-c'è una croce nell'immagine. Questo indica come le
+c'&egrave; una croce nell'immagine. Questo indica come le
 instanze saranno allineate nella griglia.) Ora clicca con il pulsante sinistro del mouse nella
-area room alla destra. Un'instanza dell'oggetto appare. Si allinearà alla
-griglia indicata. Se tieni premuto il tasto &lt;Alt&gt; mentre posizioni l'instanza, non è
+area room alla destra. Un'instanza dell'oggetto appare. Si allinear&agrave; alla
+griglia indicata. Se tieni premuto il tasto &lt;Alt&gt; mentre posizioni l'instanza, non &egrave;
 allineata alla griglia. Se tieni premuto il pulsante del mouse mentre trascini sulla
 room, muovi l'instanza sulla posizione corretta. Se tieni premuto il tasto &lt;Shift&gt;
 mentre premi e muovi il mouse, multiple instanza sono aggiunte. Con il pulsante destro
@@ -61,7 +61,7 @@ del mouse puoi rimuovere instanze. In questo modo definisci i contenuti della ro
 
 <p>
 Come noterai, se posizioni un'instanza sopra un'altra, l'originale
-instanza scompare. Normalmente questo è quello che vuoi, ma non sempre. Questo può essere
+instanza scompare. Normalmente questo &egrave; quello che vuoi, ma non sempre. Questo pu&ograve; essere
 evitato deselezionando la casella etichettata <b>Delete underlying</b> sulla sinistra.
 
 <p>
@@ -72,8 +72,8 @@ alla nuova posizione. (Usa &lt;Alt&gt; per il posizionamento preciso.)
 <p>
 Se tieni premuto il tasto &lt;Ctrl&gt; mentre clicchi con il pulsante destro del mouse su una
 instanza, un menu appare. Qui puoi cancellare l'oggetto, digitare una posizione precisa
-per l'istanza, o spostare l'istanza più in basso alla posizione verso sopra o inviare
-l'istanza più in alto verso sotto.
+per l'istanza, o spostare l'istanza pi&ugrave; in basso alla posizione verso sopra o inviare
+l'istanza pi&ugrave; in alto verso sotto.
 
 
 <h3>Preferenze room</h3>
@@ -84,11 +84,11 @@ Ogni room ha un numero di impostazioni che puoi cambiare cliccando sul tab <b>se
 <img src="images/form_room_settings.jpg">
 
 <p>
-Ogni room ha un nome. Meglio dargi un nome significativo. C'è anche un didascalia. Questa
-didascalia è visualizzata sulla didascalia della finestra quando il gioco è in esecuzione. Puoi impostare la
-larghezza e altezza della room (in pixels). Puoi anche impostare la velocità del gioco. Questo
-è il numero di steps per secondo. Maggiore è la velocità, più fluido è il movimento.
-Ma ti servirà un computer più veloce per avviarlo.
+Ogni room ha un nome. Meglio dargi un nome significativo. C'&egrave; anche un didascalia. Questa
+didascalia &egrave; visualizzata sulla didascalia della finestra quando il gioco &egrave; in esecuzione. Puoi impostare la
+larghezza e altezza della room (in pixels). Puoi anche impostare la velocit&agrave; del gioco. Questo
+&egrave; il numero di steps per secondo. Maggiore &egrave; la velocit&agrave;, pi&ugrave; fluido &egrave; il movimento.
+Ma ti servir&agrave; un computer pi&ugrave; veloce per avviarlo.
 
 <h3>Impostando lo sfondo</h3>
 
@@ -100,28 +100,28 @@ Di solito, puoi specificare multipli sfondi. La pagina tab si vede come segue:
 
 <p>
 Alla sinistra vedrai il colore di sfondo. Puoi cliccarlo per cambiarlo. Il
-colore di sfondo è utile solo se non usi un'immagine di sfondo che compra
+colore di sfondo &egrave; utile solo se non usi un'immagine di sfondo che compra
 l'intera room. Altrimenti, meglio deselezionare la casella etichettata <b>Draw background color</b>
-perchè questo sarà una perdita di tempo.
+perch&egrave; questo sar&agrave; una perdita di tempo.
 
 <p>
-A sinistra vedi una lista di 8 sfondi. Puoi definire ognuno di essi ma il più delle
+A sinistra vedi una lista di 8 sfondi. Puoi definire ognuno di essi ma il pi&ugrave; delle
 volte ti serviranno solo uno o due. Per definire uno sfondo, prima selezionalo nella
 lista. Poi spunta la casella etichettata <b>Visible when room starts</b> altrimenti non lo 
-vedrai. Il nome dello sfondo diverrà grassetto quando è definito. Ora indica un'
-immagine di sfondo nel menu. C?è un  numero di preferenze che puoi cambiare. Prima di
+vedrai. Il nome dello sfondo diverr&agrave; grassetto quando &egrave; definito. Ora indica un'
+immagine di sfondo nel menu. C?&egrave; un  numero di preferenze che puoi cambiare. Prima di
 tutto puoi indicare quando l'immagine di sfondo dovrebbe piastrellare la room orizzontalmente
 e/o verticalmente. Puoi anche indicare la posizione dello sfondo nella room
-(questo influirà anche la tessellatura). Un'opzione diversa è per allungare lo
-sfondo. Lo sfondo verrà scalato così che riempà l'intera room.
-Il rapporto d'aspetto non sarà mantenuto. Finalmente
-puoi effettuare lo scorrimento dello sfondo dando una velocità orizzontale o verticale
+(questo influir&agrave; anche la tessellatura). Un'opzione diversa &egrave; per allungare lo
+sfondo. Lo sfondo verr&agrave; scalato cos&igrave; che riemp&agrave; l'intera room.
+Il rapporto d'aspetto non sar&agrave; mantenuto. Finalmente
+puoi effettuare lo scorrimento dello sfondo dando una velocit&agrave; orizzontale o verticale
 (pixels per step). Meglio non usare lo scorrimento con uno sfondo allungato. Il risultato
-sarà molto dentellato.
+sar&agrave; molto dentellato.
 
 <p>
-C'è un'altra casella di controllo etichettata <b>Foreground image</b>. Quando spunti questa casella,
-lo sfondo è di solito un primo piano, in cui è disegnato sopra qualsiasi altra cosa
+C'&egrave; un'altra casella di controllo etichettata <b>Foreground image</b>. Quando spunti questa casella,
+lo sfondo &egrave; di solito un primo piano, in cui &egrave; disegnato sopra qualsiasi altra cosa
 piuttosto che dietro. Chiaramente un'immagine dovrebbe essere parzialmente trasparente per essere di
 qualsiasi uso.
 
@@ -145,7 +145,7 @@ sfondo room
 sfondi tessellati
 primi piani
 preferenze room
-velocità room
+velocit&agrave; room
 dimensione room
 griglia
 allineamento

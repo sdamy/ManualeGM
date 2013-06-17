@@ -10,34 +10,34 @@
 
 <h3>Eseguire programmi esterni</h3>
 
-<i>GameMaker</i> offre anche la possibilità di avviare programmi esterni. 
+<i>GameMaker</i> offre anche la possibilit&agrave; di avviare programmi esterni. 
 Ci sono due funzioni disponibili per fare questo: execute_program e shell_execute. 
 La funzione execute_program avvia un programma, possibilmente con 
-degli arguments. Si può aspettare che il programma finisca 
+degli arguments. Si pu&ograve; aspettare che il programma finisca 
 la sua esecuzione (mettendo il gioco in pausa) oppure 
 far continuare il gioco. La funzione execute_shell invece apre un file. 
-Questo può essere un qualsiasi tipo di file, associato in qualche modo al 
+Questo pu&ograve; essere un qualsiasi tipo di file, associato in qualche modo al 
 gioco, come ad esempio, un file html, un file word, ecc. 
-Oppure può essere un programma. Questa funzione non attende il 
-completamento dell’esecuzione del programma, quindi il gioco continuerà.
+Oppure pu&ograve; essere un programma. Questa funzione non attende il 
+completamento dell'esecuzione del programma, quindi il gioco continuer&agrave;.
 
 <p>
 <blockquote>
   <tt><b>execute_program(prog,arg,wait)</b></tt> 
     Esegue il programma "prog" con arguments "arg". Il parametro "wait" indica se fermare il gioco 
-    per far terminare prima l’esecuzione del programma.<br>
+    per far terminare prima l'esecuzione del programma.<br>
   <tt><b>execute_shell(prog,arg)</b></tt>
      Esegue il programma (o file) nella shell.<br>
 </blockquote>
 
 <p>
-Entrambe le funzioni non funzionano se il giocatore imposta la modalità protetta nelle preferenze. 
-È possibile controllare questo utilizzando la variabile di sola lettura:
+Entrambe le funzioni non funzionano se il giocatore imposta la modalit&agrave; protetta nelle preferenze. 
+&Egrave; possibile controllare questo utilizzando la variabile di sola lettura:
 
 <p>
 <blockquote>
   <tt><b>secure_mode*</b></tt> 
-    Se il gioco è in esecuzione in modalità protetta.<br>
+    Se il gioco &egrave; in esecuzione in modalit&agrave; protetta.<br>
 </blockquote>
 
 <!--END-->
@@ -52,7 +52,7 @@ programs
 secure mode
 
 avviare programmi
-modalità protetta
+modalit&agrave; protetta
 
 execute_program()
 execute_shell()

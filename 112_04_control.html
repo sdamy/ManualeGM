@@ -11,41 +11,41 @@
 <h3>Azioni di controllo</h3>
 
 Ci sono alcune azioni con cui puoi controllare quali altre azioni vengono eseguite. 
-La maggior parte di queste azioni controlla qualcosa, per esempio se una posizione è vuota.
-Quando la risposta è positiva (true) la prossima azione viene eseguita, altrimenti viene
+La maggior parte di queste azioni controlla qualcosa, per esempio se una posizione &egrave; vuota.
+Quando la risposta &egrave; positiva (true) la prossima azione viene eseguita, altrimenti viene
 ignorata.
-Se vuoi che vengano eseguite o ignorate più azioni, in base al risultato,
+Se vuoi che vengano eseguite o ignorate pi&ugrave; azioni, in base al risultato,
 puoi metterle dentro a un blocco mettendo le azioni di inizio e fine blocco
-intorno ad esse. Può anche esserci una parte "else" che viene eseguita quando
-la risposta è negativa. Quindi una domanda (question) appare tipicamente in questo modo:
+intorno ad esse. Pu&ograve; anche esserci una parte "else" che viene eseguita quando
+la risposta &egrave; negativa. Quindi una domanda (question) appare tipicamente in questo modo:
 
 <p>
 <img src="images/form_control_actions.jpg">
 
 <p>
-Qui la domanda chiede se la posizione dell'istanza corrente è libera.
-Se è così, l'istanza comincia a muoversi nella direzione data.
+Qui la domanda chiede se la posizione dell'istanza corrente &egrave; libera.
+Se &egrave; cos&igrave;, l'istanza comincia a muoversi nella direzione data.
 Se no, l'istanza salta verso una certa posizione. Nota che i blocchi sono indentati.
-Questo rende le azioni più leggibili. (In particolare quando usi dei blocchi dentro altri
+Questo rende le azioni pi&ugrave; leggibili. (In particolare quando usi dei blocchi dentro altri
 blocchi.)
-Inoltre è facile rilevare quando dimentichi un'azione di inizio/fine blocco.
+Inoltre &egrave; facile rilevare quando dimentichi un'azione di inizio/fine blocco.
 
 <p>
-Per tutte le domande c'è un campo etichettato con <b>NOT</b>. Se selezioni questo campo,
+Per tutte le domande c'&egrave; un campo etichettato con <b>NOT</b>. Se selezioni questo campo,
 il risultato della domanda viene invertito. Ovvero, se il risultato era positivo diventa
 negative e se era negativo diventa positivo. Questo ti permette di eseguire delle certe
-azioni quando una domanda è falsa.
+azioni quando una domanda &egrave; falsa.
 
 <p>
 Per molte domande puoi indicare se devono applicare a tutte le istanza
-di un particolare oggetto. In questo caso il risultato è vero soltanto se è vero
+di un particolare oggetto. In questo caso il risultato &egrave; vero soltanto se &egrave; vero
 per tutte le istanze dell'oggetto. Per esempio, puoi controllare se per tutte
-le palline la posizione a destra è libera da collisioni.
+le palline la posizione a destra &egrave; libera da collisioni.
 
 <p>
 Sono disponibili le seguenti domande e azioni. (Nota che hanno tutte
 una forma differente e un colore differente in modo tale da
-poter essere distinti più facilmente dalle altre azioni.
+poter essere distinti pi&ugrave; facilmente dalle altre azioni.
 
 <p>
 <b><img src="images/action_iffree.bmp"> Check Empty</b><br>
@@ -53,14 +53,14 @@ Questa domanda restituisce true se l'attuale istanza, piazzata alla posizione in
 non genera una collisione con un oggetto. Puoi specificare
 la posizione come assoluta o relativa. Puoi anche indicare se
 devono essere considerati tutti gli oggetti oppure solo quelli solidi.
-Quest'azione è tipicamente usata per controllare se l'istanza può muoversi
+Quest'azione &egrave; tipicamente usata per controllare se l'istanza pu&ograve; muoversi
 verso una certa posizione.
 
 <p>
 <b><img src="images/action_ifcollision.bmp"> Check Collision</b><br>
-Questa è il contrario dell'azione precedente. Restituisce true se c'è una collisione
-quando l'istanza corrente è piazzata ad una certa posizione (di nuovo, 
-si può scegliere se considerare solo i solidi).
+Questa &egrave; il contrario dell'azione precedente. Restituisce true se c'&egrave; una collisione
+quando l'istanza corrente &egrave; piazzata ad una certa posizione (di nuovo, 
+si pu&ograve; scegliere se considerare solo i solidi).
 
 <p>
 <b><img src="images/action_ifobject.bmp"> Check Object</b><br>
@@ -70,47 +70,47 @@ un'istanza dell'oggetto indicato.
 <p>
 <b><img src="images/action_ifnumber.bmp"> Test Instance Count</b><br>
 Bisogna specificare un oggetto e un numero. Se il numero delle istanze dell'oggetto
-è uguale al numero in questione restituisce true. Altrimenti restituisce
+&egrave; uguale al numero in questione restituisce true. Altrimenti restituisce
 false. Puoi anche indicare se il controllo va fatto
-se il numero di istanze è minore del valore dato o maggiore. Questo
-è tipicamente usato per controllare se tutte le istanze di un certo tipo sono andate.
-Questo è spesso il momento di terminare un livello o una partita.
+se il numero di istanze &egrave; minore del valore dato o maggiore. Questo
+&egrave; tipicamente usato per controllare se tutte le istanze di un certo tipo sono andate.
+Questo &egrave; spesso il momento di terminare un livello o una partita.
 
 <p>
 <b><img src="images/action_ifdice.bmp"> Test Chance</b><br>
 Bisogna specificare il numero di lati di un dado che viene lanciato. Quindi se il dado
-atterra su lato con uno, il risultato sarà positivo e verrà eseguite la prossima azione.
-Questo può essere utilizzati per aggiungere un elemento di casualità nel gioco. Per esempio,
-in ogni step puoi generare una bomba o cambiare una direzione con una certa probabilità.
-Più è grande il numero dei lati di un dado, più è piccola la probabilità. Puoi usare
+atterra su lato con uno, il risultato sar&agrave; positivo e verr&agrave; eseguite la prossima azione.
+Questo pu&ograve; essere utilizzati per aggiungere un elemento di casualit&agrave; nel gioco. Per esempio,
+in ogni step puoi generare una bomba o cambiare una direzione con una certa probabilit&agrave;.
+Pi&ugrave; &egrave; grande il numero dei lati di un dado, pi&ugrave; &egrave; piccola la probabilit&agrave;. Puoi usare
 dei numeri reali. Per esempio se usi 1.5 lati la prossima azione
-verrà eseguita due volte su tre. Usare un numero più piccolo di 1 non ha senso.
+verr&agrave; eseguita due volte su tre. Usare un numero pi&ugrave; piccolo di 1 non ha senso.
 
 <p>
 <b><img src="images/action_ifquestion.bmp"> Check Question</b><br>
-Bisogna specificare una domanda. Una finestra verrà mostrata al giocatore contenente
-sì (o yes, in base alla localizzazione) o no. Il risultato sarà positivo se il giocatore
-avrà risposto sì.
+Bisogna specificare una domanda. Una finestra verr&agrave; mostrata al giocatore contenente
+s&igrave; (o yes, in base alla localizzazione) o no. Il risultato sar&agrave; positivo se il giocatore
+avr&agrave; risposto s&igrave;.
 
 <p>
 <b><img src="images/action_if.bmp"> Test Expression</b><br>
-Questa è l'azione di domanda più generale. Puoi inserire un'espressione arbitraria.
-Se l'espressione restituisce true (cioè, se il numero è maggiore o uguale a 0.5)
-verrà eseguita la prossima azione. Vedi sotto per maggiori informazioni sulle espressioni.
+Questa &egrave; l'azione di domanda pi&ugrave; generale. Puoi inserire un'espressione arbitraria.
+Se l'espressione restituisce true (cio&egrave;, se il numero &egrave; maggiore o uguale a 0.5)
+verr&agrave; eseguita la prossima azione. Vedi sotto per maggiori informazioni sulle espressioni.
 
 <p>
 <b><img src="images/action_ifmouse.bmp"> Check Mouse</b><br>
 Restituisce true se il tasto del mouse indicato viene premuto. Un uso standard
-è nell'evento step. Puoi controllare se un tasto del mouse è premuto, e se lo è, 
-per esempio si può muovere in quella posizione (usa l'azione "jump to a point" con
+&egrave; nell'evento step. Puoi controllare se un tasto del mouse &egrave; premuto, e se lo &egrave;, 
+per esempio si pu&ograve; muovere in quella posizione (usa l'azione "jump to a point" con
 i valori <tt>mouse_x</tt> e <tt>mouse_y</tt>).
 
 <p>
 <b><img src="images/action_ifgrid.bmp"> Check Grid</b><br>
 Restituisce true se la posizione dell'istanza si trova in una griglia.
 Bisogna specificare la spaziatura orizzontale e verticale della griglia. 
-Questo è molto utile quando certe azioni, come fare un turno, sono
-permesse solo quando l'istanza è in una posizione della griglia.
+Questo &egrave; molto utile quando certe azioni, come fare un turno, sono
+permesse solo quando l'istanza &egrave; in una posizione della griglia.
 
 <p>
 <b><img src="images/action_begin.bmp"> Start Block</b><br>
@@ -123,7 +123,7 @@ Indica la fine di un blocco di azioni.
 <p>
 <b><img src="images/action_else.bmp"> Else</b><br>
 Sotto questa azione segue la parte else, che viene eseguita quando
-il risultato della domanda è negativo.
+il risultato della domanda &egrave; negativo.
 
 <p>
 <b><img src="images/action_repeat.bmp"> Repeat</b><br>
@@ -132,26 +132,26 @@ un certo numero di volte. Devi semplicemente indicare il numero.
 
 <p>
 <b><img src="images/action_exit.bmp"> Exit Event</b><br>
-Quando questa azione viene incontrata non verranno più eseguite altre azioni
-in questo evento. Questo è usato tipicamente dopo una domanda. Per esempio, quando
-una posizione è libera non c'è bisogno di fare niente quindi bisogna uscire dall'evento.
-In questo esempio, le azioni seguenti vengono eseguite solo quando c'è
+Quando questa azione viene incontrata non verranno pi&ugrave; eseguite altre azioni
+in questo evento. Questo &egrave; usato tipicamente dopo una domanda. Per esempio, quando
+una posizione &egrave; libera non c'&egrave; bisogno di fare niente quindi bisogna uscire dall'evento.
+In questo esempio, le azioni seguenti vengono eseguite solo quando c'&egrave;
 una collisione.
 
 
 <p>
-Se desideri avere un controllo maggiore su ciò che succede nel gioco puoi usare
+Se desideri avere un controllo maggiore su ci&ograve; che succede nel gioco puoi usare
 il linguaggio di programmazione built-in descritto nella <A HREF="400_index.html">Parte 4</A>
-della documentazione. Ti da' più flessibilità delle azioni. Ci sono anche azioni
-per definire e testare le variabili. Sono più semplici da usare del codice e possono essere
-molto utili per il tuo gioco. Le seguenti funzioni trattano ciò.
+della documentazione. Ti da' pi&ugrave; flessibilit&agrave; delle azioni. Ci sono anche azioni
+per definire e testare le variabili. Sono pi&ugrave; semplici da usare del codice e possono essere
+molto utili per il tuo gioco. Le seguenti funzioni trattano ci&ograve;.
 
 <p>
 <b><img src="images/action_code.bmp"> Execute Code</b><br>
 Quando aggiungi questa azione, viene mostrata una finestra nella quale puoi inserire del codice
-da eseguire. Questo può contenere semplici chiamate a funzioni oppure del codice più complesso.
+da eseguire. Questo pu&ograve; contenere semplici chiamate a funzioni oppure del codice pi&ugrave; complesso.
 Usa l'azione codice preferibilmente soltanto per piccoli pezzi di codice.
-Per pezzi di codice più lunghi è meglio utilizzare gli script, descritti nella
+Per pezzi di codice pi&ugrave; lunghi &egrave; meglio utilizzare gli script, descritti nella
 <A HREF="200_index.html">Parte 2</A> della docuomentazione. Normalmente quando
 usi questo comando ottieni il poco esplicativo commento <i>&quot;Execute a piece
 of code&quot;</i> dentro il pannello delle azioni. Comunque, puoi cambiarlo aggiungendo
@@ -161,32 +161,32 @@ i contenuti verranno utilizzati come descrizione dello script.<p>
 Usa questa azione per aggiungere una linea di commento nella lista delle azioni.
 La linea viene mostrata in una font italica. Aggiungere commenti ti aiuta a ricordare
 cosa fanno i tuoi eventi.
-L'azione non fa niente. Ma è comunque un'azione.
-Quindi quando la piazzi dopo un'azione condizionale è l'azione che verrà eseguita
-se la condizione sarà vera (anche se non fa niente).
+L'azione non fa niente. Ma &egrave; comunque un'azione.
+Quindi quando la piazzi dopo un'azione condizionale &egrave; l'azione che verr&agrave; eseguita
+se la condizione sar&agrave; vera (anche se non fa niente).
 
 <p>
 <b><img src="images/action_variable.bmp"> Set Variable</b><br>
 Ci sono molte variabili built-in nel gioco. Con questa azione puoi cambiarle.
 Puoi anche creare le tue variabili e assegnare loro dei valori. Devi specificare
 il nome della variabile e il nuovo valore. Quando selezioni la casella <b>Relative</b>,
-il valore verrà aggiunto all'attuale valore della variabile. Per favore nota che questo
-può essere fatto solo se una variabile ha già un valore assegnato! Vedi sotto
+il valore verr&agrave; aggiunto all'attuale valore della variabile. Per favore nota che questo
+pu&ograve; essere fatto solo se una variabile ha gi&agrave; un valore assegnato! Vedi sotto
 per altre informazioni riguardo alle variabili.
 
 <p>
 <b><img src="images/action_ifvariable.bmp"> Test Variable</b><br>
-Con questa azione puoi controllare com'è il valore di una variabile.
-Se il valore è uguale al numero specificato, l'azione restituisce true.
+Con questa azione puoi controllare com'&egrave; il valore di una variabile.
+Se il valore &egrave; uguale al numero specificato, l'azione restituisce true.
 Altrimenti false. Puoi anche indicare se
-il controllo dev'essere fatto se il valore è più piccolo del valore speficato o
-più grande. Vedi sotto per maggiori informazioni riguardo alle variabili.
+il controllo dev'essere fatto se il valore &egrave; pi&ugrave; piccolo del valore speficato o
+pi&ugrave; grande. Vedi sotto per maggiori informazioni riguardo alle variabili.
 Puoi usare questa azione anche per comparare due espressioni.
 
 <p>
 <b><img src="images/action_drawvariable.bmp"> Draw Variable</b><br>
 Con questa azione puoi disegnare il valore della variabile a
-una certa posizione nello schermo. Nota che questo può essere usato solo
+una certa posizione nello schermo. Nota che questo pu&ograve; essere usato solo
 nell'evento draw di un oggetto.
 
 

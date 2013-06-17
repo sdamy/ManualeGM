@@ -15,7 +15,7 @@ alla fine o inserire qualcosa nel mezzo della lista. Puoi indirizzare
 i valori usando un indice. Puoi anche ordinare gli elementi, sia in ordine crescente
 o decrescente. Le liste possono essere usanti in molti modi, per esempio per memorizzare
 cambiamenti di collezioni di valori. Loro sono implementate usando semplici arrays
-ma, questo è fatto in codice compilato ed è più veloce che usando un proprio array.
+ma, questo &egrave; fatto in codice compilato ed &egrave; pi&ugrave; veloce che usando un proprio array.
 Le seguenti funzioni sono disponibili:
 
 <p>
@@ -33,28 +33,28 @@ Le seguenti funzioni sono disponibili:
   <tt><b>ds_list_size(id)</b></tt> 
     Ritorna il numero di valori memorizzati nella lista.<br>
   <tt><b>ds_list_empty(id)</b></tt> 
-    Ritorna quando la lista è vuota. È come testare se la dimensione è 0.<br>
+    Ritorna quando la lista &egrave; vuota. &Egrave; come testare se la dimensione &egrave; 0.<br>
   <tt><b>ds_list_add(id,val)</b></tt> 
     Aggiunge il valore alla fine della lista.<br>
   <tt><b>ds_list_insert(id,pos,val)</b></tt> 
-    Inserisce il valore alla posizione pos nella lista. La prima posizione è 
-    	0, l'ultima posizione è la dimensione della lista meno 1. <br>
+    Inserisce il valore alla posizione pos nella lista. La prima posizione &egrave; 
+    	0, l'ultima posizione &egrave; la dimensione della lista meno 1. <br>
   <tt><b>ds_list_replace(id,pos,val)</b></tt> 
     Riposiziona il valore alla posizione pos nella lista con il nuovo valore.<br>
   <tt><b>ds_list_delete(id,pos)</b></tt> 
-    Cancella il valore alla posizione pos nella lista. (La posizione 0 è il primo elemento.)<br>
+    Cancella il valore alla posizione pos nella lista. (La posizione 0 &egrave; il primo elemento.)<br>
   <tt><b>ds_list_find_index(id,val)</b></tt> 
-    Cerca la posizione memorizzata al valore indicato. Se il valore non è nella lista -1 è ritornato.<br>
+    Cerca la posizione memorizzata al valore indicato. Se il valore non &egrave; nella lista -1 &egrave; ritornato.<br>
   <tt><b>ds_list_find_value(id,pos)</b></tt> 
     Ritorna il valore memorizzato alla posizione indicata nella lista.<br>
   <tt><b>ds_list_sort(id,ascend)</b></tt> 
-    Ordina i valori nella lista. Quando ascend è true i valori sono ordinati
+    Ordina i valori nella lista. Quando ascend &egrave; true i valori sono ordinati
     	in ordine crescente, altrimenti in ordine decrescente.<br>
   <tt><b>ds_list_shuffle(id)</b></tt> 
     Mescola i valori nella lista in modo tale da finire in un ordine casuale.<br>
   <tt><b>ds_list_write(id)</b></tt> 
     Converte la struttura-dati (data structure) in una stringa e restituisce questa stringa. 
-    La stringa può quindi essere utilizzata, per esempio, per essere salvata in un file. 
+    La stringa pu&ograve; quindi essere utilizzata, per esempio, per essere salvata in un file. 
     Questa funzione fornisce un semplice meccanismo per salvare strutture dati.<br>
   <tt><b>ds_list_read(id,str)</b></tt> 
     Legge la struttura dati dalla stringa data (creata dalla precedente chiamata).<br>
