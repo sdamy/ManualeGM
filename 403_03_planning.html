@@ -14,13 +14,13 @@ La pianificazione del movimento (Motion Planning) ti aiuta a muovere certe istan
 ad una differente evitando collisioni con certe altre istanze
 (es. muri). La pianificazione del movimento (Motion Planning) rappresenta un problema. E' impossibile
 fornire funzioni generali che lavorino correttamente in tutte le circostanze. Inoltre,
-calcolare movimenti liberi da collisioni è un'operazione che richiede tempo. Per questo devi
+calcolare movimenti liberi da collisioni &egrave; un'operazione che richiede tempo. Per questo devi
 prestare attenzione a come e quando la applichi. Per favore tieni a mente queste osservazioni quando
 utilizzi una delle seguenti funzioni.
 
 <P>
 Vengono messe a disposizione differenti forme di pianificazione del movimento (Motion Planning) da <i>GameMaker</i>.
-La forma più semplice consente ad un'istanza di fare un passo verso una particolare posizione
+La forma pi&ugrave; semplice consente ad un'istanza di fare un passo verso una particolare posizione
 obbiettivo, cercando di andare dritto se possibile ma prendendo una direzione differente
 se necessario. Queste funzioni dovrebbero essere usate nell'evento passo (step) di un'istanza.
 Ecco la serie di funzioni disponibili per il motion planning:
@@ -31,84 +31,65 @@ Ecco la serie di funzioni disponibili per il motion planning:
     Questa funzione consente all'istanza di fare un passo dritto verso la posizione
     indicata (x,y). La dimensione del passo (dello spostamento) è indicata da <TT>stepsize</TT> (dimensione del passo).
 	Se l'istanza si trova già nella posizione non si sposterà ulteriormente.
-	Se <TT>checkall</TT> (controllare tutto) assume il valore di vero (true) l'istanza si fermerà quando urti <!(incontri/trovi)> un'istanza
-	di qualunque oggetto. Se <!(essa)> assume il valore di falso (false) si fermerà soltanto quando stia urtando un istanza solida (di tipo: solid).
+	Se <TT>checkall</TT> (controllare tutto) assume il valore di vero (true) l'istanza si fermerà quando urti un'istanza
+	di qualunque oggetto. Se assume il valore di falso (false) si fermerà soltanto quando stia urtando un istanza solida (di tipo: solid).
 	Nota che questa funzione non prova a fare deviazioni se incontra un ostacolo.
-	Essa semplicemente fallirà. La funzione restituisce se sia stata o meno raggiunta la
+	Essa semplicemente fallir&agrave;. La funzione restituisce se sia stata o meno raggiunta la
 	posizione meta (obbiettivo).<br>
 	
   <tt><b>mp_linear_step_object(x,y,stepsize,obj)</b></tt>
     Come la funzione sopra ma questa volta soltanto le istanze di <tt>obj</tt> sonoù
-    	considerate come ostacoli. <tt>obj</tt> può essere un oggetto o l'identificativo (id) di un'istanza.<br>
+    considerate come ostacoli. <tt>obj</tt> può essere un oggetto o l'identificativo (id) di un'istanza.<br>
 		
   <tt><b>mp_potential_step(x,y,stepsize,checkall)</b></tt>
     Come la precedente funzione, questa consente all'istanza di fare un passo verso
     una particolare posizione. Ma in questo caso essa prova ad evitare gli ostacoli. Quando 
 	l'istanza incontrasse un'istanza solida (solid) (o qualunque istanza quando 'checkall' assumesse il valore 'true')
-	essa cambierà la direzione del movimento per tentare di evitare l'istanza e
+	essa cambier&agrave; la direzione del movimento per tentare di evitare l'istanza e
 	aggirarla. L'approccio non garantisce di funzionare ma in molti casi semplici esso
-	effettivamente muoverà l'istanza verso la meta (obbiettivo). La funzione restituisce
+	effettivamente muover&agrave; l'istanza verso la meta (obbiettivo). La funzione restituisce
 	se sia stata raggiunta o meno la meta.<br>
 	
   <tt><b>mp_potential_step_object(x,y,stepsize,obj)</b></tt>
     Come la funzione sopra ma questa volta soltanto le istanze di <tt>obj</tt> sono
-    	considerate come ostacoli. <tt>obj</tt> può essere un oggetto o l'identificativo (id) di un'istanza.<br>
+    considerate come ostacoli. <tt>obj</tt> può essere un oggetto o l'identificativo (id) di un'istanza.<br>
 		
   <tt><b>mp_potential_settings(maxrot,rotstep,ahead,onspot)</b></tt>
-    La precedente funzione opera <!(svolge il suo compito / lavora)> usando un (certo) numero di parametri che possono
-    The previous function does its work using a number of parameters that can
-    	essere cambiati usando questa funzione. Globalmente il metodo opera come segue <!( con il quale lavora è il seguente)>. Esso 
-	be changed using this function. Globally the method works as follows. It
-	prima prova a muovere dritto verso la meta (obbiettivo). Esso guarda avanti <!(Guarda in avanti)> di un numero di passi
-	first tries to move straight towards the goal. It looks a number of steps
-	che può essere impostato attraverso <!(con)> il parametro <TT>ahead</TT> (avanti) (valore predefinito: 3).
-	ahead which can be set with the parameter <TT>ahead</TT> (default 3).
+    La precedente funzione opera usando un (certo) numero di parametri che possono
+    essere cambiati usando questa funzione. Globalmente il metodo opera come segue. Esso 
+	prima prova a muovere dritto verso la meta (obbiettivo). Esso guarda avanti di un numero di passi
+	che può essere impostato attraverso il parametro <TT>ahead</TT> (avanti) (valore predefinito: 3).
 	Ridurre questo valore comporterà che l'istanza inizi a cambiare direzione
 	con più ritardo. Incrementarlo comporterà che l'istanza inizi a cambiare direzione prima. Se
 	questo controllo porta ad una collisione essa inizierà a guardare nelle direzioni più a
 	sinistra e più a destra della direzione migliore. Essa fa questo in passi di
 	dimensione <TT>rotstep</TT> (valore predefinito: 10). Ridurre questo valore permette all'istanza più
 	possibilità di movimento ma sarà più lento. Il paramentro <TT>maxrot</TT>
-	movement possibilities but will be slower. The parameter <TT>maxrot</TT>
-	è un pò più difficile da spiegare. L'istanza ha una direzione corrente <!(attuale)>.
-	is a bit more difficult to explain. The instance has a current direction.
+	è un pò più difficile da spiegare. L'istanza ha una direzione corrente.
     <TT>maxrot</TT> (valore predefinito: 30) indica di quanto è possibile cambiare la sua	
-    <TT>maxrot</TT> (default 30) indicates how much it is allowed to change its
-    	attuale direzione in un passo (step). Così anche se essa potesse ad esempio muovere (e.g.) dritto verso la meta (obbiettivo)
-	current direction in a step. So even if it can move e.g. straight to the goal
-	lo farebbe soltanto se <!(facendolo)> non violasse questa massima variazione di direzione.
-	it will only do so if it does not violate this maximal change of direction.
-	Se renderai <TT>maxrot</TT> grande l'istanza potrà fare grandi variazioni <!(variarla di molto)> ad ogni passo (step).
-	If you make <TT>maxrot</TT> large the instance can change a lot in each step.
-	Questo renderà più facile trovare un percorso breve ma il percorso sarà più brutto <!(n.t. spigoloso)>.
-	This will make it easier to find a short path but the path will be uglier.
+    attuale direzione in un passo (step). Così anche se essa potesse ad esempio muovere (e.g.) dritto verso la meta (obbiettivo)
+	lo farebbe soltanto se non violasse questa massima variazione di direzione.
+	Se renderai <TT>maxrot</TT> grande l'istanza potrà fare grandi variazioni ad ogni passo (step).
+	Questo renderà più facile trovare un percorso breve ma il percorso sarà più brutto.
 	Se rendi il valore più piccolo il percorso sarà più morbido ma esso potrebbe seguire
-	If you make the value smaller the path will be smoother but it might take
-	deviazioni più lunghe (e a volte anche mancare di <!non riuscire a> trovare l'obbiettivo). Quando non può essere
-	longer detours (and sometimes even fail to find the goal). When no step can
+	deviazioni più lunghe (e a volte anche mancare di trovare l'obbiettivo). Quando non può essere
 	fatto nessun passo il comportamento dipenderà dal valore del parametro <TT>onspot</TT>.
 	Se <TT>onspot</TT> assume il valore di vero (true) (il valore predefinito), l'istanza ruoterà sul
-	If <TT>onspot</TT> is true (the default value), the instance will rotate on
-	posto dell'ammontare indicato <!(quantità indicata)> con <TT>maxrot</TT>. Se assume il valore di falso (false) essa 
-	its spot by the amount indicated with <TT>maxrot</TT>. If it is false it
+	posto dell'ammontare indicato con <TT>maxrot</TT>. Se assume il valore di falso (false) essa 
 	non si muoverà affatto. Impostarla su falso (false) è utile ad esempio per (e.g.) le automobili ma riduce
-	will not move at all. Setting it to false is useful for e.g. cars but reduces
-	la possibilità di trovare un percorso.
-	the chance of finding a path.<br>
+	la possibilità di trovare un percorso.<br>
 </blockquote>
 
 <p>
-Per favore nota che il potenziale approccio usa solo informazioni locali. Così esso troverà
+Per favore nota che il potenziale approccio usa solo informazioni locali. Cos&igrave; esso trover&agrave;
 un percorso se queste informazioni locali sono sufficienti a determinare la giusta direzione del
-movimento. Per esempio, non riuscirà a trovare un percorso di uscita di un labirinto (il più delle volte).
+movimento. Per esempio, non riuscir&agrave; a trovare un percorso di uscita di un labirinto (il pi&ugrave; delle volte).
 
 <P>
 Il secondo tipo di funzioni calcola un percorso libero da collisioni per l'istanza.
 Ona volta che questo percorso è stato calcolato puoi assegnarlo all'istanza per muoverla
 verso la meta. Il calcolo del percorso impiegherà del tempo ma dopo quello
-towards the goal. The computation of the path will take some time but after
-l'attuazione <!(esecuzione)> del percorso sarà veloce. Certamente ciò varrà soltanto se 
-that the execution of the path will be fast. Of course this is only valid if
+l'attuazione del percorso sarà veloce. Certamente ciò varrà soltanto se 
 la situazione non è cambiata nel frattempo. Per esempio, se gli ostacoli
 cambiano forse avrai bisogno di ricalcolare il percorso. Ancora una volta nota che queste funzioni 
 potrebbero non avere successo.
@@ -124,77 +105,67 @@ venivano usati anche per le funzioni per passi (step).
     Questa funzione computa per l'istanza un percorso rettilineo dalla sua
     	posizione corrente alla posizione (xg,yg) usando la dimensione per passo (step) indicata.
 	Esso usa i passi (step) come nella funzione <TT>mp_linear_step()</TT>. Il percorso
-	indicato deve già esistere e sarà sovrascritto dal nuovo percorso. (Vedi in un
+	indicato deve gi&agrave; esistere e sar&agrave; sovrascritto dal nuovo percorso. (Vedi in un
 	capitolo successivo come creare e distruggere percorsi.) La funzione
-	ritornerà se un percorso sia stato trovato. La funzione si arresterà e riporterà insuccesso
+	ritorner&agrave; se un percorso sia stato trovato. La funzione si arrester&agrave; e riporter&agrave; insuccesso
 	se non esiste nessun percorso rettilineo tra il punto iniziale e la meta. Se essa fallisce
 	viene tuttavia creato un percorso che vada fino alla posizione dove l'istanza si era bloccata.<br>
   <tt><b>mp_linear_path_object(path,xg,yg,stepsize,obj)</b></tt>
     Come la funzione sopra ma questa volta soltanto istanze di <tt>obj</tt> sono
-    Same as the function above but this time only instances of <tt>obj</tt> are
-    	considerate ostacoli. <tt>obj</tt> può essere un oggetto o un <!l'>identificativo (id) di un oggetto.<br>
-	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>	
+    	considerate ostacoli. <tt>obj</tt> può essere un oggetto o un identificativo (id) di un oggetto.<br>
   <tt><b>mp_potential_path(path,xg,yg,stepsize,factor,checkall)</b></tt>
     Questa funzione computa un percorso per l'istanza dalla sua posizione corrente
  	e dal suo orientamento alla posizione (xg,yg) usando la dimensione del passo (step) indicata
 	cercando di evitare collisioni con gli ostacoli. Essa usa i (possibili passi nel campo d'azione???),
 	come nella funzione <TT>mp_potential_step()</TT> e anche i parametri
 	che possono essere impostati con <TT>mp_potential_settings()</TT>. Il percorso indicato
-	deve già esistere e sarà sovrascritto dal nuovo percorso. (Vedi in un
-	capitolo successivo come creare e distruggere percorsi.) La funzione ritornerà
+	deve gi&agrave; esistere e sar&agrave; sovrascritto dal nuovo percorso. (Vedi in un
+	capitolo successivo come creare e distruggere percorsi.) La funzione ritorner&agrave;
 	se un percorso sia stato trovato. Per evitare che la funzione continui a calcolare
 	all'infinito tu necessiti di provvedere un fattore di lunghezza (factor) maggiore di 1. La funzione
-	si arresterà e riporterà insuccesso se essa non trova un percorso più breve di questo
-	fattore di volte la distanza tra il punto d'inizio e la meta. Un fattore del valore di 4 è solitamente
+	si arrester&agrave; e riporter&agrave; insuccesso se essa non trova un percorso pi&ugrave; breve di questo
+	fattore di volte la distanza tra il punto d'inizio e la meta. Un fattore del valore di 4 &egrave; solitamente
 	abbastanza buono ma se ti aspetti lunghe deviazioni potresti renderlo maggiore. Se
-	essa fallisce verrà tuttavia creato un percorso che vada in direzione della meta
-	ma esso non la raggiungerà.<br>
+	essa fallisce verr&agrave; tuttavia creato un percorso che vada in direzione della meta
+	ma esso non la raggiunger&agrave;.<br>
   <tt><b>mp_potential_path_object(path,xg,yg,stepsize,factor,obj)</b></tt>
     Come la funzione sopra ma questa volta soltanto istanze di <tt>obj</tt> sono
-    Same as the function above but this time only instances of <tt>obj</tt> are
-    	considerate ostacoli. <tt>obj</tt> può essere un oggetto o un <!l'>identificativo (id) di un oggetto.<br>
-	considered as obstacles. <tt>obj</tt> can be an object or an instance id.<br>
+    	considerate ostacoli. <tt>obj</tt> può essere un oggetto o un identificativo (id) di un oggetto.<br>
 </blockquote>
 
 <p>
-Le altre funzioni utilizzano un meccanismo un pò più complesso usando un approccio
-basato su griglia (a volte chiamato un algoritmo A*). Esso avrà più successo
-nel trovare percorsi (anche se ancora potrebbe fallire) e troverà percorsi più corti
-ma esso richiede più lavoro da parte tua. L'idea globale è quella che segue.
-but it required more work on your side. The global idea is as follows.
-Prima di tutto noi mettiamo una griglia sulla (parte rilevante della) stanza (room). Puoi 
-First of all we put a grid on (the relevant part of) the room. You can
-scegliere di usare una griglia fine (che sarà più lenta) o una griglia grossolana. Poi, 
-choose to use a fine grid (which will be slower) or a coarse grid. Next,
-per tutti gli oggetti rilevanti determiniamo le celle della griglia che essi occupino (o 
-for all relevant objects we determine the grid cells they overlap (either
-utilizzando i riquadri <!bounding box> oppure il controllo preciso <!precise checking>) e contrassegnamo queste celle come
-using bounding boxes or precise checking) and mark these cells as being 
-vietate. Così una cella sarà segnata come completamente vietata, anche se si sovrappone 
-forbidden. So a cell will be marked totally forbidden, even if it only
+Le altre funzioni utilizzano un meccanismo un p&ograve; pi&ugrave; complesso usando un approccio
+basato su griglia (a volte chiamato un algoritmo A*). Esso avr&agrave; pi&ugrave; successo
+nel trovare percorsi (anche se ancora potrebbe fallire) e trover&agrave; percorsi pi&ugrave; corti
+ma esso richiede pi&ugrave; lavoro da parte tua. L'idea globale &egrave; quella che segue.
+Prima di tutto noi mettiamo una griglia sulla (parte rilevante della) stanza (room). Puoi
+scegliere di usare una griglia fine (che sarà più lenta) o una griglia grossolana. Poi,
+per tutti gli oggetti rilevanti determiniamo le celle della griglia che essi occupino (o
+utilizzando i riquadri oppure il controllo preciso) e contrassegnamo queste celle come
+vietate. Così una cella sarà segnata come completamente vietata, anche se si sovrappone
 solo parzialmente ad un ostacolo. Infine specifichiamo un punto d'inizio e una posizione
 meta (che deve trovarsi in celle libere) e la funzione computa il 
-percorso più breve (effettivamente vicino al più corto) tra questi. Il percorso
-andrà tra i centri delle celle libere. Così se le celle sono grandi abbastanza
-da fare in modo che l'istanza posizionata nel loro centro andrà completamente all'interno
-questo avrà successo. Questo percorso adesso puoi fornirlo da seguire ad
+percorso pi&ugrave; breve (effettivamente vicino al pi&ugrave; corto) tra questi. Il percorso
+andr&agrave; tra i centri delle celle libere. Cos&igrave; se le celle sono grandi abbastanza
+da fare in modo che l'istanza posizionata nel loro centro andr&agrave; completamente all'interno
+questo avr&agrave; successo. Questo percorso adesso puoi fornirlo da seguire ad
 ad un'istanza.
 
 <P>
-L'approccio basato su griglia è molto potente (ed è usato in molti giochi
+L'approccio basato su griglia &egrave; molto potente (ed &egrave; usato in molti giochi
 professionali) ma esso richiede che tu faccia alcune attente riflessioni. Devi determinare
 quale area e quale dimensione delle celle siano abbastanza buone per risolvere il gioco. Inoltre devi
 determinare quali oggetti debbano essere evitati e se il controllo preciso (precise checking) sia
 importante. Tutti questi parametri influenzano fortemente l'efficienza dell'approccio.
 
 <P>
-In particolare la dimensione delle celle è cruciale. Ricorda che le celle
+In particolare la dimensione delle celle &egrave; cruciale. Ricorda che le celle
 devono essere larghe abbastanza da fare in modo che l'oggetto in movimento posizionato con la sua origine
 al centro della cella vada completamente all'interno della cella stessa. (Fai attenzione
 alla posizione dell'origine dell'oggetto. Inoltre ricorda che puoi
 spostare il percorso se l'origine dell'oggetto non si trova nel suo centro!) D'altra parte,
-più piccole le celle più possibili percorsi esistono. Se 
-rendi le celle troppo grandi, aperture tra gli ostacoli potrebbero rimanere chiuse perchè
+pi&ugrave; piccole le celle pi&ugrave; possibili percorsi esistono. Se 
+rendi le celle troppo grandi, aperture tra gli ostacoli potrebbero rimanere chiuse perch&egrave;
 tutte le celle intersecano un ostacolo.
 
 <p>
@@ -204,21 +175,21 @@ Le attuali funzioni per l'approccio basato sulla griglia sono le seguenti:
 <blockquote>
   <tt><b>mp_grid_create(left,top,hcells,vcells,cellwidth,cellheight)</b></tt>
     Questa funzione crea la griglia. Essa restituisce un indice che deve essere usato in
-    	tutte le altre chiamate. Puoi creare e mantenere più strutture di griglia allo
+    	tutte le altre chiamate. Puoi creare e mantenere pi&ugrave; strutture di griglia allo
 	stesso tempo. left (sinistra) e top (sopra) indicano la posizione dell'angolo in alto a sinistra
 	della griglia. hcells e vcells indicano il numero delle celle orizzontali e
 	verticali. Infine cellwidth (larghezza della cella) e cellheight (altezza della cella) indicano la dimensione delle celle.<br>
   <tt><b>mp_grid_destroy(id)</b></tt>
     Distrugge la struttura di griglia e libera la memoria che occupava. Non dimenticarti
-    	di chiamarla se non necessiti più della struttura.<br>
+    	di chiamarla se non necessiti pi&ugrave; della struttura.<br>
   <tt><b>mp_grid_clear_all(id)</b></tt>
     Segna tutte le celle della griglia come libere.<br>
   <tt><b>mp_grid_clear_cell(id,h,v)</b></tt>
-    Libera la cella indicata. La cella 0,0 è la cella in alto a sinistra.<br>
+    Libera la cella indicata. La cella 0,0 &egrave; la cella in alto a sinistra.<br>
   <tt><b>mp_grid_clear_rectangle(id,left,top,right,bottom)</b></tt>
     Libera tutte le celle che intersecano il rettangolo indicato (in coordinate della stanza (room)).<br>
   <tt><b>mp_grid_add_cell(id,h,v)</b></tt>
-    Segna la cella indicata come vietata. La cella 0,0 è la cella in alto a sinistra.<br>
+    Segna la cella indicata come vietata. La cella 0,0 &egrave; la cella in alto a sinistra.<br>
   <tt><b>mp_grid_add_rectangle(id,left,top,right,bottom)</b></tt>
     Segna tutte le celle che intersecano il rettangolo indicato come vietate.<br>
   <tt><b>mp_grid_add_instances(id,obj,prec)</b></tt>
@@ -226,21 +197,19 @@ Le attuali funzioni per l'approccio basato sulla griglia sono le seguenti:
     	vietate. Puoi anche usare un istanza individuale rendendo obj
 	l'identificativo (id) dell'istanza. Inoltre puoi usare la parola chiave <TT><B>all</b></tt>
     per indicare tutte le istanze di tutti gli oggetti. prec indica se debba essere
-    usato il controllo preciso (precise checking) (funzionerà soltanto se il controllo preciso 
-    è abilitato per lo sprite usato dall'istanza).<br>
+    usato il controllo preciso (precise checking) (funzioner&agrave; soltanto se il controllo preciso 
+    &egrave; abilitato per lo sprite usato dall'istanza).<br>
   <tt><b>mp_grid_path(id,path,xstart,ystart,xgoal,ygoal,allowdiag)</b></tt>
     Computa un percorso attraverso la griglia. path (percorso) deve indicare un percorso esistente che
-    	verrà sostituito dal percorso computato. xstart e ystart indicano il punto d'inizio
+    	verr&agrave; sostituito dal percorso computato. xstart e ystart indicano il punto d'inizio
 	del percorso e xgoal e ygoal la meta. allowdiag indica se
 	sono consentiti movimenti diagonali invece dei soli orizzontali o verticali. La
 	funzione restituisce se è riuscita a trovare un percorso. (Nota che il 
-	function returns whether it succeeded in finding a path. (Note that the 
-	percorso è indipendente dalla corrente istanza; Esso è un percorso attraverso la 
-	path is independent of the current instance; It is a path through the g
+	percorso è indipendente dalla corrente istanza; Esso è un percorso attraverso la
 	griglia, non un percorso per una specifica istanza.) <br>
   <tt><b>mp_grid_draw(id)</b></tt>
     Questa funzione disegna la griglia con le celle libere di colore verde e le celle vietate di colore
-    	rosso. Questa funzione è lenta ed è fornita solo come strumento per rilevare errori (debug).<br>
+    	rosso. Questa funzione &egrave; lenta ed &egrave; fornita solo come strumento per rilevare errori (debug).<br>
 </blockquote>
 
 
@@ -281,3 +250,4 @@ algoritmo A*
 A star
 ricerca dei percorsi
 --> 
+
