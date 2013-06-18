@@ -1,14 +1,26 @@
-TRADUZIONI DEI TERMINI:
-friction: attrito
-surface: (lasciare com'è)
+TRADUZIONI:
+	friction: attrito
+
+DA NON TRADURRE:
+	Tutto ciò che appare nell'interfaccia di Game Maker (e quindi, le risorse come sprite)
+	I nomi dei vari elementi creati dal GML (per esempio, le surfaces)
+	surface
+	Standard Edition
+	Lite Edition
 
 RICHIESTE:
-directory: lasciare "directory" o tradurre con "cartella"? (torchipeppo)
+	directory: lasciare "directory" o tradurre con "cartella"? (torchipeppo)
+		Tradurre con cartella, tranne nei casi in cui appare come elemento di GM
+		(per esempio, nelle pagine delle descrizioni delle funzioni sulle directory),
+		in cui si potrebbe mettere la traduzione tra parentesi alla prima volta.
 
 GRAMMATICA:
-  I gerundi nei titoli andrebbero sostituiti con degli infiniti. Per capire di cosa parlo,
-vedete la pagina 100_index, il cui titolo originale è "Using GameMaker" ed è stato
-tradotto con "Usando GameMaker". In italiano però non ha molto senso, mentre "Usare GameMaker"
-potrebbe essere più adatto. (torchipeppo)
+	I gerundi nei titoli andrebbero sostituiti con degli infiniti. Per capire di cosa parlo,
+	vedete la pagina 100_index, il cui titolo originale è "Using GameMaker" ed è stato
+	tradotto con "Usando GameMaker". In italiano però non ha molto senso, mentre "Usare GameMaker"
+	potrebbe essere più adatto. (torchipeppo)
+
+	I termini in inglese che rimarranno in inglese devono essere portati al singolare.
+	Per esempio "Using Rooms" diventa "Usare le Room", non "Usare le Rooms".
 
 ALTRO:
